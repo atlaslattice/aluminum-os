@@ -1,6 +1,6 @@
 # Aluminum OS — Capability Matrix
 
-## Current State (v0.3.0 — March 13, 2026)
+## Current State (v0.3.0 — March 2026)
 
 ### Ring 0 (Rust Kernel)
 
@@ -9,7 +9,7 @@
 | Memory allocation (BuddyAllocator) | ✅ Working | 3 | Power-of-two splitting, alloc/free |
 | Agent registration | ✅ Working | 2 | Trust levels, compliance tracking |
 | Constitutional rules | ✅ Working | 2 | 14 defaults, severity + Dave veto |
-| Constitutional domains | ✅ Working | 6 | 15 domains from 40 repo extractions |
+| Constitutional domains | ✅ Working | 9 | 15 domains + 144-sphere tags (H/S mappings) |
 | Intent scheduling | ✅ Working | 2 | Priority queue + constitutional screening |
 | Boot simulator | ✅ Working | — | Full Pantheon Council boot demo |
 | Fixed-size strings | ✅ Working | 1 | No-heap string handling |
@@ -24,6 +24,16 @@
 | Memory store | ✅ Working | 5 | Three-tier with TTL |
 | Task decomposition | ✅ Working | 4 | DAG ordering, cycle detection |
 | Session vault | ✅ Working | 4 | SHA-256 tokens, TTL, JSON export |
+
+### Kintsugi (Governance Spine)
+
+| Capability | Status | Tests | Notes |
+|-----------|--------|-------|-------|
+| GoldenTrace emitter | ✅ Working | 6 | Hash-chained append-only audit log |
+| GoldenTraceValidator | ✅ Working | 1 | Schema validation for v1.0 events |
+| golden_repair traces | ✅ Working | 1 | Failure → strength kintsugi pattern |
+| OPA/Rego audit policy | ✅ Authored | — | KINTSUGI-001 through KINTSUGI-008 |
+| Python package (`kintsugi`) | ✅ Working | — | `kintsugi/__init__.py` + `kintsugi/sdk/__init__.py` |
 
 ### Ring 2 (UWS CLI)
 
@@ -49,6 +59,6 @@
 
 | Layer | Language | Tests | Status |
 |-------|----------|-------|--------|
-| Ring 0 | Rust | 16 | ✅ All passing |
-| Ring 1 | Python | 22 | ✅ All passing |
-| **Total** | | **38** | **All green** |
+| Ring 0 | Rust | 19 | ✅ All passing |
+| Ring 1 + Kintsugi SDK | Python | 30 | ✅ All passing |
+| **Total** | | **49** | **All green** |

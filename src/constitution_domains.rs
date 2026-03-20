@@ -84,6 +84,31 @@ impl ConstitutionalDomain {
         }
     }
 
+    /// 144-Sphere Ontology tag for this domain.
+    ///
+    /// Format: `H{house}.S{sphere}` where houses 1–12 each contain 12 spheres
+    /// (12 houses × 12 spheres = 144 total). Tags reference the canonical
+    /// `splitmerge420/144-sphere-ontology` registry.
+    pub fn sphere_tag(&self) -> &'static str {
+        match self {
+            Self::GeneralGovernance        => "H6.S1",  // Governance — constitutional governance
+            Self::DataPrivacy              => "H3.S4",  // Rights — privacy & consent
+            Self::TransparencyAudit        => "H3.S9",  // Rights — transparency
+            Self::HumanOversight           => "H4.S3",  // Human-AI — HITL oversight
+            Self::FairnessBias             => "H4.S5",  // Human-AI — fairness & bias
+            Self::SafetyAlignment          => "H4.S7",  // Human-AI — safety & alignment
+            Self::Explainability           => "H4.S9",  // Human-AI — explainability
+            Self::AccountabilityLiability  => "H6.S6",  // Governance — accountability
+            Self::ResourceGovernance       => "H2.S8",  // Resources — compute governance
+            Self::CrossBorderCompliance    => "H6.S11", // Governance — international compliance
+            Self::EnvironmentalImpact      => "H2.S4",  // Resources — environmental impact
+            Self::InteroperabilityStandards => "H7.S3", // Technology — systems architecture
+            Self::DisputeResolution        => "H6.S7",  // Governance — dispute resolution
+            Self::DigitalSovereignty       => "H6.S12", // Governance — digital sovereignty
+            Self::EmergencyProtocols       => "H4.S12", // Human-AI — emergency & circuit breakers
+        }
+    }
+
     /// Source repos this domain was extracted from (representative examples)
     pub fn source_repos(&self) -> &'static [&'static str] {
         match self {
@@ -150,5 +175,36 @@ mod tests {
         assert_eq!(ConstitutionalDomain::DataPrivacy.name(), "Data Privacy");
         assert_eq!(ConstitutionalDomain::HumanOversight.name(), "Human Oversight (HITL)");
         assert_eq!(ConstitutionalDomain::EmergencyProtocols.name(), "Emergency Protocols");
+    }
+
+    #[test]
+    fn test_all_domains_have_sphere_tags() {
+        for domain in ConstitutionalDomain::ALL.iter() {
+            let tag = domain.sphere_tag();
+            assert!(!tag.is_empty(), "{:?} has empty sphere_tag", domain);
+            // Validate format: H{1-12}.S{1-12}
+            assert!(tag.starts_with('H'), "{:?} sphere_tag should start with H: {}", domain, tag);
+            assert!(tag.contains(".S"), "{:?} sphere_tag missing .S separator: {}", domain, tag);
+        }
+    }
+
+    #[test]
+    fn test_interoperability_sphere_tag() {
+        // InteroperabilityStandards maps to H7.S3 (Systems Architecture) —
+        // matches the established tag used across PLUGIN_REGISTRY.yaml
+        assert_eq!(
+            ConstitutionalDomain::InteroperabilityStandards.sphere_tag(),
+            "H7.S3"
+        );
+    }
+
+    #[test]
+    fn test_sphere_tags_cover_multiple_houses() {
+        // Domains should spread across governance (H6), human-AI (H4), resources (H2), technology (H7)
+        let tags: Vec<_> = ConstitutionalDomain::ALL.iter().map(|d| d.sphere_tag()).collect();
+        let houses: std::collections::HashSet<&str> = tags.iter()
+            .map(|t| t.split('.').next().unwrap())
+            .collect();
+        assert!(houses.len() >= 4, "Expected sphere tags across at least 4 houses, got: {:?}", houses);
     }
 }

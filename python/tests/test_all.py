@@ -1,7 +1,8 @@
 """
-Aluminum OS — Ring 1 Behavioral Tests
+Aluminum OS — Ring 1 + Kintsugi SDK Tests
 
-19 tests verifying actual behavior, not just instantiation.
+22 Ring-1 tests + 8 GoldenTrace SDK tests = 30 tests total.
+Verifies actual behavior, not just instantiation.
 Zero external dependencies.
 
 Atlas Lattice Foundation — March 2026
@@ -12,8 +13,10 @@ import os
 import time
 import unittest
 
-# Add parent to path for import
+# Add python/ directory for manus_core imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+# Add repo root for kintsugi package imports
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
 from core.manus_core import (
     ModelRouter, ModelConfig, ModelTier,
@@ -23,6 +26,7 @@ from core.manus_core import (
     SessionVault,
 )
 
+from kintsugi.sdk.golden_trace import GoldenTraceEmitter, GoldenTraceValidator
 
 class TestModelRouter(unittest.TestCase):
     """ModelRouter tests — verify routing logic, not just object creation."""
@@ -216,6 +220,126 @@ class TestSessionVault(unittest.TestCase):
         exported = vault.export_session(token)
         self.assertIn("key", exported)
         self.assertIn("value", exported)
+
+
+class TestGoldenTraceEmitter(unittest.TestCase):
+    """GoldenTrace SDK tests — verify Kintsugi audit chain behavior."""
+
+    def setUp(self):
+        self.emitter = GoldenTraceEmitter(
+            repo="aluminum-os",
+            module="tests/test_all",
+        )
+
+    def test_emit_returns_required_fields(self):
+        """Emitted trace must contain all fields required by the v1.0 schema."""
+        trace = self.emitter.emit(
+            event_type="action",
+            sphere_tag="H7.S3",
+            aluminum_layer="L3-Engine",
+            payload={"task": "unit-test"},
+        )
+        required = ["trace_id", "timestamp", "source", "event_type",
+                    "sphere_tag", "aluminum_layer", "payload", "integrity"]
+        for field in required:
+            self.assertIn(field, trace, f"Missing required field: {field}")
+
+    def test_emit_integrity_hash_present(self):
+        """Every emitted trace must have a non-empty integrity hash."""
+        trace = self.emitter.emit(
+            event_type="invariant_check",
+            sphere_tag="H6.S1",
+            aluminum_layer="L1-Constitutional",
+            payload={"invariant": "INV-7"},
+            invariants_checked=["INV-7"],
+        )
+        self.assertIn("hash", trace["integrity"])
+        self.assertTrue(len(trace["integrity"]["hash"]) > 0)
+
+    def test_hash_chain_links_traces(self):
+        """Second trace's previous_trace_hash must equal first trace's hash."""
+        t1 = self.emitter.emit(
+            event_type="action", sphere_tag="H7.S3",
+            aluminum_layer="L3-Engine", payload={"seq": 1},
+        )
+        t2 = self.emitter.emit(
+            event_type="action", sphere_tag="H7.S3",
+            aluminum_layer="L3-Engine", payload={"seq": 2},
+        )
+        self.assertEqual(
+            t2["integrity"]["previous_trace_hash"],
+            t1["integrity"]["hash"],
+        )
+
+    def test_genesis_trace_has_genesis_prev_hash(self):
+        """First trace in a fresh emitter must have 'GENESIS' as previous hash."""
+        fresh = GoldenTraceEmitter(repo="test", module="genesis")
+        trace = fresh.emit(
+            event_type="action", sphere_tag="H7.S3",
+            aluminum_layer="L2-Kernel", payload={},
+        )
+        self.assertEqual(trace["integrity"]["previous_trace_hash"], "GENESIS")
+
+    def test_verify_chain_passes(self):
+        """Chain verification must pass for a clean sequence of emits."""
+        for i in range(3):
+            self.emitter.emit(
+                event_type="action", sphere_tag="H7.S3",
+                aluminum_layer="L3-Engine", payload={"i": i},
+            )
+        self.assertTrue(self.emitter.verify_chain())
+
+    def test_golden_repair_emit(self):
+        """emit_golden_repair must produce a severity='golden' kintsugi trace."""
+        failure = self.emitter.emit(
+            event_type="failure", sphere_tag="H4.S7",
+            aluminum_layer="L3-Engine", payload={"error": "timeout"},
+        )
+        repair = self.emitter.emit_golden_repair(
+            original_failure_trace_id=failure["trace_id"],
+            repair_strategy="Retry with fallback model",
+            strength_gained="Added timeout config to ModelRouter",
+            beauty_score=0.9,
+            sphere_tag="H4.S7",
+            aluminum_layer="L3-Engine",
+            payload={"fallback": "sonnet"},
+        )
+        self.assertEqual(repair["severity"], "golden")
+        self.assertIn("kintsugi", repair)
+        self.assertEqual(
+            repair["kintsugi"]["original_failure_trace_id"],
+            failure["trace_id"],
+        )
+
+    def test_get_golden_seams(self):
+        """get_golden_seams must return only kintsugi repair traces."""
+        self.emitter.emit(
+            event_type="action", sphere_tag="H7.S3",
+            aluminum_layer="L3-Engine", payload={},
+        )
+        self.emitter.emit_golden_repair(
+            original_failure_trace_id="fake-id",
+            repair_strategy="Fix applied",
+            strength_gained="Better error handling",
+            beauty_score=0.8,
+            sphere_tag="H7.S3",
+            aluminum_layer="L3-Engine",
+            payload={},
+        )
+        seams = self.emitter.get_golden_seams()
+        self.assertEqual(len(seams), 1)
+        self.assertEqual(seams[0]["severity"], "golden")
+
+    def test_validator_accepts_valid_trace(self):
+        """GoldenTraceValidator must return no errors for a well-formed trace."""
+        trace = self.emitter.emit(
+            event_type="classification",
+            sphere_tag="H7.S3",
+            aluminum_layer="L3-Engine",
+            payload={"document_id": "abc123"},
+        )
+        errors = GoldenTraceValidator.validate(trace)
+        self.assertEqual(errors, [], f"Unexpected validation errors: {errors}")
 
 
 if __name__ == "__main__":
