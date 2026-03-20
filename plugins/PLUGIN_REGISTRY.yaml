@@ -1,4 +1,24 @@
+# ============================================================================
+# ALUMINUM OS — Claude Plugin Registry v1.0
+# ============================================================================
+# Maps all forked external Claude plugin ecosystems to Aluminum OS layers.
+# Each entry references a fork under splitmerge420/ and its integration point.
+#
+# Aluminum OS Layers:
+#   L1-Constitutional  — Invariants, governance, consent
+#   L2-Kernel          — Core runtime, scheduling, memory
+#   L3-Engine          — AI inference, RAG, multi-agent orchestration
+#   L4-Service         — APIs, bridges, external integrations
+#   L5-Extension       — Plugins, skills, UI, marketplace
+#
+# 144-Sphere Ontology tags follow format: H{house}.S{sphere} or S{number}
+# ============================================================================
+
+registry_version: "1.0.0"
+updated: "2026-03-20"
+maintainer: "splitmerge420"
 constitutional_invariants:
+  # Full invariant details: see plugins/INVARIANT_MAP.md
   # --- Constitutional Primacy ---
   - INV-1   # Constitutional Primacy / User Sovereignty
   # --- Sovereignty & Consent ---
@@ -46,4 +66,229 @@ constitutional_invariants:
   - INV-36  # Jurisdiction Detection Integrity
   # --- Completeness ---
   - INV-37  # 144-Sphere Ontology Coverage
-  # Full invariant details: see plugins/INVARIANT_MAP.md
+
+# ============================================================================
+# TIER 1: OFFICIAL ANTHROPIC SOURCES
+# ============================================================================
+official:
+  - name: claude-plugins-official
+    fork: splitmerge420/claude-plugins-official
+    upstream: anthropics/claude-plugins-official
+    stars: 13560
+    description: "Official Anthropic-managed directory of high quality Claude Code Plugins"
+    aluminum_layer: L5-Extension
+    sphere_tags: [H1.S1, H7.S3]  # Foundation, Systems Architecture
+    integration:
+      type: marketplace-source
+      mount_point: /plugins/official/
+      auto_sync: true
+      uws_command: "uws plugin list --source official"
+    council_role: "Canonical plugin source — all official plugins validated by Anthropic"
+
+  - name: claude-code
+    fork: splitmerge420/claude-code
+    upstream: anthropics/claude-code
+    stars: 80542
+    description: "Claude Code agentic CLI tool — reference implementation"
+    aluminum_layer: L2-Kernel
+    sphere_tags: [H7.S1, H7.S3]  # Computing, Systems Architecture
+    integration:
+      type: reference-implementation
+      mount_point: /kernel/claude-code/
+      components:
+        - plugins/          # Plugin system reference
+        - src/              # Core CLI architecture
+        - hooks/            # Hook system reference
+      uws_command: "uws claude --version"
+    council_role: "Reference CLI — uws extends this with multi-ecosystem support"
+
+  - name: mcp-servers
+    fork: splitmerge420/servers
+    upstream: modelcontextprotocol/servers
+    stars: 81645
+    description: "Model Context Protocol Servers — official + community"
+    aluminum_layer: L4-Service
+    sphere_tags: [H7.S3, H7.S7]  # Systems Architecture, Networking
+    integration:
+      type: mcp-provider-registry
+      mount_point: /services/mcp/
+      servers:
+        official:
+          - github      # Git operations, PR management
+          - git         # Local git operations
+          - postgres    # Database access
+          - puppeteer   # Browser automation
+          - slack       # Team communication
+          - gdrive      # Google Drive
+          - filesystem  # Local file access
+          - memory      # Persistent memory
+          - fetch       # HTTP requests
+          - sqlite      # SQLite databases
+        constitutional:
+          - golden-trace-mcp    # Kintsugi audit (custom, to build)
+          - consent-kernel-mcp  # ConsentKernel MCP (custom, to build)
+          - council-mcp         # Pantheon Council MCP (custom, to build)
+      uws_command: "uws mcp list"
+    council_role: "MCP backbone — all external service connections route through here"
+
+# ============================================================================
+# TIER 2: COMMUNITY PLUGIN ECOSYSTEMS
+# ============================================================================
+community:
+  - name: awesome-claude-code
+    fork: splitmerge420/awesome-claude-code
+    upstream: hesreallyhim/awesome-claude-code
+    stars: 29407
+    description: "Curated list of skills, hooks, slash-commands, agent orchestrators, plugins"
+    aluminum_layer: L5-Extension
+    sphere_tags: [H7.S3, H3.S1]  # Systems Architecture, Knowledge Curation
+    integration:
+      type: curated-index
+      mount_point: /plugins/index/awesome-claude-code/
+      categories:
+        - skills
+        - hooks
+        - slash-commands
+        - agent-orchestrators
+        - applications
+        - plugins
+      uws_command: "uws plugin search --index awesome"
+    council_role: "Discovery index — 29K-star community curation of the plugin ecosystem"
+
+  - name: awesome-claude-plugins
+    fork: splitmerge420/awesome-claude-plugins
+    upstream: ComposioHQ/awesome-claude-plugins
+    stars: 1204
+    description: "Curated plugins: custom commands, agents, hooks, MCP servers"
+    aluminum_layer: L5-Extension
+    sphere_tags: [H7.S3, H7.S9]  # Systems Architecture, Automation
+    integration:
+      type: curated-index
+      mount_point: /plugins/index/composio/
+      uws_command: "uws plugin search --index composio"
+    council_role: "ComposioHQ curation — enterprise-grade plugin vetting"
+
+  - name: claude-code-plugins-plus-skills
+    fork: splitmerge420/claude-code-plugins-plus-skills
+    upstream: jeremylongshore/claude-code-plugins-plus-skills
+    stars: 1669
+    description: "340 plugins + 1367 agent skills, CCPI package manager"
+    aluminum_layer: L5-Extension
+    sphere_tags: [H7.S3, H7.S9, H3.S1]  # Systems, Automation, Knowledge
+    integration:
+      type: plugin-marketplace
+      mount_point: /plugins/marketplace/ccpi/
+      components:
+        - plugins/340      # 340 installable plugins
+        - skills/1367      # 1367 agent skills
+        - ccpi/            # CCPI package manager
+        - tutorials/       # Interactive tutorials
+        - orchestration/   # Production orchestration patterns
+      uws_command: "uws plugin install --source ccpi <name>"
+    council_role: "Largest single plugin collection — CCPI package manager for bulk installs"
+
+  - name: awesome-claude-plugins-metrics
+    fork: splitmerge420/awesome-claude-plugins2
+    upstream: quemsah/awesome-claude-plugins
+    stars: null
+    description: "Automated plugin adoption metrics via n8n workflows"
+    aluminum_layer: L5-Extension
+    sphere_tags: [H7.S9, H5.S3]  # Automation, Analytics
+    integration:
+      type: metrics-tracker
+      mount_point: /plugins/metrics/
+      uws_command: "uws plugin stats"
+    council_role: "Adoption telemetry — tracks which plugins the ecosystem actually uses"
+
+  - name: cc-marketplace
+    fork: splitmerge420/cc-marketplace
+    upstream: ananddtyagi/cc-marketplace
+    stars: null
+    description: "Community-driven Claude Code plugin marketplace"
+    aluminum_layer: L5-Extension
+    sphere_tags: [H7.S3, H5.S1]  # Systems Architecture, Commerce
+    integration:
+      type: marketplace-source
+      mount_point: /plugins/marketplace/cc/
+      uws_command: "uws plugin list --source cc-marketplace"
+    council_role: "Community marketplace — alternative discovery channel"
+
+  - name: claude-code-mcp
+    fork: splitmerge420/claude-code-mcp
+    upstream: KunihiroS/claude-code-mcp
+    stars: null
+    description: "MCP Server that connects with Claude Code local command"
+    aluminum_layer: L4-Service
+    sphere_tags: [H7.S3, H7.S7]  # Systems Architecture, Networking
+    integration:
+      type: mcp-bridge
+      mount_point: /services/mcp/claude-code-bridge/
+      uws_command: "uws mcp bridge claude-code"
+    council_role: "MCP↔CLI bridge — enables MCP servers to invoke Claude Code locally"
+
+  - name: awesome-claude-code-plugins
+    fork: splitmerge420/awesome-claude-code-plugins
+    upstream: ccplugins/awesome-claude-code-plugins
+    stars: null
+    description: "Curated slash commands, subagents, MCP servers, hooks"
+    aluminum_layer: L5-Extension
+    sphere_tags: [H7.S3]  # Systems Architecture
+    integration:
+      type: curated-index
+      mount_point: /plugins/index/ccplugins/
+      uws_command: "uws plugin search --index ccplugins"
+    council_role: "Additional community curation with subagent focus"
+
+# ============================================================================
+# INTEGRATION ARCHITECTURE
+# ============================================================================
+architecture:
+  plugin_resolution_order:
+    - official           # anthropics/claude-plugins-official (authoritative)
+    - ccpi              # 340+1367 bulk collection
+    - awesome           # hesreallyhim curated index
+    - composio          # ComposioHQ enterprise curation
+    - ccplugins         # ccplugins community
+    - cc-marketplace    # ananddtyagi marketplace
+
+  constitutional_enforcement:
+    pre_install_checks:
+      - verify_no_invariant_violations
+      - check_sphere_tag_conflicts
+      - validate_consent_requirements
+      - golden_trace_emit("plugin.install.requested")
+    post_install_hooks:
+      - golden_trace_emit("plugin.install.completed")
+      - update_plugin_manifest
+      - council_notification
+
+  uws_cli_surface:
+    commands:
+      - "uws plugin list [--source <name>]"
+      - "uws plugin search <query> [--index <name>]"
+      - "uws plugin install <name> [--source <name>]"
+      - "uws plugin remove <name>"
+      - "uws plugin update [--all]"
+      - "uws plugin stats [<name>]"
+      - "uws plugin audit <name>"
+      - "uws mcp list"
+      - "uws mcp bridge <name>"
+      - "uws mcp add <server-name>"
+
+  aluminum_layer_mapping:
+    L1-Constitutional:
+      - "All plugin installs emit GoldenTrace events"
+      - "INV-7 enforced: no single plugin source > 47% of installed plugins"
+      - "INV-33: Plugin routing sovereignty — user controls which sources are active"
+    L2-Kernel:
+      - "claude-code fork provides reference CLI architecture"
+      - "Plugin loader integrated into uws boot sequence"
+    L3-Engine:
+      - "Agent skills from CCPI feed into Janus v2 multi-agent orchestration"
+      - "Subagents from ccplugins integrate with Pantheon Council routing"
+    L4-Service:
+      - "MCP servers from modelcontextprotocol/servers provide service layer"
+      - "claude-code-mcp bridges MCP ↔ local CLI invocation"
+    L5-Extension:
+      - "All curated indexes, marketplaces, and plugin collections mount here"
+      - "uws plugin commands provide unified access across all sources"
