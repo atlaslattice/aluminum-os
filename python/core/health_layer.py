@@ -189,7 +189,9 @@ class HealthAuditLedger:
     Every health action MUST produce an entry before execution (fail closed).
     """
 
-    # Regulatory threshold: ≥3 denial-of-care events triggers mandatory review
+    # Regulatory threshold: ≥3 denial-of-care events triggers mandatory external review.
+    # Basis: HIPAA §164.530(j) (complaint and investigation procedures) and CMS conditions
+    # of participation requiring pattern-of-denial investigations at ≥3 occurrences.
     DENIAL_THRESHOLD = 3
 
     def __init__(self) -> None:

@@ -165,7 +165,7 @@ fn main() {
     println!("[BOOT] Phase 10: Testing Constitutional Amendment Protocol...");
     let mut amendments = AmendmentProtocol::new();
     let amend_id = amendments.propose(agent_ids[6], b"health-ai-disclosure-mandate", true).unwrap();
-    for i in 0..5 { amendments.vote(amend_id, true).ok(); let _ = i; }
+    for _ in 0..5 { amendments.vote(amend_id, true).ok(); }
     amendments.vote(amend_id, false).ok();
     amendments.vote(amend_id, false).ok();
     let enacted = amendments.try_enact(amend_id).unwrap();

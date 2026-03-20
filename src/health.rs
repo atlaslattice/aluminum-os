@@ -649,11 +649,11 @@ pub enum RegulatoryFramework {
 impl RegulatoryFramework {
     pub fn name(&self) -> &'static str {
         match self {
-            Self::HipaaPrivacy => "HIPAA Privacy Rule (45 CFR \u{00a7}164.500)",
-            Self::HipaaSecurity => "HIPAA Security Rule (45 CFR \u{00a7}164.300)",
-            Self::CfrPart11 => "21 CFR Part 11 \u{2014} Electronic Records",
-            Self::Hitech => "HITECH Act (42 U.S.C. \u{00a7}17901)",
-            Self::OncInfoBlocking => "ONC Information Blocking Rule (\u{00a7}3022)",
+            Self::HipaaPrivacy => "HIPAA Privacy Rule (45 CFR §164.500)",
+            Self::HipaaSecurity => "HIPAA Security Rule (45 CFR §164.300)",
+            Self::CfrPart11 => "21 CFR Part 11 — Electronic Records",
+            Self::Hitech => "HITECH Act (42 U.S.C. §17901)",
+            Self::OncInfoBlocking => "ONC Information Blocking Rule (§3022)",
         }
     }
 }
