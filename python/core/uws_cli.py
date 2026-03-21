@@ -592,6 +592,58 @@ def status() -> SystemStatus:
     )
 
 
+def ai_detect(
+    provider_ids: Optional[List[str]] = None,
+    emitter: Optional[GoldenTraceEmitter] = None,
+) -> Dict[str, Any]:
+    """Detect all installed AI CLI providers and their constitutional status.
+
+    Equivalent to ``uws ai detect``.
+
+    Args:
+        provider_ids: Optional subset of provider IDs to check.
+        emitter:      Optional Kintsugi emitter.
+
+    Returns:
+        Dict with ``available_ids``, ``compliant_ids``, ``preferred_id``,
+        ``providers`` (list of per-provider status dicts), and ``trace_id``.
+    """
+    from .ai_providers import detect_providers as _detect_ai
+    registry = _detect_ai(provider_ids=provider_ids, emitter=emitter)
+    return registry.to_dict()
+
+
+def ai_ask(
+    prompt: str,
+    provider_id: Optional[str] = None,
+    timeout: int = 60,
+    emitter: Optional[GoldenTraceEmitter] = None,
+) -> Dict[str, Any]:
+    """Route a prompt to an AI CLI provider through the constitutional gate.
+
+    Equivalent to ``uws ai ask [--provider=ID] <prompt>``.
+
+    Args:
+        prompt:      Natural-language prompt.
+        provider_id: Explicit provider (e.g. ``"gemini"``).  Auto-selects
+                     when None.
+        timeout:     Subprocess timeout in seconds.
+        emitter:     Optional Kintsugi emitter.
+
+    Returns:
+        Dict with ``provider_id``, ``success``, ``stdout``, ``blocked``,
+        ``constitutional_status``, and ``trace_id``.
+    """
+    from .ai_providers import call as _ai_call
+    result = _ai_call(
+        prompt=prompt,
+        provider_id=provider_id,
+        timeout=timeout,
+        emitter=emitter,
+    )
+    return result.to_dict()
+
+
 def workspace_detect(
     emitter: Optional[GoldenTraceEmitter] = None,
 ) -> Dict[str, Any]:
