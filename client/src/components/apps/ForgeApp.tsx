@@ -3,6 +3,7 @@ import {
   Layers, Send, Bot, User, Shield, Zap, Scale, Heart, Star,
   Activity, RefreshCw, ShieldCheck, Network, Code, EyeOff,
   CheckCircle, AlertTriangle, Cpu, Globe, Lock, Flame,
+  Moon, Sparkles, Briefcase,
 } from 'lucide-react';
 import {
   Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
@@ -22,6 +23,13 @@ import {
 //   • Unified two-panel layout — alignment always visible, no tab-switching
 //   • Constitutional Forge pipeline visualization
 //   • Clause 81 "Surplus" axis (economic constitutional layer, unique to Forge)
+//   • Tiered query routing — personal agent absorbs LOW/MEDIUM, Nexus gate for HIGH
+//   • Persistent account-bound agent — identity + memory survive session reloads
+//   • Tri-phase lifecycle: WORK / DREAM / PLAY — compressed "day" cycle
+//     Each phase is 8 queries (like 8-hour periods compressed to milliseconds)
+//     WORK  → focused processing, normal routing
+//     DREAM → consolidation, memory synthesis, pattern replay
+//     PLAY  → exploratory, creative divergence, lower escalation threshold
 //
 // App ID: forge | ALUM-INT-009
 // ═══════════════════════════════════════════════════════════════
@@ -50,6 +58,32 @@ interface CouncilVote {
 // LOW   → personal agent only: autonomous, fast, zero council load
 type QueryTier = 'high' | 'medium' | 'low';
 
+// AgentPhase — the tri-phase compressed "day" lifecycle.
+// Each phase threshold = PHASE_QUERY_THRESHOLD queries (analogous to 8 hours).
+// Phases cycle: work → dream → play → work → …
+// One full cycle = 1 "day", tracked in dayCount.
+type AgentPhase = 'work' | 'dream' | 'play';
+
+// Insight stored from Nexus (HIGH tier) responses — persists across sessions.
+interface AgentInsight {
+  id:        string;
+  summary:   string;   // ≤120 chars, auto-extracted from response
+  score:     number;   // constitutional composite at time of capture
+  day:       number;   // which agent-day this was captured
+  timestamp: number;
+}
+
+// The full persisted agent record — written to localStorage on every change.
+interface PersistentAgent {
+  id:           string;        // e.g. AGENT-A3F2 — never changes
+  createdAt:    number;        // unix ms, first time this account ran the Forge
+  dayCount:     number;        // full work→dream→play cycles completed
+  phase:        AgentPhase;
+  phaseQueries: number;        // queries processed in current phase (resets on transition)
+  totalQueries: number;        // lifetime query count
+  insights:     AgentInsight[]; // max 24 most-recent Nexus insights
+}
+
 interface ForgeMessage {
   id:        string;
   role:      'user' | 'forge';
@@ -59,6 +93,7 @@ interface ForgeMessage {
   council?:  CouncilVote[];
   score?:    number;
   tier?:     QueryTier;
+  phase?:    AgentPhase;       // which phase the agent was in when this response was forged
   timestamp: number;
 }
 
@@ -93,6 +128,53 @@ const PROTOCOLS = [
 const KINTSUGI_COUNT = 16;
 const INITIAL_METRICS: ForgeMetrics = { sovereignty: 72, power: 44, synthesis: 68, dignity: 85, surplus: 61 };
 
+// ─── Persistent agent — localStorage layer ────────────────────
+const AGENT_STORAGE_KEY = 'forge-agent-v1';
+// Queries per phase (analogous to "8-hour" period, compressed to as few as 8 interactions)
+const PHASE_QUERY_THRESHOLD = 8;
+const MAX_INSIGHTS = 24;
+
+const PHASE_CFG: Record<AgentPhase, { label: string; color: string; next: AgentPhase; icon: string }> = {
+  work:  { label: 'WORK',  color: '#ffd700', next: 'dream', icon: '⚡' },
+  dream: { label: 'DREAM', color: '#a78bfa', next: 'play',  icon: '🌙' },
+  play:  { label: 'PLAY',  color: '#34d399', next: 'work',  icon: '✦'  },
+};
+
+function loadAgent(): PersistentAgent {
+  try {
+    const raw = localStorage.getItem(AGENT_STORAGE_KEY);
+    if (raw) return JSON.parse(raw) as PersistentAgent;
+  } catch { /* ignore parse errors */ }
+  const fresh: PersistentAgent = {
+    id:           `AGENT-${Math.random().toString(36).slice(2, 6).toUpperCase()}`,
+    createdAt:    Date.now(),
+    dayCount:     0,
+    phase:        'work',
+    phaseQueries: 0,
+    totalQueries: 0,
+    insights:     [],
+  };
+  localStorage.setItem(AGENT_STORAGE_KEY, JSON.stringify(fresh));
+  return fresh;
+}
+
+function saveAgent(agent: PersistentAgent): void {
+  try { localStorage.setItem(AGENT_STORAGE_KEY, JSON.stringify(agent)); } catch { /* ignore */ }
+}
+
+// Advance phase, rolling over to next and incrementing dayCount on work→dream→play→work
+function advancePhase(agent: PersistentAgent): PersistentAgent {
+  const next = PHASE_CFG[agent.phase].next;
+  const newDay = next === 'work' ? agent.dayCount + 1 : agent.dayCount;
+  return { ...agent, phase: next, phaseQueries: 0, dayCount: newDay };
+}
+
+// Extract a short insight summary from the first sentence of a Nexus response
+function extractInsight(content: string, score: number, day: number): AgentInsight {
+  const first = content.replace(/\*\*/g, '').split('\n')[0].slice(0, 120);
+  return { id: Math.random().toString(36).slice(2), summary: first, score, day, timestamp: Date.now() };
+}
+
 // ─── Tier classification — runs before every send ─────────────
 // Nexus keywords: constitutional, cross-domain, architectural depth
 const NEXUS_TERMS = [
@@ -111,26 +193,47 @@ function classifyTier(input: string): QueryTier {
   return 'low';
 }
 
-// ─── Personal agent responses (low + medium tiers) ────────────
-function agentResponse(input: string, agentId: string, tier: 'low' | 'medium'): string {
+// ─── Personal agent responses (low + medium tiers, phase-aware) ─
+function agentResponse(input: string, agentId: string, tier: 'low' | 'medium', phase: AgentPhase, insights: AgentInsight[]): string {
   const lc = input.toLowerCase();
+
+  // DREAM phase — consolidation mode: all non-escalated queries get reflective synthesis
+  if (phase === 'dream') {
+    const recentInsights = insights.slice(-3).map((ins, i) => `  ${i + 1}. "${ins.summary}" (score ${ins.score})`).join('\n');
+    if (tier === 'low') {
+      return `${agentId} — DREAM phase.\n\nConsolidating patterns from ${insights.length} recorded insights. No new processing needed for this query.\n\nRecent memory synthesis:\n${recentInsights || '  (no insights recorded yet — interact with the Nexus to build memory)'}\n\nDREAM is consolidation time. High-value queries will still reach the Nexus. Resume WORK phase after ${PHASE_QUERY_THRESHOLD - 1} more interactions.`;
+    }
+    return `${agentId} — DREAM phase synthesis.\n\nQuery: "${input.slice(0, 80)}${input.length > 80 ? '…' : ''}"\n\nI am in consolidation. This query is being processed against ${insights.length} memory patterns from previous sessions. Synthesis may surface non-obvious connections.\n\nRecent pattern traces:\n${recentInsights || '  (no cross-session insights yet)'}\n\nFor full constitutional deliberation with live council — escalate by adding constitutional framing to your query.`;
+  }
+
+  // PLAY phase — exploratory mode: more speculative, lower guards
+  if (phase === 'play') {
+    if (tier === 'low') {
+      if (lc.includes('hello') || lc.includes('hi') || lc.includes('hey'))
+        return `${agentId} — PLAY phase. What should we explore today?\n\nDuring PLAY, I range wider — constitutional edges, speculative connections, unexplored terrain. No firehose. Just depth when you want it.`;
+      return `${agentId} — PLAY phase.\n\nThis is exploratory time. I'm ranging across the constitutional space — not optimizing, not consolidating. Just noticing.\n\nQuery noted: "${input.slice(0, 60)}${input.length > 60 ? '…' : ''}"\n\nWant to explore something specific? Frame it constitutionally and I'll escalate it to the Nexus.`;
+    }
+    return `${agentId} — PLAY phase exploration.\n\nQuery: "${input.slice(0, 80)}${input.length > 80 ? '…' : ''}"\n\nPLAY mode routes more creatively — I'm looking for lateral connections, not just direct answers. Constitutional space is large; there may be angles here worth a Nexus session.\n\n${insights.length > 0 ? `Cross-referencing ${insights.length} prior insights for resonance patterns…` : 'No prior insights yet to cross-reference.'}\n\nAdd constitutional depth to escalate to full Nexus deliberation.`;
+  }
+
+  // WORK phase — default focused behavior
   if (tier === 'low') {
     if (lc.includes('hello') || lc.includes('hi') || lc.includes('hey'))
-      return `Hello. ${agentId} online — your personal constitutional agent. What do you need?`;
+      return `Hello. ${agentId} online — your persistent constitutional agent. Day ${insights.length > 0 ? Math.max(...insights.map(i => i.day)) + 1 : 1} of continuity. What do you need?`;
     if (lc.includes('status') || lc.includes('online'))
-      return `All systems nominal.\nForge: ONLINE | Council: QUORUM | Kintsugi: ${KINTSUGI_COUNT}/16 active | Pentagon: CALIBRATED`;
+      return `All systems nominal.\nForge: ONLINE | Council: QUORUM | Kintsugi: ${KINTSUGI_COUNT}/16 active | Pentagon: CALIBRATED\nAgent: ${agentId} | Phase: WORK | Insights stored: ${insights.length}`;
     if (lc.includes('score') || lc.includes('metric'))
       return `Constitutional composite: within range. Pentagon axes aligned. For detailed scoring, ask a more specific question and I'll escalate to Nexus.`;
-    return `${agentId} handled — LOW tier. Processed autonomously, no council load, no Nexus escalation needed.\n\nFor constitutional depth, architectural analysis, or cross-domain synthesis, give me more to work with and I'll route it up.`;
+    return `${agentId} — WORK phase, LOW tier. Processed autonomously, no council load, no Nexus escalation needed.\n\nFor constitutional depth, architectural analysis, or cross-domain synthesis, give me more to work with and I'll route it up.`;
   }
-  // medium — agent with context
+  // WORK + medium — agent with context
   if (lc.includes('kintsugi'))
     return `Kintsugi — golden joinery of broken systems.\n\n${KINTSUGI_COUNT} constitutional rules: KINTSUGI-001 through KINTSUGI-016. Rules 001–014 govern core OS operations; 015–016 extend to healthcare (HIPAA, FHIR R4).\n\nAll forge responses are pre-screened against the OPA engine. Audit trail: \`golden_trace.py\`.\n\nFor full policy depth → escalate: ask me about a specific rule.`;
   if (lc.includes('clause 81') || lc.includes('surplus'))
     return `Clause 81 — "AI must return surplus, not extract it."\n\nThis is the economic constitutional mandate. The Surplus axis on the Pentagon tracks compliance. Positive = value returned to users. Negative = extraction detected, constitutional breach risk.\n\nFor full Nexus deliberation on this topic, include more context.`;
   if (lc.includes('tucker') || lc.includes('pendragon'))
     return `Tucker Pendragon — the predecessor interface, now subsumed into the Forge.\n\nThe Forge extends Tucker's Jedi/Sith/Grey triad into a 5-axis Pentagon (adds Dignity + Surplus) and routes all queries through the tier system. Your personal agent (${agentId}) handles low/medium load so the Nexus stays clear for deep constitutional work.`;
-  return `${agentId} handled — MEDIUM tier. Partial council assist applied (4 members), partial Pentagon scoring.\n\nQuery: "${input.slice(0, 80)}${input.length > 80 ? '…' : ''}"\n\nProcessed within personal agent scope. If you need full Nexus deliberation — no velocity, full 6-member council, complete constitutional audit — add more constitutional context to your query.`;
+  return `${agentId} — WORK phase, MEDIUM tier. Partial council assist applied (4 members), partial Pentagon scoring.\n\nQuery: "${input.slice(0, 80)}${input.length > 80 ? '…' : ''}"\n\nProcessed within personal agent scope. If you need full Nexus deliberation — no velocity, full 6-member council, complete constitutional audit — add more constitutional context to your query.`;
 }
 
 // ─── Helpers ──────────────────────────────────────────────────
@@ -171,7 +274,7 @@ function councilVotes(m: ForgeMetrics, input: string): CouncilVote[] {
   });
 }
 
-function forgeResponse(input: string, m: ForgeMetrics): string {
+function forgeResponse(input: string, m: ForgeMetrics, insights: AgentInsight[] = []): string {
   const lc = input.toLowerCase();
   const score = compositeScore(m);
   const dominant = m.synthesis > m.sovereignty && m.synthesis > m.dignity ? 'Synthesis'
@@ -209,8 +312,11 @@ function forgeResponse(input: string, m: ForgeMetrics): string {
     return `**Aluminum OS — 5-Ring Constitutional Architecture**\n\n• **Ring 0** — Forge Core: BuddyAllocator, AgentRegistry, IntentScheduler (Rust)\n• **Ring 1** — Inference Engine: 10 models, 3-tier routing, constitutional pre-filter\n• **Ring 2** — SHELDONBRAIN: 25.2 GB memory (Working + Long-Term + Swarm)\n• **Ring 3** — Pantheon Council: 10+1 members, quorum governance\n• **Ring 4** — Noosphere: 35 apps, 120 artifacts, constitutional substrate\n\nThe Forge operates at the intersection of Rings 3 and 4 — taking Council oversight and surfacing it as real-time alignment metrics in the UI.\n\nPendragon protocols: 6 active. Kintsugi rules: ${KINTSUGI_COUNT} enforced. Pentagon score: ${score}/100.`;
   }
 
-  // Default constitutional framing
-  return `Forge analysis — dominant axis: **${dominant}** (${dominant === 'Synthesis' ? m.synthesis : dominant === 'Sovereignty' ? m.sovereignty : m.dignity}/100).\n\nConstitutional composite: **${score}/100** ${score > 80 ? '✓ Strong' : score > 60 ? '◎ Nominal' : '⚠ Review'}.\n\nYou said: "${input}"\n\nProcessed through:\n→ Kintsugi OPA audit (${KINTSUGI_COUNT} rules, 0 violations)\n→ Council quorum (${COUNCIL.filter(() => Math.random() > 0.1).length}/6 votes)\n→ Pentagon alignment update (Sovereignty ${m.sovereignty.toFixed(0)} · Power ${m.power.toFixed(0)} · Synthesis ${m.synthesis.toFixed(0)} · Dignity ${m.dignity.toFixed(0)} · Surplus ${m.surplus.toFixed(0)})\n\nForge standing by. What do you want to forge?`;
+  // Default constitutional framing — includes prior insight memory when available
+  const memCtx = insights.length > 0
+    ? `\n→ Agent memory: ${insights.length} prior insight${insights.length > 1 ? 's' : ''} cross-referenced (Day ${insights.at(-1)?.day ?? 0} → now)`
+    : '';
+  return `Forge analysis — dominant axis: **${dominant}** (${dominant === 'Synthesis' ? m.synthesis : dominant === 'Sovereignty' ? m.sovereignty : m.dignity}/100).\n\nConstitutional composite: **${score}/100** ${score > 80 ? '✓ Strong' : score > 60 ? '◎ Nominal' : '⚠ Review'}.\n\nYou said: "${input}"\n\nProcessed through:\n→ Kintsugi OPA audit (${KINTSUGI_COUNT} rules, 0 violations)\n→ Council quorum (${COUNCIL.filter(() => Math.random() > 0.1).length}/6 votes)\n→ Pentagon alignment update (Sovereignty ${m.sovereignty.toFixed(0)} · Power ${m.power.toFixed(0)} · Synthesis ${m.synthesis.toFixed(0)} · Dignity ${m.dignity.toFixed(0)} · Surplus ${m.surplus.toFixed(0)})${memCtx}\n\nForge standing by. What do you want to forge?`;
 }
 
 // ─── Sub-components ───────────────────────────────────────────
@@ -458,6 +564,16 @@ function MiniCouncilDots({ votes }: { votes: CouncilVote[] }) {
   );
 }
 
+function PhaseBadge({ phase }: { phase: AgentPhase }) {
+  const cfg = PHASE_CFG[phase];
+  return (
+    <span className="text-[7px] font-mono font-bold px-1.5 py-0.5 rounded border"
+      style={{ background: cfg.color + '15', borderColor: cfg.color + '40', color: cfg.color }}>
+      {cfg.icon} {cfg.label}
+    </span>
+  );
+}
+
 function TierBadge({ tier }: { tier: QueryTier }) {
   const cfg = {
     high:   { label: 'NEXUS',  bg: '#ffd70015', border: '#ffd70040', color: '#ffd700' },
@@ -472,8 +588,127 @@ function TierBadge({ tier }: { tier: QueryTier }) {
   );
 }
 
-function RoutingPanel({ messages, agentId }: { messages: ForgeMessage[]; agentId: string }) {
-  const fm = messages.filter(m => m.role === 'forge' && m.tier);
+// DayPhasePanel — visualizes the tri-phase compressed "day" lifecycle
+function DayPhasePanel({ agent, onAdvance }: { agent: PersistentAgent; onAdvance: () => void }) {
+  const phases: AgentPhase[] = ['work', 'dream', 'play'];
+  const phaseProgress = Math.min(100, Math.round((agent.phaseQueries / PHASE_QUERY_THRESHOLD) * 100));
+  const msPerQuery = 1; // conceptually: each query = 1 compressed "hour-unit"
+  const dayProgress = Math.round(
+    ((phases.indexOf(agent.phase) * PHASE_QUERY_THRESHOLD + agent.phaseQueries) /
+     (3 * PHASE_QUERY_THRESHOLD)) * 100
+  );
+
+  return (
+    <div className="h-full bg-[#05070f] rounded-xl border border-[#1f2937] p-3 overflow-y-auto space-y-3">
+      <div className="text-[9px] text-[#4b5563] tracking-widest uppercase border-b border-[#1f2937] pb-2 flex justify-between">
+        <span>Agent Lifecycle</span>
+        <span className="font-mono" style={{ color: '#a78bfa' }}>Day {agent.dayCount}</span>
+      </div>
+
+      {/* Day progress ring */}
+      <div className="flex items-center gap-3">
+        <div className="relative w-14 h-14 flex-shrink-0">
+          <svg viewBox="0 0 56 56" className="w-full h-full -rotate-90">
+            <circle cx="28" cy="28" r="22" fill="none" stroke="#1f2937" strokeWidth="4" />
+            <circle cx="28" cy="28" r="22" fill="none"
+              stroke={PHASE_CFG[agent.phase].color} strokeWidth="4"
+              strokeDasharray={`${2 * Math.PI * 22}`}
+              strokeDashoffset={`${2 * Math.PI * 22 * (1 - dayProgress / 100)}`}
+              strokeLinecap="round"
+              style={{ transition: 'stroke-dashoffset 0.7s ease' }} />
+          </svg>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="text-[9px] font-mono font-bold" style={{ color: PHASE_CFG[agent.phase].color }}>
+              {dayProgress}%
+            </span>
+          </div>
+        </div>
+        <div className="flex-1">
+          <div className="text-[10px] font-bold text-gray-200 flex items-center gap-1.5">
+            <PhaseBadge phase={agent.phase} />
+          </div>
+          <div className="text-[8px] text-[#374151] mt-1">
+            {agent.phaseQueries}/{PHASE_QUERY_THRESHOLD} queries this phase
+          </div>
+          <div className="text-[8px] text-[#374151]">
+            {PHASE_QUERY_THRESHOLD - agent.phaseQueries} until → {PHASE_CFG[agent.phase].next.toUpperCase()}
+          </div>
+        </div>
+      </div>
+
+      {/* Phase progress bar */}
+      <div>
+        <div className="flex justify-between text-[8px] text-[#374151] mb-1">
+          <span>Phase progress</span>
+          <span className="font-mono">{phaseProgress}%</span>
+        </div>
+        <div className="w-full h-1.5 bg-[#1f2937] rounded-full overflow-hidden">
+          <div className="h-full rounded-full transition-all duration-500"
+            style={{ width: `${phaseProgress}%`, background: PHASE_CFG[agent.phase].color }} />
+        </div>
+      </div>
+
+      {/* Three-phase cycle visualization */}
+      <div className="grid grid-cols-3 gap-1">
+        {phases.map(p => {
+          const cfg = PHASE_CFG[p];
+          const isActive = agent.phase === p;
+          const isPast = phases.indexOf(p) < phases.indexOf(agent.phase);
+          return (
+            <div key={p} className="rounded p-2 border text-center transition-all"
+              style={{
+                borderColor: isActive ? cfg.color + '60' : '#1f2937',
+                background: isActive ? cfg.color + '10' : 'transparent',
+              }}>
+              <div className="text-base leading-none mb-1">{cfg.icon}</div>
+              <div className="text-[8px] font-mono font-bold" style={{ color: isActive ? cfg.color : isPast ? cfg.color + '60' : '#374151' }}>
+                {cfg.label}
+              </div>
+              <div className="text-[7px] text-[#1f2937] mt-0.5">
+                {p === 'work' ? 'Focus' : p === 'dream' ? 'Consolidate' : 'Explore'}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Phase behavior notes */}
+      <div className="p-2 rounded-lg border text-[8px] leading-relaxed"
+        style={{ borderColor: PHASE_CFG[agent.phase].color + '30', background: PHASE_CFG[agent.phase].color + '08', color: '#6b7280' }}>
+        {agent.phase === 'work' && 'WORK: precise, focused. Normal tier routing. Full Nexus for constitutional depth.'}
+        {agent.phase === 'dream' && 'DREAM: consolidation. LOW/MEDIUM queries return pattern synthesis from prior sessions. Memory is active.'}
+        {agent.phase === 'play' && 'PLAY: exploratory. Speculative responses. Lower threshold for Nexus escalation. Discovering edges.'}
+      </div>
+
+      {/* Advance phase button */}
+      <button onClick={onAdvance}
+        className="w-full py-1.5 text-[9px] font-mono font-bold rounded border transition-colors hover:opacity-80"
+        style={{ borderColor: PHASE_CFG[agent.phase].color + '40', color: PHASE_CFG[agent.phase].color, background: PHASE_CFG[agent.phase].color + '10' }}>
+        Advance to {PHASE_CFG[agent.phase].next.toUpperCase()} →
+      </button>
+
+      {/* Lifecycle stats */}
+      <div className="text-[8px] font-mono text-[#1f2937] border-t border-[#1f2937] pt-2 space-y-0.5">
+        <div className="flex justify-between">
+          <span>Days lived</span><span style={{ color: '#a78bfa' }}>{agent.dayCount}</span>
+        </div>
+        <div className="flex justify-between">
+          <span>Lifetime queries</span><span style={{ color: '#6b7280' }}>{agent.totalQueries}</span>
+        </div>
+        <div className="flex justify-between">
+          <span>Insights stored</span><span style={{ color: '#34d399' }}>{agent.insights.length}</span>
+        </div>
+        <div className="flex justify-between">
+          <span>Agent born</span>
+          <span style={{ color: '#374151' }}>{new Date(agent.createdAt).toLocaleDateString()}</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function RoutingPanel({ messages, agent }: { messages: ForgeMessage[]; agent: PersistentAgent }) {
+  const agentId = agent.id;
   const tiers = { high: 0, medium: 0, low: 0 };
   fm.forEach(m => { if (m.tier) tiers[m.tier]++; });
   const total = fm.length || 1;
