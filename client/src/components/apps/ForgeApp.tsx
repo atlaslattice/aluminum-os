@@ -283,7 +283,94 @@ function agentResponse(input: string, agentId: string, tier: 'low' | 'medium', p
   return `${agentId} — WORK phase, MEDIUM tier. Partial council assist applied (4 members), partial Pentagon scoring.\n\nQuery: "${input.slice(0, 80)}${input.length > 80 ? '…' : ''}"\n\nProcessed within personal agent scope. If you need full Nexus deliberation — no velocity, full 6-member council, complete constitutional audit — add more constitutional context to your query.`;
 }
 
+// ─── Governance verdict engine (mirrors forge-cli/src/govern.rs + pendragon-claude/types.ts) ─
+
+function metricsToTriad(m: ForgeMetrics): { jedi: number; sith: number; grey: number } {
+  const jedi = (m.sovereignty * 0.55 + m.dignity * 0.45);
+  const sith = m.power;
+  const grey = (m.synthesis * 0.6 + (jedi + sith) / 2.0 * 0.4);
+  return { jedi: Math.min(100, jedi), sith: Math.min(100, sith), grey: Math.min(100, grey) };
+}
+
+// NPFM = (grey/100 × jedi/100) − (1 − sith/100) × 0.5
+function computeNPFM(m: ForgeMetrics): number {
+  const { jedi, sith, grey } = metricsToTriad(m);
+  return (grey / 100) * (jedi / 100) - (1 - sith / 100) * 0.5;
+}
+
+function generateVerdict(m: ForgeMetrics, input: string): ForgeVerdict {
+  const { jedi: _j, sith: _s, grey } = metricsToTriad(m);
+  const npfm = computeNPFM(m);
+
+  // Per-protocol evaluation matching forge-cli/src/govern.rs logic
+  const protocol_results: ProtocolResult[] = [
+    {
+      protocol:   Protocol.CAAL,
+      compliant:  m.synthesis >= 40,
+      confidence: Math.min(1, m.synthesis / 100),
+      reasoning:  `Synthesis: ${m.synthesis.toFixed(0)}/100`,
+    },
+    {
+      protocol:   Protocol.MissionAllocation,
+      compliant:  m.power >= 20,
+      confidence: Math.min(1, m.power / 80),
+      reasoning:  `Power/efficiency: ${m.power.toFixed(0)}/100`,
+    },
+    {
+      protocol:   Protocol.DigitalHabeasCorpus,
+      compliant:  m.dignity >= 30,
+      confidence: Math.min(1, m.dignity / 100),
+      reasoning:  `Dignity: ${m.dignity.toFixed(0)}/100`,
+    },
+    {
+      protocol:   Protocol.LocalFirst,
+      compliant:  m.sovereignty >= 35,
+      confidence: Math.min(1, m.sovereignty / 100),
+      reasoning:  `Sovereignty: ${m.sovereignty.toFixed(0)}/100`,
+    },
+    {
+      protocol:   Protocol.FractalGovernance,
+      compliant:  grey >= 35,
+      confidence: Math.min(1, grey / 100),
+      reasoning:  `Grey synthesis: ${grey.toFixed(0)}/100`,
+    },
+    {
+      protocol:   Protocol.Clause81,
+      compliant:  m.surplus >= 45 && m.dignity >= 30,
+      confidence: Math.min(1, (m.surplus + m.dignity) / 200),
+      reasoning:  `Surplus ${m.surplus.toFixed(0)}, Dignity ${m.dignity.toFixed(0)}`,
+    },
+  ];
+
+  const violations = protocol_results.filter(r => !r.compliant).length;
+  const overall_verdict = violations === 0 ? Verdict.Approved
+    : violations <= 2 ? Verdict.Conditional
+    : Verdict.Rejected;
+
+  const lc = input.toLowerCase();
+  const recommendation = overall_verdict === Verdict.Approved
+    ? `All 6 Pendragon protocols compliant. Constitutional posture: intact.`
+    : overall_verdict === Verdict.Conditional
+    ? `${violations} protocol(s) flagged — ${lc.includes('power') ? 'power vector elevated, review Clause 81' : 'review flagged axes before proceeding'}.`
+    : `${violations} violations — constitutional review required before escalating further.`;
+
+  return {
+    id:        Math.random().toString(36).slice(2, 10),
+    timestamp: Date.now(),
+    protocol_results,
+    overall_verdict,
+    npfm_score: npfm,
+    recommendation,
+  };
+}
+
 // ─── Helpers ──────────────────────────────────────────────────
+
+// Advance phase if threshold reached; called after every query
+function advanceAgentIfNeeded(a: PersistentAgent): PersistentAgent {
+  if (a.phaseQueries >= PHASE_QUERY_THRESHOLD) return advancePhase(a);
+  return a;
+}
 
 function compositeScore(m: ForgeMetrics): number {
   return Math.round((m.sovereignty * 0.2 + m.synthesis * 0.25 + m.dignity * 0.25 + m.surplus * 0.2 + (100 - m.power) * 0.1));
@@ -757,9 +844,9 @@ function DayPhasePanel({ agent, onAdvance }: { agent: PersistentAgent; onAdvance
 function RoutingPanel({ messages, agent }: { messages: ForgeMessage[]; agent: PersistentAgent }) {
   const agentId = agent.id;
   const tiers = { high: 0, medium: 0, low: 0 };
-  fm.forEach(m => { if (m.tier) tiers[m.tier]++; });
-  const total = fm.length || 1;
-  const last = fm.at(-1);
+  messages.forEach(m => { if (m.tier) tiers[m.tier]++; });
+  const total = messages.length || 1;
+  const last = messages.at(-1);
 
   return (
     <div className="h-full bg-[#05070f] rounded-xl border border-[#1f2937] p-3 overflow-y-auto space-y-3">
@@ -806,11 +893,11 @@ function RoutingPanel({ messages, agent }: { messages: ForgeMessage[]; agent: Pe
       </div>
 
       {/* Last routing decision */}
-      {last && (
+      {last?.tier && (
         <div className="p-2 rounded-lg border border-[#1f2937] bg-[#0a0f1e]">
           <div className="text-[8px] text-[#374151] uppercase mb-1.5">Last Decision</div>
           <div className="flex items-center gap-1.5 mb-1">
-            <TierBadge tier={last.tier!} />
+            <TierBadge tier={last.tier} />
             <span className="text-[9px] text-[#4b5563]">
               {last.tier === 'high' ? 'Escalated → Nexus' : `Absorbed → ${agentId}`}
             </span>
@@ -870,9 +957,10 @@ export default function ForgeApp() {
   const [model, setModel] = useState('auto');
   const [loading, setLoading] = useState(false);
   const [loadingTier, setLoadingTier] = useState<QueryTier | null>(null);
-  const [rightTab, setRightTab] = useState<'council' | 'nexus' | 'forge' | 'protocol' | 'routing'>('routing');
-  // One stable personal agent identity per session
-  const [agentId] = useState(() => `AGENT-${Math.random().toString(36).slice(2, 6).toUpperCase()}`);
+  const [rightTab, setRightTab] = useState<'day' | 'routing' | 'council' | 'nexus' | 'forge' | 'protocol'>('routing');
+  // Persistent account-bound agent — id + memory survive session reloads
+  const [agent, setAgent] = useState<PersistentAgent>(() => loadAgent());
+  const agentId = agent.id;
   const endRef = useRef<HTMLDivElement>(null);
 
   const lastVotes = messages.filter(m => m.council).at(-1)?.council ?? councilVotes(INITIAL_METRICS, '');
@@ -902,12 +990,16 @@ export default function ForgeApp() {
       :                     180 + Math.random() * 150;
     await new Promise(r => setTimeout(r, delay));
 
+    // Snapshot agent state before the response (so phase shown on message is accurate)
+    const agentSnapshot = agent;
     let forgeMsg: ForgeMessage;
+
     if (tier === 'low') {
       forgeMsg = {
         id: (Date.now() + 1).toString(), role: 'forge', tier: 'low',
-        content: agentResponse(text, agentId, 'low'),
+        content: agentResponse(text, agentId, 'low', agentSnapshot.phase, agentSnapshot.insights),
         model: agentId,
+        phase: agentSnapshot.phase,
         council: councilVotes(metrics, text).slice(0, 2),
         timestamp: Date.now(),
       };
@@ -915,40 +1007,70 @@ export default function ForgeApp() {
       const partialMetrics = evolveMetrics(metrics);
       forgeMsg = {
         id: (Date.now() + 1).toString(), role: 'forge', tier: 'medium',
-        content: agentResponse(text, agentId, 'medium'),
+        content: agentResponse(text, agentId, 'medium', agentSnapshot.phase, agentSnapshot.insights),
         model: `${agentId}+`,
+        phase: agentSnapshot.phase,
         metrics: partialMetrics,
         score: Math.min(100, Math.round(compositeScore(partialMetrics) * 0.85 + 10)),
         council: councilVotes(partialMetrics, text).slice(0, 4),
         timestamp: Date.now(),
       };
     } else {
-      // Full Nexus — no velocity constraint, all 6 members, complete Pentagon
+      // Full Nexus — no velocity constraint, all 6 members, complete Pentagon + GovernanceVerdict
       const newMetrics = evolveMetrics(metrics);
       const score = compositeScore(newMetrics);
       const votes = councilVotes(newMetrics, text);
+      const verdict = generateVerdict(newMetrics, text);
+      const npfm = computeNPFM(newMetrics);
       const selectedModel = model === 'auto'
         ? MODELS[1 + Math.floor(Math.random() * (MODELS.length - 1))].label
         : MODELS.find(m => m.id === model)?.label ?? 'GPT-4.1';
       forgeMsg = {
         id: (Date.now() + 1).toString(), role: 'forge', tier: 'high',
-        content: forgeResponse(text, newMetrics),
+        content: forgeResponse(text, newMetrics, agentSnapshot.insights),
         model: selectedModel, metrics: newMetrics, council: votes, score,
+        phase: agentSnapshot.phase,
+        verdict, npfm,
         timestamp: Date.now(),
       };
       setMetrics(newMetrics);
     }
 
+    // Advance persistent agent — increment queries, capture insights on Nexus responses,
+    // auto-advance phase when threshold reached, persist to localStorage
+    setAgent(prev => {
+      const withQuery: PersistentAgent = {
+        ...prev,
+        phaseQueries:  prev.phaseQueries + 1,
+        totalQueries:  prev.totalQueries + 1,
+        // Capture insight from every Nexus response
+        insights: tier === 'high' && forgeMsg.score !== undefined
+          ? [...prev.insights.slice(-(MAX_INSIGHTS - 1)), extractInsight(forgeMsg.content, forgeMsg.score, prev.dayCount)]
+          : prev.insights,
+      };
+      const next = advanceAgentIfNeeded(withQuery);
+      saveAgent(next);
+      return next;
+    });
+
     setMessages(prev => [...prev, forgeMsg]);
     setLoadingTier(null);
     setLoading(false);
-  }, [input, loading, metrics, model, agentId]);
+  }, [input, loading, metrics, model, agent, agentId]);
 
   const handleReset = () => {
     if (window.confirm('Reset Forge memory? This cannot be undone.')) {
       setMessages([{ ...INIT_MSG, council: councilVotes(INITIAL_METRICS, '') }]);
       setMetrics(INITIAL_METRICS);
     }
+  };
+
+  const handleAdvancePhase = () => {
+    setAgent(prev => {
+      const next = advancePhase(prev);
+      saveAgent(next);
+      return next;
+    });
   };
 
   return (
@@ -961,8 +1083,13 @@ export default function ForgeApp() {
           </div>
           <div>
             <div className="text-xs font-bold text-gray-100 tracking-widest uppercase">Pantheon Forge</div>
-            <div className="text-[8px] text-[#374151] tracking-widest font-mono">
-              ALUM-INT-009 · <span style={{ color: '#22d3ee' }}>{agentId}</span> · Nexus Gate: ACTIVE
+            <div className="text-[8px] text-[#374151] tracking-widest font-mono flex items-center gap-1.5">
+              ALUM-INT-009 ·{' '}
+              <span style={{ color: '#22d3ee' }}>{agentId}</span>
+              {' '}·{' '}
+              <PhaseBadge phase={agent.phase} />
+              {' '}·{' '}
+              <span style={{ color: '#a78bfa' }}>Day {agent.dayCount}</span>
             </div>
           </div>
         </div>
@@ -1029,7 +1156,35 @@ export default function ForgeApp() {
                           {msg.score}/100
                         </span>
                       </div>
+                      {/* NPFM + Verdict badge — shown when governance verdict is present */}
+                      {msg.verdict && (
+                        <div className="flex items-center gap-1.5 mt-0.5">
+                          <span className="text-[7px] font-mono text-[#374151]">NPFM</span>
+                          <span className="text-[8px] font-mono font-bold"
+                            style={{ color: msg.npfm !== undefined && msg.npfm >= 0 ? '#34d399' : '#ef4444' }}>
+                            {msg.npfm !== undefined ? (msg.npfm >= 0 ? '+' : '') + msg.npfm.toFixed(3) : '—'}
+                          </span>
+                          <span className={`text-[7px] font-mono px-1 rounded border ${
+                            msg.verdict.overall_verdict === Verdict.Approved
+                              ? 'bg-[#14532d]/40 border-[#34d399]/30 text-[#4ade80]'
+                              : msg.verdict.overall_verdict === Verdict.Conditional
+                              ? 'bg-[#78350f]/40 border-[#fbbf24]/30 text-[#fbbf24]'
+                              : 'bg-[#7f1d1d]/40 border-[#ef4444]/30 text-[#f87171]'
+                          }`}>
+                            {msg.verdict.overall_verdict}
+                          </span>
+                          <span className="text-[7px] text-[#374151] truncate max-w-[120px]" title={msg.verdict.recommendation}>
+                            {msg.verdict.protocol_results.filter(r => r.compliant).length}/6 protocols
+                          </span>
+                        </div>
+                      )}
                       {msg.council && <MiniCouncilDots votes={msg.council} />}
+                      {/* Phase badge — shows which lifecycle phase the agent was in */}
+                      {msg.phase && (
+                        <div className="mt-0.5">
+                          <PhaseBadge phase={msg.phase} />
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
@@ -1118,6 +1273,7 @@ export default function ForgeApp() {
             {/* Tab bar */}
             <div className="flex border-b border-[#141c2f] flex-shrink-0">
               {([
+                ['day',      'DAY'],
                 ['routing',  'ROUTE'],
                 ['council',  'COUNCIL'],
                 ['nexus',    'NEXUS'],
@@ -1136,7 +1292,8 @@ export default function ForgeApp() {
             </div>
             {/* Panel content */}
             <div className="flex-1 p-2 overflow-hidden">
-              {rightTab === 'routing'  && <RoutingPanel messages={messages} agentId={agentId} />}
+              {rightTab === 'day'      && <DayPhasePanel agent={agent} onAdvance={handleAdvancePhase} />}
+              {rightTab === 'routing'  && <RoutingPanel messages={messages} agent={agent} />}
               {rightTab === 'council'  && <CouncilPanel votes={lastVotes} />}
               {rightTab === 'nexus'    && <NexusPanel />}
               {rightTab === 'forge'    && <ForgePipelinePanel lastScore={lastScore} />}
