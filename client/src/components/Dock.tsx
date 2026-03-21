@@ -72,6 +72,7 @@ const allInnovationSlots: InnovationSlot[] = [
   // GPT — Observer
   { id: "gpt-observe", name: "Observer", member: "GPT", memberColor: "#ffd700", icon: <Eye className="w-5 h-5" />, color: "#ffd700", gradient: "from-yellow-400/30 to-amber-700/15", appId: "sysmonitor" },
   { id: "gpt-tucker", name: "Tucker V4", member: "GPT", memberColor: "#ffd700", icon: <MessageCircle className="w-5 h-5" />, color: "#ffd700", gradient: "from-yellow-400/30 to-amber-700/15", appId: "tucker" },
+  { id: "claude-forge", name: "Pantheon Forge", member: "Claude", memberColor: "#ff6b35", icon: <Zap className="w-5 h-5" />, color: "#ff6b35", gradient: "from-orange-400/30 to-red-700/15", appId: "forge" },
   // Wellness
   { id: "wellness-pulse", name: "Wellness", member: "System", memberColor: "#ef4444", icon: <HeartPulse className="w-5 h-5" />, color: "#ef4444", gradient: "from-rose-500/30 to-red-800/15", appId: "wellness" },
 ];

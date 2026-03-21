@@ -59,6 +59,7 @@ const allApps: LauncherApp[] = [
   { id: "sheldonbrainengine", name: "SHELDONBRAIN Engine", description: "ALUM-INT-007 — 7 constitutional modules, 8 invariants, Janus↔Council mapping, health connectors", icon: <Brain className="w-5 h-5" />, category: "Core" },
   { id: "interop2026", name: "Interop 2026", description: "Cross-browser compliance — 20 focus areas, constitutional alignment, implementation roadmap", icon: <Globe className="w-5 h-5" />, category: "Platform" },
   { id: "tucker", name: "Tucker V4", description: "Constitutional chatbot — GPT+Gemini co-designed, Pantheon Council oversight, ALUM-INT-008", icon: <MessageCircle className="w-5 h-5" />, category: "Intelligence" },
+  { id: "forge", name: "Pantheon Forge", description: "ALUM-INT-009 — Tiered query routing, 5-axis Pentagon alignment, personal agent + Nexus gate, no firehose", icon: <Zap className="w-5 h-5" />, category: "Intelligence" },
   { id: "fusion", name: "Fusion Engine", description: "Cross-provider workflow engine", icon: <Zap className="w-5 h-5" />, category: "Core" },
   { id: "identity", name: "Identity Graph", description: "Unified sovereign identity — Janus bridge", icon: <Cpu className="w-5 h-5" />, category: "Core" },
 ];
@@ -72,6 +73,7 @@ const openableApps = new Set([
   "sheldonbrainengine",
   "interop2026",
   "tucker",
+  "forge",
 ]);
 
 export default function AppLauncher() {

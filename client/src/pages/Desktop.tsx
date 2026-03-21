@@ -36,6 +36,7 @@ import LatticeGenesisApp from "@/components/apps/LatticeGenesisApp";
 import SheldonbrainEngineApp from "@/components/apps/SheldonbrainEngineApp";
 import Interop2026App from "@/components/apps/Interop2026App";
 import TuckerApp from "@/components/apps/TuckerApp";
+import ForgeApp from "@/components/apps/ForgeApp";
 import ContextMenu from "@/components/ContextMenu";
 import AppLauncher from "@/components/AppLauncher";
 import { AnimatePresence, motion } from "framer-motion";
@@ -61,6 +62,7 @@ const appComponents: Record<string, React.FC> = {
   sheldonbrainengine: SheldonbrainEngineApp,
   interop2026: Interop2026App,
   tucker: TuckerApp,
+  forge: ForgeApp,
 };
 
 const bootSteps = [
