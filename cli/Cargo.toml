@@ -1,0 +1,76 @@
+# ============================================================
+# Tucker V4 CLI — Aluminum OS Fork
+# ============================================================
+# Forked from splitmerge420/tucker-gemini-GPT- (cli/)
+# Upgraded with aluminum-os Ring 0 constitutional substrate.
+#
+# Changes from upstream:
+#   + aluminum-os = { path = ".." }  → imports Constitution, AgentRegistry, etc.
+#   + governance/mod.rs uses aluminum_os::Constitution for rule evaluation
+#   + uws/mod.rs updated with Ring 2 identifiers from aluminum-os architecture
+#   + All 6 Pendragon protocol IDs align with aluminum-os Kintsugi rules
+#
+# Requires: cargo update (downloads async deps on first build)
+# Build:    cargo build -p tucker --release
+# Install:  cp target/release/tucker ~/.local/bin/
+#
+# Full async council mode (GPT-4o, Gemini, Claude, DeepSeek, Grok)
+# requires API keys — see forge install for setup.
+# ============================================================
+
+[package]
+name = "tucker"
+version = "4.0.0"
+edition = "2021"
+description = "Tucker V4 — Constitutional AI Governance CLI. Aluminum OS fork with Ring 0 integration. 5-model Pantheon Council + 6 Pendragon protocols."
+license = "MIT"
+repository = "https://github.com/splitmerge420/aluminum-os"
+authors = ["Dave Sheldon", "GitHub Copilot Coding Agent", "Pantheon Council (GPT + Gemini + Claude)"]
+keywords = ["ai", "governance", "constitutional", "cli", "council"]
+
+[[bin]]
+name = "tucker"
+path = "src/main.rs"
+
+[lib]
+name = "tucker_lib"
+path = "src/lib.rs"
+
+[dependencies]
+# ── Aluminum OS Ring 0 (constitutional substrate) ──────────
+aluminum-os = { path = "..", features = ["std"] }
+
+# ── CLI framework ──────────────────────────────────────────
+clap = { version = "4.5", features = ["derive", "env"] }
+
+# ── Async runtime ──────────────────────────────────────────
+tokio = { version = "1", features = ["full"] }
+
+# ── HTTP client for model APIs ─────────────────────────────
+reqwest = { version = "0.12", features = ["json", "stream"] }
+
+# ── Serialization ──────────────────────────────────────────
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# ── Error handling ─────────────────────────────────────────
+thiserror = "1"
+anyhow = "1"
+
+# ── Logging ────────────────────────────────────────────────
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+
+# ── Utilities ──────────────────────────────────────────────
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+dirs = "5"
+toml = "0.8"
+futures = "0.3"
+
+# ── Terminal UI ────────────────────────────────────────────
+crossterm = "0.28"
+ratatui = "0.29"
+
+[dev-dependencies]
+tokio-test = "0.4"

@@ -1,3 +1,20 @@
+# ============================================================
+# Aluminum OS — Cargo Workspace
+# ============================================================
+# Members:
+#   .          → aluminum-os (Forge Core kernel library + aluminum-boot binary)
+#   cli        → tucker (Tucker V4 CLI fork — full async council/governance)
+#   forge-cli  → forge  (Unified 51% native AI CLI — stdlib-only, ships immediately)
+#
+# Build all:   cargo build --release
+# Build forge: cargo build -p forge --release
+# Build tucker: cargo build -p tucker --release
+# ============================================================
+
+[workspace]
+members = [".", "cli", "forge-cli"]
+resolver = "2"
+
 [package]
 name = "aluminum-os"
 version = "0.3.0"

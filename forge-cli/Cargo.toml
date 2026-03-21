@@ -1,0 +1,37 @@
+# ============================================================
+# Forge CLI — Unified 51% Native AI Constitutional CLI
+# ============================================================
+# Zero external crate dependencies — ships immediately,
+# builds on any platform without cargo update.
+#
+# Depends only on:
+#   aluminum-os (workspace path dep — Ring 0 kernel types)
+#
+# Design: GitHub Copilot Coding Agent
+# Synthesis of: aluminum-boot + Tucker V4 + Janus + Manus + GoldenTrace
+# ============================================================
+
+[package]
+name = "forge"
+version = "1.0.0"
+edition = "2021"
+description = "Forge — Unified 51% Native AI Constitutional CLI. Synthesizes aluminum-boot, Tucker V4, Janus, and Manus under one cross-platform binary."
+license = "MIT"
+repository = "https://github.com/splitmerge420/aluminum-os"
+authors = ["GitHub Copilot Coding Agent", "Atlas Lattice Foundation"]
+keywords = ["ai", "constitutional", "governance", "cli", "cross-platform"]
+
+[[bin]]
+name = "forge"
+path = "src/main.rs"
+
+[dependencies]
+# Ring 0 kernel — the constitutional substrate
+aluminum-os = { path = "..", features = ["std"] }
+
+# Zero additional external dependencies:
+# Arg parsing   → std::env::args()
+# Terminal color → ANSI escape codes (Linux/macOS/Win10+)
+# JSON output   → std::fmt + manual serialization
+# File I/O      → std::fs
+# Time          → std::time
