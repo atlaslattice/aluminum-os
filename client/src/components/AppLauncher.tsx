@@ -12,7 +12,7 @@ import {
   Search, Grid3X3, FolderOpen, Mail, Calendar, Brain, Settings, Globe,
   FileText, Cpu, Shield, Database, Zap, Archive, GitBranch, ScrollText,
   SquareTerminal, Workflow, DollarSign, Hexagon, HeartPulse, Hospital, Sparkles, Layers, ArrowLeftRight, ShoppingCart,
-  Atom, Network, RefreshCw, Eye, Lock,
+  Atom, Network, RefreshCw, Eye, Lock, MessageCircle,
 } from "lucide-react";
 import { useWindows } from "@/contexts/WindowContext";
 
@@ -58,6 +58,7 @@ const allApps: LauncherApp[] = [
   { id: "latticegenesis", name: "Lattice Genesis", description: "v1.0.2 — PQC Shield (ML-DSA-87), 10YST Engine, 144 PHD nodes, Rust-WASM transpilation", icon: <Lock className="w-5 h-5" />, category: "Core" },
   { id: "sheldonbrainengine", name: "SHELDONBRAIN Engine", description: "ALUM-INT-007 — 7 constitutional modules, 8 invariants, Janus↔Council mapping, health connectors", icon: <Brain className="w-5 h-5" />, category: "Core" },
   { id: "interop2026", name: "Interop 2026", description: "Cross-browser compliance — 20 focus areas, constitutional alignment, implementation roadmap", icon: <Globe className="w-5 h-5" />, category: "Platform" },
+  { id: "tucker", name: "Tucker V4", description: "Constitutional chatbot — GPT+Gemini co-designed, Pantheon Council oversight, ALUM-INT-008", icon: <MessageCircle className="w-5 h-5" />, category: "Intelligence" },
   { id: "fusion", name: "Fusion Engine", description: "Cross-provider workflow engine", icon: <Zap className="w-5 h-5" />, category: "Core" },
   { id: "identity", name: "Identity Graph", description: "Unified sovereign identity — Janus bridge", icon: <Cpu className="w-5 h-5" />, category: "Core" },
 ];
@@ -70,6 +71,7 @@ const openableApps = new Set([
   "regenerative", "neuromorphic", "unifiedfield", "truthsubstrate", "latticegenesis",
   "sheldonbrainengine",
   "interop2026",
+  "tucker",
 ]);
 
 export default function AppLauncher() {

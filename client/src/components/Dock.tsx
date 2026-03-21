@@ -71,6 +71,7 @@ const allInnovationSlots: InnovationSlot[] = [
   { id: "deepseek-memory", name: "Memory", member: "DeepSeek", memberColor: "#4fc3f7", icon: <Database className="w-5 h-5" />, color: "#4fc3f7", gradient: "from-sky-400/30 to-blue-700/15", appId: "memory" },
   // GPT — Observer
   { id: "gpt-observe", name: "Observer", member: "GPT", memberColor: "#ffd700", icon: <Eye className="w-5 h-5" />, color: "#ffd700", gradient: "from-yellow-400/30 to-amber-700/15", appId: "sysmonitor" },
+  { id: "gpt-tucker", name: "Tucker V4", member: "GPT", memberColor: "#ffd700", icon: <MessageCircle className="w-5 h-5" />, color: "#ffd700", gradient: "from-yellow-400/30 to-amber-700/15", appId: "tucker" },
   // Wellness
   { id: "wellness-pulse", name: "Wellness", member: "System", memberColor: "#ef4444", icon: <HeartPulse className="w-5 h-5" />, color: "#ef4444", gradient: "from-rose-500/30 to-red-800/15", appId: "wellness" },
 ];

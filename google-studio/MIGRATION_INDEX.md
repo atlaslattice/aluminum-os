@@ -26,7 +26,7 @@
 | 🟢 MEDIUM | NeuroSim 2025 | `neurosim-2025/` | ⬜ PENDING |
 | 🟢 MEDIUM | Swiss Governance Simulator | `swiss-governance-sim/` | ⬜ PENDING |
 | 🟢 MEDIUM | Sheldon Gemini Chat | `sheldon-gemini-chat/` | ⬜ PENDING |
-| 🔵 LOW | Tucker V4 Configurator (canonical) | `tucker-v4-configurator/` | ⬜ DEDUP NEEDED |
+| 🔵 LOW | Tucker V4 Configurator (canonical) | `tucker-v4-configurator/` | 🟡 IN PROGRESS — repo: splitmerge420/tucker-gemini-GPT- |
 | 🔵 LOW | Tucker V3 Explorer | `tucker-v3-explorer/` | ⬜ PENDING |
 | 🔵 LOW | PendragonOS Web Interface | `pendragon-os/` | ⬜ PENDING |
 | 🔵 LOW | Acoustic Compute Optimizer | `acoustic-compute/` | ⬜ PENDING |
@@ -71,6 +71,11 @@ google-studio/
 There are 17+ identical Tucker V4 Configurator duplicates in Google AI Studio.
 **Action:** Migrate ONE canonical version. Delete the rest from Studio.
 Target folder: `google-studio/tucker-v4-configurator/`
+
+**Tucker's standalone GitHub repo:** https://github.com/splitmerge420/tucker-gemini-GPT-
+Created: 2026-03-21. Source code migration from AI Studio is in progress.
+Tucker has been integrated into Aluminum OS as `ALUM-INT-008` (App #35).
+See: `client/src/components/apps/TuckerApp.tsx`
 
 ---
 
