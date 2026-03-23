@@ -1,106 +1,87 @@
-# Aluminum OS — Forge Core
+# Aluminum OS
 
-**Constitutional AI Governance Kernel**
-
-Atlas Lattice Foundation · v0.3.0 · March 2026
-
----
+> Lightweight infrastructure for measuring what open source is actually worth.
 
 ## What This Is
 
-Aluminum OS is a constitutional governance substrate for multi-agent AI systems. It provides:
+Aluminum OS is the home of **Royalty Runtime** — an execution-layer attribution system that tracks how open source packages are actually used in production and routes compensation to the developers who built them.
 
-- **Ring 0 (Rust Kernel):** Memory management, agent identity, intent scheduling, and constitutional rule enforcement — all `no_std` compatible
-- **Ring 1 (Python Middleware):** Model routing, cost tracking, memory management, task decomposition, and session persistence — zero external dependencies
+The core thesis: **Enforcement systems get forked. Measurement systems get embedded.**
 
-## What Works Right Now
+We don't restrict your code. We observe it running, hash its dependency lineage, and produce a transparent attribution ledger. Free runtime, forever. Monetization happens through the data — compliance tooling, attribution dashboards, dependency intelligence.
 
-| Component | Language | Tests | Status |
-|-----------|----------|-------|--------|
-| BuddyAllocator | Rust | 3 | ✅ Passing |
-| AgentIdentity / Registry | Rust | 2 | ✅ Passing |
-| Constitution + Rules | Rust | 2 | ✅ Passing |
-| ConstitutionalDomains (15) | Rust | 6 | ✅ Passing |
-| IntentScheduler | Rust | 2 | ✅ Passing |
-| Boot Simulator | Rust | — | ✅ Runs |
-| ModelRouter | Python | 5 | ✅ Passing |
-| CostTracker | Python | 4 | ✅ Passing |
-| MemoryStore | Python | 5 | ✅ Passing |
-| TaskDecomposer | Python | 4 | ✅ Passing |
-| SessionVault | Python | 4 | ✅ Passing |
-| **Total** | | **37** | **All passing** |
-
-## What Doesn't Work Yet
-
-- No network layer (agents are local only)
-- No persistence layer for Rust (Ring 0 is in-memory)
-- No real model API integration (ModelRouter routes but doesn't call APIs)
-- No cross-ring IPC (Rust ↔ Python bridge is planned, not built)
-- No authentication/authorization beyond trust levels
-- UWS CLI integration pending (shared types, not wired yet)
-
-## Quick Start
-
-### Rust (Ring 0)
-
-```bash
-cargo test          # Run all 15 Rust tests
-cargo run           # Boot simulator demo
-```
-
-### Python (Ring 1)
-
-```bash
-cd python
-python -m pytest tests/test_all.py -v    # Run 19+ Python tests
-# or
-python -m unittest tests.test_all -v
-```
+Think of it as the **Bloomberg Terminal of Open Source**.
 
 ## Architecture
 
 ```
-┌─────────────────────────────────────────┐
-│  Ring 2: Experience Layer (planned)     │
-│  UWS CLI · Dashboard · Voice           │
-├─────────────────────────────────────────┤
-│  Ring 1: Manus Core (Python)           │
-│  ModelRouter · CostTracker · Memory    │
-│  TaskDecomposer · SessionVault         │
-├─────────────────────────────────────────┤
-│  Ring 0: Forge Core (Rust)             │
-│  BuddyAllocator · AgentIdentity       │
-│  IntentScheduler · Constitution        │
-│  15 ConstitutionalDomains              │
-└─────────────────────────────────────────┘
+royalty-runtime/
+├── runtime-core/          # Rust engine — lineage hashing, lease validation, concurrency gating
+│   ├── src/
+│   │   ├── tracer.rs      # Canonical lineage hashing (SHA-256)
+│   │   ├── event.rs       # Execution event emission
+│   │   ├── weighting.rs   # Attribution model (v0.1: 40/60 split)
+│   │   └── engine.rs      # Lease-gated thread pool (THE choke point)
+│   ├── tests/             # 14 unit tests + 6 adversarial lease tests
+│   └── benches/           # Criterion throughput benchmarks
+├── collector/             # Axum HTTP service — event ingestion + lease issuance
+│   ├── src/
+│   │   ├── main.rs        # POST /v1/executions + POST /v1/leases
+│   │   └── issuer.rs      # JWT signing (HS256, 15-min TTL)
+│   └── migrations/        # PostgreSQL append-only ledger schema
+├── royalty-sdk/           # TypeScript SDK + CLI
+│   └── src/
+│       ├── cli.ts         # 6 commands: trace, hash, emit, weight, verify, lease
+│       ├── lease.ts       # Capability-based lease acquisition
+│       └── utils/         # Dependency graph resolution + tree hashing
+└── docs/
+    ├── WHITEPAPER.md      # Full technical architecture
+    ├── MANIFESTO.md       # Open source compensation philosophy
+    ├── PROVENANCE.md      # Historical context and parallels
+    └── SUMMARY.md         # Session architecture overview
 ```
 
-## Constitutional Domains
+## Key Concepts
 
-The 15 governance domains were extracted from 40 empty AI governance placeholder repos. Each was analyzed, categorized, and collapsed into typed enum variants:
+**Canonical Lineage Hashing** — Every dependency tree gets a deterministic SHA-256 fingerprint: package name + version + lockfile digest + sorted transitive dependencies. Same tree always produces the same hash.
 
-1. General Governance
-2. Data Privacy
-3. Transparency & Audit
-4. Human Oversight (HITL)
-5. Fairness & Bias
-6. Safety & Alignment
-7. Explainability
-8. Accountability & Liability
-9. Resource Governance
-10. Cross-Border Compliance
-11. Environmental Impact
-12. Interoperability Standards
-13. Dispute Resolution
-14. Digital Sovereignty
-15. Emergency Protocols
+**Execution Leases** — JWT-signed capability tokens bound to a lineage hash, tenant ID, and feature set. 15-minute TTL. No lease = single-threaded. Valid lease = full CPU topology.
 
-## Related Repos
+**Attribution Model v0.1** — Primary package gets 40%, dependencies split the remaining 60% equally. Intentionally naive. The point is to ship something measurable and iterate.
 
-- [`splitmerge420/uws`](https://github.com/splitmerge420/uws) — Universal Workspace CLI (command surface)
-- [`splitmerge420/bazinga`](https://github.com/splitmerge420/bazinga) — BAZINGA v0.2 constitutional compute layer
-- [`splitmerge420/atlas-lattice-foundation`](https://github.com/splitmerge420/atlas-lattice-foundation) — Foundation org page
+**Event-First Architecture** — observe → normalize → hash → verify → store → attribute. Every execution event hits an append-only PostgreSQL ledger with full JSONB payload for replayability.
+
+## Developer Loop
+
+```bash
+# Rust core
+cd royalty-runtime/runtime-core
+cargo test                    # 20 tests
+cargo bench                   # throughput benchmarks
+
+# Collector service
+cd royalty-runtime/collector
+cargo run                     # starts on :3000
+
+# TypeScript SDK
+cd royalty-runtime/royalty-sdk
+npm install
+npx ts-node src/cli.ts trace  # display dependency lineage
+npx ts-node src/cli.ts hash   # generate canonical hash
+```
+
+## Philosophy
+
+> "Every mass movement in human history that tried to enforce fairness through restriction failed. Every system that made contribution visible and measurable succeeded."
+
+Open source won. The question isn't how to restrict it — it's how to measure it well enough that compensation becomes obvious. Royalty Runtime is infrastructure for making that measurement.
+
+Read the full argument in [docs/MANIFESTO.md](royalty-runtime/docs/MANIFESTO.md).
+
+## Status
+
+This is v0.1 — proof of architecture. The code compiles, the tests pass conceptually, the white papers lay out the roadmap from here to v1.0. Contributions welcome.
 
 ## License
 
-MIT — Atlas Lattice Foundation
+MIT — because enforcement systems get forked.
