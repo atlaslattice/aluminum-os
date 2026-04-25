@@ -18,6 +18,7 @@ from element145.contracts import (
 from element145.governance.consent import ConsentKernel
 from element145.integrations.uws_adapter import to_uws_envelopes
 from element145.handlers.registry import HandlerRegistry
+from element145.classifier.engine import RuleEngine
 
 
 @dataclass
@@ -116,24 +117,31 @@ class ValidationStage:
 class RoutingDecisionStage:
     name = "routing_decision"
 
+    def __init__(self) -> None:
+        self.engine = RuleEngine()
+
     async def execute(self, ctx: PipelineContext) -> PipelineContext:
         assert ctx.sphere_query is not None
+
+        classification = self.engine.classify(ctx.payload)
+
         action = ctx.sphere_query.requested_action or "read"
         safety = SafetyState.DANGEROUS if action in {"delete", "execute_code"} else SafetyState.SAFE
+
         ctx.routing_decision = RoutingDecision(
             trace_id=ctx.trace_id,
             query_id=ctx.sphere_query.query_id,
-            house=ctx.sphere_query.house or 0,
-            sphere=ctx.sphere_query.sphere or 0,
-            epistemic_state=EpistemicState.KNOWN,
+            house=classification.get("house", 0),
+            sphere=classification.get("sphere", 0),
+            epistemic_state=EpistemicState(classification.get("epistemic_state", "known")),
             safety_state=safety,
             selected_path="fast" if safety == SafetyState.SAFE else "human_review",
             selected_providers=["local_stub"],
             provider_weights={"local_stub": 1.0},
-            policy_checks=[{"name": "phase1_default", "passed": True}],
+            policy_checks=[{"name": classification.get("matched_rule"), "passed": True}],
             budget_tier=BudgetTier.T2_FAST_LOW_COST,
             requires_human_approval=safety == SafetyState.DANGEROUS,
-            routing_reason="phase1 contract-aware default route",
+            routing_reason="rule-engine classification",
         )
         return ctx
 
