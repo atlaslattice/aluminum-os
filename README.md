@@ -1,87 +1,191 @@
 # Aluminum OS
 
-> Lightweight infrastructure for measuring what open source is actually worth.
+> An open-source AI-native workspace substrate: one safe, auditable command surface across productivity ecosystems.
+
+Aluminum OS gives humans and AI agents a unified way to operate across Google Workspace, Microsoft 365, Apple/iCloud, Android, Chrome, GitHub, Notion, and future tools.
+
+The immediate wedge is practical: **one command surface, normalized JSON, explicit consent, and auditable operations.**
+
+The long-term vision is larger: identity, memory, governance, provenance, and multi-agent orchestration as a coherent operating substrate for AI-native work.
+
+---
 
 ## What This Is
 
-Aluminum OS is the home of **Royalty Runtime** — an execution-layer attribution system that tracks how open source packages are actually used in production and routes compensation to the developers who built them.
+Aluminum OS is the umbrella architecture and reference implementation for an AI-native workspace layer.
 
-The core thesis: **Enforcement systems get forked. Measurement systems get embedded.**
+It is organized around four layers:
 
-We don't restrict your code. We observe it running, hash its dependency lineage, and produce a transparent attribution ledger. Free runtime, forever. Monetization happens through the data — compliance tooling, attribution dashboards, dependency intelligence.
-
-Think of it as the **Bloomberg Terminal of Open Source**.
-
-## Architecture
-
-```
-royalty-runtime/
-├── runtime-core/          # Rust engine — lineage hashing, lease validation, concurrency gating
-│   ├── src/
-│   │   ├── tracer.rs      # Canonical lineage hashing (SHA-256)
-│   │   ├── event.rs       # Execution event emission
-│   │   ├── weighting.rs   # Attribution model (v0.1: 40/60 split)
-│   │   └── engine.rs      # Lease-gated thread pool (THE choke point)
-│   ├── tests/             # 14 unit tests + 6 adversarial lease tests
-│   └── benches/           # Criterion throughput benchmarks
-├── collector/             # Axum HTTP service — event ingestion + lease issuance
-│   ├── src/
-│   │   ├── main.rs        # POST /v1/executions + POST /v1/leases
-│   │   └── issuer.rs      # JWT signing (HS256, 15-min TTL)
-│   └── migrations/        # PostgreSQL append-only ledger schema
-├── royalty-sdk/           # TypeScript SDK + CLI
-│   └── src/
-│       ├── cli.ts         # 6 commands: trace, hash, emit, weight, verify, lease
-│       ├── lease.ts       # Capability-based lease acquisition
-│       └── utils/         # Dependency graph resolution + tree hashing
-└── docs/
-    ├── WHITEPAPER.md      # Full technical architecture
-    ├── MANIFESTO.md       # Open source compensation philosophy
-    ├── PROVENANCE.md      # Historical context and parallels
-    └── SUMMARY.md         # Session architecture overview
+```text
+Human / AI intent
+        |
+        v
+alum / uws command surface
+        |
+        v
+Aluminum substrate: identity, memory, governance, provenance, agent runtime
+        |
+        v
+Provider drivers: Google Workspace, Microsoft 365, Apple/iCloud, Android, Chrome, GitHub, Notion, Slack, Linear, and future plugins
 ```
 
-## Key Concepts
+### Current operational core
 
-**Canonical Lineage Hashing** — Every dependency tree gets a deterministic SHA-256 fingerprint: package name + version + lockfile digest + sorted transitive dependencies. Same tree always produces the same hash.
+The current executable command-surface work lives in [`atlaslattice/uws`](https://github.com/atlaslattice/uws).
 
-**Execution Leases** — JWT-signed capability tokens bound to a lineage hash, tenant ID, and feature set. 15-minute TTL. No lease = single-threaded. Valid lease = full CPU topology.
+`uws` is the Universal Workspace CLI: a schema-driven, JSON-first interface designed for both humans and AI agents. It is the near-term build path for Aluminum.
 
-**Attribution Model v0.1** — Primary package gets 40%, dependencies split the remaining 60% equally. Intentionally naive. The point is to ship something measurable and iterate.
+### Current architecture anchor
 
-**Event-First Architecture** — observe → normalize → hash → verify → store → attribute. Every execution event hits an append-only PostgreSQL ledger with full JSONB payload for replayability.
+Start here:
 
-## Developer Loop
+- [`docs/architecture/SOURCE_OF_TRUTH.md`](docs/architecture/SOURCE_OF_TRUTH.md) — current repo doctrine and source-of-truth map
+- [`enterprise/Aluminum_OS_Enterprise_Specification_v1.0.md`](enterprise/Aluminum_OS_Enterprise_Specification_v1.0.md) — enterprise architecture specification
+
+---
+
+## Core Thesis
+
+Traditional operating systems abstract hardware.
+
+Aluminum abstracts **workspace ecosystems**.
+
+Just as kernel drivers let software operate across different hardware devices, Aluminum provider drivers let humans and AI agents operate across Google, Microsoft, Apple, Android, Chrome, GitHub, Notion, and future systems without rewriting workflows for every silo.
+
+The AI agent becomes the shell.
+The user's intent becomes the program.
+Provider drivers become device drivers.
+Governance and provenance become the safety layer.
+
+---
+
+## Product Shape
+
+The intended user-facing command surface is `alum`:
 
 ```bash
-# Rust core
-cd royalty-runtime/runtime-core
-cargo test                    # 20 tests
-cargo bench                   # throughput benchmarks
-
-# Collector service
-cd royalty-runtime/collector
-cargo run                     # starts on :3000
-
-# TypeScript SDK
-cd royalty-runtime/royalty-sdk
-npm install
-npx ts-node src/cli.ts trace  # display dependency lineage
-npx ts-node src/cli.ts hash   # generate canonical hash
+alum mail list --provider all
+alum mail send --to alice@example.com --confirm
+alum calendar create --ai "schedule a team sync tomorrow at 10"
+alum drive search "Q1 budget" --provider all
+alum sync contacts --from apple --to google
+alum ai "summarize my unread email and today's meetings"
 ```
 
-## Philosophy
+Under the hood, early `alum` commands should route through `uws` until Aluminum-native provider drivers are stable.
 
-> "Every mass movement in human history that tried to enforce fairness through restriction failed. Every system that made contribution visible and measurable succeeded."
+---
 
-Open source won. The question isn't how to restrict it — it's how to measure it well enough that compensation becomes obvious. Royalty Runtime is infrastructure for making that measurement.
+## Key Principles
 
-Read the full argument in [docs/MANIFESTO.md](royalty-runtime/docs/MANIFESTO.md).
+- **Useful before mythic.** Ship the thing people can use first.
+- **One command surface.** Agents and humans should not need different APIs for every provider.
+- **JSON-first.** Every operation should be machine-readable and automation-safe.
+- **Consent-aware.** Writes, shares, deletes, and external sends should be explicit and auditable.
+- **Provenance-native.** Important actions should leave a trace: who/what acted, on what data, under what authority.
+- **Provider-neutral.** Google, Microsoft, Apple, and others are drivers, not prisons.
+- **Agent-ready.** Manus, Claude, Gemini, GPT, Copilot, and future agents should be able to operate through stable contracts.
+
+---
+
+## Repository Roles
+
+This repository, `aluminum-os`, is the umbrella repo for:
+
+- architecture;
+- governance and constitutional substrate;
+- provenance and audit design;
+- memory substrate design;
+- agent runtime design;
+- product roadmap;
+- reference packages and prototypes.
+
+Related repositories:
+
+- [`atlaslattice/uws`](https://github.com/atlaslattice/uws) — current Universal Workspace CLI / command-surface implementation.
+- [`atlaslattice/manus-artifacts`](https://github.com/atlaslattice/manus-artifacts) — artifact archive and staging area.
+- `aluminum-os-v3`, `constitutional-os`, and related repos — candidate source-material repos to reconcile into the canonical architecture.
+
+---
+
+## Royalty Runtime
+
+Royalty Runtime remains valuable, but it is now treated as a subsystem or adjacent product line rather than the entire public identity of Aluminum OS.
+
+Its core idea is still important:
+
+> Enforcement systems get forked. Measurement systems get embedded.
+
+In the Aluminum architecture, Royalty Runtime fits naturally under provenance, attribution, dependency intelligence, and open-source value measurement.
+
+Suggested future location:
+
+```text
+packages/
+  royalty-runtime/
+```
+
+---
+
+## Near-Term Build Path
+
+### Phase 0 — Stabilize
+
+- Maintain a source-of-truth map.
+- Inventory artifacts and specs.
+- Define canonical repo roles.
+- Open implementation issues with clear acceptance criteria.
+
+### Phase 1 — Ship `uws`
+
+- Provider driver interface.
+- Google/Microsoft/Apple command normalization.
+- Safe write confirmations.
+- Audit logs.
+- Agent skill files.
+
+### Phase 2 — Introduce `alum`
+
+- Provider-agnostic commands.
+- Friendly user-facing grammar.
+- Routing through `uws` where possible.
+- First demo: mail/calendar/drive across at least two providers.
+
+### Phase 3 — Add substrate services
+
+- Agent Control Plane.
+- Governance engine.
+- Provenance graph.
+- Memory substrate.
+- Consent and policy enforcement.
+
+### Phase 4 — Long-term OS track
+
+- Bare-metal and microkernel research.
+- Formal verification.
+- Capability-native runtime.
+- Hardware-aware AI execution.
+
+The bare-metal track is real research, but it should not block the middleware/product path.
+
+---
 
 ## Status
 
-This is v0.1 — proof of architecture. The code compiles, the tests pass conceptually, the white papers lay out the roadmap from here to v1.0. Contributions welcome.
+Current status: **architecture consolidation and executable command-surface stabilization.**
+
+This repository contains important specifications and source material. The immediately buildable implementation path runs through `uws`, then `alum`, then substrate services.
+
+---
 
 ## License
 
-MIT — because enforcement systems get forked.
+MIT unless otherwise specified in subdirectories.
+
+---
+
+## Working Doctrine
+
+Build the thing people can use first.
+
+The universal command surface is the wedge. Governance, provenance, memory, and agent orchestration make it defensible. Bare-metal OS work is the moonshot track, not the blocker.
