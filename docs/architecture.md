@@ -69,10 +69,10 @@ The Constitution holds rules with four severity levels:
 ```
 ┌─────────────────────────┐
 │  uws CLI (Ring 2)       │ ← Fork of Google gws, 14 miracle commands
-│  splitmerge420/uws      │
+│  atlaslattice/uws      │
 ├─────────────────────────┤
 │  aluminum-os lib (Ring 0+1) │ ← This repo
-│  splitmerge420/aluminum-os  │
+│  atlaslattice/aluminum-os  │
 └─────────────────────────┘
 ```
 
@@ -81,6 +81,6 @@ types (AgentIdentity, ConstitutionalDomain, etc.) instead of duplicating them.
 
 ## Related Work
 
-- **BAZINGA v0.2** — Constitutional compute layer (splitmerge420/bazinga)
-- **Atlas Lattice Foundation** — Org page (splitmerge420/atlas-lattice-foundation)
+- **BAZINGA v0.2** — Constitutional compute layer (atlaslattice/bazinga)
+- **Atlas Lattice Foundation** — Org page (atlaslattice/atlas-lattice-foundation)
 - **arXiv 2408.16096** — Canonical 11,289x efficiency result

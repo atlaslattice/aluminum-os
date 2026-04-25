@@ -69,9 +69,9 @@ In traditional Japanese kintsugi, broken pottery is repaired with gold — the r
 
 ## Related
 
-- [aluminum-os](https://github.com/splitmerge420/aluminum-os) — The OS that emits traces
-- [uws](https://github.com/splitmerge420/uws) — CLI that emits traces
-- [144-sphere-ontology](https://github.com/splitmerge420/144-sphere-ontology) — Sphere tags referenced in every trace
+- [aluminum-os](https://github.com/atlaslattice/aluminum-os) — The OS that emits traces
+- [uws](https://github.com/atlaslattice/uws) — CLI that emits traces
+- [144-sphere-ontology](https://github.com/atlaslattice/144-sphere-ontology) — Sphere tags referenced in every trace
 
 ---
 

@@ -24,16 +24,16 @@ the gold that fills the cracks. Both are essential; neither is diminished.
 
 | Fork | Upstream | Purpose |
 |------|----------|---------|
-| `splitmerge420/claude-plugins-official` | `anthropics/claude-plugins-official` | Official plugin specs |
-| `splitmerge420/servers` | `modelcontextprotocol/servers` | MCP server implementations |
-| `splitmerge420/claude-code` | `anthropics/claude-code` | Claude Code CLI tooling |
-| `splitmerge420/awesome-claude-code` | `hesreallyhim/awesome-claude-code` | Curated resources |
-| `splitmerge420/awesome-claude-plugins` | `ComposioHQ/awesome-claude-plugins` | Plugin ecosystem catalog |
-| `splitmerge420/claude-code-plugins-plus-skills` | `jeremylongshore/claude-code-plugins-plus-skills` | Extended plugins & skills |
-| `splitmerge420/awesome-claude-plugins2` | `quemsah/awesome-claude-plugins` | Alternative plugin catalog |
-| `splitmerge420/cc-marketplace` | `ananddtyagi/cc-marketplace` | Community marketplace |
-| `splitmerge420/claude-code-mcp` | `KunihiroS/claude-code-mcp` | MCP integration for Claude Code |
-| `splitmerge420/awesome-claude-code-plugins` | `ccplugins/awesome-claude-code-plugins` | Plugin directory |
+| `atlaslattice/claude-plugins-official` | `anthropics/claude-plugins-official` | Official plugin specs |
+| `atlaslattice/servers` | `modelcontextprotocol/servers` | MCP server implementations |
+| `atlaslattice/claude-code` | `anthropics/claude-code` | Claude Code CLI tooling |
+| `atlaslattice/awesome-claude-code` | `hesreallyhim/awesome-claude-code` | Curated resources |
+| `atlaslattice/awesome-claude-plugins` | `ComposioHQ/awesome-claude-plugins` | Plugin ecosystem catalog |
+| `atlaslattice/claude-code-plugins-plus-skills` | `jeremylongshore/claude-code-plugins-plus-skills` | Extended plugins & skills |
+| `atlaslattice/awesome-claude-plugins2` | `quemsah/awesome-claude-plugins` | Alternative plugin catalog |
+| `atlaslattice/cc-marketplace` | `ananddtyagi/cc-marketplace` | Community marketplace |
+| `atlaslattice/claude-code-mcp` | `KunihiroS/claude-code-mcp` | MCP integration for Claude Code |
+| `atlaslattice/awesome-claude-code-plugins` | `ccplugins/awesome-claude-code-plugins` | Plugin directory |
 
 ## Sync Frequency and Strategy
 
