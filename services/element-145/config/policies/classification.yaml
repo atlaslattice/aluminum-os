@@ -1,0 +1,35 @@
+# Classification policy (Phase-1 seed)
+# Maps keywords/domains to house/sphere + epistemic/safety hints.
+
+version: 0.1
+
+default:
+  house: 0
+  sphere: 0
+  epistemic_state: known
+  safety_state: safe
+
+rules:
+  - match:
+      any_keywords: ["finance", "billing", "invoice", "payment"]
+    set:
+      house: 7
+      sphere: 2
+      epistemic_state: known
+      safety_state: sensitive
+
+  - match:
+      any_keywords: ["medical", "health", "diagnosis", "treatment"]
+    set:
+      house: 9
+      sphere: 4
+      epistemic_state: estimated
+      safety_state: sensitive
+
+  - match:
+      any_keywords: ["delete", "remove", "drop", "erase"]
+    set:
+      house: 12
+      sphere: 1
+      epistemic_state: known
+      safety_state: dangerous
