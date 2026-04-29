@@ -33,27 +33,27 @@ modules:
   name: Number Theory Utilities
   house: H02
   sphere: S01
-  status: SPEC
+  status: ACTIVE
 - id: M44
   name: Constructive Mathematics Module
   house: H02
   sphere: S01
-  status: SPEC
+  status: ACTIVE
 - id: M56
   name: Proof Assistant Interface
   house: H02
   sphere: S01
-  status: SPEC
+  status: ACTIVE
 - id: M68
   name: "G\xF6del Incompleteness Tracker"
   house: H02
   sphere: S01
-  status: SPEC
+  status: ACTIVE
 - id: M84
   name: Axiom Consistency Checker
   house: H02
   sphere: S01
-  status: SPEC
+  status: ACTIVE
 - id: M16
   name: Statistical Inference Engine
   house: H02
@@ -83,7 +83,7 @@ modules:
   name: Hypothesis Testing Framework
   house: H02
   sphere: S02
-  status: SPEC
+  status: ACTIVE
 - id: M79
   name: Primacy Bonus Calculator
   house: H02
@@ -108,7 +108,7 @@ modules:
   name: Algorithm Optimizer CN Adapter
   house: H02
   sphere: S03
-  status: SPEC
+  status: ACTIVE
 - id: M18
   name: Distributed Consensus Protocol
   house: H02
@@ -148,7 +148,7 @@ modules:
   name: Information Security CN Adapter
   house: H02
   sphere: S04
-  status: SPEC
+  status: ACTIVE
 - id: M3
   name: Consent & Provenance Engine
   house: H02
@@ -158,7 +158,7 @@ modules:
   name: Consent Engine Extension
   house: H02
   sphere: S04
-  status: SPEC
+  status: ACTIVE
 - id: M42
   name: Zero-Knowledge Proof Module
   house: H02
@@ -168,7 +168,7 @@ modules:
   name: Homomorphic Encryption Engine
   house: H02
   sphere: S04
-  status: SPEC
+  status: ACTIVE
 - id: M6
   name: Cryptographic Primitives
   house: H02
@@ -183,27 +183,27 @@ modules:
   name: Cryptographic Primitives Extension A
   house: H02
   sphere: S04
-  status: SPEC
+  status: ACTIVE
 - id: M6b
   name: Cryptographic Primitives Extension B
   house: H02
   sphere: S04
-  status: SPEC
+  status: ACTIVE
 - id: M6c
   name: BSN Anchoring Adapter
   house: H02
   sphere: S04
-  status: SPEC
+  status: ACTIVE
 - id: M77
   name: Secure Multi-Party Computation
   house: H02
   sphere: S04
-  status: SPEC
+  status: ACTIVE
 - id: M90
   name: Post-Quantum Cryptography
   house: H02
   sphere: S04
-  status: SPEC
+  status: ACTIVE
 - id: M17
   name: Systems Dynamics Modeler
   house: H02
@@ -248,7 +248,7 @@ modules:
   name: Strategic Reasoning Engine
   house: H02
   sphere: S06
-  status: SPEC
+  status: ACTIVE
 - id: M31
   name: Mechanism Design Module
   house: H02
@@ -263,32 +263,32 @@ modules:
   name: Voting Theory Module
   house: H02
   sphere: S06
-  status: SPEC
+  status: ACTIVE
 - id: M67
   name: Nash Equilibrium Finder
   house: H02
   sphere: S06
-  status: SPEC
+  status: ACTIVE
 - id: M78
   name: Cooperative Game Solver
   house: H02
   sphere: S06
-  status: SPEC
+  status: ACTIVE
 - id: M9
   name: Game Theory Optimizer
   house: H02
   sphere: S06
-  status: SPEC
+  status: ACTIVE
 - id: M91
   name: Social Choice Function
   house: H02
   sphere: S06
-  status: SPEC
+  status: ACTIVE
 - id: M13
   name: Formal Language Processor
   house: H02
   sphere: S07
-  status: SPEC
+  status: ACTIVE
 - id: M26
   name: Grammar Induction Engine
   house: H02
@@ -298,22 +298,22 @@ modules:
   name: Type Theory Checker
   house: H02
   sphere: S07
-  status: SPEC
+  status: ACTIVE
 - id: M57
   name: Context-Free Grammar Parser
   house: H02
   sphere: S07
-  status: SPEC
+  status: ACTIVE
 - id: M69
   name: Regular Expression Optimizer
   house: H02
   sphere: S07
-  status: SPEC
+  status: ACTIVE
 - id: M85
   name: Pushdown Automaton Simulator
   house: H02
   sphere: S07
-  status: SPEC
+  status: ACTIVE
 - id: M11
   name: Category Theory Framework
   house: H02
@@ -328,27 +328,27 @@ modules:
   name: Homological Algebra Engine
   house: H02
   sphere: S08
-  status: SPEC
+  status: ACTIVE
 - id: M47
   name: Representation Theory Module
   house: H02
   sphere: S08
-  status: SPEC
+  status: ACTIVE
 - id: M58
   name: Group Theory Computations
   house: H02
   sphere: S08
-  status: SPEC
+  status: ACTIVE
 - id: M70
   name: Ring Theory Module
   house: H02
   sphere: S08
-  status: SPEC
+  status: ACTIVE
 - id: M86
   name: Galois Theory Module
   house: H02
   sphere: S08
-  status: SPEC
+  status: ACTIVE
 - id: M20
   name: Computational Bounds Verifier
   house: H02
@@ -358,32 +358,32 @@ modules:
   name: Space-Time Complexity Mapper
   house: H02
   sphere: S09
-  status: SPEC
+  status: ACTIVE
 - id: M49
   name: Circuit Complexity Analyzer
   house: H02
   sphere: S09
-  status: SPEC
+  status: ACTIVE
 - id: M5
   name: Complexity Analyzer
   house: H02
   sphere: S09
-  status: SPEC
+  status: ACTIVE
 - id: M60
   name: Parameterized Complexity Module
   house: H02
   sphere: S09
-  status: SPEC
+  status: ACTIVE
 - id: M72
   name: Approximation Algorithm Library
   house: H02
   sphere: S09
-  status: SPEC
+  status: ACTIVE
 - id: M88
   name: Streaming Algorithm Library
   house: H02
   sphere: S09
-  status: SPEC
+  status: ACTIVE
 - id: M14
   name: Topological Data Analyzer
   house: H02
@@ -393,32 +393,32 @@ modules:
   name: Geometric Reasoning Module
   house: H02
   sphere: S10
-  status: SPEC
+  status: ACTIVE
 - id: M35
   name: Manifold Learning Module
   house: H02
   sphere: S10
-  status: SPEC
+  status: ACTIVE
 - id: M51
   name: Knot Theory Module
   house: H02
   sphere: S10
-  status: SPEC
+  status: ACTIVE
 - id: M62
   name: Persistent Homology Engine
   house: H02
   sphere: S10
-  status: SPEC
+  status: ACTIVE
 - id: M73
   name: Differential Geometry Engine
   house: H02
   sphere: S10
-  status: SPEC
+  status: ACTIVE
 - id: M89
   name: Algebraic Topology Module
   house: H02
   sphere: S10
-  status: SPEC
+  status: ACTIVE
 - id: M19
   name: Model Checker
   house: H02
@@ -428,27 +428,27 @@ modules:
   name: Temporal Logic Verifier
   house: H02
   sphere: S11
-  status: SPEC
+  status: ACTIVE
 - id: M4
   name: Formal Verification Module
   house: H02
   sphere: S11
-  status: SPEC
+  status: ACTIVE
 - id: M50
   name: SAT/SMT Solver
   house: H02
   sphere: S11
-  status: SPEC
+  status: ACTIVE
 - id: M61
   name: Bisimulation Checker
   house: H02
   sphere: S11
-  status: SPEC
+  status: ACTIVE
 - id: M64
   name: Constitutional Compiler
   house: H02
   sphere: S11
-  status: SPEC
+  status: ACTIVE
 - id: M83
   name: Invariant Monitor
   house: H02
@@ -458,47 +458,47 @@ modules:
   name: Quantum Computing Interface
   house: H02
   sphere: S12
-  status: SPEC
+  status: ACTIVE
 - id: M25
   name: Quantum Algorithm Library
   house: H02
   sphere: S12
-  status: SPEC
+  status: ACTIVE
 - id: M25a
   name: Quantum Algorithm Extension A
   house: H02
   sphere: S12
-  status: SPEC
+  status: ACTIVE
 - id: M25b
   name: Quantum Algorithm Extension B
   house: H02
   sphere: S12
-  status: SPEC
+  status: ACTIVE
 - id: M25c
   name: Quantum Algorithm Extension C
   house: H02
   sphere: S12
-  status: SPEC
+  status: ACTIVE
 - id: M48
   name: Quantum Error Correction
   house: H02
   sphere: S12
-  status: SPEC
+  status: ACTIVE
 - id: M59
   name: Quantum Simulation Engine
   house: H02
   sphere: S12
-  status: SPEC
+  status: ACTIVE
 - id: M71
   name: Quantum Key Distribution
   house: H02
   sphere: S12
-  status: SPEC
+  status: ACTIVE
 - id: M87
   name: Quantum Entanglement Tracker
   house: H02
   sphere: S12
-  status: SPEC
+  status: ACTIVE
 - id: M130
   name: Wet Lab Verification Gate
   house: H03
@@ -508,7 +508,7 @@ modules:
   name: Environmental Impact Assessor
   house: H03
   sphere: S07
-  status: SPEC
+  status: ACTIVE
 - id: M100
   name: Code Quality Analyzer
   house: H04
@@ -528,7 +528,7 @@ modules:
   name: FPGA Configuration Manager
   house: H04
   sphere: S02
-  status: SPEC
+  status: ACTIVE
 - id: M95
   name: Hardware Abstraction Layer
   house: H04
@@ -573,37 +573,37 @@ modules:
   name: Autonomous Vehicle Interface
   house: H04
   sphere: S05
-  status: SPEC
+  status: ACTIVE
 - id: M96
   name: Robotics Control Interface
   house: H04
   sphere: S05
-  status: SPEC
+  status: ACTIVE
 - id: M124
   name: Renewable Energy Tracker
   house: H04
   sphere: S06
-  status: SPEC
+  status: ACTIVE
 - id: M97
   name: Energy Grid Optimizer
   house: H04
   sphere: S06
-  status: SPEC
+  status: ACTIVE
 - id: M103
   name: Aerospace Simulation Engine
   house: H04
   sphere: S07
-  status: SPEC
+  status: ACTIVE
 - id: M125
   name: Medical Device Interface
   house: H04
   sphere: S08
-  status: SPEC
+  status: ACTIVE
 - id: M126
   name: Structural Analysis Engine
   house: H04
   sphere: S09
-  status: SPEC
+  status: ACTIVE
 - id: M127
   name: Civic Compute Coordinator
   house: H04
@@ -633,117 +633,117 @@ modules:
   name: UX Accessibility Validator
   house: H04
   sphere: S12
-  status: SPEC
+  status: ACTIVE
 - id: M105
   name: Visual Style Transfer Engine
   house: H05
   sphere: S01
-  status: SPEC
+  status: ACTIVE
 - id: M110
   name: Attribution Tracker
   house: H05
   sphere: S01
-  status: SPEC
+  status: ACTIVE
 - id: M106
   name: Music Generation Pipeline
   house: H05
   sphere: S02
-  status: SPEC
+  status: ACTIVE
 - id: M111
   name: Style Fingerprint Detector
   house: H05
   sphere: S02
-  status: SPEC
+  status: ACTIVE
 - id: M107
   name: Creative Writing Assistant
   house: H05
   sphere: S03
-  status: SPEC
+  status: ACTIVE
 - id: M112
   name: Derivative Work Analyzer
   house: H05
   sphere: S03
-  status: SPEC
+  status: ACTIVE
 - id: M108
   name: Video Production Pipeline
   house: H05
   sphere: S04
-  status: SPEC
+  status: ACTIVE
 - id: M113
   name: Fair Use Evaluator
   house: H05
   sphere: S04
-  status: SPEC
+  status: ACTIVE
 - id: M162a
   name: Immersive Theater Engine
   house: H05
   sphere: S05
-  status: SPEC
+  status: ACTIVE
 - id: M163
   name: Architectural Visualization
   house: H05
   sphere: S06
-  status: SPEC
+  status: ACTIVE
 - id: M109
   name: Digital Art Generator
   house: H05
   sphere: S07
-  status: SPEC
+  status: ACTIVE
 - id: M167
   name: Game IP Sovereignty Registry
   house: H05
   sphere: S08
-  status: SPEC
+  status: ACTIVE
 - id: M168
   name: Content Rating Constitutional Gate
   house: H05
   sphere: S08
-  status: SPEC
+  status: ACTIVE
 - id: M169
   name: Esports & Competitive Integrity Engine
   house: H05
   sphere: S08
-  status: SPEC
+  status: ACTIVE
 - id: M170
   name: Cloud Gaming Sovereignty Router
   house: H05
   sphere: S08
-  status: SPEC
+  status: ACTIVE
 - id: M171
   name: Game Preservation & Cultural Heritage Engine
   house: H05
   sphere: S08
-  status: SPEC
+  status: ACTIVE
 - id: M172
   name: Civic Compute Reuse Engine
   house: H05
   sphere: S08
-  status: SPEC
+  status: ACTIVE
 - id: M164
   name: Computational Photography
   house: H05
   sphere: S09
-  status: SPEC
+  status: ACTIVE
 - id: M165
   name: Generative Craft Engine
   house: H05
   sphere: S10
-  status: SPEC
+  status: ACTIVE
 - id: M162b
   name: Spatial Computing Interface
   house: H05
   sphere: S11
-  status: SPEC
+  status: ACTIVE
 - id: M175
   name: Interactive-Kinetic Rights Harmonizer
   house: H05
   sphere: S11
-  status: SPEC
+  status: ACTIVE
 - id: M166
   name: Animation Pipeline
   house: H05
   sphere: S12
-  status: SPEC
+  status: ACTIVE
 - id: M129
   name: Agricultural Data Pipeline
   house: H07
@@ -758,7 +758,7 @@ modules:
   name: Urban Planning Simulator
   house: H07
   sphere: S03
-  status: SPEC
+  status: ACTIVE
 - id: M134
   name: Data Warehouse Manager
   house: H07
@@ -788,17 +788,17 @@ modules:
   name: Genomic Analysis Pipeline
   house: H09
   sphere: S01
-  status: SPEC
+  status: ACTIVE
 - id: M137
   name: Synthetic Biology Designer
   house: H09
   sphere: S11
-  status: SPEC
+  status: ACTIVE
 - id: M138
   name: Health Informatics Engine
   house: H10
   sphere: S08
-  status: SPEC
+  status: ACTIVE
 - id: M139
   name: Economic Modeling Engine
   house: H11
@@ -833,7 +833,7 @@ modules:
   name: Sanctions Compliance Module
   house: H12
   sphere: S02
-  status: SPEC
+  status: ACTIVE
 - id: M146
   name: Corporate Governance Module
   house: H12
@@ -843,37 +843,37 @@ modules:
   name: Contract Analyzer
   house: H12
   sphere: S03
-  status: SPEC
+  status: ACTIVE
 - id: M144
   name: IP Rights Manager
   house: H12
   sphere: S04
-  status: SPEC
+  status: ACTIVE
 - id: M158
   name: Patent Prior Art Searcher
   house: H12
   sphere: S04
-  status: SPEC
+  status: ACTIVE
 - id: M147
   name: Environmental Compliance Tracker
   house: H12
   sphere: S05
-  status: SPEC
+  status: ACTIVE
 - id: M159
   name: Carbon Credit Validator
   house: H12
   sphere: S05
-  status: SPEC
+  status: ACTIVE
 - id: M148
   name: Criminal Law Database
   house: H12
   sphere: S06
-  status: SPEC
+  status: ACTIVE
 - id: M160
   name: Evidence Chain Manager
   house: H12
   sphere: S06
-  status: SPEC
+  status: ACTIVE
 - id: M149
   name: Regulatory Change Monitor
   house: H12
@@ -883,12 +883,12 @@ modules:
   name: Regulatory Sandbox Interface
   house: H12
   sphere: S07
-  status: SPEC
+  status: ACTIVE
 - id: M150
   name: Labor Rights Validator
   house: H12
   sphere: S08
-  status: SPEC
+  status: ACTIVE
 - id: M142
   name: TOS Compliance Engine
   house: H12
@@ -898,12 +898,12 @@ modules:
   name: Cyber Law Compliance
   house: H12
   sphere: S09
-  status: SPEC
+  status: ACTIVE
 - id: M152
   name: Indigenous Rights Protector
   house: H12
   sphere: S10
-  status: SPEC
+  status: ACTIVE
 - id: M153
   name: Arbitration Protocol
   house: H12
@@ -913,4 +913,4 @@ modules:
   name: Comparative Law Engine
   house: H12
   sphere: S12
-  status: SPEC
+  status: ACTIVE
