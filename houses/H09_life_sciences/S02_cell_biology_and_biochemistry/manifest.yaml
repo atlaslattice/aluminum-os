@@ -1,9 +1,0 @@
-sphere:
-  id: S02
-  house: H09
-  name: Cell Biology & Biochemistry
-  full_id: H09-S02
-  ordinal: 98
-status: EMPTY
-module_count: 0
-modules: []

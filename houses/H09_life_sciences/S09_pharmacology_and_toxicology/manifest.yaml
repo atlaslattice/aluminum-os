@@ -1,9 +1,0 @@
-sphere:
-  id: S09
-  house: H09
-  name: Pharmacology & Toxicology
-  full_id: H09-S09
-  ordinal: 105
-status: EMPTY
-module_count: 0
-modules: []

@@ -1,595 +1,633 @@
-metadata:
-  version: '3.14'
-  total_spheres: 144
-  element_145: true
-  populated_spheres: 74
-  coverage_percentage: 51.4
-coverage:
+# 12x12 Ontological Matrix v3.14
+# AUTO-GENERATED from lattice_ontology_v2.py — DO NOT EDIT MANUALLY
+version: '3.14'
+canon: COMPLETE_BUILD_PLAN_v3.14 Appendix AG
+dimensions:
+  houses: 12
+  spheres_per_house: 12
+  total: 144
+matrix:
   H01:
-    S01:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S02:
-      modules: 2
-      invariants: 0
-      status: POPULATED
-    S03:
-      modules: 1
-      invariants: 4
-      status: POPULATED
-    S04:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S05:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S06:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S07:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S08:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S09:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S10:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S11:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S12:
-      modules: 0
-      invariants: 0
-      status: EMPTY
+    name: Natural Sciences
+    dir: h01_natural_sciences
+    spheres:
+      S001:
+        name: Physics
+        dir: houses/h01_natural_sciences/s01_physics
+        index: 0
+      S002:
+        name: Chemistry
+        dir: houses/h01_natural_sciences/s02_chemistry
+        index: 1
+      S003:
+        name: Biology
+        dir: houses/h01_natural_sciences/s03_biology
+        index: 2
+      S004:
+        name: Astronomy
+        dir: houses/h01_natural_sciences/s04_astronomy
+        index: 3
+      S005:
+        name: Geology
+        dir: houses/h01_natural_sciences/s05_geology
+        index: 4
+      S006:
+        name: Oceanography
+        dir: houses/h01_natural_sciences/s06_oceanography
+        index: 5
+      S007:
+        name: Meteorology
+        dir: houses/h01_natural_sciences/s07_meteorology
+        index: 6
+      S008:
+        name: Ecology
+        dir: houses/h01_natural_sciences/s08_ecology
+        index: 7
+      S009:
+        name: Botany
+        dir: houses/h01_natural_sciences/s09_botany
+        index: 8
+      S010:
+        name: Zoology
+        dir: houses/h01_natural_sciences/s10_zoology
+        index: 9
+      S011:
+        name: Microbiology
+        dir: houses/h01_natural_sciences/s11_microbiology
+        index: 10
+      S012:
+        name: Genetics
+        dir: houses/h01_natural_sciences/s12_genetics
+        index: 11
   H02:
-    S01:
-      modules: 7
-      invariants: 0
-      status: POPULATED
-    S02:
-      modules: 8
-      invariants: 2
-      status: POPULATED
-    S03:
-      modules: 9
-      invariants: 2
-      status: POPULATED
-    S04:
-      modules: 13
-      invariants: 2
-      status: POPULATED
-    S05:
-      modules: 8
-      invariants: 3
-      status: POPULATED
-    S06:
-      modules: 8
-      invariants: 0
-      status: POPULATED
-    S07:
-      modules: 6
-      invariants: 0
-      status: POPULATED
-    S08:
-      modules: 7
-      invariants: 0
-      status: POPULATED
-    S09:
-      modules: 7
-      invariants: 1
-      status: POPULATED
-    S10:
-      modules: 7
-      invariants: 0
-      status: POPULATED
-    S11:
-      modules: 7
-      invariants: 0
-      status: POPULATED
-    S12:
-      modules: 9
-      invariants: 0
-      status: POPULATED
+    name: Formal Sciences
+    dir: h02_formal_sciences
+    spheres:
+      S013:
+        name: Mathematics
+        dir: houses/h02_formal_sciences/s01_mathematics
+        index: 12
+      S014:
+        name: Logic
+        dir: houses/h02_formal_sciences/s02_logic
+        index: 13
+      S015:
+        name: Statistics
+        dir: houses/h02_formal_sciences/s03_statistics
+        index: 14
+      S016:
+        name: Computer Science
+        dir: houses/h02_formal_sciences/s04_computer_science
+        index: 15
+      S017:
+        name: Information Theory
+        dir: houses/h02_formal_sciences/s05_information_theory
+        index: 16
+      S018:
+        name: Game Theory
+        dir: houses/h02_formal_sciences/s06_game_theory
+        index: 17
+      S019:
+        name: Operations Research
+        dir: houses/h02_formal_sciences/s07_operations_research
+        index: 18
+      S020:
+        name: Systems Theory
+        dir: houses/h02_formal_sciences/s08_systems_theory
+        index: 19
+      S021:
+        name: Decision Theory
+        dir: houses/h02_formal_sciences/s09_decision_theory
+        index: 20
+      S022:
+        name: Cryptography
+        dir: houses/h02_formal_sciences/s10_cryptography
+        index: 21
+      S023:
+        name: Algorithmics
+        dir: houses/h02_formal_sciences/s11_algorithmics
+        index: 22
+      S024:
+        name: Data Science
+        dir: houses/h02_formal_sciences/s12_data_science
+        index: 23
   H03:
-    S01:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S02:
-      modules: 1
-      invariants: 0
-      status: POPULATED
-    S03:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S04:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S05:
-      modules: 0
-      invariants: 1
-      status: POPULATED
-    S06:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S07:
-      modules: 1
-      invariants: 1
-      status: POPULATED
-    S08:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S09:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S10:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S11:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S12:
-      modules: 0
-      invariants: 0
-      status: EMPTY
+    name: Social Sciences
+    dir: h03_social_sciences
+    spheres:
+      S025:
+        name: Sociology
+        dir: houses/h03_social_sciences/s01_sociology
+        index: 24
+      S026:
+        name: Psychology
+        dir: houses/h03_social_sciences/s02_psychology
+        index: 25
+      S027:
+        name: Anthropology
+        dir: houses/h03_social_sciences/s03_anthropology
+        index: 26
+      S028:
+        name: Economics
+        dir: houses/h03_social_sciences/s04_economics
+        index: 27
+      S029:
+        name: Political Science
+        dir: houses/h03_social_sciences/s05_political_science
+        index: 28
+      S030:
+        name: Geography
+        dir: houses/h03_social_sciences/s06_geography
+        index: 29
+      S031:
+        name: Linguistics
+        dir: houses/h03_social_sciences/s07_linguistics
+        index: 30
+      S032:
+        name: Archaeology
+        dir: houses/h03_social_sciences/s08_archaeology
+        index: 31
+      S033:
+        name: Demography
+        dir: houses/h03_social_sciences/s09_demography
+        index: 32
+      S034:
+        name: Criminology
+        dir: houses/h03_social_sciences/s10_criminology
+        index: 33
+      S035:
+        name: Social Work
+        dir: houses/h03_social_sciences/s11_social_work
+        index: 34
+      S036:
+        name: Urban Studies
+        dir: houses/h03_social_sciences/s12_urban_studies
+        index: 35
   H04:
-    S01:
-      modules: 3
-      invariants: 2
-      status: POPULATED
-    S02:
-      modules: 2
-      invariants: 0
-      status: POPULATED
-    S03:
-      modules: 3
-      invariants: 1
-      status: POPULATED
-    S04:
-      modules: 4
-      invariants: 0
-      status: POPULATED
-    S05:
-      modules: 2
-      invariants: 1
-      status: POPULATED
-    S06:
-      modules: 2
-      invariants: 1
-      status: POPULATED
-    S07:
-      modules: 1
-      invariants: 0
-      status: POPULATED
-    S08:
-      modules: 1
-      invariants: 0
-      status: POPULATED
-    S09:
-      modules: 1
-      invariants: 0
-      status: POPULATED
-    S10:
-      modules: 2
-      invariants: 0
-      status: POPULATED
-    S11:
-      modules: 3
-      invariants: 3
-      status: POPULATED
-    S12:
-      modules: 1
-      invariants: 1
-      status: POPULATED
+    name: Humanities
+    dir: h04_humanities
+    spheres:
+      S037:
+        name: History
+        dir: houses/h04_humanities/s01_history
+        index: 36
+      S038:
+        name: Philosophy
+        dir: houses/h04_humanities/s02_philosophy
+        index: 37
+      S039:
+        name: Literature
+        dir: houses/h04_humanities/s03_literature
+        index: 38
+      S040:
+        name: Classics
+        dir: houses/h04_humanities/s04_classics
+        index: 39
+      S041:
+        name: Religious Studies
+        dir: houses/h04_humanities/s05_religious_studies
+        index: 40
+      S042:
+        name: Ethics
+        dir: houses/h04_humanities/s06_ethics
+        index: 41
+      S043:
+        name: Aesthetics
+        dir: houses/h04_humanities/s07_aesthetics
+        index: 42
+      S044:
+        name: Cultural Studies
+        dir: houses/h04_humanities/s08_cultural_studies
+        index: 43
+      S045:
+        name: Mythology
+        dir: houses/h04_humanities/s09_mythology
+        index: 44
+      S046:
+        name: Philology
+        dir: houses/h04_humanities/s10_philology
+        index: 45
+      S047:
+        name: Rhetoric
+        dir: houses/h04_humanities/s11_rhetoric
+        index: 46
+      S048:
+        name: Hermeneutics
+        dir: houses/h04_humanities/s12_hermeneutics
+        index: 47
   H05:
-    S01:
-      modules: 2
-      invariants: 1
-      status: POPULATED
-    S02:
-      modules: 2
-      invariants: 0
-      status: POPULATED
-    S03:
-      modules: 2
-      invariants: 0
-      status: POPULATED
-    S04:
-      modules: 2
-      invariants: 0
-      status: POPULATED
-    S05:
-      modules: 1
-      invariants: 0
-      status: POPULATED
-    S06:
-      modules: 1
-      invariants: 0
-      status: POPULATED
-    S07:
-      modules: 1
-      invariants: 0
-      status: POPULATED
-    S08:
-      modules: 6
-      invariants: 0
-      status: POPULATED
-    S09:
-      modules: 1
-      invariants: 0
-      status: POPULATED
-    S10:
-      modules: 1
-      invariants: 0
-      status: POPULATED
-    S11:
-      modules: 2
-      invariants: 0
-      status: POPULATED
-    S12:
-      modules: 1
-      invariants: 0
-      status: POPULATED
+    name: Arts
+    dir: h05_arts
+    spheres:
+      S049:
+        name: Visual Arts
+        dir: houses/h05_arts/s01_visual_arts
+        index: 48
+      S050:
+        name: Performing Arts
+        dir: houses/h05_arts/s02_performing_arts
+        index: 49
+      S051:
+        name: Music
+        dir: houses/h05_arts/s03_music
+        index: 50
+      S052:
+        name: Dance
+        dir: houses/h05_arts/s04_dance
+        index: 51
+      S053:
+        name: Theater
+        dir: houses/h05_arts/s05_theater
+        index: 52
+      S054:
+        name: Film
+        dir: houses/h05_arts/s06_film
+        index: 53
+      S055:
+        name: Literature (creative)
+        dir: houses/h05_arts/s07_literature_creative
+        index: 54
+      S056:
+        name: Architecture
+        dir: houses/h05_arts/s08_architecture
+        index: 55
+      S057:
+        name: Design
+        dir: houses/h05_arts/s09_design
+        index: 56
+      S058:
+        name: Photography
+        dir: houses/h05_arts/s10_photography
+        index: 57
+      S059:
+        name: Sculpture
+        dir: houses/h05_arts/s11_sculpture
+        index: 58
+      S060:
+        name: Painting
+        dir: houses/h05_arts/s12_painting
+        index: 59
   H06:
-    S01:
-      modules: 0
-      invariants: 1
-      status: POPULATED
-    S02:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S03:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S04:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S05:
-      modules: 0
-      invariants: 1
-      status: POPULATED
-    S06:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S07:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S08:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S09:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S10:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S11:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S12:
-      modules: 0
-      invariants: 0
-      status: EMPTY
+    name: Engineering & Technology
+    dir: h06_engineering_technology
+    spheres:
+      S061:
+        name: Mechanical Engineering
+        dir: houses/h06_engineering_technology/s01_mechanical_engineering
+        index: 60
+      S062:
+        name: Electrical Engineering
+        dir: houses/h06_engineering_technology/s02_electrical_engineering
+        index: 61
+      S063:
+        name: Civil Engineering
+        dir: houses/h06_engineering_technology/s03_civil_engineering
+        index: 62
+      S064:
+        name: Chemical Engineering
+        dir: houses/h06_engineering_technology/s04_chemical_engineering
+        index: 63
+      S065:
+        name: Aerospace Engineering
+        dir: houses/h06_engineering_technology/s05_aerospace_engineering
+        index: 64
+      S066:
+        name: Biomedical Engineering
+        dir: houses/h06_engineering_technology/s06_biomedical_engineering
+        index: 65
+      S067:
+        name: Environmental Engineering
+        dir: houses/h06_engineering_technology/s07_environmental_engineering
+        index: 66
+      S068:
+        name: Industrial Engineering
+        dir: houses/h06_engineering_technology/s08_industrial_engineering
+        index: 67
+      S069:
+        name: Software Engineering
+        dir: houses/h06_engineering_technology/s09_software_engineering
+        index: 68
+      S070:
+        name: Materials Engineering
+        dir: houses/h06_engineering_technology/s10_materials_engineering
+        index: 69
+      S071:
+        name: Nuclear Engineering
+        dir: houses/h06_engineering_technology/s11_nuclear_engineering
+        index: 70
+      S072:
+        name: Robotics
+        dir: houses/h06_engineering_technology/s12_robotics
+        index: 71
   H07:
-    S01:
-      modules: 1
-      invariants: 1
-      status: POPULATED
-    S02:
-      modules: 1
-      invariants: 0
-      status: POPULATED
-    S03:
-      modules: 1
-      invariants: 0
-      status: POPULATED
-    S04:
-      modules: 3
-      invariants: 1
-      status: POPULATED
-    S05:
-      modules: 1
-      invariants: 0
-      status: POPULATED
-    S06:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S07:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S08:
-      modules: 1
-      invariants: 1
-      status: POPULATED
-    S09:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S10:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S11:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S12:
-      modules: 0
-      invariants: 0
-      status: EMPTY
+    name: Information & Communication
+    dir: h07_information_communication
+    spheres:
+      S073:
+        name: Media
+        dir: houses/h07_information_communication/s01_media
+        index: 72
+      S074:
+        name: Journalism
+        dir: houses/h07_information_communication/s02_journalism
+        index: 73
+      S075:
+        name: Telecommunications
+        dir: houses/h07_information_communication/s03_telecommunications
+        index: 74
+      S076:
+        name: Networks
+        dir: houses/h07_information_communication/s04_networks
+        index: 75
+      S077:
+        name: Information Systems
+        dir: houses/h07_information_communication/s05_information_systems
+        index: 76
+      S078:
+        name: Library Science
+        dir: houses/h07_information_communication/s06_library_science
+        index: 77
+      S079:
+        name: Archives
+        dir: houses/h07_information_communication/s07_archives
+        index: 78
+      S080:
+        name: Publishing
+        dir: houses/h07_information_communication/s08_publishing
+        index: 79
+      S081:
+        name: Broadcasting
+        dir: houses/h07_information_communication/s09_broadcasting
+        index: 80
+      S082:
+        name: Public Relations
+        dir: houses/h07_information_communication/s10_public_relations
+        index: 81
+      S083:
+        name: Information Policy
+        dir: houses/h07_information_communication/s11_information_policy
+        index: 82
+      S084:
+        name: Communication Theory
+        dir: houses/h07_information_communication/s12_communication_theory
+        index: 83
   H08:
-    S01:
-      modules: 0
-      invariants: 1
-      status: POPULATED
-    S02:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S03:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S04:
-      modules: 0
-      invariants: 1
-      status: POPULATED
-    S05:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S06:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S07:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S08:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S09:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S10:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S11:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S12:
-      modules: 0
-      invariants: 0
-      status: EMPTY
+    name: Education
+    dir: h08_education
+    spheres:
+      S085:
+        name: Pedagogy
+        dir: houses/h08_education/s01_pedagogy
+        index: 84
+      S086:
+        name: Curriculum Design
+        dir: houses/h08_education/s02_curriculum_design
+        index: 85
+      S087:
+        name: Educational Psychology
+        dir: houses/h08_education/s03_educational_psychology
+        index: 86
+      S088:
+        name: Special Education
+        dir: houses/h08_education/s04_special_education
+        index: 87
+      S089:
+        name: Adult Education
+        dir: houses/h08_education/s05_adult_education
+        index: 88
+      S090:
+        name: E-Learning
+        dir: houses/h08_education/s06_e_learning
+        index: 89
+      S091:
+        name: Educational Technology
+        dir: houses/h08_education/s07_educational_technology
+        index: 90
+      S092:
+        name: Assessment
+        dir: houses/h08_education/s08_assessment
+        index: 91
+      S093:
+        name: School Administration
+        dir: houses/h08_education/s09_school_administration
+        index: 92
+      S094:
+        name: Teacher Training
+        dir: houses/h08_education/s10_teacher_training
+        index: 93
+      S095:
+        name: Literacy
+        dir: houses/h08_education/s11_literacy
+        index: 94
+      S096:
+        name: Higher Education
+        dir: houses/h08_education/s12_higher_education
+        index: 95
   H09:
-    S01:
-      modules: 1
-      invariants: 0
-      status: POPULATED
-    S02:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S03:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S04:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S05:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S06:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S07:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S08:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S09:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S10:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S11:
-      modules: 1
-      invariants: 0
-      status: POPULATED
-    S12:
-      modules: 0
-      invariants: 1
-      status: POPULATED
+    name: Health & Medicine
+    dir: h09_health_medicine
+    spheres:
+      S097:
+        name: Anatomy
+        dir: houses/h09_health_medicine/s01_anatomy
+        index: 96
+      S098:
+        name: Physiology
+        dir: houses/h09_health_medicine/s02_physiology
+        index: 97
+      S099:
+        name: Pathology
+        dir: houses/h09_health_medicine/s03_pathology
+        index: 98
+      S100:
+        name: Pharmacology
+        dir: houses/h09_health_medicine/s04_pharmacology
+        index: 99
+      S101:
+        name: Surgery
+        dir: houses/h09_health_medicine/s05_surgery
+        index: 100
+      S102:
+        name: Pediatrics
+        dir: houses/h09_health_medicine/s06_pediatrics
+        index: 101
+      S103:
+        name: Psychiatry
+        dir: houses/h09_health_medicine/s07_psychiatry
+        index: 102
+      S104:
+        name: Neurology
+        dir: houses/h09_health_medicine/s08_neurology
+        index: 103
+      S105:
+        name: Oncology
+        dir: houses/h09_health_medicine/s09_oncology
+        index: 104
+      S106:
+        name: Epidemiology
+        dir: houses/h09_health_medicine/s10_epidemiology
+        index: 105
+      S107:
+        name: Nutrition
+        dir: houses/h09_health_medicine/s11_nutrition
+        index: 106
+      S108:
+        name: Public Health
+        dir: houses/h09_health_medicine/s12_public_health
+        index: 107
   H10:
-    S01:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S02:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S03:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S04:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S05:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S06:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S07:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S08:
-      modules: 1
-      invariants: 0
-      status: POPULATED
-    S09:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S10:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S11:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S12:
-      modules: 0
-      invariants: 1
-      status: POPULATED
+    name: Business & Economics
+    dir: h10_business_economics
+    spheres:
+      S109:
+        name: Management
+        dir: houses/h10_business_economics/s01_management
+        index: 108
+      S110:
+        name: Marketing
+        dir: houses/h10_business_economics/s02_marketing
+        index: 109
+      S111:
+        name: Finance
+        dir: houses/h10_business_economics/s03_finance
+        index: 110
+      S112:
+        name: Accounting
+        dir: houses/h10_business_economics/s04_accounting
+        index: 111
+      S113:
+        name: Entrepreneurship
+        dir: houses/h10_business_economics/s05_entrepreneurship
+        index: 112
+      S114:
+        name: Human Resources
+        dir: houses/h10_business_economics/s06_human_resources
+        index: 113
+      S115:
+        name: Operations Management
+        dir: houses/h10_business_economics/s07_operations_management
+        index: 114
+      S116:
+        name: Supply Chain
+        dir: houses/h10_business_economics/s08_supply_chain
+        index: 115
+      S117:
+        name: International Business
+        dir: houses/h10_business_economics/s09_international_business
+        index: 116
+      S118:
+        name: Business Ethics
+        dir: houses/h10_business_economics/s10_business_ethics
+        index: 117
+      S119:
+        name: Microeconomics
+        dir: houses/h10_business_economics/s11_microeconomics
+        index: 118
+      S120:
+        name: Macroeconomics
+        dir: houses/h10_business_economics/s12_macroeconomics
+        index: 119
   H11:
-    S01:
-      modules: 1
-      invariants: 1
-      status: POPULATED
-    S02:
-      modules: 1
-      invariants: 1
-      status: POPULATED
-    S03:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S04:
-      modules: 1
-      invariants: 0
-      status: POPULATED
-    S05:
-      modules: 0
-      invariants: 1
-      status: POPULATED
-    S06:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S07:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S08:
-      modules: 0
-      invariants: 1
-      status: POPULATED
-    S09:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S10:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S11:
-      modules: 0
-      invariants: 0
-      status: EMPTY
-    S12:
-      modules: 0
-      invariants: 1
-      status: POPULATED
+    name: Infrastructure
+    dir: h11_infrastructure
+    spheres:
+      S121:
+        name: Transportation
+        dir: houses/h11_infrastructure/s01_transportation
+        index: 120
+      S122:
+        name: Energy Systems
+        dir: houses/h11_infrastructure/s02_energy_systems
+        index: 121
+      S123:
+        name: Water Systems
+        dir: houses/h11_infrastructure/s03_water_systems
+        index: 122
+      S124:
+        name: Utilities
+        dir: houses/h11_infrastructure/s04_utilities
+        index: 123
+      S125:
+        name: Physical Infrastructure
+        dir: houses/h11_infrastructure/s05_physical_infrastructure
+        index: 124
+      S126:
+        name: Logistics
+        dir: houses/h11_infrastructure/s06_logistics
+        index: 125
+      S127:
+        name: Construction
+        dir: houses/h11_infrastructure/s07_construction
+        index: 126
+      S128:
+        name: Resource Management
+        dir: houses/h11_infrastructure/s08_resource_management
+        index: 127
+      S129:
+        name: Waste Management
+        dir: houses/h11_infrastructure/s09_waste_management
+        index: 128
+      S130:
+        name: Sanitation
+        dir: houses/h11_infrastructure/s10_sanitation
+        index: 129
+      S131:
+        name: Telecom Infrastructure
+        dir: houses/h11_infrastructure/s11_telecom_infrastructure
+        index: 130
+      S132:
+        name: Computing Infrastructure
+        dir: houses/h11_infrastructure/s12_computing_infrastructure
+        index: 131
   H12:
-    S01:
-      modules: 2
-      invariants: 2
-      status: POPULATED
-    S02:
-      modules: 2
-      invariants: 1
-      status: POPULATED
-    S03:
-      modules: 2
-      invariants: 0
-      status: POPULATED
-    S04:
-      modules: 2
-      invariants: 1
-      status: POPULATED
-    S05:
-      modules: 2
-      invariants: 0
-      status: POPULATED
-    S06:
-      modules: 2
-      invariants: 0
-      status: POPULATED
-    S07:
-      modules: 2
-      invariants: 0
-      status: POPULATED
-    S08:
-      modules: 1
-      invariants: 1
-      status: POPULATED
-    S09:
-      modules: 2
-      invariants: 4
-      status: POPULATED
-    S10:
-      modules: 1
-      invariants: 1
-      status: POPULATED
-    S11:
-      modules: 1
-      invariants: 1
-      status: POPULATED
-    S12:
-      modules: 1
-      invariants: 0
-      status: POPULATED
+    name: Law/Governance/Meta-Knowledge
+    dir: h12_law_governance
+    spheres:
+      S133:
+        name: Constitutional Law
+        dir: houses/h12_law_governance/s01_constitutional_law
+        index: 132
+      S134:
+        name: Criminal Law
+        dir: houses/h12_law_governance/s02_criminal_law
+        index: 133
+      S135:
+        name: Civil Law
+        dir: houses/h12_law_governance/s03_civil_law
+        index: 134
+      S136:
+        name: International Law
+        dir: houses/h12_law_governance/s04_international_law
+        index: 135
+      S137:
+        name: Corporate Law
+        dir: houses/h12_law_governance/s05_corporate_law
+        index: 136
+      S138:
+        name: Environmental Law
+        dir: houses/h12_law_governance/s06_environmental_law
+        index: 137
+      S139:
+        name: Human Rights
+        dir: houses/h12_law_governance/s07_human_rights
+        index: 138
+      S140:
+        name: Political Theory
+        dir: houses/h12_law_governance/s08_political_theory
+        index: 139
+      S141:
+        name: Public Policy
+        dir: houses/h12_law_governance/s09_public_policy
+        index: 140
+      S142:
+        name: International Relations
+        dir: houses/h12_law_governance/s10_international_relations
+        index: 141
+      S143:
+        name: Comparative Politics
+        dir: houses/h12_law_governance/s11_comparative_politics
+        index: 142
+      S144:
+        name: Political Economy
+        dir: houses/h12_law_governance/s12_political_economy
+        index: 143

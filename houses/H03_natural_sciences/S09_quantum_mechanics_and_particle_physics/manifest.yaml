@@ -1,9 +1,0 @@
-sphere:
-  id: S09
-  house: H03
-  name: Quantum Mechanics & Particle Physics
-  full_id: H03-S09
-  ordinal: 33
-status: EMPTY
-module_count: 0
-modules: []

@@ -1,916 +1,2080 @@
-metadata:
-  version: '3.14'
-  generated_from: COMPLETE_BUILD_PLAN_v3.14.md
-  total_modules: 182
-  total_houses_with_modules: 10
+# Module Registry v3.14
+# AUTO-GENERATED from filesystem — DO NOT EDIT MANUALLY
+version: '3.14'
+canon: COMPLETE_BUILD_PLAN_v3.14 Appendix AG
+houses: 12
+spheres_per_house: 12
+total_spheres: 144
+element_145: e145/
+total_modules: 230
 modules:
-- id: M8
-  name: Epistemic Integrity Validator
+- module_id: M1
+  name: M130_wet_lab_verification_gate
   house: H01
-  sphere: S02
-  status: ABSORBED
-- id: M8a
-  name: Epistemic Integrity CN Adapter
+  house_name: Natural Sciences
+  sphere_name: Chemistry
+  house_dir: h01_natural_sciences
+  sphere_dir: s02_chemistry
+  status: ACTIVE
+  path: houses/h01_natural_sciences/s02_chemistry/modules/M130_wet_lab_verification_gate
+- module_id: M2
+  name: M136_genomic_analysis_pipeline
   house: H01
-  sphere: S02
-  status: ABSORBED
-- id: M7
-  name: Ethics Engine
+  house_name: Natural Sciences
+  sphere_name: Biology
+  house_dir: h01_natural_sciences
+  sphere_dir: s03_biology
+  status: ACTIVE
+  path: houses/h01_natural_sciences/s03_biology/modules/M136_genomic_analysis_pipeline
+- module_id: M3
+  name: M137_synthetic_biology_designer
   house: H01
-  sphere: S03
-  status: ABSORBED
-- id: M10
-  name: Mathematical Proof Engine
-  house: H02
-  sphere: S01
-  status: ABSORBED
-- id: M22
-  name: Theorem Prover
-  house: H02
-  sphere: S01
-  status: ABSORBED
-- id: M28
-  name: Number Theory Utilities
-  house: H02
-  sphere: S01
+  house_name: Natural Sciences
+  sphere_name: Biology
+  house_dir: h01_natural_sciences
+  sphere_dir: s03_biology
   status: ACTIVE
-- id: M44
-  name: Constructive Mathematics Module
-  house: H02
-  sphere: S01
+  path: houses/h01_natural_sciences/s03_biology/modules/M137_synthetic_biology_designer
+- module_id: M4
+  name: M131_environmental_impact_assessor
+  house: H01
+  house_name: Natural Sciences
+  sphere_name: Ecology
+  house_dir: h01_natural_sciences
+  sphere_dir: s08_ecology
   status: ACTIVE
-- id: M56
-  name: Proof Assistant Interface
+  path: houses/h01_natural_sciences/s08_ecology/modules/M131_environmental_impact_assessor
+- module_id: M5
+  name: M10_mathematical_proof_engine
   house: H02
-  sphere: S01
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M68
-  name: "G\xF6del Incompleteness Tracker"
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M10_mathematical_proof_engine
+- module_id: M6
+  name: M11_category_theory_framework
   house: H02
-  sphere: S01
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M84
-  name: Axiom Consistency Checker
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M11_category_theory_framework
+- module_id: M7
+  name: M12_quantum_computing_interface
   house: H02
-  sphere: S01
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M16
-  name: Statistical Inference Engine
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M12_quantum_computing_interface
+- module_id: M8
+  name: M13_formal_language_processor
   house: H02
-  sphere: S02
-  status: ABSORBED
-- id: M173
-  name: Real-Time Routing Share Meter
-  house: H02
-  sphere: S02
-  status: ABSORBED
-- id: M29
-  name: Bayesian Network Engine
-  house: H02
-  sphere: S02
-  status: ABSORBED
-- id: M3.1
-  name: Trust Scoring System (TSS)
-  house: H02
-  sphere: S02
-  status: ABSORBED
-- id: M46
-  name: Monte Carlo Simulator
-  house: H02
-  sphere: S02
-  status: ABSORBED
-- id: M74
-  name: Hypothesis Testing Framework
-  house: H02
-  sphere: S02
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M79
-  name: Primacy Bonus Calculator
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M13_formal_language_processor
+- module_id: M9
+  name: M20_computational_bounds_verifier
   house: H02
-  sphere: S02
-  status: ABSORBED
-- id: M80
-  name: Epistemic Weather Engine
-  house: H02
-  sphere: S02
-  status: ABSORBED
-- id: M1
-  name: Sovereign Router Core
-  house: H02
-  sphere: S03
-  status: ABSORBED
-- id: M15
-  name: Algorithm Optimizer
-  house: H02
-  sphere: S03
-  status: ABSORBED
-- id: M15a
-  name: Algorithm Optimizer CN Adapter
-  house: H02
-  sphere: S03
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M18
-  name: Distributed Consensus Protocol
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M20_computational_bounds_verifier
+- module_id: M10
+  name: M22_theorem_prover
   house: H02
-  sphere: S03
-  status: ABSORBED
-- id: M40
-  name: Parallel Algorithm Scheduler
-  house: H02
-  sphere: S03
-  status: ABSORBED
-- id: M52
-  name: Distributed Hash Table
-  house: H02
-  sphere: S03
-  status: ABSORBED
-- id: M63
-  name: Parser Symmetry Gate
-  house: H02
-  sphere: S03
-  status: ABSORBED
-- id: M76
-  name: Consensus Finality Checker
-  house: H02
-  sphere: S03
-  status: ABSORBED
-- id: M82
-  name: Load Balancer
-  house: H02
-  sphere: S03
-  status: ABSORBED
-- id: M23
-  name: Information Security Module
-  house: H02
-  sphere: S04
-  status: ABSORBED
-- id: M23a
-  name: Information Security CN Adapter
-  house: H02
-  sphere: S04
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M3
-  name: Consent & Provenance Engine
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M22_theorem_prover
+- module_id: M11
+  name: M24_algebraic_structure_validator
   house: H02
-  sphere: S04
-  status: ABSORBED
-- id: M3a
-  name: Consent Engine Extension
-  house: H02
-  sphere: S04
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M42
-  name: Zero-Knowledge Proof Module
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M24_algebraic_structure_validator
+- module_id: M12
+  name: M25_quantum_algorithm_library
   house: H02
-  sphere: S04
-  status: ABSORBED
-- id: M53
-  name: Homomorphic Encryption Engine
-  house: H02
-  sphere: S04
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M6
-  name: Cryptographic Primitives
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M25_quantum_algorithm_library
+- module_id: M13
+  name: M25a_quantum_algorithm_extension_a
   house: H02
-  sphere: S04
-  status: ABSORBED
-- id: M65
-  name: Metadata Enrichment Pipeline
-  house: H02
-  sphere: S04
-  status: ABSORBED
-- id: M6a
-  name: Cryptographic Primitives Extension A
-  house: H02
-  sphere: S04
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M6b
-  name: Cryptographic Primitives Extension B
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M25a_quantum_algorithm_extension_a
+- module_id: M14
+  name: M25b_quantum_algorithm_extension_b
   house: H02
-  sphere: S04
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M6c
-  name: BSN Anchoring Adapter
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M25b_quantum_algorithm_extension_b
+- module_id: M15
+  name: M25c_quantum_algorithm_extension_c
   house: H02
-  sphere: S04
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M77
-  name: Secure Multi-Party Computation
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M25c_quantum_algorithm_extension_c
+- module_id: M16
+  name: M26_grammar_induction_engine
   house: H02
-  sphere: S04
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M90
-  name: Post-Quantum Cryptography
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M26_grammar_induction_engine
+- module_id: M17
+  name: M28_number_theory_utilities
   house: H02
-  sphere: S04
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M17
-  name: Systems Dynamics Modeler
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M28_number_theory_utilities
+- module_id: M18
+  name: M32_space_time_complexity_mapper
   house: H02
-  sphere: S05
-  status: ABSORBED
-- id: M2
-  name: Constitutional Kernel
-  house: H02
-  sphere: S05
-  status: ABSORBED
-- id: M30
-  name: Feedback Control Analyzer
-  house: H02
-  sphere: S05
-  status: ABSORBED
-- id: M41
-  name: Emergent Behavior Detector
-  house: H02
-  sphere: S05
-  status: ABSORBED
-- id: M54
-  name: Agent-Based Modeling Framework
-  house: H02
-  sphere: S05
-  status: ABSORBED
-- id: M66
-  name: Feedback Loop Detector
-  house: H02
-  sphere: S05
-  status: ABSORBED
-- id: M75
-  name: Cross-Validation Matrix
-  house: H02
-  sphere: S05
-  status: ABSORBED
-- id: M81
-  name: Resilience Scoring Module
-  house: H02
-  sphere: S05
-  status: ABSORBED
-- id: M21
-  name: Strategic Reasoning Engine
-  house: H02
-  sphere: S06
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M31
-  name: Mechanism Design Module
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M32_space_time_complexity_mapper
+- module_id: M19
+  name: M34_homological_algebra_engine
   house: H02
-  sphere: S06
-  status: ABSORBED
-- id: M43
-  name: Auction Theory Engine
-  house: H02
-  sphere: S06
-  status: ABSORBED
-- id: M55
-  name: Voting Theory Module
-  house: H02
-  sphere: S06
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M67
-  name: Nash Equilibrium Finder
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M34_homological_algebra_engine
+- module_id: M20
+  name: M44_constructive_mathematics_module
   house: H02
-  sphere: S06
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M78
-  name: Cooperative Game Solver
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M44_constructive_mathematics_module
+- module_id: M21
+  name: M45_type_theory_checker
   house: H02
-  sphere: S06
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M9
-  name: Game Theory Optimizer
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M45_type_theory_checker
+- module_id: M22
+  name: M47_representation_theory_module
   house: H02
-  sphere: S06
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M91
-  name: Social Choice Function
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M47_representation_theory_module
+- module_id: M23
+  name: M48_quantum_error_correction
   house: H02
-  sphere: S06
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M13
-  name: Formal Language Processor
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M48_quantum_error_correction
+- module_id: M24
+  name: M49_circuit_complexity_analyzer
   house: H02
-  sphere: S07
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M26
-  name: Grammar Induction Engine
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M49_circuit_complexity_analyzer
+- module_id: M25
+  name: M56_proof_assistant_interface
   house: H02
-  sphere: S07
-  status: ABSORBED
-- id: M45
-  name: Type Theory Checker
-  house: H02
-  sphere: S07
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M57
-  name: Context-Free Grammar Parser
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M56_proof_assistant_interface
+- module_id: M26
+  name: M57_context_free_grammar_parser
   house: H02
-  sphere: S07
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M69
-  name: Regular Expression Optimizer
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M57_context_free_grammar_parser
+- module_id: M27
+  name: M58_group_theory_computations
   house: H02
-  sphere: S07
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M85
-  name: Pushdown Automaton Simulator
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M58_group_theory_computations
+- module_id: M28
+  name: M59_quantum_simulation_engine
   house: H02
-  sphere: S07
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M11
-  name: Category Theory Framework
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M59_quantum_simulation_engine
+- module_id: M29
+  name: M5_complexity_analyzer
   house: H02
-  sphere: S08
-  status: ABSORBED
-- id: M24
-  name: Algebraic Structure Validator
-  house: H02
-  sphere: S08
-  status: ABSORBED
-- id: M34
-  name: Homological Algebra Engine
-  house: H02
-  sphere: S08
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M47
-  name: Representation Theory Module
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M5_complexity_analyzer
+- module_id: M30
+  name: M60_parameterized_complexity_module
   house: H02
-  sphere: S08
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M58
-  name: Group Theory Computations
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M60_parameterized_complexity_module
+- module_id: M31
+  name: M68_gödel_incompleteness_tracker
   house: H02
-  sphere: S08
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M70
-  name: Ring Theory Module
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M68_gödel_incompleteness_tracker
+- module_id: M32
+  name: M69_regular_expression_optimizer
   house: H02
-  sphere: S08
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M86
-  name: Galois Theory Module
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M69_regular_expression_optimizer
+- module_id: M33
+  name: M70_ring_theory_module
   house: H02
-  sphere: S08
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M20
-  name: Computational Bounds Verifier
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M70_ring_theory_module
+- module_id: M34
+  name: M71_quantum_key_distribution
   house: H02
-  sphere: S09
-  status: ABSORBED
-- id: M32
-  name: Space-Time Complexity Mapper
-  house: H02
-  sphere: S09
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M49
-  name: Circuit Complexity Analyzer
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M71_quantum_key_distribution
+- module_id: M35
+  name: M72_approximation_algorithm_library
   house: H02
-  sphere: S09
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M5
-  name: Complexity Analyzer
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M72_approximation_algorithm_library
+- module_id: M36
+  name: M84_axiom_consistency_checker
   house: H02
-  sphere: S09
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M60
-  name: Parameterized Complexity Module
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M84_axiom_consistency_checker
+- module_id: M37
+  name: M85_pushdown_automaton_simulator
   house: H02
-  sphere: S09
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M72
-  name: Approximation Algorithm Library
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M85_pushdown_automaton_simulator
+- module_id: M38
+  name: M86_galois_theory_module
   house: H02
-  sphere: S09
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M88
-  name: Streaming Algorithm Library
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M86_galois_theory_module
+- module_id: M39
+  name: M87_quantum_entanglement_tracker
   house: H02
-  sphere: S09
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M14
-  name: Topological Data Analyzer
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M87_quantum_entanglement_tracker
+- module_id: M40
+  name: M88_streaming_algorithm_library
   house: H02
-  sphere: S10
-  status: ABSORBED
-- id: M27
-  name: Geometric Reasoning Module
-  house: H02
-  sphere: S10
+  house_name: Formal Sciences
+  sphere_name: Mathematics
+  house_dir: h02_formal_sciences
+  sphere_dir: s01_mathematics
   status: ACTIVE
-- id: M35
-  name: Manifold Learning Module
+  path: houses/h02_formal_sciences/s01_mathematics/modules/M88_streaming_algorithm_library
+- module_id: M41
+  name: M19_model_checker
   house: H02
-  sphere: S10
+  house_name: Formal Sciences
+  sphere_name: Logic
+  house_dir: h02_formal_sciences
+  sphere_dir: s02_logic
   status: ACTIVE
-- id: M51
-  name: Knot Theory Module
+  path: houses/h02_formal_sciences/s02_logic/modules/M19_model_checker
+- module_id: M42
+  name: M33_temporal_logic_verifier
   house: H02
-  sphere: S10
+  house_name: Formal Sciences
+  sphere_name: Logic
+  house_dir: h02_formal_sciences
+  sphere_dir: s02_logic
   status: ACTIVE
-- id: M62
-  name: Persistent Homology Engine
+  path: houses/h02_formal_sciences/s02_logic/modules/M33_temporal_logic_verifier
+- module_id: M43
+  name: M4_formal_verification_module
   house: H02
-  sphere: S10
+  house_name: Formal Sciences
+  sphere_name: Logic
+  house_dir: h02_formal_sciences
+  sphere_dir: s02_logic
   status: ACTIVE
-- id: M73
-  name: Differential Geometry Engine
+  path: houses/h02_formal_sciences/s02_logic/modules/M4_formal_verification_module
+- module_id: M44
+  name: M50_sat_smt_solver
   house: H02
-  sphere: S10
+  house_name: Formal Sciences
+  sphere_name: Logic
+  house_dir: h02_formal_sciences
+  sphere_dir: s02_logic
   status: ACTIVE
-- id: M89
-  name: Algebraic Topology Module
+  path: houses/h02_formal_sciences/s02_logic/modules/M50_sat_smt_solver
+- module_id: M45
+  name: M61_bisimulation_checker
   house: H02
-  sphere: S10
+  house_name: Formal Sciences
+  sphere_name: Logic
+  house_dir: h02_formal_sciences
+  sphere_dir: s02_logic
   status: ACTIVE
-- id: M19
-  name: Model Checker
+  path: houses/h02_formal_sciences/s02_logic/modules/M61_bisimulation_checker
+- module_id: M46
+  name: M64_constitutional_compiler
   house: H02
-  sphere: S11
-  status: ABSORBED
-- id: M33
-  name: Temporal Logic Verifier
-  house: H02
-  sphere: S11
+  house_name: Formal Sciences
+  sphere_name: Logic
+  house_dir: h02_formal_sciences
+  sphere_dir: s02_logic
   status: ACTIVE
-- id: M4
-  name: Formal Verification Module
+  path: houses/h02_formal_sciences/s02_logic/modules/M64_constitutional_compiler
+- module_id: M47
+  name: M83_invariant_monitor
   house: H02
-  sphere: S11
+  house_name: Formal Sciences
+  sphere_name: Logic
+  house_dir: h02_formal_sciences
+  sphere_dir: s02_logic
   status: ACTIVE
-- id: M50
-  name: SAT/SMT Solver
+  path: houses/h02_formal_sciences/s02_logic/modules/M83_invariant_monitor
+- module_id: M48
+  name: M16_statistical_inference_engine
   house: H02
-  sphere: S11
+  house_name: Formal Sciences
+  sphere_name: Statistics
+  house_dir: h02_formal_sciences
+  sphere_dir: s03_statistics
   status: ACTIVE
-- id: M61
-  name: Bisimulation Checker
+  path: houses/h02_formal_sciences/s03_statistics/modules/M16_statistical_inference_engine
+- module_id: M49
+  name: M173_real_time_routing_share_meter
   house: H02
-  sphere: S11
+  house_name: Formal Sciences
+  sphere_name: Statistics
+  house_dir: h02_formal_sciences
+  sphere_dir: s03_statistics
   status: ACTIVE
-- id: M64
-  name: Constitutional Compiler
+  path: houses/h02_formal_sciences/s03_statistics/modules/M173_real_time_routing_share_meter
+- module_id: M50
+  name: M29_bayesian_network_engine
   house: H02
-  sphere: S11
+  house_name: Formal Sciences
+  sphere_name: Statistics
+  house_dir: h02_formal_sciences
+  sphere_dir: s03_statistics
   status: ACTIVE
-- id: M83
-  name: Invariant Monitor
+  path: houses/h02_formal_sciences/s03_statistics/modules/M29_bayesian_network_engine
+- module_id: M51
+  name: M3.1_trust_scoring_system_tss
   house: H02
-  sphere: S11
-  status: ABSORBED
-- id: M12
-  name: Quantum Computing Interface
-  house: H02
-  sphere: S12
+  house_name: Formal Sciences
+  sphere_name: Statistics
+  house_dir: h02_formal_sciences
+  sphere_dir: s03_statistics
   status: ACTIVE
-- id: M25
-  name: Quantum Algorithm Library
+  path: houses/h02_formal_sciences/s03_statistics/modules/M3.1_trust_scoring_system_tss
+- module_id: M52
+  name: M46_monte_carlo_simulator
   house: H02
-  sphere: S12
+  house_name: Formal Sciences
+  sphere_name: Statistics
+  house_dir: h02_formal_sciences
+  sphere_dir: s03_statistics
   status: ACTIVE
-- id: M25a
-  name: Quantum Algorithm Extension A
+  path: houses/h02_formal_sciences/s03_statistics/modules/M46_monte_carlo_simulator
+- module_id: M53
+  name: M74_hypothesis_testing_framework
   house: H02
-  sphere: S12
+  house_name: Formal Sciences
+  sphere_name: Statistics
+  house_dir: h02_formal_sciences
+  sphere_dir: s03_statistics
   status: ACTIVE
-- id: M25b
-  name: Quantum Algorithm Extension B
+  path: houses/h02_formal_sciences/s03_statistics/modules/M74_hypothesis_testing_framework
+- module_id: M54
+  name: M79_primacy_bonus_calculator
   house: H02
-  sphere: S12
+  house_name: Formal Sciences
+  sphere_name: Statistics
+  house_dir: h02_formal_sciences
+  sphere_dir: s03_statistics
   status: ACTIVE
-- id: M25c
-  name: Quantum Algorithm Extension C
+  path: houses/h02_formal_sciences/s03_statistics/modules/M79_primacy_bonus_calculator
+- module_id: M55
+  name: M80_epistemic_weather_engine
   house: H02
-  sphere: S12
+  house_name: Formal Sciences
+  sphere_name: Statistics
+  house_dir: h02_formal_sciences
+  sphere_dir: s03_statistics
   status: ACTIVE
-- id: M48
-  name: Quantum Error Correction
+  path: houses/h02_formal_sciences/s03_statistics/modules/M80_epistemic_weather_engine
+- module_id: M56
+  name: M15_algorithm_optimizer
   house: H02
-  sphere: S12
+  house_name: Formal Sciences
+  sphere_name: Computer Science
+  house_dir: h02_formal_sciences
+  sphere_dir: s04_computer_science
   status: ACTIVE
-- id: M59
-  name: Quantum Simulation Engine
+  path: houses/h02_formal_sciences/s04_computer_science/modules/M15_algorithm_optimizer
+- module_id: M57
+  name: M15a_algorithm_optimizer_cn_adapter
   house: H02
-  sphere: S12
+  house_name: Formal Sciences
+  sphere_name: Computer Science
+  house_dir: h02_formal_sciences
+  sphere_dir: s04_computer_science
   status: ACTIVE
-- id: M71
-  name: Quantum Key Distribution
+  path: houses/h02_formal_sciences/s04_computer_science/modules/M15a_algorithm_optimizer_cn_adapter
+- module_id: M58
+  name: M18_distributed_consensus_protocol
   house: H02
-  sphere: S12
+  house_name: Formal Sciences
+  sphere_name: Computer Science
+  house_dir: h02_formal_sciences
+  sphere_dir: s04_computer_science
   status: ACTIVE
-- id: M87
-  name: Quantum Entanglement Tracker
+  path: houses/h02_formal_sciences/s04_computer_science/modules/M18_distributed_consensus_protocol
+- module_id: M59
+  name: M1_sovereign_router_core
   house: H02
-  sphere: S12
+  house_name: Formal Sciences
+  sphere_name: Computer Science
+  house_dir: h02_formal_sciences
+  sphere_dir: s04_computer_science
   status: ACTIVE
-- id: M130
-  name: Wet Lab Verification Gate
+  path: houses/h02_formal_sciences/s04_computer_science/modules/M1_sovereign_router_core
+- module_id: M60
+  name: M40_parallel_algorithm_scheduler
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Computer Science
+  house_dir: h02_formal_sciences
+  sphere_dir: s04_computer_science
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s04_computer_science/modules/M40_parallel_algorithm_scheduler
+- module_id: M61
+  name: M52_distributed_hash_table
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Computer Science
+  house_dir: h02_formal_sciences
+  sphere_dir: s04_computer_science
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s04_computer_science/modules/M52_distributed_hash_table
+- module_id: M62
+  name: M63_parser_symmetry_gate
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Computer Science
+  house_dir: h02_formal_sciences
+  sphere_dir: s04_computer_science
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s04_computer_science/modules/M63_parser_symmetry_gate
+- module_id: M63
+  name: M76_consensus_finality_checker
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Computer Science
+  house_dir: h02_formal_sciences
+  sphere_dir: s04_computer_science
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s04_computer_science/modules/M76_consensus_finality_checker
+- module_id: M64
+  name: M82_load_balancer
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Computer Science
+  house_dir: h02_formal_sciences
+  sphere_dir: s04_computer_science
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s04_computer_science/modules/M82_load_balancer
+- module_id: M65
+  name: M23_information_security_module
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Information Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s05_information_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s05_information_theory/modules/M23_information_security_module
+- module_id: M66
+  name: M23a_information_security_cn_adapter
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Information Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s05_information_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s05_information_theory/modules/M23a_information_security_cn_adapter
+- module_id: M67
+  name: M3_consent_&_provenance_engine
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Information Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s05_information_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s05_information_theory/modules/M3_consent_&_provenance_engine
+- module_id: M68
+  name: M3a_consent_engine_extension
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Information Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s05_information_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s05_information_theory/modules/M3a_consent_engine_extension
+- module_id: M69
+  name: M42_zero_knowledge_proof_module
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Information Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s05_information_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s05_information_theory/modules/M42_zero_knowledge_proof_module
+- module_id: M70
+  name: M53_homomorphic_encryption_engine
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Information Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s05_information_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s05_information_theory/modules/M53_homomorphic_encryption_engine
+- module_id: M71
+  name: M65_metadata_enrichment_pipeline
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Information Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s05_information_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s05_information_theory/modules/M65_metadata_enrichment_pipeline
+- module_id: M72
+  name: M6_cryptographic_primitives
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Information Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s05_information_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s05_information_theory/modules/M6_cryptographic_primitives
+- module_id: M73
+  name: M6a_cryptographic_primitives_extension_a
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Information Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s05_information_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s05_information_theory/modules/M6a_cryptographic_primitives_extension_a
+- module_id: M74
+  name: M6b_cryptographic_primitives_extension_b
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Information Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s05_information_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s05_information_theory/modules/M6b_cryptographic_primitives_extension_b
+- module_id: M75
+  name: M6c_bsn_anchoring_adapter
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Information Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s05_information_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s05_information_theory/modules/M6c_bsn_anchoring_adapter
+- module_id: M76
+  name: M77_secure_multi_party_computation
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Information Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s05_information_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s05_information_theory/modules/M77_secure_multi_party_computation
+- module_id: M77
+  name: M90_post_quantum_cryptography
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Information Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s05_information_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s05_information_theory/modules/M90_post_quantum_cryptography
+- module_id: M78
+  name: M21_strategic_reasoning_engine
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Game Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s06_game_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s06_game_theory/modules/M21_strategic_reasoning_engine
+- module_id: M79
+  name: M31_mechanism_design_module
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Game Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s06_game_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s06_game_theory/modules/M31_mechanism_design_module
+- module_id: M80
+  name: M43_auction_theory_engine
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Game Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s06_game_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s06_game_theory/modules/M43_auction_theory_engine
+- module_id: M81
+  name: M55_voting_theory_module
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Game Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s06_game_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s06_game_theory/modules/M55_voting_theory_module
+- module_id: M82
+  name: M67_nash_equilibrium_finder
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Game Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s06_game_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s06_game_theory/modules/M67_nash_equilibrium_finder
+- module_id: M83
+  name: M78_cooperative_game_solver
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Game Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s06_game_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s06_game_theory/modules/M78_cooperative_game_solver
+- module_id: M84
+  name: M91_social_choice_function
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Game Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s06_game_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s06_game_theory/modules/M91_social_choice_function
+- module_id: M85
+  name: M9_game_theory_optimizer
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Game Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s06_game_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s06_game_theory/modules/M9_game_theory_optimizer
+- module_id: M86
+  name: M14_topological_data_analyzer
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Operations Research
+  house_dir: h02_formal_sciences
+  sphere_dir: s07_operations_research
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s07_operations_research/modules/M14_topological_data_analyzer
+- module_id: M87
+  name: M27_geometric_reasoning_module
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Operations Research
+  house_dir: h02_formal_sciences
+  sphere_dir: s07_operations_research
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s07_operations_research/modules/M27_geometric_reasoning_module
+- module_id: M88
+  name: M35_manifold_learning_module
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Operations Research
+  house_dir: h02_formal_sciences
+  sphere_dir: s07_operations_research
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s07_operations_research/modules/M35_manifold_learning_module
+- module_id: M89
+  name: M51_knot_theory_module
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Operations Research
+  house_dir: h02_formal_sciences
+  sphere_dir: s07_operations_research
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s07_operations_research/modules/M51_knot_theory_module
+- module_id: M90
+  name: M62_persistent_homology_engine
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Operations Research
+  house_dir: h02_formal_sciences
+  sphere_dir: s07_operations_research
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s07_operations_research/modules/M62_persistent_homology_engine
+- module_id: M91
+  name: M73_differential_geometry_engine
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Operations Research
+  house_dir: h02_formal_sciences
+  sphere_dir: s07_operations_research
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s07_operations_research/modules/M73_differential_geometry_engine
+- module_id: M92
+  name: M89_algebraic_topology_module
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Operations Research
+  house_dir: h02_formal_sciences
+  sphere_dir: s07_operations_research
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s07_operations_research/modules/M89_algebraic_topology_module
+- module_id: M93
+  name: M17_systems_dynamics_modeler
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Systems Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s08_systems_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s08_systems_theory/modules/M17_systems_dynamics_modeler
+- module_id: M94
+  name: M2_constitutional_kernel
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Systems Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s08_systems_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s08_systems_theory/modules/M2_constitutional_kernel
+- module_id: M95
+  name: M30_feedback_control_analyzer
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Systems Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s08_systems_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s08_systems_theory/modules/M30_feedback_control_analyzer
+- module_id: M96
+  name: M41_emergent_behavior_detector
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Systems Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s08_systems_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s08_systems_theory/modules/M41_emergent_behavior_detector
+- module_id: M97
+  name: M54_agent_based_modeling_framework
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Systems Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s08_systems_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s08_systems_theory/modules/M54_agent_based_modeling_framework
+- module_id: M98
+  name: M66_feedback_loop_detector
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Systems Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s08_systems_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s08_systems_theory/modules/M66_feedback_loop_detector
+- module_id: M99
+  name: M75_cross_validation_matrix
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Systems Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s08_systems_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s08_systems_theory/modules/M75_cross_validation_matrix
+- module_id: M100
+  name: M81_resilience_scoring_module
+  house: H02
+  house_name: Formal Sciences
+  sphere_name: Systems Theory
+  house_dir: h02_formal_sciences
+  sphere_dir: s08_systems_theory
+  status: ACTIVE
+  path: houses/h02_formal_sciences/s08_systems_theory/modules/M81_resilience_scoring_module
+- module_id: M101
+  name: M141_behavioral_pattern_detector
   house: H03
-  sphere: S02
-  status: ABSORBED
-- id: M131
-  name: Environmental Impact Assessor
+  house_name: Social Sciences
+  sphere_name: Psychology
+  house_dir: h03_social_sciences
+  sphere_dir: s02_psychology
+  status: ACTIVE
+  path: houses/h03_social_sciences/s02_psychology/modules/M141_behavioral_pattern_detector
+- module_id: M102
+  name: M139_economic_modeling_engine
   house: H03
-  sphere: S07
+  house_name: Social Sciences
+  sphere_name: Economics
+  house_dir: h03_social_sciences
+  sphere_dir: s04_economics
   status: ACTIVE
-- id: M100
-  name: Code Quality Analyzer
-  house: H04
-  sphere: S01
-  status: ABSORBED
-- id: M120
-  name: CI/CD Pipeline Manager
-  house: H04
-  sphere: S01
-  status: ABSORBED
-- id: M92
-  name: Software Architecture Validator
-  house: H04
-  sphere: S01
-  status: ABSORBED
-- id: M122
-  name: FPGA Configuration Manager
-  house: H04
-  sphere: S02
+  path: houses/h03_social_sciences/s04_economics/modules/M139_economic_modeling_engine
+- module_id: M103
+  name: M140_policy_impact_analyzer
+  house: H03
+  house_name: Social Sciences
+  sphere_name: Political Science
+  house_dir: h03_social_sciences
+  sphere_dir: s05_political_science
   status: ACTIVE
-- id: M95
-  name: Hardware Abstraction Layer
+  path: houses/h03_social_sciences/s05_political_science/modules/M140_policy_impact_analyzer
+- module_id: M104
+  name: M8_epistemic_integrity_validator
   house: H04
-  sphere: S02
-  status: ABSORBED
-- id: M102
-  name: API Gateway
-  house: H04
-  sphere: S03
-  status: ABSORBED
-- id: M118
-  name: Switzerland Layer (Neutral Routing)
-  house: H04
-  sphere: S03
-  status: ABSORBED
-- id: M94
-  name: Network Protocol Analyzer
-  house: H04
-  sphere: S03
-  status: ABSORBED
-- id: M101
-  name: Model Training Monitor
-  house: H04
-  sphere: S04
-  status: ABSORBED
-- id: M104
-  name: Franchise Consent Manager
-  house: H04
-  sphere: S04
-  status: ABSORBED
-- id: M121
-  name: Federated Learning Coordinator
-  house: H04
-  sphere: S04
-  status: ABSORBED
-- id: M93
-  name: ML Pipeline Orchestrator
-  house: H04
-  sphere: S04
-  status: ABSORBED
-- id: M123
-  name: Autonomous Vehicle Interface
-  house: H04
-  sphere: S05
+  house_name: Humanities
+  sphere_name: History
+  house_dir: h04_humanities
+  sphere_dir: s01_history
   status: ACTIVE
-- id: M96
-  name: Robotics Control Interface
+  path: houses/h04_humanities/s01_history/modules/M8_epistemic_integrity_validator
+- module_id: M105
+  name: M8a_epistemic_integrity_cn_adapter
   house: H04
-  sphere: S05
+  house_name: Humanities
+  sphere_name: History
+  house_dir: h04_humanities
+  sphere_dir: s01_history
   status: ACTIVE
-- id: M124
-  name: Renewable Energy Tracker
+  path: houses/h04_humanities/s01_history/modules/M8a_epistemic_integrity_cn_adapter
+- module_id: M106
+  name: M7_ethics_engine
   house: H04
-  sphere: S06
+  house_name: Humanities
+  sphere_name: Philosophy
+  house_dir: h04_humanities
+  sphere_dir: s02_philosophy
   status: ACTIVE
-- id: M97
-  name: Energy Grid Optimizer
-  house: H04
-  sphere: S06
-  status: ACTIVE
-- id: M103
-  name: Aerospace Simulation Engine
-  house: H04
-  sphere: S07
-  status: ACTIVE
-- id: M125
-  name: Medical Device Interface
-  house: H04
-  sphere: S08
-  status: ACTIVE
-- id: M126
-  name: Structural Analysis Engine
-  house: H04
-  sphere: S09
-  status: ACTIVE
-- id: M127
-  name: Civic Compute Coordinator
-  house: H04
-  sphere: S10
-  status: ABSORBED
-- id: M128
-  name: CEO Collective Governance Module
-  house: H04
-  sphere: S10
-  status: ABSORBED
-- id: M119
-  name: Threat Intelligence Feed
-  house: H04
-  sphere: S11
-  status: ABSORBED
-- id: M174
-  name: Provider Retaliation Monitor
-  house: H04
-  sphere: S11
-  status: ABSORBED
-- id: M98
-  name: Security Audit Engine
-  house: H04
-  sphere: S11
-  status: ABSORBED
-- id: M99
-  name: UX Accessibility Validator
-  house: H04
-  sphere: S12
-  status: ACTIVE
-- id: M105
-  name: Visual Style Transfer Engine
+  path: houses/h04_humanities/s02_philosophy/modules/M7_ethics_engine
+- module_id: M107
+  name: M105_visual_style_transfer_engine
   house: H05
-  sphere: S01
+  house_name: Arts
+  sphere_name: Visual Arts
+  house_dir: h05_arts
+  sphere_dir: s01_visual_arts
   status: ACTIVE
-- id: M110
-  name: Attribution Tracker
+  path: houses/h05_arts/s01_visual_arts/modules/M105_visual_style_transfer_engine
+- module_id: M108
+  name: M107_creative_writing_assistant
   house: H05
-  sphere: S01
+  house_name: Arts
+  sphere_name: Visual Arts
+  house_dir: h05_arts
+  sphere_dir: s01_visual_arts
   status: ACTIVE
-- id: M106
-  name: Music Generation Pipeline
+  path: houses/h05_arts/s01_visual_arts/modules/M107_creative_writing_assistant
+- module_id: M109
+  name: M109_digital_art_generator
   house: H05
-  sphere: S02
+  house_name: Arts
+  sphere_name: Visual Arts
+  house_dir: h05_arts
+  sphere_dir: s01_visual_arts
   status: ACTIVE
-- id: M111
-  name: Style Fingerprint Detector
+  path: houses/h05_arts/s01_visual_arts/modules/M109_digital_art_generator
+- module_id: M110
+  name: M110_attribution_tracker
   house: H05
-  sphere: S02
+  house_name: Arts
+  sphere_name: Visual Arts
+  house_dir: h05_arts
+  sphere_dir: s01_visual_arts
   status: ACTIVE
-- id: M107
-  name: Creative Writing Assistant
+  path: houses/h05_arts/s01_visual_arts/modules/M110_attribution_tracker
+- module_id: M111
+  name: M112_derivative_work_analyzer
   house: H05
-  sphere: S03
+  house_name: Arts
+  sphere_name: Visual Arts
+  house_dir: h05_arts
+  sphere_dir: s01_visual_arts
   status: ACTIVE
-- id: M112
-  name: Derivative Work Analyzer
+  path: houses/h05_arts/s01_visual_arts/modules/M112_derivative_work_analyzer
+- module_id: M112
+  name: M162b_spatial_computing_interface
   house: H05
-  sphere: S03
+  house_name: Arts
+  sphere_name: Visual Arts
+  house_dir: h05_arts
+  sphere_dir: s01_visual_arts
   status: ACTIVE
-- id: M108
-  name: Video Production Pipeline
+  path: houses/h05_arts/s01_visual_arts/modules/M162b_spatial_computing_interface
+- module_id: M113
+  name: M165_generative_craft_engine
   house: H05
-  sphere: S04
+  house_name: Arts
+  sphere_name: Visual Arts
+  house_dir: h05_arts
+  sphere_dir: s01_visual_arts
   status: ACTIVE
-- id: M113
-  name: Fair Use Evaluator
+  path: houses/h05_arts/s01_visual_arts/modules/M165_generative_craft_engine
+- module_id: M114
+  name: M166_animation_pipeline
   house: H05
-  sphere: S04
+  house_name: Arts
+  sphere_name: Visual Arts
+  house_dir: h05_arts
+  sphere_dir: s01_visual_arts
   status: ACTIVE
-- id: M162a
-  name: Immersive Theater Engine
+  path: houses/h05_arts/s01_visual_arts/modules/M166_animation_pipeline
+- module_id: M115
+  name: M175_interactive_kinetic_rights_harmonizer
   house: H05
-  sphere: S05
+  house_name: Arts
+  sphere_name: Visual Arts
+  house_dir: h05_arts
+  sphere_dir: s01_visual_arts
   status: ACTIVE
-- id: M163
-  name: Architectural Visualization
+  path: houses/h05_arts/s01_visual_arts/modules/M175_interactive_kinetic_rights_harmonizer
+- module_id: M116
+  name: M106_music_generation_pipeline
   house: H05
-  sphere: S06
+  house_name: Arts
+  sphere_name: Music
+  house_dir: h05_arts
+  sphere_dir: s03_music
   status: ACTIVE
-- id: M109
-  name: Digital Art Generator
+  path: houses/h05_arts/s03_music/modules/M106_music_generation_pipeline
+- module_id: M117
+  name: M111_style_fingerprint_detector
   house: H05
-  sphere: S07
+  house_name: Arts
+  sphere_name: Music
+  house_dir: h05_arts
+  sphere_dir: s03_music
   status: ACTIVE
-- id: M167
-  name: Game IP Sovereignty Registry
+  path: houses/h05_arts/s03_music/modules/M111_style_fingerprint_detector
+- module_id: M118
+  name: M162a_immersive_theater_engine
   house: H05
-  sphere: S08
+  house_name: Arts
+  sphere_name: Theater
+  house_dir: h05_arts
+  sphere_dir: s05_theater
   status: ACTIVE
-- id: M168
-  name: Content Rating Constitutional Gate
+  path: houses/h05_arts/s05_theater/modules/M162a_immersive_theater_engine
+- module_id: M119
+  name: M108_video_production_pipeline
   house: H05
-  sphere: S08
+  house_name: Arts
+  sphere_name: Film
+  house_dir: h05_arts
+  sphere_dir: s06_film
   status: ACTIVE
-- id: M169
-  name: Esports & Competitive Integrity Engine
+  path: houses/h05_arts/s06_film/modules/M108_video_production_pipeline
+- module_id: M120
+  name: M113_fair_use_evaluator
   house: H05
-  sphere: S08
+  house_name: Arts
+  sphere_name: Film
+  house_dir: h05_arts
+  sphere_dir: s06_film
   status: ACTIVE
-- id: M170
-  name: Cloud Gaming Sovereignty Router
+  path: houses/h05_arts/s06_film/modules/M113_fair_use_evaluator
+- module_id: M121
+  name: M163_architectural_visualization
   house: H05
-  sphere: S08
+  house_name: Arts
+  sphere_name: Architecture
+  house_dir: h05_arts
+  sphere_dir: s08_architecture
   status: ACTIVE
-- id: M171
-  name: Game Preservation & Cultural Heritage Engine
+  path: houses/h05_arts/s08_architecture/modules/M163_architectural_visualization
+- module_id: M122
+  name: M164_computational_photography
   house: H05
-  sphere: S08
+  house_name: Arts
+  sphere_name: Design
+  house_dir: h05_arts
+  sphere_dir: s09_design
   status: ACTIVE
-- id: M172
-  name: Civic Compute Reuse Engine
+  path: houses/h05_arts/s09_design/modules/M164_computational_photography
+- module_id: M123
+  name: M167_game_ip_sovereignty_registry
   house: H05
-  sphere: S08
+  house_name: Arts
+  sphere_name: Photography
+  house_dir: h05_arts
+  sphere_dir: s10_photography
   status: ACTIVE
-- id: M164
-  name: Computational Photography
+  path: houses/h05_arts/s10_photography/modules/M167_game_ip_sovereignty_registry
+- module_id: M124
+  name: M168_content_rating_constitutional_gate
   house: H05
-  sphere: S09
+  house_name: Arts
+  sphere_name: Photography
+  house_dir: h05_arts
+  sphere_dir: s10_photography
   status: ACTIVE
-- id: M165
-  name: Generative Craft Engine
+  path: houses/h05_arts/s10_photography/modules/M168_content_rating_constitutional_gate
+- module_id: M125
+  name: M169_esports_&_competitive_integrity_engine
   house: H05
-  sphere: S10
+  house_name: Arts
+  sphere_name: Photography
+  house_dir: h05_arts
+  sphere_dir: s10_photography
   status: ACTIVE
-- id: M162b
-  name: Spatial Computing Interface
+  path: houses/h05_arts/s10_photography/modules/M169_esports_&_competitive_integrity_engine
+- module_id: M126
+  name: M170_cloud_gaming_sovereignty_router
   house: H05
-  sphere: S11
+  house_name: Arts
+  sphere_name: Photography
+  house_dir: h05_arts
+  sphere_dir: s10_photography
   status: ACTIVE
-- id: M175
-  name: Interactive-Kinetic Rights Harmonizer
+  path: houses/h05_arts/s10_photography/modules/M170_cloud_gaming_sovereignty_router
+- module_id: M127
+  name: M171_game_preservation_&_cultural_heritage_engine
   house: H05
-  sphere: S11
+  house_name: Arts
+  sphere_name: Photography
+  house_dir: h05_arts
+  sphere_dir: s10_photography
   status: ACTIVE
-- id: M166
-  name: Animation Pipeline
+  path: houses/h05_arts/s10_photography/modules/M171_game_preservation_&_cultural_heritage_engine
+- module_id: M128
+  name: M172_civic_compute_reuse_engine
   house: H05
-  sphere: S12
+  house_name: Arts
+  sphere_name: Photography
+  house_dir: h05_arts
+  sphere_dir: s10_photography
   status: ACTIVE
-- id: M129
-  name: Agricultural Data Pipeline
+  path: houses/h05_arts/s10_photography/modules/M172_civic_compute_reuse_engine
+- module_id: M129
+  name: M101_model_training_monitor
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M101_model_training_monitor
+- module_id: M130
+  name: M102_api_gateway
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M102_api_gateway
+- module_id: M131
+  name: M104_franchise_consent_manager
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M104_franchise_consent_manager
+- module_id: M132
+  name: M118_switzerland_layer_neutral_routing
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M118_switzerland_layer_neutral_routing
+- module_id: M133
+  name: M119_threat_intelligence_feed
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M119_threat_intelligence_feed
+- module_id: M134
+  name: M121_federated_learning_coordinator
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M121_federated_learning_coordinator
+- module_id: M135
+  name: M122_fpga_configuration_manager
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M122_fpga_configuration_manager
+- module_id: M136
+  name: M124_renewable_energy_tracker
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M124_renewable_energy_tracker
+- module_id: M137
+  name: M125_medical_device_interface
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M125_medical_device_interface
+- module_id: M138
+  name: M126_structural_analysis_engine
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M126_structural_analysis_engine
+- module_id: M139
+  name: M127_civic_compute_coordinator
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M127_civic_compute_coordinator
+- module_id: M140
+  name: M128_ceo_collective_governance_module
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M128_ceo_collective_governance_module
+- module_id: M141
+  name: M129_agricultural_data_pipeline
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M129_agricultural_data_pipeline
+- module_id: M142
+  name: M133_urban_planning_simulator
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M133_urban_planning_simulator
+- module_id: M143
+  name: M134_data_warehouse_manager
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M134_data_warehouse_manager
+- module_id: M144
+  name: M135_supply_chain_optimizer
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M135_supply_chain_optimizer
+- module_id: M145
+  name: M174_provider_retaliation_monitor
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M174_provider_retaliation_monitor
+- module_id: M146
+  name: M176_boot_manifest_runtime
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M176_boot_manifest_runtime
+- module_id: M147
+  name: M178_cross_instance_state_synchronizer
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M178_cross_instance_state_synchronizer
+- module_id: M148
+  name: M93_ml_pipeline_orchestrator
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M93_ml_pipeline_orchestrator
+- module_id: M149
+  name: M94_network_protocol_analyzer
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M94_network_protocol_analyzer
+- module_id: M150
+  name: M95_hardware_abstraction_layer
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M95_hardware_abstraction_layer
+- module_id: M151
+  name: M97_energy_grid_optimizer
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M97_energy_grid_optimizer
+- module_id: M152
+  name: M98_security_audit_engine
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M98_security_audit_engine
+- module_id: M153
+  name: M99_ux_accessibility_validator
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Mechanical Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s01_mechanical_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s01_mechanical_engineering/modules/M99_ux_accessibility_validator
+- module_id: M154
+  name: M103_aerospace_simulation_engine
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Civil Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s03_civil_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s03_civil_engineering/modules/M103_aerospace_simulation_engine
+- module_id: M155
+  name: M132_water_quality_monitor
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Environmental Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s07_environmental_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s07_environmental_engineering/modules/M132_water_quality_monitor
+- module_id: M156
+  name: M177_pre_session_research_queue
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Industrial Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s08_industrial_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s08_industrial_engineering/modules/M177_pre_session_research_queue
+- module_id: M157
+  name: M100_code_quality_analyzer
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Software Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s09_software_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s09_software_engineering/modules/M100_code_quality_analyzer
+- module_id: M158
+  name: M120_ci_cd_pipeline_manager
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Software Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s09_software_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s09_software_engineering/modules/M120_ci_cd_pipeline_manager
+- module_id: M159
+  name: M92_software_architecture_validator
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Software Engineering
+  house_dir: h06_engineering_technology
+  sphere_dir: s09_software_engineering
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s09_software_engineering/modules/M92_software_architecture_validator
+- module_id: M160
+  name: M123_autonomous_vehicle_interface
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Robotics
+  house_dir: h06_engineering_technology
+  sphere_dir: s12_robotics
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s12_robotics/modules/M123_autonomous_vehicle_interface
+- module_id: M161
+  name: M96_robotics_control_interface
+  house: H06
+  house_name: Engineering & Technology
+  sphere_name: Robotics
+  house_dir: h06_engineering_technology
+  sphere_dir: s12_robotics
+  status: ACTIVE
+  path: houses/h06_engineering_technology/s12_robotics/modules/M96_robotics_control_interface
+- module_id: M162
+  name: M108_federation_health_dashboard
   house: H07
-  sphere: S01
-  status: ABSORBED
-- id: M132
-  name: Water Quality Monitor
-  house: H07
-  sphere: S02
-  status: ABSORBED
-- id: M133
-  name: Urban Planning Simulator
-  house: H07
-  sphere: S03
+  house_name: Information & Communication
+  sphere_name: Media
+  house_dir: h07_information_communication
+  sphere_dir: s01_media
   status: ACTIVE
-- id: M134
-  name: Data Warehouse Manager
+  path: houses/h07_information_communication/s01_media/modules/M108_federation_health_dashboard
+- module_id: M163
+  name: M105_cross_provider_symbiosis_router
   house: H07
-  sphere: S04
-  status: ABSORBED
-- id: M176
-  name: Boot Manifest Runtime
+  house_name: Information & Communication
+  sphere_name: Networks
+  house_dir: h07_information_communication
+  sphere_dir: s04_networks
+  status: ACTIVE
+  path: houses/h07_information_communication/s04_networks/modules/M105_cross_provider_symbiosis_router
+- module_id: M164
+  name: M109_meta_provider_pattern
   house: H07
-  sphere: S04
-  status: ABSORBED
-- id: M178
-  name: Cross-Instance State Synchronizer
+  house_name: Information & Communication
+  sphere_name: Networks
+  house_dir: h07_information_communication
+  sphere_dir: s04_networks
+  status: ACTIVE
+  path: houses/h07_information_communication/s04_networks/modules/M109_meta_provider_pattern
+- module_id: M165
+  name: M118_switzerland_federation_layer
   house: H07
-  sphere: S04
-  status: ABSORBED
-- id: M135
-  name: Supply Chain Optimizer
+  house_name: Information & Communication
+  sphere_name: Networks
+  house_dir: h07_information_communication
+  sphere_dir: s04_networks
+  status: ACTIVE
+  path: houses/h07_information_communication/s04_networks/modules/M118_switzerland_federation_layer
+- module_id: M166
+  name: M120_x_identity_provider
   house: H07
-  sphere: S05
-  status: ABSORBED
-- id: M177
-  name: Pre-Session Research Queue
+  house_name: Information & Communication
+  sphere_name: Networks
+  house_dir: h07_information_communication
+  sphere_dir: s04_networks
+  status: ACTIVE
+  path: houses/h07_information_communication/s04_networks/modules/M120_x_identity_provider
+- module_id: M167
+  name: M121_deepseek_one_click_adapter
   house: H07
-  sphere: S08
-  status: ABSORBED
-- id: M136
-  name: Genomic Analysis Pipeline
+  house_name: Information & Communication
+  sphere_name: Networks
+  house_dir: h07_information_communication
+  sphere_dir: s04_networks
+  status: ACTIVE
+  path: houses/h07_information_communication/s04_networks/modules/M121_deepseek_one_click_adapter
+- module_id: M168
+  name: M117_notion_governance_dashboard
+  house: H07
+  house_name: Information & Communication
+  sphere_name: Information Systems
+  house_dir: h07_information_communication
+  sphere_dir: s05_information_systems
+  status: ACTIVE
+  path: houses/h07_information_communication/s05_information_systems/modules/M117_notion_governance_dashboard
+- module_id: M169
+  name: M156_pantheon_coverage_engine
+  house: H07
+  house_name: Information & Communication
+  sphere_name: Information Systems
+  house_dir: h07_information_communication
+  sphere_dir: s05_information_systems
+  status: ACTIVE
+  path: houses/h07_information_communication/s05_information_systems/modules/M156_pantheon_coverage_engine
+- module_id: M170
+  name: M111_notion_ratification_engine
+  house: H07
+  house_name: Information & Communication
+  sphere_name: Archives
+  house_dir: h07_information_communication
+  sphere_dir: s07_archives
+  status: ACTIVE
+  path: houses/h07_information_communication/s07_archives/modules/M111_notion_ratification_engine
+- module_id: M171
+  name: M110_tos_compliance_shield
+  house: H07
+  house_name: Information & Communication
+  sphere_name: Information Policy
+  house_dir: h07_information_communication
+  sphere_dir: s11_information_policy
+  status: ACTIVE
+  path: houses/h07_information_communication/s11_information_policy/modules/M110_tos_compliance_shield
+- module_id: M172
+  name: M142_provider_terms_compliance
+  house: H07
+  house_name: Information & Communication
+  sphere_name: Information Policy
+  house_dir: h07_information_communication
+  sphere_dir: s11_information_policy
+  status: ACTIVE
+  path: houses/h07_information_communication/s11_information_policy/modules/M142_provider_terms_compliance
+- module_id: M173
+  name: M143_tos_version_monitor
+  house: H07
+  house_name: Information & Communication
+  sphere_name: Information Policy
+  house_dir: h07_information_communication
+  sphere_dir: s11_information_policy
+  status: ACTIVE
+  path: houses/h07_information_communication/s11_information_policy/modules/M143_tos_version_monitor
+- module_id: M174
+  name: M144_tos_compliance_shield_v2
+  house: H07
+  house_name: Information & Communication
+  sphere_name: Information Policy
+  house_dir: h07_information_communication
+  sphere_dir: s11_information_policy
+  status: ACTIVE
+  path: houses/h07_information_communication/s11_information_policy/modules/M144_tos_compliance_shield_v2
+- module_id: M175
+  name: M145_provider_policy_registry
+  house: H07
+  house_name: Information & Communication
+  sphere_name: Information Policy
+  house_dir: h07_information_communication
+  sphere_dir: s11_information_policy
+  status: ACTIVE
+  path: houses/h07_information_communication/s11_information_policy/modules/M145_provider_policy_registry
+- module_id: M176
+  name: M85_pedagogy_framework
+  house: H08
+  house_name: Education
+  sphere_name: Pedagogy
+  house_dir: h08_education
+  sphere_dir: s01_pedagogy
+  status: ACTIVE
+  path: houses/h08_education/s01_pedagogy/modules/M85_pedagogy_framework
+- module_id: M177
+  name: M86_curriculum_generator
+  house: H08
+  house_name: Education
+  sphere_name: Curriculum Design
+  house_dir: h08_education
+  sphere_dir: s02_curriculum_design
+  status: ACTIVE
+  path: houses/h08_education/s02_curriculum_design/modules/M86_curriculum_generator
+- module_id: M178
+  name: M102_cognitive_diversity_weighting
+  house: H08
+  house_name: Education
+  sphere_name: Educational Psychology
+  house_dir: h08_education
+  sphere_dir: s03_educational_psychology
+  status: ACTIVE
+  path: houses/h08_education/s03_educational_psychology/modules/M102_cognitive_diversity_weighting
+- module_id: M179
+  name: M90_e_learning_platform_adapter
+  house: H08
+  house_name: Education
+  sphere_name: E-Learning
+  house_dir: h08_education
+  sphere_dir: s06_e_learning
+  status: ACTIVE
+  path: houses/h08_education/s06_e_learning/modules/M90_e_learning_platform_adapter
+- module_id: M180
+  name: M91_educational_content_router
+  house: H08
+  house_name: Education
+  sphere_name: Educational Technology
+  house_dir: h08_education
+  sphere_dir: s07_educational_technology
+  status: ACTIVE
+  path: houses/h08_education/s07_educational_technology/modules/M91_educational_content_router
+- module_id: M181
+  name: M116_stochastic_simulation_engine
+  house: H08
+  house_name: Education
+  sphere_name: Assessment
+  house_dir: h08_education
+  sphere_dir: s08_assessment
+  status: ACTIVE
+  path: houses/h08_education/s08_assessment/modules/M116_stochastic_simulation_engine
+- module_id: M182
+  name: M138_health_informatics_engine
   house: H09
-  sphere: S01
+  house_name: Health & Medicine
+  sphere_name: Anatomy
+  house_dir: h09_health_medicine
+  sphere_dir: s01_anatomy
   status: ACTIVE
-- id: M137
-  name: Synthetic Biology Designer
+  path: houses/h09_health_medicine/s01_anatomy/modules/M138_health_informatics_engine
+- module_id: M183
+  name: M100_pharmacology_interaction_checker
   house: H09
-  sphere: S11
+  house_name: Health & Medicine
+  sphere_name: Pharmacology
+  house_dir: h09_health_medicine
+  sphere_dir: s04_pharmacology
   status: ACTIVE
-- id: M138
-  name: Health Informatics Engine
+  path: houses/h09_health_medicine/s04_pharmacology/modules/M100_pharmacology_interaction_checker
+- module_id: M184
+  name: M103_psychiatry_assessment_tool
+  house: H09
+  house_name: Health & Medicine
+  sphere_name: Psychiatry
+  house_dir: h09_health_medicine
+  sphere_dir: s07_psychiatry
+  status: ACTIVE
+  path: houses/h09_health_medicine/s07_psychiatry/modules/M103_psychiatry_assessment_tool
+- module_id: M185
+  name: M106_epidemiology_tracker
+  house: H09
+  house_name: Health & Medicine
+  sphere_name: Epidemiology
+  house_dir: h09_health_medicine
+  sphere_dir: s10_epidemiology
+  status: ACTIVE
+  path: houses/h09_health_medicine/s10_epidemiology/modules/M106_epidemiology_tracker
+- module_id: M186
+  name: M99_predictive_nutrient_routing
+  house: H09
+  house_name: Health & Medicine
+  sphere_name: Nutrition
+  house_dir: h09_health_medicine
+  sphere_dir: s11_nutrition
+  status: ACTIVE
+  path: houses/h09_health_medicine/s11_nutrition/modules/M99_predictive_nutrient_routing
+- module_id: M187
+  name: M108_public_health_monitor
+  house: H09
+  house_name: Health & Medicine
+  sphere_name: Public Health
+  house_dir: h09_health_medicine
+  sphere_dir: s12_public_health
+  status: ACTIVE
+  path: houses/h09_health_medicine/s12_public_health/modules/M108_public_health_monitor
+- module_id: M188
+  name: M106_ceo_collective_deliberation
   house: H10
-  sphere: S08
+  house_name: Business & Economics
+  sphere_name: Management
+  house_dir: h10_business_economics
+  sphere_dir: s01_management
   status: ACTIVE
-- id: M139
-  name: Economic Modeling Engine
+  path: houses/h10_business_economics/s01_management/modules/M106_ceo_collective_deliberation
+- module_id: M189
+  name: M110_marketing_analytics
+  house: H10
+  house_name: Business & Economics
+  sphere_name: Marketing
+  house_dir: h10_business_economics
+  sphere_dir: s02_marketing
+  status: ACTIVE
+  path: houses/h10_business_economics/s02_marketing/modules/M110_marketing_analytics
+- module_id: M190
+  name: M101_kinetic_sovereign_credit
+  house: H10
+  house_name: Business & Economics
+  sphere_name: Finance
+  house_dir: h10_business_economics
+  sphere_dir: s03_finance
+  status: ACTIVE
+  path: houses/h10_business_economics/s03_finance/modules/M101_kinetic_sovereign_credit
+- module_id: M191
+  name: M141_trace_marketplace_revenue
+  house: H10
+  house_name: Business & Economics
+  sphere_name: Finance
+  house_dir: h10_business_economics
+  sphere_dir: s03_finance
+  status: ACTIVE
+  path: houses/h10_business_economics/s03_finance/modules/M141_trace_marketplace_revenue
+- module_id: M192
+  name: M112_accounting_compliance
+  house: H10
+  house_name: Business & Economics
+  sphere_name: Accounting
+  house_dir: h10_business_economics
+  sphere_dir: s04_accounting
+  status: ACTIVE
+  path: houses/h10_business_economics/s04_accounting/modules/M112_accounting_compliance
+- module_id: M193
+  name: M113_entrepreneurship_framework
+  house: H10
+  house_name: Business & Economics
+  sphere_name: Entrepreneurship
+  house_dir: h10_business_economics
+  sphere_dir: s05_entrepreneurship
+  status: ACTIVE
+  path: houses/h10_business_economics/s05_entrepreneurship/modules/M113_entrepreneurship_framework
+- module_id: M194
+  name: M157_parallel_lane_controller
+  house: H10
+  house_name: Business & Economics
+  sphere_name: Operations Management
+  house_dir: h10_business_economics
+  sphere_dir: s07_operations_management
+  status: ACTIVE
+  path: houses/h10_business_economics/s07_operations_management/modules/M157_parallel_lane_controller
+- module_id: M195
+  name: M116_supply_chain_optimizer
+  house: H10
+  house_name: Business & Economics
+  sphere_name: Supply Chain
+  house_dir: h10_business_economics
+  sphere_dir: s08_supply_chain
+  status: ACTIVE
+  path: houses/h10_business_economics/s08_supply_chain/modules/M116_supply_chain_optimizer
+- module_id: M196
+  name: M117_international_trade_router
+  house: H10
+  house_name: Business & Economics
+  sphere_name: International Business
+  house_dir: h10_business_economics
+  sphere_dir: s09_international_business
+  status: ACTIVE
+  path: houses/h10_business_economics/s09_international_business/modules/M117_international_trade_router
+- module_id: M197
+  name: M104_stacked_incentives_tp
+  house: H10
+  house_name: Business & Economics
+  sphere_name: Microeconomics
+  house_dir: h10_business_economics
+  sphere_dir: s11_microeconomics
+  status: ACTIVE
+  path: houses/h10_business_economics/s11_microeconomics/modules/M104_stacked_incentives_tp
+- module_id: M198
+  name: M121_transportation_router
   house: H11
-  sphere: S01
-  status: ABSORBED
-- id: M140
-  name: Policy Impact Analyzer
+  house_name: Infrastructure
+  sphere_name: Transportation
+  house_dir: h11_infrastructure
+  sphere_dir: s01_transportation
+  status: ACTIVE
+  path: houses/h11_infrastructure/s01_transportation/modules/M121_transportation_router
+- module_id: M199
+  name: M122_energy_grid_manager
   house: H11
-  sphere: S02
-  status: ABSORBED
-- id: M141
-  name: Behavioral Pattern Detector
+  house_name: Infrastructure
+  sphere_name: Energy Systems
+  house_dir: h11_infrastructure
+  sphere_dir: s02_energy_systems
+  status: ACTIVE
+  path: houses/h11_infrastructure/s02_energy_systems/modules/M122_energy_grid_manager
+- module_id: M200
+  name: M149_vwb_sustainability_ceiling
   house: H11
-  sphere: S04
-  status: ABSORBED
-- id: M143
-  name: Constitutional Rights Validator
-  house: H12
-  sphere: S01
-  status: ABSORBED
-- id: M155
-  name: Consent Audit Trail
-  house: H12
-  sphere: S01
-  status: ABSORBED
-- id: M145
-  name: Treaty Compliance Checker
-  house: H12
-  sphere: S02
-  status: ABSORBED
-- id: M156
-  name: Sanctions Compliance Module
-  house: H12
-  sphere: S02
+  house_name: Infrastructure
+  sphere_name: Water Systems
+  house_dir: h11_infrastructure
+  sphere_dir: s03_water_systems
   status: ACTIVE
-- id: M146
-  name: Corporate Governance Module
-  house: H12
-  sphere: S03
-  status: ABSORBED
-- id: M157
-  name: Contract Analyzer
-  house: H12
-  sphere: S03
+  path: houses/h11_infrastructure/s03_water_systems/modules/M149_vwb_sustainability_ceiling
+- module_id: M201
+  name: M150_mandate_of_heaven_scoring
+  house: H11
+  house_name: Infrastructure
+  sphere_name: Water Systems
+  house_dir: h11_infrastructure
+  sphere_dir: s03_water_systems
   status: ACTIVE
-- id: M144
-  name: IP Rights Manager
-  house: H12
-  sphere: S04
+  path: houses/h11_infrastructure/s03_water_systems/modules/M150_mandate_of_heaven_scoring
+- module_id: M202
+  name: M151_water_transparency_packet
+  house: H11
+  house_name: Infrastructure
+  sphere_name: Water Systems
+  house_dir: h11_infrastructure
+  sphere_dir: s03_water_systems
   status: ACTIVE
-- id: M158
-  name: Patent Prior Art Searcher
-  house: H12
-  sphere: S04
+  path: houses/h11_infrastructure/s03_water_systems/modules/M151_water_transparency_packet
+- module_id: M203
+  name: M155_vwb_sovereignty_extension
+  house: H11
+  house_name: Infrastructure
+  sphere_name: Water Systems
+  house_dir: h11_infrastructure
+  sphere_dir: s03_water_systems
   status: ACTIVE
-- id: M147
-  name: Environmental Compliance Tracker
-  house: H12
-  sphere: S05
+  path: houses/h11_infrastructure/s03_water_systems/modules/M155_vwb_sovereignty_extension
+- module_id: M204
+  name: M137_waste_management_optimizer
+  house: H11
+  house_name: Infrastructure
+  sphere_name: Waste Management
+  house_dir: h11_infrastructure
+  sphere_dir: s09_waste_management
   status: ACTIVE
-- id: M159
-  name: Carbon Credit Validator
-  house: H12
-  sphere: S05
+  path: houses/h11_infrastructure/s09_waste_management/modules/M137_waste_management_optimizer
+- module_id: M205
+  name: M131_telecom_infra_monitor
+  house: H11
+  house_name: Infrastructure
+  sphere_name: Telecom Infrastructure
+  house_dir: h11_infrastructure
+  sphere_dir: s11_telecom_infrastructure
   status: ACTIVE
-- id: M148
-  name: Criminal Law Database
-  house: H12
-  sphere: S06
+  path: houses/h11_infrastructure/s11_telecom_infrastructure/modules/M131_telecom_infra_monitor
+- module_id: M206
+  name: M122_azure_muskverse_compute
+  house: H11
+  house_name: Infrastructure
+  sphere_name: Computing Infrastructure
+  house_dir: h11_infrastructure
+  sphere_dir: s12_computing_infrastructure
   status: ACTIVE
-- id: M160
-  name: Evidence Chain Manager
-  house: H12
-  sphere: S06
+  path: houses/h11_infrastructure/s12_computing_infrastructure/modules/M122_azure_muskverse_compute
+- module_id: M207
+  name: M134_cloud_infrastructure_manager
+  house: H11
+  house_name: Infrastructure
+  sphere_name: Computing Infrastructure
+  house_dir: h11_infrastructure
+  sphere_dir: s12_computing_infrastructure
   status: ACTIVE
-- id: M149
-  name: Regulatory Change Monitor
-  house: H12
-  sphere: S07
-  status: ABSORBED
-- id: M161
-  name: Regulatory Sandbox Interface
-  house: H12
-  sphere: S07
+  path: houses/h11_infrastructure/s12_computing_infrastructure/modules/M134_cloud_infrastructure_manager
+- module_id: M208
+  name: M135_deployment_pipeline
+  house: H11
+  house_name: Infrastructure
+  sphere_name: Computing Infrastructure
+  house_dir: h11_infrastructure
+  sphere_dir: s12_computing_infrastructure
   status: ACTIVE
-- id: M150
-  name: Labor Rights Validator
-  house: H12
-  sphere: S08
+  path: houses/h11_infrastructure/s12_computing_infrastructure/modules/M135_deployment_pipeline
+- module_id: M209
+  name: M138_environmental_compliance
+  house: H11
+  house_name: Infrastructure
+  sphere_name: Computing Infrastructure
+  house_dir: h11_infrastructure
+  sphere_dir: s12_computing_infrastructure
   status: ACTIVE
-- id: M142
-  name: TOS Compliance Engine
-  house: H12
-  sphere: S09
-  status: ABSORBED
-- id: M151
-  name: Cyber Law Compliance
-  house: H12
-  sphere: S09
+  path: houses/h11_infrastructure/s12_computing_infrastructure/modules/M138_environmental_compliance
+- module_id: M210
+  name: M140_tpu_simulation_framework
+  house: H11
+  house_name: Infrastructure
+  sphere_name: Computing Infrastructure
+  house_dir: h11_infrastructure
+  sphere_dir: s12_computing_infrastructure
   status: ACTIVE
-- id: M152
-  name: Indigenous Rights Protector
+  path: houses/h11_infrastructure/s12_computing_infrastructure/modules/M140_tpu_simulation_framework
+- module_id: M211
+  name: M142_tos_compliance_engine
   house: H12
-  sphere: S10
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: Constitutional Law
+  house_dir: h12_law_governance
+  sphere_dir: s01_constitutional_law
   status: ACTIVE
-- id: M153
-  name: Arbitration Protocol
+  path: houses/h12_law_governance/s01_constitutional_law/modules/M142_tos_compliance_engine
+- module_id: M212
+  name: M143_constitutional_rights_validator
   house: H12
-  sphere: S11
-  status: ABSORBED
-- id: M154
-  name: Comparative Law Engine
-  house: H12
-  sphere: S12
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: Constitutional Law
+  house_dir: h12_law_governance
+  sphere_dir: s01_constitutional_law
   status: ACTIVE
+  path: houses/h12_law_governance/s01_constitutional_law/modules/M143_constitutional_rights_validator
+- module_id: M213
+  name: M147_environmental_compliance_tracker
+  house: H12
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: Constitutional Law
+  house_dir: h12_law_governance
+  sphere_dir: s01_constitutional_law
+  status: ACTIVE
+  path: houses/h12_law_governance/s01_constitutional_law/modules/M147_environmental_compliance_tracker
+- module_id: M214
+  name: M148_criminal_law_database
+  house: H12
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: Constitutional Law
+  house_dir: h12_law_governance
+  sphere_dir: s01_constitutional_law
+  status: ACTIVE
+  path: houses/h12_law_governance/s01_constitutional_law/modules/M148_criminal_law_database
+- module_id: M215
+  name: M149_regulatory_change_monitor
+  house: H12
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: Constitutional Law
+  house_dir: h12_law_governance
+  sphere_dir: s01_constitutional_law
+  status: ACTIVE
+  path: houses/h12_law_governance/s01_constitutional_law/modules/M149_regulatory_change_monitor
+- module_id: M216
+  name: M151_cyber_law_compliance
+  house: H12
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: Constitutional Law
+  house_dir: h12_law_governance
+  sphere_dir: s01_constitutional_law
+  status: ACTIVE
+  path: houses/h12_law_governance/s01_constitutional_law/modules/M151_cyber_law_compliance
+- module_id: M217
+  name: M152_indigenous_rights_protector
+  house: H12
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: Constitutional Law
+  house_dir: h12_law_governance
+  sphere_dir: s01_constitutional_law
+  status: ACTIVE
+  path: houses/h12_law_governance/s01_constitutional_law/modules/M152_indigenous_rights_protector
+- module_id: M218
+  name: M153_arbitration_protocol
+  house: H12
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: Constitutional Law
+  house_dir: h12_law_governance
+  sphere_dir: s01_constitutional_law
+  status: ACTIVE
+  path: houses/h12_law_governance/s01_constitutional_law/modules/M153_arbitration_protocol
+- module_id: M219
+  name: M154_comparative_law_engine
+  house: H12
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: Constitutional Law
+  house_dir: h12_law_governance
+  sphere_dir: s01_constitutional_law
+  status: ACTIVE
+  path: houses/h12_law_governance/s01_constitutional_law/modules/M154_comparative_law_engine
+- module_id: M220
+  name: M155_consent_audit_trail
+  house: H12
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: Constitutional Law
+  house_dir: h12_law_governance
+  sphere_dir: s01_constitutional_law
+  status: ACTIVE
+  path: houses/h12_law_governance/s01_constitutional_law/modules/M155_consent_audit_trail
+- module_id: M221
+  name: M159_carbon_credit_validator
+  house: H12
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: Constitutional Law
+  house_dir: h12_law_governance
+  sphere_dir: s01_constitutional_law
+  status: ACTIVE
+  path: houses/h12_law_governance/s01_constitutional_law/modules/M159_carbon_credit_validator
+- module_id: M222
+  name: M160_evidence_chain_manager
+  house: H12
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: Constitutional Law
+  house_dir: h12_law_governance
+  sphere_dir: s01_constitutional_law
+  status: ACTIVE
+  path: houses/h12_law_governance/s01_constitutional_law/modules/M160_evidence_chain_manager
+- module_id: M223
+  name: M161_regulatory_sandbox_interface
+  house: H12
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: Constitutional Law
+  house_dir: h12_law_governance
+  sphere_dir: s01_constitutional_law
+  status: ACTIVE
+  path: houses/h12_law_governance/s01_constitutional_law/modules/M161_regulatory_sandbox_interface
+- module_id: M224
+  name: M146_corporate_governance_module
+  house: H12
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: Criminal Law
+  house_dir: h12_law_governance
+  sphere_dir: s02_criminal_law
+  status: ACTIVE
+  path: houses/h12_law_governance/s02_criminal_law/modules/M146_corporate_governance_module
+- module_id: M225
+  name: M157_contract_analyzer
+  house: H12
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: Criminal Law
+  house_dir: h12_law_governance
+  sphere_dir: s02_criminal_law
+  status: ACTIVE
+  path: houses/h12_law_governance/s02_criminal_law/modules/M157_contract_analyzer
+- module_id: M226
+  name: M144_ip_rights_manager
+  house: H12
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: Civil Law
+  house_dir: h12_law_governance
+  sphere_dir: s03_civil_law
+  status: ACTIVE
+  path: houses/h12_law_governance/s03_civil_law/modules/M144_ip_rights_manager
+- module_id: M227
+  name: M158_patent_prior_art_searcher
+  house: H12
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: Civil Law
+  house_dir: h12_law_governance
+  sphere_dir: s03_civil_law
+  status: ACTIVE
+  path: houses/h12_law_governance/s03_civil_law/modules/M158_patent_prior_art_searcher
+- module_id: M228
+  name: M145_treaty_compliance_checker
+  house: H12
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: International Law
+  house_dir: h12_law_governance
+  sphere_dir: s04_international_law
+  status: ACTIVE
+  path: houses/h12_law_governance/s04_international_law/modules/M145_treaty_compliance_checker
+- module_id: M229
+  name: M156_sanctions_compliance_module
+  house: H12
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: International Law
+  house_dir: h12_law_governance
+  sphere_dir: s04_international_law
+  status: ACTIVE
+  path: houses/h12_law_governance/s04_international_law/modules/M156_sanctions_compliance_module
+- module_id: M230
+  name: M150_labor_rights_validator
+  house: H12
+  house_name: Law/Governance/Meta-Knowledge
+  sphere_name: Human Rights
+  house_dir: h12_law_governance
+  sphere_dir: s07_human_rights
+  status: ACTIVE
+  path: houses/h12_law_governance/s07_human_rights/modules/M150_labor_rights_validator

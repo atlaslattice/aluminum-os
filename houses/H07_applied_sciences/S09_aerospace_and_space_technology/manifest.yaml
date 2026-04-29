@@ -1,9 +1,0 @@
-sphere:
-  id: S09
-  house: H07
-  name: Aerospace & Space Technology
-  full_id: H07-S09
-  ordinal: 81
-status: EMPTY
-module_count: 0
-modules: []

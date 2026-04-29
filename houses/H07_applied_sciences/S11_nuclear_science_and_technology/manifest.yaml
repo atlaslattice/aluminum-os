@@ -1,9 +1,0 @@
-sphere:
-  id: S11
-  house: H07
-  name: Nuclear Science & Technology
-  full_id: H07-S11
-  ordinal: 83
-status: EMPTY
-module_count: 0
-modules: []

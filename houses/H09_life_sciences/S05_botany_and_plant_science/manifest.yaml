@@ -1,9 +1,0 @@
-sphere:
-  id: S05
-  house: H09
-  name: Botany & Plant Science
-  full_id: H09-S05
-  ordinal: 101
-status: EMPTY
-module_count: 0
-modules: []

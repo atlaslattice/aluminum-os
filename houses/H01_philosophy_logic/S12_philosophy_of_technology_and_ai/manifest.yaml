@@ -1,9 +1,0 @@
-sphere:
-  id: S12
-  house: H01
-  name: Philosophy of Technology & AI
-  full_id: H01-S12
-  ordinal: 12
-status: EMPTY
-module_count: 0
-modules: []

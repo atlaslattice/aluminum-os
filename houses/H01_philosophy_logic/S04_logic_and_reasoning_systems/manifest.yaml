@@ -1,9 +1,0 @@
-sphere:
-  id: S04
-  house: H01
-  name: Logic & Reasoning Systems
-  full_id: H01-S04
-  ordinal: 4
-status: EMPTY
-module_count: 0
-modules: []

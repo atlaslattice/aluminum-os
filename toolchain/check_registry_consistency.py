@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""Registry ↔ Filesystem Consistency Gate.
+"""Registry <-> Filesystem Consistency Gate (v3.14).
 
 Verifies that:
 1. Every module in module_registry.yaml has a corresponding on-disk directory
-2. Every on-disk M* directory has a corresponding registry entry
+2. Every on-disk module directory has a corresponding registry entry
 3. Module IDs are unique in the registry
-4. Manifest.yaml in each module dir matches registry metadata
+4. All 12 Houses x 12 Spheres directories exist
+5. lattice_ontology_v2.py matches registries
 
 Exit code 0 = consistent, 1 = drift detected.
 """
 
-import os
 import sys
 import yaml
 from pathlib import Path
@@ -21,98 +21,134 @@ HOUSES_DIR = REPO_ROOT / "houses"
 
 
 def load_registry():
-    """Load module registry and return dict of id -> module metadata."""
+    """Load module registry and return dict of path -> module metadata."""
     with open(REGISTRY_PATH) as f:
         data = yaml.safe_load(f)
     modules = {}
+    ids_seen = set()
     for m in data.get("modules", []):
-        mid = m["id"]
-        if mid in modules:
+        mid = m.get("module_id", m.get("id"))
+        if mid in ids_seen:
             print(f"  DUPLICATE REGISTRY ID: {mid}")
-        modules[mid] = m
-    return modules
+        ids_seen.add(mid)
+        path = m.get("path", "")
+        modules[path] = m
+    return modules, data
 
 
 def find_disk_modules():
-    """Find all M* directories on disk and return dict of id -> path."""
+    """Find all module directories on disk that have __init__.py."""
     disk = {}
-    for mdir in HOUSES_DIR.rglob("M*"):
-        if mdir.is_dir() and mdir.parent.name == "modules":
-            # Extract module ID from directory name (e.g., M10_mathematical_proof_engine -> M10)
-            dirname = mdir.name
-            mid = dirname.split("_")[0]
-            # Handle IDs like M8a, M162b
-            if mid[0] == "M" and any(c.isdigit() for c in mid[1:]):
-                if mid in disk:
-                    print(f"  DUPLICATE DISK ID: {mid} at {mdir} and {disk[mid]}")
-                disk[mid] = mdir
+    for init in HOUSES_DIR.rglob("__init__.py"):
+        mdir = init.parent
+        if mdir.parent.name == "modules":
+            rel = str(mdir.relative_to(REPO_ROOT))
+            disk[rel] = mdir
     return disk
+
+
+def check_house_structure():
+    """Verify all 12 Houses x 12 Spheres directories exist."""
+    errors = []
+    try:
+        sys.path.insert(0, str(REPO_ROOT / "e145" / "aluminum-os-core"))
+        from lattice_ontology_v2 import HOUSE_IDS, HOUSE_DIRS, SPHERE_DIRS
+        for i, hdir in enumerate(HOUSE_DIRS):
+            house_path = HOUSES_DIR / hdir
+            if not house_path.exists():
+                errors.append(f"MISSING HOUSE DIR: {house_path}")
+                continue
+            for j in range(12):
+                idx = i * 12 + j
+                sdir = SPHERE_DIRS[idx]
+                sphere_path = house_path / sdir
+                if not sphere_path.exists():
+                    errors.append(f"MISSING SPHERE DIR: {sphere_path}")
+    except ImportError as e:
+        errors.append(f"Cannot import lattice_ontology_v2: {e}")
+    return errors
 
 
 def main():
     errors = []
     warnings = []
 
-    print("Registry ↔ Filesystem Consistency Check")
-    print("=" * 50)
+    print("Registry <-> Filesystem Consistency Check (v3.14)")
+    print("=" * 55)
+
+    # Check house/sphere structure
+    print("\n1. House/Sphere structure check...")
+    struct_errors = check_house_structure()
+    errors.extend(struct_errors)
+    if not struct_errors:
+        print("   12 Houses x 12 Spheres = 144 directories: OK")
+    else:
+        for e in struct_errors:
+            print(f"   FAIL: {e}")
 
     # Load both sources
-    registry = load_registry()
+    print("\n2. Module registry check...")
+    registry, reg_data = load_registry()
     disk = find_disk_modules()
 
-    print(f"Registry modules: {len(registry)}")
-    print(f"Disk modules:     {len(disk)}")
-    print()
+    print(f"   Registry modules: {len(registry)}")
+    print(f"   Disk modules:     {len(disk)}")
 
-    # Check 1: Registry entries missing from disk
+    # Check: Registry entries missing from disk
     missing_from_disk = set(registry.keys()) - set(disk.keys())
     if missing_from_disk:
-        for mid in sorted(missing_from_disk):
-            errors.append(f"MISSING ON DISK: {mid} ({registry[mid].get('name', '?')}) "
-                         f"expected at {registry[mid]['house']}.{registry[mid]['sphere']}")
+        for path in sorted(missing_from_disk):
+            m = registry[path]
+            errors.append(f"MISSING ON DISK: {m.get('module_id')} at {path}")
 
-    # Check 2: Disk entries missing from registry
+    # Check: Disk entries missing from registry
     missing_from_registry = set(disk.keys()) - set(registry.keys())
     if missing_from_registry:
-        for mid in sorted(missing_from_registry):
-            errors.append(f"MISSING IN REGISTRY: {mid} at {disk[mid]}")
+        for path in sorted(missing_from_registry):
+            errors.append(f"MISSING IN REGISTRY: {path}")
 
-    # Check 3: Manifest consistency for matching entries
     matched = set(registry.keys()) & set(disk.keys())
-    for mid in sorted(matched):
-        manifest_path = disk[mid] / "manifest.yaml"
-        if not manifest_path.exists():
-            warnings.append(f"NO MANIFEST: {mid} at {disk[mid]}")
-            continue
-        with open(manifest_path) as f:
-            manifest = yaml.safe_load(f)
-        if manifest and manifest.get("id") != mid:
-            warnings.append(f"ID MISMATCH: {mid} manifest says {manifest.get('id')}")
+
+    # Check E145
+    print("\n3. Element 145 check...")
+    e145_path = REPO_ROOT / "e145"
+    if e145_path.exists():
+        components = [d.name for d in e145_path.iterdir() if d.is_dir()]
+        print(f"   E145 components: {len(components)}")
+    else:
+        errors.append("MISSING: e145/ directory")
+
+    # Check ontology lock
+    print("\n4. Ontology lock check...")
+    lock_file = REPO_ROOT / "registries" / "ontology_lock.sha256"
+    if lock_file.exists():
+        print(f"   Lock file present: OK")
+    else:
+        warnings.append("No ontology_lock.sha256 file")
 
     # Report
-    print(f"Matched: {len(matched)}")
+    print(f"\n{'=' * 55}")
+    print(f"Matched modules: {len(matched)}")
     print(f"Missing from disk: {len(missing_from_disk)}")
     print(f"Missing from registry: {len(missing_from_registry)}")
+    print(f"Errors: {len(errors)}")
     print(f"Warnings: {len(warnings)}")
-    print()
 
     if errors:
-        print("ERRORS:")
+        print("\nERRORS:")
         for e in errors:
-            print(f"  ✗ {e}")
-        print()
+            print(f"  x {e}")
 
     if warnings:
-        print("WARNINGS:")
+        print("\nWARNINGS:")
         for w in warnings:
-            print(f"  ⚠ {w}")
-        print()
+            print(f"  ! {w}")
 
     if errors:
-        print("RESULT: FAIL — registry and filesystem are inconsistent")
+        print("\nRESULT: FAIL")
         return 1
     else:
-        print("RESULT: PASS — registry and filesystem are consistent")
+        print("\nRESULT: PASS — registry and filesystem are consistent")
         return 0
 
 

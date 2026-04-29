@@ -1,9 +1,0 @@
-sphere:
-  id: S06
-  house: H09
-  name: Zoology & Animal Science
-  full_id: H09-S06
-  ordinal: 102
-status: EMPTY
-module_count: 0
-modules: []

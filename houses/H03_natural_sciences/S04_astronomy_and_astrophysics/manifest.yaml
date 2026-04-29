@@ -1,9 +1,0 @@
-sphere:
-  id: S04
-  house: H03
-  name: Astronomy & Astrophysics
-  full_id: H03-S04
-  ordinal: 28
-status: EMPTY
-module_count: 0
-modules: []

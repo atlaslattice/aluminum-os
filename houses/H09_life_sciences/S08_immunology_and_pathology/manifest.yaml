@@ -1,9 +1,0 @@
-sphere:
-  id: S08
-  house: H09
-  name: Immunology & Pathology
-  full_id: H09-S08
-  ordinal: 104
-status: EMPTY
-module_count: 0
-modules: []

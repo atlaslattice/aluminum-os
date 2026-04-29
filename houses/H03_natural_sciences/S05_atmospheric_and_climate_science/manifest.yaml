@@ -1,9 +1,0 @@
-sphere:
-  id: S05
-  house: H03
-  name: Atmospheric & Climate Science
-  full_id: H03-S05
-  ordinal: 29
-status: EMPTY
-module_count: 0
-modules: []

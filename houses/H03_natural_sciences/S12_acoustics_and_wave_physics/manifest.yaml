@@ -1,9 +1,0 @@
-sphere:
-  id: S12
-  house: H03
-  name: Acoustics & Wave Physics
-  full_id: H03-S12
-  ordinal: 36
-status: EMPTY
-module_count: 0
-modules: []

@@ -1,9 +1,0 @@
-sphere:
-  id: S10
-  house: H10
-  name: Health Informatics & Telemedicine
-  full_id: H10-S10
-  ordinal: 118
-status: EMPTY
-module_count: 0
-modules: []

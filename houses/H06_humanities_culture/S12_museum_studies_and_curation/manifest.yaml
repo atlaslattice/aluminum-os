@@ -1,9 +1,0 @@
-sphere:
-  id: S12
-  house: H06
-  name: Museum Studies & Curation
-  full_id: H06-S12
-  ordinal: 72
-status: EMPTY
-module_count: 0
-modules: []

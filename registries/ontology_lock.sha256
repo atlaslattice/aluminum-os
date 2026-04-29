@@ -1,0 +1,8 @@
+# Ontology Lock — D-89 Enforcement
+# Generated: 2026-04-29T20:23:00.221685Z
+# Ontology hash: 91d23130404aa777ee1e293f42e6f926ecc33ab924b61f6a6954d2aa378924fd
+
+0dc86d0f35743df5c02f327dfa9af1804e64676b284c074d038a9e6230999000  e145/aluminum-os-core/lattice_ontology_v2.py
+cbfa328bfec37f8c615d5ad1154c61a75e90043d226a669c5a6f08c4c0e362cc  registries/12x12_matrix.yaml
+724670043ee475c37d4e0713a0afbbca882bae75a3edc0fb6d4c0380511f5255  registries/lattice_ontology.yaml
+5208f5ae8b0247757ed4525220c4cc803a018671d2fc4d843ac39c3be2c3a0db  registries/module_registry.yaml

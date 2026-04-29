@@ -1,9 +1,0 @@
-sphere:
-  id: S04
-  house: H10
-  name: Nursing & Allied Health
-  full_id: H10-S04
-  ordinal: 112
-status: EMPTY
-module_count: 0
-modules: []

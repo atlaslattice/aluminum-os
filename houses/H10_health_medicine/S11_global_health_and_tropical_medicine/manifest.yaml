@@ -1,9 +1,0 @@
-sphere:
-  id: S11
-  house: H10
-  name: Global Health & Tropical Medicine
-  full_id: H10-S11
-  ordinal: 119
-status: EMPTY
-module_count: 0
-modules: []

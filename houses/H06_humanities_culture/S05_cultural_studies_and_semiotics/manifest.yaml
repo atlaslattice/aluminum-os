@@ -1,9 +1,0 @@
-sphere:
-  id: S05
-  house: H06
-  name: Cultural Studies & Semiotics
-  full_id: H06-S05
-  ordinal: 65
-status: EMPTY
-module_count: 0
-modules: []

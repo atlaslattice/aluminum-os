@@ -1,9 +1,0 @@
-sphere:
-  id: S09
-  house: H08
-  name: Educational Leadership & Policy
-  full_id: H08-S09
-  ordinal: 93
-status: EMPTY
-module_count: 0
-modules: []

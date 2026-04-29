@@ -1,9 +1,0 @@
-sphere:
-  id: S06
-  house: H01
-  name: Philosophy of Mind & Consciousness
-  full_id: H01-S06
-  ordinal: 6
-status: EMPTY
-module_count: 0
-modules: []

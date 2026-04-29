@@ -1,9 +1,0 @@
-sphere:
-  id: S09
-  house: H11
-  name: Development Studies & Aid
-  full_id: H11-S09
-  ordinal: 129
-status: EMPTY
-module_count: 0
-modules: []

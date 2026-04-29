@@ -1,9 +1,0 @@
-sphere:
-  id: S01
-  house: H10
-  name: Clinical Medicine & Surgery
-  full_id: H10-S01
-  ordinal: 109
-status: EMPTY
-module_count: 0
-modules: []

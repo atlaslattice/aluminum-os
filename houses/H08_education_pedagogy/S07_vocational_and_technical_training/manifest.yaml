@@ -1,9 +1,0 @@
-sphere:
-  id: S07
-  house: H08
-  name: Vocational & Technical Training
-  full_id: H08-S07
-  ordinal: 91
-status: EMPTY
-module_count: 0
-modules: []

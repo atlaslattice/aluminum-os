@@ -1,9 +1,0 @@
-sphere:
-  id: S11
-  house: H08
-  name: Comparative & International Education
-  full_id: H08-S11
-  ordinal: 95
-status: EMPTY
-module_count: 0
-modules: []

@@ -1,9 +1,0 @@
-sphere:
-  id: S11
-  house: H03
-  name: Optics & Photonics
-  full_id: H03-S11
-  ordinal: 35
-status: EMPTY
-module_count: 0
-modules: []

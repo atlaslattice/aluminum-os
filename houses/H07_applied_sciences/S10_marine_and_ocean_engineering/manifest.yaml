@@ -1,9 +1,0 @@
-sphere:
-  id: S10
-  house: H07
-  name: Marine & Ocean Engineering
-  full_id: H07-S10
-  ordinal: 82
-status: EMPTY
-module_count: 0
-modules: []

@@ -1,9 +1,0 @@
-sphere:
-  id: S08
-  house: H01
-  name: Political Philosophy
-  full_id: H01-S08
-  ordinal: 8
-status: EMPTY
-module_count: 0
-modules: []

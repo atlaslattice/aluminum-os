@@ -1,296 +1,1427 @@
-# Lattice Context Protocol — Machine-Readable Ontology v1.0
-# This file is the canonical reference for any AI agent integrating with the 144+1 lattice.
-# Load this file to enable LCP operations (INGEST, ACTIVATE, ROUTE, SYNTHESIZE).
-
-version: "1.0"
+# Lattice Ontology v3.14 — Canonical 12x12+1 Structure
+# AUTO-GENERATED from lattice_ontology_v2.py — DO NOT EDIT MANUALLY
+# Ontology hash: 91d23130404aa777ee1e293f42e6f926ecc33ab924b61f6a6954d2aa378924fd
+version: '3.14'
 lattice_size: 145
-invariant: true  # N=145 is an architectural invariant — do not scale
-
+invariant: true
+canon: COMPLETE_BUILD_PLAN_v3.14 Appendix AG
+ontology_hash: 91d23130404aa777ee1e293f42e6f926ecc33ab924b61f6a6954d2aa378924fd
 houses:
-  - id: H01
-    name: Consciousness & Cognition
-    domain: Mental processes, perception, reasoning, and cognitive development
-    spheres:
-      - {id: S01, name: Perception, keywords: [sensory processing, visual perception, auditory processing, proprioception, pattern recognition]}
-      - {id: S02, name: Attention, keywords: [selective attention, divided attention, sustained attention, attentional control, salience]}
-      - {id: S03, name: Memory, keywords: [working memory, long-term memory, episodic memory, semantic memory, memory consolidation]}
-      - {id: S04, name: Reasoning, keywords: [deductive reasoning, inductive reasoning, abductive reasoning, causal reasoning, analogical reasoning]}
-      - {id: S05, name: Emotion, keywords: [affect, emotional regulation, valence, arousal, emotional intelligence]}
-      - {id: S06, name: Language, keywords: [natural language processing, syntax, semantics, pragmatics, discourse]}
-      - {id: S07, name: Learning, keywords: [reinforcement learning, supervised learning, transfer learning, curriculum learning, meta-learning]}
-      - {id: S08, name: Creativity, keywords: [divergent thinking, ideation, generative processes, novelty, combinatorial creativity]}
-      - {id: S09, name: Metacognition, keywords: [self-monitoring, reflection, confidence calibration, cognitive control, introspection]}
-      - {id: S10, name: Social Cognition, keywords: [theory of mind, empathy, social inference, perspective taking, joint attention]}
-      - {id: S11, name: Altered States, keywords: [consciousness states, meditation, flow states, dreaming, psychedelic states]}
-      - {id: S12, name: Development, keywords: [cognitive development, neural plasticity, maturation, critical periods, lifespan development]}
-
-  - id: H02
-    name: Technology & Engineering
-    domain: Computing, infrastructure, manufacturing, and applied technical systems
-    spheres:
-      - {id: S01, name: Computing, keywords: [hardware, processors, operating systems, distributed systems, cloud computing]}
-      - {id: S02, name: Networking, keywords: [protocols, routing, bandwidth, latency, network topology, mesh networks]}
-      - {id: S03, name: Energy Systems, keywords: [power generation, grid management, renewable energy, storage, transmission]}
-      - {id: S04, name: Materials, keywords: [composites, semiconductors, polymers, nanomaterials, metamaterials]}
-      - {id: S05, name: Manufacturing, keywords: [CNC, additive manufacturing, supply chain, quality control, automation]}
-      - {id: S06, name: Robotics, keywords: [actuators, sensors, control systems, autonomous navigation, human-robot interaction]}
-      - {id: S07, name: Biotech, keywords: [genetic engineering, CRISPR, synthetic biology, bioinformatics, tissue engineering]}
-      - {id: S08, name: Aerospace, keywords: [propulsion, orbital mechanics, avionics, spacecraft design, atmospheric reentry]}
-      - {id: S09, name: Civil Engineering, keywords: [structural engineering, geotechnical, transportation, water resources, construction]}
-      - {id: S10, name: Environmental Tech, keywords: [carbon capture, water treatment, waste management, remediation, monitoring]}
-      - {id: S11, name: Quantum Tech, keywords: [quantum computing, quantum communication, quantum sensing, error correction, qubits]}
-      - {id: S12, name: AI/ML, keywords: [neural networks, transformers, reinforcement learning, computer vision, NLP, foundation models]}
-
-  - id: H03
-    name: Economics & Finance
-    domain: Markets, monetary systems, trade, and economic policy
-    spheres:
-      - {id: S01, name: Microeconomics, keywords: [supply demand, price theory, market structure, consumer behavior, firm theory]}
-      - {id: S02, name: Macroeconomics, keywords: [GDP, inflation, unemployment, business cycles, fiscal policy]}
-      - {id: S03, name: Monetary Policy, keywords: [central banking, interest rates, money supply, quantitative easing, currency]}
-      - {id: S04, name: Trade, keywords: [international trade, tariffs, trade agreements, comparative advantage, supply chains]}
-      - {id: S05, name: Labor Markets, keywords: [employment, wages, unions, gig economy, workforce development]}
-      - {id: S06, name: Financial Markets, keywords: [equities, bonds, derivatives, risk management, market microstructure]}
-      - {id: S07, name: Development Economics, keywords: [poverty, aid, microfinance, institutional development, growth theory]}
-      - {id: S08, name: Behavioral Economics, keywords: [cognitive biases, nudge theory, prospect theory, bounded rationality]}
-      - {id: S09, name: Public Finance, keywords: [taxation, government spending, debt, fiscal sustainability, public goods]}
-      - {id: S10, name: Inequality, keywords: [wealth distribution, Gini coefficient, social mobility, economic justice]}
-      - {id: S11, name: Innovation Economics, keywords: [R&D, patents, technology transfer, startup ecosystems, creative destruction]}
-      - {id: S12, name: Environmental Economics, keywords: [carbon pricing, externalities, resource economics, circular economy]}
-
-  - id: H04
-    name: Governance & Law
-    domain: Legal frameworks, political systems, regulation, and institutional design
-    spheres:
-      - {id: S01, name: Constitutional Law, keywords: [constitutions, separation of powers, judicial review, fundamental rights]}
-      - {id: S02, name: International Law, keywords: [treaties, UN charter, sovereignty, international courts, diplomatic law]}
-      - {id: S03, name: Regulatory Frameworks, keywords: [regulation, compliance, standards bodies, licensing, enforcement]}
-      - {id: S04, name: Human Rights, keywords: [civil liberties, UDHR, refugee law, discrimination, dignity]}
-      - {id: S05, name: Criminal Justice, keywords: [criminal law, prosecution, sentencing, rehabilitation, forensics]}
-      - {id: S06, name: Administrative Law, keywords: [bureaucracy, administrative procedure, government agencies, public administration]}
-      - {id: S07, name: Electoral Systems, keywords: [voting systems, representation, gerrymandering, campaign finance, democracy]}
-      - {id: S08, name: Federalism, keywords: [federal systems, devolution, subsidiarity, intergovernmental relations]}
-      - {id: S09, name: Treaty Law, keywords: [treaty negotiation, ratification, compliance, withdrawal, Vienna Convention]}
-      - {id: S10, name: Maritime Law, keywords: [UNCLOS, admiralty, shipping, territorial waters, piracy]}
-      - {id: S11, name: Cyber Law, keywords: [data protection, GDPR, cybercrime, digital rights, platform regulation]}
-      - {id: S12, name: Indigenous Rights, keywords: [land rights, self-determination, cultural preservation, UNDRIP]}
-
-  - id: H05
-    name: Culture & Society
-    domain: Social structures, cultural production, education, and human organization
-    spheres:
-      - {id: S01, name: Anthropology, keywords: [ethnography, cultural anthropology, kinship, ritual, material culture]}
-      - {id: S02, name: Sociology, keywords: [social stratification, institutions, social movements, deviance, socialization]}
-      - {id: S03, name: Media Studies, keywords: [journalism, propaganda, social media, media literacy, public discourse]}
-      - {id: S04, name: Education, keywords: [pedagogy, curriculum, assessment, educational technology, lifelong learning]}
-      - {id: S05, name: Religion, keywords: [theology, comparative religion, secularism, religious institutions, spirituality]}
-      - {id: S06, name: Arts, keywords: [visual arts, performing arts, literature, music, architecture, design]}
-      - {id: S07, name: Linguistics, keywords: [phonology, morphology, syntax, semantics, sociolinguistics, language families]}
-      - {id: S08, name: Migration, keywords: [immigration, diaspora, refugees, integration, transnationalism]}
-      - {id: S09, name: Gender Studies, keywords: [gender identity, feminism, masculinity, intersectionality, LGBTQ+]}
-      - {id: S10, name: Urban Studies, keywords: [urbanization, city planning, housing, transportation, smart cities]}
-      - {id: S11, name: Sports & Recreation, keywords: [athletics, esports, leisure, physical fitness, sports governance]}
-      - {id: S12, name: Food Culture, keywords: [cuisine, food security, agriculture, nutrition culture, food systems]}
-
-  - id: H06
-    name: Health & Biology
-    domain: Living systems, medicine, public health, and biological sciences
-    spheres:
-      - {id: S01, name: Anatomy, keywords: [organ systems, physiology, biomechanics, histology, pathology]}
-      - {id: S02, name: Genetics, keywords: [genomics, heredity, gene expression, epigenetics, genetic disorders]}
-      - {id: S03, name: Immunology, keywords: [immune response, vaccines, autoimmunity, immunotherapy, inflammation]}
-      - {id: S04, name: Neuroscience, keywords: [brain structure, neural circuits, neuroplasticity, neurotransmitters]}
-      - {id: S05, name: Pharmacology, keywords: [drug design, pharmacokinetics, clinical trials, drug interactions]}
-      - {id: S06, name: Epidemiology, keywords: [disease surveillance, outbreak investigation, risk factors, cohort studies]}
-      - {id: S07, name: Ecology, keywords: [ecosystems, biodiversity, food webs, population dynamics, conservation biology]}
-      - {id: S08, name: Evolution, keywords: [natural selection, speciation, phylogenetics, adaptation, coevolution]}
-      - {id: S09, name: Microbiology, keywords: [bacteria, viruses, fungi, microbiome, antimicrobial resistance]}
-      - {id: S10, name: Nutrition, keywords: [macronutrients, micronutrients, dietary guidelines, metabolism, malnutrition]}
-      - {id: S11, name: Mental Health, keywords: [psychiatry, therapy, depression, anxiety, trauma, resilience]}
-      - {id: S12, name: Public Health, keywords: [health policy, sanitation, health equity, pandemic preparedness]}
-
-  - id: H07
-    name: Earth & Environment
-    domain: Planetary systems, climate, natural resources, and environmental science
-    spheres:
-      - {id: S01, name: Geology, keywords: [plate tectonics, mineralogy, stratigraphy, volcanology, seismology]}
-      - {id: S02, name: Meteorology, keywords: [weather systems, forecasting, atmospheric dynamics, severe weather]}
-      - {id: S03, name: Oceanography, keywords: [ocean currents, marine biology, deep sea, coral reefs, ocean chemistry]}
-      - {id: S04, name: Ecology, keywords: [biomes, ecosystem services, habitat, keystone species, restoration]}
-      - {id: S05, name: Climate Science, keywords: [climate models, greenhouse gases, paleoclimate, tipping points]}
-      - {id: S06, name: Hydrology, keywords: [water cycle, groundwater, watersheds, flooding, water management]}
-      - {id: S07, name: Soil Science, keywords: [pedology, soil chemistry, erosion, soil health, land degradation]}
-      - {id: S08, name: Atmospheric Chemistry, keywords: [ozone, aerosols, air quality, atmospheric composition]}
-      - {id: S09, name: Natural Hazards, keywords: [earthquakes, tsunamis, hurricanes, wildfires, volcanic eruptions]}
-      - {id: S10, name: Conservation, keywords: [protected areas, endangered species, rewilding, sustainability]}
-      - {id: S11, name: Resource Management, keywords: [mining, forestry, fisheries, water rights, resource depletion]}
-      - {id: S12, name: Planetary Science, keywords: [astrobiology, planetary geology, exoplanets, space weather]}
-
-  - id: H08
-    name: Mathematics & Logic
-    domain: Formal systems, proof, computation, and quantitative reasoning
-    spheres:
-      - {id: S01, name: Algebra, keywords: [group theory, ring theory, linear algebra, abstract algebra]}
-      - {id: S02, name: Geometry, keywords: [Euclidean, non-Euclidean, differential geometry, algebraic geometry]}
-      - {id: S03, name: Analysis, keywords: [real analysis, complex analysis, functional analysis, measure theory]}
-      - {id: S04, name: Probability, keywords: [probability theory, stochastic processes, Bayesian inference, random variables]}
-      - {id: S05, name: Statistics, keywords: [hypothesis testing, regression, experimental design, statistical inference]}
-      - {id: S06, name: Number Theory, keywords: [primes, modular arithmetic, Diophantine equations, analytic number theory]}
-      - {id: S07, name: Topology, keywords: [point-set topology, algebraic topology, manifolds, homology]}
-      - {id: S08, name: Combinatorics, keywords: [graph theory, enumeration, Ramsey theory, extremal combinatorics]}
-      - {id: S09, name: Logic, keywords: [propositional logic, predicate logic, model theory, proof theory]}
-      - {id: S10, name: Computation Theory, keywords: [Turing machines, complexity classes, computability, algorithms]}
-      - {id: S11, name: Optimization, keywords: [linear programming, convex optimization, metaheuristics, constraint satisfaction]}
-      - {id: S12, name: Applied Mathematics, keywords: [differential equations, numerical methods, mathematical modeling]}
-
-  - id: H09
-    name: Physics & Chemistry
-    domain: Fundamental forces, matter, energy, and chemical processes
-    spheres:
-      - {id: S01, name: Classical Mechanics, keywords: [Newtonian mechanics, Lagrangian, Hamiltonian, fluid dynamics]}
-      - {id: S02, name: Quantum Mechanics, keywords: [wave function, Schrodinger equation, entanglement, superposition]}
-      - {id: S03, name: Thermodynamics, keywords: [entropy, heat transfer, phase transitions, statistical mechanics]}
-      - {id: S04, name: Electromagnetism, keywords: [Maxwell equations, electromagnetic waves, circuits, photonics]}
-      - {id: S05, name: Relativity, keywords: [special relativity, general relativity, spacetime, gravitational waves]}
-      - {id: S06, name: Nuclear Physics, keywords: [fission, fusion, radioactivity, nuclear structure, isotopes]}
-      - {id: S07, name: Organic Chemistry, keywords: [carbon compounds, synthesis, polymers, biochemistry]}
-      - {id: S08, name: Inorganic Chemistry, keywords: [coordination chemistry, solid state, catalysis, bioinorganic]}
-      - {id: S09, name: Physical Chemistry, keywords: [chemical kinetics, spectroscopy, surface chemistry, electrochemistry]}
-      - {id: S10, name: Materials Science, keywords: [crystallography, metallurgy, ceramics, thin films, biomaterials]}
-      - {id: S11, name: Optics, keywords: [fiber optics, lasers, holography, nonlinear optics, imaging]}
-      - {id: S12, name: Particle Physics, keywords: [Standard Model, quarks, leptons, Higgs boson, collider physics]}
-
-  - id: H10
-    name: History & Philosophy
-    domain: Human past, philosophical inquiry, ethics, and intellectual traditions
-    spheres:
-      - {id: S01, name: Ancient History, keywords: [Mesopotamia, Egypt, Greece, Rome, Bronze Age, classical antiquity]}
-      - {id: S02, name: Medieval History, keywords: [feudalism, Crusades, Byzantine, Islamic Golden Age, monasticism]}
-      - {id: S03, name: Modern History, keywords: [Enlightenment, Industrial Revolution, World Wars, Cold War, decolonization]}
-      - {id: S04, name: Philosophy of Mind, keywords: [consciousness, qualia, intentionality, mental causation, AI consciousness]}
-      - {id: S05, name: Ethics, keywords: [deontology, consequentialism, virtue ethics, applied ethics, moral philosophy]}
-      - {id: S06, name: Epistemology, keywords: [knowledge, justification, skepticism, truth, epistemic virtue]}
-      - {id: S07, name: Political Philosophy, keywords: [justice, liberty, authority, social contract, democracy theory]}
-      - {id: S08, name: Aesthetics, keywords: [beauty, art criticism, taste, sublime, aesthetic experience]}
-      - {id: S09, name: Philosophy of Science, keywords: [falsifiability, paradigm shifts, scientific realism, demarcation]}
-      - {id: S10, name: Historiography, keywords: [historical method, primary sources, narrative, periodization]}
-      - {id: S11, name: Comparative Religion, keywords: [world religions, interfaith dialogue, religious studies, mythology]}
-      - {id: S12, name: Existentialism, keywords: [existence, authenticity, absurdity, freedom, phenomenology]}
-
-  - id: H11
-    name: Communication & Information
-    domain: Information systems, media, data management, and knowledge infrastructure
-    spheres:
-      - {id: S01, name: Journalism, keywords: [investigative reporting, press freedom, editorial, fact-checking]}
-      - {id: S02, name: Rhetoric, keywords: [persuasion, argumentation, public speaking, discourse analysis]}
-      - {id: S03, name: Information Theory, keywords: [Shannon entropy, coding theory, channel capacity, compression]}
-      - {id: S04, name: Library Science, keywords: [cataloging, classification, information retrieval, digital libraries]}
-      - {id: S05, name: Data Science, keywords: [data mining, visualization, big data, feature engineering, ETL]}
-      - {id: S06, name: Cryptography, keywords: [encryption, public key, hash functions, zero knowledge, post-quantum]}
-      - {id: S07, name: Semiotics, keywords: [signs, symbols, meaning-making, visual semiotics, cultural codes]}
-      - {id: S08, name: Public Relations, keywords: [reputation management, crisis communication, stakeholder engagement]}
-      - {id: S09, name: Advertising, keywords: [branding, marketing strategy, consumer psychology, media buying]}
-      - {id: S10, name: Telecommunications, keywords: [5G, satellite, fiber optics, spectrum management, IoT]}
-      - {id: S11, name: Archival Science, keywords: [preservation, provenance, digital archives, records management]}
-      - {id: S12, name: Knowledge Management, keywords: [organizational knowledge, tacit knowledge, knowledge graphs, ontologies]}
-
-  - id: H12
-    name: Security & Defense
-    domain: Military, intelligence, cybersecurity, and conflict management
-    spheres:
-      - {id: S01, name: Military Strategy, keywords: [doctrine, force structure, logistics, combined arms, asymmetric warfare]}
-      - {id: S02, name: Intelligence Analysis, keywords: [SIGINT, HUMINT, OSINT, threat assessment, counterintelligence]}
-      - {id: S03, name: Cybersecurity, keywords: [threat detection, incident response, vulnerability, zero-day, SOC]}
-      - {id: S04, name: Counterterrorism, keywords: [radicalization, deradicalization, threat finance, border security]}
-      - {id: S05, name: Nuclear Deterrence, keywords: [MAD, arms control, nonproliferation, nuclear posture]}
-      - {id: S06, name: Maritime Security, keywords: [naval operations, piracy, sea lanes, coast guard, UNCLOS enforcement]}
-      - {id: S07, name: Space Security, keywords: [space debris, ASAT weapons, space situational awareness, Outer Space Treaty]}
-      - {id: S08, name: Biosecurity, keywords: [bioweapons, pandemic preparedness, dual-use research, BWC]}
-      - {id: S09, name: Critical Infrastructure, keywords: [SCADA, grid security, water systems, transportation security]}
-      - {id: S10, name: Conflict Resolution, keywords: [mediation, negotiation, peace processes, transitional justice]}
-      - {id: S11, name: Peacekeeping, keywords: [UN peacekeeping, stabilization, DDR, civilian protection]}
-      - {id: S12, name: Arms Control, keywords: [treaties, verification, disarmament, export controls, MTCR]}
-
+- id: H01
+  name: Natural Sciences
+  domain: Sphere of natural sciences
+  spheres:
+  - id: S01
+    name: Physics
+    keywords:
+    - mechanics
+    - thermodynamics
+    - quantum
+    - relativity
+    - optics
+    - electromagnetism
+    - particle
+  - id: S02
+    name: Chemistry
+    keywords:
+    - organic
+    - inorganic
+    - biochemistry
+    - analytical
+    - polymer
+    - catalysis
+    - reaction
+  - id: S03
+    name: Biology
+    keywords:
+    - cell
+    - molecular
+    - evolution
+    - taxonomy
+    - developmental
+    - marine biology
+  - id: S04
+    name: Astronomy
+    keywords:
+    - astrophysics
+    - cosmology
+    - planetary
+    - stellar
+    - galactic
+    - observatory
+    - telescope
+  - id: S05
+    name: Geology
+    keywords:
+    - mineralogy
+    - petrology
+    - seismology
+    - tectonics
+    - geomorphology
+    - stratigraphy
+  - id: S06
+    name: Oceanography
+    keywords:
+    - marine
+    - ocean
+    - tidal
+    - deep-sea
+    - coral
+    - salinity
+    - current
+  - id: S07
+    name: Meteorology
+    keywords:
+    - weather
+    - climate
+    - atmospheric
+    - precipitation
+    - tornado
+    - hurricane
+    - forecast
+  - id: S08
+    name: Ecology
+    keywords:
+    - ecosystem
+    - biodiversity
+    - conservation
+    - habitat
+    - population
+    - symbiosis
+  - id: S09
+    name: Botany
+    keywords:
+    - plant
+    - photosynthesis
+    - flora
+    - seed
+    - pollination
+    - herbarium
+  - id: S10
+    name: Zoology
+    keywords:
+    - animal
+    - vertebrate
+    - invertebrate
+    - ethology
+    - fauna
+    - migration
+  - id: S11
+    name: Microbiology
+    keywords:
+    - bacteria
+    - virus
+    - fungus
+    - microbe
+    - pathogen
+    - fermentation
+  - id: S12
+    name: Genetics
+    keywords:
+    - DNA
+    - RNA
+    - genome
+    - heredity
+    - mutation
+    - CRISPR
+    - gene
+- id: H02
+  name: Formal Sciences
+  domain: Sphere of formal sciences
+  spheres:
+  - id: S01
+    name: Mathematics
+    keywords:
+    - algebra
+    - calculus
+    - geometry
+    - topology
+    - number theory
+    - analysis
+    - proof
+  - id: S02
+    name: Logic
+    keywords:
+    - propositional
+    - predicate
+    - modal
+    - proof
+    - deduction
+    - inference
+    - formal
+  - id: S03
+    name: Statistics
+    keywords:
+    - probability
+    - regression
+    - bayesian
+    - hypothesis
+    - sampling
+    - variance
+  - id: S04
+    name: Computer Science
+    keywords:
+    - algorithm
+    - data structure
+    - compiler
+    - operating system
+    - distributed
+    - parallel
+  - id: S05
+    name: Information Theory
+    keywords:
+    - entropy
+    - coding
+    - channel
+    - compression
+    - signal
+    - noise
+    - bandwidth
+  - id: S06
+    name: Game Theory
+    keywords:
+    - Nash
+    - equilibrium
+    - strategy
+    - payoff
+    - cooperative
+    - auction
+    - mechanism
+  - id: S07
+    name: Operations Research
+    keywords:
+    - optimization
+    - linear programming
+    - scheduling
+    - queueing
+    - simulation
+  - id: S08
+    name: Systems Theory
+    keywords:
+    - feedback
+    - control
+    - cybernetics
+    - emergence
+    - complexity
+    - homeostasis
+  - id: S09
+    name: Decision Theory
+    keywords:
+    - utility
+    - risk
+    - preference
+    - rational
+    - bounded
+    - heuristic
+    - choice
+  - id: S10
+    name: Cryptography
+    keywords:
+    - encryption
+    - hash
+    - signature
+    - zero-knowledge
+    - PKI
+    - cipher
+    - key
+  - id: S11
+    name: Algorithmics
+    keywords:
+    - sorting
+    - graph
+    - NP
+    - approximation
+    - streaming
+    - distributed algorithm
+  - id: S12
+    name: Data Science
+    keywords:
+    - machine learning
+    - deep learning
+    - NLP
+    - computer vision
+    - neural
+    - AI
+    - model
+- id: H03
+  name: Social Sciences
+  domain: Sphere of social sciences
+  spheres:
+  - id: S01
+    name: Sociology
+    keywords:
+    - society
+    - social structure
+    - stratification
+    - institution
+    - norm
+    - deviance
+  - id: S02
+    name: Psychology
+    keywords:
+    - cognition
+    - behavior
+    - perception
+    - memory
+    - emotion
+    - personality
+  - id: S03
+    name: Anthropology
+    keywords:
+    - culture
+    - ethnography
+    - kinship
+    - ritual
+    - artifact
+    - fieldwork
+  - id: S04
+    name: Economics
+    keywords:
+    - market
+    - supply
+    - demand
+    - GDP
+    - inflation
+    - trade
+    - fiscal
+  - id: S05
+    name: Political Science
+    keywords:
+    - government
+    - democracy
+    - policy
+    - election
+    - sovereignty
+    - power
+  - id: S06
+    name: Geography
+    keywords:
+    - cartography
+    - GIS
+    - spatial
+    - region
+    - landscape
+    - urban geography
+  - id: S07
+    name: Linguistics
+    keywords:
+    - syntax
+    - semantics
+    - phonology
+    - morphology
+    - pragmatics
+    - dialect
+  - id: S08
+    name: Archaeology
+    keywords:
+    - excavation
+    - artifact
+    - stratigraphy
+    - dating
+    - civilization
+    - ruin
+  - id: S09
+    name: Demography
+    keywords:
+    - population
+    - census
+    - fertility
+    - mortality
+    - migration
+    - aging
+  - id: S10
+    name: Criminology
+    keywords:
+    - crime
+    - justice
+    - recidivism
+    - forensic
+    - victimology
+    - penology
+  - id: S11
+    name: Social Work
+    keywords:
+    - welfare
+    - intervention
+    - community
+    - advocacy
+    - counseling
+    - case work
+  - id: S12
+    name: Urban Studies
+    keywords:
+    - city
+    - planning
+    - gentrification
+    - transit
+    - zoning
+    - housing
+- id: H04
+  name: Humanities
+  domain: Sphere of humanities
+  spheres:
+  - id: S01
+    name: History
+    keywords:
+    - ancient
+    - medieval
+    - modern
+    - war
+    - revolution
+    - empire
+    - civilization
+  - id: S02
+    name: Philosophy
+    keywords:
+    - metaphysics
+    - epistemology
+    - ontology
+    - existentialism
+    - phenomenology
+  - id: S03
+    name: Literature
+    keywords:
+    - novel
+    - poetry
+    - drama
+    - narrative
+    - criticism
+    - genre
+    - literary
+  - id: S04
+    name: Classics
+    keywords:
+    - Greek
+    - Roman
+    - Latin
+    - Homer
+    - antiquity
+    - manuscript
+    - classical
+  - id: S05
+    name: Religious Studies
+    keywords:
+    - theology
+    - scripture
+    - ritual
+    - sacred
+    - denomination
+    - mysticism
+  - id: S06
+    name: Ethics
+    keywords:
+    - moral
+    - virtue
+    - deontology
+    - consequentialism
+    - justice
+    - bioethics
+  - id: S07
+    name: Aesthetics
+    keywords:
+    - beauty
+    - sublime
+    - taste
+    - art criticism
+    - form
+    - expression
+  - id: S08
+    name: Cultural Studies
+    keywords:
+    - identity
+    - media
+    - postcolonial
+    - gender
+    - race
+    - popular culture
+  - id: S09
+    name: Mythology
+    keywords:
+    - myth
+    - legend
+    - archetype
+    - hero
+    - creation
+    - pantheon
+  - id: S10
+    name: Philology
+    keywords:
+    - manuscript
+    - etymology
+    - textual
+    - historical linguistics
+    - corpus
+  - id: S11
+    name: Rhetoric
+    keywords:
+    - persuasion
+    - argument
+    - oratory
+    - discourse
+    - trope
+    - ethos
+  - id: S12
+    name: Hermeneutics
+    keywords:
+    - interpretation
+    - exegesis
+    - understanding
+    - text
+    - meaning
+    - context
+- id: H05
+  name: Arts
+  domain: Sphere of arts
+  spheres:
+  - id: S01
+    name: Visual Arts
+    keywords:
+    - painting
+    - drawing
+    - printmaking
+    - installation
+    - mixed media
+    - gallery
+  - id: S02
+    name: Performing Arts
+    keywords:
+    - theater
+    - dance
+    - opera
+    - circus
+    - mime
+    - improvisation
+    - stage
+  - id: S03
+    name: Music
+    keywords:
+    - composition
+    - performance
+    - theory
+    - instrument
+    - genre
+    - harmony
+  - id: S04
+    name: Dance
+    keywords:
+    - ballet
+    - contemporary
+    - folk
+    - choreography
+    - movement
+    - rhythm
+  - id: S05
+    name: Theater
+    keywords:
+    - drama
+    - stage
+    - acting
+    - directing
+    - playwriting
+    - set design
+  - id: S06
+    name: Film
+    keywords:
+    - cinema
+    - directing
+    - editing
+    - screenplay
+    - documentary
+    - animation
+  - id: S07
+    name: Literature (creative)
+    keywords:
+    - fiction
+    - poetry
+    - essay
+    - memoir
+    - creative writing
+    - prose
+  - id: S08
+    name: Architecture
+    keywords:
+    - building
+    - design
+    - urban
+    - landscape
+    - structural
+    - sustainable
+  - id: S09
+    name: Design
+    keywords:
+    - graphic
+    - industrial
+    - UX
+    - UI
+    - product
+    - fashion
+    - branding
+  - id: S10
+    name: Photography
+    keywords:
+    - portrait
+    - landscape
+    - documentary
+    - digital
+    - darkroom
+    - lens
+  - id: S11
+    name: Sculpture
+    keywords:
+    - carving
+    - casting
+    - modeling
+    - installation
+    - kinetic
+    - bronze
+  - id: S12
+    name: Painting
+    keywords:
+    - oil
+    - watercolor
+    - acrylic
+    - fresco
+    - abstract
+    - impressionism
+- id: H06
+  name: Engineering & Technology
+  domain: Sphere of engineering & technology
+  spheres:
+  - id: S01
+    name: Mechanical Engineering
+    keywords:
+    - thermodynamics
+    - fluid
+    - machine
+    - manufacturing
+    - CAD
+    - mechanics
+  - id: S02
+    name: Electrical Engineering
+    keywords:
+    - circuit
+    - semiconductor
+    - power
+    - signal
+    - embedded
+    - VLSI
+  - id: S03
+    name: Civil Engineering
+    keywords:
+    - structural
+    - geotechnical
+    - transportation
+    - hydraulic
+    - concrete
+  - id: S04
+    name: Chemical Engineering
+    keywords:
+    - reactor
+    - process
+    - separation
+    - polymer
+    - catalysis
+    - refinery
+  - id: S05
+    name: Aerospace Engineering
+    keywords:
+    - aerodynamics
+    - propulsion
+    - spacecraft
+    - avionics
+    - orbital
+  - id: S06
+    name: Biomedical Engineering
+    keywords:
+    - prosthetics
+    - imaging
+    - biomaterials
+    - tissue
+    - medical device
+  - id: S07
+    name: Environmental Engineering
+    keywords:
+    - water treatment
+    - air quality
+    - remediation
+    - sustainability
+  - id: S08
+    name: Industrial Engineering
+    keywords:
+    - lean
+    - six sigma
+    - ergonomics
+    - quality
+    - production
+    - factory
+  - id: S09
+    name: Software Engineering
+    keywords:
+    - architecture
+    - testing
+    - DevOps
+    - agile
+    - CI/CD
+    - microservice
+  - id: S10
+    name: Materials Engineering
+    keywords:
+    - metallurgy
+    - ceramic
+    - composite
+    - nanomaterial
+    - polymer
+  - id: S11
+    name: Nuclear Engineering
+    keywords:
+    - fission
+    - fusion
+    - reactor
+    - radiation
+    - isotope
+    - containment
+  - id: S12
+    name: Robotics
+    keywords:
+    - actuator
+    - sensor
+    - autonomous
+    - manipulation
+    - locomotion
+    - swarm
+- id: H07
+  name: Information & Communication
+  domain: Sphere of information & communication
+  spheres:
+  - id: S01
+    name: Media
+    keywords:
+    - mass media
+    - digital media
+    - social media
+    - content
+    - platform
+  - id: S02
+    name: Journalism
+    keywords:
+    - reporting
+    - investigative
+    - editorial
+    - press
+    - news
+    - fact-check
+  - id: S03
+    name: Telecommunications
+    keywords:
+    - wireless
+    - fiber
+    - 5G
+    - satellite
+    - spectrum
+    - protocol
+  - id: S04
+    name: Networks
+    keywords:
+    - TCP/IP
+    - routing
+    - topology
+    - mesh
+    - peer-to-peer
+    - CDN
+  - id: S05
+    name: Information Systems
+    keywords:
+    - database
+    - ERP
+    - CRM
+    - data warehouse
+    - BI
+    - analytics
+  - id: S06
+    name: Library Science
+    keywords:
+    - cataloging
+    - classification
+    - metadata
+    - archive
+    - preservation
+  - id: S07
+    name: Archives
+    keywords:
+    - preservation
+    - digitization
+    - provenance
+    - collection
+    - record
+  - id: S08
+    name: Publishing
+    keywords:
+    - print
+    - digital
+    - typesetting
+    - ISBN
+    - editorial
+    - distribution
+  - id: S09
+    name: Broadcasting
+    keywords:
+    - radio
+    - television
+    - streaming
+    - podcast
+    - live
+    - frequency
+  - id: S10
+    name: Public Relations
+    keywords:
+    - communication
+    - reputation
+    - crisis
+    - branding
+    - stakeholder
+  - id: S11
+    name: Information Policy
+    keywords:
+    - privacy
+    - censorship
+    - freedom
+    - regulation
+    - access
+    - GDPR
+  - id: S12
+    name: Communication Theory
+    keywords:
+    - semiotics
+    - discourse
+    - framing
+    - agenda
+    - persuasion
+    - media theory
+- id: H08
+  name: Education
+  domain: Sphere of education
+  spheres:
+  - id: S01
+    name: Pedagogy
+    keywords:
+    - teaching
+    - instruction
+    - learning theory
+    - constructivism
+    - scaffolding
+  - id: S02
+    name: Curriculum Design
+    keywords:
+    - syllabus
+    - standards
+    - objectives
+    - scope
+    - sequence
+    - curriculum
+  - id: S03
+    name: Educational Psychology
+    keywords:
+    - motivation
+    - cognition
+    - development
+    - assessment
+    - learning styles
+  - id: S04
+    name: Special Education
+    keywords:
+    - inclusion
+    - IEP
+    - disability
+    - accommodation
+    - differentiation
+  - id: S05
+    name: Adult Education
+    keywords:
+    - andragogy
+    - lifelong learning
+    - professional development
+    - vocational
+  - id: S06
+    name: E-Learning
+    keywords:
+    - online
+    - MOOC
+    - LMS
+    - blended
+    - virtual
+    - interactive
+  - id: S07
+    name: Educational Technology
+    keywords:
+    - edtech
+    - simulation
+    - gamification
+    - adaptive
+    - AI tutor
+  - id: S08
+    name: Assessment
+    keywords:
+    - testing
+    - rubric
+    - formative
+    - summative
+    - standardized
+    - portfolio
+  - id: S09
+    name: School Administration
+    keywords:
+    - principal
+    - governance
+    - budget
+    - policy
+    - enrollment
+  - id: S10
+    name: Teacher Training
+    keywords:
+    - certification
+    - mentoring
+    - practicum
+    - pedagogy
+    - professional
+  - id: S11
+    name: Literacy
+    keywords:
+    - reading
+    - writing
+    - phonics
+    - comprehension
+    - fluency
+    - ESL
+  - id: S12
+    name: Higher Education
+    keywords:
+    - university
+    - research
+    - tenure
+    - accreditation
+    - graduate
+- id: H09
+  name: Health & Medicine
+  domain: Sphere of health & medicine
+  spheres:
+  - id: S01
+    name: Anatomy
+    keywords:
+    - organ
+    - tissue
+    - skeletal
+    - muscular
+    - nervous
+    - cardiovascular
+  - id: S02
+    name: Physiology
+    keywords:
+    - homeostasis
+    - metabolism
+    - endocrine
+    - respiratory
+    - renal
+  - id: S03
+    name: Pathology
+    keywords:
+    - disease
+    - diagnosis
+    - biopsy
+    - histology
+    - cytology
+    - autopsy
+  - id: S04
+    name: Pharmacology
+    keywords:
+    - drug
+    - dosage
+    - interaction
+    - receptor
+    - toxicology
+    - clinical trial
+  - id: S05
+    name: Surgery
+    keywords:
+    - operation
+    - anesthesia
+    - minimally invasive
+    - transplant
+    - orthopedic
+  - id: S06
+    name: Pediatrics
+    keywords:
+    - child
+    - infant
+    - vaccination
+    - growth
+    - developmental
+    - neonatal
+  - id: S07
+    name: Psychiatry
+    keywords:
+    - mental health
+    - therapy
+    - medication
+    - disorder
+    - diagnosis
+  - id: S08
+    name: Neurology
+    keywords:
+    - brain
+    - nerve
+    - stroke
+    - epilepsy
+    - Alzheimer
+    - Parkinson
+  - id: S09
+    name: Oncology
+    keywords:
+    - cancer
+    - tumor
+    - chemotherapy
+    - radiation
+    - immunotherapy
+  - id: S10
+    name: Epidemiology
+    keywords:
+    - outbreak
+    - pandemic
+    - incidence
+    - prevalence
+    - surveillance
+  - id: S11
+    name: Nutrition
+    keywords:
+    - diet
+    - vitamin
+    - mineral
+    - calorie
+    - macronutrient
+    - supplement
+  - id: S12
+    name: Public Health
+    keywords:
+    - prevention
+    - sanitation
+    - vaccination
+    - policy
+    - community health
+- id: H10
+  name: Business & Economics
+  domain: Sphere of business & economics
+  spheres:
+  - id: S01
+    name: Management
+    keywords:
+    - leadership
+    - strategy
+    - organization
+    - decision
+    - governance
+  - id: S02
+    name: Marketing
+    keywords:
+    - branding
+    - advertising
+    - consumer
+    - segmentation
+    - digital marketing
+  - id: S03
+    name: Finance
+    keywords:
+    - investment
+    - banking
+    - portfolio
+    - risk
+    - valuation
+    - derivative
+  - id: S04
+    name: Accounting
+    keywords:
+    - audit
+    - tax
+    - GAAP
+    - ledger
+    - reconciliation
+    - compliance
+  - id: S05
+    name: Entrepreneurship
+    keywords:
+    - startup
+    - venture
+    - innovation
+    - pitch
+    - MVP
+    - scaling
+  - id: S06
+    name: Human Resources
+    keywords:
+    - recruitment
+    - training
+    - compensation
+    - performance
+    - culture
+  - id: S07
+    name: Operations Management
+    keywords:
+    - process
+    - quality
+    - lean
+    - capacity
+    - inventory
+    - operations
+  - id: S08
+    name: Supply Chain
+    keywords:
+    - logistics
+    - procurement
+    - warehouse
+    - distribution
+    - vendor
+  - id: S09
+    name: International Business
+    keywords:
+    - trade
+    - tariff
+    - FDI
+    - multinational
+    - globalization
+  - id: S10
+    name: Business Ethics
+    keywords:
+    - CSR
+    - sustainability
+    - stakeholder
+    - transparency
+    - governance
+  - id: S11
+    name: Microeconomics
+    keywords:
+    - supply
+    - demand
+    - elasticity
+    - market structure
+    - pricing
+  - id: S12
+    name: Macroeconomics
+    keywords:
+    - GDP
+    - inflation
+    - monetary
+    - fiscal
+    - unemployment
+    - growth
+- id: H11
+  name: Infrastructure
+  domain: Sphere of infrastructure
+  spheres:
+  - id: S01
+    name: Transportation
+    keywords:
+    - road
+    - rail
+    - aviation
+    - maritime
+    - transit
+    - freight
+  - id: S02
+    name: Energy Systems
+    keywords:
+    - grid
+    - renewable
+    - fossil
+    - nuclear
+    - storage
+    - distribution
+  - id: S03
+    name: Water Systems
+    keywords:
+    - treatment
+    - distribution
+    - irrigation
+    - desalination
+    - reservoir
+  - id: S04
+    name: Utilities
+    keywords:
+    - electricity
+    - gas
+    - water
+    - sewage
+    - metering
+    - billing
+  - id: S05
+    name: Physical Infrastructure
+    keywords:
+    - bridge
+    - tunnel
+    - dam
+    - highway
+    - port
+    - airport
+  - id: S06
+    name: Logistics
+    keywords:
+    - shipping
+    - tracking
+    - warehouse
+    - last-mile
+    - fleet
+    - routing
+  - id: S07
+    name: Construction
+    keywords:
+    - building
+    - concrete
+    - steel
+    - foundation
+    - crane
+    - safety
+  - id: S08
+    name: Resource Management
+    keywords:
+    - mining
+    - forestry
+    - fishery
+    - land use
+    - conservation
+  - id: S09
+    name: Waste Management
+    keywords:
+    - recycling
+    - landfill
+    - incineration
+    - composting
+    - hazardous
+  - id: S10
+    name: Sanitation
+    keywords:
+    - sewage
+    - hygiene
+    - clean water
+    - drainage
+    - public health
+  - id: S11
+    name: Telecom Infrastructure
+    keywords:
+    - tower
+    - fiber
+    - satellite
+    - data center
+    - backbone
+  - id: S12
+    name: Computing Infrastructure
+    keywords:
+    - cloud
+    - server
+    - HPC
+    - GPU
+    - container
+    - edge computing
+- id: H12
+  name: Law/Governance/Meta-Knowledge
+  domain: Sphere of law/governance/meta-knowledge
+  spheres:
+  - id: S01
+    name: Constitutional Law
+    keywords:
+    - constitution
+    - amendment
+    - judicial review
+    - rights
+    - separation of powers
+  - id: S02
+    name: Criminal Law
+    keywords:
+    - crime
+    - prosecution
+    - defense
+    - sentencing
+    - evidence
+    - trial
+  - id: S03
+    name: Civil Law
+    keywords:
+    - contract
+    - tort
+    - property
+    - liability
+    - damages
+    - dispute
+  - id: S04
+    name: International Law
+    keywords:
+    - treaty
+    - UN
+    - sovereignty
+    - extradition
+    - jurisdiction
+  - id: S05
+    name: Corporate Law
+    keywords:
+    - incorporation
+    - merger
+    - securities
+    - fiduciary
+    - shareholder
+  - id: S06
+    name: Environmental Law
+    keywords:
+    - EPA
+    - emission
+    - conservation
+    - pollution
+    - compliance
+  - id: S07
+    name: Human Rights
+    keywords:
+    - UDHR
+    - refugee
+    - asylum
+    - discrimination
+    - freedom
+    - dignity
+  - id: S08
+    name: Political Theory
+    keywords:
+    - democracy
+    - liberalism
+    - socialism
+    - anarchism
+    - sovereignty
+  - id: S09
+    name: Public Policy
+    keywords:
+    - regulation
+    - welfare
+    - healthcare policy
+    - education policy
+  - id: S10
+    name: International Relations
+    keywords:
+    - diplomacy
+    - alliance
+    - conflict
+    - trade
+    - sanctions
+  - id: S11
+    name: Comparative Politics
+    keywords:
+    - regime
+    - party system
+    - federalism
+    - electoral
+    - transition
+  - id: S12
+    name: Political Economy
+    keywords:
+    - capitalism
+    - regulation
+    - inequality
+    - development
+    - globalization
 element_145:
   id: E145
-  name: Admin Sphere (Aluminum OS Core)
-  role: meta-coordination
-  description: >
-    The 145th node that couples all 12 Houses. It is NOT a 13th House —
-    it is the metasynthesis layer that routes between Houses, detects emergent
-    cross-domain risks, and produces unified outputs. Ara is the authority.
-  functions:
-    - cross_domain_routing
-    - emergent_risk_detection
-    - unified_synthesis
-    - blind_spot_identification
-    - constitutional_enforcement
+  name: Element 145 — Aluminum OS Core
+  role: The administrative and synthesis sphere that sits outside the 12x12 lattice.
+    Responsible for routing, cross-domain synthesis, constitutional enforcement, and
+    the Pantheon Council governance layer.
   components:
-    - aluminum-os-core
-    - boot-manifest
-    - pantheon-council
-    - shugs
-    - snrs-bridge
-    - constitutional-os
-
-# Inter-House Connection Matrix (typed edges)
-# strength: 0.0-1.0 (how tightly coupled the domains are)
-matrix:
-  edges:
-    # H01 Consciousness ↔ others
-    - {source: H01, target: H02, type: human-computer-interaction, strength: 0.8}
-    - {source: H01, target: H05, type: cultural-cognition, strength: 0.7}
-    - {source: H01, target: H06, type: neuroscience-bridge, strength: 0.9}
-    - {source: H01, target: H08, type: formal-reasoning, strength: 0.6}
-    - {source: H01, target: H10, type: philosophy-of-mind, strength: 0.8}
-    - {source: H01, target: H12, type: cognitive-security, strength: 0.5}
-
-    # H02 Technology ↔ others
-    - {source: H02, target: H03, type: tech-economics, strength: 0.8}
-    - {source: H02, target: H04, type: tech-regulation, strength: 0.7}
-    - {source: H02, target: H07, type: environmental-tech, strength: 0.7}
-    - {source: H02, target: H08, type: computational-math, strength: 0.9}
-    - {source: H02, target: H09, type: applied-physics, strength: 0.9}
-    - {source: H02, target: H11, type: information-infrastructure, strength: 0.8}
-    - {source: H02, target: H12, type: defense-tech, strength: 0.8}
-
-    # H03 Economics ↔ others
-    - {source: H03, target: H04, type: regulatory-economic, strength: 0.9}
-    - {source: H03, target: H05, type: socioeconomic, strength: 0.7}
-    - {source: H03, target: H07, type: environmental-economics, strength: 0.7}
-    - {source: H03, target: H11, type: information-economics, strength: 0.6}
-    - {source: H03, target: H12, type: defense-economics, strength: 0.7}
-
-    # H04 Governance ↔ others
-    - {source: H04, target: H05, type: social-governance, strength: 0.8}
-    - {source: H04, target: H06, type: health-policy, strength: 0.7}
-    - {source: H04, target: H07, type: environmental-regulation, strength: 0.8}
-    - {source: H04, target: H10, type: political-philosophy, strength: 0.8}
-    - {source: H04, target: H12, type: security-governance, strength: 0.9}
-
-    # H05 Culture ↔ others
-    - {source: H05, target: H06, type: health-culture, strength: 0.5}
-    - {source: H05, target: H10, type: cultural-history, strength: 0.8}
-    - {source: H05, target: H11, type: media-culture, strength: 0.8}
-
-    # H06 Health ↔ others
-    - {source: H06, target: H07, type: environmental-health, strength: 0.7}
-    - {source: H06, target: H09, type: biochemistry, strength: 0.8}
-    - {source: H06, target: H12, type: biosecurity, strength: 0.6}
-
-    # H07 Earth ↔ others
-    - {source: H07, target: H09, type: geophysics-geochemistry, strength: 0.8}
-
-    # H08 Mathematics ↔ others
-    - {source: H08, target: H09, type: mathematical-physics, strength: 0.9}
-    - {source: H08, target: H11, type: information-theory, strength: 0.7}
-
-    # H09 Physics ↔ others
-    - {source: H09, target: H12, type: weapons-physics, strength: 0.6}
-
-    # H10 History ↔ others
-    - {source: H10, target: H11, type: intellectual-history, strength: 0.6}
-    - {source: H10, target: H12, type: military-history, strength: 0.7}
-
-    # H11 Communication ↔ others
-    - {source: H11, target: H12, type: information-warfare, strength: 0.8}
+  - aluminum-os-core
+  - boot-manifest
+  - constitutional-os
+  - element145-package
+  - pantheon-council
+  - rust-kernel
+  - sheldonbrain-omega
+  - shugs
+  - snrs-bridge
+inter_house_edges:
+- source: H01
+  target: H02
+  name: mathematical-physics
+  weight: 0.95
+- source: H01
+  target: H06
+  name: applied-sciences
+  weight: 0.9
+- source: H01
+  target: H09
+  name: biomedical
+  weight: 0.85
+- source: H02
+  target: H06
+  name: computational-engineering
+  weight: 0.95
+- source: H02
+  target: H07
+  name: information-systems
+  weight: 0.85
+- source: H02
+  target: H11
+  name: computing-infrastructure
+  weight: 0.9
+- source: H03
+  target: H04
+  name: social-humanities
+  weight: 0.8
+- source: H03
+  target: H10
+  name: behavioral-economics
+  weight: 0.9
+- source: H03
+  target: H12
+  name: political-legal
+  weight: 0.85
+- source: H04
+  target: H05
+  name: creative-humanities
+  weight: 0.8
+- source: H04
+  target: H12
+  name: philosophy-of-law
+  weight: 0.75
+- source: H05
+  target: H06
+  name: design-engineering
+  weight: 0.7
+- source: H05
+  target: H07
+  name: media-arts
+  weight: 0.8
+- source: H06
+  target: H09
+  name: biomedical-engineering
+  weight: 0.85
+- source: H06
+  target: H11
+  name: infrastructure-engineering
+  weight: 0.95
+- source: H07
+  target: H08
+  name: edtech
+  weight: 0.8
+- source: H07
+  target: H12
+  name: information-governance
+  weight: 0.75
+- source: H08
+  target: H09
+  name: health-education
+  weight: 0.7
+- source: H09
+  target: H12
+  name: health-policy
+  weight: 0.75
+- source: H10
+  target: H11
+  name: business-infrastructure
+  weight: 0.85
+- source: H10
+  target: H12
+  name: regulatory-economic
+  weight: 0.9
+- source: H11
+  target: H12
+  name: infrastructure-governance
+  weight: 0.8
