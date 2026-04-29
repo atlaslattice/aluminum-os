@@ -14,7 +14,7 @@ S012,H01,Natural Sciences,Genetics,S2_Alphabet,0.6,0.6,SUBSTANTIAL,False,0.2,0.6
 S013,H02,Formal Sciences,Mathematics,S2_Alphabet,0.8,0.8,DEEP,False,0.7,0.8,0.3,0.7,0.7,0.7,0.2,0.1,0.5,0.5
 S014,H02,Formal Sciences,Logic,S1_Anthropic,0.8,0.8,DEEP,False,0.8,0.7,0.2,0.6,0.6,0.6,0.2,0.1,0.4,0.4
 S015,H02,Formal Sciences,Statistics,S1_Anthropic,0.8,0.8,DEEP,False,0.8,0.8,0.3,0.7,0.6,0.7,0.2,0.1,0.6,0.5
-S016,H02,Formal Sciences,Computer Science,S1_Anthropic,0.9,0.9,DEEP,False,0.9,0.9,0.5,0.9,0.8,0.8,0.5,0.3,0.8,0.7
+S016,H02,Formal Sciences,Computer Science,S1_Anthropic,0.9,0.9,DEEP,False,0.9,0.9,0.7,0.9,0.8,0.8,0.5,0.3,0.8,0.7
 S017,H02,Formal Sciences,Information Theory,S2_Alphabet,0.8,0.8,DEEP,False,0.7,0.8,0.2,0.6,0.5,0.6,0.2,0.2,0.5,0.4
 S018,H02,Formal Sciences,Game Theory,S1_Anthropic,0.6,0.6,SUBSTANTIAL,False,0.6,0.5,0.2,0.5,0.4,0.5,0.1,0.0,0.3,0.3
 S019,H02,Formal Sciences,Operations Research,S2_Alphabet,0.6,0.6,SUBSTANTIAL,False,0.4,0.6,0.3,0.6,0.4,0.5,0.2,0.1,0.5,0.4
@@ -47,29 +47,29 @@ S045,H04,Humanities,Mythology,S2_Alphabet,0.1,0.1,ABSENT,False,0.0,0.1,0.0,0.1,0
 S046,H04,Humanities,Philology,S2_Alphabet,0.2,0.2,PERIPHERAL,False,0.1,0.2,0.0,0.2,0.1,0.2,0.0,0.0,0.1,0.1
 S047,H04,Humanities,Rhetoric,S1_Anthropic,0.3,0.3,PERIPHERAL,False,0.3,0.2,0.2,0.2,0.1,0.3,0.0,0.0,0.1,0.1
 S048,H04,Humanities,Hermeneutics,S1_Anthropic,0.4,0.4,PERIPHERAL,False,0.4,0.2,0.1,0.2,0.1,0.3,0.0,0.0,0.1,0.1
-S049,H05,Arts,Visual Arts,S6_OpenAI,0.5,0.5,SUBSTANTIAL,False,0.1,0.3,0.1,0.3,0.0,0.5,0.0,0.0,0.2,0.1
-S050,H05,Arts,Performing Arts,S4_Microsoft,0.3,0.3,PERIPHERAL,False,0.0,0.2,0.0,0.3,0.0,0.2,0.0,0.0,0.1,0.0
-S051,H05,Arts,Music,S2_Alphabet,0.5,0.5,SUBSTANTIAL,False,0.1,0.5,0.1,0.4,0.0,0.3,0.0,0.0,0.4,0.1
-S052,H05,Arts,Dance,S4_Microsoft,0.2,0.2,PERIPHERAL,False,0.0,0.1,0.0,0.2,0.0,0.1,0.0,0.0,0.0,0.0
-S053,H05,Arts,Theater,S4_Microsoft,0.3,0.3,PERIPHERAL,False,0.0,0.1,0.0,0.3,0.0,0.1,0.0,0.0,0.1,0.0
-S054,H05,Arts,Film,S2_Alphabet,0.7,0.7,SUBSTANTIAL,False,0.0,0.7,0.1,0.5,0.0,0.3,0.0,0.0,0.5,0.1
+S049,H05,Arts,Visual Arts,S4_Microsoft,0.5,0.5,SUBSTANTIAL,False,0.1,0.3,0.1,0.5,0.0,0.5,0.0,0.0,0.2,0.1
+S050,H05,Arts,Performing Arts,S4_Microsoft,0.5,0.5,SUBSTANTIAL,False,0.0,0.2,0.0,0.5,0.0,0.2,0.0,0.0,0.1,0.0
+S051,H05,Arts,Music,S2_Alphabet,0.5,0.5,SUBSTANTIAL,False,0.1,0.5,0.1,0.5,0.0,0.3,0.0,0.0,0.4,0.1
+S052,H05,Arts,Dance,S4_Microsoft,0.3,0.3,PERIPHERAL,False,0.0,0.1,0.0,0.3,0.0,0.1,0.0,0.0,0.0,0.0
+S053,H05,Arts,Theater,S4_Microsoft,0.5,0.5,SUBSTANTIAL,False,0.0,0.1,0.0,0.5,0.0,0.1,0.0,0.0,0.1,0.0
+S054,H05,Arts,Film,S2_Alphabet,0.7,0.7,SUBSTANTIAL,False,0.0,0.7,0.1,0.7,0.0,0.3,0.0,0.0,0.5,0.1
 S055,H05,Arts,Creative Writing,S6_OpenAI,0.5,0.5,SUBSTANTIAL,False,0.2,0.3,0.1,0.4,0.1,0.5,0.0,0.1,0.3,0.2
-S056,H05,Arts,Architecture,S3_Muskverse,0.3,0.3,PERIPHERAL,False,0.0,0.2,0.3,0.2,0.0,0.1,0.0,0.0,0.1,0.0
-S057,H05,Arts,Design,S2_Alphabet,0.5,0.5,SUBSTANTIAL,False,0.3,0.5,0.3,0.5,0.1,0.4,0.1,0.3,0.3,0.2
+S056,H05,Arts,Architecture,S3_Muskverse,0.3,0.3,PERIPHERAL,False,0.0,0.2,0.3,0.3,0.0,0.1,0.0,0.0,0.1,0.0
+S057,H05,Arts,Design,S4_Microsoft,0.6,0.6,SUBSTANTIAL,False,0.3,0.5,0.3,0.6,0.1,0.4,0.1,0.3,0.3,0.2
 S058,H05,Arts,Photography,S2_Alphabet,0.4,0.4,PERIPHERAL,False,0.0,0.4,0.0,0.3,0.0,0.3,0.0,0.0,0.2,0.0
-S059,H05,Arts,Sculpture,S4_Microsoft,0.2,0.2,PERIPHERAL,False,0.0,0.1,0.0,0.2,0.0,0.2,0.0,0.0,0.0,0.0
-S060,H05,Arts,Painting,S4_Microsoft,0.2,0.2,PERIPHERAL,False,0.0,0.1,0.0,0.2,0.0,0.2,0.0,0.0,0.0,0.0
+S059,H05,Arts,Sculpture,S4_Microsoft,0.3,0.3,PERIPHERAL,False,0.0,0.1,0.0,0.3,0.0,0.2,0.0,0.0,0.0,0.0
+S060,H05,Arts,Painting,S4_Microsoft,0.3,0.3,PERIPHERAL,False,0.0,0.1,0.0,0.3,0.0,0.2,0.0,0.0,0.0,0.0
 S061,H06,Engineering & Technology,Mechanical Engineering,S3_Muskverse,0.8,0.8,DEEP,False,0.0,0.3,0.8,0.3,0.0,0.1,0.0,0.0,0.3,0.1
 S062,H06,Engineering & Technology,Electrical Engineering,S3_Muskverse,0.8,0.8,DEEP,False,0.2,0.5,0.8,0.4,0.1,0.2,0.0,0.0,0.3,0.2
 S063,H06,Engineering & Technology,Civil Engineering,S3_Muskverse,0.4,0.4,PERIPHERAL,False,0.0,0.2,0.4,0.2,0.0,0.1,0.0,0.0,0.2,0.1
 S064,H06,Engineering & Technology,Chemical Engineering,S3_Muskverse,0.4,0.4,PERIPHERAL,False,0.0,0.2,0.4,0.2,0.0,0.1,0.0,0.0,0.2,0.1
-S065,H06,Engineering & Technology,Aerospace Engineering,S3_Muskverse,1.0,1.0,DEEP,True,0.0,0.3,1.0,0.2,0.0,0.1,0.0,0.0,0.2,0.0
+S065,H06,Engineering & Technology,Aerospace Engineering,S3_Muskverse,1.0,1.0,DEEP,False,0.0,0.3,1.0,0.2,0.0,0.1,0.0,0.0,0.6,0.0
 S066,H06,Engineering & Technology,Biomedical Engineering,S4_Microsoft,0.4,0.4,PERIPHERAL,False,0.1,0.3,0.3,0.4,0.0,0.1,0.0,0.0,0.2,0.0
 S067,H06,Engineering & Technology,Environmental Engineering,S3_Muskverse,0.5,0.5,SUBSTANTIAL,False,0.1,0.4,0.5,0.3,0.0,0.1,0.0,0.0,0.3,0.1
 S068,H06,Engineering & Technology,Industrial Engineering,S3_Muskverse,0.8,0.8,DEEP,False,0.2,0.4,0.8,0.4,0.1,0.2,0.0,0.0,0.5,0.2
-S069,H06,Engineering & Technology,Software Engineering,S1_Anthropic,0.9,0.9,DEEP,False,0.9,0.9,0.5,0.9,0.7,0.8,0.6,0.5,0.7,0.6
+S069,H06,Engineering & Technology,Software Engineering,S1_Anthropic,0.9,0.9,DEEP,False,0.9,0.9,0.7,0.9,0.7,0.8,0.6,0.5,0.7,0.6
 S070,H06,Engineering & Technology,Materials Engineering,S3_Muskverse,0.8,0.8,DEEP,False,0.0,0.3,0.8,0.2,0.0,0.1,0.0,0.0,0.2,0.1
-S071,H06,Engineering & Technology,Nuclear Engineering,S3_Muskverse,0.3,0.3,PERIPHERAL,False,0.0,0.1,0.3,0.1,0.0,0.0,0.0,0.0,0.0,0.0
+S071,H06,Engineering & Technology,Nuclear Engineering,S2_Alphabet,0.5,0.5,SUBSTANTIAL,False,0.0,0.5,0.3,0.3,0.0,0.0,0.0,0.0,0.5,0.0
 S072,H06,Engineering & Technology,Robotics,S3_Muskverse,0.9,0.9,DEEP,False,0.3,0.6,0.9,0.4,0.1,0.3,0.0,0.0,0.6,0.2
 S073,H07,Information & Communication,Media Studies,S2_Alphabet,0.6,0.6,SUBSTANTIAL,False,0.2,0.6,0.2,0.5,0.1,0.3,0.0,0.1,0.3,0.2
 S074,H07,Information & Communication,Journalism,S2_Alphabet,0.5,0.5,SUBSTANTIAL,False,0.1,0.5,0.1,0.4,0.0,0.2,0.0,0.0,0.2,0.1
@@ -120,7 +120,7 @@ S118,H10,Business & Economics,Business Ethics,S1_Anthropic,0.6,0.6,SUBSTANTIAL,F
 S119,H10,Business & Economics,Microeconomics,Amazon,0.5,0.5,SUBSTANTIAL,False,0.3,0.4,0.3,0.4,0.2,0.3,0.0,0.0,0.5,0.3
 S120,H10,Business & Economics,Macroeconomics,S2_Alphabet,0.5,0.5,SUBSTANTIAL,False,0.4,0.5,0.3,0.5,0.2,0.3,0.0,0.0,0.5,0.3
 S121,H11,Infrastructure,Transportation,S3_Muskverse,0.7,0.7,SUBSTANTIAL,False,0.1,0.4,0.7,0.4,0.0,0.1,0.0,0.0,0.5,0.2
-S122,H11,Infrastructure,Energy Systems,S3_Muskverse,0.9,0.9,DEEP,False,0.1,0.5,0.9,0.4,0.1,0.2,0.0,0.0,0.3,0.2
+S122,H11,Infrastructure,Energy Systems,S3_Muskverse,0.9,0.9,DEEP,False,0.1,0.6,0.9,0.5,0.1,0.2,0.0,0.0,0.5,0.2
 S123,H11,Infrastructure,Water Systems,S2_Alphabet,0.3,0.3,PERIPHERAL,False,0.0,0.3,0.2,0.3,0.0,0.1,0.0,0.0,0.2,0.1
 S124,H11,Infrastructure,Waste Management,S2_Alphabet,0.3,0.3,PERIPHERAL,False,0.0,0.3,0.2,0.3,0.0,0.1,0.0,0.0,0.3,0.1
 S125,H11,Infrastructure,Computing Infrastructure,S2_Alphabet,0.9,0.9,DEEP,False,0.3,0.9,0.5,0.8,0.3,0.4,0.2,0.1,0.8,0.5
@@ -130,8 +130,8 @@ S128,H11,Infrastructure,Construction,S3_Muskverse,0.5,0.5,SUBSTANTIAL,False,0.0,
 S129,H11,Infrastructure,Logistics,Amazon,0.8,0.8,DEEP,False,0.1,0.4,0.6,0.4,0.0,0.1,0.0,0.0,0.8,0.4
 S130,H11,Infrastructure,Mining,S3_Muskverse,0.3,0.3,PERIPHERAL,False,0.0,0.2,0.3,0.2,0.0,0.0,0.0,0.0,0.2,0.1
 S131,H11,Infrastructure,Agriculture Infrastructure,S3_Muskverse,0.4,0.4,PERIPHERAL,False,0.0,0.3,0.4,0.2,0.0,0.0,0.0,0.0,0.3,0.1
-S132,H11,Infrastructure,Space Infrastructure,S3_Muskverse,0.8,0.8,DEEP,False,0.0,0.4,0.8,0.3,0.0,0.1,0.0,0.0,0.2,0.1
-S133,H12,Law/Governance/Meta-Knowledge,Constitutional Law,S1_Anthropic,0.5,0.5,SUBSTANTIAL,False,0.5,0.3,0.1,0.4,0.1,0.2,0.0,0.0,0.2,0.1
+S132,H11,Infrastructure,Space Infrastructure,S3_Muskverse,0.8,0.8,DEEP,False,0.0,0.4,0.8,0.3,0.0,0.1,0.0,0.0,0.3,0.1
+S133,H12,Law/Governance/Meta-Knowledge,Constitutional Law,S1_Anthropic,0.5,0.5,SUBSTANTIAL,False,0.5,0.3,0.3,0.4,0.1,0.2,0.0,0.0,0.2,0.1
 S134,H12,Law/Governance/Meta-Knowledge,Criminal Law,S4_Microsoft,0.3,0.3,PERIPHERAL,False,0.2,0.2,0.1,0.3,0.0,0.1,0.0,0.0,0.2,0.0
 S135,H12,Law/Governance/Meta-Knowledge,Civil Law,S2_Alphabet,0.3,0.3,PERIPHERAL,False,0.2,0.3,0.1,0.3,0.0,0.2,0.0,0.0,0.2,0.1
 S136,H12,Law/Governance/Meta-Knowledge,International Law,S4_Microsoft,0.4,0.4,PERIPHERAL,False,0.3,0.3,0.2,0.4,0.1,0.2,0.0,0.0,0.2,0.1
@@ -141,5 +141,5 @@ S139,H12,Law/Governance/Meta-Knowledge,Human Rights,S1_Anthropic,0.4,0.4,PERIPHE
 S140,H12,Law/Governance/Meta-Knowledge,Political Theory,S1_Anthropic,0.4,0.4,PERIPHERAL,False,0.4,0.3,0.2,0.4,0.1,0.3,0.0,0.0,0.2,0.1
 S141,H12,Law/Governance/Meta-Knowledge,Public Policy,S1_Anthropic,0.8,0.8,DEEP,False,0.8,0.5,0.2,0.5,0.1,0.5,0.0,0.0,0.3,0.1
 S142,H12,Law/Governance/Meta-Knowledge,International Relations,S1_Anthropic,0.5,0.5,SUBSTANTIAL,False,0.5,0.4,0.2,0.4,0.1,0.3,0.0,0.0,0.3,0.1
-S143,H12,Law/Governance/Meta-Knowledge,Diplomacy,S1_Anthropic,0.3,0.3,PERIPHERAL,False,0.3,0.3,0.1,0.3,0.0,0.2,0.0,0.0,0.2,0.1
+S143,H12,Law/Governance/Meta-Knowledge,Diplomacy,S1_Anthropic,0.3,0.3,PERIPHERAL,False,0.3,0.3,0.3,0.3,0.0,0.2,0.0,0.0,0.2,0.1
 S144,H12,Law/Governance/Meta-Knowledge,Public Administration,S1_Anthropic,0.4,0.4,PERIPHERAL,False,0.4,0.3,0.1,0.4,0.1,0.3,0.0,0.0,0.2,0.1

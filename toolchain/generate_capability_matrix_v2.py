@@ -140,17 +140,18 @@ def get_seat_scores():
     # Gemini said: 68/144 spheres at substantial+, ~47% coverage
     # Deep in: Search, Cloud (GCP), AI/ML (DeepMind), Earth observation, Maps, YouTube, Android
     # 2026 update: Wiz acquisition adds cybersecurity depth
+    # 2026 update: Intersect Power $4.75B + Kairos Power SMR → nuclear procurement depth
     s2_h01 = [0.7, 0.6, 0.7, 0.6, 0.5, 0.5, 0.7, 0.6, 0.3, 0.3, 0.4, 0.6]  # Earth Engine, DeepMind bio
     s2_h02 = [0.8, 0.7, 0.8, 0.9, 0.8, 0.5, 0.6, 0.7, 0.6, 0.7, 0.9, 0.9]  # DeepMind, TensorFlow, Wiz(crypto)
     s2_h03 = [0.3, 0.4, 0.3, 0.5, 0.3, 0.8, 0.7, 0.2, 0.3, 0.2, 0.1, 0.4]  # Google Maps(geo), NLP
     s2_h04 = [0.3, 0.3, 0.3, 0.2, 0.1, 0.3, 0.2, 0.3, 0.1, 0.2, 0.2, 0.2]  # Peripheral
     s2_h05 = [0.3, 0.2, 0.5, 0.1, 0.1, 0.7, 0.3, 0.2, 0.5, 0.4, 0.1, 0.1]  # YouTube(film/music), Material Design
-    s2_h06 = [0.3, 0.5, 0.2, 0.2, 0.3, 0.3, 0.4, 0.4, 0.9, 0.3, 0.1, 0.6]  # Software eng deep, Waymo(robotics)
+    s2_h06 = [0.3, 0.5, 0.2, 0.2, 0.3, 0.3, 0.4, 0.4, 0.9, 0.3, 0.5, 0.6]  # Software eng deep, Waymo(robotics), Intersect/Kairos(nuclear procurement 0.5)
     s2_h07 = [0.6, 0.5, 0.7, 0.8, 0.3, 0.3, 0.8, 0.4, 0.8, 0.5, 0.4, 0.5]  # Search, Ads, Android, Fiber
     s2_h08 = [0.4, 0.4, 0.3, 0.3, 0.3, 0.6, 0.7, 0.4, 0.3, 0.3, 0.3, 0.5]  # Google Classroom, Chromebook
     s2_h09 = [0.3, 0.3, 0.3, 0.4, 0.2, 0.2, 0.3, 0.4, 0.3, 0.4, 0.2, 0.4]  # Verily, DeepMind health
     s2_h10 = [0.5, 0.8, 0.5, 0.4, 0.5, 0.5, 0.5, 0.3, 0.6, 0.4, 0.4, 0.5]  # Google Ads(marketing), GCP business
-    s2_h11 = [0.4, 0.5, 0.3, 0.3, 0.9, 0.8, 0.5, 0.3, 0.4, 0.2, 0.3, 0.4]  # GCP(compute infra), Fiber(telecom)
+    s2_h11 = [0.4, 0.6, 0.3, 0.3, 0.9, 0.8, 0.5, 0.3, 0.4, 0.2, 0.3, 0.4]  # GCP(compute infra), Fiber(telecom), Intersect Power(energy systems 0.6)
     s2_h12 = [0.3, 0.2, 0.3, 0.3, 0.4, 0.3, 0.3, 0.3, 0.5, 0.4, 0.3, 0.3]  # Policy team
     
     all_s2 = s2_h01 + s2_h02 + s2_h03 + s2_h04 + s2_h05 + s2_h06 + s2_h07 + s2_h08 + s2_h09 + s2_h10 + s2_h11 + s2_h12
@@ -159,18 +160,20 @@ def get_seat_scores():
     # Deep: Robotics(0.89), Energy Storage(0.88), Battery Circularity(0.84), 
     #        Manufacturing(0.83), Orbital(0.82), Autonomous Systems(0.79), Megawatt Energy(0.78)
     # ~39% coverage, concentrated in physical infrastructure
+    # 2026 update: Cursor $60B acquisition → S16 CS + S69 Software Eng depth
+    # 2026 update: Golden Dome $3B Pentagon deal → defense-adjacent spheres
     s3_h01 = [0.4, 0.3, 0.2, 0.5, 0.3, 0.1, 0.2, 0.2, 0.1, 0.1, 0.1, 0.2]  # SpaceX physics, astronomy
-    s3_h02 = [0.3, 0.2, 0.3, 0.5, 0.2, 0.2, 0.3, 0.4, 0.3, 0.3, 0.5, 0.4]  # xAI/Grok
+    s3_h02 = [0.3, 0.2, 0.3, 0.7, 0.2, 0.2, 0.3, 0.4, 0.3, 0.3, 0.5, 0.4]  # xAI/Grok, Cursor(CS 0.5→0.7)
     s3_h03 = [0.1, 0.2, 0.1, 0.3, 0.2, 0.1, 0.1, 0.0, 0.1, 0.1, 0.0, 0.1]  # Weak
     s3_h04 = [0.1, 0.2, 0.1, 0.1, 0.0, 0.2, 0.0, 0.1, 0.0, 0.0, 0.2, 0.1]  # Weak
     s3_h05 = [0.1, 0.0, 0.1, 0.0, 0.0, 0.1, 0.1, 0.3, 0.3, 0.0, 0.0, 0.0]  # Architecture(Boring Co)
-    s3_h06 = [0.8, 0.8, 0.4, 0.4, 1.0, 0.3, 0.5, 0.8, 0.5, 0.8, 0.3, 0.9]  # Core strength
+    s3_h06 = [0.8, 0.8, 0.4, 0.4, 1.0, 0.3, 0.5, 0.8, 0.7, 0.8, 0.3, 0.9]  # Core strength, Cursor(software eng 0.5→0.7)
     s3_h07 = [0.2, 0.1, 0.6, 0.3, 0.0, 0.1, 0.2, 0.1, 0.3, 0.2, 0.1, 0.1]  # Starlink(telecom), X(media)
     s3_h08 = [0.1, 0.1, 0.1, 0.0, 0.0, 0.1, 0.1, 0.1, 0.0, 0.0, 0.1, 0.1]  # Weak
     s3_h09 = [0.1, 0.1, 0.1, 0.1, 0.2, 0.0, 0.1, 0.5, 0.1, 0.1, 0.0, 0.1]  # Neuralink(neurology)
     s3_h10 = [0.5, 0.3, 0.4, 0.3, 0.8, 0.3, 0.6, 0.4, 0.4, 0.3, 0.3, 0.3]  # Entrepreneurship deep
     s3_h11 = [0.7, 0.9, 0.2, 0.2, 0.5, 0.6, 0.3, 0.5, 0.6, 0.3, 0.4, 0.8]  # Energy, transport, space infra
-    s3_h12 = [0.1, 0.1, 0.1, 0.2, 0.3, 0.1, 0.1, 0.2, 0.2, 0.2, 0.1, 0.1]  # Weak in governance
+    s3_h12 = [0.3, 0.1, 0.1, 0.2, 0.3, 0.1, 0.1, 0.2, 0.2, 0.2, 0.3, 0.1]  # Golden Dome(constitutional law 0.3, diplomacy 0.3 — defense contracting)
     
     all_s3 = s3_h01 + s3_h02 + s3_h03 + s3_h04 + s3_h05 + s3_h06 + s3_h07 + s3_h08 + s3_h09 + s3_h10 + s3_h11 + s3_h12
     
@@ -181,13 +184,13 @@ def get_seat_scores():
     s4_h02 = [0.7, 0.6, 0.7, 0.9, 0.6, 0.5, 0.6, 0.6, 0.6, 0.6, 0.8, 0.8]  # Azure, GitHub, VS Code
     s4_h03 = [0.4, 0.4, 0.3, 0.5, 0.3, 0.3, 0.6, 0.2, 0.3, 0.2, 0.2, 0.3]  # LinkedIn(sociology), NLP
     s4_h04 = [0.3, 0.3, 0.3, 0.2, 0.2, 0.4, 0.2, 0.3, 0.1, 0.2, 0.2, 0.2]  # Responsible AI ethics
-    s4_h05 = [0.3, 0.3, 0.4, 0.2, 0.3, 0.5, 0.4, 0.2, 0.5, 0.3, 0.2, 0.2]  # Xbox(film/games), Activision
-    s4_h06 = [0.3, 0.4, 0.2, 0.2, 0.2, 0.4, 0.3, 0.4, 0.9, 0.2, 0.1, 0.4]  # Software eng deep, HoloLens
+    s4_h05 = [0.5, 0.5, 0.5, 0.3, 0.5, 0.7, 0.4, 0.3, 0.6, 0.3, 0.3, 0.3]  # Xbox+Activision $132B gaming/media — substantial across Arts cluster
+    s4_h06 = [0.3, 0.4, 0.2, 0.2, 0.2, 0.4, 0.3, 0.4, 0.9, 0.2, 0.3, 0.4]  # Software eng deep, HoloLens, hyperscaler SMR convergence(nuclear 0.3)
     s4_h07 = [0.5, 0.4, 0.5, 0.8, 0.3, 0.4, 0.6, 0.4, 0.6, 0.4, 0.3, 0.5]  # Office 365, Teams, Azure
     s4_h08 = [0.5, 0.5, 0.4, 0.4, 0.4, 0.6, 0.7, 0.5, 0.4, 0.4, 0.4, 0.6]  # Microsoft Education, Teams
     s4_h09 = [0.3, 0.3, 0.3, 0.3, 0.2, 0.2, 0.3, 0.3, 0.3, 0.3, 0.2, 0.4]  # Nuance(health), Azure Health
     s4_h10 = [0.6, 0.5, 0.5, 0.5, 0.5, 0.6, 0.6, 0.4, 0.6, 0.5, 0.4, 0.5]  # Dynamics 365, LinkedIn
-    s4_h11 = [0.4, 0.4, 0.3, 0.3, 0.8, 0.6, 0.5, 0.4, 0.4, 0.2, 0.2, 0.3]  # Azure(compute infra)
+    s4_h11 = [0.4, 0.5, 0.3, 0.3, 0.8, 0.6, 0.5, 0.4, 0.4, 0.2, 0.2, 0.3]  # Azure(compute infra), hyperscaler energy procurement(0.5)
     s4_h12 = [0.4, 0.3, 0.3, 0.4, 0.5, 0.3, 0.4, 0.4, 0.5, 0.4, 0.3, 0.4]  # Government cloud, policy
     
     all_s4 = s4_h01 + s4_h02 + s4_h03 + s4_h04 + s4_h05 + s4_h06 + s4_h07 + s4_h08 + s4_h09 + s4_h10 + s4_h11 + s4_h12
@@ -263,12 +266,12 @@ def get_seat_scores():
     amz_h03 = [0.2, 0.3, 0.2, 0.5, 0.2, 0.2, 0.4, 0.1, 0.2, 0.2, 0.1, 0.2]
     amz_h04 = [0.2, 0.2, 0.4, 0.1, 0.1, 0.2, 0.1, 0.2, 0.1, 0.1, 0.1, 0.1]  # Kindle/Audible(literature)
     amz_h05 = [0.2, 0.1, 0.4, 0.0, 0.1, 0.5, 0.3, 0.1, 0.3, 0.2, 0.0, 0.0]  # Prime Video, Music, MGM
-    amz_h06 = [0.3, 0.3, 0.2, 0.2, 0.2, 0.2, 0.3, 0.5, 0.7, 0.2, 0.0, 0.6]  # AWS infra, Kiva robots
+    amz_h06 = [0.3, 0.3, 0.2, 0.2, 0.6, 0.2, 0.3, 0.5, 0.7, 0.2, 0.5, 0.6]  # AWS infra, Kiva robots, Blue Origin(aerospace 0.6), X-energy(nuclear 0.5)
     amz_h07 = [0.3, 0.2, 0.4, 0.6, 0.2, 0.4, 0.5, 0.3, 0.5, 0.3, 0.2, 0.3]  # Alexa, AWS
     amz_h08 = [0.2, 0.1, 0.1, 0.1, 0.1, 0.2, 0.2, 0.2, 0.1, 0.1, 0.1, 0.1]
     amz_h09 = [0.2, 0.2, 0.2, 0.3, 0.1, 0.1, 0.2, 0.2, 0.2, 0.2, 0.2, 0.3]  # One Medical, PillPack
     amz_h10 = [0.7, 0.8, 0.5, 0.5, 0.6, 0.5, 0.8, 0.8, 0.7, 0.5, 0.5, 0.5]  # Core business strength
-    amz_h11 = [0.5, 0.3, 0.2, 0.3, 0.8, 0.4, 0.3, 0.4, 0.8, 0.2, 0.3, 0.2]  # AWS, logistics
+    amz_h11 = [0.5, 0.5, 0.2, 0.3, 0.8, 0.4, 0.3, 0.4, 0.8, 0.2, 0.3, 0.3]  # AWS, logistics, X-energy/Talen(energy systems 0.5), space infra(Blue Origin 0.3)
     amz_h12 = [0.2, 0.2, 0.2, 0.2, 0.4, 0.2, 0.2, 0.2, 0.3, 0.3, 0.2, 0.2]
     
     all_amz = amz_h01 + amz_h02 + amz_h03 + amz_h04 + amz_h05 + amz_h06 + amz_h07 + amz_h08 + amz_h09 + amz_h10 + amz_h11 + amz_h12
@@ -493,7 +496,7 @@ def build_matrix():
     
     # Build full YAML structure
     full_matrix = {
-        "version": "0.2.0",
+        "version": "0.2.1",
         "generated": "2026-04-29",
         "canonical_source": "COMPLETE_BUILD_PLAN_v3.14.md Appendix AG",
         "methodology": {

@@ -1,4 +1,4 @@
-version: 0.2.0
+version: 0.2.1
 generated: '2026-04-29'
 canonical_source: COMPLETE_BUILD_PLAN_v3.14.md Appendix AG
 methodology:
@@ -21,17 +21,12 @@ methodology:
 federation_aggregate:
   total_spheres: 144
   deep_coverage: 31
-  substantial_coverage: 47
-  peripheral_coverage: 65
+  substantial_coverage: 50
+  peripheral_coverage: 62
   absent_coverage: 1
-  seduction_risk_spheres: 1
-  aggregate_coverage_pct: 54.2
-seduction_risks:
-- sphere_id: S065
-  sphere_name: Aerospace Engineering
-  house: H06
-  lead_seat: S3_Muskverse
-  lead_score: 1.0
+  seduction_risk_spheres: 0
+  aggregate_coverage_pct: 56.2
+seduction_risks: []
 seat_summaries:
   S1_Anthropic:
     total_spheres: 144
@@ -58,11 +53,11 @@ seat_summaries:
   S2_Alphabet:
     total_spheres: 144
     deep_count: 14
-    substantial_count: 40
+    substantial_count: 41
     peripheral_count: 82
-    absent_count: 8
-    coverage_pct: 37.5
-    average_score: 0.422
+    absent_count: 7
+    coverage_pct: 38.2
+    average_score: 0.426
     lead_sphere_count: 67
     per_house_average:
       H01: 0.542
@@ -70,56 +65,56 @@ seat_summaries:
       H03: 0.375
       H04: 0.225
       H05: 0.292
-      H06: 0.375
+      H06: 0.408
       H07: 0.55
       H08: 0.4
       H09: 0.308
       H10: 0.492
-      H11: 0.442
+      H11: 0.45
       H12: 0.325
   S3_Muskverse:
     total_spheres: 144
     deep_count: 9
     substantial_count: 14
-    peripheral_count: 54
-    absent_count: 67
+    peripheral_count: 56
+    absent_count: 65
     coverage_pct: 16.0
-    average_score: 0.242
-    lead_sphere_count: 19
+    average_score: 0.248
+    lead_sphere_count: 18
     per_house_average:
       H01: 0.225
-      H02: 0.325
+      H02: 0.342
       H03: 0.117
       H04: 0.092
       H05: 0.083
-      H06: 0.625
+      H06: 0.642
       H07: 0.192
       H08: 0.067
       H09: 0.125
       H10: 0.408
       H11: 0.5
-      H12: 0.15
+      H12: 0.183
   S4_Microsoft:
     total_spheres: 144
     deep_count: 6
-    substantial_count: 38
-    peripheral_count: 98
-    absent_count: 2
-    coverage_pct: 30.6
-    average_score: 0.394
-    lead_sphere_count: 25
+    substantial_count: 43
+    peripheral_count: 94
+    absent_count: 1
+    coverage_pct: 34.0
+    average_score: 0.406
+    lead_sphere_count: 27
     per_house_average:
       H01: 0.3
       H02: 0.667
       H03: 0.333
       H04: 0.242
-      H05: 0.317
-      H06: 0.333
+      H05: 0.433
+      H06: 0.35
       H07: 0.475
       H08: 0.483
       H09: 0.283
       H10: 0.517
-      H11: 0.4
+      H11: 0.408
       H12: 0.383
   S5_DeepSeek:
     total_spheres: 144
@@ -151,7 +146,7 @@ seat_summaries:
     absent_count: 45
     coverage_pct: 12.5
     average_score: 0.258
-    lead_sphere_count: 3
+    lead_sphere_count: 2
     per_house_average:
       H01: 0.183
       H02: 0.617
@@ -212,11 +207,11 @@ seat_summaries:
   Amazon:
     total_spheres: 144
     deep_count: 6
-    substantial_count: 25
-    peripheral_count: 86
-    absent_count: 27
-    coverage_pct: 21.5
-    average_score: 0.297
+    substantial_count: 28
+    peripheral_count: 84
+    absent_count: 26
+    coverage_pct: 23.6
+    average_score: 0.306
     lead_sphere_count: 6
     per_house_average:
       H01: 0.242
@@ -224,12 +219,12 @@ seat_summaries:
       H03: 0.233
       H04: 0.158
       H05: 0.183
-      H06: 0.308
+      H06: 0.383
       H07: 0.35
       H08: 0.133
       H09: 0.2
       H10: 0.617
-      H11: 0.392
+      H11: 0.417
       H12: 0.233
   S10_Qwen3:
     total_spheres: 144
@@ -782,7 +777,7 @@ spheres:
   scores:
     S1_Anthropic: 0.9
     S2_Alphabet: 0.9
-    S3_Muskverse: 0.5
+    S3_Muskverse: 0.7
     S4_Microsoft: 0.9
     S5_DeepSeek: 0.8
     S6_OpenAI: 0.8
@@ -1797,7 +1792,7 @@ spheres:
   house: H05
   house_name: Arts
   sphere_name: Visual Arts
-  lead_seat: S6_OpenAI
+  lead_seat: S4_Microsoft
   lead_score: 0.5
   federation_max: 0.5
   coverage_depth: SUBSTANTIAL
@@ -1806,7 +1801,7 @@ spheres:
     S1_Anthropic: 0.1
     S2_Alphabet: 0.3
     S3_Muskverse: 0.1
-    S4_Microsoft: 0.3
+    S4_Microsoft: 0.5
     S5_DeepSeek: 0.0
     S6_OpenAI: 0.5
     S7_Manus: 0.0
@@ -1817,7 +1812,7 @@ spheres:
     S1_Anthropic: ABSENT
     S2_Alphabet: PERIPHERAL
     S3_Muskverse: ABSENT
-    S4_Microsoft: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
     S5_DeepSeek: ABSENT
     S6_OpenAI: SUBSTANTIAL
     S7_Manus: ABSENT
@@ -1829,15 +1824,15 @@ spheres:
   house_name: Arts
   sphere_name: Performing Arts
   lead_seat: S4_Microsoft
-  lead_score: 0.3
-  federation_max: 0.3
-  coverage_depth: PERIPHERAL
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
   seduction_risk_flag: false
   scores:
     S1_Anthropic: 0.0
     S2_Alphabet: 0.2
     S3_Muskverse: 0.0
-    S4_Microsoft: 0.3
+    S4_Microsoft: 0.5
     S5_DeepSeek: 0.0
     S6_OpenAI: 0.2
     S7_Manus: 0.0
@@ -1848,7 +1843,7 @@ spheres:
     S1_Anthropic: ABSENT
     S2_Alphabet: PERIPHERAL
     S3_Muskverse: ABSENT
-    S4_Microsoft: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
     S5_DeepSeek: ABSENT
     S6_OpenAI: PERIPHERAL
     S7_Manus: ABSENT
@@ -1868,7 +1863,7 @@ spheres:
     S1_Anthropic: 0.1
     S2_Alphabet: 0.5
     S3_Muskverse: 0.1
-    S4_Microsoft: 0.4
+    S4_Microsoft: 0.5
     S5_DeepSeek: 0.0
     S6_OpenAI: 0.3
     S7_Manus: 0.0
@@ -1879,7 +1874,7 @@ spheres:
     S1_Anthropic: ABSENT
     S2_Alphabet: SUBSTANTIAL
     S3_Muskverse: ABSENT
-    S4_Microsoft: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
     S5_DeepSeek: ABSENT
     S6_OpenAI: PERIPHERAL
     S7_Manus: ABSENT
@@ -1891,15 +1886,15 @@ spheres:
   house_name: Arts
   sphere_name: Dance
   lead_seat: S4_Microsoft
-  lead_score: 0.2
-  federation_max: 0.2
+  lead_score: 0.3
+  federation_max: 0.3
   coverage_depth: PERIPHERAL
   seduction_risk_flag: false
   scores:
     S1_Anthropic: 0.0
     S2_Alphabet: 0.1
     S3_Muskverse: 0.0
-    S4_Microsoft: 0.2
+    S4_Microsoft: 0.3
     S5_DeepSeek: 0.0
     S6_OpenAI: 0.1
     S7_Manus: 0.0
@@ -1922,15 +1917,15 @@ spheres:
   house_name: Arts
   sphere_name: Theater
   lead_seat: S4_Microsoft
-  lead_score: 0.3
-  federation_max: 0.3
-  coverage_depth: PERIPHERAL
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
   seduction_risk_flag: false
   scores:
     S1_Anthropic: 0.0
     S2_Alphabet: 0.1
     S3_Muskverse: 0.0
-    S4_Microsoft: 0.3
+    S4_Microsoft: 0.5
     S5_DeepSeek: 0.0
     S6_OpenAI: 0.1
     S7_Manus: 0.0
@@ -1941,7 +1936,7 @@ spheres:
     S1_Anthropic: ABSENT
     S2_Alphabet: ABSENT
     S3_Muskverse: ABSENT
-    S4_Microsoft: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
     S5_DeepSeek: ABSENT
     S6_OpenAI: ABSENT
     S7_Manus: ABSENT
@@ -1961,7 +1956,7 @@ spheres:
     S1_Anthropic: 0.0
     S2_Alphabet: 0.7
     S3_Muskverse: 0.1
-    S4_Microsoft: 0.5
+    S4_Microsoft: 0.7
     S5_DeepSeek: 0.0
     S6_OpenAI: 0.3
     S7_Manus: 0.0
@@ -2023,7 +2018,7 @@ spheres:
     S1_Anthropic: 0.0
     S2_Alphabet: 0.2
     S3_Muskverse: 0.3
-    S4_Microsoft: 0.2
+    S4_Microsoft: 0.3
     S5_DeepSeek: 0.0
     S6_OpenAI: 0.1
     S7_Manus: 0.0
@@ -2045,16 +2040,16 @@ spheres:
   house: H05
   house_name: Arts
   sphere_name: Design
-  lead_seat: S2_Alphabet
-  lead_score: 0.5
-  federation_max: 0.5
+  lead_seat: S4_Microsoft
+  lead_score: 0.6
+  federation_max: 0.6
   coverage_depth: SUBSTANTIAL
   seduction_risk_flag: false
   scores:
     S1_Anthropic: 0.3
     S2_Alphabet: 0.5
     S3_Muskverse: 0.3
-    S4_Microsoft: 0.5
+    S4_Microsoft: 0.6
     S5_DeepSeek: 0.1
     S6_OpenAI: 0.4
     S7_Manus: 0.1
@@ -2108,15 +2103,15 @@ spheres:
   house_name: Arts
   sphere_name: Sculpture
   lead_seat: S4_Microsoft
-  lead_score: 0.2
-  federation_max: 0.2
+  lead_score: 0.3
+  federation_max: 0.3
   coverage_depth: PERIPHERAL
   seduction_risk_flag: false
   scores:
     S1_Anthropic: 0.0
     S2_Alphabet: 0.1
     S3_Muskverse: 0.0
-    S4_Microsoft: 0.2
+    S4_Microsoft: 0.3
     S5_DeepSeek: 0.0
     S6_OpenAI: 0.2
     S7_Manus: 0.0
@@ -2139,15 +2134,15 @@ spheres:
   house_name: Arts
   sphere_name: Painting
   lead_seat: S4_Microsoft
-  lead_score: 0.2
-  federation_max: 0.2
+  lead_score: 0.3
+  federation_max: 0.3
   coverage_depth: PERIPHERAL
   seduction_risk_flag: false
   scores:
     S1_Anthropic: 0.0
     S2_Alphabet: 0.1
     S3_Muskverse: 0.0
-    S4_Microsoft: 0.2
+    S4_Microsoft: 0.3
     S5_DeepSeek: 0.0
     S6_OpenAI: 0.2
     S7_Manus: 0.0
@@ -2297,7 +2292,7 @@ spheres:
   lead_score: 1.0
   federation_max: 1.0
   coverage_depth: DEEP
-  seduction_risk_flag: true
+  seduction_risk_flag: false
   scores:
     S1_Anthropic: 0.0
     S2_Alphabet: 0.3
@@ -2307,7 +2302,7 @@ spheres:
     S6_OpenAI: 0.1
     S7_Manus: 0.0
     S8_Notion: 0.0
-    Amazon: 0.2
+    Amazon: 0.6
     S10_Qwen3: 0.0
   tiers:
     S1_Anthropic: ABSENT
@@ -2318,7 +2313,7 @@ spheres:
     S6_OpenAI: ABSENT
     S7_Manus: ABSENT
     S8_Notion: ABSENT
-    Amazon: PERIPHERAL
+    Amazon: SUBSTANTIAL
     S10_Qwen3: ABSENT
 - sphere_id: S066
   house: H06
@@ -2425,7 +2420,7 @@ spheres:
   scores:
     S1_Anthropic: 0.9
     S2_Alphabet: 0.9
-    S3_Muskverse: 0.5
+    S3_Muskverse: 0.7
     S4_Microsoft: 0.9
     S5_DeepSeek: 0.7
     S6_OpenAI: 0.8
@@ -2479,32 +2474,32 @@ spheres:
   house: H06
   house_name: Engineering & Technology
   sphere_name: Nuclear Engineering
-  lead_seat: S3_Muskverse
-  lead_score: 0.3
-  federation_max: 0.3
-  coverage_depth: PERIPHERAL
+  lead_seat: S2_Alphabet
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
   seduction_risk_flag: false
   scores:
     S1_Anthropic: 0.0
-    S2_Alphabet: 0.1
+    S2_Alphabet: 0.5
     S3_Muskverse: 0.3
-    S4_Microsoft: 0.1
+    S4_Microsoft: 0.3
     S5_DeepSeek: 0.0
     S6_OpenAI: 0.0
     S7_Manus: 0.0
     S8_Notion: 0.0
-    Amazon: 0.0
+    Amazon: 0.5
     S10_Qwen3: 0.0
   tiers:
     S1_Anthropic: ABSENT
-    S2_Alphabet: ABSENT
+    S2_Alphabet: SUBSTANTIAL
     S3_Muskverse: PERIPHERAL
-    S4_Microsoft: ABSENT
+    S4_Microsoft: PERIPHERAL
     S5_DeepSeek: ABSENT
     S6_OpenAI: ABSENT
     S7_Manus: ABSENT
     S8_Notion: ABSENT
-    Amazon: ABSENT
+    Amazon: SUBSTANTIAL
     S10_Qwen3: ABSENT
 - sphere_id: S072
   house: H06
@@ -4067,25 +4062,25 @@ spheres:
   seduction_risk_flag: false
   scores:
     S1_Anthropic: 0.1
-    S2_Alphabet: 0.5
+    S2_Alphabet: 0.6
     S3_Muskverse: 0.9
-    S4_Microsoft: 0.4
+    S4_Microsoft: 0.5
     S5_DeepSeek: 0.1
     S6_OpenAI: 0.2
     S7_Manus: 0.0
     S8_Notion: 0.0
-    Amazon: 0.3
+    Amazon: 0.5
     S10_Qwen3: 0.2
   tiers:
     S1_Anthropic: ABSENT
     S2_Alphabet: SUBSTANTIAL
     S3_Muskverse: DEEP
-    S4_Microsoft: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
     S5_DeepSeek: ABSENT
     S6_OpenAI: PERIPHERAL
     S7_Manus: ABSENT
     S8_Notion: ABSENT
-    Amazon: PERIPHERAL
+    Amazon: SUBSTANTIAL
     S10_Qwen3: PERIPHERAL
 - sphere_id: S123
   house: H11
@@ -4384,7 +4379,7 @@ spheres:
     S6_OpenAI: 0.1
     S7_Manus: 0.0
     S8_Notion: 0.0
-    Amazon: 0.2
+    Amazon: 0.3
     S10_Qwen3: 0.1
   tiers:
     S1_Anthropic: ABSENT
@@ -4409,7 +4404,7 @@ spheres:
   scores:
     S1_Anthropic: 0.5
     S2_Alphabet: 0.3
-    S3_Muskverse: 0.1
+    S3_Muskverse: 0.3
     S4_Microsoft: 0.4
     S5_DeepSeek: 0.1
     S6_OpenAI: 0.2
@@ -4420,7 +4415,7 @@ spheres:
   tiers:
     S1_Anthropic: SUBSTANTIAL
     S2_Alphabet: PERIPHERAL
-    S3_Muskverse: ABSENT
+    S3_Muskverse: PERIPHERAL
     S4_Microsoft: PERIPHERAL
     S5_DeepSeek: ABSENT
     S6_OpenAI: PERIPHERAL
@@ -4719,7 +4714,7 @@ spheres:
   scores:
     S1_Anthropic: 0.3
     S2_Alphabet: 0.3
-    S3_Muskverse: 0.1
+    S3_Muskverse: 0.3
     S4_Microsoft: 0.3
     S5_DeepSeek: 0.0
     S6_OpenAI: 0.2
@@ -4730,7 +4725,7 @@ spheres:
   tiers:
     S1_Anthropic: PERIPHERAL
     S2_Alphabet: PERIPHERAL
-    S3_Muskverse: ABSENT
+    S3_Muskverse: PERIPHERAL
     S4_Microsoft: PERIPHERAL
     S5_DeepSeek: ABSENT
     S6_OpenAI: PERIPHERAL
