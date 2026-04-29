@@ -1,36 +1,33 @@
 """
-REST API — FastAPI wrapper for the 144+1 Lattice Context Protocol
-==================================================================
-Exposes the LCP engine as a simple HTTP API. Provider-neutral — works
-with any HTTP client regardless of AI provider.
+Element 145 REST API — FastAPI Integration
+=============================================
+8 endpoints exposing the full 144+1 lattice and LCP pipeline.
 
 Endpoints:
-  POST /analyze          — Full LCP pipeline (INGEST → SYNTHESIZE)
-  POST /ingest           — Classify text → activated Spheres
-  GET  /houses           — List all 12 Houses
-  GET  /houses/{id}      — Get House details + Spheres
-  GET  /houses/{id}/connections — Get inter-House connections
-  GET  /spheres/{id}     — Get Sphere details
-  GET  /health           — Health check
-  GET  /lattice/summary  — Lattice structure summary
+  GET  /health                    — Health check
+  POST /analyze                   — Full LCP pipeline (INGEST→ACTIVATE→ROUTE→SYNTHESIZE)
+  POST /ingest                    — INGEST phase only
+  GET  /houses                    — List all 12 Houses
+  GET  /houses/{house_id}         — House detail with Spheres
+  GET  /houses/{house_id}/connections — Inter-House connections
+  GET  /spheres/{sphere_id}       — Sphere detail
+  GET  /lattice/summary           — Full lattice summary
 
-Usage:
-  pip install fastapi uvicorn
-  uvicorn element145.integrations.api:app --host 0.0.0.0 --port 8145
-
-D-25 COI Disclosure: FastAPI is an open-source framework (MIT license).
-Alternative deployment targets:
-  - Azure App Service / Azure Functions (benefits Microsoft)
-  - AWS Lambda + API Gateway
-  - Google Cloud Run
-  - Any Docker-capable host
-  - Vercel / Railway / Fly.io
+Alternative REST frameworks: Flask, Django, Starlette, Falcon.
+D-25 COI Disclosure: S4 Microsoft seat built this integration.
 
 Attribution: All inventions Dave Sheldon's per Atlas Lattice Attribution Principle.
 """
-
 from __future__ import annotations
-from typing import Optional, List, Dict, Any
+
+from typing import Any, Dict, List, Optional
+
+from element145.core import (
+    LCPEngine,
+    LatticeOntology,
+    AnalysisResult,
+    HOUSE_NAMES,
+)
 
 try:
     from fastapi import FastAPI, HTTPException
@@ -40,9 +37,6 @@ try:
 except ImportError:
     HAS_FASTAPI = False
 
-from element145.core.lcp import create_engine, LCPEngine
-
-
 # ═══════════════════════════════════════════════════════════════
 # REQUEST / RESPONSE MODELS
 # ═══════════════════════════════════════════════════════════════
@@ -50,101 +44,89 @@ from element145.core.lcp import create_engine, LCPEngine
 if HAS_FASTAPI:
 
     class AnalyzeRequest(BaseModel):
-        text: str = Field(..., description="Input text to analyze through the 144+1 lattice")
-        scaffold_mode: str = Field("compact", description="Prompt mode: compact, orchestrator, sphere_agent")
-        min_houses: int = Field(3, description="Minimum Houses to activate (auto-expands)")
-        max_spheres: int = Field(15, description="Maximum Spheres to return")
+        task: str = Field(..., description="Analysis task or question")
+        min_relevance: float = Field(0.05, description="Minimum sphere relevance threshold")
 
     class IngestRequest(BaseModel):
         text: str = Field(..., description="Input text to classify")
-        max_results: int = Field(15, description="Maximum Spheres to return")
+        min_relevance: float = Field(0.05, description="Minimum relevance threshold")
 
     class SphereResponse(BaseModel):
         id: str
         name: str
         house_id: str
+        house_name: str
+        index: int
         keywords: List[str]
-        score: Optional[float] = None
 
-    class ConnectionResponse(BaseModel):
-        source: str
-        target: str
-        connection_type: str
+    class BridgeResponse(BaseModel):
+        houses: List[str]
+        names: List[str]
+        type: str
         strength: float
+        description: str
+
+    class AnalysisResponse(BaseModel):
+        task: str
+        activated_houses: List[str]
+        activated_sphere_count: int
+        bridges: List[Dict[str, Any]]
+        blind_spots: List[str]
+        cascade_chains: List[Dict[str, Any]]
+        coherence_score: float
+        synthesis_notes: str
+        house_analyses: Dict[str, Any]
 
     class HouseResponse(BaseModel):
         id: str
         name: str
+        index: int
         color: str
-        harmonic: int
         description: str
         spheres: List[SphereResponse]
-        connections: List[ConnectionResponse]
+        connections: List[Dict[str, Any]]
 
-    class AnalyzeResponse(BaseModel):
-        activated_houses: List[str]
-        activated_spheres: List[SphereResponse]
-        bridges: List[Dict[str, Any]]
-        blind_spots: List[str]
-        cascade_chains: List[Any]
-        coherence_score: float
-        synthesis_notes: str
-        prompt: str
-
-    class HealthResponse(BaseModel):
-        status: str
-        lattice_N: int
-        num_houses: int
-        num_spheres: int
-        num_connections: int
-        version: str
+    class ConnectionResponse(BaseModel):
+        source: str
+        target: str
+        type: str
+        strength: float
+        description: str
+        examples: List[str]
 
     class LatticeSummaryResponse(BaseModel):
-        N: int
-        num_houses: int
-        num_spheres: int
-        num_connections: int
-        has_element_145: bool
-        houses: List[Dict[str, Any]]
-
+        name: str
+        version: str
+        total_houses: int
+        total_spheres: int
+        total_connections: int
+        canonical_n: int
+        houses: List[Dict[str, str]]
+        element_145: Dict[str, Any]
 
 # ═══════════════════════════════════════════════════════════════
 # APP FACTORY
 # ═══════════════════════════════════════════════════════════════
 
 def create_app(ontology_path: Optional[str] = None) -> "FastAPI":
-    """
-    Create the FastAPI application with lattice engine.
-
-    Parameters
-    ----------
-    ontology_path : str, optional
-        Path to lattice_ontology.yaml.
-
-    Returns
-    -------
-    FastAPI
-        Configured application.
-    """
+    """Create and configure the FastAPI application."""
     if not HAS_FASTAPI:
         raise ImportError(
-            "FastAPI not installed. Install with: pip install fastapi uvicorn\n"
-            "Alternative: use the MCP server (mcp_server.py) or direct Python import."
+            "FastAPI not installed. Install with: pip install element145[api]"
         )
 
     app = FastAPI(
         title="Element 145 — Lattice Context Protocol API",
         description=(
             "REST API for the Sheldonbrain 144+1 Ontological Lattice. "
-            "Maps inputs across 12 Houses × 12 Spheres + Element 145 coordination. "
+            "12 Houses × 12 Spheres + Element 145 (Admin Sphere). "
+            "N=145 empirically confirmed as global optimum. "
             "Attribution: All inventions Dave Sheldon's, Atlas Lattice Foundation."
         ),
-        version="0.1.0",
-        docs_url="/docs",
-        redoc_url="/redoc",
+        version="2.0.0",
+        license_info={"name": "Atlas Lattice Foundation License"},
     )
 
-    # CORS — allow all origins for development
     app.add_middleware(
         CORSMiddleware,
         allow_origins=["*"],
@@ -153,181 +135,186 @@ def create_app(ontology_path: Optional[str] = None) -> "FastAPI":
         allow_headers=["*"],
     )
 
-    # Initialize engine
-    engine = create_engine(ontology_path)
+    engine = LCPEngine(LatticeOntology(ontology_path))
 
-    # ─── Endpoints ──────────────────────────────────────────
+    # ─── Health ───────────────────────────────────────────
 
-    @app.get("/health", response_model=HealthResponse)
-    async def health_check():
-        """Health check — confirms the lattice is loaded and operational."""
-        return HealthResponse(
-            status="ok",
-            lattice_N=145,
-            num_houses=len(engine.ontology.houses),
-            num_spheres=sum(
-                len(h.get("spheres", []))
-                for h in engine.ontology.houses.values()
-            ) if isinstance(engine.ontology.houses, dict) else 144,
-            num_connections=len(engine.ontology.edges),
-            version="0.1.0",
+    @app.get("/health")
+    async def health():
+        issues = engine.ontology.validate()
+        return {
+            "status": "healthy" if not issues else "degraded",
+            "version": "2.0.0",
+            "houses": len(engine.ontology.houses),
+            "spheres": len(engine.ontology.spheres),
+            "connections": len(engine.ontology.edges),
+            "canonical_n": 145,
+            "issues": issues,
+        }
+
+    # ─── Full Pipeline ────────────────────────────────────
+
+    @app.post("/analyze", response_model=AnalysisResponse)
+    async def analyze(req: AnalyzeRequest):
+        result = engine.analyze(req.task, req.min_relevance)
+        return AnalysisResponse(
+            task=result.task,
+            activated_houses=result.activated_houses,
+            activated_sphere_count=len(result.activated_spheres),
+            bridges=result.bridges,
+            blind_spots=result.blind_spots,
+            cascade_chains=result.cascade_chains,
+            coherence_score=result.coherence_score,
+            synthesis_notes=result.synthesis_notes,
+            house_analyses=result.house_analyses,
         )
 
-    @app.post("/analyze", response_model=AnalyzeResponse)
-    async def analyze(request: AnalyzeRequest):
-        """
-        Run the full LCP pipeline: INGEST → ACTIVATE → ROUTE → SYNTHESIZE.
-
-        Element 145 coordinates cross-domain analysis, identifies blind spots,
-        contradictions, cascade chains, and emergent connections.
-        """
-        try:
-            result = engine.analyze(request.text)
-            prompt = engine.generate_prompt(result, mode=request.scaffold_mode)
-
-            return AnalyzeResponse(
-                activated_houses=result.activated_houses,
-                activated_spheres=[
-                    SphereResponse(
-                        id=s.id, name=s.name, house_id=s.house_id,
-                        keywords=list(s.keywords), score=None
-                    )
-                    for s in result.activated_spheres
-                ],
-                bridges=result.bridges,
-                blind_spots=result.blind_spots,
-                cascade_chains=result.cascade_chains,
-                coherence_score=result.coherence_score,
-                synthesis_notes=result.synthesis_notes,
-                prompt=prompt,
-            )
-        except Exception as e:
-            raise HTTPException(status_code=500, detail=str(e))
+    # ─── Ingest Only ──────────────────────────────────────
 
     @app.post("/ingest")
-    async def ingest(request: IngestRequest):
-        """
-        INGEST phase only — classify input text to relevant Spheres and Houses.
-        Use this for lightweight classification without full synthesis.
-        """
-        results = engine.ontology.search_spheres(request.text)[:request.max_results]
-        houses = set()
-        spheres = []
-
-        for sphere, score in results:
-            spheres.append({
-                "id": sphere.id,
-                "name": sphere.name,
-                "house_id": sphere.house_id,
-                "score": score,
-            })
-            houses.add(sphere.house_id)
-
-        all_houses = [f"H{i}" for i in range(1, 13)]
-        blind_spots = [h for h in all_houses if h not in houses]
-
+    async def ingest(req: IngestRequest):
+        state = engine.ingest(req.text, req.min_relevance)
         return {
-            "activated_spheres": spheres,
-            "activated_houses": sorted(houses),
-            "blind_spots": blind_spots,
-            "coverage": f"{len(houses)}/12",
+            "activated_houses": sorted(state.activated_houses),
+            "activated_spheres": {
+                sid: {
+                    "name": engine.ontology.spheres[sid].name,
+                    "house": engine.ontology.spheres[sid].house_id,
+                    "relevance": score,
+                }
+                for sid, score in sorted(
+                    state.activated_spheres.items(),
+                    key=lambda x: x[1], reverse=True,
+                )
+                if sid in engine.ontology.spheres
+            },
+            "house_coverage": state.house_coverage,
+            "sphere_coverage": state.coverage,
         }
+
+    # ─── Houses ───────────────────────────────────────────
 
     @app.get("/houses")
     async def list_houses():
-        """List all 12 Houses with basic metadata."""
-        houses = []
-        for h_id in sorted(engine.ontology.houses.keys(),
-                           key=lambda x: int(x[1:]) if x[1:].isdigit() else 0):
-            data = engine.ontology.get_house_data(h_id)
-            if data:
-                houses.append(data)
-        return {"houses": houses, "count": len(houses)}
+        return {
+            "houses": [
+                {"id": hid, "name": hdata.get("name", hid),
+                 "index": hdata.get("index", 0),
+                 "sphere_count": len(engine.ontology.get_spheres_for_house(hid)),
+                 "connection_count": len(engine.ontology.get_edges_for_house(hid))}
+                for hid, hdata in sorted(engine.ontology.houses.items(),
+                                          key=lambda x: int(x[0][1:]))
+            ],
+            "total": len(engine.ontology.houses),
+        }
 
     @app.get("/houses/{house_id}")
     async def get_house(house_id: str):
-        """Get detailed information about a specific House."""
-        data = engine.ontology.get_house_data(house_id)
-        if not data:
-            raise HTTPException(status_code=404, detail=f"House not found: {house_id}")
-
+        hdata = engine.ontology.get_house_data(house_id)
+        if hdata is None:
+            raise HTTPException(status_code=404, detail=f"House {house_id} not found")
         spheres = engine.ontology.get_spheres_for_house(house_id)
-        connections = engine.ontology.get_edges_for_house(house_id)
-
+        edges = engine.ontology.get_edges_for_house(house_id)
         return {
-            "house": data,
+            **hdata,
             "spheres": [
-                {"id": s.id, "name": s.name, "keywords": list(s.keywords)}
+                {"id": s.id, "name": s.name, "index": s.index,
+                 "keywords": list(s.keywords)}
                 for s in spheres
             ],
             "connections": [
-                {
-                    "source": e.source,
-                    "target": e.target,
-                    "type": e.connection_type,
-                    "strength": e.strength,
-                }
-                for e in connections
+                {"source": e.source, "target": e.target,
+                 "type": e.edge_type, "strength": e.strength,
+                 "to": e.other(house_id)}
+                for e in edges
             ],
         }
 
     @app.get("/houses/{house_id}/connections")
-    async def get_house_connections(house_id: str, min_strength: float = 0.0):
-        """Get all inter-House connections for a specific House."""
-        connections = engine.ontology.get_edges_for_house(house_id)
-        filtered = [
-            {
-                "source": e.source,
-                "target": e.target,
-                "type": e.connection_type,
-                "strength": e.strength,
-            }
-            for e in connections
-            if e.strength >= min_strength
-        ]
-        return {"house_id": house_id, "connections": filtered}
+    async def get_house_connections(house_id: str):
+        hdata = engine.ontology.get_house_data(house_id)
+        if hdata is None:
+            raise HTTPException(status_code=404, detail=f"House {house_id} not found")
+        edges = engine.ontology.get_edges_for_house(house_id)
+        return {
+            "house_id": house_id,
+            "house_name": hdata.get("name", house_id),
+            "connections": [
+                {"source": e.source, "target": e.target,
+                 "type": e.edge_type, "strength": e.strength,
+                 "description": e.description,
+                 "examples": list(e.examples),
+                 "connected_to": e.other(house_id)}
+                for e in edges
+            ],
+            "total": len(edges),
+        }
+
+    # ─── Spheres ──────────────────────────────────────────
 
     @app.get("/spheres/{sphere_id}")
     async def get_sphere(sphere_id: str):
-        """Get details for a specific Sphere."""
-        sphere = engine.ontology.get_sphere(sphere_id)
-        if not sphere:
-            raise HTTPException(status_code=404, detail=f"Sphere not found: {sphere_id}")
-
+        s = engine.ontology.get_sphere(sphere_id)
+        if s is None:
+            raise HTTPException(status_code=404, detail=f"Sphere {sphere_id} not found")
         return {
-            "id": sphere.id,
-            "name": sphere.name,
-            "house_id": sphere.house_id,
-            "keywords": list(sphere.keywords),
+            "id": s.id,
+            "name": s.name,
+            "house_id": s.house_id,
+            "house_name": s.house_name,
+            "index": s.index,
+            "keywords": list(s.keywords),
+            "is_admin": s.is_admin,
         }
+
+    # ─── Lattice Summary ─────────────────────────────────
 
     @app.get("/lattice/summary")
     async def lattice_summary():
-        """Get a structural summary of the entire lattice."""
         return {
-            "N": 145,
-            "architecture": "12 Houses × 12 Spheres + Element 145 (Admin Sphere)",
-            "empirical_status": {
-                "gue_ks": 0.2677,
-                "p_value_vs_144": 0.0154,
-                "status": "Empirically confirmed as global optimum (Manus canonical pipeline)"
-            },
-            "num_houses": len(engine.ontology.houses),
-            "num_connections": len(engine.ontology.edges),
+            "name": "Sheldonbrain 144+1 Ontological Lattice",
+            "version": "2.0.0",
+            "structure": "12 Houses × 12 Spheres + Element 145 (Admin Sphere)",
+            "canonical_n": 145,
+            "gue_ks_canonical": 0.2677,
+            "gue_ks_optimized": 0.2447,
+            "total_houses": len(engine.ontology.houses),
+            "total_spheres": len(engine.ontology.spheres),
+            "total_connections": len(engine.ontology.edges),
+            "houses": [
+                {"id": hid, "name": hdata.get("name", hid)}
+                for hid, hdata in sorted(engine.ontology.houses.items(),
+                                          key=lambda x: int(x[0][1:]))
+            ],
+            "element_145": engine.ontology.element_145,
             "attribution": "All inventions Dave Sheldon's, Atlas Lattice Foundation",
         }
 
     return app
 
-
-# Default app instance for uvicorn
-app = create_app()
-
-
 # ═══════════════════════════════════════════════════════════════
-# CLI
+# ENTRY POINT
 # ═══════════════════════════════════════════════════════════════
+
+def main():
+    """CLI entry point: element145-api"""
+    if not HAS_FASTAPI:
+        print("Error: FastAPI not installed. Install with: pip install element145[api]")
+        return
+
+    import argparse
+    parser = argparse.ArgumentParser(description="Element 145 REST API Server")
+    parser.add_argument("--host", default="0.0.0.0", help="Bind host")
+    parser.add_argument("--port", type=int, default=8145, help="Bind port")
+    parser.add_argument("--ontology", type=str, default=None,
+                        help="Path to lattice_ontology.yaml")
+    parser.add_argument("--reload", action="store_true", help="Enable auto-reload")
+    args = parser.parse_args()
+
+    import uvicorn
+    app = create_app(args.ontology)
+    uvicorn.run(app, host=args.host, port=args.port, reload=args.reload)
+
 
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("element145.integrations.api:app", host="0.0.0.0", port=8145, reload=True)
+    main()

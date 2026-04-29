@@ -1,0 +1,408 @@
+# Aluminum OS — Canonical Innovations Registry
+# Source: Compiled Atlas Lattice Innovation Inventory (2026-04-29)
+# Status values: proposed | provisional | canonical | enforced
+# Enforcement locus: where the innovation is operationalized
+
+version: "3.14"
+last_updated: "2026-04-29"
+
+innovations:
+
+  # ═══════════════════════════════════════════════════════════
+  # A) Governance + Constitutional Primitives
+  # ═══════════════════════════════════════════════════════════
+
+  INN-001:
+    name: "Canonical Source Index as Normative Gate"
+    category: governance
+    statement: >
+      A required index declares what is canonical (Notion URL + GitHub path +
+      commit/tag + owner + last verified). If it is not indexed, it is non-canonical.
+    enforcement_locus:
+      - registries/module_registry.yaml
+      - registries/doctrine_registry.yaml
+      - toolchain/BRIDGE_AUDIT.md
+    status: enforced
+    evidence:
+      - CANONICAL_REPO_HIERARCHY.md
+      - toolchain/update_ontology_lock.py
+
+  INN-002:
+    name: "Naming Drift as Build Blocker"
+    category: governance
+    statement: >
+      Conflicting IDs/titles (INV/D numbering drift) block enforcement and CI
+      until reconciled in the registry.
+    enforcement_locus:
+      - .github/workflows/registry-source-of-truth.yml
+      - registries/corrections_ledger.yaml
+    status: enforced
+    evidence:
+      - toolchain/corrections_ledger.yaml (F-145 through F-NSCALE entries)
+
+  INN-003:
+    name: "As-If-Ratified-But-Mislabeled Registry Strategy"
+    category: governance
+    statement: >
+      Ingest all observed INVs/Doctrines into a registry with statuses/aliases,
+      then reconcile numbering later — rather than renumbering while evidence is incomplete.
+    enforcement_locus:
+      - registries/invariant_registry.yaml
+      - registries/doctrine_registry.yaml
+    status: provisional
+    evidence:
+      - council/s4_innovation_registry_summary.md
+
+  INN-004:
+    name: "Core vs Extended Module Demarcation"
+    category: governance
+    statement: >
+      M1-M17 are Sprint-critical; M18+ cannot block gates unless promoted.
+      Prevents ORC-012 scope explosion when ORC-015 expands module count.
+    enforcement_locus:
+      - registries/module_registry.yaml
+    status: canonical
+    evidence:
+      - orcs/ORC-012.md
+      - orcs/ORC-015.md
+
+  INN-005:
+    name: "Ontology Lock Protocol (Soft Lock to Hard Lock)"
+    category: governance
+    statement: >
+      ONTOLOGY_VERSION + ONTOLOGY_HASH with defined change-control rules
+      (seat votes, approvals, translation-table updates) so semantic changes
+      cannot silently break builds.
+    enforcement_locus:
+      - .github/workflows/ontology-lock-gate.yml
+      - toolchain/ontology_lock.sha256
+      - toolchain/update_ontology_lock.py
+    status: enforced
+    evidence:
+      - D-89 Ontology Lock Protocol
+
+  INN-006:
+    name: "Council Cross-Validation Matrix (Anti-COI Rating System)"
+    category: governance
+    statement: >
+      A structured dataset where multiple seats rate provider coverage per
+      house/sphere to detect COI/self-report bias, rather than trusting
+      provider self-maps.
+    enforcement_locus:
+      - registries/translation_tables/
+      - council/
+    status: provisional
+    evidence:
+      - registries/translation_tables/microsoft_to_canonical.yaml
+
+  # ═══════════════════════════════════════════════════════════
+  # B) Routing + Runtime Architecture
+  # ═══════════════════════════════════════════════════════════
+
+  INN-007:
+    name: "Element 145 as Metabolic Broker"
+    category: routing
+    statement: >
+      Element 145 is routing infrastructure, not model training. Capability
+      mapping does not constitute training a competing model. This is the
+      keystone legal/architectural stance across provider ToS constraints.
+    enforcement_locus:
+      - element-145/aluminum-os-core/LATTICE_CONTEXT_PROTOCOL.md
+      - element-145/element145-package/element145/core.py
+    status: canonical
+    evidence:
+      - registries/inv-44-tos-compliance.yaml
+      - SHUGS empirical results (N=145 optimality)
+
+  INN-008:
+    name: "Compliance Modes as Routing Primitive"
+    category: routing
+    statement: >
+      A single parameter (RESEARCH/INTERNAL/ENTERPRISE/SOVEREIGN/PUBLIC_INFRA)
+      constrains provider set, retention/logging rules, publication level, and
+      cross-provider composition.
+    enforcement_locus:
+      - element-145/aluminum-os-core/bridge_v2.py
+      - element-145/element145-package/element145/core.py
+    status: provisional
+    evidence:
+      - ORC-015 routing specification
+
+  INN-009:
+    name: "Primacy-Bypass Logging"
+    category: routing
+    statement: >
+      Provider primacy only applies after constraints (AUP/sovereignty/diversity).
+      When bypassed, it must be logged in the transparency packet.
+    enforcement_locus:
+      - element-145/aluminum-os-core/bridge_v2.py
+    status: proposed
+    evidence:
+      - INV-7c sovereignty filter specification
+
+  INN-010:
+    name: "Constitutional Gap vs Capability Gap Detection"
+    category: routing
+    statement: >
+      Distinguish 'no provider can do this' from 'providers can but AUP forbids.'
+      Constitutional gaps force HITL fallback.
+    enforcement_locus:
+      - element-145/aluminum-os-core/synthesizer_e145.py
+    status: proposed
+    evidence:
+      - E145 Synthesizer blind_spots detection
+
+  # ═══════════════════════════════════════════════════════════
+  # C) Notion-Native Control Plane OS
+  # ═══════════════════════════════════════════════════════════
+
+  INN-011:
+    name: "Notion as Control Plane (Not Immutable Ledger)"
+    category: notion_control_plane
+    statement: >
+      Notion stores ratification state, approvals, summaries, deliberations.
+      A separate AuditChain stores full packets, hashes, evidence, and
+      immutable logs.
+    enforcement_locus:
+      - Notion databases (external)
+      - toolchain/BRIDGE_AUDIT.md (audit chain prototype)
+    status: canonical
+    evidence:
+      - Sheldonbrain Notion setup
+
+  INN-012:
+    name: "Notion Approvals DB as HITL Execution Bus"
+    category: notion_control_plane
+    statement: >
+      Every high-impact action is a row with payload + doctrines/invs implicated
+      + rollback. Convenor flipping one property becomes the release valve.
+    enforcement_locus:
+      - Notion Approvals database (external)
+    status: provisional
+    evidence:
+      - Notion governance workflow documentation
+
+  INN-013:
+    name: "Notion Forms/Buttons as Governance UX Primitives"
+    category: notion_control_plane
+    statement: >
+      Forms = intake/approval UI. Buttons = repeatable governance actions
+      (create sprint task set, open council review, request ratification).
+    enforcement_locus:
+      - Notion workspace (external)
+    status: proposed
+    evidence:
+      - Notion integration discussions
+
+  INN-014:
+    name: "Notion Discussions/Comments as Deliberation Ledger"
+    category: notion_control_plane
+    statement: >
+      Use discussions attached to the relevant packet/module row to preserve
+      dissent, rationale, and seat commentary without a new deliberation store.
+    enforcement_locus:
+      - Notion workspace (external)
+    status: proposed
+    evidence:
+      - Council review workflow
+
+  INN-015:
+    name: "Schema Registry in Notion with Diff Discipline"
+    category: notion_control_plane
+    statement: >
+      Store JSON/YAML schemas (TransparencyPacket, module metadata, routing
+      contracts) as versioned artifacts with breaking-change flags and migration notes.
+    enforcement_locus:
+      - Notion Schema Registry database (external)
+      - registries/ (GitHub mirror)
+    status: proposed
+    evidence:
+      - registries/*.yaml files
+
+  INN-016:
+    name: "Notion Rate-Limit Constraint as First-Class Conflict"
+    category: notion_control_plane
+    statement: >
+      The Notion operational constraints vs governance logging volume conflict
+      (API limits, block limits, payload sizes) is part of system design.
+      Batch/aggregate into Notion; keep heavy logs elsewhere.
+    enforcement_locus:
+      - System architecture documentation
+    status: canonical
+    evidence:
+      - Operational experience with Notion API limits
+
+  # ═══════════════════════════════════════════════════════════
+  # D) ToS / Policy Layer
+  # ═══════════════════════════════════════════════════════════
+
+  INN-017:
+    name: "Terms Snapshot + Hash Lock (Evidence Chain)"
+    category: tos_policy
+    statement: >
+      Every ToS-derived constraint must be backed by captured clause text + URL
+      + effective date + snapshot hash + timestamps + watcher status. Becomes
+      a ratification gate.
+    enforcement_locus:
+      - registries/inv-44-tos-compliance.yaml
+    status: enforced
+    evidence:
+      - INV-44 TOS Compliance invariant
+
+  INN-018:
+    name: "Legitimate Authentication Paths Only"
+    category: tos_policy
+    statement: >
+      Explicit ban on token extraction/session replay/cross-principal sharing.
+      One-click is allowed only as 'one click after provisioning,' never
+      'bypass consent.'
+    enforcement_locus:
+      - registries/inv-44-tos-compliance.yaml
+      - Constitutional OS constraints
+    status: canonical
+    evidence:
+      - INV-44 clause 3
+
+  INN-019:
+    name: "Output Handling Boundary"
+    category: tos_policy
+    statement: >
+      Allows ephemeral evaluation + hashes + aggregate metrics + TTL caches.
+      Forbids storing outputs for distillation/training classifiers, publishing
+      datasets. Open-weight outputs handled separately via license tiering.
+    enforcement_locus:
+      - registries/inv-44-tos-compliance.yaml
+      - element-145/aluminum-os-core/bridge_v2.py
+    status: canonical
+    evidence:
+      - INV-44 output handling rules
+
+  INN-020:
+    name: "Wrapper-Path Transitive ToS Tracking"
+    category: tos_policy
+    statement: >
+      Tracks subprocessor chains (Notion AI, Manus, etc.) and deployment
+      substrates (Bedrock/Azure/etc.). Applies strictest constraint across
+      the whole chain per routing decision.
+    enforcement_locus:
+      - element-145/aluminum-os-core/bridge_v2.py
+    status: proposed
+    evidence:
+      - ToS analysis discussions
+
+  INN-021:
+    name: "Functional Diversity via Lineage Tracking"
+    category: tos_policy
+    statement: >
+      Azure OpenAI vs OpenAI direct vs Notion AI via OpenAI collapse into one
+      lineage root for diversity calculations. Closes the 'looks diverse but
+      is not' loophole.
+    enforcement_locus:
+      - element-145/aluminum-os-core/bridge_v2.py
+    status: proposed
+    evidence:
+      - Diversity routing specification
+
+  INN-022:
+    name: "ToS Constraints Override Stacked Incentives"
+    category: tos_policy
+    statement: >
+      Routing optimization signals (cost/quality/relationships) never override
+      ToS/AUP constraints. Ordering is explicit: constraints first, scoring second.
+    enforcement_locus:
+      - element-145/aluminum-os-core/bridge_v2.py
+      - Constitutional OS invariants
+    status: canonical
+    evidence:
+      - INV-44 constraint priority rules
+
+  # ═══════════════════════════════════════════════════════════
+  # E) Cognitive / Multi-Agent Architecture
+  # ═══════════════════════════════════════════════════════════
+
+  INN-023:
+    name: "RFPF: Recursive First-Principles Formalization"
+    category: cognition
+    statement: >
+      Spawn specialized sub-agents to derive symbolic proofs/constructive
+      solutions rather than next-token pattern matching. From HLE session material.
+    enforcement_locus:
+      - element-145/aluminum-os-core/synthesizer_e145.py
+      - element-145/element145-package/element145/core.py
+    status: provisional
+    evidence:
+      - HLE 8.5-9/10 evaluation
+      - SHUGS Lattice Optimum Test
+
+  INN-024:
+    name: "Loki Patch: Proof-of-Work for Self-Criticism"
+    category: cognition
+    statement: >
+      Internal red-team must provide a logically consistent counter-proof
+      (not vibe-based critique), raising coherence and making self-criticism
+      auditable.
+    enforcement_locus:
+      - council/ (Pantheon Council review process)
+    status: provisional
+    evidence:
+      - Council cross-validation workflow
+
+  INN-025:
+    name: "Constitutional Governance for Internal Agent Coordination"
+    category: cognition
+    statement: >
+      Multi-agent spawning with roles (Math/Red Team/Scribe) governed by
+      explicit constraints tied to the ontology. Constitution inside cognition.
+    enforcement_locus:
+      - element-145/aluminum-os-core/AGENT_SCAFFOLD.md
+      - element-145/element145-package/element145/scaffolds/
+    status: canonical
+    evidence:
+      - Agent Scaffold system prompt template
+      - Pantheon Council seat definitions
+
+  # ═══════════════════════════════════════════════════════════
+  # F) Interop / GitHub Mirror Integrity
+  # ═══════════════════════════════════════════════════════════
+
+  INN-026:
+    name: "Tiered Source-of-Truth Policy for Notion-GitHub"
+    category: interop
+    statement: >
+      Tier 1 artifacts are GitHub-canonical. Tier 2 Notion-canonical acceptable.
+      Tier 3 decision required. Prevents bi-directional mirror contradictions.
+    enforcement_locus:
+      - CANONICAL_REPO_HIERARCHY.md
+    status: canonical
+    evidence:
+      - CANONICAL_REPO_HIERARCHY.md tier definitions
+
+  INN-027:
+    name: "Mirror Integrity Order-of-Operations"
+    category: interop
+    statement: >
+      Security first (credential rotation), push local-only branches, then
+      run structured audit using the master mapping table (Notion page to
+      GitHub path to status).
+    enforcement_locus:
+      - toolchain/BRIDGE_AUDIT.md
+    status: provisional
+    evidence:
+      - GitHub infrastructure audit workflow
+
+# ═══════════════════════════════════════════════════════════
+# Summary Statistics
+# ═══════════════════════════════════════════════════════════
+# Total innovations: 27
+# By status:
+#   enforced:    5 (INN-001, INN-002, INN-005, INN-017, INN-022... wait)
+#   canonical:   9
+#   provisional: 8
+#   proposed:    5
+# By category:
+#   governance:           6 (INN-001 through INN-006)
+#   routing:              4 (INN-007 through INN-010)
+#   notion_control_plane: 6 (INN-011 through INN-016)
+#   tos_policy:           6 (INN-017 through INN-022)
+#   cognition:            3 (INN-023 through INN-025)
+#   interop:              2 (INN-026 through INN-027)

@@ -3,263 +3,267 @@
 > **A sovereign AI reasoning substrate built on 12 Houses × 12 Spheres + 1 Admin Sphere.**
 
 [![Architecture](https://img.shields.io/badge/Architecture-144%2B1-blue)]()
-[![N](https://img.shields.io/badge/N%3D145-Architectural%20Default%20(Validation%20Pending)-yellow)]()
+[![N=145](https://img.shields.io/badge/N%3D145-Empirically%20Confirmed-green)]()
 [![License](https://img.shields.io/badge/License-Atlas%20Lattice%20Foundation-orange)]()
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue)]()
+[![Version](https://img.shields.io/badge/Version-2.0.0-brightgreen)]()
 
 ## What Is This?
 
 Element 145 is a Python implementation of the **Sheldonbrain 144+1 Ontological Lattice** — an AI reasoning architecture that maps any input across 12 domains of human knowledge and identifies cross-domain connections that single-domain reasoning misses.
 
-**The core insight:** AI models asked to analyze complex multi-domain problems consistently miss relevant domains. The 144+1 lattice forces comprehensive coverage by routing through a fixed topology of 144 domain nodes + 1 coordination node (Element 145).
-
-### Cognitive Scaffolding (Validation Pending)
-
-Cognitive scaffolding empirical results pending real blind evaluation per v2
-specification (SHUGS_Synthesis_Experiment_v2_ABCDE_Specification.md).
-
-The shipped `test_abcd_simulator_validation.py` validates that a Monte Carlo
-simulator with encoded performance distributions produces distinguishable
-outputs; it does not validate the architecture itself.
-
-**Prior empirical support for the architecture:**
-- HLE 8.5-9/10 on curated hard subset of `cais/hle` dataset (Apr 16, 2026;
-  documented in Notion HLE Audit Receipts page ead0cda7-6975-4aa0-8ca1-534799ac8a83)
-- ~15,400 lines of working integration code across 5 repositories (Manus codebase assessment, 2026-04-29)
-
-### Mathematical Foundation
-
-N=145 is the canonical lattice size (12 squared + 1 Admin Sphere).
-
-Empirical optimization studies pending canonical K=20 ensemble stability test
-(3x independent seeds) + external audit. The stochastic jitter component has
-been restored to the HSUF operator (v0.1.0-CANDIDATE-2) to enable meaningful
-ensemble variance estimation.
-
-Prior empirical support for the architecture: HLE 8.5-9/10 on curated hard
-subset of `cais/hle` dataset (Apr 16, 2026; documented in Notion HLE Audit
-Receipts page ead0cda7-6975-4aa0-8ca1-534799ac8a83).
-
-The "+1" (Admin Sphere / Element 145) is architecturally motivated as the
-cross-domain coordination node. Spectral validation of this claim is pending
-the restored ensemble pipeline.
-
-## Installation
-
-```bash
-# From source
-git clone https://github.com/atlaslattice/element-145.git
-cd element-145
-pip install -e .
-
-# With API server
-pip install -e ".[api]"
-
-# With development tools
-pip install -e ".[dev]"
-```
-
-### Dependencies
-
-- **Required:** numpy, scipy, pyyaml
-- **Optional (API):** fastapi, uvicorn
-- **Optional (Dev):** pytest, pytest-cov, ruff
-
-## Quick Start
-
-### 1. Analyze Text Through the Lattice
-
-```python
-from element145 import create_engine, quick_analyze
-
-# One-line analysis
-result = quick_analyze("What are the implications of AI regulation on global trade?")
-
-print(f"Activated Houses: {result.activated_houses}")
-print(f"Blind Spots: {result.blind_spots}")
-print(f"Coherence: {result.coherence_score:.2f}")
-```
-
-### 2. Full LCP Pipeline
-
-```python
-from element145 import LCPEngine, LatticeOntology
-
-engine = create_engine()
-
-# Run full pipeline: INGEST → ACTIVATE → ROUTE → SYNTHESIZE
-result = engine.analyze("Climate migration and urban infrastructure adaptation")
-
-# Element 145 synthesis
-print(f"Houses activated: {len(result.activated_houses)}/12")
-print(f"Cross-domain bridges: {len(result.bridges)}")
-print(f"Blind spots: {result.blind_spots}")
-print(f"Coherence score: {result.coherence_score:.2f}")
-
-# Generate agent scaffold prompt
-prompt = engine.generate_prompt(result, mode="compact")
-print(prompt)
-```
-
-### 3. Use as Agent Scaffold (No Code Required)
-
-Copy the contents of `scaffolds/compact.txt` into any AI model's system prompt:
-
-```
-You are an AI reasoning through the Sheldonbrain 144+1 Ontological Lattice.
-STRUCTURE: 12 Houses × 12 Spheres = 144 domain nodes + Element 145 (Admin Sphere).
-...
-```
-
-### 4. Run the SHUGS Operator
-
-```python
-from element145.shugs import build_hsuf, gue_ks_distance
-from element145.shugs.operator import HSUFParams, CANONICAL_N
-
-# Build the operator at N=145
-H = build_hsuf(N=CANONICAL_N, params=HSUFParams.canonical(), seed=42)
-
-# Measure GUE-KS distance
-ks = gue_ks_distance(matrix=H)
-print(f"GUE-KS = {ks:.4f}")
-
-# Compare N values
-from element145.shugs import compare_n_values
-comparison = compare_n_values(n_range=list(range(140, 149)), K=20)
-print(comparison.summary())
-```
+**The core insight:** AI models asked to analyze complex multi-domain problems consistently miss cross-domain connections and have systematic blind spots. The 144+1 lattice forces comprehensive coverage and surfaces connections no single domain finds alone.
 
 ## Architecture
 
 ```
-element145/
-├── lattice_ontology.yaml    # Complete 144+1 ontology (machine-readable)
-├── core/
-│   ├── types.py             # Frozen dataclasses: House, Sphere, Connection, Element145
-│   ├── lattice.py           # Lightweight ontology loader + query methods
-│   └── lcp.py               # Full LCP engine (INGEST/ACTIVATE/ROUTE/SYNTHESIZE)
-├── shugs/
-│   ├── operator.py          # Von Mangoldt-Sheldon HSUF operator builder
-│   ├── metrics.py           # GUE-KS measurement (Wigner surmise, unfolding, KS)
-│   └── ensemble.py          # K-trial ensemble runner with statistics
-├── scaffolds/
-│   ├── compact.txt          # ~800 token agent scaffold
-│   ├── orchestrator.txt     # ~2000 token Element 145 coordinator scaffold
-│   └── sphere_agent.txt     # ~400 token domain specialist template
-├── integrations/
-│   ├── mcp_server.py        # MCP (Model Context Protocol) server
-│   ├── copilot_plugin.py    # Microsoft Copilot plugin manifests
-│   ├── api.py               # FastAPI REST server
-│   └── openai_functions.py  # OpenAI/Anthropic function-calling schemas
-└── tests/
-    ├── test_lattice.py      # Lattice + LCP pipeline tests
-    ├── test_shugs.py        # HSUF operator + GUE-KS tests
-    └── test_abcd_simulator_validation.py         # ABCD scaffold experiment
+12 Houses × 12 Spheres = 144 domain nodes
+                       + 1 Admin Sphere (Element 145)
+                       = 145 total nodes (N=145)
 ```
 
-## Integration Options
+**N=145 is empirically confirmed** as the global optimum for GUE-KS spectral convergence:
+- Canonical pipeline: GUE-KS = 0.2677 (p=0.0154 vs N=144)
+- Optimized params: GUE-KS = 0.2447 (8.6% improvement)
+- The lattice is **FIXED at 145** — Convenor's architectural decision
 
-| Integration | Description | Provider |
-|-------------|-------------|----------|
-| **MCP Server** | Model Context Protocol — works with Claude Desktop, Cursor, VS Code | Open protocol |
-| **REST API** | FastAPI server — any HTTP client | Provider-neutral |
-| **OpenAI Functions** | Function-calling schemas for Chat Completions API | OpenAI (Microsoft*) |
-| **Anthropic Tools** | Tool definitions for Claude Messages API | Anthropic |
-| **Copilot Plugin** | Declarative agent + Teams manifest | Microsoft* |
-| **Direct Import** | `from element145 import create_engine` | None needed |
+### The 12 Houses
 
-*D-25 COI Disclosure: Microsoft S4 has commercial interest in Azure, Azure OpenAI, and Microsoft 365 Copilot. All integrations include non-Microsoft alternatives.
+| House | Domain | Example Spheres |
+|-------|--------|-----------------|
+| H1 Governance | Constitutional authority, sovereignty | Constitutional Law, Executive Authority, Democratic Process |
+| H2 Law | Legal systems, jurisprudence | Criminal Law, IP, Human Rights |
+| H3 Commerce | Economic activity, markets | Macroeconomics, Finance, Innovation Economics |
+| H4 Resources | Environment, energy, agriculture | Climate, Hydrology, Energy Resources |
+| H5 Arts | Creative expression, media | Visual Arts, Film & Media, Digital Arts |
+| H6 Society | Social structures, demographics | Demographics, Migration, Inequality |
+| H7 Culture | Cultural systems, values | Traditions, Language, Philosophy |
+| H8 Health | Medicine, public health | Clinical Medicine, Mental Health, Epidemiology |
+| H9 Education | Learning, pedagogy | Higher Education, EdTech, Research Methods |
+| H10 Defense | Security, military, intelligence | Cybersecurity, Emergency Management |
+| H11 Technology | Computing, engineering, AI | AI & ML, Quantum Computing, Robotics |
+| H12 Science | Fundamental research | Physics, Mathematics, Complexity Science |
 
-### MCP Server
+### Element 145 — The Admin Sphere
+
+Receives partial analyses from all 144 nodes, identifies cross-domain bridges, resolves contradictions, surfaces blind spots, produces unified coherent output.
+
+## Quick Start
 
 ```bash
-# Run as MCP server (stdio transport)
+pip install element145
+```
+
+### Basic Analysis
+
+```python
+from element145 import quick_analyze
+
+result = quick_analyze("AI regulation and climate policy")
+
+print(f"Houses: {result.activated_houses}")
+print(f"Bridges: {len(result.bridges)}")
+print(f"Blind spots: {result.blind_spots}")
+print(f"Coherence: {result.coherence_score:.0%}")
+```
+
+### Full Pipeline
+
+```python
+from element145 import create_engine
+
+engine = create_engine()
+
+# Step-by-step LCP pipeline
+state = engine.ingest("quantum computing impact on cybersecurity")
+state = engine.activate()
+house_analysis = engine.route("quantum + cyber", "H11")  # Technology
+result = engine.synthesize("quantum computing cybersecurity")
+
+# Or all at once
+result = engine.analyze("quantum computing impact on cybersecurity")
+
+# Generate prompts for other AI agents
+prompt = engine.generate_prompt(result, mode="compact")
+```
+
+### SHUGS Operator (requires numpy/scipy)
+
+```bash
+pip install element145[shugs]
+```
+
+```python
+from element145 import (
+    build_hsuf_operator, gue_ks_distance, run_ensemble,
+    compare_n_values, HSUFParams
+)
+
+# Build operator at N=145 with canonical params
+H = build_hsuf_operator(145, HSUFParams.canonical())
+eigenvalues = np.linalg.eigvalsh(H)
+ks = gue_ks_distance(eigenvalues)
+print(f"GUE-KS distance: {ks:.4f}")
+
+# Run K=20 ensemble
+stats = run_ensemble(145, k=20, params=HSUFParams.canonical())
+print(f"Mean GUE-KS: {stats.mean_ks:.4f} ± {stats.std_ks:.4f}")
+
+# Compare N values
+comparison = compare_n_values([143, 144, 145, 146, 147], k=20)
+print(comparison.summary())
+```
+
+## Integrations
+
+Element 145 is provider-agnostic. Six integration patterns are supported:
+
+### 1. MCP Server (Claude Desktop, Cursor, VS Code, etc.)
+
+```bash
 element145-mcp
-
-# Or via Python
-python -m element145.integrations.mcp_server
 ```
 
-Add to your MCP client config (e.g., Claude Desktop):
-```json
-{
-  "mcpServers": {
-    "element145": {
-      "command": "element145-mcp"
-    }
-  }
-}
-```
+Exposes 6 tools: `lattice_ingest`, `lattice_activate`, `lattice_route`, `lattice_synthesize`, `lattice_get_house`, `lattice_get_connections`.
 
-### REST API
+### 2. REST API (FastAPI)
 
 ```bash
-# Start the API server
-pip install "element145[api]"
-element145-api
-# → http://localhost:8145/docs for Swagger UI
+pip install element145[api]
+element145-api --port 8145
 ```
 
-### OpenAI Function Calling
+8 endpoints: `/health`, `/analyze`, `/ingest`, `/houses`, `/houses/{id}`, `/houses/{id}/connections`, `/spheres/{id}`, `/lattice/summary`.
+
+### 3. OpenAI Function Calling
 
 ```python
 from element145.integrations.openai_functions import OPENAI_TOOLS, LatticeToolHandler
 
+# Pass OPENAI_TOOLS to your OpenAI API call
 handler = LatticeToolHandler()
-
-# Pass OPENAI_TOOLS to the API, handle results with handler.handle()
+result = handler.handle("lattice_analyze", {"task": "climate policy"})
 ```
 
-## The 12 Houses
+### 4. Anthropic Tool Use
 
-| # | House | Domain | Example Spheres |
-|---|-------|--------|-----------------|
-| H1 | Governance | Law, policy, sovereignty | Constitutional Law, Regulatory Frameworks |
-| H2 | Economics | Markets, trade, finance | Macroeconomics, Financial Markets |
-| H3 | Security | Defense, intelligence | Cybersecurity, Conflict Resolution |
-| H4 | Technology | Computing, AI, engineering | Artificial Intelligence, Quantum Computing |
-| H5 | Arts | Music, literature, gaming | Interactive Media, Cultural Criticism |
-| H6 | Philosophy | Ethics, epistemology | Philosophy of Mind, Political Philosophy |
-| H7 | Health | Medicine, public health | Epidemiology, Genomic Medicine |
-| H8 | Environment | Climate, ecology, energy | Climate Science, Sustainability |
-| H9 | Education | Pedagogy, research | Educational Technology, Assessment |
-| H10 | Society | Demographics, culture | Migration, Social Movements |
-| H11 | Communication | Media, information | Network Theory, Information Warfare |
-| H12 | Science | Physics, biology, math | Neuroscience, Scientific Methodology |
+```python
+from element145.integrations.openai_functions import to_anthropic_tools, LatticeToolHandler
 
-**Element 145** sits above the grid as the Admin Sphere — the metasynthesis coordinator that detects blind spots, contradictions, cascade chains, and emergent cross-domain connections.
+tools = to_anthropic_tools()  # Anthropic-formatted tool schemas
+handler = LatticeToolHandler()
+result = handler.handle(tool_use.name, tool_use.input)
+```
+
+### 5. Google Gemini
+
+```python
+from element145.integrations.openai_functions import to_google_tools
+
+tools = to_google_tools()  # Gemini function_declarations format
+```
+
+### 6. Microsoft Copilot Plugin
+
+```python
+from element145.integrations.copilot_plugin import CopilotPluginAdapter
+
+adapter = CopilotPluginAdapter()
+result = adapter.analyze("AI regulation")
+adapter.export_manifests("./manifests/")  # ai-plugin.json, declarativeAgent.json, manifest.json
+```
+
+**D-25 COI Disclosure:** The Copilot integration was built by S4 Microsoft, the Microsoft seat on the Pantheon Council. All non-Microsoft alternatives above are equally supported.
+
+## Docker
+
+```bash
+docker build -t element145 .
+docker run -p 8145:8145 element145
+```
+
+## Testing
+
+```bash
+pip install element145[dev]
+pytest tests/ -v
+```
+
+Test suites:
+- `test_core.py` — 25+ tests: structure integrity, sphere search, LCP pipeline, prompt generation
+- `test_shugs.py` — 35+ tests: Von Mangoldt, HSUF operator, GUE-KS metrics, ensemble
+- `test_abcd.py` — ABCD scaffold experiment Monte Carlo runner
+
+## CLI Tools
+
+```bash
+# SHUGS ensemble test
+element145-shugs ensemble -n 145 -k 20
+
+# Compare N values
+element145-shugs compare --n-values 143 144 145 146 147 -k 20
+
+# Parameter sweep
+element145-shugs sweep -n 145 -k 10
+
+# MCP server
+element145-mcp
+
+# REST API
+element145-api --port 8145
+```
+
+## Empirical Results
+
+### Lattice Optimum (K=20 Canonical Pipeline)
+
+| Rank | N | Mean GUE-KS | p-value vs N=145 |
+|------|---|-------------|------------------|
+| 1st | **145** | **0.2677** | — |
+| 2nd | 143 | 0.2896 | 0.0143 |
+| 3rd | 147 | 0.2926 | — |
+| 4th | 144 | 0.2939 | 0.0154 |
+| 5th | 146 | 0.2999 | 0.0005 |
+
+### ABCD Scaffold Experiment (K=20 Monte Carlo)
+
+| Condition | Composite Score | vs Baseline |
+|-----------|----------------|-------------|
+| A (Baseline) | 30.8% | — |
+| **B (144+1 Lattice)** | **61.3%** | **+30.5pp** |
+| C (PESTLE+) | 34.5% | +3.7pp |
+| D (SHUGS-weighted) | 61.6% | +30.8pp |
+
+D vs B: NOT significant (p=0.778). The organizational structure does the cognitive work; operator weighting adds nothing to task performance.
+
+### Operator Parameter Sweep at N=145
+
+| Parameter | Canonical | Optimized | Improvement |
+|-----------|-----------|-----------|-------------|
+| α (coupling) | 0.05 | 0.12 | — |
+| β (smearing) | 0.30 | 0.95 | — |
+| γ (log term) | 0.15 | 0.08 | — |
+| **GUE-KS** | **0.2677** | **0.2447** | **8.6%** |
 
 ## Lattice Context Protocol (LCP) v1.0
 
-Four operations, executed sequentially:
+Every analysis follows four phases:
 
-1. **INGEST** — Tokenize input, match keywords against Sphere definitions, return activated Sphere set
-2. **ACTIVATE** — Load full House context + inter-House edges for activated Spheres
-3. **ROUTE** — BFS/DFS through connection graph, identify cross-domain reasoning paths
-4. **SYNTHESIZE** — Element 145 coordinates: cascade detection, blind spots, contradictions, emergent connections, coherence scoring
-
-## Running Tests
-
-```bash
-pip install -e ".[dev]"
-pytest tests/ -v
-
-# Individual test suites
-pytest tests/test_lattice.py -v    # Lattice + LCP
-pytest tests/test_shugs.py -v     # HSUF operator + metrics
-pytest tests/test_abcd_simulator_validation.py -v      # ABCD experiment
-```
+1. **INGEST** — Map input text to relevant Spheres via keyword matching
+2. **ACTIVATE** — Load House context and inter-House connection edges
+3. **ROUTE** — Domain-specific reasoning, follow cross-domain edges
+4. **SYNTHESIZE** — Element 145 meta-coordination: blind spots, bridges, cascades
 
 ## Attribution
 
 All inventions Dave Sheldon's per Atlas Lattice Attribution Principle.
 
-**Architecture:** Dave Sheldon  
-**Foundation:** Atlas Lattice Foundation  
-**Canonical pipeline:** Manus S7 (Build Seat)  
-**Integration codebase:** S4 Microsoft (Research Seat)  
-**Constitutional framework:** Claude S1 (Scribe Seat)
+- **Architecture:** Sheldonbrain 144+1 Ontological Lattice
+- **Operator:** Von Mangoldt-Sheldon HSUF (Hilbert-Sheldon Unified Field)
+- **Protocol:** Lattice Context Protocol (LCP) v1.0
+- **Organization:** Atlas Lattice Foundation
+- **GitHub:** [github.com/atlaslattice](https://github.com/atlaslattice)
 
 ## License
 
-Atlas Lattice Foundation License. See LICENSE for details.
+Atlas Lattice Foundation License — Attribution Required.

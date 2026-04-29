@@ -1,38 +1,41 @@
 """
-OpenAI Function Calling — Schema definitions for the 144+1 Lattice
-====================================================================
-Provides OpenAI-compatible function/tool definitions that can be passed
-directly to the OpenAI Chat Completions API (or any compatible provider).
+Element 145 OpenAI/Anthropic Tool Schemas — Provider-Agnostic Function Calling
+================================================================================
+6 tool schemas compatible with OpenAI function calling, Anthropic tool use,
+Google Gemini, and any provider following the OpenAI tool schema convention.
 
-Usage:
-  from element145.integrations.openai_functions import OPENAI_TOOLS, handle_tool_call
-  
-  response = openai.chat.completions.create(
-      model="gpt-4o",
-      messages=[...],
-      tools=OPENAI_TOOLS,
-  )
+Tools:
+  lattice_analyze     — Full LCP pipeline
+  lattice_ingest      — Map text to Spheres/Houses
+  lattice_route       — Domain-specific House analysis
+  lattice_synthesize  — Element 145 meta-coordination
+  lattice_get_house   — House detail with Spheres
+  lattice_search      — Search Spheres by keyword
 
-D-25 COI Disclosure: OpenAI is a Microsoft portfolio company (nonexclusive
-license through 2032 per April 27, 2026 renegotiation). Azure OpenAI
-Enterprise Agreement operates under Microsoft commercial terms.
+Includes:
+  - OpenAI-format tool schemas
+  - Anthropic tool converter
+  - LatticeToolHandler for routing calls from any provider
 
-Non-Microsoft alternatives for function calling:
-  - Anthropic Claude: Tool use API (tools parameter)
-  - Google Gemini: Function calling API
-  - Mistral: Tool use API
-  - Any MCP-compatible client: Use mcp_server.py instead
+D-25 COI Disclosure: S4 Microsoft seat built this integration.
+Non-Microsoft alternatives: These schemas work with OpenAI, Anthropic, Google,
+Cohere, Mistral, and any provider supporting JSON Schema tool definitions.
 
 Attribution: All inventions Dave Sheldon's per Atlas Lattice Attribution Principle.
 """
-
 from __future__ import annotations
-import json
-from typing import Dict, Any, List, Optional
 
+import json
+from typing import Any, Callable, Dict, List, Optional
+
+from element145.core import (
+    LCPEngine,
+    LatticeOntology,
+    AnalysisResult,
+)
 
 # ═══════════════════════════════════════════════════════════════
-# OPENAI TOOL DEFINITIONS
+# OPENAI TOOL SCHEMAS
 # ═══════════════════════════════════════════════════════════════
 
 OPENAI_TOOLS: List[Dict[str, Any]] = [
@@ -41,411 +44,318 @@ OPENAI_TOOLS: List[Dict[str, Any]] = [
         "function": {
             "name": "lattice_analyze",
             "description": (
-                "Run the full Lattice Context Protocol pipeline on input text. "
-                "Maps the input across the Sheldonbrain 144+1 ontological lattice "
-                "(12 Houses × 12 Spheres + Element 145 Admin Sphere). Returns "
-                "activated Houses/Spheres, cross-domain connections, blind spots, "
-                "cascade chains, and coherence score. Use this for any multi-domain "
-                "analysis task."
+                "Run the full Lattice Context Protocol pipeline on a task: "
+                "INGEST → ACTIVATE → ROUTE → SYNTHESIZE. Returns activated Houses, "
+                "cross-domain bridges, blind spots, cascade chains, and coherence score. "
+                "Uses the Sheldonbrain 144+1 Ontological Lattice (12 Houses × 12 Spheres "
+                "+ Element 145 Admin Sphere)."
             ),
             "parameters": {
                 "type": "object",
                 "properties": {
-                    "text": {
+                    "task": {
                         "type": "string",
-                        "description": "The input text to analyze through the 144+1 lattice."
+                        "description": "The analysis task, question, or scenario to evaluate",
                     },
-                    "scaffold_mode": {
-                        "type": "string",
-                        "enum": ["compact", "orchestrator", "sphere_agent"],
-                        "description": "Prompt scaffold mode. 'compact' (~800 tokens), 'orchestrator' (~2000 tokens), 'sphere_agent' (~400 tokens per House).",
-                        "default": "compact"
-                    }
+                    "min_relevance": {
+                        "type": "number",
+                        "description": "Minimum relevance threshold for sphere activation (0.0-1.0)",
+                        "default": 0.05,
+                    },
                 },
-                "required": ["text"]
-            }
-        }
+                "required": ["task"],
+            },
+        },
     },
     {
         "type": "function",
         "function": {
             "name": "lattice_ingest",
             "description": (
-                "Classify input text into relevant Spheres and Houses without "
-                "running the full synthesis pipeline. Lightweight — use for quick "
-                "domain mapping."
+                "Map input text to relevant Spheres and Houses in the 144+1 lattice. "
+                "Returns which of the 12 Houses and 144 Spheres are activated by the input."
             ),
             "parameters": {
                 "type": "object",
                 "properties": {
                     "text": {
                         "type": "string",
-                        "description": "Input text to classify."
+                        "description": "Input text to classify against the lattice",
                     },
-                    "max_spheres": {
-                        "type": "integer",
-                        "description": "Maximum number of Spheres to return.",
-                        "default": 15
-                    }
-                },
-                "required": ["text"]
-            }
-        }
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "lattice_get_house",
-            "description": (
-                "Get detailed information about a specific House in the lattice, "
-                "including all 12 Spheres with keywords and inter-House connections."
-            ),
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "house_id": {
-                        "type": "string",
-                        "description": "House ID: H1 (Governance), H2 (Economics), H3 (Security), H4 (Technology), H5 (Arts), H6 (Philosophy), H7 (Health), H8 (Environment), H9 (Education), H10 (Society), H11 (Communication), H12 (Science)."
-                    }
-                },
-                "required": ["house_id"]
-            }
-        }
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "lattice_get_connections",
-            "description": (
-                "Get all inter-House connections for a given House. Returns typed, "
-                "weighted edges showing how domains relate to each other."
-            ),
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "house_id": {
-                        "type": "string",
-                        "description": "House ID to query connections for."
-                    },
-                    "min_strength": {
+                    "min_relevance": {
                         "type": "number",
-                        "description": "Minimum connection strength to include (0.0-1.0).",
-                        "default": 0.0
-                    }
+                        "description": "Minimum relevance threshold (0.0-1.0)",
+                        "default": 0.05,
+                    },
                 },
-                "required": ["house_id"]
-            }
-        }
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "lattice_blind_spots",
-            "description": (
-                "Given a list of activated Houses, identify which Houses were NOT "
-                "considered. Element 145's blind spot detection."
-            ),
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "activated_houses": {
-                        "type": "array",
-                        "items": {"type": "string"},
-                        "description": "List of House IDs that were activated in analysis."
-                    }
-                },
-                "required": ["activated_houses"]
-            }
-        }
+                "required": ["text"],
+            },
+        },
     },
     {
         "type": "function",
         "function": {
             "name": "lattice_route",
             "description": (
-                "Find cross-domain reasoning paths between activated Houses. "
-                "Returns cascade chains showing how insights propagate across "
-                "the lattice topology."
+                "Get domain-specific analysis for one House, including its active Spheres "
+                "and cross-domain edges to other Houses. Call after lattice_ingest."
             ),
             "parameters": {
                 "type": "object",
                 "properties": {
-                    "source_house": {
+                    "task": {
                         "type": "string",
-                        "description": "Starting House ID."
+                        "description": "Analysis task description",
                     },
-                    "target_house": {
+                    "house_id": {
                         "type": "string",
-                        "description": "Destination House ID."
+                        "description": "House ID (H1 through H12)",
+                        "enum": [f"H{i}" for i in range(1, 13)],
                     },
-                    "max_hops": {
-                        "type": "integer",
-                        "description": "Maximum number of intermediate Houses.",
-                        "default": 3
-                    }
                 },
-                "required": ["source_house", "target_house"]
-            }
-        }
-    }
+                "required": ["task", "house_id"],
+            },
+        },
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "lattice_synthesize",
+            "description": (
+                "Element 145 meta-coordination: identify blind spots (inactive Houses), "
+                "cross-domain bridges, cascade chains, and overall coherence score."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "task": {
+                        "type": "string",
+                        "description": "Analysis task description",
+                    },
+                },
+                "required": ["task"],
+            },
+        },
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "lattice_get_house",
+            "description": (
+                "Get detailed information about a House including its 12 Spheres, "
+                "keywords, and connections to other Houses."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "house_id": {
+                        "type": "string",
+                        "description": "House ID (H1 through H12)",
+                        "enum": [f"H{i}" for i in range(1, 13)],
+                    },
+                },
+                "required": ["house_id"],
+            },
+        },
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "lattice_search",
+            "description": (
+                "Search for Spheres matching keywords or a topic. Returns matching "
+                "Spheres with relevance scores across all 12 Houses."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": "string",
+                        "description": "Search query (keywords or topic description)",
+                    },
+                    "max_results": {
+                        "type": "integer",
+                        "description": "Maximum number of results to return",
+                        "default": 10,
+                    },
+                },
+                "required": ["query"],
+            },
+        },
+    },
 ]
 
-
 # ═══════════════════════════════════════════════════════════════
-# ANTHROPIC CLAUDE TOOL DEFINITIONS
+# ANTHROPIC TOOL CONVERTER
 # ═══════════════════════════════════════════════════════════════
 
-def get_anthropic_tools() -> List[Dict[str, Any]]:
+def to_anthropic_tools(openai_tools: Optional[List[Dict]] = None) -> List[Dict]:
     """
-    Convert to Anthropic Claude tool format.
+    Convert OpenAI tool schemas to Anthropic tool format.
 
-    Returns tool definitions compatible with the Anthropic Messages API.
+    Anthropic uses:
+      {"name": ..., "description": ..., "input_schema": {...}}
+    OpenAI uses:
+      {"type": "function", "function": {"name": ..., "description": ..., "parameters": {...}}}
     """
-    tools = []
-    for openai_tool in OPENAI_TOOLS:
-        func = openai_tool["function"]
-        tools.append({
+    tools = openai_tools or OPENAI_TOOLS
+    anthropic = []
+    for tool in tools:
+        func = tool.get("function", tool)
+        anthropic.append({
             "name": func["name"],
             "description": func["description"],
-            "input_schema": func["parameters"]
+            "input_schema": func.get("parameters", {"type": "object", "properties": {}}),
         })
-    return tools
+    return anthropic
+
+
+def to_google_tools(openai_tools: Optional[List[Dict]] = None) -> List[Dict]:
+    """
+    Convert OpenAI tool schemas to Google Gemini function declarations.
+
+    Gemini uses:
+      {"function_declarations": [{"name": ..., "description": ..., "parameters": {...}}]}
+    """
+    tools = openai_tools or OPENAI_TOOLS
+    declarations = []
+    for tool in tools:
+        func = tool.get("function", tool)
+        declarations.append({
+            "name": func["name"],
+            "description": func["description"],
+            "parameters": func.get("parameters", {"type": "object", "properties": {}}),
+        })
+    return [{"function_declarations": declarations}]
 
 
 # ═══════════════════════════════════════════════════════════════
-# TOOL CALL HANDLER
+# TOOL HANDLER
 # ═══════════════════════════════════════════════════════════════
 
 class LatticeToolHandler:
     """
-    Handles function/tool calls from any LLM provider.
+    Routes tool calls from any provider to the LCP engine.
 
     Usage:
         handler = LatticeToolHandler()
 
         # OpenAI
-        tool_call = response.choices[0].message.tool_calls[0]
-        result = handler.handle(tool_call.function.name,
-                                json.loads(tool_call.function.arguments))
+        result = handler.handle("lattice_analyze", {"task": "climate policy"})
 
         # Anthropic
-        tool_use = response.content[0]  # ToolUseBlock
         result = handler.handle(tool_use.name, tool_use.input)
+
+        # Generic
+        result = handler.handle(function_name, arguments_dict)
     """
 
     def __init__(self, ontology_path: Optional[str] = None):
-        from element145.core.lcp import create_engine
-        self.engine = create_engine(ontology_path)
+        self.engine = LCPEngine(LatticeOntology(ontology_path))
 
-    def handle(self, function_name: str, arguments: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Route a tool call to the appropriate handler.
-
-        Parameters
-        ----------
-        function_name : str
-            Name of the function being called.
-        arguments : dict
-            Function arguments.
-
-        Returns
-        -------
-        dict
-            Tool result to send back to the LLM.
-        """
-        handlers = {
+    def handle(self, tool_name: str, arguments: Dict[str, Any]) -> Dict[str, Any]:
+        """Route a tool call to the appropriate handler."""
+        handlers: Dict[str, Callable] = {
             "lattice_analyze": self._analyze,
             "lattice_ingest": self._ingest,
-            "lattice_get_house": self._get_house,
-            "lattice_get_connections": self._get_connections,
-            "lattice_blind_spots": self._blind_spots,
             "lattice_route": self._route,
+            "lattice_synthesize": self._synthesize,
+            "lattice_get_house": self._get_house,
+            "lattice_search": self._search,
         }
 
-        handler = handlers.get(function_name)
+        handler = handlers.get(tool_name)
         if handler is None:
-            return {"error": f"Unknown function: {function_name}"}
+            return {"error": f"Unknown tool: {tool_name}",
+                    "available_tools": list(handlers.keys())}
 
-        try:
-            return handler(arguments)
-        except Exception as e:
-            return {"error": str(e)}
+        return handler(arguments)
 
     def _analyze(self, args: Dict) -> Dict:
-        result = self.engine.analyze(args["text"])
-        mode = args.get("scaffold_mode", "compact")
-        prompt = self.engine.generate_prompt(result, mode=mode)
-
+        task = args.get("task", "")
+        min_rel = args.get("min_relevance", 0.05)
+        result = self.engine.analyze(task, min_rel)
         return {
+            "task": result.task,
             "activated_houses": result.activated_houses,
-            "activated_spheres": [
-                {"id": s.id, "name": s.name, "house": s.house_id}
-                for s in result.activated_spheres
-            ],
+            "activated_sphere_count": len(result.activated_spheres),
             "bridges": result.bridges,
             "blind_spots": result.blind_spots,
             "cascade_chains": result.cascade_chains,
             "coherence_score": result.coherence_score,
-            "synthesis": result.synthesis_notes,
-            "prompt": prompt,
+            "synthesis_notes": result.synthesis_notes,
+            "house_analyses": result.house_analyses,
+            "prompt_compact": self.engine.generate_prompt(result, "compact"),
         }
 
     def _ingest(self, args: Dict) -> Dict:
-        max_spheres = args.get("max_spheres", 15)
-        results = self.engine.ontology.search_spheres(args["text"])[:max_spheres]
-
-        houses = set()
-        spheres = []
-        for sphere, score in results:
-            spheres.append({"id": sphere.id, "name": sphere.name,
-                          "house": sphere.house_id, "score": score})
-            houses.add(sphere.house_id)
-
+        text = args.get("text", "")
+        min_rel = args.get("min_relevance", 0.05)
+        state = self.engine.ingest(text, min_rel)
         return {
-            "activated_spheres": spheres,
-            "activated_houses": sorted(houses),
-            "blind_spots": [f"H{i}" for i in range(1, 13) if f"H{i}" not in houses],
-        }
-
-    def _get_house(self, args: Dict) -> Dict:
-        house_id = args["house_id"]
-        data = self.engine.ontology.get_house_data(house_id)
-        if not data:
-            return {"error": f"Unknown House: {house_id}"}
-
-        spheres = self.engine.ontology.get_spheres_for_house(house_id)
-        return {
-            "house": data,
-            "spheres": [{"id": s.id, "name": s.name, "keywords": list(s.keywords)}
-                       for s in spheres],
-        }
-
-    def _get_connections(self, args: Dict) -> Dict:
-        house_id = args["house_id"]
-        min_str = args.get("min_strength", 0.0)
-        edges = self.engine.ontology.get_edges_for_house(house_id)
-
-        return {
-            "house_id": house_id,
-            "connections": [
-                {"source": e.source, "target": e.target,
-                 "type": e.connection_type, "strength": e.strength}
-                for e in edges if e.strength >= min_str
-            ],
-        }
-
-    def _blind_spots(self, args: Dict) -> Dict:
-        activated = set(args["activated_houses"])
-        all_houses = {f"H{i}" for i in range(1, 13)}
-        blind = sorted(all_houses - activated)
-
-        return {
-            "blind_spots": blind,
-            "coverage": f"{len(activated)}/12",
-            "coverage_pct": round(len(activated) / 12 * 100, 1),
+            "activated_houses": sorted(state.activated_houses),
+            "activated_spheres": {
+                sid: {"name": self.engine.ontology.spheres[sid].name,
+                      "relevance": score}
+                for sid, score in sorted(state.activated_spheres.items(),
+                                         key=lambda x: x[1], reverse=True)
+                if sid in self.engine.ontology.spheres and score > 0.01
+            },
+            "house_coverage": state.house_coverage,
         }
 
     def _route(self, args: Dict) -> Dict:
-        source = args["source_house"]
-        target = args["target_house"]
-        max_hops = args.get("max_hops", 3)
+        return self.engine.route(args.get("task", ""), args.get("house_id", ""))
 
-        # BFS path finding
-        from collections import deque
-        queue = deque([(source, [source], 1.0)])
-        visited = {source}
+    def _synthesize(self, args: Dict) -> Dict:
+        result = self.engine.synthesize(args.get("task", ""))
+        return {
+            "blind_spots": result.blind_spots,
+            "bridges": result.bridges,
+            "cascade_chains": result.cascade_chains,
+            "coherence_score": result.coherence_score,
+            "synthesis_notes": result.synthesis_notes,
+        }
 
-        while queue:
-            current, path, strength = queue.popleft()
-            if current == target:
-                return {
-                    "path": path,
-                    "hops": len(path) - 1,
-                    "cumulative_strength": round(strength, 4),
-                }
-            if len(path) > max_hops + 1:
-                continue
+    def _get_house(self, args: Dict) -> Dict:
+        house_id = args.get("house_id", "")
+        hdata = self.engine.ontology.get_house_data(house_id)
+        if hdata is None:
+            return {"error": f"House {house_id} not found"}
+        spheres = self.engine.ontology.get_spheres_for_house(house_id)
+        edges = self.engine.ontology.get_edges_for_house(house_id)
+        return {
+            **hdata,
+            "spheres": [{"id": s.id, "name": s.name, "keywords": list(s.keywords)}
+                        for s in spheres],
+            "connections": [{"to": e.other(house_id), "type": e.edge_type,
+                            "strength": e.strength}
+                           for e in edges],
+        }
 
-            for edge in self.engine.ontology.get_edges_for_house(current):
-                neighbor = edge.target if edge.source == current else edge.source
-                if neighbor not in visited:
-                    visited.add(neighbor)
-                    queue.append((neighbor, path + [neighbor], strength * edge.strength))
+    def _search(self, args: Dict) -> Dict:
+        query = args.get("query", "")
+        max_results = args.get("max_results", 10)
+        results = self.engine.ontology.search_spheres(query)[:max_results]
+        return {
+            "query": query,
+            "results": [
+                {"id": s.id, "name": s.name, "house_id": s.house_id,
+                 "house_name": s.house_name, "relevance": score,
+                 "keywords": list(s.keywords)[:5]}
+                for s, score in results
+            ],
+            "total": len(results),
+        }
 
-        return {"path": None, "error": f"No path found from {source} to {target} within {max_hops} hops"}
+    @property
+    def openai_tools(self) -> List[Dict]:
+        return OPENAI_TOOLS
 
+    @property
+    def anthropic_tools(self) -> List[Dict]:
+        return to_anthropic_tools()
 
-# ═══════════════════════════════════════════════════════════════
-# CONVENIENCE: OPENAI INTEGRATION EXAMPLE
-# ═══════════════════════════════════════════════════════════════
-
-OPENAI_USAGE_EXAMPLE = '''
-# Example: Using Element 145 with OpenAI Chat Completions
-# D-25: OpenAI is a Microsoft portfolio company
-
-import openai
-import json
-from element145.integrations.openai_functions import OPENAI_TOOLS, LatticeToolHandler
-
-client = openai.OpenAI()
-handler = LatticeToolHandler()
-
-messages = [
-    {"role": "system", "content": "You are an analyst using the 144+1 ontological lattice."},
-    {"role": "user", "content": "Analyze the implications of AI regulation on global trade."}
-]
-
-# First call — model decides to use lattice tools
-response = client.chat.completions.create(
-    model="gpt-4o",
-    messages=messages,
-    tools=OPENAI_TOOLS,
-)
-
-# Handle tool calls
-if response.choices[0].message.tool_calls:
-    for tool_call in response.choices[0].message.tool_calls:
-        args = json.loads(tool_call.function.arguments)
-        result = handler.handle(tool_call.function.name, args)
-        messages.append({"role": "tool", "tool_call_id": tool_call.id,
-                         "content": json.dumps(result)})
-    
-    # Second call with tool results
-    final = client.chat.completions.create(
-        model="gpt-4o", messages=messages, tools=OPENAI_TOOLS,
-    )
-    print(final.choices[0].message.content)
-'''
-
-ANTHROPIC_USAGE_EXAMPLE = '''
-# Example: Using Element 145 with Anthropic Claude
-# Provider-neutral alternative to OpenAI
-
-import anthropic
-from element145.integrations.openai_functions import get_anthropic_tools, LatticeToolHandler
-
-client = anthropic.Anthropic()
-handler = LatticeToolHandler()
-
-response = client.messages.create(
-    model="claude-sonnet-4-20250514",
-    max_tokens=4096,
-    system="You are an analyst using the 144+1 ontological lattice.",
-    messages=[{"role": "user", "content": "Analyze climate migration risks."}],
-    tools=get_anthropic_tools(),
-)
-
-# Handle tool use blocks
-for block in response.content:
-    if block.type == "tool_use":
-        result = handler.handle(block.name, block.input)
-        # Continue conversation with tool result...
-'''
-
-
-if __name__ == "__main__":
-    print("OpenAI Tool Definitions:")
-    print(json.dumps(OPENAI_TOOLS, indent=2))
-    print(f"\n{len(OPENAI_TOOLS)} tools defined.")
-    print("\nAnthropic Tool Definitions:")
-    print(json.dumps(get_anthropic_tools(), indent=2))
+    @property
+    def google_tools(self) -> List[Dict]:
+        return to_google_tools()

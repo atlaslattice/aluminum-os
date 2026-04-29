@@ -4,7 +4,7 @@ build-backend = "setuptools.backends._legacy:_Backend"
 
 [project]
 name = "element145"
-version = "0.1.0"
+version = "2.0.0"
 description = "Sheldonbrain 144+1 Ontological Lattice — AI reasoning substrate with Lattice Context Protocol"
 readme = "README.md"
 license = {text = "Atlas Lattice Foundation License"}
@@ -18,7 +18,7 @@ keywords = [
     "sheldonbrain", "element-145", "lcp", "shugs",
 ]
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Science/Research",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.9",
@@ -29,12 +29,14 @@ classifiers = [
 ]
 
 dependencies = [
-    "numpy>=1.24",
-    "scipy>=1.10",
     "pyyaml>=6.0",
 ]
 
 [project.optional-dependencies]
+shugs = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+]
 api = [
     "fastapi>=0.100",
     "uvicorn>=0.23",
@@ -43,14 +45,17 @@ dev = [
     "pytest>=7.0",
     "pytest-cov>=4.0",
     "ruff>=0.1",
+    "numpy>=1.24",
+    "scipy>=1.10",
 ]
 all = [
-    "element145[api,dev]",
+    "element145[shugs,api,dev]",
 ]
 
 [project.scripts]
 element145-mcp = "element145.integrations.mcp_server:main"
 element145-api = "element145.integrations.api:main"
+element145-shugs = "element145.shugs:main"
 
 [project.urls]
 Homepage = "https://atlaslattice.org"
