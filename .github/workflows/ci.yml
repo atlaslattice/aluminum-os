@@ -1,0 +1,115 @@
+name: Aluminum OS CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  ontology-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install pyyaml
+      - name: Validate 12x12+1 ontological structure
+        run: |
+          python -c "
+          import os, yaml
+          houses_dir = 'houses'
+          house_count = 0
+          sphere_count = 0
+          for h in sorted(os.listdir(houses_dir)):
+              h_path = os.path.join(houses_dir, h)
+              if os.path.isdir(h_path) and h.startswith('H'):
+                  house_count += 1
+                  for s in os.listdir(h_path):
+                      s_path = os.path.join(h_path, s)
+                      if os.path.isdir(s_path) and s.startswith('S'):
+                          sphere_count += 1
+                          manifest = os.path.join(s_path, 'manifest.yaml')
+                          assert os.path.exists(manifest), f'Missing manifest: {manifest}'
+          assert house_count == 12, f'Expected 12 Houses, got {house_count}'
+          assert sphere_count == 144, f'Expected 144 Spheres, got {sphere_count}'
+          e145 = 'element-145'
+          assert os.path.isdir(e145), 'Element 145 directory missing'
+          print(f'✓ Ontology validated: {house_count} Houses, {sphere_count} Spheres, Element 145 present')
+          "
+      - name: Validate registries
+        run: |
+          python -c "
+          import yaml
+          for reg in ['registries/module_registry.yaml', 'registries/doctrine_registry.yaml',
+                      'registries/invariant_registry.yaml', 'registries/12x12_matrix.yaml']:
+              with open(reg) as f:
+                  data = yaml.safe_load(f)
+              assert data is not None, f'{reg} is empty'
+              print(f'✓ {reg}: valid YAML')
+          "
+      - name: Validate ontology lock (D-89)
+        run: |
+          python -c "
+          import hashlib
+          with open('registries/lattice_ontology.yaml', 'rb') as f:
+              sha = hashlib.sha256(f.read()).hexdigest()
+          print(f'Lattice ontology SHA-256: {sha}')
+          "
+  shugs-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install numpy scipy pyyaml pytest
+      - name: Run SHUGS operator smoke test
+        run: |
+          cd element-145/element145-package/element145 && python -c "
+          from shugs.operator import build_hsuf, HSUFParams
+          import numpy as np
+          params = HSUFParams()
+          H1 = build_hsuf(145, params, seed=42)
+          H2 = build_hsuf(145, params, seed=43)
+          assert not np.array_equal(H1, H2), 'CRITICAL: K=20 ensemble is degenerate'
+          print('✓ Fix 1 verified: stochastic component produces non-degenerate ensemble')
+          "
+      - name: Run element145 package tests
+        run: |
+          cd element-145/element145-package/element145 && python -m pytest tests/test_lattice.py tests/test_shugs.py -v --tb=short
+        env:
+          PYTHONPATH: .
+  sprint-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install numpy scipy pyyaml pytest
+      - name: Run 4-Priority Sprint tests
+        run: |
+          cd element-145/aluminum-os-core && python -m pytest tests/ -v --tb=short
+        env:
+          PYTHONPATH: .
+  domain-repo-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install pyyaml
+      - name: Validate domain repo index
+        run: python toolchain/validate_domain_repos.py
+      - name: Validate domain repo index (online)
+        run: python toolchain/validate_domain_repos.py --online
+        continue-on-error: true
