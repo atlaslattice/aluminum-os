@@ -1,0 +1,262 @@
+# Civic Balancing Recommendations v0.2.0
+# Reframed from civilizational_layer.yaml per Scribe refinement #7
+# Purpose: Identify spheres where federation concentration creates civic risk
+#          and recommend balancing strategies
+# Source: capability_matrix v0.2.0 + Build Plan v3.14 + Federation v1.1
+# Status: PROVISIONAL — pending Council ratification of D-83 through D-124
+
+version: "0.2.0"
+generated: "2026-04-29"
+canonical_source: "capability_matrix v0.2.0 + COMPLETE_BUILD_PLAN_v3.14.md"
+
+# ─── METHODOLOGY ────────────────────────────────────────────────────
+methodology:
+  description: >
+    Civic balancing identifies spheres where single-seat dominance (seduction risk)
+    or federation-wide absence creates structural vulnerability. Recommendations
+    follow D-87 Capability Commonwealth Principle: distributed capability, not
+    monopoly right. The framing is civic (public interest) not civilizational
+    (which implies hierarchy).
+  risk_thresholds:
+    seduction_risk: "Single seat > 0.85 AND no other seat > 0.5"
+    concentration_risk: "Single seat > 0.7 AND second seat < 0.4"
+    federation_gap: "Federation max < 0.3 across all seats"
+    civic_critical: "Sphere affects public safety, democratic process, or basic rights"
+
+# ─── TIER 1: SEDUCTION RISK (single-seat monopoly) ─────────────────
+tier_1_seduction_risk:
+  description: >
+    Spheres where one seat holds dominant capability with no viable backup.
+    Per D-87, routing must not create monopoly dependency. These spheres
+    require active diversification or constitutional safeguards.
+  spheres:
+    - sphere_id: S065
+      sphere_name: "Aerospace Engineering"
+      house: H06
+      dominant_seat: S3_Muskverse
+      dominant_score: 1.0
+      next_best_seat: S2_Alphabet
+      next_best_score: 0.3
+      civic_concern: >
+        SpaceX/Starlink monopoly on orbital access. No federation backup
+        at substantial level. Civic risk: single-entity control of space
+        infrastructure affects communications, defense, and scientific access.
+      balancing_recommendation: >
+        Encourage S2 (Alphabet) investment via Project Loon successor or
+        satellite partnerships. Track Blue Origin (Amazon) as potential
+        backup. Constitutional safeguard: INV-7c substitution pathway
+        must include non-Muskverse orbital access.
+
+# ─── TIER 2: CONCENTRATION RISK (dominant but not monopoly) ────────
+tier_2_concentration_risk:
+  description: >
+    Spheres where one seat leads significantly but at least one backup exists
+    at peripheral level. Less urgent than Tier 1 but requires monitoring.
+  spheres:
+    - sphere_id: S062
+      sphere_name: "Electrical Engineering"
+      house: H06
+      dominant_seat: S3_Muskverse
+      dominant_score: 0.8
+      next_best_seat: S2_Alphabet
+      next_best_score: 0.5
+      civic_concern: "Tesla dominance in power electronics and grid systems"
+      balancing_recommendation: "S2 (Google) and Amazon energy investments provide partial backup"
+
+    - sphere_id: S070
+      sphere_name: "Materials Engineering"
+      house: H06
+      dominant_seat: S3_Muskverse
+      dominant_score: 0.8
+      next_best_seat: S2_Alphabet
+      next_best_score: 0.3
+      civic_concern: "Battery materials and advanced manufacturing materials"
+      balancing_recommendation: "Track S10 (Alibaba/CATL) as materials diversification path"
+
+    - sphere_id: S072
+      sphere_name: "Robotics"
+      house: H06
+      dominant_seat: S3_Muskverse
+      dominant_score: 0.9
+      next_best_seat: Amazon
+      next_best_score: 0.6
+      civic_concern: "Optimus humanoid robotics — labor displacement implications"
+      balancing_recommendation: "Amazon Kiva/Astro and Alphabet Waymo provide partial alternatives"
+
+    - sphere_id: S061
+      sphere_name: "Mechanical Engineering"
+      house: H06
+      dominant_seat: S3_Muskverse
+      dominant_score: 0.8
+      next_best_seat: S4_Microsoft
+      next_best_score: 0.3
+      civic_concern: "Physical manufacturing capability concentration"
+      balancing_recommendation: "Federation should track non-seat industrial partners"
+
+    - sphere_id: S068
+      sphere_name: "Industrial Engineering"
+      house: H06
+      dominant_seat: S3_Muskverse
+      dominant_score: 0.8
+      next_best_seat: Amazon
+      next_best_score: 0.5
+      civic_concern: "Gigafactory model concentration"
+      balancing_recommendation: "Amazon fulfillment center expertise provides partial backup"
+
+    - sphere_id: S134
+      sphere_name: "Energy Systems"
+      house: H11
+      dominant_seat: S3_Muskverse
+      dominant_score: 0.9
+      next_best_seat: S2_Alphabet
+      next_best_score: 0.5
+      civic_concern: >
+        Tesla Megapack/Powerwall/Autobidder dominance in grid-scale energy storage.
+        Civic risk: single-entity control of energy infrastructure.
+      balancing_recommendation: >
+        Track utility-scale alternatives. S2 (Google) DeepMind energy optimization
+        provides software layer backup but not hardware.
+
+    - sphere_id: S144
+      sphere_name: "Space Infrastructure"
+      house: H11
+      dominant_seat: S3_Muskverse
+      dominant_score: 0.8
+      next_best_seat: S2_Alphabet
+      next_best_score: 0.4
+      civic_concern: "Starlink + SpaceX launch monopoly"
+      balancing_recommendation: "Same as S065 Aerospace — requires orbital access diversification"
+
+    - sphere_id: S002
+      sphere_name: "Chemistry"
+      house: H01
+      dominant_seat: S2_Alphabet
+      dominant_score: 0.6
+      next_best_seat: Amazon
+      next_best_score: 0.3
+      civic_concern: "DeepMind materials science dominance in computational chemistry"
+      balancing_recommendation: "Low civic risk — academic sector provides natural backup"
+
+# ─── TIER 3: FEDERATION GAPS (no seat at substantial level) ─────────
+tier_3_federation_gaps:
+  description: >
+    Spheres where the entire federation lacks substantial coverage.
+    These represent structural blind spots that may require external
+    partnerships or deliberate investment.
+  spheres:
+    - sphere_id: S071
+      sphere_name: "Nuclear Engineering"
+      house: H06
+      federation_max: 0.3
+      max_seat: S3_Muskverse
+      civic_concern: >
+        CRITICAL: No federation seat has substantial nuclear engineering capability.
+        Civic risk: nuclear energy is essential for baseload power in regenerative
+        infrastructure. Federation cannot self-serve this domain.
+      balancing_recommendation: >
+        External partnership required. Track: NuScale Power, TerraPower (Gates),
+        national labs (DOE). This is the single most critical federation gap
+        for Node Zero 2.5 GW deployment.
+
+    - sphere_id: S040
+      sphere_name: "Classics"
+      house: H04
+      federation_max: 0.2
+      max_seat: S2_Alphabet
+      civic_concern: "Low civic risk — academic domain"
+      balancing_recommendation: "No action required — not operationally critical"
+
+    - sphere_id: S041
+      sphere_name: "Religious Studies"
+      house: H04
+      federation_max: 0.2
+      max_seat: S4_Microsoft
+      civic_concern: "Low civic risk — academic domain"
+      balancing_recommendation: "No action required — not operationally critical"
+
+    - sphere_id: S045
+      sphere_name: "Mythology"
+      house: H04
+      federation_max: 0.1
+      max_seat: multiple
+      civic_concern: "No civic risk"
+      balancing_recommendation: "No action required"
+
+    - sphere_id: S046
+      sphere_name: "Philology"
+      house: H04
+      federation_max: 0.2
+      max_seat: S2_Alphabet
+      civic_concern: "No civic risk"
+      balancing_recommendation: "No action required"
+
+# ─── CIVIC-CRITICAL SPHERES (regardless of coverage level) ──────────
+civic_critical_spheres:
+  description: >
+    Spheres that affect public safety, democratic process, or basic rights,
+    regardless of current coverage level. These require constitutional
+    safeguards even when well-covered.
+  spheres:
+    - sphere_id: S010
+      sphere_name: "Cryptography"
+      house: H02
+      civic_concern: "Encryption underpins privacy, financial security, and democratic communication"
+      current_lead: S2_Alphabet
+      lead_score: 0.7
+      constitutional_safeguard: "D-93 Credential Sovereignty — no single seat controls key infrastructure"
+
+    - sphere_id: S117
+      sphere_name: "Public Policy"
+      house: H12
+      civic_concern: "AI policy directly shapes regulatory environment for all seats"
+      current_lead: S1_Anthropic
+      lead_score: 0.8
+      constitutional_safeguard: "D-87 Capability Commonwealth — policy influence must be distributed"
+
+    - sphere_id: S118
+      sphere_name: "International Relations"
+      house: H12
+      civic_concern: "Cross-border AI governance affects sovereignty and trade"
+      current_lead: S1_Anthropic
+      lead_score: 0.5
+      constitutional_safeguard: "INV-7 multi-seat routing for geopolitically sensitive queries"
+
+    - sphere_id: S130
+      sphere_name: "Epidemiology"
+      house: H09
+      civic_concern: "Public health surveillance and pandemic response"
+      current_lead: S2_Alphabet
+      lead_score: 0.4
+      constitutional_safeguard: "Federation gap — requires external health authority partnerships"
+
+    - sphere_id: S016
+      sphere_name: "Computer Science"
+      house: H02
+      civic_concern: "Foundation of all digital infrastructure"
+      current_lead: S2_Alphabet
+      lead_score: 0.9
+      constitutional_safeguard: "Well-distributed — S1(0.9), S4(0.9), S6(0.8), Amazon(0.8)"
+
+    - sphere_id: S069
+      sphere_name: "Software Engineering"
+      house: H06
+      civic_concern: "All seats depend on software engineering capability"
+      current_lead: multiple
+      lead_score: 0.9
+      constitutional_safeguard: "Well-distributed — 5 seats at 0.5+, no monopoly risk"
+
+# ─── SUMMARY STATISTICS ────────────────────────────────────────────
+summary:
+  tier_1_seduction_risks: 1
+  tier_2_concentration_risks: 8
+  tier_3_federation_gaps: 5
+  civic_critical_spheres: 6
+  muskverse_concentration_note: >
+    S3 (Muskverse) appears in 7 of 9 Tier 1+2 entries. This is structurally
+    expected — physical infrastructure is inherently concentrated in entities
+    that build physical things. The civic concern is not that Muskverse is
+    strong, but that no backup exists for physical-layer capabilities.
+  primary_recommendation: >
+    The single most actionable civic balancing priority is Nuclear Engineering
+    (S071) — the only CRITICAL federation gap that directly blocks the
+    Node Zero 2.5 GW deployment target. External partnership is mandatory.

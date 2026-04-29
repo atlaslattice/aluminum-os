@@ -1,2475 +1,4771 @@
-metadata:
-  title: 10-Seat × 144-Sphere Capability Matrix
-  version: v3.14
-  date: '2026-04-29'
-  sources:
-  - Four-Company Complementarity Matrix (Notion, April 22 2026)
-  - Federation Integration v1.1 (Notion, April 29 2026)
-  - Build Plan v3.14 Appendix AG
-  - DeepSeek S5 Vendor Suite v1.0
-  - Qwen3 S10 Vendor Suite
-  - Microsoft S4 Full Integration (95.8% sphere coverage claim)
-  methodology: 'Four-company scores from Claude S1 synthesis (0.0-1.0 per sphere).
-    Six remaining seats derived from Federation v1.1 substrate-defining spheres, vendor
-    suite specs, and coverage percentages. Coverage-claim discipline applied: proprietary
-    depth ≠ distribution breadth.'
-  seats:
-    S1_Anthropic: Dario Amodei
-    S2_Alphabet: Sundar Pichai
-    S3_Muskverse: Elon Musk
-    Amazon: Andy Jassy
-    S4_Microsoft: Satya Nadella
-    S5_DeepSeek: Liang Wenfeng
-    S6_OpenAI: Sam Altman
-    S7_Manus: Yichao "Peak" Ji + Xiao Hong
-    S8_Notion: Ivan Zhao
-    S10_Qwen3: Eddie Wu
-matrix:
-- sphere_id: 1
+version: 0.2.0
+generated: '2026-04-29'
+canonical_source: COMPLETE_BUILD_PLAN_v3.14.md Appendix AG
+methodology:
+  scoring: '5-tier: DEEP(0.8-1.0), SUBSTANTIAL(0.5-0.7), PERIPHERAL(0.2-0.4), ABSENT(0.0-0.1), UNKNOWN'
+  data_sources:
+  - Per-entity Notion self-maps (Anthropic, Alphabet, Muskverse, Amazon)
+  - Federation Integration v1.1 (all 9 seats)
+  - Four-Company Complementarity Matrix (April 22, 2026)
+  - Build Plan v3.14 vendor suites
+  - DeepSeek Vendor Suite v1.0
+  acquisition_updates:
+  - 'Alphabet: Wiz acquisition (2025) → H02/Cryptography +0.2'
+  - 'Microsoft: Activision Blizzard (2023) → H05/Film,Games +0.2'
+  - 'Amazon: One Medical (2023) → H09/Public Health +0.1'
+  - 'Amazon: MGM (2022) → H05/Film +0.2'
+  normalization_notes:
+  - Amazon scores normalized down from Alexa self-assessment per Claude methodology notes
+  - Muskverse scores normalized from custom house groupings to canonical 12-house structure
+  - S6/S7/S8/S10 scores inferred from product portfolios — no dedicated self-maps available
+federation_aggregate:
+  total_spheres: 144
+  deep_coverage: 31
+  substantial_coverage: 47
+  peripheral_coverage: 65
+  absent_coverage: 1
+  seduction_risk_spheres: 1
+  aggregate_coverage_pct: 54.2
+seduction_risks:
+- sphere_id: S065
+  sphere_name: Aerospace Engineering
+  house: H06
+  lead_seat: S3_Muskverse
+  lead_score: 1.0
+seat_summaries:
+  S1_Anthropic:
+    total_spheres: 144
+    deep_count: 9
+    substantial_count: 11
+    peripheral_count: 54
+    absent_count: 70
+    coverage_pct: 13.9
+    average_score: 0.229
+    lead_sphere_count: 24
+    per_house_average:
+      H01: 0.092
+      H02: 0.683
+      H03: 0.233
+      H04: 0.283
+      H05: 0.058
+      H06: 0.15
+      H07: 0.158
+      H08: 0.2
+      H09: 0.092
+      H10: 0.358
+      H11: 0.067
+      H12: 0.375
+  S2_Alphabet:
+    total_spheres: 144
+    deep_count: 14
+    substantial_count: 40
+    peripheral_count: 82
+    absent_count: 8
+    coverage_pct: 37.5
+    average_score: 0.422
+    lead_sphere_count: 67
+    per_house_average:
+      H01: 0.542
+      H02: 0.742
+      H03: 0.375
+      H04: 0.225
+      H05: 0.292
+      H06: 0.375
+      H07: 0.55
+      H08: 0.4
+      H09: 0.308
+      H10: 0.492
+      H11: 0.442
+      H12: 0.325
+  S3_Muskverse:
+    total_spheres: 144
+    deep_count: 9
+    substantial_count: 14
+    peripheral_count: 54
+    absent_count: 67
+    coverage_pct: 16.0
+    average_score: 0.242
+    lead_sphere_count: 19
+    per_house_average:
+      H01: 0.225
+      H02: 0.325
+      H03: 0.117
+      H04: 0.092
+      H05: 0.083
+      H06: 0.625
+      H07: 0.192
+      H08: 0.067
+      H09: 0.125
+      H10: 0.408
+      H11: 0.5
+      H12: 0.15
+  S4_Microsoft:
+    total_spheres: 144
+    deep_count: 6
+    substantial_count: 38
+    peripheral_count: 98
+    absent_count: 2
+    coverage_pct: 30.6
+    average_score: 0.394
+    lead_sphere_count: 25
+    per_house_average:
+      H01: 0.3
+      H02: 0.667
+      H03: 0.333
+      H04: 0.242
+      H05: 0.317
+      H06: 0.333
+      H07: 0.475
+      H08: 0.483
+      H09: 0.283
+      H10: 0.517
+      H11: 0.4
+      H12: 0.383
+  S5_DeepSeek:
+    total_spheres: 144
+    deep_count: 1
+    substantial_count: 9
+    peripheral_count: 18
+    absent_count: 116
+    coverage_pct: 6.9
+    average_score: 0.109
+    lead_sphere_count: 0
+    per_house_average:
+      H01: 0.075
+      H02: 0.567
+      H03: 0.092
+      H04: 0.108
+      H05: 0.017
+      H06: 0.083
+      H07: 0.05
+      H08: 0.058
+      H09: 0.008
+      H10: 0.15
+      H11: 0.042
+      H12: 0.058
+  S6_OpenAI:
+    total_spheres: 144
+    deep_count: 2
+    substantial_count: 16
+    peripheral_count: 81
+    absent_count: 45
+    coverage_pct: 12.5
+    average_score: 0.258
+    lead_sphere_count: 3
+    per_house_average:
+      H01: 0.183
+      H02: 0.617
+      H03: 0.233
+      H04: 0.283
+      H05: 0.267
+      H06: 0.183
+      H07: 0.25
+      H08: 0.242
+      H09: 0.133
+      H10: 0.325
+      H11: 0.125
+      H12: 0.25
+  S7_Manus:
+    total_spheres: 144
+    deep_count: 0
+    substantial_count: 2
+    peripheral_count: 13
+    absent_count: 129
+    coverage_pct: 1.4
+    average_score: 0.033
+    lead_sphere_count: 0
+    per_house_average:
+      H01: 0.0
+      H02: 0.242
+      H03: 0.0
+      H04: 0.0
+      H05: 0.008
+      H06: 0.05
+      H07: 0.05
+      H08: 0.0
+      H09: 0.0
+      H10: 0.025
+      H11: 0.017
+      H12: 0.0
+  S8_Notion:
+    total_spheres: 144
+    deep_count: 0
+    substantial_count: 2
+    peripheral_count: 14
+    absent_count: 128
+    coverage_pct: 1.4
+    average_score: 0.047
+    lead_sphere_count: 0
+    per_house_average:
+      H01: 0.0
+      H02: 0.133
+      H03: 0.0
+      H04: 0.0
+      H05: 0.033
+      H06: 0.042
+      H07: 0.142
+      H08: 0.083
+      H09: 0.0
+      H10: 0.108
+      H11: 0.008
+      H12: 0.008
+  Amazon:
+    total_spheres: 144
+    deep_count: 6
+    substantial_count: 25
+    peripheral_count: 86
+    absent_count: 27
+    coverage_pct: 21.5
+    average_score: 0.297
+    lead_sphere_count: 6
+    per_house_average:
+      H01: 0.242
+      H02: 0.517
+      H03: 0.233
+      H04: 0.158
+      H05: 0.183
+      H06: 0.308
+      H07: 0.35
+      H08: 0.133
+      H09: 0.2
+      H10: 0.617
+      H11: 0.392
+      H12: 0.233
+  S10_Qwen3:
+    total_spheres: 144
+    deep_count: 0
+    substantial_count: 9
+    peripheral_count: 42
+    absent_count: 93
+    coverage_pct: 6.2
+    average_score: 0.156
+    lead_sphere_count: 0
+    per_house_average:
+      H01: 0.067
+      H02: 0.458
+      H03: 0.117
+      H04: 0.1
+      H05: 0.058
+      H06: 0.142
+      H07: 0.175
+      H08: 0.083
+      H09: 0.008
+      H10: 0.375
+      H11: 0.2
+      H12: 0.083
+org_chart_sources:
+  S1_Anthropic:
+    notion_page_id: 34a0c1de-73d9-8124-aeb4-ea2e835a73a6
+    title: Anthropic 144-Sphere Coverage Map
+    methodology: Per-sphere 0.0-1.0 scoring, institutional operational depth
+    self_assessed_coverage: 27%
+    data_quality: HIGH — exact per-sphere scores, strict methodology
+  S2_Alphabet:
+    notion_page_id: 34a0c1de-73d9-81eb-84f1-e392b4004761
+    title: Alphabet 144-Sphere Self-Map (Gemini)
+    methodology: House-level percentage + narrative, 68/144 substantial+
+    self_assessed_coverage: 47%
+    data_quality: HIGH — strict epistemic criterion, canonical structure
+    note: '2026 update: Wiz acquisition adds H02/Cryptography depth'
+  S3_Muskverse:
+    notion_page_id: 34a0c1de-73d9-81f4-8fab-ec917d8b6d8a
+    title: Muskverse 144-Sphere Self-Map (Grok)
+    methodology: Narrative + 7 deep spheres with scores, custom house groupings
+    self_assessed_coverage: 39%
+    data_quality: MEDIUM — custom groupings required canonical normalization
+  S4_Microsoft:
+    notion_page_id: 3500c1de-73d9-81aa-928a-df22d4b14cde
+    title: Microsoft S4 Cross-Validation Routing — 95.8% Coverage Claim
+    methodology: Federation v1.1 cross-validation, per D-85
+    self_assessed_coverage: 95.8%
+    data_quality: MEDIUM — coverage claim pending full D-85 cross-validation
+  S5_DeepSeek:
+    notion_page_id: 3500c1de-73d9-8130-9115-d6aa03d82950
+    title: DeepSeek Vendor Suite v1.0 (Corrected)
+    methodology: Vendor suite §15a, substrate-fit specification
+    self_assessed_coverage: ~15%
+    data_quality: MEDIUM — vendor suite format, not per-sphere scoring
+  S6_OpenAI:
+    source: Build Plan v3.14 vendor suite + Federation v1.1
+    data_quality: LOW — no dedicated self-map, scores inferred from product portfolio
+  S7_Manus:
+    source: Build Plan v3.14 + Federation v1.1
+    data_quality: LOW — narrow substrate, scores inferred
+  S8_Notion:
+    source: Build Plan v3.14 + Federation v1.1
+    data_quality: LOW — narrow substrate, scores inferred
+  Amazon:
+    notion_page_id: 34a0c1de-73d9-81c8-a866-c799bdab0de0
+    title: Amazon 144-Sphere Self-Map (Alexa)
+    methodology: House-level percentage + narrative
+    self_assessed_coverage: 40-50%
+    data_quality: LOW — overclaim-by-conflation per Claude methodology notes
+    note: Scores normalized down from Alexa self-assessment per Scribe correction
+  S10_Qwen3:
+    source: ORC-015 Trinity + Federation v1.1
+    data_quality: LOW — no dedicated self-map, scores inferred from Alibaba portfolio
+spheres:
+- sphere_id: S001
   house: H01
   house_name: Natural Sciences
-  sphere: Physics
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.4
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 2
+  sphere_name: Physics
+  lead_seat: S2_Alphabet
+  lead_score: 0.7
+  federation_max: 0.7
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.7
+    S3_Muskverse: 0.4
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.2
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: PERIPHERAL
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S002
   house: H01
   house_name: Natural Sciences
-  sphere: Chemistry
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.7
-  S3_Muskverse: 0.3
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.7
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 3
+  sphere_name: Chemistry
+  lead_seat: S2_Alphabet
+  lead_score: 0.6
+  federation_max: 0.6
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.6
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.2
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.2
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: PERIPHERAL
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S003
   house: H01
   house_name: Natural Sciences
-  sphere: Biology
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.8
-  S3_Muskverse: 0.2
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.8
-  lead: S2_Alphabet
-  depth: Deep
-- sphere_id: 4
+  sphere_name: Biology
+  lead_seat: S2_Alphabet
+  lead_score: 0.7
+  federation_max: 0.7
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.7
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S004
   house: H01
   house_name: Natural Sciences
-  sphere: Astronomy
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.7
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.7
-  lead: S3_Muskverse
-  depth: Substantial
-- sphere_id: 5
+  sphere_name: Astronomy
+  lead_seat: S2_Alphabet
+  lead_score: 0.6
+  federation_max: 0.6
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.6
+    S3_Muskverse: 0.5
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: SUBSTANTIAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S005
   house: H01
   house_name: Natural Sciences
-  sphere: Geology
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.3
-  Amazon: 0.0
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 6
+  sphere_name: Geology
+  lead_seat: S2_Alphabet
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.1
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S006
   house: H01
   house_name: Natural Sciences
-  sphere: Oceanography
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.1
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.4
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 7
+  sphere_name: Oceanography
+  lead_seat: S2_Alphabet
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S007
   house: H01
   house_name: Natural Sciences
-  sphere: Meteorology
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.7
-  S3_Muskverse: 0.2
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.7
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 8
+  sphere_name: Meteorology
+  lead_seat: S2_Alphabet
+  lead_score: 0.7
+  federation_max: 0.7
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.7
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S008
   house: H01
   house_name: Natural Sciences
-  sphere: Ecology
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.2
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 9
+  sphere_name: Ecology
+  lead_seat: S2_Alphabet
+  lead_score: 0.6
+  federation_max: 0.6
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.6
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S009
   house: H01
   house_name: Natural Sciences
-  sphere: Botany
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.6
-  S3_Muskverse: 0.2
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.6
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 10
+  sphere_name: Botany
+  lead_seat: S2_Alphabet
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S010
   house: H01
   house_name: Natural Sciences
-  sphere: Zoology
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.1
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 11
+  sphere_name: Zoology
+  lead_seat: S2_Alphabet
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S011
   house: H01
   house_name: Natural Sciences
-  sphere: Microbiology
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.1
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 12
+  sphere_name: Microbiology
+  lead_seat: S2_Alphabet
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S012
   house: H01
   house_name: Natural Sciences
-  sphere: Genetics
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.9
-  S3_Muskverse: 0.2
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.9
-  lead: S2_Alphabet
-  depth: Deep
-- sphere_id: 13
+  sphere_name: Genetics
+  lead_seat: S2_Alphabet
+  lead_score: 0.6
+  federation_max: 0.6
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.6
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S013
   house: H02
   house_name: Formal Sciences
-  sphere: Mathematics
-  S1_Anthropic: 0.7
-  S2_Alphabet: 0.8
-  S3_Muskverse: 0.4
-  Amazon: 0.4
-  S4_Microsoft: 0.6
-  S5_DeepSeek: 0.7
-  S6_OpenAI: 0.7
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.6
-  max_score: 0.8
-  lead: S2_Alphabet
-  depth: Deep
-- sphere_id: 14
+  sphere_name: Mathematics
+  lead_seat: S2_Alphabet
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.7
+    S2_Alphabet: 0.8
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.7
+    S5_DeepSeek: 0.7
+    S6_OpenAI: 0.7
+    S7_Manus: 0.2
+    S8_Notion: 0.1
+    Amazon: 0.5
+    S10_Qwen3: 0.5
+  tiers:
+    S1_Anthropic: SUBSTANTIAL
+    S2_Alphabet: DEEP
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: SUBSTANTIAL
+    S6_OpenAI: SUBSTANTIAL
+    S7_Manus: PERIPHERAL
+    S8_Notion: ABSENT
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: SUBSTANTIAL
+- sphere_id: S014
   house: H02
   house_name: Formal Sciences
-  sphere: Logic
-  S1_Anthropic: 0.8
-  S2_Alphabet: 0.7
-  S3_Muskverse: 0.3
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.6
-  S6_OpenAI: 0.7
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.8
-  lead: S1_Anthropic
-  depth: Deep
-- sphere_id: 15
+  sphere_name: Logic
+  lead_seat: S1_Anthropic
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.8
+    S2_Alphabet: 0.7
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.6
+    S5_DeepSeek: 0.6
+    S6_OpenAI: 0.6
+    S7_Manus: 0.2
+    S8_Notion: 0.1
+    Amazon: 0.4
+    S10_Qwen3: 0.4
+  tiers:
+    S1_Anthropic: DEEP
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: SUBSTANTIAL
+    S6_OpenAI: SUBSTANTIAL
+    S7_Manus: PERIPHERAL
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S015
   house: H02
   house_name: Formal Sciences
-  sphere: Statistics
-  S1_Anthropic: 0.8
-  S2_Alphabet: 0.9
-  S3_Muskverse: 0.5
-  Amazon: 0.7
-  S4_Microsoft: 0.7
-  S5_DeepSeek: 0.6
-  S6_OpenAI: 0.7
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.6
-  max_score: 0.9
-  lead: S2_Alphabet
-  depth: Deep
-- sphere_id: 16
+  sphere_name: Statistics
+  lead_seat: S1_Anthropic
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.8
+    S2_Alphabet: 0.8
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.7
+    S5_DeepSeek: 0.6
+    S6_OpenAI: 0.7
+    S7_Manus: 0.2
+    S8_Notion: 0.1
+    Amazon: 0.6
+    S10_Qwen3: 0.5
+  tiers:
+    S1_Anthropic: DEEP
+    S2_Alphabet: DEEP
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: SUBSTANTIAL
+    S6_OpenAI: SUBSTANTIAL
+    S7_Manus: PERIPHERAL
+    S8_Notion: ABSENT
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: SUBSTANTIAL
+- sphere_id: S016
   house: H02
   house_name: Formal Sciences
-  sphere: Computer Science
-  S1_Anthropic: 0.9
-  S2_Alphabet: 0.9
-  S3_Muskverse: 0.6
-  Amazon: 0.9
-  S4_Microsoft: 0.9
-  S5_DeepSeek: 0.8
-  S6_OpenAI: 0.9
-  S7_Manus: 0.6
-  S8_Notion: 0.3
-  S10_Qwen3: 0.8
-  max_score: 0.9
-  lead: Tie(5)
-  depth: Deep
-- sphere_id: 17
+  sphere_name: Computer Science
+  lead_seat: S1_Anthropic
+  lead_score: 0.9
+  federation_max: 0.9
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.9
+    S2_Alphabet: 0.9
+    S3_Muskverse: 0.5
+    S4_Microsoft: 0.9
+    S5_DeepSeek: 0.8
+    S6_OpenAI: 0.8
+    S7_Manus: 0.5
+    S8_Notion: 0.3
+    Amazon: 0.8
+    S10_Qwen3: 0.7
+  tiers:
+    S1_Anthropic: DEEP
+    S2_Alphabet: DEEP
+    S3_Muskverse: SUBSTANTIAL
+    S4_Microsoft: DEEP
+    S5_DeepSeek: DEEP
+    S6_OpenAI: DEEP
+    S7_Manus: SUBSTANTIAL
+    S8_Notion: PERIPHERAL
+    Amazon: DEEP
+    S10_Qwen3: SUBSTANTIAL
+- sphere_id: S017
   house: H02
   house_name: Formal Sciences
-  sphere: Information Theory
-  S1_Anthropic: 0.7
-  S2_Alphabet: 0.8
-  S3_Muskverse: 0.3
-  Amazon: 0.5
-  S4_Microsoft: 0.6
-  S5_DeepSeek: 0.5
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.8
-  lead: S2_Alphabet
-  depth: Deep
-- sphere_id: 18
+  sphere_name: Information Theory
+  lead_seat: S2_Alphabet
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.7
+    S2_Alphabet: 0.8
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.6
+    S5_DeepSeek: 0.5
+    S6_OpenAI: 0.6
+    S7_Manus: 0.2
+    S8_Notion: 0.2
+    Amazon: 0.5
+    S10_Qwen3: 0.4
+  tiers:
+    S1_Anthropic: SUBSTANTIAL
+    S2_Alphabet: DEEP
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: SUBSTANTIAL
+    S6_OpenAI: SUBSTANTIAL
+    S7_Manus: PERIPHERAL
+    S8_Notion: PERIPHERAL
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S018
   house: H02
   house_name: Formal Sciences
-  sphere: Game Theory
-  S1_Anthropic: 0.6
-  S2_Alphabet: 0.7
-  S3_Muskverse: 0.2
-  Amazon: 0.4
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.7
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 19
+  sphere_name: Game Theory
+  lead_seat: S1_Anthropic
+  lead_score: 0.6
+  federation_max: 0.6
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.6
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.5
+    S5_DeepSeek: 0.4
+    S6_OpenAI: 0.5
+    S7_Manus: 0.1
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.3
+  tiers:
+    S1_Anthropic: SUBSTANTIAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: PERIPHERAL
+    S6_OpenAI: SUBSTANTIAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S019
   house: H02
   house_name: Formal Sciences
-  sphere: Operations Research
-  S1_Anthropic: 0.4
-  S2_Alphabet: 0.6
-  S3_Muskverse: 0.6
-  Amazon: 0.9
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.9
-  lead: Amazon
-  depth: Deep
-- sphere_id: 20
+  sphere_name: Operations Research
+  lead_seat: S2_Alphabet
+  lead_score: 0.6
+  federation_max: 0.6
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.4
+    S2_Alphabet: 0.6
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.6
+    S5_DeepSeek: 0.4
+    S6_OpenAI: 0.5
+    S7_Manus: 0.2
+    S8_Notion: 0.1
+    Amazon: 0.5
+    S10_Qwen3: 0.4
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: PERIPHERAL
+    S6_OpenAI: SUBSTANTIAL
+    S7_Manus: PERIPHERAL
+    S8_Notion: ABSENT
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S020
   house: H02
   house_name: Formal Sciences
-  sphere: Systems Theory
-  S1_Anthropic: 0.7
-  S2_Alphabet: 0.7
-  S3_Muskverse: 0.8
-  Amazon: 0.6
-  S4_Microsoft: 0.7
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.5
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.8
-  lead: S3_Muskverse
-  depth: Deep
-- sphere_id: 21
+  sphere_name: Systems Theory
+  lead_seat: S1_Anthropic
+  lead_score: 0.7
+  federation_max: 0.7
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.7
+    S2_Alphabet: 0.7
+    S3_Muskverse: 0.4
+    S4_Microsoft: 0.6
+    S5_DeepSeek: 0.5
+    S6_OpenAI: 0.6
+    S7_Manus: 0.3
+    S8_Notion: 0.2
+    Amazon: 0.5
+    S10_Qwen3: 0.4
+  tiers:
+    S1_Anthropic: SUBSTANTIAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: SUBSTANTIAL
+    S6_OpenAI: SUBSTANTIAL
+    S7_Manus: PERIPHERAL
+    S8_Notion: PERIPHERAL
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S021
   house: H02
   house_name: Formal Sciences
-  sphere: Decision Theory
-  S1_Anthropic: 0.8
-  S2_Alphabet: 0.6
-  S3_Muskverse: 0.3
-  Amazon: 0.5
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.6
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.8
-  lead: S1_Anthropic
-  depth: Deep
-- sphere_id: 22
+  sphere_name: Decision Theory
+  lead_seat: S1_Anthropic
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.8
+    S2_Alphabet: 0.6
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.6
+    S5_DeepSeek: 0.5
+    S6_OpenAI: 0.6
+    S7_Manus: 0.2
+    S8_Notion: 0.1
+    Amazon: 0.4
+    S10_Qwen3: 0.4
+  tiers:
+    S1_Anthropic: DEEP
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: SUBSTANTIAL
+    S6_OpenAI: SUBSTANTIAL
+    S7_Manus: PERIPHERAL
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S022
   house: H02
   house_name: Formal Sciences
-  sphere: Cryptography
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.7
-  S3_Muskverse: 0.2
-  Amazon: 0.8
-  S4_Microsoft: 0.7
-  S5_DeepSeek: 0.5
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.8
-  lead: Amazon
-  depth: Deep
-- sphere_id: 23
+  sphere_name: Cryptography
+  lead_seat: S2_Alphabet
+  lead_score: 0.7
+  federation_max: 0.7
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.3
+    S2_Alphabet: 0.7
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.6
+    S5_DeepSeek: 0.4
+    S6_OpenAI: 0.4
+    S7_Manus: 0.2
+    S8_Notion: 0.1
+    Amazon: 0.4
+    S10_Qwen3: 0.3
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: PERIPHERAL
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: PERIPHERAL
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S023
   house: H02
   house_name: Formal Sciences
-  sphere: Algorithmics
-  S1_Anthropic: 0.8
-  S2_Alphabet: 0.9
-  S3_Muskverse: 0.5
-  Amazon: 0.8
-  S4_Microsoft: 0.8
-  S5_DeepSeek: 0.9
-  S6_OpenAI: 0.8
-  S7_Manus: 0.5
-  S8_Notion: 0.02
-  S10_Qwen3: 0.7
-  max_score: 0.9
-  lead: Tie(2)
-  depth: Deep
-- sphere_id: 24
+  sphere_name: Algorithmics
+  lead_seat: S2_Alphabet
+  lead_score: 0.9
+  federation_max: 0.9
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.8
+    S2_Alphabet: 0.9
+    S3_Muskverse: 0.5
+    S4_Microsoft: 0.8
+    S5_DeepSeek: 0.7
+    S6_OpenAI: 0.7
+    S7_Manus: 0.3
+    S8_Notion: 0.1
+    Amazon: 0.6
+    S10_Qwen3: 0.6
+  tiers:
+    S1_Anthropic: DEEP
+    S2_Alphabet: DEEP
+    S3_Muskverse: SUBSTANTIAL
+    S4_Microsoft: DEEP
+    S5_DeepSeek: SUBSTANTIAL
+    S6_OpenAI: SUBSTANTIAL
+    S7_Manus: PERIPHERAL
+    S8_Notion: ABSENT
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: SUBSTANTIAL
+- sphere_id: S024
   house: H02
   house_name: Formal Sciences
-  sphere: Data Science
-  S1_Anthropic: 0.7
-  S2_Alphabet: 0.9
-  S3_Muskverse: 0.6
-  Amazon: 0.9
-  S4_Microsoft: 0.8
-  S5_DeepSeek: 0.7
-  S6_OpenAI: 0.7
-  S7_Manus: 0.4
-  S8_Notion: 0.02
-  S10_Qwen3: 0.7
-  max_score: 0.9
-  lead: Tie(2)
-  depth: Deep
-- sphere_id: 25
+  sphere_name: Data Science
+  lead_seat: S2_Alphabet
+  lead_score: 0.9
+  federation_max: 0.9
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.7
+    S2_Alphabet: 0.9
+    S3_Muskverse: 0.4
+    S4_Microsoft: 0.8
+    S5_DeepSeek: 0.7
+    S6_OpenAI: 0.7
+    S7_Manus: 0.3
+    S8_Notion: 0.2
+    Amazon: 0.7
+    S10_Qwen3: 0.6
+  tiers:
+    S1_Anthropic: SUBSTANTIAL
+    S2_Alphabet: DEEP
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: DEEP
+    S5_DeepSeek: SUBSTANTIAL
+    S6_OpenAI: SUBSTANTIAL
+    S7_Manus: PERIPHERAL
+    S8_Notion: PERIPHERAL
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: SUBSTANTIAL
+- sphere_id: S025
   house: H03
   house_name: Social Sciences
-  sphere: Sociology
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.1
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.4
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 26
+  sphere_name: Sociology
+  lead_seat: S4_Microsoft
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.3
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S026
   house: H03
   house_name: Social Sciences
-  sphere: Psychology
-  S1_Anthropic: 0.4
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.2
-  Amazon: 0.4
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.4
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 27
+  sphere_name: Psychology
+  lead_seat: S1_Anthropic
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.4
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S027
   house: H03
   house_name: Social Sciences
-  sphere: Anthropology
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.1
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 28
+  sphere_name: Anthropology
+  lead_seat: S2_Alphabet
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S028
   house: H03
   house_name: Social Sciences
-  sphere: Economics
-  S1_Anthropic: 0.5
-  S2_Alphabet: 0.6
-  S3_Muskverse: 0.3
-  Amazon: 0.7
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.6
-  max_score: 0.7
-  lead: Amazon
-  depth: Substantial
-- sphere_id: 29
+  sphere_name: Economics
+  lead_seat: S1_Anthropic
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.5
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.5
+    S5_DeepSeek: 0.3
+    S6_OpenAI: 0.4
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.5
+    S10_Qwen3: 0.3
+  tiers:
+    S1_Anthropic: SUBSTANTIAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: PERIPHERAL
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S029
   house: H03
   house_name: Social Sciences
-  sphere: Political Science
-  S1_Anthropic: 0.4
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.2
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.4
-  lead: S1_Anthropic
-  depth: Peripheral
-- sphere_id: 30
+  sphere_name: Political Science
+  lead_seat: S1_Anthropic
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.4
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S030
   house: H03
   house_name: Social Sciences
-  sphere: Geography
-  S1_Anthropic: 0.0
-  S2_Alphabet: 1.0
-  S3_Muskverse: 0.4
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 1.0
-  lead: S2_Alphabet
-  depth: Deep
-- sphere_id: 31
+  sphere_name: Geography
+  lead_seat: S2_Alphabet
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.8
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: DEEP
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S031
   house: H03
   house_name: Social Sciences
-  sphere: Linguistics
-  S1_Anthropic: 0.7
-  S2_Alphabet: 0.8
-  S3_Muskverse: 0.3
-  Amazon: 0.5
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.5
-  S6_OpenAI: 0.6
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.8
-  max_score: 0.8
-  lead: Tie(2)
-  depth: Deep
-- sphere_id: 32
+  sphere_name: Linguistics
+  lead_seat: S1_Anthropic
+  lead_score: 0.7
+  federation_max: 0.7
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.7
+    S2_Alphabet: 0.7
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.6
+    S5_DeepSeek: 0.4
+    S6_OpenAI: 0.6
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.4
+    S10_Qwen3: 0.4
+  tiers:
+    S1_Anthropic: SUBSTANTIAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: PERIPHERAL
+    S6_OpenAI: SUBSTANTIAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S032
   house: H03
   house_name: Social Sciences
-  sphere: Archaeology
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.0
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 33
+  sphere_name: Archaeology
+  lead_seat: S2_Alphabet
+  lead_score: 0.2
+  federation_max: 0.2
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.2
+    S3_Muskverse: 0.0
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.1
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S033
   house: H03
   house_name: Social Sciences
-  sphere: Demography
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.1
-  Amazon: 0.5
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: Tie(2)
-  depth: Substantial
-- sphere_id: 34
+  sphere_name: Demography
+  lead_seat: S2_Alphabet
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S034
   house: H03
   house_name: Social Sciences
-  sphere: Criminology
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.1
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 35
+  sphere_name: Criminology
+  lead_seat: S1_Anthropic
+  lead_score: 0.2
+  federation_max: 0.2
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.2
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S035
   house: H03
   house_name: Social Sciences
-  sphere: Social Work
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.1
-  S3_Muskverse: 0.0
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.1
-  lead: Tie(4)
-  depth: Absent
-- sphere_id: 36
+  sphere_name: Social Work
+  lead_seat: S4_Microsoft
+  lead_score: 0.2
+  federation_max: 0.2
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.1
+    S3_Muskverse: 0.0
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.1
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: ABSENT
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S036
   house: H03
   house_name: Social Sciences
-  sphere: Urban Studies
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.4
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 37
+  sphere_name: Urban Studies
+  lead_seat: S2_Alphabet
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S037
   house: H04
   house_name: Humanities
-  sphere: History
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.1
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.4
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 38
+  sphere_name: History
+  lead_seat: S2_Alphabet
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S038
   house: H04
   house_name: Humanities
-  sphere: Philosophy
-  S1_Anthropic: 0.8
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.1
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.3
-  S6_OpenAI: 0.5
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.8
-  lead: S1_Anthropic
-  depth: Deep
-- sphere_id: 39
+  sphere_name: Philosophy
+  lead_seat: S1_Anthropic
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.8
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.3
+    S6_OpenAI: 0.5
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.2
+  tiers:
+    S1_Anthropic: DEEP
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: PERIPHERAL
+    S6_OpenAI: SUBSTANTIAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S039
   house: H04
   house_name: Humanities
-  sphere: Literature
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.1
-  Amazon: 0.4
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.4
-  lead: Amazon
-  depth: Peripheral
-- sphere_id: 40
+  sphere_name: Literature
+  lead_seat: S6_OpenAI
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.2
+    S6_OpenAI: 0.4
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.4
+    S10_Qwen3: 0.2
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: PERIPHERAL
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S040
   house: H04
   house_name: Humanities
-  sphere: Classics
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.2
-  S3_Muskverse: 0.0
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.2
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 41
+  sphere_name: Classics
+  lead_seat: S2_Alphabet
+  lead_score: 0.2
+  federation_max: 0.2
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.2
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.1
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S041
   house: H04
   house_name: Humanities
-  sphere: Religious Studies
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.2
-  S3_Muskverse: 0.0
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.2
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 42
+  sphere_name: Religious Studies
+  lead_seat: S4_Microsoft
+  lead_score: 0.2
+  federation_max: 0.2
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.1
+    S3_Muskverse: 0.0
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.1
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: ABSENT
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S042
   house: H04
   house_name: Humanities
-  sphere: Ethics
-  S1_Anthropic: 0.9
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.2
-  Amazon: 0.3
-  S4_Microsoft: 0.4
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.6
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.9
-  lead: S1_Anthropic
-  depth: Deep
-- sphere_id: 43
+  sphere_name: Ethics
+  lead_seat: S1_Anthropic
+  lead_score: 0.9
+  federation_max: 0.9
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.9
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.2
+    S6_OpenAI: 0.5
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: DEEP
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: PERIPHERAL
+    S6_OpenAI: SUBSTANTIAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S043
   house: H04
   house_name: Humanities
-  sphere: Aesthetics
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.0
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 44
+  sphere_name: Aesthetics
+  lead_seat: S2_Alphabet
+  lead_score: 0.2
+  federation_max: 0.2
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.2
+    S3_Muskverse: 0.0
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.1
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S044
   house: H04
   house_name: Humanities
-  sphere: Cultural Studies
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.1
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: Tie(2)
-  depth: Peripheral
-- sphere_id: 45
+  sphere_name: Cultural Studies
+  lead_seat: S2_Alphabet
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.2
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S045
   house: H04
   house_name: Humanities
-  sphere: Mythology
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.1
-  S3_Muskverse: 0.0
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.1
-  lead: Tie(4)
-  depth: Absent
-- sphere_id: 46
+  sphere_name: Mythology
+  lead_seat: S2_Alphabet
+  lead_score: 0.1
+  federation_max: 0.1
+  coverage_depth: ABSENT
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.1
+    S3_Muskverse: 0.0
+    S4_Microsoft: 0.1
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.1
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: ABSENT
+    S3_Muskverse: ABSENT
+    S4_Microsoft: ABSENT
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S046
   house: H04
   house_name: Humanities
-  sphere: Philology
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.0
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 47
+  sphere_name: Philology
+  lead_seat: S2_Alphabet
+  lead_score: 0.2
+  federation_max: 0.2
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.2
+    S3_Muskverse: 0.0
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.1
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S047
   house: H04
   house_name: Humanities
-  sphere: Rhetoric
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.1
-  Amazon: 0.4
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.4
-  lead: Tie(2)
-  depth: Peripheral
-- sphere_id: 48
+  sphere_name: Rhetoric
+  lead_seat: S1_Anthropic
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.3
+    S2_Alphabet: 0.2
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.1
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S048
   house: H04
   house_name: Humanities
-  sphere: Hermeneutics
-  S1_Anthropic: 0.4
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.1
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.4
-  lead: S1_Anthropic
-  depth: Peripheral
-- sphere_id: 49
+  sphere_name: Hermeneutics
+  lead_seat: S1_Anthropic
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.4
+    S2_Alphabet: 0.2
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.1
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S049
   house: H05
   house_name: Arts
-  sphere: Visual Arts
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.0
-  Amazon: 0.4
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.8
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.4
-  max_score: 0.8
-  lead: S6_OpenAI
-  depth: Deep
-- sphere_id: 50
+  sphere_name: Visual Arts
+  lead_seat: S6_OpenAI
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.5
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: SUBSTANTIAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S050
   house: H05
   house_name: Arts
-  sphere: Performing Arts
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.2
-  S3_Muskverse: 0.0
-  Amazon: 0.5
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.6
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.6
-  lead: S6_OpenAI
-  depth: Substantial
-- sphere_id: 51
+  sphere_name: Performing Arts
+  lead_seat: S4_Microsoft
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.2
+    S3_Muskverse: 0.0
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.1
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S051
   house: H05
   house_name: Arts
-  sphere: Music
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.0
-  Amazon: 0.6
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.6
-  lead: Amazon
-  depth: Substantial
-- sphere_id: 52
+  sphere_name: Music
+  lead_seat: S2_Alphabet
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.4
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S052
   house: H05
   house_name: Arts
-  sphere: Dance
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.2
-  S3_Muskverse: 0.0
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: Amazon
-  depth: Peripheral
-- sphere_id: 53
+  sphere_name: Dance
+  lead_seat: S4_Microsoft
+  lead_score: 0.2
+  federation_max: 0.2
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.1
+    S3_Muskverse: 0.0
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.0
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: ABSENT
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S053
   house: H05
   house_name: Arts
-  sphere: Theater
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.2
-  S3_Muskverse: 0.0
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: Amazon
-  depth: Peripheral
-- sphere_id: 54
+  sphere_name: Theater
+  lead_seat: S4_Microsoft
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.1
+    S3_Muskverse: 0.0
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.1
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: ABSENT
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S054
   house: H05
   house_name: Arts
-  sphere: Film
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.0
-  Amazon: 0.8
-  S4_Microsoft: 0.4
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.7
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.8
-  lead: Amazon
-  depth: Deep
-- sphere_id: 55
+  sphere_name: Film
+  lead_seat: S2_Alphabet
+  lead_score: 0.7
+  federation_max: 0.7
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.7
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.5
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.5
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: ABSENT
+- sphere_id: S055
   house: H05
   house_name: Arts
-  sphere: Literature (Arts)
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.0
-  Amazon: 0.7
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.7
-  lead: Amazon
-  depth: Substantial
-- sphere_id: 56
+  sphere_name: Creative Writing
+  lead_seat: S6_OpenAI
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.5
+    S7_Manus: 0.0
+    S8_Notion: 0.1
+    Amazon: 0.3
+    S10_Qwen3: 0.2
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: SUBSTANTIAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S056
   house: H05
   house_name: Arts
-  sphere: Architecture
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.3
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: Tie(2)
-  depth: Peripheral
-- sphere_id: 57
+  sphere_name: Architecture
+  lead_seat: S3_Muskverse
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.2
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.1
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S057
   house: H05
   house_name: Arts
-  sphere: Design
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.6
-  S3_Muskverse: 0.4
-  Amazon: 0.4
-  S4_Microsoft: 0.5
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.5
-  S7_Manus: 0.02
-  S8_Notion: 0.4
-  S10_Qwen3: 0.05
-  max_score: 0.6
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 58
+  sphere_name: Design
+  lead_seat: S2_Alphabet
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.3
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.5
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.4
+    S7_Manus: 0.1
+    S8_Notion: 0.3
+    Amazon: 0.3
+    S10_Qwen3: 0.2
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: PERIPHERAL
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S058
   house: H05
   house_name: Arts
-  sphere: Photography
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.0
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 59
+  sphere_name: Photography
+  lead_seat: S2_Alphabet
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.0
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S059
   house: H05
   house_name: Arts
-  sphere: Sculpture
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.1
-  S3_Muskverse: 0.0
-  Amazon: 0.0
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.1
-  lead: Tie(3)
-  depth: Absent
-- sphere_id: 60
+  sphere_name: Sculpture
+  lead_seat: S4_Microsoft
+  lead_score: 0.2
+  federation_max: 0.2
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.1
+    S3_Muskverse: 0.0
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.0
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: ABSENT
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S060
   house: H05
   house_name: Arts
-  sphere: Painting
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.2
-  S3_Muskverse: 0.0
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.2
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 61
+  sphere_name: Painting
+  lead_seat: S4_Microsoft
+  lead_score: 0.2
+  federation_max: 0.2
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.1
+    S3_Muskverse: 0.0
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.0
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: ABSENT
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S061
   house: H06
   house_name: Engineering & Technology
-  sphere: Mechanical Engineering
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.9
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.9
-  lead: S3_Muskverse
-  depth: Deep
-- sphere_id: 62
+  sphere_name: Mechanical Engineering
+  lead_seat: S3_Muskverse
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.8
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: DEEP
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S062
   house: H06
   house_name: Engineering & Technology
-  sphere: Electrical Engineering
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.9
-  Amazon: 0.5
-  S4_Microsoft: 0.5
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.9
-  lead: S3_Muskverse
-  depth: Deep
-- sphere_id: 63
+  sphere_name: Electrical Engineering
+  lead_seat: S3_Muskverse
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.8
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.2
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: DEEP
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S063
   house: H06
   house_name: Engineering & Technology
-  sphere: Civil Engineering
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.2
-  S3_Muskverse: 0.7
-  Amazon: 0.4
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.7
-  lead: S3_Muskverse
-  depth: Substantial
-- sphere_id: 64
+  sphere_name: Civil Engineering
+  lead_seat: S3_Muskverse
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.2
+    S3_Muskverse: 0.4
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S064
   house: H06
   house_name: Engineering & Technology
-  sphere: Chemical Engineering
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.7
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.7
-  lead: S3_Muskverse
-  depth: Substantial
-- sphere_id: 65
+  sphere_name: Chemical Engineering
+  lead_seat: S3_Muskverse
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.2
+    S3_Muskverse: 0.4
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S065
   house: H06
   house_name: Engineering & Technology
-  sphere: Aerospace Engineering
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.2
-  S3_Muskverse: 1.0
-  Amazon: 0.4
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 1.0
-  lead: S3_Muskverse
-  depth: Deep
-- sphere_id: 66
+  sphere_name: Aerospace Engineering
+  lead_seat: S3_Muskverse
+  lead_score: 1.0
+  federation_max: 1.0
+  coverage_depth: DEEP
+  seduction_risk_flag: true
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.3
+    S3_Muskverse: 1.0
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: DEEP
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S066
   house: H06
   house_name: Engineering & Technology
-  sphere: Biomedical Engineering
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.6
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.6
-  lead: S3_Muskverse
-  depth: Substantial
-- sphere_id: 67
+  sphere_name: Biomedical Engineering
+  lead_seat: S4_Microsoft
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S067
   house: H06
   house_name: Engineering & Technology
-  sphere: Environmental Engineering
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.5
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: S3_Muskverse
-  depth: Substantial
-- sphere_id: 68
+  sphere_name: Environmental Engineering
+  lead_seat: S3_Muskverse
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.5
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: SUBSTANTIAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S068
   house: H06
   house_name: Engineering & Technology
-  sphere: Industrial Engineering
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.8
-  Amazon: 0.8
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.8
-  lead: Tie(2)
-  depth: Deep
-- sphere_id: 69
+  sphere_name: Industrial Engineering
+  lead_seat: S3_Muskverse
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.8
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.5
+    S10_Qwen3: 0.2
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: DEEP
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S069
   house: H06
   house_name: Engineering & Technology
-  sphere: Software Engineering
-  S1_Anthropic: 0.8
-  S2_Alphabet: 0.8
-  S3_Muskverse: 0.6
-  Amazon: 0.7
-  S4_Microsoft: 0.9
-  S5_DeepSeek: 0.7
-  S6_OpenAI: 0.8
-  S7_Manus: 0.7
-  S8_Notion: 0.5
-  S10_Qwen3: 0.6
-  max_score: 0.9
-  lead: S4_Microsoft
-  depth: Deep
-- sphere_id: 70
+  sphere_name: Software Engineering
+  lead_seat: S1_Anthropic
+  lead_score: 0.9
+  federation_max: 0.9
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.9
+    S2_Alphabet: 0.9
+    S3_Muskverse: 0.5
+    S4_Microsoft: 0.9
+    S5_DeepSeek: 0.7
+    S6_OpenAI: 0.8
+    S7_Manus: 0.6
+    S8_Notion: 0.5
+    Amazon: 0.7
+    S10_Qwen3: 0.6
+  tiers:
+    S1_Anthropic: DEEP
+    S2_Alphabet: DEEP
+    S3_Muskverse: SUBSTANTIAL
+    S4_Microsoft: DEEP
+    S5_DeepSeek: SUBSTANTIAL
+    S6_OpenAI: DEEP
+    S7_Manus: SUBSTANTIAL
+    S8_Notion: SUBSTANTIAL
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: SUBSTANTIAL
+- sphere_id: S070
   house: H06
   house_name: Engineering & Technology
-  sphere: Robotics
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.7
-  S3_Muskverse: 0.9
-  Amazon: 0.6
-  S4_Microsoft: 0.6
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.9
-  lead: S3_Muskverse
-  depth: Deep
-- sphere_id: 71
+  sphere_name: Materials Engineering
+  lead_seat: S3_Muskverse
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.8
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: DEEP
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S071
   house: H06
   house_name: Engineering & Technology
-  sphere: Nuclear Engineering
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.2
-  S3_Muskverse: 0.3
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: S3_Muskverse
-  depth: Peripheral
-- sphere_id: 72
+  sphere_name: Nuclear Engineering
+  lead_seat: S3_Muskverse
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.1
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.1
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.0
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.0
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: ABSENT
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: ABSENT
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S072
   house: H06
   house_name: Engineering & Technology
-  sphere: Materials Science
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.6
-  Amazon: 0.3
-  S4_Microsoft: 0.4
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.6
-  lead: S3_Muskverse
-  depth: Substantial
-- sphere_id: 73
+  sphere_name: Robotics
+  lead_seat: S3_Muskverse
+  lead_score: 0.9
+  federation_max: 0.9
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.3
+    S2_Alphabet: 0.6
+    S3_Muskverse: 0.9
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.6
+    S10_Qwen3: 0.2
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: DEEP
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S073
   house: H07
   house_name: Information & Communication
-  sphere: Media Studies
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.7
-  S3_Muskverse: 0.3
-  Amazon: 0.4
-  S4_Microsoft: 0.5
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.7
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 74
+  sphere_name: Media Studies
+  lead_seat: S2_Alphabet
+  lead_score: 0.6
+  federation_max: 0.6
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.6
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.5
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.1
+    Amazon: 0.3
+    S10_Qwen3: 0.2
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S074
   house: H07
   house_name: Information & Communication
-  sphere: Journalism
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.2
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 75
+  sphere_name: Journalism
+  lead_seat: S2_Alphabet
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S075
   house: H07
   house_name: Information & Communication
-  sphere: Library Science
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.6
-  S3_Muskverse: 0.1
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.6
-  S10_Qwen3: 0.05
-  max_score: 0.6
-  lead: Tie(2)
-  depth: Substantial
-- sphere_id: 76
+  sphere_name: Telecommunications
+  lead_seat: S2_Alphabet
+  lead_score: 0.7
+  federation_max: 0.7
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.7
+    S3_Muskverse: 0.6
+    S4_Microsoft: 0.5
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.4
+    S10_Qwen3: 0.3
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: SUBSTANTIAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S076
   house: H07
   house_name: Information & Communication
-  sphere: Information Systems
-  S1_Anthropic: 0.5
-  S2_Alphabet: 0.8
-  S3_Muskverse: 0.3
-  Amazon: 0.7
-  S4_Microsoft: 0.8
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.6
-  S7_Manus: 0.5
-  S8_Notion: 0.8
-  S10_Qwen3: 0.5
-  max_score: 0.8
-  lead: Tie(3)
-  depth: Deep
-- sphere_id: 77
+  sphere_name: Information Systems
+  lead_seat: S2_Alphabet
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.3
+    S2_Alphabet: 0.8
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.8
+    S5_DeepSeek: 0.2
+    S6_OpenAI: 0.4
+    S7_Manus: 0.3
+    S8_Notion: 0.5
+    Amazon: 0.6
+    S10_Qwen3: 0.4
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: DEEP
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: DEEP
+    S5_DeepSeek: PERIPHERAL
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: PERIPHERAL
+    S8_Notion: SUBSTANTIAL
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S077
   house: H07
   house_name: Information & Communication
-  sphere: Telecommunications
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.6
-  S3_Muskverse: 0.8
-  Amazon: 0.5
-  S4_Microsoft: 0.5
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.8
-  lead: S3_Muskverse
-  depth: Deep
-- sphere_id: 78
+  sphere_name: Library Science
+  lead_seat: S2_Alphabet
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.0
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.2
+    Amazon: 0.2
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: PERIPHERAL
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S078
   house: H07
   house_name: Information & Communication
-  sphere: Publishing
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.0
-  Amazon: 0.7
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.7
-  lead: Amazon
-  depth: Substantial
-- sphere_id: 79
+  sphere_name: Publishing
+  lead_seat: S4_Microsoft
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.3
+    Amazon: 0.4
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: PERIPHERAL
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S079
   house: H07
   house_name: Information & Communication
-  sphere: Advertising
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.8
-  S3_Muskverse: 0.2
-  Amazon: 0.5
-  S4_Microsoft: 0.6
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.8
-  lead: S2_Alphabet
-  depth: Deep
-- sphere_id: 80
+  sphere_name: Advertising
+  lead_seat: S2_Alphabet
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.8
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.6
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.5
+    S10_Qwen3: 0.2
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: DEEP
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S080
   house: H07
   house_name: Information & Communication
-  sphere: Public Relations
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.2
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 81
+  sphere_name: Public Relations
+  lead_seat: S2_Alphabet
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.1
+    Amazon: 0.3
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S081
   house: H07
   house_name: Information & Communication
-  sphere: Digital Media
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.7
-  S3_Muskverse: 0.3
-  Amazon: 0.5
-  S4_Microsoft: 0.7
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.5
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.5
-  max_score: 0.7
-  lead: Tie(2)
-  depth: Substantial
-- sphere_id: 82
+  sphere_name: Digital Media
+  lead_seat: S2_Alphabet
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.3
+    S2_Alphabet: 0.8
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.6
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.4
+    S7_Manus: 0.2
+    S8_Notion: 0.3
+    Amazon: 0.5
+    S10_Qwen3: 0.3
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: DEEP
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: PERIPHERAL
+    S8_Notion: PERIPHERAL
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S082
   house: H07
   house_name: Information & Communication
-  sphere: Broadcasting
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.6
-  S3_Muskverse: 0.1
-  Amazon: 0.4
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.6
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 83
+  sphere_name: Broadcasting
+  lead_seat: S2_Alphabet
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S083
   house: H07
   house_name: Information & Communication
-  sphere: Archival Science
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.0
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.5
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: S8_Notion
-  depth: Substantial
-- sphere_id: 84
+  sphere_name: Film Studies
+  lead_seat: S2_Alphabet
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S084
   house: H07
   house_name: Information & Communication
-  sphere: Communication Theory
-  S1_Anthropic: 0.5
-  S2_Alphabet: 0.6
-  S3_Muskverse: 0.1
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.6
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 85
+  sphere_name: Communication Theory
+  lead_seat: S2_Alphabet
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.5
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.1
+    S8_Notion: 0.2
+    Amazon: 0.3
+    S10_Qwen3: 0.2
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: PERIPHERAL
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S085
   house: H08
   house_name: Education
-  sphere: Pedagogy
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.1
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 86
+  sphere_name: Pedagogy
+  lead_seat: S4_Microsoft
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.3
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.5
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.1
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S086
   house: H08
   house_name: Education
-  sphere: Curriculum Design
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.1
-  Amazon: 0.2
-  S4_Microsoft: 0.5
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.4
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: Tie(2)
-  depth: Substantial
-- sphere_id: 87
+  sphere_name: Curriculum Design
+  lead_seat: S4_Microsoft
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.5
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.1
+    Amazon: 0.1
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S087
   house: H08
   house_name: Education
-  sphere: Educational Psychology
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.1
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.4
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 88
+  sphere_name: Educational Psychology
+  lead_seat: S4_Microsoft
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.1
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S088
   house: H08
   house_name: Education
-  sphere: E-Learning
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.6
-  S3_Muskverse: 0.1
-  Amazon: 0.3
-  S4_Microsoft: 0.7
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.5
-  S7_Manus: 0.02
-  S8_Notion: 0.3
-  S10_Qwen3: 0.05
-  max_score: 0.7
-  lead: S4_Microsoft
-  depth: Substantial
-- sphere_id: 89
+  sphere_name: Special Education
+  lead_seat: S4_Microsoft
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.0
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.1
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S089
   house: H08
   house_name: Education
-  sphere: Special Education
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.0
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 90
+  sphere_name: Adult Education
+  lead_seat: S4_Microsoft
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.0
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.1
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S090
   house: H08
   house_name: Education
-  sphere: Higher Education
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.1
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.4
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 91
+  sphere_name: E-Learning
+  lead_seat: S2_Alphabet
+  lead_score: 0.6
+  federation_max: 0.6
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.3
+    S2_Alphabet: 0.6
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.6
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.4
+    S7_Manus: 0.0
+    S8_Notion: 0.2
+    Amazon: 0.2
+    S10_Qwen3: 0.2
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: PERIPHERAL
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S091
   house: H08
   house_name: Education
-  sphere: Vocational Training
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.2
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 92
+  sphere_name: Educational Technology
+  lead_seat: S2_Alphabet
+  lead_score: 0.7
+  federation_max: 0.7
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.4
+    S2_Alphabet: 0.7
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.7
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.4
+    S7_Manus: 0.0
+    S8_Notion: 0.2
+    Amazon: 0.2
+    S10_Qwen3: 0.2
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: PERIPHERAL
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S092
   house: H08
   house_name: Education
-  sphere: Literacy
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.0
-  Amazon: 0.5
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: Amazon
-  depth: Substantial
-- sphere_id: 93
+  sphere_name: Assessment
+  lead_seat: S4_Microsoft
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.3
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.5
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.1
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S093
   house: H08
   house_name: Education
-  sphere: Assessment & Evaluation
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.1
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 94
+  sphere_name: School Administration
+  lead_seat: S4_Microsoft
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.0
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.1
+    Amazon: 0.1
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S094
   house: H08
   house_name: Education
-  sphere: Educational Technology
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.6
-  S3_Muskverse: 0.1
-  Amazon: 0.3
-  S4_Microsoft: 0.7
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.5
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.7
-  lead: S4_Microsoft
-  depth: Substantial
-- sphere_id: 95
+  sphere_name: Teacher Training
+  lead_seat: S4_Microsoft
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.0
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.1
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S095
   house: H08
   house_name: Education
-  sphere: Comparative Education
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.0
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 96
+  sphere_name: Literacy
+  lead_seat: S4_Microsoft
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.1
+    Amazon: 0.1
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S096
   house: H08
   house_name: Education
-  sphere: Philosophy of Education
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.2
-  S3_Muskverse: 0.0
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: S1_Anthropic
-  depth: Peripheral
-- sphere_id: 97
+  sphere_name: Higher Education
+  lead_seat: S4_Microsoft
+  lead_score: 0.6
+  federation_max: 0.6
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.3
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.6
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.1
+    Amazon: 0.1
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S097
   house: H09
   house_name: Health & Medicine
-  sphere: Anatomy
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.6
-  S3_Muskverse: 0.2
-  Amazon: 0.3
-  S4_Microsoft: 0.4
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.6
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 98
+  sphere_name: Anatomy
+  lead_seat: S2_Alphabet
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S098
   house: H09
   house_name: Health & Medicine
-  sphere: Pharmacology
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.7
-  S3_Muskverse: 0.1
-  Amazon: 0.5
-  S4_Microsoft: 0.5
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.7
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 99
+  sphere_name: Physiology
+  lead_seat: S2_Alphabet
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S099
   house: H09
   house_name: Health & Medicine
-  sphere: Psychiatry
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.3
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 100
+  sphere_name: Pathology
+  lead_seat: S2_Alphabet
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S100
   house: H09
   house_name: Health & Medicine
-  sphere: Epidemiology
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.6
-  S3_Muskverse: 0.1
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.6
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 101
+  sphere_name: Pharmacology
+  lead_seat: S2_Alphabet
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S101
   house: H09
   house_name: Health & Medicine
-  sphere: Public Health
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.1
-  Amazon: 0.4
-  S4_Microsoft: 0.5
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: Tie(2)
-  depth: Substantial
-- sphere_id: 102
+  sphere_name: Surgery
+  lead_seat: S2_Alphabet
+  lead_score: 0.2
+  federation_max: 0.2
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.2
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.1
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S102
   house: H09
   house_name: Health & Medicine
-  sphere: Surgery
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.1
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.4
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 103
+  sphere_name: Pediatrics
+  lead_seat: S2_Alphabet
+  lead_score: 0.2
+  federation_max: 0.2
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.2
+    S3_Muskverse: 0.0
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.1
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: ABSENT
+    S10_Qwen3: ABSENT
+- sphere_id: S103
   house: H09
   house_name: Health & Medicine
-  sphere: Pediatrics
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.0
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 104
+  sphere_name: Psychiatry
+  lead_seat: S2_Alphabet
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S104
   house: H09
   house_name: Health & Medicine
-  sphere: Oncology
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.1
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.4
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 105
+  sphere_name: Neurology
+  lead_seat: S3_Muskverse
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.5
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: SUBSTANTIAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S105
   house: H09
   house_name: Health & Medicine
-  sphere: Neurology
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.6
-  Amazon: 0.2
-  S4_Microsoft: 0.4
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.6
-  lead: S3_Muskverse
-  depth: Substantial
-- sphere_id: 106
+  sphere_name: Oncology
+  lead_seat: S2_Alphabet
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S106
   house: H09
   house_name: Health & Medicine
-  sphere: Cardiology
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.1
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 107
+  sphere_name: Epidemiology
+  lead_seat: S2_Alphabet
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S107
   house: H09
   house_name: Health & Medicine
-  sphere: Immunology
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.6
-  S3_Muskverse: 0.1
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.6
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 108
+  sphere_name: Nutrition
+  lead_seat: S2_Alphabet
+  lead_score: 0.2
+  federation_max: 0.2
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.2
+    S3_Muskverse: 0.0
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S108
   house: H09
   house_name: Health & Medicine
-  sphere: Nutrition
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.1
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: Tie(2)
-  depth: Peripheral
-- sphere_id: 109
+  sphere_name: Public Health
+  lead_seat: S2_Alphabet
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S109
   house: H10
   house_name: Business & Economics
-  sphere: Management
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.5
-  Amazon: 0.8
-  S4_Microsoft: 0.7
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.4
-  S10_Qwen3: 0.6
-  max_score: 0.8
-  lead: Amazon
-  depth: Deep
-- sphere_id: 110
+  sphere_name: Management
+  lead_seat: Amazon
+  lead_score: 0.7
+  federation_max: 0.7
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.5
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.5
+    S4_Microsoft: 0.6
+    S5_DeepSeek: 0.2
+    S6_OpenAI: 0.4
+    S7_Manus: 0.1
+    S8_Notion: 0.3
+    Amazon: 0.7
+    S10_Qwen3: 0.4
+  tiers:
+    S1_Anthropic: SUBSTANTIAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: SUBSTANTIAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: PERIPHERAL
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: PERIPHERAL
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S110
   house: H10
   house_name: Business & Economics
-  sphere: Finance
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.3
-  Amazon: 0.6
-  S4_Microsoft: 0.6
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.6
-  lead: Tie(2)
-  depth: Substantial
-- sphere_id: 111
+  sphere_name: Marketing
+  lead_seat: S2_Alphabet
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.4
+    S2_Alphabet: 0.8
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.5
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.1
+    Amazon: 0.8
+    S10_Qwen3: 0.4
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: DEEP
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: DEEP
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S111
   house: H10
   house_name: Business & Economics
-  sphere: Marketing
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.8
-  S3_Muskverse: 0.3
-  Amazon: 0.7
-  S4_Microsoft: 0.6
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.7
-  max_score: 0.8
-  lead: S2_Alphabet
-  depth: Deep
-- sphere_id: 112
+  sphere_name: Finance
+  lead_seat: S2_Alphabet
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.3
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.4
+    S4_Microsoft: 0.5
+    S5_DeepSeek: 0.2
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.1
+    Amazon: 0.5
+    S10_Qwen3: 0.4
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: PERIPHERAL
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S112
   house: H10
   house_name: Business & Economics
-  sphere: Accounting
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.2
-  Amazon: 0.6
-  S4_Microsoft: 0.5
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.6
-  lead: Amazon
-  depth: Substantial
-- sphere_id: 113
+  sphere_name: Accounting
+  lead_seat: S4_Microsoft
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.3
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.5
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.1
+    Amazon: 0.5
+    S10_Qwen3: 0.3
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S113
   house: H10
   house_name: Business & Economics
-  sphere: Entrepreneurship
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.7
-  Amazon: 0.4
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.4
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.7
-  lead: S3_Muskverse
-  depth: Substantial
-- sphere_id: 114
+  sphere_name: Entrepreneurship
+  lead_seat: S3_Muskverse
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.4
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.8
+    S4_Microsoft: 0.5
+    S5_DeepSeek: 0.2
+    S6_OpenAI: 0.4
+    S7_Manus: 0.1
+    S8_Notion: 0.2
+    Amazon: 0.6
+    S10_Qwen3: 0.4
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: DEEP
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: PERIPHERAL
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: PERIPHERAL
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S114
   house: H10
   house_name: Business & Economics
-  sphere: Supply Chain
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.4
-  Amazon: 0.9
-  S4_Microsoft: 0.5
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.7
-  max_score: 0.9
-  lead: Amazon
-  depth: Deep
-- sphere_id: 115
+  sphere_name: Human Resources
+  lead_seat: S4_Microsoft
+  lead_score: 0.6
+  federation_max: 0.6
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.3
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.6
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.1
+    Amazon: 0.5
+    S10_Qwen3: 0.3
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S115
   house: H10
   house_name: Business & Economics
-  sphere: Human Resources
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.3
-  Amazon: 0.5
-  S4_Microsoft: 0.6
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.4
-  S10_Qwen3: 0.05
-  max_score: 0.6
-  lead: S4_Microsoft
-  depth: Substantial
-- sphere_id: 116
+  sphere_name: Operations Management
+  lead_seat: Amazon
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.4
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.6
+    S4_Microsoft: 0.6
+    S5_DeepSeek: 0.2
+    S6_OpenAI: 0.4
+    S7_Manus: 0.1
+    S8_Notion: 0.2
+    Amazon: 0.8
+    S10_Qwen3: 0.4
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: SUBSTANTIAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: PERIPHERAL
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: PERIPHERAL
+    Amazon: DEEP
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S116
   house: H10
   house_name: Business & Economics
-  sphere: Business Ethics
-  S1_Anthropic: 0.7
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.2
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.7
-  lead: S1_Anthropic
-  depth: Substantial
-- sphere_id: 117
+  sphere_name: Supply Chain
+  lead_seat: Amazon
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.4
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.8
+    S10_Qwen3: 0.5
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: DEEP
+    S10_Qwen3: SUBSTANTIAL
+- sphere_id: S117
   house: H10
   house_name: Business & Economics
-  sphere: International Business
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.4
-  Amazon: 0.7
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.7
-  max_score: 0.7
-  lead: Tie(2)
-  depth: Substantial
-- sphere_id: 118
+  sphere_name: International Business
+  lead_seat: Amazon
+  lead_score: 0.7
+  federation_max: 0.7
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.3
+    S2_Alphabet: 0.6
+    S3_Muskverse: 0.4
+    S4_Microsoft: 0.6
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.1
+    Amazon: 0.7
+    S10_Qwen3: 0.5
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: SUBSTANTIAL
+- sphere_id: S118
   house: H10
   house_name: Business & Economics
-  sphere: Operations Management
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.6
-  Amazon: 0.8
-  S4_Microsoft: 0.6
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.6
-  max_score: 0.8
-  lead: Amazon
-  depth: Deep
-- sphere_id: 119
+  sphere_name: Business Ethics
+  lead_seat: S1_Anthropic
+  lead_score: 0.6
+  federation_max: 0.6
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.6
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.5
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.4
+    S7_Manus: 0.0
+    S8_Notion: 0.1
+    Amazon: 0.5
+    S10_Qwen3: 0.3
+  tiers:
+    S1_Anthropic: SUBSTANTIAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S119
   house: H10
   house_name: Business & Economics
-  sphere: Real Estate
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.2
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: Tie(2)
-  depth: Peripheral
-- sphere_id: 120
+  sphere_name: Microeconomics
+  lead_seat: Amazon
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.3
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.2
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.5
+    S10_Qwen3: 0.3
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: PERIPHERAL
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S120
   house: H10
   house_name: Business & Economics
-  sphere: Insurance
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.1
-  Amazon: 0.4
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.4
-  lead: Amazon
-  depth: Peripheral
-- sphere_id: 121
+  sphere_name: Macroeconomics
+  lead_seat: S2_Alphabet
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.4
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.5
+    S5_DeepSeek: 0.2
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.5
+    S10_Qwen3: 0.3
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: PERIPHERAL
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S121
   house: H11
   house_name: Infrastructure
-  sphere: Transportation
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.7
-  Amazon: 0.5
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.7
-  lead: S3_Muskverse
-  depth: Substantial
-- sphere_id: 122
+  sphere_name: Transportation
+  lead_seat: S3_Muskverse
+  lead_score: 0.7
+  federation_max: 0.7
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.7
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.5
+    S10_Qwen3: 0.2
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: SUBSTANTIAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: SUBSTANTIAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S122
   house: H11
   house_name: Infrastructure
-  sphere: Energy Systems
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.9
-  Amazon: 0.3
-  S4_Microsoft: 0.4
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.9
-  lead: S3_Muskverse
-  depth: Deep
-- sphere_id: 123
+  sphere_name: Energy Systems
+  lead_seat: S3_Muskverse
+  lead_score: 0.9
+  federation_max: 0.9
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.9
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.2
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: DEEP
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S123
   house: H11
   house_name: Infrastructure
-  sphere: Water Systems
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.2
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: S2_Alphabet
-  depth: Peripheral
-- sphere_id: 124
+  sphere_name: Water Systems
+  lead_seat: S2_Alphabet
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S124
   house: H11
   house_name: Infrastructure
-  sphere: Waste Management
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.2
-  S3_Muskverse: 0.2
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.2
-  lead: Tie(3)
-  depth: Peripheral
-- sphere_id: 125
+  sphere_name: Waste Management
+  lead_seat: S2_Alphabet
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S125
   house: H11
   house_name: Infrastructure
-  sphere: Urban Planning
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.4
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: S2_Alphabet
-  depth: Substantial
-- sphere_id: 126
+  sphere_name: Computing Infrastructure
+  lead_seat: S2_Alphabet
+  lead_score: 0.9
+  federation_max: 0.9
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.3
+    S2_Alphabet: 0.9
+    S3_Muskverse: 0.5
+    S4_Microsoft: 0.8
+    S5_DeepSeek: 0.3
+    S6_OpenAI: 0.4
+    S7_Manus: 0.2
+    S8_Notion: 0.1
+    Amazon: 0.8
+    S10_Qwen3: 0.5
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: DEEP
+    S3_Muskverse: SUBSTANTIAL
+    S4_Microsoft: DEEP
+    S5_DeepSeek: PERIPHERAL
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: PERIPHERAL
+    S8_Notion: ABSENT
+    Amazon: DEEP
+    S10_Qwen3: SUBSTANTIAL
+- sphere_id: S126
   house: H11
   house_name: Infrastructure
-  sphere: Construction
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.2
-  S3_Muskverse: 0.6
-  Amazon: 0.4
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.6
-  lead: S3_Muskverse
-  depth: Substantial
-- sphere_id: 127
+  sphere_name: Telecommunications Infrastructure
+  lead_seat: S2_Alphabet
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.8
+    S3_Muskverse: 0.6
+    S4_Microsoft: 0.6
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.4
+    S10_Qwen3: 0.3
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: DEEP
+    S3_Muskverse: SUBSTANTIAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S127
   house: H11
   house_name: Infrastructure
-  sphere: Mining
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.2
-  S3_Muskverse: 0.3
-  Amazon: 0.1
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: S3_Muskverse
-  depth: Peripheral
-- sphere_id: 128
+  sphere_name: Urban Planning
+  lead_seat: S2_Alphabet
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.5
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S128
   house: H11
   house_name: Infrastructure
-  sphere: Agriculture
-  S1_Anthropic: 0.0
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.3
-  Amazon: 0.4
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.4
-  lead: Tie(2)
-  depth: Peripheral
-- sphere_id: 129
+  sphere_name: Construction
+  lead_seat: S3_Muskverse
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.5
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.4
+    S10_Qwen3: 0.2
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: SUBSTANTIAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S129
   house: H11
   house_name: Infrastructure
-  sphere: Telecommunications Infrastructure
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.7
-  S3_Muskverse: 0.8
-  Amazon: 0.6
-  S4_Microsoft: 0.6
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.8
-  lead: S3_Muskverse
-  depth: Deep
-- sphere_id: 130
+  sphere_name: Logistics
+  lead_seat: Amazon
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.6
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.8
+    S10_Qwen3: 0.4
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: SUBSTANTIAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: DEEP
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S130
   house: H11
   house_name: Infrastructure
-  sphere: Computing Infrastructure
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.8
-  S3_Muskverse: 0.5
-  Amazon: 0.9
-  S4_Microsoft: 0.9
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.6
-  max_score: 0.9
-  lead: Tie(2)
-  depth: Deep
-- sphere_id: 131
+  sphere_name: Mining
+  lead_seat: S3_Muskverse
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.2
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.0
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S131
   house: H11
   house_name: Infrastructure
-  sphere: Logistics
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.5
-  S3_Muskverse: 0.4
-  Amazon: 0.9
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.7
-  max_score: 0.9
-  lead: Amazon
-  depth: Deep
-- sphere_id: 132
+  sphere_name: Agriculture Infrastructure
+  lead_seat: S3_Muskverse
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.4
+    S4_Microsoft: 0.2
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.0
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S132
   house: H11
   house_name: Infrastructure
-  sphere: Emergency Management
-  S1_Anthropic: 0.1
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.2
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: Tie(2)
-  depth: Peripheral
-- sphere_id: 133
+  sphere_name: Space Infrastructure
+  lead_seat: S3_Muskverse
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.0
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.8
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: DEEP
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S133
   house: H12
   house_name: Law/Governance/Meta-Knowledge
-  sphere: Constitutional Law
-  S1_Anthropic: 0.5
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.1
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.5
-  lead: S1_Anthropic
-  depth: Substantial
-- sphere_id: 134
+  sphere_name: Constitutional Law
+  lead_seat: S1_Anthropic
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.5
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: SUBSTANTIAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S134
   house: H12
   house_name: Law/Governance/Meta-Knowledge
-  sphere: International Law
-  S1_Anthropic: 0.4
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.1
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.4
-  lead: S1_Anthropic
-  depth: Peripheral
-- sphere_id: 135
+  sphere_name: Criminal Law
+  lead_seat: S4_Microsoft
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.2
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S135
   house: H12
   house_name: Law/Governance/Meta-Knowledge
-  sphere: Criminal Law
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.2
-  S3_Muskverse: 0.1
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: S1_Anthropic
-  depth: Peripheral
-- sphere_id: 136
+  sphere_name: Civil Law
+  lead_seat: S2_Alphabet
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.2
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S136
   house: H12
   house_name: Law/Governance/Meta-Knowledge
-  sphere: Civil Law
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.2
-  S3_Muskverse: 0.1
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.4
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.5
-  max_score: 0.5
-  lead: S10_Qwen3
-  depth: Substantial
-- sphere_id: 137
+  sphere_name: International Law
+  lead_seat: S4_Microsoft
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.3
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S137
   house: H12
   house_name: Law/Governance/Meta-Knowledge
-  sphere: Human Rights
-  S1_Anthropic: 0.6
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.1
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.6
-  lead: S1_Anthropic
-  depth: Substantial
-- sphere_id: 138
+  sphere_name: Corporate Law
+  lead_seat: S4_Microsoft
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.4
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.3
+    S4_Microsoft: 0.5
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.1
+    Amazon: 0.4
+    S10_Qwen3: 0.2
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: PERIPHERAL
+- sphere_id: S138
   house: H12
   house_name: Law/Governance/Meta-Knowledge
-  sphere: Environmental Law
-  S1_Anthropic: 0.4
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.2
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.4
-  lead: S1_Anthropic
-  depth: Peripheral
-- sphere_id: 139
+  sphere_name: Environmental Law
+  lead_seat: S2_Alphabet
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.1
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.1
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: ABSENT
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: ABSENT
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S139
   house: H12
   house_name: Law/Governance/Meta-Knowledge
-  sphere: Intellectual Property
-  S1_Anthropic: 0.4
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.2
-  Amazon: 0.4
-  S4_Microsoft: 0.5
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.4
-  max_score: 0.5
-  lead: S4_Microsoft
-  depth: Substantial
-- sphere_id: 140
+  sphere_name: Human Rights
+  lead_seat: S1_Anthropic
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.4
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.0
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S140
   house: H12
   house_name: Law/Governance/Meta-Knowledge
-  sphere: Labor Law
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.2
-  Amazon: 0.4
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.4
-  lead: Amazon
-  depth: Peripheral
-- sphere_id: 141
+  sphere_name: Political Theory
+  lead_seat: S1_Anthropic
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.4
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S141
   house: H12
   house_name: Law/Governance/Meta-Knowledge
-  sphere: Tax Law
-  S1_Anthropic: 0.2
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.1
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: Tie(2)
-  depth: Peripheral
-- sphere_id: 142
+  sphere_name: Public Policy
+  lead_seat: S1_Anthropic
+  lead_score: 0.8
+  federation_max: 0.8
+  coverage_depth: DEEP
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.8
+    S2_Alphabet: 0.5
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.5
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.5
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: DEEP
+    S2_Alphabet: SUBSTANTIAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: SUBSTANTIAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: SUBSTANTIAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S142
   house: H12
   house_name: Law/Governance/Meta-Knowledge
-  sphere: Administrative Law
-  S1_Anthropic: 0.3
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.1
-  Amazon: 0.3
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.3
-  S10_Qwen3: 0.05
-  max_score: 0.3
-  lead: Tie(4)
-  depth: Peripheral
-- sphere_id: 143
+  sphere_name: International Relations
+  lead_seat: S1_Anthropic
+  lead_score: 0.5
+  federation_max: 0.5
+  coverage_depth: SUBSTANTIAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.5
+    S2_Alphabet: 0.4
+    S3_Muskverse: 0.2
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.3
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: SUBSTANTIAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: PERIPHERAL
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S143
   house: H12
   house_name: Law/Governance/Meta-Knowledge
-  sphere: Public Policy
-  S1_Anthropic: 0.7
-  S2_Alphabet: 0.4
-  S3_Muskverse: 0.2
-  Amazon: 0.3
-  S4_Microsoft: 0.4
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.4
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.7
-  lead: S1_Anthropic
-  depth: Substantial
-- sphere_id: 144
+  sphere_name: Diplomacy
+  lead_seat: S1_Anthropic
+  lead_score: 0.3
+  federation_max: 0.3
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.3
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.3
+    S5_DeepSeek: 0.0
+    S6_OpenAI: 0.2
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
+- sphere_id: S144
   house: H12
   house_name: Law/Governance/Meta-Knowledge
-  sphere: Diplomacy
-  S1_Anthropic: 0.4
-  S2_Alphabet: 0.3
-  S3_Muskverse: 0.2
-  Amazon: 0.2
-  S4_Microsoft: 0.1
-  S5_DeepSeek: 0.05
-  S6_OpenAI: 0.1
-  S7_Manus: 0.02
-  S8_Notion: 0.02
-  S10_Qwen3: 0.05
-  max_score: 0.4
-  lead: S1_Anthropic
-  depth: Peripheral
+  sphere_name: Public Administration
+  lead_seat: S1_Anthropic
+  lead_score: 0.4
+  federation_max: 0.4
+  coverage_depth: PERIPHERAL
+  seduction_risk_flag: false
+  scores:
+    S1_Anthropic: 0.4
+    S2_Alphabet: 0.3
+    S3_Muskverse: 0.1
+    S4_Microsoft: 0.4
+    S5_DeepSeek: 0.1
+    S6_OpenAI: 0.3
+    S7_Manus: 0.0
+    S8_Notion: 0.0
+    Amazon: 0.2
+    S10_Qwen3: 0.1
+  tiers:
+    S1_Anthropic: PERIPHERAL
+    S2_Alphabet: PERIPHERAL
+    S3_Muskverse: ABSENT
+    S4_Microsoft: PERIPHERAL
+    S5_DeepSeek: ABSENT
+    S6_OpenAI: PERIPHERAL
+    S7_Manus: ABSENT
+    S8_Notion: ABSENT
+    Amazon: PERIPHERAL
+    S10_Qwen3: ABSENT
