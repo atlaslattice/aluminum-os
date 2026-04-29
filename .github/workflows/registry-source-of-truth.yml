@@ -1,0 +1,67 @@
+name: Registry Source of Truth (D-88) — Warn Mode
+
+on:
+  pull_request:
+    branches: [master, main]
+    paths:
+      - '**/*.yaml'
+      - '**/*.yml'
+      - '**/*.json'
+  push:
+    branches: [master, main]
+    paths:
+      - '**/*.yaml'
+      - '**/*.yml'
+      - '**/*.json'
+
+jobs:
+  registry-source-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Check for shadow registries
+        run: |
+          echo "Checking for shadow registry definitions outside registries/ directory..."
+          VIOLATIONS=0
+          for f in $(find . -name "*.yaml" -o -name "*.yml" | grep -v "registries/" | grep -v ".github/" | grep -v "node_modules/" | grep -v "toolchain/"); do
+            if grep -q "^modules:" "$f" 2>/dev/null || grep -q "^doctrines:" "$f" 2>/dev/null || grep -q "^invariants:" "$f" 2>/dev/null; then
+              echo "::warning file=$f::Potential shadow registry detected in $f"
+              VIOLATIONS=$((VIOLATIONS + 1))
+            fi
+          done
+
+          if [ $VIOLATIONS -gt 0 ]; then
+            echo "::warning::Found $VIOLATIONS potential shadow registry violation(s)."
+            echo "D-88 WARN MODE: not blocking PR yet."
+          else
+            echo "No shadow registries detected — D-88 compliant"
+          fi
+
+      - name: Validate registry YAML syntax
+        run: |
+          echo "Validating YAML syntax in registries/..."
+          ERRORS=0
+          for f in registries/*.yaml registries/*.yml; do
+            if [ -f "$f" ]; then
+              if ! python -c "import yaml; yaml.safe_load(open('$f'))" 2>/dev/null; then
+                echo "::warning file=$f::Invalid YAML syntax in $f"
+                ERRORS=$((ERRORS + 1))
+              fi
+            fi
+          done
+
+          if [ $ERRORS -gt 0 ]; then
+            echo "::warning::Found $ERRORS YAML syntax error(s) in registries/"
+            echo "D-88 WARN MODE: not blocking PR yet."
+          else
+            echo "All registry YAML files are syntactically valid"
+          fi
