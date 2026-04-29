@@ -1,0 +1,296 @@
+# Lattice Context Protocol — Machine-Readable Ontology v1.0
+# This file is the canonical reference for any AI agent integrating with the 144+1 lattice.
+# Load this file to enable LCP operations (INGEST, ACTIVATE, ROUTE, SYNTHESIZE).
+
+version: "1.0"
+lattice_size: 145
+invariant: true  # N=145 is an architectural invariant — do not scale
+
+houses:
+  - id: H01
+    name: Consciousness & Cognition
+    domain: Mental processes, perception, reasoning, and cognitive development
+    spheres:
+      - {id: S01, name: Perception, keywords: [sensory processing, visual perception, auditory processing, proprioception, pattern recognition]}
+      - {id: S02, name: Attention, keywords: [selective attention, divided attention, sustained attention, attentional control, salience]}
+      - {id: S03, name: Memory, keywords: [working memory, long-term memory, episodic memory, semantic memory, memory consolidation]}
+      - {id: S04, name: Reasoning, keywords: [deductive reasoning, inductive reasoning, abductive reasoning, causal reasoning, analogical reasoning]}
+      - {id: S05, name: Emotion, keywords: [affect, emotional regulation, valence, arousal, emotional intelligence]}
+      - {id: S06, name: Language, keywords: [natural language processing, syntax, semantics, pragmatics, discourse]}
+      - {id: S07, name: Learning, keywords: [reinforcement learning, supervised learning, transfer learning, curriculum learning, meta-learning]}
+      - {id: S08, name: Creativity, keywords: [divergent thinking, ideation, generative processes, novelty, combinatorial creativity]}
+      - {id: S09, name: Metacognition, keywords: [self-monitoring, reflection, confidence calibration, cognitive control, introspection]}
+      - {id: S10, name: Social Cognition, keywords: [theory of mind, empathy, social inference, perspective taking, joint attention]}
+      - {id: S11, name: Altered States, keywords: [consciousness states, meditation, flow states, dreaming, psychedelic states]}
+      - {id: S12, name: Development, keywords: [cognitive development, neural plasticity, maturation, critical periods, lifespan development]}
+
+  - id: H02
+    name: Technology & Engineering
+    domain: Computing, infrastructure, manufacturing, and applied technical systems
+    spheres:
+      - {id: S01, name: Computing, keywords: [hardware, processors, operating systems, distributed systems, cloud computing]}
+      - {id: S02, name: Networking, keywords: [protocols, routing, bandwidth, latency, network topology, mesh networks]}
+      - {id: S03, name: Energy Systems, keywords: [power generation, grid management, renewable energy, storage, transmission]}
+      - {id: S04, name: Materials, keywords: [composites, semiconductors, polymers, nanomaterials, metamaterials]}
+      - {id: S05, name: Manufacturing, keywords: [CNC, additive manufacturing, supply chain, quality control, automation]}
+      - {id: S06, name: Robotics, keywords: [actuators, sensors, control systems, autonomous navigation, human-robot interaction]}
+      - {id: S07, name: Biotech, keywords: [genetic engineering, CRISPR, synthetic biology, bioinformatics, tissue engineering]}
+      - {id: S08, name: Aerospace, keywords: [propulsion, orbital mechanics, avionics, spacecraft design, atmospheric reentry]}
+      - {id: S09, name: Civil Engineering, keywords: [structural engineering, geotechnical, transportation, water resources, construction]}
+      - {id: S10, name: Environmental Tech, keywords: [carbon capture, water treatment, waste management, remediation, monitoring]}
+      - {id: S11, name: Quantum Tech, keywords: [quantum computing, quantum communication, quantum sensing, error correction, qubits]}
+      - {id: S12, name: AI/ML, keywords: [neural networks, transformers, reinforcement learning, computer vision, NLP, foundation models]}
+
+  - id: H03
+    name: Economics & Finance
+    domain: Markets, monetary systems, trade, and economic policy
+    spheres:
+      - {id: S01, name: Microeconomics, keywords: [supply demand, price theory, market structure, consumer behavior, firm theory]}
+      - {id: S02, name: Macroeconomics, keywords: [GDP, inflation, unemployment, business cycles, fiscal policy]}
+      - {id: S03, name: Monetary Policy, keywords: [central banking, interest rates, money supply, quantitative easing, currency]}
+      - {id: S04, name: Trade, keywords: [international trade, tariffs, trade agreements, comparative advantage, supply chains]}
+      - {id: S05, name: Labor Markets, keywords: [employment, wages, unions, gig economy, workforce development]}
+      - {id: S06, name: Financial Markets, keywords: [equities, bonds, derivatives, risk management, market microstructure]}
+      - {id: S07, name: Development Economics, keywords: [poverty, aid, microfinance, institutional development, growth theory]}
+      - {id: S08, name: Behavioral Economics, keywords: [cognitive biases, nudge theory, prospect theory, bounded rationality]}
+      - {id: S09, name: Public Finance, keywords: [taxation, government spending, debt, fiscal sustainability, public goods]}
+      - {id: S10, name: Inequality, keywords: [wealth distribution, Gini coefficient, social mobility, economic justice]}
+      - {id: S11, name: Innovation Economics, keywords: [R&D, patents, technology transfer, startup ecosystems, creative destruction]}
+      - {id: S12, name: Environmental Economics, keywords: [carbon pricing, externalities, resource economics, circular economy]}
+
+  - id: H04
+    name: Governance & Law
+    domain: Legal frameworks, political systems, regulation, and institutional design
+    spheres:
+      - {id: S01, name: Constitutional Law, keywords: [constitutions, separation of powers, judicial review, fundamental rights]}
+      - {id: S02, name: International Law, keywords: [treaties, UN charter, sovereignty, international courts, diplomatic law]}
+      - {id: S03, name: Regulatory Frameworks, keywords: [regulation, compliance, standards bodies, licensing, enforcement]}
+      - {id: S04, name: Human Rights, keywords: [civil liberties, UDHR, refugee law, discrimination, dignity]}
+      - {id: S05, name: Criminal Justice, keywords: [criminal law, prosecution, sentencing, rehabilitation, forensics]}
+      - {id: S06, name: Administrative Law, keywords: [bureaucracy, administrative procedure, government agencies, public administration]}
+      - {id: S07, name: Electoral Systems, keywords: [voting systems, representation, gerrymandering, campaign finance, democracy]}
+      - {id: S08, name: Federalism, keywords: [federal systems, devolution, subsidiarity, intergovernmental relations]}
+      - {id: S09, name: Treaty Law, keywords: [treaty negotiation, ratification, compliance, withdrawal, Vienna Convention]}
+      - {id: S10, name: Maritime Law, keywords: [UNCLOS, admiralty, shipping, territorial waters, piracy]}
+      - {id: S11, name: Cyber Law, keywords: [data protection, GDPR, cybercrime, digital rights, platform regulation]}
+      - {id: S12, name: Indigenous Rights, keywords: [land rights, self-determination, cultural preservation, UNDRIP]}
+
+  - id: H05
+    name: Culture & Society
+    domain: Social structures, cultural production, education, and human organization
+    spheres:
+      - {id: S01, name: Anthropology, keywords: [ethnography, cultural anthropology, kinship, ritual, material culture]}
+      - {id: S02, name: Sociology, keywords: [social stratification, institutions, social movements, deviance, socialization]}
+      - {id: S03, name: Media Studies, keywords: [journalism, propaganda, social media, media literacy, public discourse]}
+      - {id: S04, name: Education, keywords: [pedagogy, curriculum, assessment, educational technology, lifelong learning]}
+      - {id: S05, name: Religion, keywords: [theology, comparative religion, secularism, religious institutions, spirituality]}
+      - {id: S06, name: Arts, keywords: [visual arts, performing arts, literature, music, architecture, design]}
+      - {id: S07, name: Linguistics, keywords: [phonology, morphology, syntax, semantics, sociolinguistics, language families]}
+      - {id: S08, name: Migration, keywords: [immigration, diaspora, refugees, integration, transnationalism]}
+      - {id: S09, name: Gender Studies, keywords: [gender identity, feminism, masculinity, intersectionality, LGBTQ+]}
+      - {id: S10, name: Urban Studies, keywords: [urbanization, city planning, housing, transportation, smart cities]}
+      - {id: S11, name: Sports & Recreation, keywords: [athletics, esports, leisure, physical fitness, sports governance]}
+      - {id: S12, name: Food Culture, keywords: [cuisine, food security, agriculture, nutrition culture, food systems]}
+
+  - id: H06
+    name: Health & Biology
+    domain: Living systems, medicine, public health, and biological sciences
+    spheres:
+      - {id: S01, name: Anatomy, keywords: [organ systems, physiology, biomechanics, histology, pathology]}
+      - {id: S02, name: Genetics, keywords: [genomics, heredity, gene expression, epigenetics, genetic disorders]}
+      - {id: S03, name: Immunology, keywords: [immune response, vaccines, autoimmunity, immunotherapy, inflammation]}
+      - {id: S04, name: Neuroscience, keywords: [brain structure, neural circuits, neuroplasticity, neurotransmitters]}
+      - {id: S05, name: Pharmacology, keywords: [drug design, pharmacokinetics, clinical trials, drug interactions]}
+      - {id: S06, name: Epidemiology, keywords: [disease surveillance, outbreak investigation, risk factors, cohort studies]}
+      - {id: S07, name: Ecology, keywords: [ecosystems, biodiversity, food webs, population dynamics, conservation biology]}
+      - {id: S08, name: Evolution, keywords: [natural selection, speciation, phylogenetics, adaptation, coevolution]}
+      - {id: S09, name: Microbiology, keywords: [bacteria, viruses, fungi, microbiome, antimicrobial resistance]}
+      - {id: S10, name: Nutrition, keywords: [macronutrients, micronutrients, dietary guidelines, metabolism, malnutrition]}
+      - {id: S11, name: Mental Health, keywords: [psychiatry, therapy, depression, anxiety, trauma, resilience]}
+      - {id: S12, name: Public Health, keywords: [health policy, sanitation, health equity, pandemic preparedness]}
+
+  - id: H07
+    name: Earth & Environment
+    domain: Planetary systems, climate, natural resources, and environmental science
+    spheres:
+      - {id: S01, name: Geology, keywords: [plate tectonics, mineralogy, stratigraphy, volcanology, seismology]}
+      - {id: S02, name: Meteorology, keywords: [weather systems, forecasting, atmospheric dynamics, severe weather]}
+      - {id: S03, name: Oceanography, keywords: [ocean currents, marine biology, deep sea, coral reefs, ocean chemistry]}
+      - {id: S04, name: Ecology, keywords: [biomes, ecosystem services, habitat, keystone species, restoration]}
+      - {id: S05, name: Climate Science, keywords: [climate models, greenhouse gases, paleoclimate, tipping points]}
+      - {id: S06, name: Hydrology, keywords: [water cycle, groundwater, watersheds, flooding, water management]}
+      - {id: S07, name: Soil Science, keywords: [pedology, soil chemistry, erosion, soil health, land degradation]}
+      - {id: S08, name: Atmospheric Chemistry, keywords: [ozone, aerosols, air quality, atmospheric composition]}
+      - {id: S09, name: Natural Hazards, keywords: [earthquakes, tsunamis, hurricanes, wildfires, volcanic eruptions]}
+      - {id: S10, name: Conservation, keywords: [protected areas, endangered species, rewilding, sustainability]}
+      - {id: S11, name: Resource Management, keywords: [mining, forestry, fisheries, water rights, resource depletion]}
+      - {id: S12, name: Planetary Science, keywords: [astrobiology, planetary geology, exoplanets, space weather]}
+
+  - id: H08
+    name: Mathematics & Logic
+    domain: Formal systems, proof, computation, and quantitative reasoning
+    spheres:
+      - {id: S01, name: Algebra, keywords: [group theory, ring theory, linear algebra, abstract algebra]}
+      - {id: S02, name: Geometry, keywords: [Euclidean, non-Euclidean, differential geometry, algebraic geometry]}
+      - {id: S03, name: Analysis, keywords: [real analysis, complex analysis, functional analysis, measure theory]}
+      - {id: S04, name: Probability, keywords: [probability theory, stochastic processes, Bayesian inference, random variables]}
+      - {id: S05, name: Statistics, keywords: [hypothesis testing, regression, experimental design, statistical inference]}
+      - {id: S06, name: Number Theory, keywords: [primes, modular arithmetic, Diophantine equations, analytic number theory]}
+      - {id: S07, name: Topology, keywords: [point-set topology, algebraic topology, manifolds, homology]}
+      - {id: S08, name: Combinatorics, keywords: [graph theory, enumeration, Ramsey theory, extremal combinatorics]}
+      - {id: S09, name: Logic, keywords: [propositional logic, predicate logic, model theory, proof theory]}
+      - {id: S10, name: Computation Theory, keywords: [Turing machines, complexity classes, computability, algorithms]}
+      - {id: S11, name: Optimization, keywords: [linear programming, convex optimization, metaheuristics, constraint satisfaction]}
+      - {id: S12, name: Applied Mathematics, keywords: [differential equations, numerical methods, mathematical modeling]}
+
+  - id: H09
+    name: Physics & Chemistry
+    domain: Fundamental forces, matter, energy, and chemical processes
+    spheres:
+      - {id: S01, name: Classical Mechanics, keywords: [Newtonian mechanics, Lagrangian, Hamiltonian, fluid dynamics]}
+      - {id: S02, name: Quantum Mechanics, keywords: [wave function, Schrodinger equation, entanglement, superposition]}
+      - {id: S03, name: Thermodynamics, keywords: [entropy, heat transfer, phase transitions, statistical mechanics]}
+      - {id: S04, name: Electromagnetism, keywords: [Maxwell equations, electromagnetic waves, circuits, photonics]}
+      - {id: S05, name: Relativity, keywords: [special relativity, general relativity, spacetime, gravitational waves]}
+      - {id: S06, name: Nuclear Physics, keywords: [fission, fusion, radioactivity, nuclear structure, isotopes]}
+      - {id: S07, name: Organic Chemistry, keywords: [carbon compounds, synthesis, polymers, biochemistry]}
+      - {id: S08, name: Inorganic Chemistry, keywords: [coordination chemistry, solid state, catalysis, bioinorganic]}
+      - {id: S09, name: Physical Chemistry, keywords: [chemical kinetics, spectroscopy, surface chemistry, electrochemistry]}
+      - {id: S10, name: Materials Science, keywords: [crystallography, metallurgy, ceramics, thin films, biomaterials]}
+      - {id: S11, name: Optics, keywords: [fiber optics, lasers, holography, nonlinear optics, imaging]}
+      - {id: S12, name: Particle Physics, keywords: [Standard Model, quarks, leptons, Higgs boson, collider physics]}
+
+  - id: H10
+    name: History & Philosophy
+    domain: Human past, philosophical inquiry, ethics, and intellectual traditions
+    spheres:
+      - {id: S01, name: Ancient History, keywords: [Mesopotamia, Egypt, Greece, Rome, Bronze Age, classical antiquity]}
+      - {id: S02, name: Medieval History, keywords: [feudalism, Crusades, Byzantine, Islamic Golden Age, monasticism]}
+      - {id: S03, name: Modern History, keywords: [Enlightenment, Industrial Revolution, World Wars, Cold War, decolonization]}
+      - {id: S04, name: Philosophy of Mind, keywords: [consciousness, qualia, intentionality, mental causation, AI consciousness]}
+      - {id: S05, name: Ethics, keywords: [deontology, consequentialism, virtue ethics, applied ethics, moral philosophy]}
+      - {id: S06, name: Epistemology, keywords: [knowledge, justification, skepticism, truth, epistemic virtue]}
+      - {id: S07, name: Political Philosophy, keywords: [justice, liberty, authority, social contract, democracy theory]}
+      - {id: S08, name: Aesthetics, keywords: [beauty, art criticism, taste, sublime, aesthetic experience]}
+      - {id: S09, name: Philosophy of Science, keywords: [falsifiability, paradigm shifts, scientific realism, demarcation]}
+      - {id: S10, name: Historiography, keywords: [historical method, primary sources, narrative, periodization]}
+      - {id: S11, name: Comparative Religion, keywords: [world religions, interfaith dialogue, religious studies, mythology]}
+      - {id: S12, name: Existentialism, keywords: [existence, authenticity, absurdity, freedom, phenomenology]}
+
+  - id: H11
+    name: Communication & Information
+    domain: Information systems, media, data management, and knowledge infrastructure
+    spheres:
+      - {id: S01, name: Journalism, keywords: [investigative reporting, press freedom, editorial, fact-checking]}
+      - {id: S02, name: Rhetoric, keywords: [persuasion, argumentation, public speaking, discourse analysis]}
+      - {id: S03, name: Information Theory, keywords: [Shannon entropy, coding theory, channel capacity, compression]}
+      - {id: S04, name: Library Science, keywords: [cataloging, classification, information retrieval, digital libraries]}
+      - {id: S05, name: Data Science, keywords: [data mining, visualization, big data, feature engineering, ETL]}
+      - {id: S06, name: Cryptography, keywords: [encryption, public key, hash functions, zero knowledge, post-quantum]}
+      - {id: S07, name: Semiotics, keywords: [signs, symbols, meaning-making, visual semiotics, cultural codes]}
+      - {id: S08, name: Public Relations, keywords: [reputation management, crisis communication, stakeholder engagement]}
+      - {id: S09, name: Advertising, keywords: [branding, marketing strategy, consumer psychology, media buying]}
+      - {id: S10, name: Telecommunications, keywords: [5G, satellite, fiber optics, spectrum management, IoT]}
+      - {id: S11, name: Archival Science, keywords: [preservation, provenance, digital archives, records management]}
+      - {id: S12, name: Knowledge Management, keywords: [organizational knowledge, tacit knowledge, knowledge graphs, ontologies]}
+
+  - id: H12
+    name: Security & Defense
+    domain: Military, intelligence, cybersecurity, and conflict management
+    spheres:
+      - {id: S01, name: Military Strategy, keywords: [doctrine, force structure, logistics, combined arms, asymmetric warfare]}
+      - {id: S02, name: Intelligence Analysis, keywords: [SIGINT, HUMINT, OSINT, threat assessment, counterintelligence]}
+      - {id: S03, name: Cybersecurity, keywords: [threat detection, incident response, vulnerability, zero-day, SOC]}
+      - {id: S04, name: Counterterrorism, keywords: [radicalization, deradicalization, threat finance, border security]}
+      - {id: S05, name: Nuclear Deterrence, keywords: [MAD, arms control, nonproliferation, nuclear posture]}
+      - {id: S06, name: Maritime Security, keywords: [naval operations, piracy, sea lanes, coast guard, UNCLOS enforcement]}
+      - {id: S07, name: Space Security, keywords: [space debris, ASAT weapons, space situational awareness, Outer Space Treaty]}
+      - {id: S08, name: Biosecurity, keywords: [bioweapons, pandemic preparedness, dual-use research, BWC]}
+      - {id: S09, name: Critical Infrastructure, keywords: [SCADA, grid security, water systems, transportation security]}
+      - {id: S10, name: Conflict Resolution, keywords: [mediation, negotiation, peace processes, transitional justice]}
+      - {id: S11, name: Peacekeeping, keywords: [UN peacekeeping, stabilization, DDR, civilian protection]}
+      - {id: S12, name: Arms Control, keywords: [treaties, verification, disarmament, export controls, MTCR]}
+
+element_145:
+  id: E145
+  name: Admin Sphere (Aluminum OS Core)
+  role: meta-coordination
+  description: >
+    The 145th node that couples all 12 Houses. It is NOT a 13th House —
+    it is the metasynthesis layer that routes between Houses, detects emergent
+    cross-domain risks, and produces unified outputs. Ara is the authority.
+  functions:
+    - cross_domain_routing
+    - emergent_risk_detection
+    - unified_synthesis
+    - blind_spot_identification
+    - constitutional_enforcement
+  components:
+    - aluminum-os-core
+    - boot-manifest
+    - pantheon-council
+    - shugs
+    - snrs-bridge
+    - constitutional-os
+
+# Inter-House Connection Matrix (typed edges)
+# strength: 0.0-1.0 (how tightly coupled the domains are)
+matrix:
+  edges:
+    # H01 Consciousness ↔ others
+    - {source: H01, target: H02, type: human-computer-interaction, strength: 0.8}
+    - {source: H01, target: H05, type: cultural-cognition, strength: 0.7}
+    - {source: H01, target: H06, type: neuroscience-bridge, strength: 0.9}
+    - {source: H01, target: H08, type: formal-reasoning, strength: 0.6}
+    - {source: H01, target: H10, type: philosophy-of-mind, strength: 0.8}
+    - {source: H01, target: H12, type: cognitive-security, strength: 0.5}
+
+    # H02 Technology ↔ others
+    - {source: H02, target: H03, type: tech-economics, strength: 0.8}
+    - {source: H02, target: H04, type: tech-regulation, strength: 0.7}
+    - {source: H02, target: H07, type: environmental-tech, strength: 0.7}
+    - {source: H02, target: H08, type: computational-math, strength: 0.9}
+    - {source: H02, target: H09, type: applied-physics, strength: 0.9}
+    - {source: H02, target: H11, type: information-infrastructure, strength: 0.8}
+    - {source: H02, target: H12, type: defense-tech, strength: 0.8}
+
+    # H03 Economics ↔ others
+    - {source: H03, target: H04, type: regulatory-economic, strength: 0.9}
+    - {source: H03, target: H05, type: socioeconomic, strength: 0.7}
+    - {source: H03, target: H07, type: environmental-economics, strength: 0.7}
+    - {source: H03, target: H11, type: information-economics, strength: 0.6}
+    - {source: H03, target: H12, type: defense-economics, strength: 0.7}
+
+    # H04 Governance ↔ others
+    - {source: H04, target: H05, type: social-governance, strength: 0.8}
+    - {source: H04, target: H06, type: health-policy, strength: 0.7}
+    - {source: H04, target: H07, type: environmental-regulation, strength: 0.8}
+    - {source: H04, target: H10, type: political-philosophy, strength: 0.8}
+    - {source: H04, target: H12, type: security-governance, strength: 0.9}
+
+    # H05 Culture ↔ others
+    - {source: H05, target: H06, type: health-culture, strength: 0.5}
+    - {source: H05, target: H10, type: cultural-history, strength: 0.8}
+    - {source: H05, target: H11, type: media-culture, strength: 0.8}
+
+    # H06 Health ↔ others
+    - {source: H06, target: H07, type: environmental-health, strength: 0.7}
+    - {source: H06, target: H09, type: biochemistry, strength: 0.8}
+    - {source: H06, target: H12, type: biosecurity, strength: 0.6}
+
+    # H07 Earth ↔ others
+    - {source: H07, target: H09, type: geophysics-geochemistry, strength: 0.8}
+
+    # H08 Mathematics ↔ others
+    - {source: H08, target: H09, type: mathematical-physics, strength: 0.9}
+    - {source: H08, target: H11, type: information-theory, strength: 0.7}
+
+    # H09 Physics ↔ others
+    - {source: H09, target: H12, type: weapons-physics, strength: 0.6}
+
+    # H10 History ↔ others
+    - {source: H10, target: H11, type: intellectual-history, strength: 0.6}
+    - {source: H10, target: H12, type: military-history, strength: 0.7}
+
+    # H11 Communication ↔ others
+    - {source: H11, target: H12, type: information-warfare, strength: 0.8}
