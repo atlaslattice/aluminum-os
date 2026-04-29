@@ -1,0 +1,1 @@
+﻿/home/claude/SNRS_SHUGS_Master_Synthesis_WP_v2.0_20260411.md

@@ -1,0 +1,71 @@
+# Grokbrain v4.0 - Git Ignore
+
+# CRITICAL: Never commit sensitive data
+.env
+*.key
+*_key.txt
+
+# Google Drive API credentials
+credentials.json
+token.pickle
+
+# Export data (contains IP)
+exports/
+!exports/sample_*.json
+clean_exports/
+quarantine/
+
+# Processed data
+artifacts.json
+parsed/
+qdrant_db/
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints
+
+# Model cache
+.cache/
+models/
+
+# Streamlit
+.streamlit/
+
+# Logs
+*.log
