@@ -158,3 +158,60 @@
 ## INV-2 Zero Erasure Note
 
 Gap spheres have directory structures created (12 per house = 144 total). They are empty of modules but the sphere directories exist. No sphere directory should ever be deleted — only populated.
+
+---
+
+## Tier-2 Sub-Sphere BLANKs (v3.5)
+
+**Total BLANKs:** 45 across 144 spheres
+
+Spheres with BLANKs (< 12 sub-spheres populated):
+
+| Sphere | Populated | BLANKs | Priority |
+|--------|-----------|--------|----------|
+| S009 Oceanography | 11 | 1 | medium |
+| S010 Paleontology | 11 | 1 | medium |
+| S011 Zoology | 12 | 0 | complete |
+| S017 Information Theory | 11 | 1 | medium |
+| S018 Game Theory | 11 | 1 | medium |
+| S021 Decision Theory | 11 | 1 | medium |
+| S027 Anthropology | 11 | 1 | medium |
+| S032 Demography | 11 | 1 | medium |
+| S034 Social Work | 11 | 1 | medium |
+| S035 Gender Studies | 11 | 1 | medium |
+| S036 Urban Studies | 12 | 0 | complete |
+| S042 Classics | 11 | 1 | medium |
+| S043 Archaeology | 11 | 1 | medium |
+| S045 Cultural Studies | 12 | 0 | complete |
+| S046 Folklore | 11 | 1 | medium |
+| S047 Philology | 11 | 1 | medium |
+| S048 Museology | 11 | 1 | medium |
+| S052 Dance | 11 | 1 | medium |
+| S053 Theater | 11 | 1 | medium |
+| S059 Sculpture | 11 | 1 | medium |
+| S060 Painting | 11 | 1 | medium |
+| S067 Environmental Engineering | 11 | 1 | medium |
+| S071 Nuclear Engineering | 10 | 2 | high |
+| S077 Library Science | 11 | 1 | medium |
+| S078 Publishing | 11 | 1 | medium |
+| S080 Public Relations | 11 | 1 | medium |
+| S082 Broadcasting | 11 | 1 | medium |
+| S083 Film Studies | 12 | 0 | complete |
+| S089 Adult Education | 9 | 3 | high |
+| S093 Comparative Education | 10 | 2 | high |
+| S094 Education Policy | 11 | 1 | medium |
+| S095 Literacy | 11 | 1 | medium |
+| S097 Anatomy | 11 | 1 | medium |
+| S104 Dentistry | 11 | 1 | medium |
+| S105 Veterinary Medicine | 11 | 1 | medium |
+| S108 Pathology | 11 | 1 | medium |
+| S119 Real Estate | 11 | 1 | medium |
+| S123 Water Systems | 11 | 1 | medium |
+| S124 Waste Management | 11 | 1 | medium |
+| S126 Telecom Infrastructure | 11 | 1 | medium |
+| S131 Mining | 11 | 1 | medium |
+| S133 Constitutional Law | 11 | 1 | medium |
+| S140 Tax Law | 11 | 1 | medium |
+| S143 Diplomacy | 11 | 1 | medium |
+
+**High priority BLANKs (>2 slots):** S089 Adult Education (3), S071 Nuclear Engineering (2), S093 Comparative Education (2)

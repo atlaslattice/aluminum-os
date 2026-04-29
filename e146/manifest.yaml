@@ -1,0 +1,123 @@
+# Element 146 — Entertainment & Interactive Media VIP
+# Status: PROVISIONAL — Pending Council Ratification
+# Created: 2026-04-29
+# Rationale: Entertainment/interactive media domains span multiple Houses
+#   (H05 Arts, H06 Engineering, H07 Information) and cannot be cleanly
+#   contained within a single House. E146 provides a cross-House routing
+#   layer for entertainment-specific queries.
+
+element_id: E146
+name: "Entertainment & Interactive Media"
+type: "Domain VIP"
+status: provisional
+version: "v3.5.0"
+
+# Relationship to existing structure
+relationship:
+  type: "cross-house routing layer"
+  primary_houses: [H05, H06, H07]
+  secondary_houses: [H10]
+  note: >
+    E146 does NOT replace any tier-1 spheres. It provides a routing
+    aggregation layer for queries that span Film (S054), Music (S051),
+    Design (S057), Software Engineering (S069), Digital Media (S081),
+    and Broadcasting (S082).
+
+# E146 nodes — variable count, no 12-constraint
+nodes:
+  E146.N01:
+    name: "Interactive Entertainment Design"
+    maps_to: [S057.08, S055.06, S055.07]  # Game Design, Game Narrative, Interactive Fiction
+    description: "Game design, interactive narrative, player experience"
+
+  E146.N02:
+    name: "Game Engine Technology"
+    maps_to: [S069.14, S016.03, S016.08]  # Microservices (proxy), OS, Distributed Systems
+    description: "Real-time rendering, physics simulation, game engine architecture"
+
+  E146.N03:
+    name: "Visual Effects & Animation"
+    maps_to: [S054.06, S054.07, S016.07]  # Animation, VFX, Computer Graphics
+    description: "CGI, motion graphics, procedural generation, real-time VFX"
+
+  E146.N04:
+    name: "Virtual Production"
+    maps_to: [S054.11, S054.12]  # Virtual Production, Motion Capture
+    description: "LED volumes, real-time compositing, performance capture"
+
+  E146.N05:
+    name: "Interactive Audio"
+    maps_to: [S051.03, S051.04, S054.08]  # Music Production, Sound Design, Sound Design for Film
+    description: "Adaptive music, spatial audio, procedural sound"
+
+  E146.N06:
+    name: "Streaming & Distribution"
+    maps_to: [S054.13, S081.03, S082.04]  # Streaming Content, Streaming Media, Streaming Broadcasting
+    description: "Content delivery, platform economics, recommendation systems"
+
+  E146.N07:
+    name: "Immersive Experience Design"
+    maps_to: [S081.08, S081.09]  # VR Media, AR Media
+    description: "VR/AR/XR entertainment, spatial computing, haptics"
+
+  E146.N08:
+    name: "Esports & Competitive Gaming"
+    maps_to: [S050.11, S082.08]  # Improvisation (proxy), Sports Broadcasting
+    description: "Tournament systems, broadcasting, player development"
+
+  E146.N09:
+    name: "Entertainment Business"
+    maps_to: [S110.03, S113.04, S139.02]  # Consumer Behavior, Tech Entrepreneurship, Copyright
+    description: "Studio economics, IP management, talent representation"
+
+  E146.N10:
+    name: "Narrative Systems"
+    maps_to: [S055.01, S055.06, S039.04]  # Fiction Writing, Game Narrative, Fiction
+    description: "Branching narrative, procedural storytelling, world-building"
+
+  E146.N11:
+    name: "Game Art & Technical Art"
+    maps_to: [S049.03, S057.08, S016.07]  # Digital Art, Game Design, Computer Graphics
+    description: "3D modeling, texturing, shaders, procedural art, art pipelines"
+
+  E146.N12:
+    name: "Entertainment AI"
+    maps_to: [S016.06, S016.14, S072.06]  # AI, NLP, Swarm Robotics
+    description: "NPC behavior, procedural generation, AI directors, AI companions"
+
+# Routing behavior
+routing:
+  trigger_keywords:
+    - "game"
+    - "gaming"
+    - "entertainment"
+    - "interactive"
+    - "VFX"
+    - "animation"
+    - "esports"
+    - "streaming"
+    - "virtual production"
+    - "game engine"
+    - "Unreal"
+    - "Unity"
+  behavior: >
+    When a query matches E146 trigger keywords, the router checks if the
+    query is better served by the specific tier-2 sub-sphere directly
+    (e.g., "how does Unreal Engine handle LOD" → S069.14 directly) or
+    requires cross-domain synthesis (e.g., "design an immersive narrative
+    experience" → E146 orchestrates across N01, N07, N10).
+  fallback: "Route to most relevant tier-2 sub-sphere if single-domain"
+
+# Capability matrix extension
+capability_scores:
+  note: "Provisional — pending per-seat self-assessment"
+  S2_Alphabet: 0.8   # YouTube, Stadia (defunct), DeepMind game AI
+  S3_Muskverse: 0.3  # Limited (xAI game demos)
+  S4_Microsoft: 0.9  # Xbox, Activision-Blizzard, Azure PlayFab
+  Amazon: 0.6         # Twitch, Luna, AGS (New World, Lost Ark)
+  S6_OpenAI: 0.4     # Sora, GPT game narrative
+  S1_Anthropic: 0.2  # Limited direct entertainment
+  S5_DeepSeek: 0.1   # Minimal
+  S7_Manus: 0.1      # Minimal
+  S8_Notion: 0.0     # None
+  S10_Qwen3: 0.2     # Limited

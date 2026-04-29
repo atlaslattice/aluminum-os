@@ -1,0 +1,6112 @@
+version: v3.5.0
+generated: '2026-04-29'
+phase: '1.5'
+total_spheres: 144
+total_sub_spheres_populated: 1700
+total_blanks: 45
+wiggle_room_policy:
+  minimum: 6
+  standard: 12
+  maximum: 24
+  note: No sphere should exceed 24 sub-spheres. Exceeding signals need for Phase 2
+    split.
+spheres:
+  S001:
+    name: Physics
+    sub_spheres:
+    - id: S001.01
+      name: Classical Mechanics
+      status: populated
+    - id: S001.02
+      name: Quantum Mechanics
+      status: populated
+    - id: S001.03
+      name: Thermodynamics
+      status: populated
+    - id: S001.04
+      name: Electromagnetism
+      status: populated
+    - id: S001.05
+      name: Optics
+      status: populated
+    - id: S001.06
+      name: Nuclear Physics
+      status: populated
+    - id: S001.07
+      name: Particle Physics
+      status: populated
+    - id: S001.08
+      name: Condensed Matter
+      status: populated
+    - id: S001.09
+      name: Astrophysics
+      status: populated
+    - id: S001.10
+      name: Fluid Dynamics
+      status: populated
+    - id: S001.11
+      name: Plasma Physics
+      status: populated
+    - id: S001.12
+      name: Relativity
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S002:
+    name: Chemistry
+    sub_spheres:
+    - id: S002.01
+      name: Organic Chemistry
+      status: populated
+    - id: S002.02
+      name: Inorganic Chemistry
+      status: populated
+    - id: S002.03
+      name: Physical Chemistry
+      status: populated
+    - id: S002.04
+      name: Analytical Chemistry
+      status: populated
+    - id: S002.05
+      name: Biochemistry
+      status: populated
+    - id: S002.06
+      name: Polymer Chemistry
+      status: populated
+    - id: S002.07
+      name: Electrochemistry
+      status: populated
+    - id: S002.08
+      name: Photochemistry
+      status: populated
+    - id: S002.09
+      name: Computational Chemistry
+      status: populated
+    - id: S002.10
+      name: Materials Chemistry
+      status: populated
+    - id: S002.11
+      name: Environmental Chemistry
+      status: populated
+    - id: S002.12
+      name: Nuclear Chemistry
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S003:
+    name: Biology
+    sub_spheres:
+    - id: S003.01
+      name: Molecular Biology
+      status: populated
+    - id: S003.02
+      name: Cell Biology
+      status: populated
+    - id: S003.03
+      name: Evolutionary Biology
+      status: populated
+    - id: S003.04
+      name: Microbiology
+      status: populated
+    - id: S003.05
+      name: Developmental Biology
+      status: populated
+    - id: S003.06
+      name: Marine Biology
+      status: populated
+    - id: S003.07
+      name: Neurobiology
+      status: populated
+    - id: S003.08
+      name: Immunology
+      status: populated
+    - id: S003.09
+      name: Bioinformatics
+      status: populated
+    - id: S003.10
+      name: Structural Biology
+      status: populated
+    - id: S003.11
+      name: Systems Biology
+      status: populated
+    - id: S003.12
+      name: Synthetic Biology
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S004:
+    name: Astronomy
+    sub_spheres:
+    - id: S004.01
+      name: Observational Astronomy
+      status: populated
+    - id: S004.02
+      name: Stellar Astrophysics
+      status: populated
+    - id: S004.03
+      name: Galactic Astronomy
+      status: populated
+    - id: S004.04
+      name: Cosmology
+      status: populated
+    - id: S004.05
+      name: Planetary Science
+      status: populated
+    - id: S004.06
+      name: Radio Astronomy
+      status: populated
+    - id: S004.07
+      name: Space Science
+      status: populated
+    - id: S004.08
+      name: Astrochemistry
+      status: populated
+    - id: S004.09
+      name: Gravitational Astronomy
+      status: populated
+    - id: S004.10
+      name: Exoplanet Research
+      status: populated
+    - id: S004.11
+      name: Solar Physics
+      status: populated
+    - id: S004.12
+      name: Astrobiology
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S005:
+    name: Geology
+    sub_spheres:
+    - id: S005.01
+      name: Mineralogy
+      status: populated
+    - id: S005.02
+      name: Petrology
+      status: populated
+    - id: S005.03
+      name: Geomorphology
+      status: populated
+    - id: S005.04
+      name: Tectonics
+      status: populated
+    - id: S005.05
+      name: Volcanology
+      status: populated
+    - id: S005.06
+      name: Seismology
+      status: populated
+    - id: S005.07
+      name: Stratigraphy
+      status: populated
+    - id: S005.08
+      name: Geochemistry
+      status: populated
+    - id: S005.09
+      name: Hydrogeology
+      status: populated
+    - id: S005.10
+      name: Economic Geology
+      status: populated
+    - id: S005.11
+      name: Engineering Geology
+      status: populated
+    - id: S005.12
+      name: Planetary Geology
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S006:
+    name: Ecology
+    sub_spheres:
+    - id: S006.01
+      name: Population Ecology
+      status: populated
+    - id: S006.02
+      name: Community Ecology
+      status: populated
+    - id: S006.03
+      name: Ecosystem Ecology
+      status: populated
+    - id: S006.04
+      name: Conservation Biology
+      status: populated
+    - id: S006.05
+      name: Landscape Ecology
+      status: populated
+    - id: S006.06
+      name: Marine Ecology
+      status: populated
+    - id: S006.07
+      name: Behavioral Ecology
+      status: populated
+    - id: S006.08
+      name: Restoration Ecology
+      status: populated
+    - id: S006.09
+      name: Urban Ecology
+      status: populated
+    - id: S006.10
+      name: Microbial Ecology
+      status: populated
+    - id: S006.11
+      name: Chemical Ecology
+      status: populated
+    - id: S006.12
+      name: Theoretical Ecology
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S007:
+    name: Genetics
+    sub_spheres:
+    - id: S007.01
+      name: Molecular Genetics
+      status: populated
+    - id: S007.02
+      name: Population Genetics
+      status: populated
+    - id: S007.03
+      name: Genomics
+      status: populated
+    - id: S007.04
+      name: Epigenetics
+      status: populated
+    - id: S007.05
+      name: Gene Therapy
+      status: populated
+    - id: S007.06
+      name: Genetic Engineering
+      status: populated
+    - id: S007.07
+      name: Pharmacogenomics
+      status: populated
+    - id: S007.08
+      name: Quantitative Genetics
+      status: populated
+    - id: S007.09
+      name: Evolutionary Genetics
+      status: populated
+    - id: S007.10
+      name: Human Genetics
+      status: populated
+    - id: S007.11
+      name: Agricultural Genetics
+      status: populated
+    - id: S007.12
+      name: Computational Genomics
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S008:
+    name: Meteorology
+    sub_spheres:
+    - id: S008.01
+      name: Synoptic Meteorology
+      status: populated
+    - id: S008.02
+      name: Dynamic Meteorology
+      status: populated
+    - id: S008.03
+      name: Climate Science
+      status: populated
+    - id: S008.04
+      name: Atmospheric Chemistry
+      status: populated
+    - id: S008.05
+      name: Tropical Meteorology
+      status: populated
+    - id: S008.06
+      name: Mesoscale Meteorology
+      status: populated
+    - id: S008.07
+      name: Radar Meteorology
+      status: populated
+    - id: S008.08
+      name: Satellite Meteorology
+      status: populated
+    - id: S008.09
+      name: Agricultural Meteorology
+      status: populated
+    - id: S008.10
+      name: Aviation Meteorology
+      status: populated
+    - id: S008.11
+      name: Marine Meteorology
+      status: populated
+    - id: S008.12
+      name: Climate Modeling
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S009:
+    name: Oceanography
+    sub_spheres:
+    - id: S009.01
+      name: Physical Oceanography
+      status: populated
+    - id: S009.02
+      name: Chemical Oceanography
+      status: populated
+    - id: S009.03
+      name: Biological Oceanography
+      status: populated
+    - id: S009.04
+      name: Geological Oceanography
+      status: populated
+    - id: S009.05
+      name: Ocean Engineering
+      status: populated
+    - id: S009.06
+      name: Deep Sea Research
+      status: populated
+    - id: S009.07
+      name: Coastal Oceanography
+      status: populated
+    - id: S009.08
+      name: Ocean Acoustics
+      status: populated
+    - id: S009.09
+      name: Polar Oceanography
+      status: populated
+    - id: S009.10
+      name: Ocean-Atmosphere Interaction
+      status: populated
+    - id: S009.11
+      name: Marine Geophysics
+      status: populated
+    - id: S009.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S010:
+    name: Paleontology
+    sub_spheres:
+    - id: S010.01
+      name: Vertebrate Paleontology
+      status: populated
+    - id: S010.02
+      name: Invertebrate Paleontology
+      status: populated
+    - id: S010.03
+      name: Paleobotany
+      status: populated
+    - id: S010.04
+      name: Micropaleontology
+      status: populated
+    - id: S010.05
+      name: Paleoecology
+      status: populated
+    - id: S010.06
+      name: Biostratigraphy
+      status: populated
+    - id: S010.07
+      name: Taphonomy
+      status: populated
+    - id: S010.08
+      name: Paleoanthropology
+      status: populated
+    - id: S010.09
+      name: Paleoclimatology
+      status: populated
+    - id: S010.10
+      name: Molecular Paleontology
+      status: populated
+    - id: S010.11
+      name: Ichnology
+      status: populated
+    - id: S010.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S011:
+    name: Zoology
+    sub_spheres:
+    - id: S011.01
+      name: Entomology
+      status: populated
+    - id: S011.02
+      name: Ornithology
+      status: populated
+    - id: S011.03
+      name: Herpetology
+      status: populated
+    - id: S011.04
+      name: Mammalogy
+      status: populated
+    - id: S011.05
+      name: Ichthyology
+      status: populated
+    - id: S011.06
+      name: Primatology
+      status: populated
+    - id: S011.07
+      name: Ethology
+      status: populated
+    - id: S011.08
+      name: Animal Physiology
+      status: populated
+    - id: S011.09
+      name: Parasitology
+      status: populated
+    - id: S011.10
+      name: Invertebrate Zoology
+      status: populated
+    - id: S011.11
+      name: Wildlife Biology
+      status: populated
+    - id: S011.12
+      name: Comparative Anatomy
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S012:
+    name: Botany
+    sub_spheres:
+    - id: S012.01
+      name: Plant Physiology
+      status: populated
+    - id: S012.02
+      name: Plant Taxonomy
+      status: populated
+    - id: S012.03
+      name: Plant Ecology
+      status: populated
+    - id: S012.04
+      name: Mycology
+      status: populated
+    - id: S012.05
+      name: Phycology
+      status: populated
+    - id: S012.06
+      name: Bryology
+      status: populated
+    - id: S012.07
+      name: Ethnobotany
+      status: populated
+    - id: S012.08
+      name: Plant Pathology
+      status: populated
+    - id: S012.09
+      name: Palynology
+      status: populated
+    - id: S012.10
+      name: Plant Genetics
+      status: populated
+    - id: S012.11
+      name: Dendrology
+      status: populated
+    - id: S012.12
+      name: Agricultural Botany
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S013:
+    name: Mathematics
+    sub_spheres:
+    - id: S013.01
+      name: Algebra
+      status: populated
+    - id: S013.02
+      name: Analysis
+      status: populated
+    - id: S013.03
+      name: Geometry
+      status: populated
+    - id: S013.04
+      name: Topology
+      status: populated
+    - id: S013.05
+      name: Number Theory
+      status: populated
+    - id: S013.06
+      name: Combinatorics
+      status: populated
+    - id: S013.07
+      name: Probability Theory
+      status: populated
+    - id: S013.08
+      name: Applied Mathematics
+      status: populated
+    - id: S013.09
+      name: Numerical Analysis
+      status: populated
+    - id: S013.10
+      name: Mathematical Logic
+      status: populated
+    - id: S013.11
+      name: Category Theory
+      status: populated
+    - id: S013.12
+      name: Differential Equations
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S014:
+    name: Logic
+    sub_spheres:
+    - id: S014.01
+      name: Propositional Logic
+      status: populated
+    - id: S014.02
+      name: Predicate Logic
+      status: populated
+    - id: S014.03
+      name: Modal Logic
+      status: populated
+    - id: S014.04
+      name: Fuzzy Logic
+      status: populated
+    - id: S014.05
+      name: Temporal Logic
+      status: populated
+    - id: S014.06
+      name: Deontic Logic
+      status: populated
+    - id: S014.07
+      name: Paraconsistent Logic
+      status: populated
+    - id: S014.08
+      name: Intuitionistic Logic
+      status: populated
+    - id: S014.09
+      name: Computational Logic
+      status: populated
+    - id: S014.10
+      name: Philosophical Logic
+      status: populated
+    - id: S014.11
+      name: Mathematical Logic
+      status: populated
+    - id: S014.12
+      name: Non-classical Logic
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S015:
+    name: Statistics
+    sub_spheres:
+    - id: S015.01
+      name: Bayesian Statistics
+      status: populated
+    - id: S015.02
+      name: Frequentist Statistics
+      status: populated
+    - id: S015.03
+      name: Multivariate Analysis
+      status: populated
+    - id: S015.04
+      name: Time Series Analysis
+      status: populated
+    - id: S015.05
+      name: Spatial Statistics
+      status: populated
+    - id: S015.06
+      name: Nonparametric Statistics
+      status: populated
+    - id: S015.07
+      name: Biostatistics
+      status: populated
+    - id: S015.08
+      name: Econometrics
+      status: populated
+    - id: S015.09
+      name: Survey Methodology
+      status: populated
+    - id: S015.10
+      name: Statistical Learning
+      status: populated
+    - id: S015.11
+      name: Experimental Design
+      status: populated
+    - id: S015.12
+      name: Causal Inference
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S016:
+    name: Computer Science
+    sub_spheres:
+    - id: S016.01
+      name: Programming Languages
+      status: populated
+    - id: S016.02
+      name: Operating Systems
+      status: populated
+    - id: S016.03
+      name: Computer Architecture
+      status: populated
+    - id: S016.04
+      name: Databases
+      status: populated
+    - id: S016.05
+      name: Computer Networks
+      status: populated
+    - id: S016.06
+      name: Artificial Intelligence
+      status: populated
+    - id: S016.07
+      name: Computer Graphics
+      status: populated
+    - id: S016.08
+      name: Human-Computer Interaction
+      status: populated
+    - id: S016.09
+      name: Distributed Systems
+      status: populated
+    - id: S016.10
+      name: Compiler Design
+      status: populated
+    - id: S016.11
+      name: Theory of Computation
+      status: populated
+    - id: S016.12
+      name: Computer Security
+      status: populated
+    - id: S016.13
+      name: Machine Learning
+      status: populated
+    - id: S016.14
+      name: Natural Language Processing
+      status: populated
+    - id: S016.15
+      name: Computer Vision
+      status: populated
+    - id: S016.16
+      name: Software Architecture
+      status: populated
+    - id: S016.17
+      name: Parallel Computing
+      status: populated
+    - id: S016.18
+      name: Quantum Computing
+      status: populated
+    populated_count: 18
+    blank_count: 0
+    population_priority: complete
+  S017:
+    name: Information Theory
+    sub_spheres:
+    - id: S017.01
+      name: Coding Theory
+      status: populated
+    - id: S017.02
+      name: Data Compression
+      status: populated
+    - id: S017.03
+      name: Channel Capacity
+      status: populated
+    - id: S017.04
+      name: Entropy
+      status: populated
+    - id: S017.05
+      name: Signal Processing
+      status: populated
+    - id: S017.06
+      name: Error Correction
+      status: populated
+    - id: S017.07
+      name: Network Information Theory
+      status: populated
+    - id: S017.08
+      name: Quantum Information
+      status: populated
+    - id: S017.09
+      name: Rate-Distortion Theory
+      status: populated
+    - id: S017.10
+      name: Source Coding
+      status: populated
+    - id: S017.11
+      name: Algorithmic Information Theory
+      status: populated
+    - id: S017.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S018:
+    name: Game Theory
+    sub_spheres:
+    - id: S018.01
+      name: Cooperative Games
+      status: populated
+    - id: S018.02
+      name: Non-cooperative Games
+      status: populated
+    - id: S018.03
+      name: Evolutionary Game Theory
+      status: populated
+    - id: S018.04
+      name: Mechanism Design
+      status: populated
+    - id: S018.05
+      name: Auction Theory
+      status: populated
+    - id: S018.06
+      name: Bargaining Theory
+      status: populated
+    - id: S018.07
+      name: Combinatorial Game Theory
+      status: populated
+    - id: S018.08
+      name: Algorithmic Game Theory
+      status: populated
+    - id: S018.09
+      name: Behavioral Game Theory
+      status: populated
+    - id: S018.10
+      name: Stochastic Games
+      status: populated
+    - id: S018.11
+      name: Mean Field Games
+      status: populated
+    - id: S018.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S019:
+    name: Operations Research
+    sub_spheres:
+    - id: S019.01
+      name: Linear Programming
+      status: populated
+    - id: S019.02
+      name: Integer Programming
+      status: populated
+    - id: S019.03
+      name: Queuing Theory
+      status: populated
+    - id: S019.04
+      name: Inventory Theory
+      status: populated
+    - id: S019.05
+      name: Scheduling
+      status: populated
+    - id: S019.06
+      name: Network Optimization
+      status: populated
+    - id: S019.07
+      name: Simulation
+      status: populated
+    - id: S019.08
+      name: Stochastic Processes
+      status: populated
+    - id: S019.09
+      name: Dynamic Programming
+      status: populated
+    - id: S019.10
+      name: Metaheuristics
+      status: populated
+    - id: S019.11
+      name: Multi-objective Optimization
+      status: populated
+    - id: S019.12
+      name: Constraint Programming
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S020:
+    name: Systems Theory
+    sub_spheres:
+    - id: S020.01
+      name: General Systems Theory
+      status: populated
+    - id: S020.02
+      name: Cybernetics
+      status: populated
+    - id: S020.03
+      name: Complex Systems
+      status: populated
+    - id: S020.04
+      name: System Dynamics
+      status: populated
+    - id: S020.05
+      name: Control Theory
+      status: populated
+    - id: S020.06
+      name: Chaos Theory
+      status: populated
+    - id: S020.07
+      name: Network Theory
+      status: populated
+    - id: S020.08
+      name: Emergence
+      status: populated
+    - id: S020.09
+      name: Self-Organization
+      status: populated
+    - id: S020.10
+      name: Autopoiesis
+      status: populated
+    - id: S020.11
+      name: Viable System Model
+      status: populated
+    - id: S020.12
+      name: Sociotechnical Systems
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S021:
+    name: Decision Theory
+    sub_spheres:
+    - id: S021.01
+      name: Rational Choice Theory
+      status: populated
+    - id: S021.02
+      name: Prospect Theory
+      status: populated
+    - id: S021.03
+      name: Multi-criteria Decision Analysis
+      status: populated
+    - id: S021.04
+      name: Decision Under Uncertainty
+      status: populated
+    - id: S021.05
+      name: Behavioral Decision Theory
+      status: populated
+    - id: S021.06
+      name: Group Decision Making
+      status: populated
+    - id: S021.07
+      name: Sequential Decision Making
+      status: populated
+    - id: S021.08
+      name: Utility Theory
+      status: populated
+    - id: S021.09
+      name: Risk Analysis
+      status: populated
+    - id: S021.10
+      name: Judgment and Heuristics
+      status: populated
+    - id: S021.11
+      name: Preference Elicitation
+      status: populated
+    - id: S021.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S022:
+    name: Cryptography
+    sub_spheres:
+    - id: S022.01
+      name: Symmetric Cryptography
+      status: populated
+    - id: S022.02
+      name: Asymmetric Cryptography
+      status: populated
+    - id: S022.03
+      name: Hash Functions
+      status: populated
+    - id: S022.04
+      name: Digital Signatures
+      status: populated
+    - id: S022.05
+      name: Zero-Knowledge Proofs
+      status: populated
+    - id: S022.06
+      name: Homomorphic Encryption
+      status: populated
+    - id: S022.07
+      name: Post-Quantum Cryptography
+      status: populated
+    - id: S022.08
+      name: Blockchain Protocols
+      status: populated
+    - id: S022.09
+      name: Secure Multi-party Computation
+      status: populated
+    - id: S022.10
+      name: Cryptanalysis
+      status: populated
+    - id: S022.11
+      name: Key Management
+      status: populated
+    - id: S022.12
+      name: Privacy-Preserving Computation
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S023:
+    name: Algorithmics
+    sub_spheres:
+    - id: S023.01
+      name: Sorting and Searching
+      status: populated
+    - id: S023.02
+      name: Graph Algorithms
+      status: populated
+    - id: S023.03
+      name: String Algorithms
+      status: populated
+    - id: S023.04
+      name: Computational Geometry
+      status: populated
+    - id: S023.05
+      name: Approximation Algorithms
+      status: populated
+    - id: S023.06
+      name: Randomized Algorithms
+      status: populated
+    - id: S023.07
+      name: Online Algorithms
+      status: populated
+    - id: S023.08
+      name: Streaming Algorithms
+      status: populated
+    - id: S023.09
+      name: Parallel Algorithms
+      status: populated
+    - id: S023.10
+      name: Distributed Algorithms
+      status: populated
+    - id: S023.11
+      name: Quantum Algorithms
+      status: populated
+    - id: S023.12
+      name: Algorithm Engineering
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S024:
+    name: Data Science
+    sub_spheres:
+    - id: S024.01
+      name: Data Mining
+      status: populated
+    - id: S024.02
+      name: Data Visualization
+      status: populated
+    - id: S024.03
+      name: Feature Engineering
+      status: populated
+    - id: S024.04
+      name: Big Data Systems
+      status: populated
+    - id: S024.05
+      name: Data Warehousing
+      status: populated
+    - id: S024.06
+      name: ETL Pipelines
+      status: populated
+    - id: S024.07
+      name: Predictive Analytics
+      status: populated
+    - id: S024.08
+      name: Recommender Systems
+      status: populated
+    - id: S024.09
+      name: Text Analytics
+      status: populated
+    - id: S024.10
+      name: Geospatial Analytics
+      status: populated
+    - id: S024.11
+      name: Real-time Analytics
+      status: populated
+    - id: S024.12
+      name: Data Governance
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S025:
+    name: Sociology
+    sub_spheres:
+    - id: S025.01
+      name: Social Stratification
+      status: populated
+    - id: S025.02
+      name: Urban Sociology
+      status: populated
+    - id: S025.03
+      name: Medical Sociology
+      status: populated
+    - id: S025.04
+      name: Sociology of Religion
+      status: populated
+    - id: S025.05
+      name: Political Sociology
+      status: populated
+    - id: S025.06
+      name: Economic Sociology
+      status: populated
+    - id: S025.07
+      name: Cultural Sociology
+      status: populated
+    - id: S025.08
+      name: Organizational Sociology
+      status: populated
+    - id: S025.09
+      name: Environmental Sociology
+      status: populated
+    - id: S025.10
+      name: Digital Sociology
+      status: populated
+    - id: S025.11
+      name: Sociology of Education
+      status: populated
+    - id: S025.12
+      name: Social Movements
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S026:
+    name: Psychology
+    sub_spheres:
+    - id: S026.01
+      name: Clinical Psychology
+      status: populated
+    - id: S026.02
+      name: Cognitive Psychology
+      status: populated
+    - id: S026.03
+      name: Developmental Psychology
+      status: populated
+    - id: S026.04
+      name: Social Psychology
+      status: populated
+    - id: S026.05
+      name: Neuropsychology
+      status: populated
+    - id: S026.06
+      name: Industrial-Organizational Psychology
+      status: populated
+    - id: S026.07
+      name: Health Psychology
+      status: populated
+    - id: S026.08
+      name: Forensic Psychology
+      status: populated
+    - id: S026.09
+      name: Positive Psychology
+      status: populated
+    - id: S026.10
+      name: Evolutionary Psychology
+      status: populated
+    - id: S026.11
+      name: Educational Psychology
+      status: populated
+    - id: S026.12
+      name: Psychometrics
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S027:
+    name: Anthropology
+    sub_spheres:
+    - id: S027.01
+      name: Cultural Anthropology
+      status: populated
+    - id: S027.02
+      name: Physical Anthropology
+      status: populated
+    - id: S027.03
+      name: Linguistic Anthropology
+      status: populated
+    - id: S027.04
+      name: Archaeological Anthropology
+      status: populated
+    - id: S027.05
+      name: Medical Anthropology
+      status: populated
+    - id: S027.06
+      name: Economic Anthropology
+      status: populated
+    - id: S027.07
+      name: Political Anthropology
+      status: populated
+    - id: S027.08
+      name: Visual Anthropology
+      status: populated
+    - id: S027.09
+      name: Digital Anthropology
+      status: populated
+    - id: S027.10
+      name: Urban Anthropology
+      status: populated
+    - id: S027.11
+      name: Forensic Anthropology
+      status: populated
+    - id: S027.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S028:
+    name: Economics
+    sub_spheres:
+    - id: S028.01
+      name: Microeconomics
+      status: populated
+    - id: S028.02
+      name: Macroeconomics
+      status: populated
+    - id: S028.03
+      name: Development Economics
+      status: populated
+    - id: S028.04
+      name: International Economics
+      status: populated
+    - id: S028.05
+      name: Labor Economics
+      status: populated
+    - id: S028.06
+      name: Environmental Economics
+      status: populated
+    - id: S028.07
+      name: Behavioral Economics
+      status: populated
+    - id: S028.08
+      name: Health Economics
+      status: populated
+    - id: S028.09
+      name: Public Economics
+      status: populated
+    - id: S028.10
+      name: Financial Economics
+      status: populated
+    - id: S028.11
+      name: Agricultural Economics
+      status: populated
+    - id: S028.12
+      name: Institutional Economics
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S029:
+    name: Political Science
+    sub_spheres:
+    - id: S029.01
+      name: Comparative Politics
+      status: populated
+    - id: S029.02
+      name: International Relations
+      status: populated
+    - id: S029.03
+      name: Political Theory
+      status: populated
+    - id: S029.04
+      name: Public Administration
+      status: populated
+    - id: S029.05
+      name: Political Economy
+      status: populated
+    - id: S029.06
+      name: Electoral Systems
+      status: populated
+    - id: S029.07
+      name: Legislative Studies
+      status: populated
+    - id: S029.08
+      name: Judicial Politics
+      status: populated
+    - id: S029.09
+      name: Security Studies
+      status: populated
+    - id: S029.10
+      name: Political Communication
+      status: populated
+    - id: S029.11
+      name: Environmental Politics
+      status: populated
+    - id: S029.12
+      name: Computational Politics
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S030:
+    name: Geography
+    sub_spheres:
+    - id: S030.01
+      name: Physical Geography
+      status: populated
+    - id: S030.02
+      name: Human Geography
+      status: populated
+    - id: S030.03
+      name: Economic Geography
+      status: populated
+    - id: S030.04
+      name: Political Geography
+      status: populated
+    - id: S030.05
+      name: Cultural Geography
+      status: populated
+    - id: S030.06
+      name: Urban Geography
+      status: populated
+    - id: S030.07
+      name: Biogeography
+      status: populated
+    - id: S030.08
+      name: Cartography
+      status: populated
+    - id: S030.09
+      name: GIS
+      status: populated
+    - id: S030.10
+      name: Remote Sensing
+      status: populated
+    - id: S030.11
+      name: Climate Geography
+      status: populated
+    - id: S030.12
+      name: Transport Geography
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S031:
+    name: Linguistics
+    sub_spheres:
+    - id: S031.01
+      name: Phonetics
+      status: populated
+    - id: S031.02
+      name: Phonology
+      status: populated
+    - id: S031.03
+      name: Morphology
+      status: populated
+    - id: S031.04
+      name: Syntax
+      status: populated
+    - id: S031.05
+      name: Semantics
+      status: populated
+    - id: S031.06
+      name: Pragmatics
+      status: populated
+    - id: S031.07
+      name: Sociolinguistics
+      status: populated
+    - id: S031.08
+      name: Psycholinguistics
+      status: populated
+    - id: S031.09
+      name: Computational Linguistics
+      status: populated
+    - id: S031.10
+      name: Historical Linguistics
+      status: populated
+    - id: S031.11
+      name: Applied Linguistics
+      status: populated
+    - id: S031.12
+      name: Neurolinguistics
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S032:
+    name: Demography
+    sub_spheres:
+    - id: S032.01
+      name: Population Dynamics
+      status: populated
+    - id: S032.02
+      name: Fertility Studies
+      status: populated
+    - id: S032.03
+      name: Mortality Studies
+      status: populated
+    - id: S032.04
+      name: Migration Studies
+      status: populated
+    - id: S032.05
+      name: Population Aging
+      status: populated
+    - id: S032.06
+      name: Population Policy
+      status: populated
+    - id: S032.07
+      name: Demographic Methods
+      status: populated
+    - id: S032.08
+      name: Historical Demography
+      status: populated
+    - id: S032.09
+      name: Spatial Demography
+      status: populated
+    - id: S032.10
+      name: Biodemography
+      status: populated
+    - id: S032.11
+      name: Family Demography
+      status: populated
+    - id: S032.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S033:
+    name: Criminology
+    sub_spheres:
+    - id: S033.01
+      name: Criminal Justice
+      status: populated
+    - id: S033.02
+      name: Victimology
+      status: populated
+    - id: S033.03
+      name: Penology
+      status: populated
+    - id: S033.04
+      name: Juvenile Delinquency
+      status: populated
+    - id: S033.05
+      name: White-collar Crime
+      status: populated
+    - id: S033.06
+      name: Cybercrime
+      status: populated
+    - id: S033.07
+      name: Forensic Science
+      status: populated
+    - id: S033.08
+      name: Policing Studies
+      status: populated
+    - id: S033.09
+      name: Restorative Justice
+      status: populated
+    - id: S033.10
+      name: Organized Crime
+      status: populated
+    - id: S033.11
+      name: Terrorism Studies
+      status: populated
+    - id: S033.12
+      name: Drug Policy
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S034:
+    name: Social Work
+    sub_spheres:
+    - id: S034.01
+      name: Clinical Social Work
+      status: populated
+    - id: S034.02
+      name: Community Organization
+      status: populated
+    - id: S034.03
+      name: Child Welfare
+      status: populated
+    - id: S034.04
+      name: Mental Health Social Work
+      status: populated
+    - id: S034.05
+      name: Gerontological Social Work
+      status: populated
+    - id: S034.06
+      name: School Social Work
+      status: populated
+    - id: S034.07
+      name: Medical Social Work
+      status: populated
+    - id: S034.08
+      name: Substance Abuse
+      status: populated
+    - id: S034.09
+      name: Family Services
+      status: populated
+    - id: S034.10
+      name: Social Policy
+      status: populated
+    - id: S034.11
+      name: International Social Work
+      status: populated
+    - id: S034.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S035:
+    name: Gender Studies
+    sub_spheres:
+    - id: S035.01
+      name: Feminist Theory
+      status: populated
+    - id: S035.02
+      name: Masculinity Studies
+      status: populated
+    - id: S035.03
+      name: Queer Theory
+      status: populated
+    - id: S035.04
+      name: Gender and Development
+      status: populated
+    - id: S035.05
+      name: Gender and Health
+      status: populated
+    - id: S035.06
+      name: Gender and Law
+      status: populated
+    - id: S035.07
+      name: Intersectionality
+      status: populated
+    - id: S035.08
+      name: Transgender Studies
+      status: populated
+    - id: S035.09
+      name: Gender and Technology
+      status: populated
+    - id: S035.10
+      name: Reproductive Rights
+      status: populated
+    - id: S035.11
+      name: Gender and Work
+      status: populated
+    - id: S035.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S036:
+    name: Urban Studies
+    sub_spheres:
+    - id: S036.01
+      name: Urban Planning
+      status: populated
+    - id: S036.02
+      name: Urban Economics
+      status: populated
+    - id: S036.03
+      name: Urban Sociology
+      status: populated
+    - id: S036.04
+      name: Smart Cities
+      status: populated
+    - id: S036.05
+      name: Housing Studies
+      status: populated
+    - id: S036.06
+      name: Urban Governance
+      status: populated
+    - id: S036.07
+      name: Urban Ecology
+      status: populated
+    - id: S036.08
+      name: Gentrification
+      status: populated
+    - id: S036.09
+      name: Urban Transportation
+      status: populated
+    - id: S036.10
+      name: Informal Settlements
+      status: populated
+    - id: S036.11
+      name: Urban Design
+      status: populated
+    - id: S036.12
+      name: Metropolitan Studies
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S037:
+    name: History
+    sub_spheres:
+    - id: S037.01
+      name: Ancient History
+      status: populated
+    - id: S037.02
+      name: Medieval History
+      status: populated
+    - id: S037.03
+      name: Modern History
+      status: populated
+    - id: S037.04
+      name: Economic History
+      status: populated
+    - id: S037.05
+      name: Social History
+      status: populated
+    - id: S037.06
+      name: Military History
+      status: populated
+    - id: S037.07
+      name: Cultural History
+      status: populated
+    - id: S037.08
+      name: Intellectual History
+      status: populated
+    - id: S037.09
+      name: Digital History
+      status: populated
+    - id: S037.10
+      name: Environmental History
+      status: populated
+    - id: S037.11
+      name: World History
+      status: populated
+    - id: S037.12
+      name: Historiography
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S038:
+    name: Philosophy
+    sub_spheres:
+    - id: S038.01
+      name: Metaphysics
+      status: populated
+    - id: S038.02
+      name: Epistemology
+      status: populated
+    - id: S038.03
+      name: Ethics
+      status: populated
+    - id: S038.04
+      name: Logic
+      status: populated
+    - id: S038.05
+      name: Aesthetics
+      status: populated
+    - id: S038.06
+      name: Political Philosophy
+      status: populated
+    - id: S038.07
+      name: Philosophy of Mind
+      status: populated
+    - id: S038.08
+      name: Philosophy of Science
+      status: populated
+    - id: S038.09
+      name: Philosophy of Language
+      status: populated
+    - id: S038.10
+      name: Existentialism
+      status: populated
+    - id: S038.11
+      name: Phenomenology
+      status: populated
+    - id: S038.12
+      name: Philosophy of Technology
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S039:
+    name: Literature
+    sub_spheres:
+    - id: S039.01
+      name: Literary Theory
+      status: populated
+    - id: S039.02
+      name: Comparative Literature
+      status: populated
+    - id: S039.03
+      name: Poetry
+      status: populated
+    - id: S039.04
+      name: Fiction
+      status: populated
+    - id: S039.05
+      name: Drama
+      status: populated
+    - id: S039.06
+      name: Non-fiction
+      status: populated
+    - id: S039.07
+      name: Postcolonial Literature
+      status: populated
+    - id: S039.08
+      name: Digital Literature
+      status: populated
+    - id: S039.09
+      name: Children's Literature
+      status: populated
+    - id: S039.10
+      name: Genre Studies
+      status: populated
+    - id: S039.11
+      name: Translation Studies
+      status: populated
+    - id: S039.12
+      name: World Literature
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S040:
+    name: Religious Studies
+    sub_spheres:
+    - id: S040.01
+      name: Theology
+      status: populated
+    - id: S040.02
+      name: Comparative Religion
+      status: populated
+    - id: S040.03
+      name: Biblical Studies
+      status: populated
+    - id: S040.04
+      name: Islamic Studies
+      status: populated
+    - id: S040.05
+      name: Buddhist Studies
+      status: populated
+    - id: S040.06
+      name: Hindu Studies
+      status: populated
+    - id: S040.07
+      name: Sociology of Religion
+      status: populated
+    - id: S040.08
+      name: Philosophy of Religion
+      status: populated
+    - id: S040.09
+      name: Religion and Science
+      status: populated
+    - id: S040.10
+      name: New Religious Movements
+      status: populated
+    - id: S040.11
+      name: Mysticism
+      status: populated
+    - id: S040.12
+      name: Religious Ethics
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S041:
+    name: Ethics
+    sub_spheres:
+    - id: S041.01
+      name: Applied Ethics
+      status: populated
+    - id: S041.02
+      name: Bioethics
+      status: populated
+    - id: S041.03
+      name: Environmental Ethics
+      status: populated
+    - id: S041.04
+      name: Business Ethics
+      status: populated
+    - id: S041.05
+      name: Technology Ethics
+      status: populated
+    - id: S041.06
+      name: AI Ethics
+      status: populated
+    - id: S041.07
+      name: Medical Ethics
+      status: populated
+    - id: S041.08
+      name: Research Ethics
+      status: populated
+    - id: S041.09
+      name: Animal Ethics
+      status: populated
+    - id: S041.10
+      name: Political Ethics
+      status: populated
+    - id: S041.11
+      name: Professional Ethics
+      status: populated
+    - id: S041.12
+      name: Metaethics
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S042:
+    name: Classics
+    sub_spheres:
+    - id: S042.01
+      name: Greek Literature
+      status: populated
+    - id: S042.02
+      name: Latin Literature
+      status: populated
+    - id: S042.03
+      name: Classical Philosophy
+      status: populated
+    - id: S042.04
+      name: Ancient History
+      status: populated
+    - id: S042.05
+      name: Classical Archaeology
+      status: populated
+    - id: S042.06
+      name: Papyrology
+      status: populated
+    - id: S042.07
+      name: Epigraphy
+      status: populated
+    - id: S042.08
+      name: Numismatics
+      status: populated
+    - id: S042.09
+      name: Classical Reception
+      status: populated
+    - id: S042.10
+      name: Ancient Religion
+      status: populated
+    - id: S042.11
+      name: Classical Art
+      status: populated
+    - id: S042.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S043:
+    name: Archaeology
+    sub_spheres:
+    - id: S043.01
+      name: Prehistoric Archaeology
+      status: populated
+    - id: S043.02
+      name: Historical Archaeology
+      status: populated
+    - id: S043.03
+      name: Underwater Archaeology
+      status: populated
+    - id: S043.04
+      name: Landscape Archaeology
+      status: populated
+    - id: S043.05
+      name: Bioarchaeology
+      status: populated
+    - id: S043.06
+      name: Archaeometry
+      status: populated
+    - id: S043.07
+      name: Ethnoarchaeology
+      status: populated
+    - id: S043.08
+      name: Digital Archaeology
+      status: populated
+    - id: S043.09
+      name: Industrial Archaeology
+      status: populated
+    - id: S043.10
+      name: Experimental Archaeology
+      status: populated
+    - id: S043.11
+      name: Cultural Resource Management
+      status: populated
+    - id: S043.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S044:
+    name: Art History
+    sub_spheres:
+    - id: S044.01
+      name: Ancient Art
+      status: populated
+    - id: S044.02
+      name: Medieval Art
+      status: populated
+    - id: S044.03
+      name: Renaissance Art
+      status: populated
+    - id: S044.04
+      name: Modern Art
+      status: populated
+    - id: S044.05
+      name: Contemporary Art
+      status: populated
+    - id: S044.06
+      name: Asian Art
+      status: populated
+    - id: S044.07
+      name: African Art
+      status: populated
+    - id: S044.08
+      name: Architecture History
+      status: populated
+    - id: S044.09
+      name: Photography History
+      status: populated
+    - id: S044.10
+      name: Digital Art History
+      status: populated
+    - id: S044.11
+      name: Art Criticism
+      status: populated
+    - id: S044.12
+      name: Visual Culture
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S045:
+    name: Cultural Studies
+    sub_spheres:
+    - id: S045.01
+      name: Popular Culture
+      status: populated
+    - id: S045.02
+      name: Media Culture
+      status: populated
+    - id: S045.03
+      name: Postcolonial Studies
+      status: populated
+    - id: S045.04
+      name: Diaspora Studies
+      status: populated
+    - id: S045.05
+      name: Memory Studies
+      status: populated
+    - id: S045.06
+      name: Food Studies
+      status: populated
+    - id: S045.07
+      name: Material Culture
+      status: populated
+    - id: S045.08
+      name: Digital Culture
+      status: populated
+    - id: S045.09
+      name: Subcultures
+      status: populated
+    - id: S045.10
+      name: Globalization Studies
+      status: populated
+    - id: S045.11
+      name: Heritage Studies
+      status: populated
+    - id: S045.12
+      name: Fan Studies
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S046:
+    name: Folklore
+    sub_spheres:
+    - id: S046.01
+      name: Oral Traditions
+      status: populated
+    - id: S046.02
+      name: Mythology
+      status: populated
+    - id: S046.03
+      name: Folk Music
+      status: populated
+    - id: S046.04
+      name: Folk Art
+      status: populated
+    - id: S046.05
+      name: Fairy Tales
+      status: populated
+    - id: S046.06
+      name: Legend Studies
+      status: populated
+    - id: S046.07
+      name: Ritual Studies
+      status: populated
+    - id: S046.08
+      name: Ethnomusicology
+      status: populated
+    - id: S046.09
+      name: Folk Medicine
+      status: populated
+    - id: S046.10
+      name: Proverb Studies
+      status: populated
+    - id: S046.11
+      name: Material Folklore
+      status: populated
+    - id: S046.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S047:
+    name: Philology
+    sub_spheres:
+    - id: S047.01
+      name: Textual Criticism
+      status: populated
+    - id: S047.02
+      name: Manuscript Studies
+      status: populated
+    - id: S047.03
+      name: Paleography
+      status: populated
+    - id: S047.04
+      name: Etymology
+      status: populated
+    - id: S047.05
+      name: Historical Linguistics
+      status: populated
+    - id: S047.06
+      name: Comparative Philology
+      status: populated
+    - id: S047.07
+      name: Classical Philology
+      status: populated
+    - id: S047.08
+      name: Romance Philology
+      status: populated
+    - id: S047.09
+      name: Germanic Philology
+      status: populated
+    - id: S047.10
+      name: Slavic Philology
+      status: populated
+    - id: S047.11
+      name: Corpus Linguistics
+      status: populated
+    - id: S047.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S048:
+    name: Museology
+    sub_spheres:
+    - id: S048.01
+      name: Museum Management
+      status: populated
+    - id: S048.02
+      name: Exhibition Design
+      status: populated
+    - id: S048.03
+      name: Collection Management
+      status: populated
+    - id: S048.04
+      name: Conservation
+      status: populated
+    - id: S048.05
+      name: Museum Education
+      status: populated
+    - id: S048.06
+      name: Digital Museology
+      status: populated
+    - id: S048.07
+      name: Curatorial Studies
+      status: populated
+    - id: S048.08
+      name: Museum Ethics
+      status: populated
+    - id: S048.09
+      name: Community Museums
+      status: populated
+    - id: S048.10
+      name: Heritage Management
+      status: populated
+    - id: S048.11
+      name: Visitor Studies
+      status: populated
+    - id: S048.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S049:
+    name: Visual Arts
+    sub_spheres:
+    - id: S049.01
+      name: Drawing
+      status: populated
+    - id: S049.02
+      name: Printmaking
+      status: populated
+    - id: S049.03
+      name: Digital Art
+      status: populated
+    - id: S049.04
+      name: Installation Art
+      status: populated
+    - id: S049.05
+      name: Performance Art
+      status: populated
+    - id: S049.06
+      name: Video Art
+      status: populated
+    - id: S049.07
+      name: Mixed Media
+      status: populated
+    - id: S049.08
+      name: Conceptual Art
+      status: populated
+    - id: S049.09
+      name: Street Art
+      status: populated
+    - id: S049.10
+      name: Textile Art
+      status: populated
+    - id: S049.11
+      name: Ceramics
+      status: populated
+    - id: S049.12
+      name: Glass Art
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S050:
+    name: Performing Arts
+    sub_spheres:
+    - id: S050.01
+      name: Acting
+      status: populated
+    - id: S050.02
+      name: Directing
+      status: populated
+    - id: S050.03
+      name: Choreography
+      status: populated
+    - id: S050.04
+      name: Stage Design
+      status: populated
+    - id: S050.05
+      name: Costume Design
+      status: populated
+    - id: S050.06
+      name: Lighting Design
+      status: populated
+    - id: S050.07
+      name: Puppetry
+      status: populated
+    - id: S050.08
+      name: Circus Arts
+      status: populated
+    - id: S050.09
+      name: Opera
+      status: populated
+    - id: S050.10
+      name: Musical Theater
+      status: populated
+    - id: S050.11
+      name: Improvisation
+      status: populated
+    - id: S050.12
+      name: Physical Theater
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S051:
+    name: Music
+    sub_spheres:
+    - id: S051.01
+      name: Music Composition
+      status: populated
+    - id: S051.02
+      name: Music Theory
+      status: populated
+    - id: S051.03
+      name: Music Production
+      status: populated
+    - id: S051.04
+      name: Sound Design
+      status: populated
+    - id: S051.05
+      name: Music Performance
+      status: populated
+    - id: S051.06
+      name: Conducting
+      status: populated
+    - id: S051.07
+      name: Music Technology
+      status: populated
+    - id: S051.08
+      name: Ethnomusicology
+      status: populated
+    - id: S051.09
+      name: Music Education
+      status: populated
+    - id: S051.10
+      name: Music Therapy
+      status: populated
+    - id: S051.11
+      name: Music Business
+      status: populated
+    - id: S051.12
+      name: Audio Engineering
+      status: populated
+    - id: S051.13
+      name: Streaming Platforms
+      status: populated
+    - id: S051.14
+      name: Electronic Music
+      status: populated
+    populated_count: 14
+    blank_count: 0
+    population_priority: complete
+  S052:
+    name: Dance
+    sub_spheres:
+    - id: S052.01
+      name: Ballet
+      status: populated
+    - id: S052.02
+      name: Contemporary Dance
+      status: populated
+    - id: S052.03
+      name: Jazz Dance
+      status: populated
+    - id: S052.04
+      name: Hip Hop Dance
+      status: populated
+    - id: S052.05
+      name: Folk Dance
+      status: populated
+    - id: S052.06
+      name: Ballroom Dance
+      status: populated
+    - id: S052.07
+      name: Dance Therapy
+      status: populated
+    - id: S052.08
+      name: Dance Education
+      status: populated
+    - id: S052.09
+      name: Choreographic Theory
+      status: populated
+    - id: S052.10
+      name: Dance Technology
+      status: populated
+    - id: S052.11
+      name: Dance History
+      status: populated
+    - id: S052.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S053:
+    name: Theater
+    sub_spheres:
+    - id: S053.01
+      name: Playwriting
+      status: populated
+    - id: S053.02
+      name: Dramaturgy
+      status: populated
+    - id: S053.03
+      name: Stage Management
+      status: populated
+    - id: S053.04
+      name: Theater History
+      status: populated
+    - id: S053.05
+      name: Theater Criticism
+      status: populated
+    - id: S053.06
+      name: Community Theater
+      status: populated
+    - id: S053.07
+      name: Experimental Theater
+      status: populated
+    - id: S053.08
+      name: Children's Theater
+      status: populated
+    - id: S053.09
+      name: Political Theater
+      status: populated
+    - id: S053.10
+      name: Theater Technology
+      status: populated
+    - id: S053.11
+      name: Voice and Speech
+      status: populated
+    - id: S053.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S054:
+    name: Film
+    sub_spheres:
+    - id: S054.01
+      name: Screenwriting
+      status: populated
+    - id: S054.02
+      name: Cinematography
+      status: populated
+    - id: S054.03
+      name: Film Editing
+      status: populated
+    - id: S054.04
+      name: Film Direction
+      status: populated
+    - id: S054.05
+      name: Documentary
+      status: populated
+    - id: S054.06
+      name: Animation
+      status: populated
+    - id: S054.07
+      name: Visual Effects
+      status: populated
+    - id: S054.08
+      name: Sound Design for Film
+      status: populated
+    - id: S054.09
+      name: Film Production
+      status: populated
+    - id: S054.10
+      name: Interactive Cinema
+      status: populated
+    - id: S054.11
+      name: Virtual Production
+      status: populated
+    - id: S054.12
+      name: Motion Capture
+      status: populated
+    - id: S054.13
+      name: Streaming Content
+      status: populated
+    - id: S054.14
+      name: Short Film
+      status: populated
+    - id: S054.15
+      name: Film Distribution
+      status: populated
+    - id: S054.16
+      name: Film Criticism
+      status: populated
+    - id: S054.17
+      name: Film Festival
+      status: populated
+    populated_count: 17
+    blank_count: 0
+    population_priority: complete
+  S055:
+    name: Creative Writing
+    sub_spheres:
+    - id: S055.01
+      name: Fiction Writing
+      status: populated
+    - id: S055.02
+      name: Poetry Writing
+      status: populated
+    - id: S055.03
+      name: Screenwriting
+      status: populated
+    - id: S055.04
+      name: Playwriting
+      status: populated
+    - id: S055.05
+      name: Creative Non-fiction
+      status: populated
+    - id: S055.06
+      name: Game Narrative
+      status: populated
+    - id: S055.07
+      name: Interactive Fiction
+      status: populated
+    - id: S055.08
+      name: Lyric Writing
+      status: populated
+    - id: S055.09
+      name: Comedy Writing
+      status: populated
+    - id: S055.10
+      name: Science Fiction Writing
+      status: populated
+    - id: S055.11
+      name: Fantasy Writing
+      status: populated
+    - id: S055.12
+      name: Memoir
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S056:
+    name: Architecture
+    sub_spheres:
+    - id: S056.01
+      name: Architectural Design
+      status: populated
+    - id: S056.02
+      name: Sustainable Architecture
+      status: populated
+    - id: S056.03
+      name: Urban Architecture
+      status: populated
+    - id: S056.04
+      name: Interior Architecture
+      status: populated
+    - id: S056.05
+      name: Landscape Architecture
+      status: populated
+    - id: S056.06
+      name: Computational Design
+      status: populated
+    - id: S056.07
+      name: Historic Preservation
+      status: populated
+    - id: S056.08
+      name: Parametric Design
+      status: populated
+    - id: S056.09
+      name: Building Technology
+      status: populated
+    - id: S056.10
+      name: Architectural Theory
+      status: populated
+    - id: S056.11
+      name: Vernacular Architecture
+      status: populated
+    - id: S056.12
+      name: Digital Architecture
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S057:
+    name: Design
+    sub_spheres:
+    - id: S057.01
+      name: Graphic Design
+      status: populated
+    - id: S057.02
+      name: Industrial Design
+      status: populated
+    - id: S057.03
+      name: UX Design
+      status: populated
+    - id: S057.04
+      name: UI Design
+      status: populated
+    - id: S057.05
+      name: Service Design
+      status: populated
+    - id: S057.06
+      name: Fashion Design
+      status: populated
+    - id: S057.07
+      name: Interaction Design
+      status: populated
+    - id: S057.08
+      name: Game Design
+      status: populated
+    - id: S057.09
+      name: Type Design
+      status: populated
+    - id: S057.10
+      name: Motion Design
+      status: populated
+    - id: S057.11
+      name: Design Research
+      status: populated
+    - id: S057.12
+      name: Sustainable Design
+      status: populated
+    - id: S057.13
+      name: Accessibility Design
+      status: populated
+    populated_count: 13
+    blank_count: 0
+    population_priority: complete
+  S058:
+    name: Photography
+    sub_spheres:
+    - id: S058.01
+      name: Portrait Photography
+      status: populated
+    - id: S058.02
+      name: Landscape Photography
+      status: populated
+    - id: S058.03
+      name: Documentary Photography
+      status: populated
+    - id: S058.04
+      name: Fashion Photography
+      status: populated
+    - id: S058.05
+      name: Architectural Photography
+      status: populated
+    - id: S058.06
+      name: Wildlife Photography
+      status: populated
+    - id: S058.07
+      name: Street Photography
+      status: populated
+    - id: S058.08
+      name: Commercial Photography
+      status: populated
+    - id: S058.09
+      name: Digital Photography
+      status: populated
+    - id: S058.10
+      name: Film Photography
+      status: populated
+    - id: S058.11
+      name: Photo Editing
+      status: populated
+    - id: S058.12
+      name: Photojournalism
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S059:
+    name: Sculpture
+    sub_spheres:
+    - id: S059.01
+      name: Stone Sculpture
+      status: populated
+    - id: S059.02
+      name: Metal Sculpture
+      status: populated
+    - id: S059.03
+      name: Wood Sculpture
+      status: populated
+    - id: S059.04
+      name: Kinetic Sculpture
+      status: populated
+    - id: S059.05
+      name: Environmental Sculpture
+      status: populated
+    - id: S059.06
+      name: Digital Sculpture
+      status: populated
+    - id: S059.07
+      name: Ceramic Sculpture
+      status: populated
+    - id: S059.08
+      name: Found Object Art
+      status: populated
+    - id: S059.09
+      name: Monumental Sculpture
+      status: populated
+    - id: S059.10
+      name: Relief Sculpture
+      status: populated
+    - id: S059.11
+      name: Body Casting
+      status: populated
+    - id: S059.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S060:
+    name: Painting
+    sub_spheres:
+    - id: S060.01
+      name: Oil Painting
+      status: populated
+    - id: S060.02
+      name: Watercolor
+      status: populated
+    - id: S060.03
+      name: Acrylic Painting
+      status: populated
+    - id: S060.04
+      name: Fresco
+      status: populated
+    - id: S060.05
+      name: Encaustic
+      status: populated
+    - id: S060.06
+      name: Digital Painting
+      status: populated
+    - id: S060.07
+      name: Abstract Painting
+      status: populated
+    - id: S060.08
+      name: Figurative Painting
+      status: populated
+    - id: S060.09
+      name: Landscape Painting
+      status: populated
+    - id: S060.10
+      name: Mural Painting
+      status: populated
+    - id: S060.11
+      name: Miniature Painting
+      status: populated
+    - id: S060.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S061:
+    name: Mechanical Engineering
+    sub_spheres:
+    - id: S061.01
+      name: Thermodynamics
+      status: populated
+    - id: S061.02
+      name: Fluid Mechanics
+      status: populated
+    - id: S061.03
+      name: Solid Mechanics
+      status: populated
+    - id: S061.04
+      name: Manufacturing Processes
+      status: populated
+    - id: S061.05
+      name: Machine Design
+      status: populated
+    - id: S061.06
+      name: Mechatronics
+      status: populated
+    - id: S061.07
+      name: HVAC
+      status: populated
+    - id: S061.08
+      name: Automotive Engineering
+      status: populated
+    - id: S061.09
+      name: Tribology
+      status: populated
+    - id: S061.10
+      name: Acoustics Engineering
+      status: populated
+    - id: S061.11
+      name: Biomechanics
+      status: populated
+    - id: S061.12
+      name: Computational Mechanics
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S062:
+    name: Electrical Engineering
+    sub_spheres:
+    - id: S062.01
+      name: Power Systems
+      status: populated
+    - id: S062.02
+      name: Control Systems
+      status: populated
+    - id: S062.03
+      name: Signal Processing
+      status: populated
+    - id: S062.04
+      name: Microelectronics
+      status: populated
+    - id: S062.05
+      name: Photonics
+      status: populated
+    - id: S062.06
+      name: Embedded Systems
+      status: populated
+    - id: S062.07
+      name: VLSI Design
+      status: populated
+    - id: S062.08
+      name: Power Electronics
+      status: populated
+    - id: S062.09
+      name: Instrumentation
+      status: populated
+    - id: S062.10
+      name: Antenna Design
+      status: populated
+    - id: S062.11
+      name: Electric Machines
+      status: populated
+    - id: S062.12
+      name: Renewable Energy Systems
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S063:
+    name: Civil Engineering
+    sub_spheres:
+    - id: S063.01
+      name: Structural Engineering
+      status: populated
+    - id: S063.02
+      name: Geotechnical Engineering
+      status: populated
+    - id: S063.03
+      name: Transportation Engineering
+      status: populated
+    - id: S063.04
+      name: Water Resources
+      status: populated
+    - id: S063.05
+      name: Construction Engineering
+      status: populated
+    - id: S063.06
+      name: Earthquake Engineering
+      status: populated
+    - id: S063.07
+      name: Coastal Engineering
+      status: populated
+    - id: S063.08
+      name: Bridge Engineering
+      status: populated
+    - id: S063.09
+      name: Tunnel Engineering
+      status: populated
+    - id: S063.10
+      name: Surveying
+      status: populated
+    - id: S063.11
+      name: Foundation Engineering
+      status: populated
+    - id: S063.12
+      name: Urban Infrastructure
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S064:
+    name: Chemical Engineering
+    sub_spheres:
+    - id: S064.01
+      name: Process Engineering
+      status: populated
+    - id: S064.02
+      name: Reaction Engineering
+      status: populated
+    - id: S064.03
+      name: Separation Processes
+      status: populated
+    - id: S064.04
+      name: Biochemical Engineering
+      status: populated
+    - id: S064.05
+      name: Polymer Engineering
+      status: populated
+    - id: S064.06
+      name: Petroleum Engineering
+      status: populated
+    - id: S064.07
+      name: Pharmaceutical Engineering
+      status: populated
+    - id: S064.08
+      name: Food Engineering
+      status: populated
+    - id: S064.09
+      name: Nanotechnology
+      status: populated
+    - id: S064.10
+      name: Catalysis
+      status: populated
+    - id: S064.11
+      name: Process Control
+      status: populated
+    - id: S064.12
+      name: Green Chemistry
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S065:
+    name: Aerospace Engineering
+    sub_spheres:
+    - id: S065.01
+      name: Aerodynamics
+      status: populated
+    - id: S065.02
+      name: Propulsion
+      status: populated
+    - id: S065.03
+      name: Orbital Mechanics
+      status: populated
+    - id: S065.04
+      name: Aircraft Design
+      status: populated
+    - id: S065.05
+      name: Spacecraft Design
+      status: populated
+    - id: S065.06
+      name: Avionics
+      status: populated
+    - id: S065.07
+      name: Flight Dynamics
+      status: populated
+    - id: S065.08
+      name: Rocket Engineering
+      status: populated
+    - id: S065.09
+      name: Satellite Systems
+      status: populated
+    - id: S065.10
+      name: Space Habitation
+      status: populated
+    - id: S065.11
+      name: Hypersonics
+      status: populated
+    - id: S065.12
+      name: UAV Design
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S066:
+    name: Biomedical Engineering
+    sub_spheres:
+    - id: S066.01
+      name: Medical Devices
+      status: populated
+    - id: S066.02
+      name: Tissue Engineering
+      status: populated
+    - id: S066.03
+      name: Biomaterials
+      status: populated
+    - id: S066.04
+      name: Medical Imaging
+      status: populated
+    - id: S066.05
+      name: Neural Engineering
+      status: populated
+    - id: S066.06
+      name: Rehabilitation Engineering
+      status: populated
+    - id: S066.07
+      name: Drug Delivery Systems
+      status: populated
+    - id: S066.08
+      name: Biosensors
+      status: populated
+    - id: S066.09
+      name: Prosthetics
+      status: populated
+    - id: S066.10
+      name: Bioinstrumentation
+      status: populated
+    - id: S066.11
+      name: Clinical Engineering
+      status: populated
+    - id: S066.12
+      name: Genetic Engineering
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S067:
+    name: Environmental Engineering
+    sub_spheres:
+    - id: S067.01
+      name: Water Treatment
+      status: populated
+    - id: S067.02
+      name: Air Quality
+      status: populated
+    - id: S067.03
+      name: Waste Treatment
+      status: populated
+    - id: S067.04
+      name: Remediation
+      status: populated
+    - id: S067.05
+      name: Environmental Impact Assessment
+      status: populated
+    - id: S067.06
+      name: Sustainable Engineering
+      status: populated
+    - id: S067.07
+      name: Noise Control
+      status: populated
+    - id: S067.08
+      name: Climate Engineering
+      status: populated
+    - id: S067.09
+      name: Ecological Engineering
+      status: populated
+    - id: S067.10
+      name: Environmental Monitoring
+      status: populated
+    - id: S067.11
+      name: Green Building
+      status: populated
+    - id: S067.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S068:
+    name: Industrial Engineering
+    sub_spheres:
+    - id: S068.01
+      name: Production Systems
+      status: populated
+    - id: S068.02
+      name: Quality Engineering
+      status: populated
+    - id: S068.03
+      name: Ergonomics
+      status: populated
+    - id: S068.04
+      name: Supply Chain Engineering
+      status: populated
+    - id: S068.05
+      name: Lean Manufacturing
+      status: populated
+    - id: S068.06
+      name: Six Sigma
+      status: populated
+    - id: S068.07
+      name: Systems Engineering
+      status: populated
+    - id: S068.08
+      name: Reliability Engineering
+      status: populated
+    - id: S068.09
+      name: Safety Engineering
+      status: populated
+    - id: S068.10
+      name: Facilities Planning
+      status: populated
+    - id: S068.11
+      name: Work Measurement
+      status: populated
+    - id: S068.12
+      name: Automation
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S069:
+    name: Software Engineering
+    sub_spheres:
+    - id: S069.01
+      name: Requirements Engineering
+      status: populated
+    - id: S069.02
+      name: Software Architecture
+      status: populated
+    - id: S069.03
+      name: Software Testing
+      status: populated
+    - id: S069.04
+      name: DevOps
+      status: populated
+    - id: S069.05
+      name: Agile Methods
+      status: populated
+    - id: S069.06
+      name: Software Maintenance
+      status: populated
+    - id: S069.07
+      name: Formal Methods
+      status: populated
+    - id: S069.08
+      name: Software Security
+      status: populated
+    - id: S069.09
+      name: Cloud Engineering
+      status: populated
+    - id: S069.10
+      name: Mobile Development
+      status: populated
+    - id: S069.11
+      name: Embedded Software
+      status: populated
+    - id: S069.12
+      name: Open Source
+      status: populated
+    - id: S069.13
+      name: API Design
+      status: populated
+    - id: S069.14
+      name: Microservices
+      status: populated
+    - id: S069.15
+      name: Site Reliability Engineering
+      status: populated
+    populated_count: 15
+    blank_count: 0
+    population_priority: complete
+  S070:
+    name: Materials Engineering
+    sub_spheres:
+    - id: S070.01
+      name: Metallurgy
+      status: populated
+    - id: S070.02
+      name: Ceramics Engineering
+      status: populated
+    - id: S070.03
+      name: Polymer Engineering
+      status: populated
+    - id: S070.04
+      name: Composite Materials
+      status: populated
+    - id: S070.05
+      name: Nanomaterials
+      status: populated
+    - id: S070.06
+      name: Semiconductor Materials
+      status: populated
+    - id: S070.07
+      name: Biomaterials
+      status: populated
+    - id: S070.08
+      name: Smart Materials
+      status: populated
+    - id: S070.09
+      name: Corrosion Engineering
+      status: populated
+    - id: S070.10
+      name: Surface Engineering
+      status: populated
+    - id: S070.11
+      name: Materials Characterization
+      status: populated
+    - id: S070.12
+      name: Additive Manufacturing Materials
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S071:
+    name: Nuclear Engineering
+    sub_spheres:
+    - id: S071.01
+      name: Reactor Design
+      status: populated
+    - id: S071.02
+      name: Nuclear Safety
+      status: populated
+    - id: S071.03
+      name: Radiation Protection
+      status: populated
+    - id: S071.04
+      name: Nuclear Fuel Cycle
+      status: populated
+    - id: S071.05
+      name: Fusion Engineering
+      status: populated
+    - id: S071.06
+      name: Nuclear Waste Management
+      status: populated
+    - id: S071.07
+      name: Small Modular Reactors
+      status: populated
+    - id: S071.08
+      name: Nuclear Medicine Applications
+      status: populated
+    - id: S071.09
+      name: Decommissioning
+      status: populated
+    - id: S071.10
+      name: Nuclear Instrumentation
+      status: populated
+    - id: S071.11
+      name: null
+      status: BLANK
+    - id: S071.12
+      name: null
+      status: BLANK
+    populated_count: 10
+    blank_count: 2
+    population_priority: medium
+  S072:
+    name: Robotics
+    sub_spheres:
+    - id: S072.01
+      name: Robot Kinematics
+      status: populated
+    - id: S072.02
+      name: Robot Control
+      status: populated
+    - id: S072.03
+      name: Autonomous Navigation
+      status: populated
+    - id: S072.04
+      name: Computer Vision for Robotics
+      status: populated
+    - id: S072.05
+      name: Manipulation
+      status: populated
+    - id: S072.06
+      name: Swarm Robotics
+      status: populated
+    - id: S072.07
+      name: Human-Robot Interaction
+      status: populated
+    - id: S072.08
+      name: Soft Robotics
+      status: populated
+    - id: S072.09
+      name: Medical Robotics
+      status: populated
+    - id: S072.10
+      name: Industrial Robotics
+      status: populated
+    - id: S072.11
+      name: Entertainment Robotics
+      status: populated
+    - id: S072.12
+      name: Space Robotics
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S073:
+    name: Media Studies
+    sub_spheres:
+    - id: S073.01
+      name: Media Theory
+      status: populated
+    - id: S073.02
+      name: Media Effects
+      status: populated
+    - id: S073.03
+      name: Political Communication
+      status: populated
+    - id: S073.04
+      name: Media Economics
+      status: populated
+    - id: S073.05
+      name: Media Ethics
+      status: populated
+    - id: S073.06
+      name: Audience Studies
+      status: populated
+    - id: S073.07
+      name: Media History
+      status: populated
+    - id: S073.08
+      name: New Media Studies
+      status: populated
+    - id: S073.09
+      name: Media Literacy
+      status: populated
+    - id: S073.10
+      name: Critical Media Studies
+      status: populated
+    - id: S073.11
+      name: Media and Society
+      status: populated
+    - id: S073.12
+      name: Transmedia
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S074:
+    name: Journalism
+    sub_spheres:
+    - id: S074.01
+      name: Investigative Journalism
+      status: populated
+    - id: S074.02
+      name: Data Journalism
+      status: populated
+    - id: S074.03
+      name: Broadcast Journalism
+      status: populated
+    - id: S074.04
+      name: Digital Journalism
+      status: populated
+    - id: S074.05
+      name: Photojournalism
+      status: populated
+    - id: S074.06
+      name: Science Journalism
+      status: populated
+    - id: S074.07
+      name: Sports Journalism
+      status: populated
+    - id: S074.08
+      name: War Correspondence
+      status: populated
+    - id: S074.09
+      name: Citizen Journalism
+      status: populated
+    - id: S074.10
+      name: Journalism Ethics
+      status: populated
+    - id: S074.11
+      name: Longform Journalism
+      status: populated
+    - id: S074.12
+      name: Podcast Journalism
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S075:
+    name: Telecommunications
+    sub_spheres:
+    - id: S075.01
+      name: Wireless Communications
+      status: populated
+    - id: S075.02
+      name: Optical Communications
+      status: populated
+    - id: S075.03
+      name: Network Protocols
+      status: populated
+    - id: S075.04
+      name: 5G/6G Systems
+      status: populated
+    - id: S075.05
+      name: Satellite Communications
+      status: populated
+    - id: S075.06
+      name: Signal Processing
+      status: populated
+    - id: S075.07
+      name: Spectrum Management
+      status: populated
+    - id: S075.08
+      name: IoT Communications
+      status: populated
+    - id: S075.09
+      name: Network Security
+      status: populated
+    - id: S075.10
+      name: Mobile Networks
+      status: populated
+    - id: S075.11
+      name: Quantum Communications
+      status: populated
+    - id: S075.12
+      name: Edge Computing
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S076:
+    name: Information Systems
+    sub_spheres:
+    - id: S076.01
+      name: Enterprise Systems
+      status: populated
+    - id: S076.02
+      name: Database Management
+      status: populated
+    - id: S076.03
+      name: Business Intelligence
+      status: populated
+    - id: S076.04
+      name: IT Governance
+      status: populated
+    - id: S076.05
+      name: Systems Analysis
+      status: populated
+    - id: S076.06
+      name: Cloud Computing
+      status: populated
+    - id: S076.07
+      name: Information Security
+      status: populated
+    - id: S076.08
+      name: Knowledge Management
+      status: populated
+    - id: S076.09
+      name: Health Informatics
+      status: populated
+    - id: S076.10
+      name: E-Government
+      status: populated
+    - id: S076.11
+      name: Digital Transformation
+      status: populated
+    - id: S076.12
+      name: IT Service Management
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S077:
+    name: Library Science
+    sub_spheres:
+    - id: S077.01
+      name: Information Organization
+      status: populated
+    - id: S077.02
+      name: Cataloging
+      status: populated
+    - id: S077.03
+      name: Digital Libraries
+      status: populated
+    - id: S077.04
+      name: Information Retrieval
+      status: populated
+    - id: S077.05
+      name: Archives Management
+      status: populated
+    - id: S077.06
+      name: Preservation
+      status: populated
+    - id: S077.07
+      name: Reference Services
+      status: populated
+    - id: S077.08
+      name: Collection Development
+      status: populated
+    - id: S077.09
+      name: Metadata
+      status: populated
+    - id: S077.10
+      name: Open Access
+      status: populated
+    - id: S077.11
+      name: Research Data Management
+      status: populated
+    - id: S077.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S078:
+    name: Publishing
+    sub_spheres:
+    - id: S078.01
+      name: Book Publishing
+      status: populated
+    - id: S078.02
+      name: Academic Publishing
+      status: populated
+    - id: S078.03
+      name: Digital Publishing
+      status: populated
+    - id: S078.04
+      name: Magazine Publishing
+      status: populated
+    - id: S078.05
+      name: Self-Publishing
+      status: populated
+    - id: S078.06
+      name: Editorial Design
+      status: populated
+    - id: S078.07
+      name: Rights Management
+      status: populated
+    - id: S078.08
+      name: Publishing Technology
+      status: populated
+    - id: S078.09
+      name: Open Access Publishing
+      status: populated
+    - id: S078.10
+      name: Audio Publishing
+      status: populated
+    - id: S078.11
+      name: Comics and Graphic Novels
+      status: populated
+    - id: S078.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S079:
+    name: Advertising
+    sub_spheres:
+    - id: S079.01
+      name: Digital Advertising
+      status: populated
+    - id: S079.02
+      name: Brand Strategy
+      status: populated
+    - id: S079.03
+      name: Creative Direction
+      status: populated
+    - id: S079.04
+      name: Media Planning
+      status: populated
+    - id: S079.05
+      name: Programmatic Advertising
+      status: populated
+    - id: S079.06
+      name: Social Media Marketing
+      status: populated
+    - id: S079.07
+      name: Content Marketing
+      status: populated
+    - id: S079.08
+      name: Influencer Marketing
+      status: populated
+    - id: S079.09
+      name: Search Marketing
+      status: populated
+    - id: S079.10
+      name: Out-of-Home Advertising
+      status: populated
+    - id: S079.11
+      name: Advertising Ethics
+      status: populated
+    - id: S079.12
+      name: Ad Technology
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S080:
+    name: Public Relations
+    sub_spheres:
+    - id: S080.01
+      name: Corporate Communications
+      status: populated
+    - id: S080.02
+      name: Crisis Management
+      status: populated
+    - id: S080.03
+      name: Media Relations
+      status: populated
+    - id: S080.04
+      name: Reputation Management
+      status: populated
+    - id: S080.05
+      name: Internal Communications
+      status: populated
+    - id: S080.06
+      name: Government Relations
+      status: populated
+    - id: S080.07
+      name: Community Relations
+      status: populated
+    - id: S080.08
+      name: Digital PR
+      status: populated
+    - id: S080.09
+      name: Event Management
+      status: populated
+    - id: S080.10
+      name: Stakeholder Engagement
+      status: populated
+    - id: S080.11
+      name: CSR Communications
+      status: populated
+    - id: S080.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S081:
+    name: Digital Media
+    sub_spheres:
+    - id: S081.01
+      name: Social Media Platforms
+      status: populated
+    - id: S081.02
+      name: Content Creation
+      status: populated
+    - id: S081.03
+      name: Streaming Media
+      status: populated
+    - id: S081.04
+      name: Digital Video
+      status: populated
+    - id: S081.05
+      name: Podcasting
+      status: populated
+    - id: S081.06
+      name: Web Design
+      status: populated
+    - id: S081.07
+      name: Mobile Media
+      status: populated
+    - id: S081.08
+      name: Virtual Reality Media
+      status: populated
+    - id: S081.09
+      name: Augmented Reality Media
+      status: populated
+    - id: S081.10
+      name: User-Generated Content
+      status: populated
+    - id: S081.11
+      name: Digital Distribution
+      status: populated
+    - id: S081.12
+      name: Platform Economics
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S082:
+    name: Broadcasting
+    sub_spheres:
+    - id: S082.01
+      name: Television Production
+      status: populated
+    - id: S082.02
+      name: Radio Production
+      status: populated
+    - id: S082.03
+      name: Live Broadcasting
+      status: populated
+    - id: S082.04
+      name: Streaming Broadcasting
+      status: populated
+    - id: S082.05
+      name: Broadcast Engineering
+      status: populated
+    - id: S082.06
+      name: Program Scheduling
+      status: populated
+    - id: S082.07
+      name: Broadcast Regulation
+      status: populated
+    - id: S082.08
+      name: Sports Broadcasting
+      status: populated
+    - id: S082.09
+      name: News Broadcasting
+      status: populated
+    - id: S082.10
+      name: Community Broadcasting
+      status: populated
+    - id: S082.11
+      name: International Broadcasting
+      status: populated
+    - id: S082.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S083:
+    name: Film Studies
+    sub_spheres:
+    - id: S083.01
+      name: Film Theory
+      status: populated
+    - id: S083.02
+      name: Film History
+      status: populated
+    - id: S083.03
+      name: National Cinemas
+      status: populated
+    - id: S083.04
+      name: Genre Studies
+      status: populated
+    - id: S083.05
+      name: Auteur Theory
+      status: populated
+    - id: S083.06
+      name: Film and Society
+      status: populated
+    - id: S083.07
+      name: Documentary Studies
+      status: populated
+    - id: S083.08
+      name: Animation Studies
+      status: populated
+    - id: S083.09
+      name: Film Preservation
+      status: populated
+    - id: S083.10
+      name: Film and Technology
+      status: populated
+    - id: S083.11
+      name: Spectatorship
+      status: populated
+    - id: S083.12
+      name: Film Sound Studies
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S084:
+    name: Communication Theory
+    sub_spheres:
+    - id: S084.01
+      name: Interpersonal Communication
+      status: populated
+    - id: S084.02
+      name: Mass Communication
+      status: populated
+    - id: S084.03
+      name: Organizational Communication
+      status: populated
+    - id: S084.04
+      name: Intercultural Communication
+      status: populated
+    - id: S084.05
+      name: Health Communication
+      status: populated
+    - id: S084.06
+      name: Science Communication
+      status: populated
+    - id: S084.07
+      name: Rhetoric
+      status: populated
+    - id: S084.08
+      name: Semiotics
+      status: populated
+    - id: S084.09
+      name: Discourse Analysis
+      status: populated
+    - id: S084.10
+      name: Nonverbal Communication
+      status: populated
+    - id: S084.11
+      name: Network Communication
+      status: populated
+    - id: S084.12
+      name: Risk Communication
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S085:
+    name: Pedagogy
+    sub_spheres:
+    - id: S085.01
+      name: Constructivism
+      status: populated
+    - id: S085.02
+      name: Behaviorism in Education
+      status: populated
+    - id: S085.03
+      name: Critical Pedagogy
+      status: populated
+    - id: S085.04
+      name: Inquiry-Based Learning
+      status: populated
+    - id: S085.05
+      name: Project-Based Learning
+      status: populated
+    - id: S085.06
+      name: Experiential Learning
+      status: populated
+    - id: S085.07
+      name: Differentiated Instruction
+      status: populated
+    - id: S085.08
+      name: Culturally Responsive Teaching
+      status: populated
+    - id: S085.09
+      name: Universal Design for Learning
+      status: populated
+    - id: S085.10
+      name: Montessori Method
+      status: populated
+    - id: S085.11
+      name: Waldorf Education
+      status: populated
+    - id: S085.12
+      name: Flipped Classroom
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S086:
+    name: Curriculum Design
+    sub_spheres:
+    - id: S086.01
+      name: Curriculum Theory
+      status: populated
+    - id: S086.02
+      name: Standards-Based Design
+      status: populated
+    - id: S086.03
+      name: Backward Design
+      status: populated
+    - id: S086.04
+      name: Interdisciplinary Curriculum
+      status: populated
+    - id: S086.05
+      name: Competency-Based Education
+      status: populated
+    - id: S086.06
+      name: Curriculum Evaluation
+      status: populated
+    - id: S086.07
+      name: Hidden Curriculum
+      status: populated
+    - id: S086.08
+      name: Inclusive Curriculum
+      status: populated
+    - id: S086.09
+      name: STEM Curriculum
+      status: populated
+    - id: S086.10
+      name: Arts Integration
+      status: populated
+    - id: S086.11
+      name: Global Curriculum
+      status: populated
+    - id: S086.12
+      name: Curriculum Mapping
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S087:
+    name: Educational Psychology
+    sub_spheres:
+    - id: S087.01
+      name: Learning Theory
+      status: populated
+    - id: S087.02
+      name: Motivation
+      status: populated
+    - id: S087.03
+      name: Cognitive Development
+      status: populated
+    - id: S087.04
+      name: Social-Emotional Learning
+      status: populated
+    - id: S087.05
+      name: Metacognition
+      status: populated
+    - id: S087.06
+      name: Self-Regulated Learning
+      status: populated
+    - id: S087.07
+      name: Gifted Education
+      status: populated
+    - id: S087.08
+      name: Learning Disabilities
+      status: populated
+    - id: S087.09
+      name: Classroom Management
+      status: populated
+    - id: S087.10
+      name: Assessment Psychology
+      status: populated
+    - id: S087.11
+      name: Educational Neuroscience
+      status: populated
+    - id: S087.12
+      name: Growth Mindset
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S088:
+    name: Special Education
+    sub_spheres:
+    - id: S088.01
+      name: Inclusive Education
+      status: populated
+    - id: S088.02
+      name: Autism Spectrum
+      status: populated
+    - id: S088.03
+      name: Learning Disabilities
+      status: populated
+    - id: S088.04
+      name: Intellectual Disabilities
+      status: populated
+    - id: S088.05
+      name: Sensory Impairments
+      status: populated
+    - id: S088.06
+      name: Physical Disabilities
+      status: populated
+    - id: S088.07
+      name: Behavioral Disorders
+      status: populated
+    - id: S088.08
+      name: Assistive Technology
+      status: populated
+    - id: S088.09
+      name: Transition Planning
+      status: populated
+    - id: S088.10
+      name: Early Intervention
+      status: populated
+    - id: S088.11
+      name: Accessibility Standards
+      status: populated
+    - id: S088.12
+      name: Universal Design
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S089:
+    name: Adult Education
+    sub_spheres:
+    - id: S089.01
+      name: Andragogy
+      status: populated
+    - id: S089.02
+      name: Lifelong Learning
+      status: populated
+    - id: S089.03
+      name: Workplace Learning
+      status: populated
+    - id: S089.04
+      name: Continuing Education
+      status: populated
+    - id: S089.05
+      name: Community Education
+      status: populated
+    - id: S089.06
+      name: Literacy Programs
+      status: populated
+    - id: S089.07
+      name: Professional Development
+      status: populated
+    - id: S089.08
+      name: Vocational Training
+      status: populated
+    - id: S089.09
+      name: Distance Learning
+      status: populated
+    - id: S089.10
+      name: null
+      status: BLANK
+    - id: S089.11
+      name: null
+      status: BLANK
+    - id: S089.12
+      name: null
+      status: BLANK
+    populated_count: 9
+    blank_count: 3
+    population_priority: medium
+  S090:
+    name: E Learning
+    sub_spheres:
+    - id: S090.01
+      name: Learning Management Systems
+      status: populated
+    - id: S090.02
+      name: Instructional Design
+      status: populated
+    - id: S090.03
+      name: Online Course Design
+      status: populated
+    - id: S090.04
+      name: Gamification
+      status: populated
+    - id: S090.05
+      name: Adaptive Learning
+      status: populated
+    - id: S090.06
+      name: Mobile Learning
+      status: populated
+    - id: S090.07
+      name: Microlearning
+      status: populated
+    - id: S090.08
+      name: Virtual Classrooms
+      status: populated
+    - id: S090.09
+      name: Learning Analytics
+      status: populated
+    - id: S090.10
+      name: Open Educational Resources
+      status: populated
+    - id: S090.11
+      name: MOOC Design
+      status: populated
+    - id: S090.12
+      name: Social Learning
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S091:
+    name: Educational Technology
+    sub_spheres:
+    - id: S091.01
+      name: EdTech Platforms
+      status: populated
+    - id: S091.02
+      name: AI in Education
+      status: populated
+    - id: S091.03
+      name: VR/AR in Education
+      status: populated
+    - id: S091.04
+      name: Classroom Technology
+      status: populated
+    - id: S091.05
+      name: Student Information Systems
+      status: populated
+    - id: S091.06
+      name: Digital Assessment
+      status: populated
+    - id: S091.07
+      name: Coding Education
+      status: populated
+    - id: S091.08
+      name: Robotics Education
+      status: populated
+    - id: S091.09
+      name: Maker Spaces
+      status: populated
+    - id: S091.10
+      name: Digital Literacy Education
+      status: populated
+    - id: S091.11
+      name: Technology Integration
+      status: populated
+    - id: S091.12
+      name: EdTech Policy
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S092:
+    name: Assessment
+    sub_spheres:
+    - id: S092.01
+      name: Formative Assessment
+      status: populated
+    - id: S092.02
+      name: Summative Assessment
+      status: populated
+    - id: S092.03
+      name: Standardized Testing
+      status: populated
+    - id: S092.04
+      name: Performance Assessment
+      status: populated
+    - id: S092.05
+      name: Portfolio Assessment
+      status: populated
+    - id: S092.06
+      name: Rubric Design
+      status: populated
+    - id: S092.07
+      name: Item Response Theory
+      status: populated
+    - id: S092.08
+      name: Computer-Adaptive Testing
+      status: populated
+    - id: S092.09
+      name: Authentic Assessment
+      status: populated
+    - id: S092.10
+      name: Peer Assessment
+      status: populated
+    - id: S092.11
+      name: Self-Assessment
+      status: populated
+    - id: S092.12
+      name: Assessment Validity
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S093:
+    name: Comparative Education
+    sub_spheres:
+    - id: S093.01
+      name: Education Systems
+      status: populated
+    - id: S093.02
+      name: International Benchmarking
+      status: populated
+    - id: S093.03
+      name: Education Policy Transfer
+      status: populated
+    - id: S093.04
+      name: Cross-Cultural Studies
+      status: populated
+    - id: S093.05
+      name: Development Education
+      status: populated
+    - id: S093.06
+      name: Colonial Education Legacy
+      status: populated
+    - id: S093.07
+      name: Education Inequality
+      status: populated
+    - id: S093.08
+      name: Global Education Governance
+      status: populated
+    - id: S093.09
+      name: Regional Studies
+      status: populated
+    - id: S093.10
+      name: Education and Globalization
+      status: populated
+    - id: S093.11
+      name: null
+      status: BLANK
+    - id: S093.12
+      name: null
+      status: BLANK
+    populated_count: 10
+    blank_count: 2
+    population_priority: medium
+  S094:
+    name: Education Policy
+    sub_spheres:
+    - id: S094.01
+      name: School Governance
+      status: populated
+    - id: S094.02
+      name: Education Finance
+      status: populated
+    - id: S094.03
+      name: Teacher Policy
+      status: populated
+    - id: S094.04
+      name: Accountability Systems
+      status: populated
+    - id: S094.05
+      name: School Choice
+      status: populated
+    - id: S094.06
+      name: Education Reform
+      status: populated
+    - id: S094.07
+      name: Equity Policy
+      status: populated
+    - id: S094.08
+      name: Early Childhood Policy
+      status: populated
+    - id: S094.09
+      name: Higher Education Policy
+      status: populated
+    - id: S094.10
+      name: Education Law
+      status: populated
+    - id: S094.11
+      name: International Education Policy
+      status: populated
+    - id: S094.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S095:
+    name: Literacy
+    sub_spheres:
+    - id: S095.01
+      name: Reading Acquisition
+      status: populated
+    - id: S095.02
+      name: Functional Literacy
+      status: populated
+    - id: S095.03
+      name: Digital Literacy
+      status: populated
+    - id: S095.04
+      name: Numeracy
+      status: populated
+    - id: S095.05
+      name: Media Literacy
+      status: populated
+    - id: S095.06
+      name: Critical Reading
+      status: populated
+    - id: S095.07
+      name: Phonological Awareness
+      status: populated
+    - id: S095.08
+      name: Reading Comprehension
+      status: populated
+    - id: S095.09
+      name: Writing Development
+      status: populated
+    - id: S095.10
+      name: Multilingual Literacy
+      status: populated
+    - id: S095.11
+      name: Information Literacy
+      status: populated
+    - id: S095.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S096:
+    name: Higher Education
+    sub_spheres:
+    - id: S096.01
+      name: University Governance
+      status: populated
+    - id: S096.02
+      name: Academic Freedom
+      status: populated
+    - id: S096.03
+      name: Research Universities
+      status: populated
+    - id: S096.04
+      name: Student Affairs
+      status: populated
+    - id: S096.05
+      name: Faculty Development
+      status: populated
+    - id: S096.06
+      name: Accreditation
+      status: populated
+    - id: S096.07
+      name: Graduate Education
+      status: populated
+    - id: S096.08
+      name: Community Colleges
+      status: populated
+    - id: S096.09
+      name: Internationalization
+      status: populated
+    - id: S096.10
+      name: University Rankings
+      status: populated
+    - id: S096.11
+      name: Academic Publishing
+      status: populated
+    - id: S096.12
+      name: Student Success
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S097:
+    name: Anatomy
+    sub_spheres:
+    - id: S097.01
+      name: Gross Anatomy
+      status: populated
+    - id: S097.02
+      name: Neuroanatomy
+      status: populated
+    - id: S097.03
+      name: Histology
+      status: populated
+    - id: S097.04
+      name: Embryology
+      status: populated
+    - id: S097.05
+      name: Comparative Anatomy
+      status: populated
+    - id: S097.06
+      name: Clinical Anatomy
+      status: populated
+    - id: S097.07
+      name: Radiological Anatomy
+      status: populated
+    - id: S097.08
+      name: Surgical Anatomy
+      status: populated
+    - id: S097.09
+      name: Functional Anatomy
+      status: populated
+    - id: S097.10
+      name: Developmental Anatomy
+      status: populated
+    - id: S097.11
+      name: Digital Anatomy
+      status: populated
+    - id: S097.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S098:
+    name: Pharmacology
+    sub_spheres:
+    - id: S098.01
+      name: Clinical Pharmacology
+      status: populated
+    - id: S098.02
+      name: Pharmacokinetics
+      status: populated
+    - id: S098.03
+      name: Pharmacodynamics
+      status: populated
+    - id: S098.04
+      name: Toxicology
+      status: populated
+    - id: S098.05
+      name: Psychopharmacology
+      status: populated
+    - id: S098.06
+      name: Pharmacogenomics
+      status: populated
+    - id: S098.07
+      name: Drug Discovery
+      status: populated
+    - id: S098.08
+      name: Pharmaceutical Chemistry
+      status: populated
+    - id: S098.09
+      name: Pharmacovigilance
+      status: populated
+    - id: S098.10
+      name: Regulatory Science
+      status: populated
+    - id: S098.11
+      name: Biopharmaceutics
+      status: populated
+    - id: S098.12
+      name: Natural Products
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S099:
+    name: Psychiatry
+    sub_spheres:
+    - id: S099.01
+      name: Clinical Psychiatry
+      status: populated
+    - id: S099.02
+      name: Child Psychiatry
+      status: populated
+    - id: S099.03
+      name: Geriatric Psychiatry
+      status: populated
+    - id: S099.04
+      name: Addiction Psychiatry
+      status: populated
+    - id: S099.05
+      name: Forensic Psychiatry
+      status: populated
+    - id: S099.06
+      name: Consultation-Liaison
+      status: populated
+    - id: S099.07
+      name: Neuropsychiatry
+      status: populated
+    - id: S099.08
+      name: Community Psychiatry
+      status: populated
+    - id: S099.09
+      name: Psychotherapy
+      status: populated
+    - id: S099.10
+      name: Biological Psychiatry
+      status: populated
+    - id: S099.11
+      name: Social Psychiatry
+      status: populated
+    - id: S099.12
+      name: Telepsychiatry
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S100:
+    name: Surgery
+    sub_spheres:
+    - id: S100.01
+      name: General Surgery
+      status: populated
+    - id: S100.02
+      name: Cardiac Surgery
+      status: populated
+    - id: S100.03
+      name: Neurosurgery
+      status: populated
+    - id: S100.04
+      name: Orthopedic Surgery
+      status: populated
+    - id: S100.05
+      name: Plastic Surgery
+      status: populated
+    - id: S100.06
+      name: Transplant Surgery
+      status: populated
+    - id: S100.07
+      name: Minimally Invasive Surgery
+      status: populated
+    - id: S100.08
+      name: Robotic Surgery
+      status: populated
+    - id: S100.09
+      name: Trauma Surgery
+      status: populated
+    - id: S100.10
+      name: Pediatric Surgery
+      status: populated
+    - id: S100.11
+      name: Vascular Surgery
+      status: populated
+    - id: S100.12
+      name: Surgical Oncology
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S101:
+    name: Epidemiology
+    sub_spheres:
+    - id: S101.01
+      name: Infectious Disease Epidemiology
+      status: populated
+    - id: S101.02
+      name: Chronic Disease Epidemiology
+      status: populated
+    - id: S101.03
+      name: Molecular Epidemiology
+      status: populated
+    - id: S101.04
+      name: Environmental Epidemiology
+      status: populated
+    - id: S101.05
+      name: Social Epidemiology
+      status: populated
+    - id: S101.06
+      name: Genetic Epidemiology
+      status: populated
+    - id: S101.07
+      name: Pharmacoepidemiology
+      status: populated
+    - id: S101.08
+      name: Cancer Epidemiology
+      status: populated
+    - id: S101.09
+      name: Nutritional Epidemiology
+      status: populated
+    - id: S101.10
+      name: Outbreak Investigation
+      status: populated
+    - id: S101.11
+      name: Surveillance Systems
+      status: populated
+    - id: S101.12
+      name: Global Health Epidemiology
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S102:
+    name: Public Health
+    sub_spheres:
+    - id: S102.01
+      name: Health Promotion
+      status: populated
+    - id: S102.02
+      name: Disease Prevention
+      status: populated
+    - id: S102.03
+      name: Health Policy
+      status: populated
+    - id: S102.04
+      name: Global Health
+      status: populated
+    - id: S102.05
+      name: Occupational Health
+      status: populated
+    - id: S102.06
+      name: Environmental Health
+      status: populated
+    - id: S102.07
+      name: Maternal and Child Health
+      status: populated
+    - id: S102.08
+      name: Health Equity
+      status: populated
+    - id: S102.09
+      name: Health Systems
+      status: populated
+    - id: S102.10
+      name: Pandemic Preparedness
+      status: populated
+    - id: S102.11
+      name: Community Health
+      status: populated
+    - id: S102.12
+      name: Health Communication
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S103:
+    name: Nursing
+    sub_spheres:
+    - id: S103.01
+      name: Clinical Nursing
+      status: populated
+    - id: S103.02
+      name: Nursing Education
+      status: populated
+    - id: S103.03
+      name: Nursing Research
+      status: populated
+    - id: S103.04
+      name: Community Health Nursing
+      status: populated
+    - id: S103.05
+      name: Pediatric Nursing
+      status: populated
+    - id: S103.06
+      name: Geriatric Nursing
+      status: populated
+    - id: S103.07
+      name: Mental Health Nursing
+      status: populated
+    - id: S103.08
+      name: Critical Care Nursing
+      status: populated
+    - id: S103.09
+      name: Nurse Practitioner
+      status: populated
+    - id: S103.10
+      name: Nursing Informatics
+      status: populated
+    - id: S103.11
+      name: Nursing Leadership
+      status: populated
+    - id: S103.12
+      name: Palliative Nursing
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S104:
+    name: Dentistry
+    sub_spheres:
+    - id: S104.01
+      name: Orthodontics
+      status: populated
+    - id: S104.02
+      name: Periodontics
+      status: populated
+    - id: S104.03
+      name: Endodontics
+      status: populated
+    - id: S104.04
+      name: Oral Surgery
+      status: populated
+    - id: S104.05
+      name: Prosthodontics
+      status: populated
+    - id: S104.06
+      name: Pediatric Dentistry
+      status: populated
+    - id: S104.07
+      name: Dental Public Health
+      status: populated
+    - id: S104.08
+      name: Oral Pathology
+      status: populated
+    - id: S104.09
+      name: Dental Materials
+      status: populated
+    - id: S104.10
+      name: Implantology
+      status: populated
+    - id: S104.11
+      name: Digital Dentistry
+      status: populated
+    - id: S104.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S105:
+    name: Veterinary Medicine
+    sub_spheres:
+    - id: S105.01
+      name: Small Animal Medicine
+      status: populated
+    - id: S105.02
+      name: Large Animal Medicine
+      status: populated
+    - id: S105.03
+      name: Veterinary Surgery
+      status: populated
+    - id: S105.04
+      name: Veterinary Pathology
+      status: populated
+    - id: S105.05
+      name: Veterinary Pharmacology
+      status: populated
+    - id: S105.06
+      name: Wildlife Medicine
+      status: populated
+    - id: S105.07
+      name: Aquatic Medicine
+      status: populated
+    - id: S105.08
+      name: Veterinary Public Health
+      status: populated
+    - id: S105.09
+      name: One Health
+      status: populated
+    - id: S105.10
+      name: Veterinary Genetics
+      status: populated
+    - id: S105.11
+      name: Exotic Animal Medicine
+      status: populated
+    - id: S105.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S106:
+    name: Nutrition
+    sub_spheres:
+    - id: S106.01
+      name: Clinical Nutrition
+      status: populated
+    - id: S106.02
+      name: Sports Nutrition
+      status: populated
+    - id: S106.03
+      name: Public Health Nutrition
+      status: populated
+    - id: S106.04
+      name: Nutritional Biochemistry
+      status: populated
+    - id: S106.05
+      name: Food Science
+      status: populated
+    - id: S106.06
+      name: Dietetics
+      status: populated
+    - id: S106.07
+      name: Nutrigenomics
+      status: populated
+    - id: S106.08
+      name: Pediatric Nutrition
+      status: populated
+    - id: S106.09
+      name: Geriatric Nutrition
+      status: populated
+    - id: S106.10
+      name: Community Nutrition
+      status: populated
+    - id: S106.11
+      name: Nutritional Epidemiology
+      status: populated
+    - id: S106.12
+      name: Functional Foods
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S107:
+    name: Rehabilitation
+    sub_spheres:
+    - id: S107.01
+      name: Physical Therapy
+      status: populated
+    - id: S107.02
+      name: Occupational Therapy
+      status: populated
+    - id: S107.03
+      name: Speech Therapy
+      status: populated
+    - id: S107.04
+      name: Cardiac Rehabilitation
+      status: populated
+    - id: S107.05
+      name: Neurological Rehabilitation
+      status: populated
+    - id: S107.06
+      name: Pulmonary Rehabilitation
+      status: populated
+    - id: S107.07
+      name: Sports Rehabilitation
+      status: populated
+    - id: S107.08
+      name: Pediatric Rehabilitation
+      status: populated
+    - id: S107.09
+      name: Geriatric Rehabilitation
+      status: populated
+    - id: S107.10
+      name: Vocational Rehabilitation
+      status: populated
+    - id: S107.11
+      name: Assistive Technology
+      status: populated
+    - id: S107.12
+      name: Telerehabilitation
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S108:
+    name: Pathology
+    sub_spheres:
+    - id: S108.01
+      name: Anatomical Pathology
+      status: populated
+    - id: S108.02
+      name: Clinical Pathology
+      status: populated
+    - id: S108.03
+      name: Molecular Pathology
+      status: populated
+    - id: S108.04
+      name: Cytopathology
+      status: populated
+    - id: S108.05
+      name: Hematopathology
+      status: populated
+    - id: S108.06
+      name: Neuropathology
+      status: populated
+    - id: S108.07
+      name: Forensic Pathology
+      status: populated
+    - id: S108.08
+      name: Dermatopathology
+      status: populated
+    - id: S108.09
+      name: Immunopathology
+      status: populated
+    - id: S108.10
+      name: Digital Pathology
+      status: populated
+    - id: S108.11
+      name: Surgical Pathology
+      status: populated
+    - id: S108.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S109:
+    name: Management
+    sub_spheres:
+    - id: S109.01
+      name: Strategic Management
+      status: populated
+    - id: S109.02
+      name: Operations Management
+      status: populated
+    - id: S109.03
+      name: Project Management
+      status: populated
+    - id: S109.04
+      name: Change Management
+      status: populated
+    - id: S109.05
+      name: Knowledge Management
+      status: populated
+    - id: S109.06
+      name: Innovation Management
+      status: populated
+    - id: S109.07
+      name: Risk Management
+      status: populated
+    - id: S109.08
+      name: Quality Management
+      status: populated
+    - id: S109.09
+      name: Leadership
+      status: populated
+    - id: S109.10
+      name: Organizational Behavior
+      status: populated
+    - id: S109.11
+      name: Decision Making
+      status: populated
+    - id: S109.12
+      name: Crisis Management
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S110:
+    name: Marketing
+    sub_spheres:
+    - id: S110.01
+      name: Digital Marketing
+      status: populated
+    - id: S110.02
+      name: Brand Management
+      status: populated
+    - id: S110.03
+      name: Consumer Behavior
+      status: populated
+    - id: S110.04
+      name: Market Research
+      status: populated
+    - id: S110.05
+      name: Product Management
+      status: populated
+    - id: S110.06
+      name: Pricing Strategy
+      status: populated
+    - id: S110.07
+      name: Distribution Strategy
+      status: populated
+    - id: S110.08
+      name: B2B Marketing
+      status: populated
+    - id: S110.09
+      name: Services Marketing
+      status: populated
+    - id: S110.10
+      name: International Marketing
+      status: populated
+    - id: S110.11
+      name: Neuromarketing
+      status: populated
+    - id: S110.12
+      name: Marketing Analytics
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S111:
+    name: Finance
+    sub_spheres:
+    - id: S111.01
+      name: Corporate Finance
+      status: populated
+    - id: S111.02
+      name: Investment Management
+      status: populated
+    - id: S111.03
+      name: Banking
+      status: populated
+    - id: S111.04
+      name: Financial Markets
+      status: populated
+    - id: S111.05
+      name: Derivatives
+      status: populated
+    - id: S111.06
+      name: Risk Management
+      status: populated
+    - id: S111.07
+      name: Fintech
+      status: populated
+    - id: S111.08
+      name: Behavioral Finance
+      status: populated
+    - id: S111.09
+      name: International Finance
+      status: populated
+    - id: S111.10
+      name: Personal Finance
+      status: populated
+    - id: S111.11
+      name: Insurance
+      status: populated
+    - id: S111.12
+      name: Quantitative Finance
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S112:
+    name: Accounting
+    sub_spheres:
+    - id: S112.01
+      name: Financial Accounting
+      status: populated
+    - id: S112.02
+      name: Management Accounting
+      status: populated
+    - id: S112.03
+      name: Auditing
+      status: populated
+    - id: S112.04
+      name: Tax Accounting
+      status: populated
+    - id: S112.05
+      name: Forensic Accounting
+      status: populated
+    - id: S112.06
+      name: Government Accounting
+      status: populated
+    - id: S112.07
+      name: International Accounting
+      status: populated
+    - id: S112.08
+      name: Sustainability Reporting
+      status: populated
+    - id: S112.09
+      name: Accounting Information Systems
+      status: populated
+    - id: S112.10
+      name: Cost Accounting
+      status: populated
+    - id: S112.11
+      name: Accounting Ethics
+      status: populated
+    - id: S112.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S113:
+    name: Entrepreneurship
+    sub_spheres:
+    - id: S113.01
+      name: Startup Strategy
+      status: populated
+    - id: S113.02
+      name: Venture Capital
+      status: populated
+    - id: S113.03
+      name: Social Entrepreneurship
+      status: populated
+    - id: S113.04
+      name: Corporate Entrepreneurship
+      status: populated
+    - id: S113.05
+      name: Technology Entrepreneurship
+      status: populated
+    - id: S113.06
+      name: Family Business
+      status: populated
+    - id: S113.07
+      name: Franchising
+      status: populated
+    - id: S113.08
+      name: Business Model Innovation
+      status: populated
+    - id: S113.09
+      name: Lean Startup
+      status: populated
+    - id: S113.10
+      name: Entrepreneurial Finance
+      status: populated
+    - id: S113.11
+      name: Scaling
+      status: populated
+    - id: S113.12
+      name: Exit Strategy
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S114:
+    name: Human Resources
+    sub_spheres:
+    - id: S114.01
+      name: Talent Acquisition
+      status: populated
+    - id: S114.02
+      name: Compensation and Benefits
+      status: populated
+    - id: S114.03
+      name: Training and Development
+      status: populated
+    - id: S114.04
+      name: Performance Management
+      status: populated
+    - id: S114.05
+      name: Employee Relations
+      status: populated
+    - id: S114.06
+      name: Organizational Development
+      status: populated
+    - id: S114.07
+      name: HR Analytics
+      status: populated
+    - id: S114.08
+      name: Diversity and Inclusion
+      status: populated
+    - id: S114.09
+      name: Workforce Planning
+      status: populated
+    - id: S114.10
+      name: Employment Law
+      status: populated
+    - id: S114.11
+      name: HR Technology
+      status: populated
+    - id: S114.12
+      name: Remote Work Management
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S115:
+    name: Operations Management
+    sub_spheres:
+    - id: S115.01
+      name: Process Optimization
+      status: populated
+    - id: S115.02
+      name: Capacity Planning
+      status: populated
+    - id: S115.03
+      name: Inventory Management
+      status: populated
+    - id: S115.04
+      name: Total Quality Management
+      status: populated
+    - id: S115.05
+      name: Lean Operations
+      status: populated
+    - id: S115.06
+      name: Service Operations
+      status: populated
+    - id: S115.07
+      name: Facility Management
+      status: populated
+    - id: S115.08
+      name: Production Planning
+      status: populated
+    - id: S115.09
+      name: Maintenance Management
+      status: populated
+    - id: S115.10
+      name: Global Operations
+      status: populated
+    - id: S115.11
+      name: Sustainability Operations
+      status: populated
+    - id: S115.12
+      name: Digital Operations
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S116:
+    name: Supply Chain
+    sub_spheres:
+    - id: S116.01
+      name: Procurement
+      status: populated
+    - id: S116.02
+      name: Logistics
+      status: populated
+    - id: S116.03
+      name: Demand Planning
+      status: populated
+    - id: S116.04
+      name: Supply Chain Analytics
+      status: populated
+    - id: S116.05
+      name: Sustainable Supply Chain
+      status: populated
+    - id: S116.06
+      name: Global Supply Chain
+      status: populated
+    - id: S116.07
+      name: Supply Chain Risk
+      status: populated
+    - id: S116.08
+      name: Warehouse Management
+      status: populated
+    - id: S116.09
+      name: Last-Mile Delivery
+      status: populated
+    - id: S116.10
+      name: Supply Chain Technology
+      status: populated
+    - id: S116.11
+      name: Circular Supply Chain
+      status: populated
+    - id: S116.12
+      name: Cold Chain
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S117:
+    name: International Business
+    sub_spheres:
+    - id: S117.01
+      name: Cross-Cultural Management
+      status: populated
+    - id: S117.02
+      name: International Trade
+      status: populated
+    - id: S117.03
+      name: Foreign Direct Investment
+      status: populated
+    - id: S117.04
+      name: Global Strategy
+      status: populated
+    - id: S117.05
+      name: Emerging Markets
+      status: populated
+    - id: S117.06
+      name: International Negotiations
+      status: populated
+    - id: S117.07
+      name: Export Management
+      status: populated
+    - id: S117.08
+      name: International Joint Ventures
+      status: populated
+    - id: S117.09
+      name: Political Risk
+      status: populated
+    - id: S117.10
+      name: Global Talent Management
+      status: populated
+    - id: S117.11
+      name: International Finance
+      status: populated
+    - id: S117.12
+      name: Trade Policy
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S118:
+    name: Business Ethics
+    sub_spheres:
+    - id: S118.01
+      name: Corporate Social Responsibility
+      status: populated
+    - id: S118.02
+      name: Stakeholder Theory
+      status: populated
+    - id: S118.03
+      name: Ethical Leadership
+      status: populated
+    - id: S118.04
+      name: Corporate Governance
+      status: populated
+    - id: S118.05
+      name: Sustainability
+      status: populated
+    - id: S118.06
+      name: Whistleblowing
+      status: populated
+    - id: S118.07
+      name: Fair Trade
+      status: populated
+    - id: S118.08
+      name: Anti-Corruption
+      status: populated
+    - id: S118.09
+      name: Data Ethics
+      status: populated
+    - id: S118.10
+      name: Environmental Responsibility
+      status: populated
+    - id: S118.11
+      name: Labor Rights
+      status: populated
+    - id: S118.12
+      name: Ethical Supply Chain
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S119:
+    name: Real Estate
+    sub_spheres:
+    - id: S119.01
+      name: Commercial Real Estate
+      status: populated
+    - id: S119.02
+      name: Residential Real Estate
+      status: populated
+    - id: S119.03
+      name: Real Estate Finance
+      status: populated
+    - id: S119.04
+      name: Property Management
+      status: populated
+    - id: S119.05
+      name: Real Estate Development
+      status: populated
+    - id: S119.06
+      name: Real Estate Law
+      status: populated
+    - id: S119.07
+      name: Real Estate Valuation
+      status: populated
+    - id: S119.08
+      name: Urban Real Estate
+      status: populated
+    - id: S119.09
+      name: PropTech
+      status: populated
+    - id: S119.10
+      name: Real Estate Investment
+      status: populated
+    - id: S119.11
+      name: Sustainable Buildings
+      status: populated
+    - id: S119.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S120:
+    name: Macroeconomics
+    sub_spheres:
+    - id: S120.01
+      name: Monetary Policy
+      status: populated
+    - id: S120.02
+      name: Fiscal Policy
+      status: populated
+    - id: S120.03
+      name: Economic Growth
+      status: populated
+    - id: S120.04
+      name: Business Cycles
+      status: populated
+    - id: S120.05
+      name: International Macroeconomics
+      status: populated
+    - id: S120.06
+      name: Labor Markets
+      status: populated
+    - id: S120.07
+      name: Inflation
+      status: populated
+    - id: S120.08
+      name: Public Debt
+      status: populated
+    - id: S120.09
+      name: Central Banking
+      status: populated
+    - id: S120.10
+      name: Economic Forecasting
+      status: populated
+    - id: S120.11
+      name: Development Macroeconomics
+      status: populated
+    - id: S120.12
+      name: Digital Economy
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S121:
+    name: Transportation
+    sub_spheres:
+    - id: S121.01
+      name: Road Transport
+      status: populated
+    - id: S121.02
+      name: Rail Transport
+      status: populated
+    - id: S121.03
+      name: Air Transport
+      status: populated
+    - id: S121.04
+      name: Maritime Transport
+      status: populated
+    - id: S121.05
+      name: Public Transit
+      status: populated
+    - id: S121.06
+      name: Autonomous Vehicles
+      status: populated
+    - id: S121.07
+      name: Electric Vehicles
+      status: populated
+    - id: S121.08
+      name: Traffic Engineering
+      status: populated
+    - id: S121.09
+      name: Transportation Planning
+      status: populated
+    - id: S121.10
+      name: Freight Transport
+      status: populated
+    - id: S121.11
+      name: Space Transport
+      status: populated
+    - id: S121.12
+      name: Hyperloop
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S122:
+    name: Energy Systems
+    sub_spheres:
+    - id: S122.01
+      name: Solar Energy
+      status: populated
+    - id: S122.02
+      name: Wind Energy
+      status: populated
+    - id: S122.03
+      name: Nuclear Power
+      status: populated
+    - id: S122.04
+      name: Hydroelectric Power
+      status: populated
+    - id: S122.05
+      name: Natural Gas
+      status: populated
+    - id: S122.06
+      name: Energy Storage
+      status: populated
+    - id: S122.07
+      name: Smart Grid
+      status: populated
+    - id: S122.08
+      name: Energy Efficiency
+      status: populated
+    - id: S122.09
+      name: Geothermal Energy
+      status: populated
+    - id: S122.10
+      name: Hydrogen Energy
+      status: populated
+    - id: S122.11
+      name: Energy Policy
+      status: populated
+    - id: S122.12
+      name: Carbon Capture
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S123:
+    name: Water Systems
+    sub_spheres:
+    - id: S123.01
+      name: Water Supply
+      status: populated
+    - id: S123.02
+      name: Wastewater Treatment
+      status: populated
+    - id: S123.03
+      name: Stormwater Management
+      status: populated
+    - id: S123.04
+      name: Water Distribution
+      status: populated
+    - id: S123.05
+      name: Desalination
+      status: populated
+    - id: S123.06
+      name: Water Quality
+      status: populated
+    - id: S123.07
+      name: Irrigation Systems
+      status: populated
+    - id: S123.08
+      name: Flood Control
+      status: populated
+    - id: S123.09
+      name: Water Conservation
+      status: populated
+    - id: S123.10
+      name: Groundwater Management
+      status: populated
+    - id: S123.11
+      name: Water Policy
+      status: populated
+    - id: S123.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S124:
+    name: Waste Management
+    sub_spheres:
+    - id: S124.01
+      name: Solid Waste
+      status: populated
+    - id: S124.02
+      name: Hazardous Waste
+      status: populated
+    - id: S124.03
+      name: Recycling
+      status: populated
+    - id: S124.04
+      name: Composting
+      status: populated
+    - id: S124.05
+      name: Waste-to-Energy
+      status: populated
+    - id: S124.06
+      name: E-Waste
+      status: populated
+    - id: S124.07
+      name: Medical Waste
+      status: populated
+    - id: S124.08
+      name: Nuclear Waste
+      status: populated
+    - id: S124.09
+      name: Landfill Management
+      status: populated
+    - id: S124.10
+      name: Circular Economy
+      status: populated
+    - id: S124.11
+      name: Waste Reduction
+      status: populated
+    - id: S124.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S125:
+    name: Computing Infrastructure
+    sub_spheres:
+    - id: S125.01
+      name: Data Centers
+      status: populated
+    - id: S125.02
+      name: Cloud Infrastructure
+      status: populated
+    - id: S125.03
+      name: Edge Computing
+      status: populated
+    - id: S125.04
+      name: Network Infrastructure
+      status: populated
+    - id: S125.05
+      name: Server Architecture
+      status: populated
+    - id: S125.06
+      name: Storage Systems
+      status: populated
+    - id: S125.07
+      name: Virtualization
+      status: populated
+    - id: S125.08
+      name: Container Orchestration
+      status: populated
+    - id: S125.09
+      name: CDN
+      status: populated
+    - id: S125.10
+      name: High-Performance Computing
+      status: populated
+    - id: S125.11
+      name: Quantum Computing Infrastructure
+      status: populated
+    - id: S125.12
+      name: Green Computing
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S126:
+    name: Telecommunications Infrastructure
+    sub_spheres:
+    - id: S126.01
+      name: Fiber Optics
+      status: populated
+    - id: S126.02
+      name: Cell Towers
+      status: populated
+    - id: S126.03
+      name: Submarine Cables
+      status: populated
+    - id: S126.04
+      name: Satellite Networks
+      status: populated
+    - id: S126.05
+      name: 5G Infrastructure
+      status: populated
+    - id: S126.06
+      name: Network Operations
+      status: populated
+    - id: S126.07
+      name: Internet Exchange Points
+      status: populated
+    - id: S126.08
+      name: Last-Mile Infrastructure
+      status: populated
+    - id: S126.09
+      name: Spectrum Allocation
+      status: populated
+    - id: S126.10
+      name: Rural Connectivity
+      status: populated
+    - id: S126.11
+      name: Network Resilience
+      status: populated
+    - id: S126.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S127:
+    name: Urban Planning
+    sub_spheres:
+    - id: S127.01
+      name: Land Use Planning
+      status: populated
+    - id: S127.02
+      name: Zoning
+      status: populated
+    - id: S127.03
+      name: Transportation Planning
+      status: populated
+    - id: S127.04
+      name: Environmental Planning
+      status: populated
+    - id: S127.05
+      name: Community Development
+      status: populated
+    - id: S127.06
+      name: Smart City Planning
+      status: populated
+    - id: S127.07
+      name: Housing Policy
+      status: populated
+    - id: S127.08
+      name: Public Space Design
+      status: populated
+    - id: S127.09
+      name: Regional Planning
+      status: populated
+    - id: S127.10
+      name: Participatory Planning
+      status: populated
+    - id: S127.11
+      name: Climate Adaptation Planning
+      status: populated
+    - id: S127.12
+      name: Heritage Conservation
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S128:
+    name: Construction
+    sub_spheres:
+    - id: S128.01
+      name: Building Construction
+      status: populated
+    - id: S128.02
+      name: Heavy Construction
+      status: populated
+    - id: S128.03
+      name: Modular Construction
+      status: populated
+    - id: S128.04
+      name: Construction Management
+      status: populated
+    - id: S128.05
+      name: Building Materials
+      status: populated
+    - id: S128.06
+      name: Structural Systems
+      status: populated
+    - id: S128.07
+      name: Construction Safety
+      status: populated
+    - id: S128.08
+      name: Green Building
+      status: populated
+    - id: S128.09
+      name: BIM
+      status: populated
+    - id: S128.10
+      name: Prefabrication
+      status: populated
+    - id: S128.11
+      name: Demolition
+      status: populated
+    - id: S128.12
+      name: Construction Technology
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S129:
+    name: Logistics
+    sub_spheres:
+    - id: S129.01
+      name: Supply Chain Logistics
+      status: populated
+    - id: S129.02
+      name: Warehouse Operations
+      status: populated
+    - id: S129.03
+      name: Fleet Management
+      status: populated
+    - id: S129.04
+      name: Route Optimization
+      status: populated
+    - id: S129.05
+      name: Reverse Logistics
+      status: populated
+    - id: S129.06
+      name: Cold Chain Logistics
+      status: populated
+    - id: S129.07
+      name: E-commerce Logistics
+      status: populated
+    - id: S129.08
+      name: Humanitarian Logistics
+      status: populated
+    - id: S129.09
+      name: Port Operations
+      status: populated
+    - id: S129.10
+      name: Customs and Trade
+      status: populated
+    - id: S129.11
+      name: Logistics Technology
+      status: populated
+    - id: S129.12
+      name: Last-Mile Solutions
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S130:
+    name: Agriculture
+    sub_spheres:
+    - id: S130.01
+      name: Crop Science
+      status: populated
+    - id: S130.02
+      name: Animal Husbandry
+      status: populated
+    - id: S130.03
+      name: Precision Agriculture
+      status: populated
+    - id: S130.04
+      name: Organic Farming
+      status: populated
+    - id: S130.05
+      name: Aquaculture
+      status: populated
+    - id: S130.06
+      name: Agroforestry
+      status: populated
+    - id: S130.07
+      name: Agricultural Economics
+      status: populated
+    - id: S130.08
+      name: Food Processing
+      status: populated
+    - id: S130.09
+      name: Irrigation
+      status: populated
+    - id: S130.10
+      name: Soil Science
+      status: populated
+    - id: S130.11
+      name: Agricultural Technology
+      status: populated
+    - id: S130.12
+      name: Vertical Farming
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S131:
+    name: Mining
+    sub_spheres:
+    - id: S131.01
+      name: Surface Mining
+      status: populated
+    - id: S131.02
+      name: Underground Mining
+      status: populated
+    - id: S131.03
+      name: Mineral Processing
+      status: populated
+    - id: S131.04
+      name: Mine Safety
+      status: populated
+    - id: S131.05
+      name: Environmental Mining
+      status: populated
+    - id: S131.06
+      name: Exploration Geology
+      status: populated
+    - id: S131.07
+      name: Mining Engineering
+      status: populated
+    - id: S131.08
+      name: Rare Earth Mining
+      status: populated
+    - id: S131.09
+      name: Deep Sea Mining
+      status: populated
+    - id: S131.10
+      name: Artisanal Mining
+      status: populated
+    - id: S131.11
+      name: Mine Closure
+      status: populated
+    - id: S131.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S132:
+    name: Manufacturing
+    sub_spheres:
+    - id: S132.01
+      name: Discrete Manufacturing
+      status: populated
+    - id: S132.02
+      name: Process Manufacturing
+      status: populated
+    - id: S132.03
+      name: Additive Manufacturing
+      status: populated
+    - id: S132.04
+      name: CNC Machining
+      status: populated
+    - id: S132.05
+      name: Assembly Systems
+      status: populated
+    - id: S132.06
+      name: Quality Control
+      status: populated
+    - id: S132.07
+      name: Smart Manufacturing
+      status: populated
+    - id: S132.08
+      name: Lean Manufacturing
+      status: populated
+    - id: S132.09
+      name: Semiconductor Manufacturing
+      status: populated
+    - id: S132.10
+      name: Pharmaceutical Manufacturing
+      status: populated
+    - id: S132.11
+      name: Food Manufacturing
+      status: populated
+    - id: S132.12
+      name: Sustainable Manufacturing
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S133:
+    name: Constitutional Law
+    sub_spheres:
+    - id: S133.01
+      name: Separation of Powers
+      status: populated
+    - id: S133.02
+      name: Fundamental Rights
+      status: populated
+    - id: S133.03
+      name: Judicial Review
+      status: populated
+    - id: S133.04
+      name: Federalism
+      status: populated
+    - id: S133.05
+      name: Constitutional Interpretation
+      status: populated
+    - id: S133.06
+      name: Amendment Process
+      status: populated
+    - id: S133.07
+      name: Comparative Constitutionalism
+      status: populated
+    - id: S133.08
+      name: Emergency Powers
+      status: populated
+    - id: S133.09
+      name: Electoral Law
+      status: populated
+    - id: S133.10
+      name: Constitutional History
+      status: populated
+    - id: S133.11
+      name: Digital Constitutionalism
+      status: populated
+    - id: S133.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S134:
+    name: Criminal Law
+    sub_spheres:
+    - id: S134.01
+      name: Criminal Procedure
+      status: populated
+    - id: S134.02
+      name: Sentencing
+      status: populated
+    - id: S134.03
+      name: White-Collar Crime
+      status: populated
+    - id: S134.04
+      name: Cybercrime Law
+      status: populated
+    - id: S134.05
+      name: International Criminal Law
+      status: populated
+    - id: S134.06
+      name: Juvenile Justice
+      status: populated
+    - id: S134.07
+      name: Drug Law
+      status: populated
+    - id: S134.08
+      name: Terrorism Law
+      status: populated
+    - id: S134.09
+      name: Evidence Law
+      status: populated
+    - id: S134.10
+      name: Victim Rights
+      status: populated
+    - id: S134.11
+      name: Criminal Defense
+      status: populated
+    - id: S134.12
+      name: Prosecution
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S135:
+    name: International Law
+    sub_spheres:
+    - id: S135.01
+      name: Treaty Law
+      status: populated
+    - id: S135.02
+      name: International Humanitarian Law
+      status: populated
+    - id: S135.03
+      name: Law of the Sea
+      status: populated
+    - id: S135.04
+      name: International Trade Law
+      status: populated
+    - id: S135.05
+      name: International Environmental Law
+      status: populated
+    - id: S135.06
+      name: Diplomatic Law
+      status: populated
+    - id: S135.07
+      name: International Criminal Law
+      status: populated
+    - id: S135.08
+      name: Space Law
+      status: populated
+    - id: S135.09
+      name: Cyber Law
+      status: populated
+    - id: S135.10
+      name: International Organizations
+      status: populated
+    - id: S135.11
+      name: Sovereignty
+      status: populated
+    - id: S135.12
+      name: State Responsibility
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S136:
+    name: Human Rights
+    sub_spheres:
+    - id: S136.01
+      name: Civil Rights
+      status: populated
+    - id: S136.02
+      name: Political Rights
+      status: populated
+    - id: S136.03
+      name: Economic Rights
+      status: populated
+    - id: S136.04
+      name: Social Rights
+      status: populated
+    - id: S136.05
+      name: Cultural Rights
+      status: populated
+    - id: S136.06
+      name: Indigenous Rights
+      status: populated
+    - id: S136.07
+      name: Women's Rights
+      status: populated
+    - id: S136.08
+      name: Children's Rights
+      status: populated
+    - id: S136.09
+      name: Refugee Rights
+      status: populated
+    - id: S136.10
+      name: Disability Rights
+      status: populated
+    - id: S136.11
+      name: Digital Rights
+      status: populated
+    - id: S136.12
+      name: Environmental Rights
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S137:
+    name: Corporate Law
+    sub_spheres:
+    - id: S137.01
+      name: Company Formation
+      status: populated
+    - id: S137.02
+      name: Corporate Governance
+      status: populated
+    - id: S137.03
+      name: Mergers and Acquisitions
+      status: populated
+    - id: S137.04
+      name: Securities Regulation
+      status: populated
+    - id: S137.05
+      name: Bankruptcy
+      status: populated
+    - id: S137.06
+      name: Competition Law
+      status: populated
+    - id: S137.07
+      name: Contract Law
+      status: populated
+    - id: S137.08
+      name: Commercial Law
+      status: populated
+    - id: S137.09
+      name: Banking Law
+      status: populated
+    - id: S137.10
+      name: Insurance Law
+      status: populated
+    - id: S137.11
+      name: Corporate Compliance
+      status: populated
+    - id: S137.12
+      name: Shareholder Rights
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S138:
+    name: Environmental Law
+    sub_spheres:
+    - id: S138.01
+      name: Climate Change Law
+      status: populated
+    - id: S138.02
+      name: Pollution Control
+      status: populated
+    - id: S138.03
+      name: Biodiversity Law
+      status: populated
+    - id: S138.04
+      name: Water Law
+      status: populated
+    - id: S138.05
+      name: Land Use Law
+      status: populated
+    - id: S138.06
+      name: Environmental Impact Assessment
+      status: populated
+    - id: S138.07
+      name: Waste Law
+      status: populated
+    - id: S138.08
+      name: Energy Law
+      status: populated
+    - id: S138.09
+      name: Marine Environmental Law
+      status: populated
+    - id: S138.10
+      name: Environmental Justice
+      status: populated
+    - id: S138.11
+      name: Carbon Markets
+      status: populated
+    - id: S138.12
+      name: Green Finance Law
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S139:
+    name: Intellectual Property
+    sub_spheres:
+    - id: S139.01
+      name: Patent Law
+      status: populated
+    - id: S139.02
+      name: Copyright Law
+      status: populated
+    - id: S139.03
+      name: Trademark Law
+      status: populated
+    - id: S139.04
+      name: Trade Secrets
+      status: populated
+    - id: S139.05
+      name: IP Licensing
+      status: populated
+    - id: S139.06
+      name: Digital IP
+      status: populated
+    - id: S139.07
+      name: Pharmaceutical Patents
+      status: populated
+    - id: S139.08
+      name: Open Source Licensing
+      status: populated
+    - id: S139.09
+      name: IP Enforcement
+      status: populated
+    - id: S139.10
+      name: International IP
+      status: populated
+    - id: S139.11
+      name: AI and IP
+      status: populated
+    - id: S139.12
+      name: Indigenous Knowledge IP
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S140:
+    name: Tax Law
+    sub_spheres:
+    - id: S140.01
+      name: Income Tax
+      status: populated
+    - id: S140.02
+      name: Corporate Tax
+      status: populated
+    - id: S140.03
+      name: International Tax
+      status: populated
+    - id: S140.04
+      name: VAT/GST
+      status: populated
+    - id: S140.05
+      name: Tax Planning
+      status: populated
+    - id: S140.06
+      name: Tax Compliance
+      status: populated
+    - id: S140.07
+      name: Transfer Pricing
+      status: populated
+    - id: S140.08
+      name: Tax Policy
+      status: populated
+    - id: S140.09
+      name: Digital Taxation
+      status: populated
+    - id: S140.10
+      name: Estate Tax
+      status: populated
+    - id: S140.11
+      name: Tax Litigation
+      status: populated
+    - id: S140.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S141:
+    name: Public Policy
+    sub_spheres:
+    - id: S141.01
+      name: Policy Analysis
+      status: populated
+    - id: S141.02
+      name: Policy Implementation
+      status: populated
+    - id: S141.03
+      name: Regulatory Policy
+      status: populated
+    - id: S141.04
+      name: Social Policy
+      status: populated
+    - id: S141.05
+      name: Economic Policy
+      status: populated
+    - id: S141.06
+      name: Health Policy
+      status: populated
+    - id: S141.07
+      name: Education Policy
+      status: populated
+    - id: S141.08
+      name: Technology Policy
+      status: populated
+    - id: S141.09
+      name: Environmental Policy
+      status: populated
+    - id: S141.10
+      name: Defense Policy
+      status: populated
+    - id: S141.11
+      name: Immigration Policy
+      status: populated
+    - id: S141.12
+      name: Urban Policy
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S142:
+    name: Political Theory
+    sub_spheres:
+    - id: S142.01
+      name: Liberalism
+      status: populated
+    - id: S142.02
+      name: Conservatism
+      status: populated
+    - id: S142.03
+      name: Socialism
+      status: populated
+    - id: S142.04
+      name: Anarchism
+      status: populated
+    - id: S142.05
+      name: Feminism
+      status: populated
+    - id: S142.06
+      name: Postcolonialism
+      status: populated
+    - id: S142.07
+      name: Communitarianism
+      status: populated
+    - id: S142.08
+      name: Republicanism
+      status: populated
+    - id: S142.09
+      name: Populism
+      status: populated
+    - id: S142.10
+      name: Green Political Theory
+      status: populated
+    - id: S142.11
+      name: Digital Democracy
+      status: populated
+    - id: S142.12
+      name: Global Justice
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
+  S143:
+    name: Diplomacy
+    sub_spheres:
+    - id: S143.01
+      name: Bilateral Diplomacy
+      status: populated
+    - id: S143.02
+      name: Multilateral Diplomacy
+      status: populated
+    - id: S143.03
+      name: Economic Diplomacy
+      status: populated
+    - id: S143.04
+      name: Cultural Diplomacy
+      status: populated
+    - id: S143.05
+      name: Public Diplomacy
+      status: populated
+    - id: S143.06
+      name: Digital Diplomacy
+      status: populated
+    - id: S143.07
+      name: Conflict Resolution
+      status: populated
+    - id: S143.08
+      name: Peace Negotiations
+      status: populated
+    - id: S143.09
+      name: Summit Diplomacy
+      status: populated
+    - id: S143.10
+      name: Track II Diplomacy
+      status: populated
+    - id: S143.11
+      name: Science Diplomacy
+      status: populated
+    - id: S143.12
+      name: null
+      status: BLANK
+    populated_count: 11
+    blank_count: 1
+    population_priority: medium
+  S144:
+    name: International Relations
+    sub_spheres:
+    - id: S144.01
+      name: Realism
+      status: populated
+    - id: S144.02
+      name: Liberalism
+      status: populated
+    - id: S144.03
+      name: Constructivism
+      status: populated
+    - id: S144.04
+      name: Security Studies
+      status: populated
+    - id: S144.05
+      name: Foreign Policy Analysis
+      status: populated
+    - id: S144.06
+      name: International Organizations
+      status: populated
+    - id: S144.07
+      name: Global Governance
+      status: populated
+    - id: S144.08
+      name: Regional Integration
+      status: populated
+    - id: S144.09
+      name: Arms Control
+      status: populated
+    - id: S144.10
+      name: Cyber Security
+      status: populated
+    - id: S144.11
+      name: Climate Diplomacy
+      status: populated
+    - id: S144.12
+      name: Development Cooperation
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
