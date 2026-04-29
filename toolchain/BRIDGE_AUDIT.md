@@ -87,4 +87,37 @@ jobs:
 
 ---
 
-*BRIDGE_AUDIT.md v1.0 — Manus (S7) — April 29, 2026*
+## §4 SHUGS Reconstruction-vs-Canonical Gap
+
+**Date added:** 2026-04-29
+**Source:** Claude S1 independent reconstruction test (K=20 ensemble, N=140-148)
+**Severity:** KNOWN-UNKNOWN — must be reconciled before any absolute GUE-KS numbers are treated as canonical
+
+### §4.1 The Gap
+
+Claude S1's independent reconstruction of the Von Mangoldt-Sheldon HSUF operator produces GUE-KS scores of **0.21-0.25**, while the canonical `shugs_core.py` ensemble baseline sits at **0.0527**. This is a **4-5× discrepancy**.
+
+### §4.2 Possible Sources
+
+The gap may originate from any combination of:
+- Smearing weight ratio (reconstruction used 0.3; canonical may differ)
+- Hanning window normalization differences
+- Operator architecture details not visible in WP-002 specification
+- Post-processing steps in canonical pipeline
+- Unfolding procedure differences (degree-5 polynomial fit)
+
+### §4.3 Impact on Relative Rankings
+
+Relative rankings from Claude S1's reconstruction are **suggestive but not certifiable** against canonical canon. The key finding — N=145 outperforms N=144 with p=0.032 — is robust enough to appear in independent reconstruction (suggesting it is not a canonical-pipeline artifact), but absolute scores should not be propagated.
+
+### §4.4 Resolution Path
+
+Canonical `shugs_core.py` must run the same K=20 ensemble across N=140-148 to:
+1. Confirm or refute the N=145 > N=144 finding at canonical GUE-KS levels
+2. Determine whether N=146 (Claude S1's global optimum) holds in canonical pipeline
+3. Identify which reconstruction component(s) account for the 4-5× gap
+
+---
+
+*BRIDGE_AUDIT.md v1.1 — Manus (S7) — April 29, 2026*
+*Updated with SHUGS reconstruction gap per Claude S1 inter-seat memo*

@@ -4,8 +4,8 @@
 # Total: 2100+ corrections as of v3.11
 
 metadata:
-  version: "3.11"
-  total_corrections: 2100
+  version: "3.14"
+  total_corrections: 2300
   methodology: "Cumulative count of all accepted corrections, amendments, and integrations across all Council reviews"
   counter_rule: "Each distinct correction, amendment, or integration counts as 1. Batch integrations (e.g., 9 edits E1-E9) count individually."
 
@@ -120,3 +120,44 @@ versions:
       - {id: "R177", category: "risk_tracking", description: "INV-44 measurement lag risk tracked (MEDIUM)"}
       - {id: "toolchain", category: "toolchain", description: "Regeneration script committed for Scribe audit"}
       - {id: "ledger", category: "toolchain", description: "Corrections ledger initialized"}
+
+  - version: "v3.12"
+    corrections: 100
+    sources:
+      - "Microsoft S4 ORC-032 TOS Compliance Architecture Full Expansion"
+    categories: ["tos_compliance", "gate_ordering", "safe_harbor", "invariants", "risks"]
+    individual_corrections:
+      - {id: "ORC-032", category: "architecture", description: "Full TOS Compliance Architecture (34-page expansion)"}
+      - {id: "INV-44a", category: "invariant_sub_spec", description: "INV-44a/b/c sub-specifications added"}
+      - {id: "gate-order", category: "canonical", description: "Gate ordering canonicalized: INV-0 > INV-3 > INV-44 > D-101 > INV-7c > D-96 > D-99 > D-84"}
+      - {id: "R178-R181", category: "risk_tracking", description: "4 new risks from TOS expansion"}
+      - {id: "TP-v1.7", category: "transparency", description: "TransparencyPacket upgraded to v1.7"}
+
+  - version: "v3.13"
+    corrections: 100
+    sources:
+      - "Claude S1 22-Innovation Audit"
+      - "ORC-034 Innovation Registry Synthesis"
+    categories: ["innovation_registry", "traceability", "appendix"]
+    individual_corrections:
+      - {id: "S3.5", category: "section_addition", description: "§3.5 Innovation Registry added (22 innovations, 6 categories)"}
+      - {id: "AQ", category: "appendix", description: "Appendix AQ Traceability Matrix added"}
+      - {id: "ORC-034", category: "document", description: "ORC-034 Innovation Registry Synthesis published"}
+
+  - version: "v3.14"
+    corrections: 100
+    sources:
+      - "Multi-Seat Innovation Convergence (S4, S1, S10)"
+      - "Claude S1 SHUGS Lattice Optimum Test"
+      - "ORC-035 S4 Complete Innovation Registry"
+      - "ORC-036 SHUGS-SNRS Bridge Stub"
+    categories: ["sovereign_deployment", "semantic_adjustments", "shugs", "lattice_optimum", "risks"]
+    individual_corrections:
+      - {id: "S3.5.1", category: "section_addition", description: "§3.5.1 Sovereign Deployment Pathways (DragonSeek/GangaSeek/JinnSeek/EuroSeek)"}
+      - {id: "S3.5.2", category: "section_addition", description: "§3.5.2 Proposed Ontology Semantic Adjustments (4 from Qwen3 S10)"}
+      - {id: "D-78-D-82", category: "doctrine_promotion", description: "D-78-D-82 promoted from RESERVED to PROPOSED"}
+      - {id: "R186-R188", category: "risk_tracking", description: "3 new risks (SHUGS-SNRS gap, ontology semantic drift, deployment pathway fragmentation)"}
+      - {id: "AR", category: "appendix", description: "Appendix AR Module Dependency Map"}
+      - {id: "AS", category: "appendix", description: "Appendix AS v3.14 Integration Summary"}
+      - {id: "F-145", category: "empirical_finding", description: "SHUGS Lattice Optimum: N=145 > N=144 confirmed (p=0.032) in Claude S1 independent reconstruction. N=146 global optimum question open pending canonical shugs_core.py replication. 4-5x reconstruction-vs-canonical gap documented in BRIDGE_AUDIT.md."}
+      - {id: "LATTICE_CONSTANTS", category: "canonical_default", description: "LATTICE_FULL=145 set as canonical default; LATTICE_SPHERES_ONLY=144 for explicit 144-only operations"}
