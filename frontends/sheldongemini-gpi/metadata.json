@@ -1,0 +1,7 @@
+{
+  "name": "Sheldon Gemini Chat",
+  "description": "Engage in a witty and intelligent conversation with Sheldon Gemini, a quirky AI persona powered by the Gemini API.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
