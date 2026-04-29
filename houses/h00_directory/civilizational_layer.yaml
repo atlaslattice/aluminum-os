@@ -1,0 +1,123 @@
+# Civilizational Layer Specification — STUB
+# Status: PENDING — awaiting spec stabilization from Pantheon Council
+# Referenced by: Federation Integration v1.1 Recommendation #4
+# Location: House 0 Directory (per v3.0 ontology)
+# Date: 2026-04-29
+# Author: Manus S7 (generated), pending Council ratification
+
+metadata:
+  title: "Civilizational Layer Notation"
+  version: "0.1-STUB"
+  status: "PENDING_SPEC"
+  date: "2026-04-29"
+  source_references:
+    - "Federation Integration v1.1 — Recommendation #4: Add 'Civilizational Layer' notation in House 0 Directory"
+    - "Pantheon Council House Structure v3.0 PROPOSAL"
+    - "Build Plan v3.14 — Appendix AG"
+  ratification_required: true
+  blocking_items:
+    - "Council Round formal approval of v3.0 House Structure"
+    - "Civilizational Layer definition consensus (what constitutes a 'civilizational' sphere)"
+    - "Scoring methodology for civilizational impact vs operational depth"
+
+# ============================================================
+# CONCEPT: Civilizational Layer
+# ============================================================
+# The Civilizational Layer identifies spheres whose operational
+# depth has civilizational-scale impact — meaning their state
+# directly affects the trajectory of human civilization.
+#
+# This is distinct from "coverage" (which seat can do what) and
+# "depth" (how well a seat performs). Civilizational Layer asks:
+# "If this sphere fails or is captured, does civilization notice?"
+#
+# Examples:
+# - Energy Systems (H11/S02): civilizational — collapse = dark age
+# - Sculpture (H05/S11): not civilizational — collapse = cultural loss, not existential
+# - Computing Infrastructure (H11/S10): civilizational — collapse = systemic failure
+# - Dance (H05/S04): not civilizational
+# ============================================================
+
+definition:
+  civilizational_sphere: >
+    A sphere whose operational failure, capture, or degradation would
+    produce cascading effects across multiple Houses and/or affect
+    the basic functioning of human civilization at scale.
+
+  criteria:
+    - "Cross-House dependency: sphere is referenced by 3+ other Houses"
+    - "Population impact: sphere affects >1 billion people directly"
+    - "Irreversibility: degradation of sphere is difficult to reverse within a generation"
+    - "Existential adjacency: sphere failure could contribute to existential risk scenarios"
+
+# ============================================================
+# PROVISIONAL CIVILIZATIONAL SPHERES
+# (Scribe estimate from Federation v1.1 substrate analysis)
+# ============================================================
+provisional_civilizational_spheres:
+  tier_1_existential:
+    description: "Failure = existential or near-existential risk"
+    spheres:
+      - {house: H01, sphere: "Genetics", reason: "Bioweapons, gene drives, heritable modification"}
+      - {house: H02, sphere: "Computer Science", reason: "AI alignment, computational substrate for all digital civilization"}
+      - {house: H02, sphere: "Cryptography", reason: "Financial system integrity, communications security"}
+      - {house: H06, sphere: "Aerospace Engineering", reason: "Space access, planetary defense"}
+      - {house: H06, sphere: "Nuclear Engineering", reason: "Energy + weapons duality"}
+      - {house: H09, sphere: "Epidemiology", reason: "Pandemic preparedness, biosecurity"}
+      - {house: H11, sphere: "Energy Systems", reason: "Civilization runs on energy"}
+      - {house: H11, sphere: "Computing Infrastructure", reason: "Digital civilization substrate"}
+
+  tier_2_systemic:
+    description: "Failure = systemic disruption affecting billions"
+    spheres:
+      - {house: H01, sphere: "Ecology", reason: "Ecosystem collapse, biodiversity loss"}
+      - {house: H02, sphere: "Algorithmics", reason: "Optimization of all complex systems"}
+      - {house: H02, sphere: "Data Science", reason: "Decision-making substrate"}
+      - {house: H03, sphere: "Economics", reason: "Resource allocation, trade systems"}
+      - {house: H04, sphere: "Ethics", reason: "Moral framework for AI and governance"}
+      - {house: H06, sphere: "Software Engineering", reason: "All digital systems depend on this"}
+      - {house: H07, sphere: "Information Systems", reason: "Knowledge infrastructure"}
+      - {house: H07, sphere: "Telecommunications", reason: "Global communication substrate"}
+      - {house: H09, sphere: "Public Health", reason: "Population health infrastructure"}
+      - {house: H10, sphere: "Finance", reason: "Global financial system stability"}
+      - {house: H10, sphere: "Supply Chain", reason: "Global goods distribution"}
+      - {house: H11, sphere: "Transportation", reason: "Physical movement of people and goods"}
+      - {house: H11, sphere: "Logistics", reason: "Last-mile delivery, military logistics"}
+      - {house: H12, sphere: "Constitutional Law", reason: "Rule of law foundation"}
+      - {house: H12, sphere: "International Law", reason: "Inter-state conflict resolution"}
+      - {house: H12, sphere: "Human Rights", reason: "Dignity floor for 8 billion people"}
+
+  tier_3_cultural:
+    description: "Failure = significant cultural or societal loss, not existential"
+    spheres:
+      - {house: H03, sphere: "Linguistics", reason: "Language preservation, cross-cultural communication"}
+      - {house: H04, sphere: "History", reason: "Collective memory, avoiding repetition"}
+      - {house: H04, sphere: "Philosophy", reason: "Meaning-making, worldview coherence"}
+      - {house: H05, sphere: "Music", reason: "Universal cultural expression"}
+      - {house: H05, sphere: "Architecture", reason: "Built environment shapes civilization"}
+      - {house: H08, sphere: "Pedagogy", reason: "Knowledge transmission across generations"}
+      - {house: H08, sphere: "Literacy", reason: "Foundation of informed citizenry"}
+      - {house: H12, sphere: "Public Policy", reason: "Governance effectiveness"}
+      - {house: H12, sphere: "Diplomacy", reason: "Conflict prevention"}
+
+# ============================================================
+# FEDERATION IMPLICATIONS
+# ============================================================
+federation_implications:
+  note: >
+    Civilizational spheres should have MINIMUM 2 seats with Substantial (0.5+)
+    coverage to avoid single-point-of-failure in the federation. Currently:
+  single_seat_civilizational_risks:
+    - {sphere: "Aerospace Engineering", lead: "S3_Muskverse", backup: "none at 0.5+", risk: "HIGH"}
+    - {sphere: "Nuclear Engineering", lead: "none at 0.5+", backup: "none", risk: "CRITICAL"}
+    - {sphere: "Energy Systems", lead: "S3_Muskverse", backup: "none at 0.5+", risk: "HIGH"}
+
+# ============================================================
+# NEXT STEPS
+# ============================================================
+next_steps:
+  - "Council Round: ratify civilizational sphere list"
+  - "Define scoring methodology: civilizational impact score (0.0-1.0)"
+  - "Cross-reference with capability matrix: identify single-seat civilizational risks"
+  - "Propose D-125+: Civilizational Sphere Minimum Coverage Doctrine"
+  - "Integrate with routing: civilizational spheres get priority in bridge_v2 routing"
