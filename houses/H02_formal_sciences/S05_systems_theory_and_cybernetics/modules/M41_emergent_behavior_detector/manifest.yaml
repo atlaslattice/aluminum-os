@@ -1,0 +1,7 @@
+description: 'Module M41: Emergent Behavior Detector'
+house: H02
+id: M41
+lattice_address: H02.S05
+name: Emergent Behavior Detector
+sphere: S05
+status: SPEC

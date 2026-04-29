@@ -1,0 +1,7 @@
+description: 'Module M57: Context-Free Grammar Parser'
+house: H02
+id: M57
+lattice_address: H02.S07
+name: Context-Free Grammar Parser
+sphere: S07
+status: SPEC

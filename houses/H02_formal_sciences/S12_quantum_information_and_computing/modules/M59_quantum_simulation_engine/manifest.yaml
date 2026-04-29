@@ -1,0 +1,7 @@
+description: 'Module M59: Quantum Simulation Engine'
+house: H02
+id: M59
+lattice_address: H02.S12
+name: Quantum Simulation Engine
+sphere: S12
+status: SPEC

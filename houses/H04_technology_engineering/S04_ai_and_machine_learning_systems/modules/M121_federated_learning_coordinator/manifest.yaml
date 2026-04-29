@@ -1,0 +1,7 @@
+description: 'Module M121: Federated Learning Coordinator'
+house: H04
+id: M121
+lattice_address: H04.S04
+name: Federated Learning Coordinator
+sphere: S04
+status: SPEC

@@ -1,0 +1,7 @@
+description: 'Module M85: Pushdown Automaton Simulator'
+house: H02
+id: M85
+lattice_address: H02.S07
+name: Pushdown Automaton Simulator
+sphere: S07
+status: SPEC

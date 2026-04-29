@@ -1,0 +1,7 @@
+description: 'Module M178: Cross-Instance State Synchronizer'
+house: H07
+id: M178
+lattice_address: H07.S04
+name: Cross-Instance State Synchronizer
+sphere: S04
+status: SPEC

@@ -1,0 +1,7 @@
+description: 'Module M127: Civic Compute Coordinator'
+house: H04
+id: M127
+lattice_address: H04.S10
+name: Civic Compute Coordinator
+sphere: S10
+status: SPEC

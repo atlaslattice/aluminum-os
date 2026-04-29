@@ -1,0 +1,7 @@
+description: 'Module M53: Homomorphic Encryption Engine'
+house: H02
+id: M53
+lattice_address: H02.S04
+name: Homomorphic Encryption Engine
+sphere: S04
+status: SPEC

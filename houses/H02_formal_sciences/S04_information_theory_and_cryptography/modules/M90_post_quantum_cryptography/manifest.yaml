@@ -1,0 +1,7 @@
+description: 'Module M90: Post-Quantum Cryptography'
+house: H02
+id: M90
+lattice_address: H02.S04
+name: Post-Quantum Cryptography
+sphere: S04
+status: SPEC

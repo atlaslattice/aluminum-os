@@ -1,0 +1,7 @@
+description: 'Module M173: Real-Time Routing Share Meter'
+house: H02
+id: M173
+lattice_address: H02.S02
+name: Real-Time Routing Share Meter
+sphere: S02
+status: SPEC

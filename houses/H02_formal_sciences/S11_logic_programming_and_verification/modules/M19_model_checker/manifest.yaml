@@ -1,0 +1,7 @@
+description: 'Module M19: Model Checker'
+house: H02
+id: M19
+lattice_address: H02.S11
+name: Model Checker
+sphere: S11
+status: SPEC

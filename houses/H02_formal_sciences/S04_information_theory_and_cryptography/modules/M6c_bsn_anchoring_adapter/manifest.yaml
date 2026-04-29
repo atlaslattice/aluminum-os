@@ -1,0 +1,7 @@
+description: 'Module M6c: BSN Anchoring Adapter'
+house: H02
+id: M6c
+lattice_address: H02.S04
+name: BSN Anchoring Adapter
+sphere: S04
+status: SPEC

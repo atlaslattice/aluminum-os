@@ -1,0 +1,7 @@
+description: 'Module M111: Style Fingerprint Detector'
+house: H05
+id: M111
+lattice_address: H05.S02
+name: Style Fingerprint Detector
+sphere: S02
+status: SPEC

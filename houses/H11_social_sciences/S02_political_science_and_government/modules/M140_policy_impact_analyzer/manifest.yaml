@@ -1,0 +1,7 @@
+description: 'Module M140: Policy Impact Analyzer'
+house: H11
+id: M140
+lattice_address: H11.S02
+name: Policy Impact Analyzer
+sphere: S02
+status: SPEC

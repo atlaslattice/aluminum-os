@@ -1,0 +1,7 @@
+description: 'Module M76: Consensus Finality Checker'
+house: H02
+id: M76
+lattice_address: H02.S03
+name: Consensus Finality Checker
+sphere: S03
+status: SPEC

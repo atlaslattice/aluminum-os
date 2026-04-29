@@ -1,0 +1,7 @@
+description: 'Module M106: Music Generation Pipeline'
+house: H05
+id: M106
+lattice_address: H05.S02
+name: Music Generation Pipeline
+sphere: S02
+status: SPEC

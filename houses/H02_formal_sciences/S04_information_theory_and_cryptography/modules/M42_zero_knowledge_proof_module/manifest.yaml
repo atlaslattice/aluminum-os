@@ -1,0 +1,7 @@
+description: 'Module M42: Zero-Knowledge Proof Module'
+house: H02
+id: M42
+lattice_address: H02.S04
+name: Zero-Knowledge Proof Module
+sphere: S04
+status: SPEC

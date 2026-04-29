@@ -1,0 +1,7 @@
+description: 'Module M80: Epistemic Weather Engine'
+house: H02
+id: M80
+lattice_address: H02.S02
+name: Epistemic Weather Engine
+sphere: S02
+status: SPEC

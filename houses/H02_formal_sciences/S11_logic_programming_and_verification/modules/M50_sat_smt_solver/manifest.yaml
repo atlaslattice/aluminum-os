@@ -1,0 +1,7 @@
+description: 'Module M50: SAT/SMT Solver'
+house: H02
+id: M50
+lattice_address: H02.S11
+name: SAT/SMT Solver
+sphere: S11
+status: SPEC

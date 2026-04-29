@@ -1,0 +1,7 @@
+description: 'Module M132: Water Quality Monitor'
+house: H07
+id: M132
+lattice_address: H07.S02
+name: Water Quality Monitor
+sphere: S02
+status: SPEC

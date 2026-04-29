@@ -1,0 +1,7 @@
+description: 'Module M109: Digital Art Generator'
+house: H05
+id: M109
+lattice_address: H05.S07
+name: Digital Art Generator
+sphere: S07
+status: SPEC

@@ -1,0 +1,7 @@
+description: 'Module M60: Parameterized Complexity Module'
+house: H02
+id: M60
+lattice_address: H02.S09
+name: Parameterized Complexity Module
+sphere: S09
+status: SPEC

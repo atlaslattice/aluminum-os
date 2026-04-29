@@ -1,0 +1,7 @@
+description: 'Module M49: Circuit Complexity Analyzer'
+house: H02
+id: M49
+lattice_address: H02.S09
+name: Circuit Complexity Analyzer
+sphere: S09
+status: SPEC

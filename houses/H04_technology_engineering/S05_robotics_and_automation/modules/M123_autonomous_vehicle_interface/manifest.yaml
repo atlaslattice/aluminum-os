@@ -1,0 +1,7 @@
+description: 'Module M123: Autonomous Vehicle Interface'
+house: H04
+id: M123
+lattice_address: H04.S05
+name: Autonomous Vehicle Interface
+sphere: S05
+status: SPEC

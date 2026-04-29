@@ -1,0 +1,7 @@
+description: 'Module M95: Hardware Abstraction Layer'
+house: H04
+id: M95
+lattice_address: H04.S02
+name: Hardware Abstraction Layer
+sphere: S02
+status: SPEC

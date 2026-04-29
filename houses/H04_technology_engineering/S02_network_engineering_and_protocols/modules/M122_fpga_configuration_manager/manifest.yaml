@@ -1,0 +1,7 @@
+description: 'Module M122: FPGA Configuration Manager'
+house: H04
+id: M122
+lattice_address: H04.S02
+name: FPGA Configuration Manager
+sphere: S02
+status: SPEC

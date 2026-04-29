@@ -1,0 +1,7 @@
+description: 'Module M25: Quantum Algorithm Library'
+house: H02
+id: M25
+lattice_address: H02.S12
+name: Quantum Algorithm Library
+sphere: S12
+status: SPEC

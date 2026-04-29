@@ -1,0 +1,7 @@
+description: 'Module M62: Persistent Homology Engine'
+house: H02
+id: M62
+lattice_address: H02.S10
+name: Persistent Homology Engine
+sphere: S10
+status: SPEC

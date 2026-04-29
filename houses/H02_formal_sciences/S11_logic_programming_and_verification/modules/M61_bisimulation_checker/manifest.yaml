@@ -1,0 +1,7 @@
+description: 'Module M61: Bisimulation Checker'
+house: H02
+id: M61
+lattice_address: H02.S11
+name: Bisimulation Checker
+sphere: S11
+status: SPEC

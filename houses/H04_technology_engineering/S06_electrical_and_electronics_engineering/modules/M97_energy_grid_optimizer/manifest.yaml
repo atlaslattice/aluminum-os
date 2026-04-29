@@ -1,0 +1,7 @@
+description: 'Module M97: Energy Grid Optimizer'
+house: H04
+id: M97
+lattice_address: H04.S06
+name: Energy Grid Optimizer
+sphere: S06
+status: SPEC

@@ -1,0 +1,7 @@
+description: 'Module M83: Invariant Monitor'
+house: H02
+id: M83
+lattice_address: H02.S11
+name: Invariant Monitor
+sphere: S11
+status: SPEC

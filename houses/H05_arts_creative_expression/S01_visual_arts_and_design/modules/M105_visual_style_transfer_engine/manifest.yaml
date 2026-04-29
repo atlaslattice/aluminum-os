@@ -1,0 +1,7 @@
+description: 'Module M105: Visual Style Transfer Engine'
+house: H05
+id: M105
+lattice_address: H05.S01
+name: Visual Style Transfer Engine
+sphere: S01
+status: SPEC

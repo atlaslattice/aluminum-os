@@ -1,0 +1,7 @@
+description: 'Module M30: Feedback Control Analyzer'
+house: H02
+id: M30
+lattice_address: H02.S05
+name: Feedback Control Analyzer
+sphere: S05
+status: SPEC

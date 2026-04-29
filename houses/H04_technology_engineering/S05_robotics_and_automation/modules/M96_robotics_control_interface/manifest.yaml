@@ -1,0 +1,7 @@
+description: 'Module M96: Robotics Control Interface'
+house: H04
+id: M96
+lattice_address: H04.S05
+name: Robotics Control Interface
+sphere: S05
+status: SPEC

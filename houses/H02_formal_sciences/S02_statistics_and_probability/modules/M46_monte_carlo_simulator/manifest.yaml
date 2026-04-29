@@ -1,0 +1,7 @@
+description: 'Module M46: Monte Carlo Simulator'
+house: H02
+id: M46
+lattice_address: H02.S02
+name: Monte Carlo Simulator
+sphere: S02
+status: SPEC

@@ -1,0 +1,7 @@
+description: 'Module M162b: Spatial Computing Interface'
+house: H05
+id: M162b
+lattice_address: H05.S11
+name: Spatial Computing Interface
+sphere: S11
+status: SPEC

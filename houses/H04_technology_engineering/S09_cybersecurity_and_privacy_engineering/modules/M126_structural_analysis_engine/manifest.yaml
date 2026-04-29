@@ -1,0 +1,7 @@
+description: 'Module M126: Structural Analysis Engine'
+house: H04
+id: M126
+lattice_address: H04.S09
+name: Structural Analysis Engine
+sphere: S09
+status: SPEC

@@ -1,0 +1,7 @@
+description: 'Module M78: Cooperative Game Solver'
+house: H02
+id: M78
+lattice_address: H02.S06
+name: Cooperative Game Solver
+sphere: S06
+status: SPEC

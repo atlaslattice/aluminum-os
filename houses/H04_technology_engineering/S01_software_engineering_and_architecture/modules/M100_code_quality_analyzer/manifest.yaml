@@ -1,0 +1,7 @@
+description: 'Module M100: Code Quality Analyzer'
+house: H04
+id: M100
+lattice_address: H04.S01
+name: Code Quality Analyzer
+sphere: S01
+status: SPEC

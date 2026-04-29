@@ -1,0 +1,7 @@
+description: 'Module M118: Switzerland Layer (Neutral Routing)'
+house: H04
+id: M118
+lattice_address: H04.S03
+name: Switzerland Layer (Neutral Routing)
+sphere: S03
+status: SPEC

@@ -1,0 +1,7 @@
+description: 'Module M94: Network Protocol Analyzer'
+house: H04
+id: M94
+lattice_address: H04.S03
+name: Network Protocol Analyzer
+sphere: S03
+status: SPEC

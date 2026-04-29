@@ -1,0 +1,7 @@
+description: 'Module M133: Urban Planning Simulator'
+house: H07
+id: M133
+lattice_address: H07.S03
+name: Urban Planning Simulator
+sphere: S03
+status: SPEC

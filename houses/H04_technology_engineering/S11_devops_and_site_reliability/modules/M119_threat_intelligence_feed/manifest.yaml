@@ -1,0 +1,7 @@
+description: 'Module M119: Threat Intelligence Feed'
+house: H04
+id: M119
+lattice_address: H04.S11
+name: Threat Intelligence Feed
+sphere: S11
+status: SPEC

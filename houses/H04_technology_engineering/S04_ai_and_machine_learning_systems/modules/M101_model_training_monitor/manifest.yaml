@@ -1,0 +1,7 @@
+description: 'Module M101: Model Training Monitor'
+house: H04
+id: M101
+lattice_address: H04.S04
+name: Model Training Monitor
+sphere: S04
+status: SPEC

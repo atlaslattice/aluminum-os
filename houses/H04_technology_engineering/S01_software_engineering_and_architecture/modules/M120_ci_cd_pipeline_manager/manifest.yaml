@@ -1,0 +1,7 @@
+description: 'Module M120: CI/CD Pipeline Manager'
+house: H04
+id: M120
+lattice_address: H04.S01
+name: CI/CD Pipeline Manager
+sphere: S01
+status: SPEC

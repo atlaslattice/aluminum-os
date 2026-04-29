@@ -1,0 +1,7 @@
+description: 'Module M149: Regulatory Change Monitor'
+house: H12
+id: M149
+lattice_address: H12.S07
+name: Regulatory Change Monitor
+sphere: S07
+status: SPEC

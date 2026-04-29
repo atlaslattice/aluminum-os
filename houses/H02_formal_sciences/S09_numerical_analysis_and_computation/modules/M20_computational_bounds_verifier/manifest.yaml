@@ -1,0 +1,7 @@
+description: 'Module M20: Computational Bounds Verifier'
+house: H02
+id: M20
+lattice_address: H02.S09
+name: Computational Bounds Verifier
+sphere: S09
+status: SPEC

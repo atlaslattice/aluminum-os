@@ -1,0 +1,7 @@
+description: 'Module M142: TOS Compliance Engine'
+house: H12
+id: M142
+lattice_address: H12.S09
+name: TOS Compliance Engine
+sphere: S09
+status: SPEC

@@ -1,0 +1,7 @@
+description: 'Module M125: Medical Device Interface'
+house: H04
+id: M125
+lattice_address: H04.S08
+name: Medical Device Interface
+sphere: S08
+status: SPEC

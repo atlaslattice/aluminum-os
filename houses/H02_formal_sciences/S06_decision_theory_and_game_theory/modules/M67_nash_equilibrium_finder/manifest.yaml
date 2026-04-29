@@ -1,0 +1,7 @@
+description: 'Module M67: Nash Equilibrium Finder'
+house: H02
+id: M67
+lattice_address: H02.S06
+name: Nash Equilibrium Finder
+sphere: S06
+status: SPEC

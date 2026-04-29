@@ -1,0 +1,7 @@
+description: 'Module M103: Aerospace Simulation Engine'
+house: H04
+id: M103
+lattice_address: H04.S07
+name: Aerospace Simulation Engine
+sphere: S07
+status: SPEC

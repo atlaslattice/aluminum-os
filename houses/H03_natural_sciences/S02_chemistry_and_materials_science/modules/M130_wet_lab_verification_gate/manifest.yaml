@@ -1,0 +1,7 @@
+description: 'Module M130: Wet Lab Verification Gate'
+house: H03
+id: M130
+lattice_address: H03.S02
+name: Wet Lab Verification Gate
+sphere: S02
+status: SPEC

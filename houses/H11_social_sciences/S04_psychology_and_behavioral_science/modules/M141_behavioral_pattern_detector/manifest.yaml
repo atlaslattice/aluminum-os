@@ -1,0 +1,7 @@
+description: 'Module M141: Behavioral Pattern Detector'
+house: H11
+id: M141
+lattice_address: H11.S04
+name: Behavioral Pattern Detector
+sphere: S04
+status: SPEC

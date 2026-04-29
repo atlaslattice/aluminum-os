@@ -1,0 +1,7 @@
+description: 'Module M22: Theorem Prover'
+house: H02
+id: M22
+lattice_address: H02.S01
+name: Theorem Prover
+sphere: S01
+status: SPEC

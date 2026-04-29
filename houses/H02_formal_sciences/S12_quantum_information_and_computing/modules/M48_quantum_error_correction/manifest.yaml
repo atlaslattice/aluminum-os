@@ -1,0 +1,7 @@
+description: 'Module M48: Quantum Error Correction'
+house: H02
+id: M48
+lattice_address: H02.S12
+name: Quantum Error Correction
+sphere: S12
+status: SPEC

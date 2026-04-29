@@ -1,0 +1,7 @@
+description: 'Module M66: Feedback Loop Detector'
+house: H02
+id: M66
+lattice_address: H02.S05
+name: Feedback Loop Detector
+sphere: S05
+status: SPEC

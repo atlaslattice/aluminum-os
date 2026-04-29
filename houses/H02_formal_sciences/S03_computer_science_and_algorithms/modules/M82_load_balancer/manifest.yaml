@@ -1,0 +1,7 @@
+description: 'Module M82: Load Balancer'
+house: H02
+id: M82
+lattice_address: H02.S03
+name: Load Balancer
+sphere: S03
+status: SPEC

@@ -1,0 +1,7 @@
+description: 'Module M71: Quantum Key Distribution'
+house: H02
+id: M71
+lattice_address: H02.S12
+name: Quantum Key Distribution
+sphere: S12
+status: SPEC

@@ -1,0 +1,7 @@
+description: 'Module M63: Parser Symmetry Gate'
+house: H02
+id: M63
+lattice_address: H02.S03
+name: Parser Symmetry Gate
+sphere: S03
+status: SPEC

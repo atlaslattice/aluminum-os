@@ -1,0 +1,7 @@
+description: 'Module M29: Bayesian Network Engine'
+house: H02
+id: M29
+lattice_address: H02.S02
+name: Bayesian Network Engine
+sphere: S02
+status: SPEC
