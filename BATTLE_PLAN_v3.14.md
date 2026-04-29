@@ -176,13 +176,28 @@ The Python code in aluminum-os-v3 (5,401 lines) is more immediately useful:
 | remaining_innovations.py | 780 | **TRIAGE** — extract individual innovations to appropriate House modules |
 | manus_core.py | 386 | **ARCHIVE** — superseded by element145/core.py |
 
-### Phase 2: Module Implementation (MAIN EFFORT)
+### Phase 2: Module Implementation (MAIN EFFORT) — SPRINT 2.1 COMPLETE
 
 **Goal:** Move the 182 registered modules from SPEC → STUB → ACTIVE status by populating them with real code from existing repos and new implementations.
 
 The strategy is to work House-by-House, prioritizing Houses that have existing code to migrate.
 
-**Sprint 2.1 — H02 Technology & Engineering (96 modules)**
+**Current Status (2026-04-29):** 76/182 modules ABSORBED (42%), 106 SPEC with __init__.py stubs. All 182 modules now importable.
+
+| House | ABSORBED | SPEC | Total | Coverage |
+|-------|----------|------|-------|----------|
+| H01   | 3        | 0    | 3     | 100%     |
+| H02   | 39       | 57   | 96    | 41%      |
+| H03   | 1        | 1    | 2     | 50%      |
+| H04   | 16       | 9    | 25    | 64%      |
+| H05   | 0        | 22   | 22    | 0%       |
+| H07   | 7        | 1    | 8     | 88%      |
+| H09   | 0        | 2    | 2     | 0%       |
+| H10   | 0        | 1    | 1     | 0%       |
+| H11   | 3        | 0    | 3     | 100%     |
+| H12   | 7        | 13   | 20    | 35%      |
+
+**Sprint 2.1 — H02 Formal Sciences + H04 Technology (96+25 modules)** ✅ COMPLETE
 
 H02 is the densest House with 96 registered modules. Most of the existing codebase lives here. The approach:
 

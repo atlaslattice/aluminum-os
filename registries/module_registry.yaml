@@ -8,27 +8,27 @@ modules:
   name: Epistemic Integrity Validator
   house: H01
   sphere: S02
-  status: SPEC
+  status: ABSORBED
 - id: M8a
   name: Epistemic Integrity CN Adapter
   house: H01
   sphere: S02
-  status: SPEC
+  status: ABSORBED
 - id: M7
   name: Ethics Engine
   house: H01
   sphere: S03
-  status: SPEC
+  status: ABSORBED
 - id: M10
   name: Mathematical Proof Engine
   house: H02
   sphere: S01
-  status: SPEC
+  status: ABSORBED
 - id: M22
   name: Theorem Prover
   house: H02
   sphere: S01
-  status: SPEC
+  status: ABSORBED
 - id: M28
   name: Number Theory Utilities
   house: H02
@@ -45,7 +45,7 @@ modules:
   sphere: S01
   status: SPEC
 - id: M68
-  name: Gödel Incompleteness Tracker
+  name: "G\xF6del Incompleteness Tracker"
   house: H02
   sphere: S01
   status: SPEC
@@ -58,27 +58,27 @@ modules:
   name: Statistical Inference Engine
   house: H02
   sphere: S02
-  status: SPEC
+  status: ABSORBED
 - id: M173
   name: Real-Time Routing Share Meter
   house: H02
   sphere: S02
-  status: SPEC
+  status: ABSORBED
 - id: M29
   name: Bayesian Network Engine
   house: H02
   sphere: S02
-  status: SPEC
+  status: ABSORBED
 - id: M3.1
   name: Trust Scoring System (TSS)
   house: H02
   sphere: S02
-  status: SPEC
+  status: ABSORBED
 - id: M46
   name: Monte Carlo Simulator
   house: H02
   sphere: S02
-  status: SPEC
+  status: ABSORBED
 - id: M74
   name: Hypothesis Testing Framework
   house: H02
@@ -88,22 +88,22 @@ modules:
   name: Primacy Bonus Calculator
   house: H02
   sphere: S02
-  status: SPEC
+  status: ABSORBED
 - id: M80
   name: Epistemic Weather Engine
   house: H02
   sphere: S02
-  status: SPEC
+  status: ABSORBED
 - id: M1
   name: Sovereign Router Core
   house: H02
   sphere: S03
-  status: SPEC
+  status: ABSORBED
 - id: M15
   name: Algorithm Optimizer
   house: H02
   sphere: S03
-  status: SPEC
+  status: ABSORBED
 - id: M15a
   name: Algorithm Optimizer CN Adapter
   house: H02
@@ -113,37 +113,37 @@ modules:
   name: Distributed Consensus Protocol
   house: H02
   sphere: S03
-  status: SPEC
+  status: ABSORBED
 - id: M40
   name: Parallel Algorithm Scheduler
   house: H02
   sphere: S03
-  status: SPEC
+  status: ABSORBED
 - id: M52
   name: Distributed Hash Table
   house: H02
   sphere: S03
-  status: SPEC
+  status: ABSORBED
 - id: M63
   name: Parser Symmetry Gate
   house: H02
   sphere: S03
-  status: SPEC
+  status: ABSORBED
 - id: M76
   name: Consensus Finality Checker
   house: H02
   sphere: S03
-  status: SPEC
+  status: ABSORBED
 - id: M82
   name: Load Balancer
   house: H02
   sphere: S03
-  status: SPEC
+  status: ABSORBED
 - id: M23
   name: Information Security Module
   house: H02
   sphere: S04
-  status: SPEC
+  status: ABSORBED
 - id: M23a
   name: Information Security CN Adapter
   house: H02
@@ -153,7 +153,7 @@ modules:
   name: Consent & Provenance Engine
   house: H02
   sphere: S04
-  status: SPEC
+  status: ABSORBED
 - id: M3a
   name: Consent Engine Extension
   house: H02
@@ -163,7 +163,7 @@ modules:
   name: Zero-Knowledge Proof Module
   house: H02
   sphere: S04
-  status: SPEC
+  status: ABSORBED
 - id: M53
   name: Homomorphic Encryption Engine
   house: H02
@@ -173,12 +173,12 @@ modules:
   name: Cryptographic Primitives
   house: H02
   sphere: S04
-  status: SPEC
+  status: ABSORBED
 - id: M65
   name: Metadata Enrichment Pipeline
   house: H02
   sphere: S04
-  status: SPEC
+  status: ABSORBED
 - id: M6a
   name: Cryptographic Primitives Extension A
   house: H02
@@ -208,42 +208,42 @@ modules:
   name: Systems Dynamics Modeler
   house: H02
   sphere: S05
-  status: SPEC
+  status: ABSORBED
 - id: M2
   name: Constitutional Kernel
   house: H02
   sphere: S05
-  status: SPEC
+  status: ABSORBED
 - id: M30
   name: Feedback Control Analyzer
   house: H02
   sphere: S05
-  status: SPEC
+  status: ABSORBED
 - id: M41
   name: Emergent Behavior Detector
   house: H02
   sphere: S05
-  status: SPEC
+  status: ABSORBED
 - id: M54
   name: Agent-Based Modeling Framework
   house: H02
   sphere: S05
-  status: SPEC
+  status: ABSORBED
 - id: M66
   name: Feedback Loop Detector
   house: H02
   sphere: S05
-  status: SPEC
+  status: ABSORBED
 - id: M75
   name: Cross-Validation Matrix
   house: H02
   sphere: S05
-  status: SPEC
+  status: ABSORBED
 - id: M81
   name: Resilience Scoring Module
   house: H02
   sphere: S05
-  status: SPEC
+  status: ABSORBED
 - id: M21
   name: Strategic Reasoning Engine
   house: H02
@@ -253,12 +253,12 @@ modules:
   name: Mechanism Design Module
   house: H02
   sphere: S06
-  status: SPEC
+  status: ABSORBED
 - id: M43
   name: Auction Theory Engine
   house: H02
   sphere: S06
-  status: SPEC
+  status: ABSORBED
 - id: M55
   name: Voting Theory Module
   house: H02
@@ -293,7 +293,7 @@ modules:
   name: Grammar Induction Engine
   house: H02
   sphere: S07
-  status: SPEC
+  status: ABSORBED
 - id: M45
   name: Type Theory Checker
   house: H02
@@ -318,12 +318,12 @@ modules:
   name: Category Theory Framework
   house: H02
   sphere: S08
-  status: SPEC
+  status: ABSORBED
 - id: M24
   name: Algebraic Structure Validator
   house: H02
   sphere: S08
-  status: SPEC
+  status: ABSORBED
 - id: M34
   name: Homological Algebra Engine
   house: H02
@@ -353,7 +353,7 @@ modules:
   name: Computational Bounds Verifier
   house: H02
   sphere: S09
-  status: SPEC
+  status: ABSORBED
 - id: M32
   name: Space-Time Complexity Mapper
   house: H02
@@ -388,7 +388,7 @@ modules:
   name: Topological Data Analyzer
   house: H02
   sphere: S10
-  status: SPEC
+  status: ABSORBED
 - id: M27
   name: Geometric Reasoning Module
   house: H02
@@ -423,7 +423,7 @@ modules:
   name: Model Checker
   house: H02
   sphere: S11
-  status: SPEC
+  status: ABSORBED
 - id: M33
   name: Temporal Logic Verifier
   house: H02
@@ -453,7 +453,7 @@ modules:
   name: Invariant Monitor
   house: H02
   sphere: S11
-  status: SPEC
+  status: ABSORBED
 - id: M12
   name: Quantum Computing Interface
   house: H02
@@ -503,7 +503,7 @@ modules:
   name: Wet Lab Verification Gate
   house: H03
   sphere: S02
-  status: SPEC
+  status: ABSORBED
 - id: M131
   name: Environmental Impact Assessor
   house: H03
@@ -513,17 +513,17 @@ modules:
   name: Code Quality Analyzer
   house: H04
   sphere: S01
-  status: SPEC
+  status: ABSORBED
 - id: M120
   name: CI/CD Pipeline Manager
   house: H04
   sphere: S01
-  status: SPEC
+  status: ABSORBED
 - id: M92
   name: Software Architecture Validator
   house: H04
   sphere: S01
-  status: SPEC
+  status: ABSORBED
 - id: M122
   name: FPGA Configuration Manager
   house: H04
@@ -533,42 +533,42 @@ modules:
   name: Hardware Abstraction Layer
   house: H04
   sphere: S02
-  status: SPEC
+  status: ABSORBED
 - id: M102
   name: API Gateway
   house: H04
   sphere: S03
-  status: SPEC
+  status: ABSORBED
 - id: M118
   name: Switzerland Layer (Neutral Routing)
   house: H04
   sphere: S03
-  status: SPEC
+  status: ABSORBED
 - id: M94
   name: Network Protocol Analyzer
   house: H04
   sphere: S03
-  status: SPEC
+  status: ABSORBED
 - id: M101
   name: Model Training Monitor
   house: H04
   sphere: S04
-  status: SPEC
+  status: ABSORBED
 - id: M104
   name: Franchise Consent Manager
   house: H04
   sphere: S04
-  status: SPEC
+  status: ABSORBED
 - id: M121
   name: Federated Learning Coordinator
   house: H04
   sphere: S04
-  status: SPEC
+  status: ABSORBED
 - id: M93
   name: ML Pipeline Orchestrator
   house: H04
   sphere: S04
-  status: SPEC
+  status: ABSORBED
 - id: M123
   name: Autonomous Vehicle Interface
   house: H04
@@ -608,27 +608,27 @@ modules:
   name: Civic Compute Coordinator
   house: H04
   sphere: S10
-  status: SPEC
+  status: ABSORBED
 - id: M128
   name: CEO Collective Governance Module
   house: H04
   sphere: S10
-  status: SPEC
+  status: ABSORBED
 - id: M119
   name: Threat Intelligence Feed
   house: H04
   sphere: S11
-  status: SPEC
+  status: ABSORBED
 - id: M174
   name: Provider Retaliation Monitor
   house: H04
   sphere: S11
-  status: SPEC
+  status: ABSORBED
 - id: M98
   name: Security Audit Engine
   house: H04
   sphere: S11
-  status: SPEC
+  status: ABSORBED
 - id: M99
   name: UX Accessibility Validator
   house: H04
@@ -748,12 +748,12 @@ modules:
   name: Agricultural Data Pipeline
   house: H07
   sphere: S01
-  status: SPEC
+  status: ABSORBED
 - id: M132
   name: Water Quality Monitor
   house: H07
   sphere: S02
-  status: SPEC
+  status: ABSORBED
 - id: M133
   name: Urban Planning Simulator
   house: H07
@@ -763,27 +763,27 @@ modules:
   name: Data Warehouse Manager
   house: H07
   sphere: S04
-  status: SPEC
+  status: ABSORBED
 - id: M176
   name: Boot Manifest Runtime
   house: H07
   sphere: S04
-  status: SPEC
+  status: ABSORBED
 - id: M178
   name: Cross-Instance State Synchronizer
   house: H07
   sphere: S04
-  status: SPEC
+  status: ABSORBED
 - id: M135
   name: Supply Chain Optimizer
   house: H07
   sphere: S05
-  status: SPEC
+  status: ABSORBED
 - id: M177
   name: Pre-Session Research Queue
   house: H07
   sphere: S08
-  status: SPEC
+  status: ABSORBED
 - id: M136
   name: Genomic Analysis Pipeline
   house: H09
@@ -803,32 +803,32 @@ modules:
   name: Economic Modeling Engine
   house: H11
   sphere: S01
-  status: SPEC
+  status: ABSORBED
 - id: M140
   name: Policy Impact Analyzer
   house: H11
   sphere: S02
-  status: SPEC
+  status: ABSORBED
 - id: M141
   name: Behavioral Pattern Detector
   house: H11
   sphere: S04
-  status: SPEC
+  status: ABSORBED
 - id: M143
   name: Constitutional Rights Validator
   house: H12
   sphere: S01
-  status: SPEC
+  status: ABSORBED
 - id: M155
   name: Consent Audit Trail
   house: H12
   sphere: S01
-  status: SPEC
+  status: ABSORBED
 - id: M145
   name: Treaty Compliance Checker
   house: H12
   sphere: S02
-  status: SPEC
+  status: ABSORBED
 - id: M156
   name: Sanctions Compliance Module
   house: H12
@@ -838,7 +838,7 @@ modules:
   name: Corporate Governance Module
   house: H12
   sphere: S03
-  status: SPEC
+  status: ABSORBED
 - id: M157
   name: Contract Analyzer
   house: H12
@@ -878,7 +878,7 @@ modules:
   name: Regulatory Change Monitor
   house: H12
   sphere: S07
-  status: SPEC
+  status: ABSORBED
 - id: M161
   name: Regulatory Sandbox Interface
   house: H12
@@ -893,7 +893,7 @@ modules:
   name: TOS Compliance Engine
   house: H12
   sphere: S09
-  status: SPEC
+  status: ABSORBED
 - id: M151
   name: Cyber Law Compliance
   house: H12
@@ -908,7 +908,7 @@ modules:
   name: Arbitration Protocol
   house: H12
   sphere: S11
-  status: SPEC
+  status: ABSORBED
 - id: M154
   name: Comparative Law Engine
   house: H12
