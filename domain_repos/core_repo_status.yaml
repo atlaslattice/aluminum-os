@@ -1,0 +1,86 @@
+# Core Project Repos — Absorption Status
+version: "1.0"
+generated: "2026-04-29"
+
+repos:
+  aluminum-os:
+    status: MONOREPO_ROOT
+    description: "The monorepo itself"
+
+  element-145:
+    status: ABSORBED
+    target: "element-145/"
+    description: "144+1 Lattice Context Protocol"
+
+  sheldonbrain-rag-api:
+    status: ACTIVE_SERVICE
+    description: "Cloud Run RAG API — operational"
+
+  manus-artifacts:
+    status: ABSORBED
+    target: "element-145/ + houses/H04/"
+    description: "All unique code absorbed in Track 2"
+
+  constitutional-os:
+    status: ABSORBED
+    target: "element-145/constitutional-os/"
+    description: "Constitutional specs and corpus"
+
+  aluminum-os-v3:
+    status: ABSORBED
+    target: "element-145/rust-kernel/"
+    description: "6 Rust crates preserved"
+
+  sheldongemini-GPI:
+    status: ABSORBED
+    target: "frontends/sheldongemini-gpi/"
+    description: "Frontend migrated to latticeApi.ts"
+
+  noosphere-archive:
+    status: REFERENCE
+    description: "Living archive — stays standalone"
+
+  atlas-lattice-foundation:
+    status: REFERENCE
+    description: "Foundation docs — stays standalone"
+
+  bazinga:
+    status: SUPERSEDED
+    description: "Superseded by aluminum-os monorepo"
+
+  tucker-gemini-GPT-:
+    status: SUPERSEDED
+    description: "Early prototype — superseded"
+
+  manus-2.0-toolkit:
+    status: REFERENCE
+    description: "Toolkit — stays standalone"
+
+  SNRS-v2-v3-Distribution:
+    status: ABSORBED
+    target: "element-145/snrs-bridge/"
+    description: "SNRS code absorbed"
+
+  noosphere-defense:
+    status: REFERENCE
+    description: "Defense framework — stays standalone"
+
+  Kintsuji-code-fixer-:
+    status: REFERENCE
+    description: "Code fixer tool — stays standalone"
+
+  batman-protocol:
+    status: REFERENCE
+    description: "Batman protocol — stays standalone"
+
+  constitutional-continuum:
+    status: SUPERSEDED
+    description: "Superseded by constitutional-os absorption"
+
+  open-regenerative-compute-standard:
+    status: ACTIVE_SERVICE
+    description: "ORCS website — operational (webdev project)"
+
+  atlaslattice:
+    status: PROFILE_README
+    description: "GitHub profile README"

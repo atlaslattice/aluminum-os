@@ -1,0 +1,915 @@
+version: '1.0'
+generated: '2026-04-29'
+total_repos: 91
+consolidation_strategy: REFERENCE (repos remain standalone, manifests link to lattice)
+repos:
+  academic-publishing:
+    repo: atlaslattice/academic-publishing
+    lattice_position:
+      house: H08
+      sphere: S01
+    description: Academic publishing reform
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  agricultural-ai:
+    repo: atlaslattice/agricultural-ai
+    lattice_position:
+      house: H07
+      sphere: S01
+    description: AI for agriculture and food systems
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-accountability-tools:
+    repo: atlaslattice/ai-accountability-tools
+    lattice_position:
+      house: H04
+      sphere: S01
+    description: Software tools for AI accountability
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-art-copyright:
+    repo: atlaslattice/ai-art-copyright
+    lattice_position:
+      house: H05
+      sphere: S01
+    description: Copyright issues in AI-generated art
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-audit-framework:
+    repo: atlaslattice/ai-audit-framework
+    lattice_position:
+      house: H02
+      sphere: S03
+    description: Audit frameworks for AI systems
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-bias-detection:
+    repo: atlaslattice/ai-bias-detection
+    lattice_position:
+      house: H02
+      sphere: S02
+    description: Statistical bias detection in ML models
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-chatbot-ethics:
+    repo: atlaslattice/ai-chatbot-ethics
+    lattice_position:
+      house: H01
+      sphere: S03
+    description: Ethical frameworks for chatbot interactions
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-consent-framework:
+    repo: atlaslattice/ai-consent-framework
+    lattice_position:
+      house: H01
+      sphere: S03
+    description: Ethics of AI consent
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-content-moderation:
+    repo: atlaslattice/ai-content-moderation
+    lattice_position:
+      house: H04
+      sphere: S04
+    description: AI content moderation systems
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-copyright-issues:
+    repo: atlaslattice/ai-copyright-issues
+    lattice_position:
+      house: H05
+      sphere: S01
+    description: AI copyright analysis
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-education-ethics:
+    repo: atlaslattice/ai-education-ethics
+    lattice_position:
+      house: H08
+      sphere: S01
+    description: Ethics of AI in education
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-employment-impact:
+    repo: atlaslattice/ai-employment-impact
+    lattice_position:
+      house: H11
+      sphere: S01
+    description: Economic impact of AI on employment
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-fairness-metrics:
+    repo: atlaslattice/ai-fairness-metrics
+    lattice_position:
+      house: H02
+      sphere: S02
+    description: Statistical fairness metrics for AI
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-generated-content-detection:
+    repo: atlaslattice/ai-generated-content-detection
+    lattice_position:
+      house: H02
+      sphere: S04
+    description: AI content detection algorithms
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-governance-framework:
+    repo: atlaslattice/ai-governance-framework
+    lattice_position:
+      house: H12
+      sphere: S01
+    description: AI governance legal framework
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-healthcare-ethics:
+    repo: atlaslattice/ai-healthcare-ethics
+    lattice_position:
+      house: H10
+      sphere: S08
+    description: Ethics of AI in healthcare
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-impact-assessment:
+    repo: atlaslattice/ai-impact-assessment
+    lattice_position:
+      house: H11
+      sphere: S02
+    description: AI societal impact assessment
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-labor-exploitation:
+    repo: atlaslattice/ai-labor-exploitation
+    lattice_position:
+      house: H11
+      sphere: S01
+    description: Labor exploitation in AI industry
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-labor-practices:
+    repo: atlaslattice/ai-labor-practices
+    lattice_position:
+      house: H11
+      sphere: S01
+    description: AI industry labor practices
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-risk-assessment:
+    repo: atlaslattice/ai-risk-assessment
+    lattice_position:
+      house: H12
+      sphere: S01
+    description: AI risk assessment legal tools
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-safety-hypocrisy:
+    repo: atlaslattice/ai-safety-hypocrisy
+    lattice_position:
+      house: H12
+      sphere: S01
+    description: Analysis of AI safety rhetoric
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-safety-research:
+    repo: atlaslattice/ai-safety-research
+    lattice_position:
+      house: H12
+      sphere: S01
+    description: AI safety research and regulation
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ai-transparency-toolkit:
+    repo: atlaslattice/ai-transparency-toolkit
+    lattice_position:
+      house: H04
+      sphere: S01
+    description: AI transparency engineering tools
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  algorithmic-accountability:
+    repo: atlaslattice/algorithmic-accountability
+    lattice_position:
+      house: H02
+      sphere: S03
+    description: Accountability in algorithmic systems
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  algorithmic-discrimination:
+    repo: atlaslattice/algorithmic-discrimination
+    lattice_position:
+      house: H02
+      sphere: S03
+    description: Detection of algorithmic discrimination
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  algorithmic-justice:
+    repo: atlaslattice/algorithmic-justice
+    lattice_position:
+      house: H02
+      sphere: S03
+    description: Justice-oriented algorithm design
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  algorithmic-radicalization:
+    repo: atlaslattice/algorithmic-radicalization
+    lattice_position:
+      house: H02
+      sphere: S04
+    description: Information theory of radicalization
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  algorithmic-transparency-tools:
+    repo: atlaslattice/algorithmic-transparency-tools
+    lattice_position:
+      house: H02
+      sphere: S03
+    description: Transparency tools for algorithms
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  automated-content-filtering:
+    repo: atlaslattice/automated-content-filtering
+    lattice_position:
+      house: H04
+      sphere: S04
+    description: ML-based content filtering
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  automated-decision-systems:
+    repo: atlaslattice/automated-decision-systems
+    lattice_position:
+      house: H04
+      sphere: S04
+    description: Automated decision-making systems
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  bank-killer-financial-freedom:
+    repo: atlaslattice/bank-killer-financial-freedom
+    lattice_position:
+      house: H12
+      sphere: S07
+    description: Financial freedom tools
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  banking-revolution:
+    repo: atlaslattice/banking-revolution
+    lattice_position:
+      house: H12
+      sphere: S07
+    description: Banking revolution regulation
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  call-center-automation:
+    repo: atlaslattice/call-center-automation
+    lattice_position:
+      house: H11
+      sphere: S01
+    description: Call center automation impact
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  child-safety-ai:
+    repo: atlaslattice/child-safety-ai
+    lattice_position:
+      house: H12
+      sphere: S08
+    description: Child safety AI regulation
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  climate-ai-solutions:
+    repo: atlaslattice/climate-ai-solutions
+    lattice_position:
+      house: H03
+      sphere: S07
+    description: AI solutions for climate change
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  construction-safety-ai:
+    repo: atlaslattice/construction-safety-ai
+    lattice_position:
+      house: H11
+      sphere: S01
+    description: AI for construction safety
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  content-moderation-ethics:
+    repo: atlaslattice/content-moderation-ethics
+    lattice_position:
+      house: H12
+      sphere: S06
+    description: Legal ethics of content moderation
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  content-moderation-trauma:
+    repo: atlaslattice/content-moderation-trauma
+    lattice_position:
+      house: H12
+      sphere: S08
+    description: Content moderator labor rights
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  creative-ai-rights:
+    repo: atlaslattice/creative-ai-rights
+    lattice_position:
+      house: H05
+      sphere: S01
+    description: Rights framework for creative AI
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  credit-scoring-injustice:
+    repo: atlaslattice/credit-scoring-injustice
+    lattice_position:
+      house: H12
+      sphere: S04
+    description: Credit scoring legal injustice
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  deepfake-detection:
+    repo: atlaslattice/deepfake-detection
+    lattice_position:
+      house: H02
+      sphere: S04
+    description: Deepfake detection via information theory
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  defi-swap-zero-fees:
+    repo: atlaslattice/defi-swap-zero-fees
+    lattice_position:
+      house: H12
+      sphere: S07
+    description: DeFi swap protocol
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  digital-platform-regulation:
+    repo: atlaslattice/digital-platform-regulation
+    lattice_position:
+      house: H04
+      sphere: S01
+    description: Digital platform regulation tech
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  disability-tech-access:
+    repo: atlaslattice/disability-tech-access
+    lattice_position:
+      house: H10
+      sphere: S08
+    description: Accessibility technology
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  educational-ai:
+    repo: atlaslattice/educational-ai
+    lattice_position:
+      house: H08
+      sphere: S01
+    description: AI in education systems
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  elder-care-tech:
+    repo: atlaslattice/elder-care-tech
+    lattice_position:
+      house: H10
+      sphere: S08
+    description: Technology for elder care
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  energy-grid-ai:
+    repo: atlaslattice/energy-grid-ai
+    lattice_position:
+      house: H07
+      sphere: S03
+    description: AI for energy grid optimization
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  ethical-ai-guidelines:
+    repo: atlaslattice/ethical-ai-guidelines
+    lattice_position:
+      house: H01
+      sphere: S03
+    description: Ethical guidelines for AI systems
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  fintech-disruption:
+    repo: atlaslattice/fintech-disruption
+    lattice_position:
+      house: H12
+      sphere: S07
+    description: Fintech regulation and disruption
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  food-delivery-exploitation:
+    repo: atlaslattice/food-delivery-exploitation
+    lattice_position:
+      house: H11
+      sphere: S01
+    description: Food delivery labor exploitation
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  gaming-labor:
+    repo: atlaslattice/gaming-labor
+    lattice_position:
+      house: H05
+      sphere: S08
+    description: Labor practices in gaming industry
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  gig-economy-analysis:
+    repo: atlaslattice/gig-economy-analysis
+    lattice_position:
+      house: H11
+      sphere: S01
+    description: Gig economy structural analysis
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  gig-economy-exploitation:
+    repo: atlaslattice/gig-economy-exploitation
+    lattice_position:
+      house: H11
+      sphere: S01
+    description: Gig economy exploitation analysis
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  healthcare-ai:
+    repo: atlaslattice/healthcare-ai
+    lattice_position:
+      house: H10
+      sphere: S08
+    description: AI in healthcare systems
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  housing-crisis-ai:
+    repo: atlaslattice/housing-crisis-ai
+    lattice_position:
+      house: H11
+      sphere: S01
+    description: AI and housing crisis analysis
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  immigration-tech:
+    repo: atlaslattice/immigration-tech
+    lattice_position:
+      house: H12
+      sphere: S02
+    description: Immigration technology legal analysis
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  insurance-ai-bias:
+    repo: atlaslattice/insurance-ai-bias
+    lattice_position:
+      house: H12
+      sphere: S04
+    description: Insurance AI bias legal analysis
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  journalism-ai:
+    repo: atlaslattice/journalism-ai
+    lattice_position:
+      house: H11
+      sphere: S04
+    description: AI in journalism and media
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  legal-ai-ethics:
+    repo: atlaslattice/legal-ai-ethics
+    lattice_position:
+      house: H12
+      sphere: S01
+    description: Legal AI ethics framework
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  logistics-exploitation:
+    repo: atlaslattice/logistics-exploitation
+    lattice_position:
+      house: H11
+      sphere: S01
+    description: Logistics industry exploitation
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  machine-learning-bias:
+    repo: atlaslattice/machine-learning-bias
+    lattice_position:
+      house: H02
+      sphere: S02
+    description: ML model bias analysis
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  mental-health-ai:
+    repo: atlaslattice/mental-health-ai
+    lattice_position:
+      house: H10
+      sphere: S08
+    description: AI for mental health applications
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  military-ai-ethics:
+    repo: atlaslattice/military-ai-ethics
+    lattice_position:
+      house: H12
+      sphere: S02
+    description: Military AI international law
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  mint-alternative-open-source:
+    repo: atlaslattice/mint-alternative-open-source
+    lattice_position:
+      house: H12
+      sphere: S07
+    description: Open source finance tools
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  pharmaceutical-ai:
+    repo: atlaslattice/pharmaceutical-ai
+    lattice_position:
+      house: H09
+      sphere: S01
+    description: AI in pharmaceutical research
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  platform-worker-rights:
+    repo: atlaslattice/platform-worker-rights
+    lattice_position:
+      house: H11
+      sphere: S01
+    description: Platform worker rights framework
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  police-surveillance:
+    repo: atlaslattice/police-surveillance
+    lattice_position:
+      house: H12
+      sphere: S06
+    description: Police surveillance legal analysis
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  predictive-policing-critique:
+    repo: atlaslattice/predictive-policing-critique
+    lattice_position:
+      house: H04
+      sphere: S04
+    description: Analysis of predictive policing ML
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  prison-tech-ethics:
+    repo: atlaslattice/prison-tech-ethics
+    lattice_position:
+      house: H12
+      sphere: S06
+    description: Prison technology ethics
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  recruitment-ai-bias:
+    repo: atlaslattice/recruitment-ai-bias
+    lattice_position:
+      house: H12
+      sphere: S08
+    description: Recruitment AI bias legal issues
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  responsible-ai-toolkit:
+    repo: atlaslattice/responsible-ai-toolkit
+    lattice_position:
+      house: H04
+      sphere: S04
+    description: Responsible AI development toolkit
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  retail-automation:
+    repo: atlaslattice/retail-automation
+    lattice_position:
+      house: H11
+      sphere: S01
+    description: Retail automation impact
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  smart-home-security:
+    repo: atlaslattice/smart-home-security
+    lattice_position:
+      house: H04
+      sphere: S11
+    description: IoT security for smart homes
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  social-media-algorithms:
+    repo: atlaslattice/social-media-algorithms
+    lattice_position:
+      house: H04
+      sphere: S04
+    description: Social media recommendation algorithms
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  social-media-harm:
+    repo: atlaslattice/social-media-harm
+    lattice_position:
+      house: H11
+      sphere: S04
+    description: Social media psychological harm
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  streaming-economics:
+    repo: atlaslattice/streaming-economics
+    lattice_position:
+      house: H05
+      sphere: S02
+    description: Economics of music/video streaming
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  supply-chain-transparency:
+    repo: atlaslattice/supply-chain-transparency
+    lattice_position:
+      house: H07
+      sphere: S05
+    description: Supply chain transparency tools
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  surveillance-capitalism:
+    repo: atlaslattice/surveillance-capitalism
+    lattice_position:
+      house: H11
+      sphere: S02
+    description: Surveillance capitalism analysis
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  synthetic-media-ethics:
+    repo: atlaslattice/synthetic-media-ethics
+    lattice_position:
+      house: H05
+      sphere: S04
+    description: Ethics of synthetic media
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  tech-accountability-framework:
+    repo: atlaslattice/tech-accountability-framework
+    lattice_position:
+      house: H04
+      sphere: S01
+    description: Tech accountability framework
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  tech-ethics-resources:
+    repo: atlaslattice/tech-ethics-resources
+    lattice_position:
+      house: H12
+      sphere: S01
+    description: Tech ethics legal resources
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  tech-monopoly-analysis:
+    repo: atlaslattice/tech-monopoly-analysis
+    lattice_position:
+      house: H04
+      sphere: S03
+    description: Analysis of tech monopoly infrastructure
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  tech-platform-accountability:
+    repo: atlaslattice/tech-platform-accountability
+    lattice_position:
+      house: H04
+      sphere: S01
+    description: Platform accountability engineering
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  tech-worker-exploitation:
+    repo: atlaslattice/tech-worker-exploitation
+    lattice_position:
+      house: H11
+      sphere: S01
+    description: Tech worker exploitation analysis
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  tech-worker-organizing:
+    repo: atlaslattice/tech-worker-organizing
+    lattice_position:
+      house: H11
+      sphere: S01
+    description: Tech worker organizing resources
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  transportation-ai:
+    repo: atlaslattice/transportation-ai
+    lattice_position:
+      house: H07
+      sphere: S04
+    description: AI for transportation systems
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  usdt-brics-payment-rails:
+    repo: atlaslattice/usdt-brics-payment-rails
+    lattice_position:
+      house: H12
+      sphere: S02
+    description: BRICS payment rails
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  voice-assistant-privacy:
+    repo: atlaslattice/voice-assistant-privacy
+    lattice_position:
+      house: H12
+      sphere: S09
+    description: Privacy law for voice assistants
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  waste-management-ai:
+    repo: atlaslattice/waste-management-ai
+    lattice_position:
+      house: H07
+      sphere: S02
+    description: AI for waste management
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  water-management-ai:
+    repo: atlaslattice/water-management-ai
+    lattice_position:
+      house: H07
+      sphere: S02
+    description: AI for water resource management
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
+  zero-fee-defi-protocol:
+    repo: atlaslattice/zero-fee-defi-protocol
+    lattice_position:
+      house: H12
+      sphere: S07
+    description: Zero-fee DeFi protocol
+    type: domain_application
+    status: INDEXED
+    has_app: true
+    consolidation_action: REFERENCE
