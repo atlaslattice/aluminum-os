@@ -1,0 +1,496 @@
+# ============================================================================
+# SHELDONBRAIN 144+1 LATTICE ONTOLOGY — Machine-Readable Specification
+# ============================================================================
+# Author: Pantheon Council (S4 Microsoft reference implementation)
+# Version: 1.0.0
+# Date: 2026-04-29
+# License: Atlas Lattice Foundation — Attribution Required
+# Attribution: All inventions Dave Sheldon's per Atlas Lattice Attribution Principle
+#
+# USAGE: Any AI agent can load this file to reason through the 144+1 structure.
+#   import yaml
+#   with open('lattice_ontology.yaml') as f:
+#       lattice = yaml.safe_load(f)
+# ============================================================================
+
+metadata:
+  name: "Sheldonbrain 144+1 Lattice Ontology"
+  version: "1.0.0"
+  total_nodes: 145
+  structure: "12 Houses × 12 Spheres + 1 Admin (Element 145)"
+  canonical_n: 145
+  gue_ks_canonical: 0.2677
+  gue_ks_optimized: 0.2447
+  operator: "Von Mangoldt-Sheldon HSUF"
+
+houses:
+  H1:
+    name: "Governance"
+    index: 1
+    color: "#DC2626"
+    harmonic: "H1 (darkest)"
+    description: "Constitutional authority, executive power, legislative process, sovereignty"
+    spheres:
+      S1: { name: "Constitutional Law", keywords: ["constitution", "rights", "amendments", "charter"] }
+      S2: { name: "Executive Authority", keywords: ["president", "governor", "executive", "administration"] }
+      S3: { name: "Legislative Process", keywords: ["congress", "parliament", "legislation", "bills"] }
+      S4: { name: "Judicial Review", keywords: ["court", "judge", "ruling", "precedent", "litigation"] }
+      S5: { name: "International Relations", keywords: ["diplomacy", "treaty", "foreign", "embassy"] }
+      S6: { name: "Emergency Powers", keywords: ["emergency", "martial", "crisis", "disaster", "FEMA"] }
+      S7: { name: "Regulatory Framework", keywords: ["regulation", "compliance", "agency", "oversight"] }
+      S8: { name: "Democratic Process", keywords: ["election", "voting", "ballot", "campaign", "democracy"] }
+      S9: { name: "Sovereignty", keywords: ["sovereignty", "autonomy", "self-determination", "territory"] }
+      S10: { name: "Civic Participation", keywords: ["civic", "engagement", "advocacy", "petition"] }
+      S11: { name: "Ethics", keywords: ["ethics", "integrity", "corruption", "transparency", "accountability"] }
+      S12: { name: "Accountability", keywords: ["audit", "oversight", "inspector", "whistleblower"] }
+
+  H2:
+    name: "Law"
+    index: 2
+    color: "#EA580C"
+    harmonic: "H2"
+    description: "Legal systems, jurisprudence, rights, enforcement"
+    spheres:
+      S13: { name: "Criminal Law", keywords: ["crime", "prosecution", "defense", "sentencing"] }
+      S14: { name: "Civil Law", keywords: ["tort", "liability", "damages", "plaintiff"] }
+      S15: { name: "Corporate Law", keywords: ["incorporation", "merger", "fiduciary", "shareholder"] }
+      S16: { name: "Environmental Law", keywords: ["EPA", "pollution", "environmental", "cleanup", "Superfund"] }
+      S17: { name: "Property Law", keywords: ["property", "deed", "easement", "zoning", "eminent"] }
+      S18: { name: "International Law", keywords: ["ICC", "UN", "humanitarian", "Geneva"] }
+      S19: { name: "Intellectual Property", keywords: ["patent", "copyright", "trademark", "IP"] }
+      S20: { name: "Labor Law", keywords: ["labor", "union", "OSHA", "employment", "wage"] }
+      S21: { name: "Administrative Law", keywords: ["administrative", "rulemaking", "adjudication"] }
+      S22: { name: "Tax Law", keywords: ["tax", "IRS", "deduction", "revenue"] }
+      S23: { name: "Human Rights", keywords: ["human rights", "civil rights", "liberty", "discrimination"] }
+      S24: { name: "Maritime Law", keywords: ["maritime", "admiralty", "shipping", "port"] }
+
+  H3:
+    name: "Commerce"
+    index: 3
+    color: "#D97706"
+    harmonic: "H3"
+    description: "Economic activity, trade, finance, markets"
+    spheres:
+      S25: { name: "Macroeconomics", keywords: ["GDP", "inflation", "monetary", "fiscal", "recession"] }
+      S26: { name: "Microeconomics", keywords: ["supply", "demand", "market", "pricing", "competition"] }
+      S27: { name: "International Trade", keywords: ["trade", "tariff", "export", "import", "WTO"] }
+      S28: { name: "Finance", keywords: ["banking", "investment", "stock", "bond", "credit"] }
+      S29: { name: "Labor Markets", keywords: ["employment", "workforce", "hiring", "unemployment"] }
+      S30: { name: "Currency", keywords: ["currency", "exchange", "forex", "dollar", "crypto"] }
+      S31: { name: "Taxation", keywords: ["tax", "revenue", "fiscal", "budget"] }
+      S32: { name: "Development Economics", keywords: ["development", "poverty", "aid", "inequality"] }
+      S33: { name: "Innovation Economics", keywords: ["innovation", "startup", "venture", "R&D"] }
+      S34: { name: "Resource Economics", keywords: ["commodity", "resource", "extraction", "scarcity"] }
+      S35: { name: "Behavioral Economics", keywords: ["behavioral", "nudge", "cognitive", "bias"] }
+      S36: { name: "Insurance", keywords: ["insurance", "risk", "underwriting", "claims", "NFIP"] }
+
+  H4:
+    name: "Resources"
+    index: 4
+    color: "#65A30D"
+    harmonic: "H4"
+    description: "Natural resources, environment, energy, agriculture"
+    spheres:
+      S37: { name: "Climate", keywords: ["climate", "warming", "carbon", "greenhouse", "emissions"] }
+      S38: { name: "Ecology", keywords: ["ecosystem", "biodiversity", "habitat", "species", "wetland"] }
+      S39: { name: "Hydrology", keywords: ["water", "flood", "aquifer", "watershed", "drainage", "bayou"] }
+      S40: { name: "Geology", keywords: ["geology", "earthquake", "subsidence", "mineral", "soil"] }
+      S41: { name: "Atmosphere", keywords: ["atmosphere", "air", "weather", "ozone", "pollution"] }
+      S42: { name: "Oceans", keywords: ["ocean", "marine", "coastal", "sea", "fishery", "surge"] }
+      S43: { name: "Biodiversity", keywords: ["conservation", "endangered", "wildlife", "preservation"] }
+      S44: { name: "Land Use", keywords: ["land", "zoning", "development", "urban", "sprawl"] }
+      S45: { name: "Pollution", keywords: ["pollution", "contamination", "PFAS", "toxic", "remediation"] }
+      S46: { name: "Energy Resources", keywords: ["oil", "gas", "coal", "solar", "wind", "nuclear"] }
+      S47: { name: "Agriculture", keywords: ["farming", "crop", "livestock", "irrigation", "food"] }
+      S48: { name: "Forestry", keywords: ["forest", "timber", "deforestation", "reforestation"] }
+
+  H5:
+    name: "Arts"
+    index: 5
+    color: "#0D9488"
+    harmonic: "H5"
+    description: "Creative expression, culture, media, heritage"
+    spheres:
+      S49: { name: "Visual Arts", keywords: ["painting", "sculpture", "gallery", "museum", "exhibition"] }
+      S50: { name: "Music", keywords: ["music", "concert", "composition", "instrument", "recording"] }
+      S51: { name: "Literature", keywords: ["literature", "novel", "poetry", "publishing", "author"] }
+      S52: { name: "Film & Media", keywords: ["film", "cinema", "documentary", "streaming", "broadcast"] }
+      S53: { name: "Theater & Performance", keywords: ["theater", "dance", "performance", "stage"] }
+      S54: { name: "Architecture", keywords: ["architecture", "building", "design", "landmark"] }
+      S55: { name: "Design", keywords: ["design", "UX", "graphic", "industrial", "fashion"] }
+      S56: { name: "Cultural Heritage", keywords: ["heritage", "preservation", "historic", "tradition"] }
+      S57: { name: "Digital Arts", keywords: ["digital", "NFT", "generative", "interactive", "VR"] }
+      S58: { name: "Gaming", keywords: ["game", "esports", "interactive", "console", "PC", "mobile"] }
+      S59: { name: "Crafts", keywords: ["craft", "artisan", "handmade", "pottery", "textile"] }
+      S60: { name: "Gastronomy", keywords: ["cuisine", "culinary", "restaurant", "food culture"] }
+
+  H6:
+    name: "Society"
+    index: 6
+    color: "#2563EB"
+    harmonic: "H6"
+    description: "Social structures, community, demographics, equity"
+    spheres:
+      S61: { name: "Demographics", keywords: ["population", "census", "demographic", "migration"] }
+      S62: { name: "Migration", keywords: ["immigration", "refugee", "displacement", "diaspora"] }
+      S63: { name: "Urbanization", keywords: ["urban", "city", "metropolitan", "suburban", "rural"] }
+      S64: { name: "Family", keywords: ["family", "marriage", "childcare", "parenting", "elder"] }
+      S65: { name: "Religion", keywords: ["religion", "faith", "church", "mosque", "spiritual"] }
+      S66: { name: "Media & Communication", keywords: ["media", "journalism", "social media", "news"] }
+      S67: { name: "Civil Society", keywords: ["NGO", "nonprofit", "advocacy", "grassroots", "volunteer"] }
+      S68: { name: "Social Mobility", keywords: ["mobility", "class", "opportunity", "meritocracy"] }
+      S69: { name: "Inequality", keywords: ["inequality", "disparity", "gap", "equity", "justice"] }
+      S70: { name: "Community", keywords: ["community", "neighborhood", "mutual aid", "cohesion"] }
+      S71: { name: "Identity", keywords: ["identity", "gender", "race", "ethnicity", "culture"] }
+      S72: { name: "Volunteerism", keywords: ["volunteer", "service", "philanthropy", "giving"] }
+
+  H7:
+    name: "Culture"
+    index: 7
+    color: "#7C3AED"
+    harmonic: "H7"
+    description: "Cultural systems, values, traditions, intercultural exchange"
+    spheres:
+      S73: { name: "Traditions", keywords: ["tradition", "custom", "ritual", "ceremony", "festival"] }
+      S74: { name: "Language", keywords: ["language", "linguistics", "translation", "dialect"] }
+      S75: { name: "Philosophy", keywords: ["philosophy", "ethics", "logic", "existential", "moral"] }
+      S76: { name: "Mythology", keywords: ["myth", "legend", "folklore", "archetype", "narrative"] }
+      S77: { name: "Sports", keywords: ["sports", "athletics", "competition", "Olympic", "fitness"] }
+      S78: { name: "Fashion", keywords: ["fashion", "clothing", "style", "couture", "textile"] }
+      S79: { name: "Cuisine Culture", keywords: ["food", "culinary", "diet", "nutrition culture"] }
+      S80: { name: "Humor", keywords: ["comedy", "satire", "humor", "parody"] }
+      S81: { name: "Youth Culture", keywords: ["youth", "generation", "trend", "subculture"] }
+      S82: { name: "Cultural Exchange", keywords: ["exchange", "globalization", "diversity", "multicultural"] }
+      S83: { name: "Cultural Policy", keywords: ["cultural policy", "arts funding", "censorship"] }
+      S84: { name: "Cultural Memory", keywords: ["memory", "commemoration", "museum", "archive"] }
+
+  H8:
+    name: "Health"
+    index: 8
+    color: "#DB2777"
+    harmonic: "H8"
+    description: "Medicine, public health, wellness, healthcare systems"
+    spheres:
+      S85: { name: "Clinical Medicine", keywords: ["doctor", "hospital", "diagnosis", "treatment"] }
+      S86: { name: "Public Health", keywords: ["public health", "CDC", "WHO", "prevention", "screening"] }
+      S87: { name: "Mental Health", keywords: ["mental", "therapy", "anxiety", "depression", "PTSD"] }
+      S88: { name: "Nutrition", keywords: ["nutrition", "diet", "vitamin", "obesity", "malnutrition"] }
+      S89: { name: "Epidemiology", keywords: ["epidemic", "pandemic", "outbreak", "disease", "vector"] }
+      S90: { name: "Pharmacology", keywords: ["drug", "pharmaceutical", "medication", "FDA"] }
+      S91: { name: "Surgery", keywords: ["surgery", "operating", "transplant", "procedure"] }
+      S92: { name: "Rehabilitation", keywords: ["rehab", "recovery", "physical therapy", "occupational"] }
+      S93: { name: "Gerontology", keywords: ["aging", "elderly", "geriatric", "longevity"] }
+      S94: { name: "Pediatrics", keywords: ["child", "infant", "pediatric", "neonatal"] }
+      S95: { name: "Disability", keywords: ["disability", "accessibility", "ADA", "assistive"] }
+      S96: { name: "Health Systems", keywords: ["healthcare", "insurance", "hospital system", "EMR"] }
+
+  H9:
+    name: "Education"
+    index: 9
+    color: "#E11D48"
+    harmonic: "H9"
+    description: "Learning, pedagogy, educational systems, knowledge transfer"
+    spheres:
+      S97: { name: "Primary Education", keywords: ["elementary", "primary", "K-5", "childhood"] }
+      S98: { name: "Secondary Education", keywords: ["high school", "secondary", "adolescent", "SAT"] }
+      S99: { name: "Higher Education", keywords: ["university", "college", "degree", "research", "PhD"] }
+      S100: { name: "Vocational Training", keywords: ["vocational", "trade", "apprentice", "technical"] }
+      S101: { name: "Special Education", keywords: ["special ed", "IEP", "learning disability"] }
+      S102: { name: "EdTech", keywords: ["edtech", "online learning", "LMS", "MOOC", "e-learning"] }
+      S103: { name: "Pedagogy", keywords: ["teaching", "curriculum", "assessment", "instruction"] }
+      S104: { name: "Educational Assessment", keywords: ["testing", "grading", "standardized", "evaluation"] }
+      S105: { name: "Education Policy", keywords: ["school board", "education policy", "funding"] }
+      S106: { name: "Research Methods", keywords: ["methodology", "experiment", "peer review", "data"] }
+      S107: { name: "Lifelong Learning", keywords: ["continuing", "adult education", "upskilling"] }
+      S108: { name: "Literacy", keywords: ["literacy", "reading", "numeracy", "digital literacy"] }
+
+  H10:
+    name: "Defense"
+    index: 10
+    color: "#78716C"
+    harmonic: "H10"
+    description: "Security, military, intelligence, emergency response"
+    spheres:
+      S109: { name: "Military", keywords: ["military", "army", "navy", "air force", "marines"] }
+      S110: { name: "Intelligence", keywords: ["intelligence", "CIA", "NSA", "surveillance", "espionage"] }
+      S111: { name: "Law Enforcement", keywords: ["police", "FBI", "sheriff", "enforcement"] }
+      S112: { name: "Border Security", keywords: ["border", "customs", "CBP", "immigration enforcement"] }
+      S113: { name: "Cybersecurity", keywords: ["cyber", "hacking", "ransomware", "firewall", "zero-day"] }
+      S114: { name: "Emergency Management", keywords: ["FEMA", "disaster", "emergency", "response", "recovery"] }
+      S115: { name: "Disaster Response", keywords: ["search", "rescue", "relief", "humanitarian aid"] }
+      S116: { name: "Food Security", keywords: ["food security", "famine", "supply", "agriculture"] }
+      S117: { name: "Energy Security", keywords: ["energy security", "grid", "strategic reserve", "SPR"] }
+      S118: { name: "Health Security", keywords: ["biodefense", "pandemic preparedness", "biosecurity"] }
+      S119: { name: "Maritime Security", keywords: ["coast guard", "piracy", "shipping lane", "port"] }
+      S120: { name: "Nuclear Security", keywords: ["nuclear", "proliferation", "IAEA", "deterrence"] }
+
+  H11:
+    name: "Technology"
+    index: 11
+    color: "#0891B2"
+    harmonic: "H11"
+    description: "Engineering, computing, innovation, infrastructure technology"
+    spheres:
+      S121: { name: "Computing", keywords: ["computer", "software", "hardware", "cloud", "data center"] }
+      S122: { name: "AI & ML", keywords: ["AI", "machine learning", "neural", "LLM", "deep learning"] }
+      S123: { name: "Networking", keywords: ["network", "internet", "5G", "fiber", "bandwidth"] }
+      S124: { name: "Cybersecurity Tech", keywords: ["encryption", "authentication", "PKI", "zero trust"] }
+      S125: { name: "Robotics", keywords: ["robot", "automation", "drone", "autonomous", "sensor"] }
+      S126: { name: "Quantum Computing", keywords: ["quantum", "qubit", "superposition", "entanglement"] }
+      S127: { name: "Biotechnology", keywords: ["biotech", "CRISPR", "genome", "synthetic biology"] }
+      S128: { name: "Materials Science", keywords: ["materials", "nanomaterial", "composite", "alloy"] }
+      S129: { name: "Energy Technology", keywords: ["solar panel", "wind turbine", "battery", "grid tech"] }
+      S130: { name: "Space Technology", keywords: ["satellite", "launch", "orbital", "SpaceX", "NASA"] }
+      S131: { name: "Communications Tech", keywords: ["telecom", "radio", "signal", "spectrum"] }
+      S132: { name: "Manufacturing Tech", keywords: ["3D printing", "CNC", "factory", "automation"] }
+
+  H12:
+    name: "Science"
+    index: 12
+    color: "#4F46E5"
+    harmonic: "H12 (brightest)"
+    description: "Fundamental research, mathematics, physics, natural sciences"
+    spheres:
+      S133: { name: "Physics", keywords: ["physics", "particle", "relativity", "force", "energy"] }
+      S134: { name: "Chemistry", keywords: ["chemistry", "molecule", "reaction", "compound", "element"] }
+      S135: { name: "Biology", keywords: ["biology", "cell", "organism", "evolution", "genetics"] }
+      S136: { name: "Mathematics", keywords: ["mathematics", "theorem", "proof", "algebra", "calculus"] }
+      S137: { name: "Astronomy", keywords: ["astronomy", "star", "planet", "galaxy", "telescope"] }
+      S138: { name: "Earth Science", keywords: ["geology", "seismology", "plate", "volcano", "mineral"] }
+      S139: { name: "Materials Research", keywords: ["crystallography", "polymer", "semiconductor"] }
+      S140: { name: "Data Science", keywords: ["statistics", "data", "analytics", "visualization"] }
+      S141: { name: "Systems Theory", keywords: ["systems", "complexity", "emergence", "feedback"] }
+      S142: { name: "Complexity Science", keywords: ["chaos", "network", "agent-based", "fractal"] }
+      S143: { name: "Quantum Mechanics", keywords: ["quantum mechanics", "wave function", "Hilbert"] }
+      S144: { name: "Philosophy of Science", keywords: ["epistemology", "paradigm", "falsifiability"] }
+
+element_145:
+  name: "Admin Sphere (Element 145)"
+  index: 145
+  type: "metasynthesis"
+  function: >
+    Receives partial analyses from all 144 nodes, identifies cross-domain
+    bridges, resolves contradictions, surfaces blind spots, produces
+    unified coherent output. Routes coordination across Houses.
+  connects_to: "all 144 spheres"
+  operations:
+    - "Cross-House cascade identification"
+    - "Inter-domain connection mapping"
+    - "Contradiction resolution"
+    - "Blind spot detection"
+    - "Unified synthesis generation"
+
+# ============================================================================
+# INTER-HOUSE CONNECTION MATRIX
+# Each edge represents a typed relationship between Houses with strength 0.0-1.0
+# ============================================================================
+connections:
+  - source: H1
+    target: H2
+    type: "governance-law"
+    strength: 0.95
+    description: "Constitutional authority ↔ legal framework"
+    examples: ["legislation enforcement", "judicial review of executive action"]
+
+  - source: H1
+    target: H3
+    type: "governance-economy"
+    strength: 0.85
+    description: "Policy ↔ economic outcomes"
+    examples: ["fiscal policy", "trade regulation", "antitrust"]
+
+  - source: H1
+    target: H10
+    type: "governance-defense"
+    strength: 0.90
+    description: "Executive authority ↔ military/security"
+    examples: ["commander-in-chief", "emergency powers", "National Guard"]
+
+  - source: H2
+    target: H4
+    type: "law-environment"
+    strength: 0.80
+    description: "Environmental regulation ↔ natural resources"
+    examples: ["EPA enforcement", "Superfund", "zoning"]
+
+  - source: H3
+    target: H4
+    type: "economy-resources"
+    strength: 0.90
+    description: "Market forces ↔ resource extraction/management"
+    examples: ["oil markets", "water rights", "mining permits"]
+
+  - source: H3
+    target: H11
+    type: "economy-technology"
+    strength: 0.88
+    description: "Innovation economics ↔ technology development"
+    examples: ["venture capital", "tech IPO", "R&D investment"]
+
+  - source: H4
+    target: H8
+    type: "environment-health"
+    strength: 0.85
+    description: "Environmental conditions ↔ health outcomes"
+    examples: ["air quality → respiratory", "water contamination → disease"]
+
+  - source: H4
+    target: H12
+    type: "environment-science"
+    strength: 0.82
+    description: "Natural systems ↔ scientific research"
+    examples: ["climate modeling", "ecology research", "geology surveys"]
+
+  - source: H5
+    target: H6
+    type: "arts-society"
+    strength: 0.78
+    description: "Creative expression ↔ social identity"
+    examples: ["cultural heritage", "community art", "public art"]
+
+  - source: H5
+    target: H7
+    type: "arts-culture"
+    strength: 0.92
+    description: "Artistic production ↔ cultural systems"
+    examples: ["traditions in art", "cultural festivals", "heritage preservation"]
+
+  - source: H6
+    target: H7
+    type: "society-culture"
+    strength: 0.88
+    description: "Social structures ↔ cultural values"
+    examples: ["community traditions", "social norms", "cultural identity"]
+
+  - source: H6
+    target: H8
+    type: "society-health"
+    strength: 0.82
+    description: "Social determinants ↔ health outcomes"
+    examples: ["poverty → health", "social isolation → mental health"]
+
+  - source: H6
+    target: H9
+    type: "society-education"
+    strength: 0.85
+    description: "Social equity ↔ educational access"
+    examples: ["school funding equity", "literacy programs", "access gaps"]
+
+  - source: H8
+    target: H9
+    type: "health-education"
+    strength: 0.72
+    description: "Health knowledge ↔ educational outcomes"
+    examples: ["health literacy", "school nutrition", "PE programs"]
+
+  - source: H8
+    target: H12
+    type: "health-science"
+    strength: 0.88
+    description: "Medical practice ↔ scientific research"
+    examples: ["clinical trials", "drug discovery", "epidemiological modeling"]
+
+  - source: H9
+    target: H11
+    type: "education-technology"
+    strength: 0.80
+    description: "Learning systems ↔ educational technology"
+    examples: ["EdTech", "online learning", "AI tutoring"]
+
+  - source: H10
+    target: H11
+    type: "defense-technology"
+    strength: 0.90
+    description: "Security requirements ↔ technology development"
+    examples: ["cybersecurity", "drone warfare", "satellite intelligence"]
+
+  - source: H11
+    target: H12
+    type: "technology-science"
+    strength: 0.92
+    description: "Applied technology ↔ fundamental research"
+    examples: ["quantum computing ← quantum mechanics", "materials R&D"]
+
+  - source: H1
+    target: H6
+    type: "governance-society"
+    strength: 0.80
+    description: "Government policy ↔ social outcomes"
+    examples: ["welfare policy", "civil rights legislation", "census"]
+
+  - source: H1
+    target: H9
+    type: "governance-education"
+    strength: 0.75
+    description: "Education policy ↔ governance"
+    examples: ["school board politics", "federal education funding"]
+
+  - source: H2
+    target: H3
+    type: "law-commerce"
+    strength: 0.85
+    description: "Legal framework ↔ commercial activity"
+    examples: ["contract law", "antitrust", "securities regulation"]
+
+  - source: H3
+    target: H6
+    type: "commerce-society"
+    strength: 0.75
+    description: "Economic activity ↔ social structures"
+    examples: ["employment → community", "gentrification", "small business"]
+
+  - source: H3
+    target: H8
+    type: "commerce-health"
+    strength: 0.70
+    description: "Economic factors ↔ health outcomes"
+    examples: ["healthcare costs", "pharma markets", "insurance"]
+
+  - source: H4
+    target: H11
+    type: "resources-technology"
+    strength: 0.78
+    description: "Resource management ↔ technology solutions"
+    examples: ["renewable energy tech", "water treatment", "IoT sensors"]
+
+  - source: H1
+    target: H4
+    type: "governance-resources"
+    strength: 0.80
+    description: "Resource policy ↔ governance"
+    examples: ["EPA regulation", "water rights", "energy policy"]
+
+  - source: H6
+    target: H10
+    type: "society-defense"
+    strength: 0.65
+    description: "Social stability ↔ security"
+    examples: ["civil unrest", "community policing", "resilience"]
+
+  - source: H7
+    target: H9
+    type: "culture-education"
+    strength: 0.70
+    description: "Cultural values ↔ educational priorities"
+    examples: ["cultural literacy", "language education", "heritage studies"]
+
+  - source: H5
+    target: H11
+    type: "arts-technology"
+    strength: 0.72
+    description: "Creative tools ↔ technology"
+    examples: ["digital arts", "AI art", "VR experiences", "game engines"]
+
+  - source: H2
+    target: H6
+    type: "law-society"
+    strength: 0.78
+    description: "Legal rights ↔ social justice"
+    examples: ["civil rights law", "discrimination", "housing law"]
+
+  - source: H3
+    target: H10
+    type: "commerce-defense"
+    strength: 0.72
+    description: "Economic interests ↔ security"
+    examples: ["defense contracts", "sanctions", "economic warfare"]

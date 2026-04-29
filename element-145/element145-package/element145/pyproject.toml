@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "element145"
+version = "0.1.0"
+description = "Sheldonbrain 144+1 Ontological Lattice — AI reasoning substrate with Lattice Context Protocol"
+readme = "README.md"
+license = {text = "Atlas Lattice Foundation License"}
+requires-python = ">=3.9"
+authors = [
+    {name = "Atlas Lattice Foundation"},
+    {name = "Dave Sheldon", email = "admin@atlaslattice.org"},
+]
+keywords = [
+    "ontology", "lattice", "ai-reasoning", "multi-domain",
+    "sheldonbrain", "element-145", "lcp", "shugs",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+api = [
+    "fastapi>=0.100",
+    "uvicorn>=0.23",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.1",
+]
+all = [
+    "element145[api,dev]",
+]
+
+[project.scripts]
+element145-mcp = "element145.integrations.mcp_server:main"
+element145-api = "element145.integrations.api:main"
+
+[project.urls]
+Homepage = "https://atlaslattice.org"
+Repository = "https://github.com/atlaslattice/element-145"
+Documentation = "https://element145.dev"
+
+[tool.setuptools.packages.find]
+include = ["element145*"]
+
+[tool.setuptools.package-data]
+element145 = ["lattice_ontology.yaml", "scaffolds/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+target-version = "py39"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
