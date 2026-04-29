@@ -1,15 +1,119 @@
+# Element 145 — Unified Sovereign Kernel
+# The meta-element that unifies all 144 spheres.
+# These are FUNCTIONAL LAYERS, not CEO-aligned modules.
+# CEO seat mapping is a governance overlay (see pantheon-council/).
+
 element:
   id: 145
-  name: Element 145 — Unified Sovereign Kernel
-  description: The meta-element that unifies all 144 spheres. The AI-native kernel
-    that orchestrates routing, governance, and constitutional enforcement across all
-    houses and spheres. Contains the Aluminum OS core, Boot Manifest Runtime, Pantheon
-    Council governance, SHUGS framework, and SNRS bridge.
+  name: "Element 145 — Unified Sovereign Kernel"
+  description: >
+    The AI-native kernel that orchestrates routing, governance, and constitutional
+    enforcement across all 12 Houses and 144 Spheres. Contains 9 functional layers
+    that together form the synthesis/admin layer above the content-domain lattice.
   status: CANONICAL
+  canon: "COMPLETE_BUILD_PLAN_v3.14 Appendix AG"
+
   components:
-  - aluminum-os-core
-  - boot-manifest
-  - pantheon-council
-  - shugs
-  - snrs-bridge
-  - constitutional-os
+    - name: aluminum-os-core
+      role: "Core routing, synthesis, and integration layer"
+      description: >
+        Contains bridge_v2.py (inter-house routing), lattice_ontology_v2.py (canonical
+        144-sphere definitions), council_synthesis.py, krakoa_mcp_server.py, RAG
+        integrations (pinecone, claude), and all constitutional/spec documents.
+      files: 54
+      key_files:
+        - bridge_v2.py
+        - lattice_ontology_v2.py
+        - council_synthesis.py
+        - krakoa_mcp_server.py
+
+    - name: boot-manifest
+      role: "Boot sequence and initialization protocol"
+      description: >
+        Defines the startup sequence for Element 145. Ensures all components
+        initialize in correct order with proper dependency resolution.
+      files: 1
+
+    - name: constitutional-os
+      role: "Constitutional corpus and governance specs"
+      description: >
+        Master index of all constitutional documents, the Aluminum Universal OS
+        v2.0 spec, cultural adapter spec, and UI convergence roadmap. This is
+        the legal/governance foundation layer.
+      files: 8
+      key_files:
+        - ALUMINUM_CONSTITUTIONAL_CORPUS_MASTER_INDEX.md
+        - ALUMINUM_UNIVERSAL_OS_v2.0_SPEC.md
+
+    - name: element145-package
+      role: "Distributable Python package for Element 145"
+      description: >
+        PyPI-ready package containing the Element 145 API, codebase snapshot,
+        and pre-vault assessment. Enables external consumers to integrate with
+        the lattice via pip install.
+      files: 22
+
+    - name: pantheon-council
+      role: "Multi-LLM governance council implementation"
+      description: >
+        Trinity Council implementations (v1, v2, v3) for multi-LLM deliberation.
+        The governance constitution defines how Council seats (including the 10
+        CEO seats: Anthropic/Alphabet/Muskverse/Microsoft/DeepSeek/OpenAI/Manus/
+        Notion/Qwen3/Amazon) interact. CEO seat mapping is a GOVERNANCE OVERLAY
+        on this functional layer — the code implements the deliberation protocol,
+        not individual CEO agents.
+      files: 5
+      key_files:
+        - GOVERNANCE_CONSTITUTION_Pantheon_Council_v1.md
+        - trinity_council_v3_aluminum.py
+
+    - name: rust-kernel
+      role: "Performance-critical kernel components in Rust"
+      description: >
+        6 Rust crates: forge-core (lattice primitives), forge-boot (startup),
+        noosphere (knowledge graph), pantheon (governance), sheldonbrain (AI core),
+        claude-contrib (Anthropic integration). Preserved from aluminum-os-v3.
+      files: 24
+
+    - name: sheldonbrain-omega
+      role: "RAG knowledge engine and conversation intelligence"
+      description: >
+        The Omega variant of SheldonBrain — handles RAG queries, conversation
+        ingestion, reclassification, and simulation. Core knowledge retrieval
+        layer for the lattice.
+      files: 35
+      key_files:
+        - core/
+        - simulation/
+
+    - name: shugs
+      role: "SHUGS mathematical framework and validation"
+      description: >
+        Sheldon's Hypergeometric Unified Governance System. Contains the core
+        operator (shugs_core.py), N=145 sweep results, perfect square validation,
+        Riemann/Rainbow/YinYang proofs, and canonical replication results.
+      files: 17
+      key_files:
+        - shugs_core.py
+        - operator_sweep_n145.py
+
+    - name: snrs-bridge
+      role: "SNRS protocol bridge and UWS specifications"
+      description: >
+        Sovereign Neural Routing System bridge — connects the lattice to external
+        networks. Contains SNRS v1.3.x implementations, 144+1 delegation ontology,
+        SHUGS synthesis papers, Moon/Mars sidechain spec, and UWS (Universal
+        Workspace System) specifications.
+      files: 25
+      key_files:
+        - snrs_v1_3_2_fixed.py
+        - 144_sphere_ingestion_protocol_Version2.py
+
+  # Mapping note for audit trail:
+  # These 9 components are FUNCTIONAL LAYERS (routing, governance, math,
+  # knowledge, constitution, packaging, performance, networking, boot).
+  # They are NOT 1:1 with the 10 CEO seats defined in v1.1 Federation
+  # Integration (Notion 3500c1de). The CEO seats are a governance overlay
+  # implemented within pantheon-council/ — specifically in the Trinity
+  # Council code which manages multi-LLM deliberation across all seats.
+  # No seat was "consolidated" — the mapping is orthogonal by design.
