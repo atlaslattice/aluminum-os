@@ -256,40 +256,48 @@ Constitutional OS code maps here:
 
 These Houses have no registered modules. Decision: register placeholder modules based on the sphere definitions in lattice_ontology.yaml, or leave empty until domain experts contribute.
 
-### Phase 3: Frontend Integration (ABSORBED — endpoint migration pending)
+### Phase 3: Frontend Integration ✅ COMPLETE (2026-04-29)
 
 **Goal:** Connect the Sheldon Gemini frontend to the real backend through the LCP pipeline.
 
-**Sprint 3.1 — Replace Simulated Services** (ABSORBED to monorepo; MIGRATION.md written)
+**Sprint 3.1 — Replace Simulated Services** ✅ COMPLETE (commit 8673aef)
 
-The sheldongemini-GPI frontend has 6 simulated services that need to be replaced:
+All 6 simulated services migrated to real lattice endpoints via unified `latticeApi.ts` client:
 
-| Service | Current State | Target |
-|---------|--------------|--------|
-| geminiService.ts | Calls Gemini 2.5 Flash directly | Route through bridge_v2 → LCP pipeline |
-| keepRagSim.ts | Hardcoded mock data | Call sheldonbrain-rag-api (Cloud Run) |
-| krakoaMcpSim.ts | Hardcoded mock data | Call element145 MCP server |
-| nexusOrchestrator.ts | Simulated multi-agent | Call synthesizer_e145 via API |
-| stealthSingularitySim.ts | Hardcoded Noosphere sim | Call element145/core.py analyze() |
-| externalDataSim.ts | Hardcoded external data | Call service_integrations ServiceHub |
+| Service | Migration | Status |
+|---------|-----------|--------|
+| externalDataSim.ts | → latticeApi.ts → sheldonbrain-rag-api /query | ✅ DONE |
+| keepRagSim.ts | → latticeApi.ts → /query?namespace=keep | ✅ DONE |
+| krakoaMcpSim.ts | → latticeApi.ts → krakoa_mcp_server | ✅ DONE |
+| nexusOrchestrator.ts | → latticeApi.ts → bridge_v2 /route | ✅ DONE |
+| physicsSim.ts | Kept as client-side simulation | ✅ KEPT |
+| stealthSingularitySim.ts | Kept as client-side simulation | ✅ KEPT |
+
+All services gracefully degrade to offline fallback when backend unavailable.
 
 **Sprint 3.2 — ShellGemini v11 Extraction**
 
 118K chars sitting in Google AI Studio (AI Studio #12) with no version control. Extract, commit to aluminum-os repo under `houses/H11/spheres/S06/modules/`, and wire into the frontend.
 
-### Phase 4: Domain Repo Consolidation
+### Phase 4: Domain Repo Consolidation ✅ COMPLETE (2026-04-29)
 
-**Goal:** Map the 114 domain placeholder repos into the 12×12+1 lattice and decide their fate.
+**Decision:** Hybrid approach — REFERENCE strategy (Option B) for all domain repos.
 
-**Option A (Recommended): Archive and Absorb**
+Audited all 200 repos in atlaslattice org:
+- 17 core repos: ABSORBED into monorepo
+- 91 domain repos: INDEXED with House/Sphere mapping in `domain_repos/domain_repo_index.yaml`
+- 59 forks: REFERENCE only (upstream maintained)
+- 6 empty repos: pending initialization
 
-Archive all 114 domain repos. Extract any real code (banking-revolution, healthcare-ai, water-management-ai have TypeScript). Create module stubs in the appropriate House/Sphere directories that reference the archived repos as prior art.
-
-**Option B: Federated Modules**
-
-Keep domain repos as independent modules that register with the lattice via manifest.yaml. Each repo adds a `lattice.yaml` file declaring its House/Sphere address. The monorepo's module_registry.yaml links to the external repo.
-
-**Recommendation:** Option A for repos with <10KB of code; Option B for repos with real TypeScript applications (banking-revolution, healthcare-ai, water-management-ai).
+Domain repo distribution:
+| House | Repos | House | Repos |
+|-------|-------|-------|-------|
+| H01 | 3 | H07 | 6 |
+| H02 | 11 | H08 | 3 |
+| H03 | 1 | H09 | 1 |
+| H04 | 13 | H10 | 5 |
+| H05 | 6 | H11 | 18 |
+| H12 | 24 | | |
 
 ### Phase 5: Deployment Pipeline
 
