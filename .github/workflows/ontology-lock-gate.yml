@@ -1,0 +1,80 @@
+name: Ontology Lock Gate (D-89) — Warn Mode
+
+on:
+  pull_request:
+    branches: [master, main]
+    paths:
+      - 'houses/**'
+      - 'registries/**'
+      - 'e145/**'
+  push:
+    branches: [master, main]
+    paths:
+      - 'houses/**'
+      - 'registries/**'
+      - 'e145/**'
+
+jobs:
+  ontology-lock-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Verify ontology lock file exists
+        run: |
+          if [ ! -f "registries/ontology_lock.sha256" ]; then
+            echo "::warning::Ontology lock file missing. Run 'python toolchain/regen_registries.py' to generate."
+            echo "D-89 WARN MODE: missing lock file detected but not blocking."
+          else
+            echo "Ontology lock file present"
+          fi
+
+      - name: Regenerate ontology hashes and verify
+        run: |
+          if [ -f "toolchain/update_ontology_lock.py" ]; then
+            python toolchain/update_ontology_lock.py --verify-only || echo "::warning::Ontology lock verification reported drift."
+          elif [ -f "toolchain/regen_registries.py" ]; then
+            echo "Using regen_registries.py for verification..."
+            python -c "
+          import hashlib, sys
+          from pathlib import Path
+          files = [
+            'e145/aluminum-os-core/lattice_ontology_v2.py',
+            'registries/lattice_ontology.yaml',
+            'registries/12x12_matrix.yaml',
+            'registries/module_registry.yaml',
+          ]
+          lock_file = Path('registries/ontology_lock.sha256')
+          if not lock_file.exists():
+            print('::warning::No lock file to compare against')
+            sys.exit(0)
+          lock_content = lock_file.read_text()
+          drift = False
+          for f in files:
+            p = Path(f)
+            if p.exists():
+              h = hashlib.sha256(p.read_bytes()).hexdigest()
+              if h not in lock_content:
+                print(f'::warning::DRIFT detected in {f}')
+                drift = True
+              else:
+                print(f'OK: {f}')
+            else:
+              print(f'::warning::MISSING: {f}')
+              drift = True
+          if drift:
+            print('D-89 WARN MODE: drift detected but not blocking.')
+          else:
+            print('D-89 compliant — all hashes match lock file')
+          "
+          else
+            echo "::warning::No verification toolchain found."
+          fi
