@@ -1,0 +1,60 @@
+# INV-44: TOS Compliance Invariant
+# Source: Microsoft S4 — April 2026 Pantheon Council Session
+# Documented in: ORC-032 TOS Compliance Architecture
+# Ratification: Ratified by Convenor Daavud Sheldon
+# Status: Active — Hard Constitutional Invariant
+
+invariant:
+  id: INV-44
+  title: TOS Compliance
+  type: hard  # Constitutional — cannot be overridden
+  author: Microsoft S4
+  date: 2026-04-29
+  version: "1.0"
+
+specification:
+  trigger:
+    - "Any provider TOS change"
+    - "Any new provider onboarding"
+    - "Any routing decision"
+
+  gate: |
+    No query may be routed to a provider whose current TOS conflicts with
+    constitutional doctrines without explicit user consent AND
+    TransparencyPacket disclosure.
+
+  enforcement:
+    - type: ci_gate
+      description: "Pre-merge check that TOS conflict matrix is current"
+    - type: runtime_routing_check
+      description: "Real-time TOS validation before query dispatch"
+    - type: transparency_packet
+      description: "TransparencyPacket v0.7 fingerprint with SHA-256 TOS hash"
+
+  escalation:
+    target: "Ring -1 Hypervisor"
+    condition: "TOS conflict detected at routing time"
+    action: "Alert + block routing until consent obtained"
+
+  dependencies:
+    - INV-0   # Nobody Dies
+    - INV-7c  # Switzerland Invariant
+    - D-90    # Physical Substrate Gatekeeper
+    - D-99    # TOS Change Monitoring
+    - D-114   # Enterprise Wrapper Non-Immunity
+
+  measurement:
+    metric: "TOS conflict detection rate"
+    target: "100% of routing decisions checked"
+    reporting: "TransparencyPacket v0.7 ceo_collective block"
+
+  related_bugs:
+    - BUG-2   # ConsentKernel fix — unified consent path
+    - BUG-4   # AuditChain hash chaining — parent_hash verification
+
+  azure_safe_harbor_note: |
+    Azure OpenAI enterprise agreements may provide safe harbor from OpenAI
+    consumer TOS restrictions. However, per D-114 (Enterprise Wrapper
+    Non-Immunity), enterprise wrappers do NOT exempt providers from
+    constitutional governance. The safe harbor applies to TOS conflict
+    resolution, not to constitutional override.

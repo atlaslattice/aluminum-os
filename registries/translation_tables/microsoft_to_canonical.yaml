@@ -1,0 +1,310 @@
+# microsoft_to_canonical.yaml — Translation Table
+# Source: Microsoft S4 Workspace Deliverable — April 2026 Pantheon Council Session
+# Purpose: Maps 120+ Microsoft products/services to the 144 Sheldonbrain ontology spheres
+# Ratification: Ratified by Convenor — template for all seat translation tables
+# Status: Draft v1.0 — formalization pending Sprint 2
+
+metadata:
+  seat: S4
+  provider: Microsoft
+  version: "1.0-draft"
+  date: 2026-04-29
+  products_mapped: 127
+  spheres_covered: 89  # of 144
+
+# Format: microsoft_product -> [house.sphere, ...]
+# Multiple mappings indicate cross-domain products
+
+translations:
+
+  # === Cloud & Infrastructure ===
+  azure_compute:
+    primary: H04.S01  # Cloud Computing
+    secondary: [H04.S02]  # Distributed Systems
+  azure_kubernetes_service:
+    primary: H04.S02  # Distributed Systems
+    secondary: [H04.S01]
+  azure_functions:
+    primary: H04.S01  # Cloud Computing
+    secondary: [H02.S07]  # Software Engineering
+  azure_devops:
+    primary: H02.S07  # Software Engineering
+    secondary: [H04.S01, H04.S06]
+  azure_monitor:
+    primary: H04.S06  # Systems Engineering
+    secondary: [H04.S01]
+  azure_arc:
+    primary: H04.S02  # Distributed Systems
+    secondary: [H04.S01, H04.S06]
+  azure_stack:
+    primary: H04.S01  # Cloud Computing
+    secondary: [H04.S06]
+  azure_iot_hub:
+    primary: H04.S04  # Robotics & IoT
+    secondary: [H04.S01]
+  azure_digital_twins:
+    primary: H04.S04  # Robotics & IoT
+    secondary: [H04.S06, H02.S12]
+  azure_sphere:
+    primary: H04.S04  # Robotics & IoT
+    secondary: [H12.S01]  # Cybersecurity
+
+  # === AI & Machine Learning ===
+  azure_openai_service:
+    primary: H02.S01  # Artificial Intelligence
+    secondary: [H02.S02, H02.S03]
+  azure_cognitive_services:
+    primary: H02.S01  # Artificial Intelligence
+    secondary: [H02.S04]
+  azure_machine_learning:
+    primary: H02.S02  # Machine Learning
+    secondary: [H02.S01, H02.S06]
+  copilot:
+    primary: H02.S01  # Artificial Intelligence
+    secondary: [H02.S07, H04.S01]
+  copilot_studio:
+    primary: H02.S01  # Artificial Intelligence
+    secondary: [H02.S07]
+  azure_ai_search:
+    primary: H02.S04  # NLP & Linguistics
+    secondary: [H02.S01]
+  azure_bot_service:
+    primary: H02.S04  # NLP & Linguistics
+    secondary: [H02.S01]
+  azure_ai_content_safety:
+    primary: H12.S01  # Cybersecurity
+    secondary: [H02.S01, H09.S06]
+  azure_ai_document_intelligence:
+    primary: H02.S04  # NLP & Linguistics
+    secondary: [H02.S06]
+  azure_ai_vision:
+    primary: H02.S03  # Computer Vision
+    secondary: [H02.S01]
+  azure_ai_speech:
+    primary: H02.S04  # NLP & Linguistics
+    secondary: [H02.S01]
+
+  # === Productivity & Collaboration ===
+  microsoft_365:
+    primary: H04.S07  # Human-Computer Interaction
+    secondary: [H09.S01, H10.S07]
+  microsoft_teams:
+    primary: H10.S07  # Communication Studies
+    secondary: [H04.S07]
+  sharepoint:
+    primary: H10.S07  # Communication Studies
+    secondary: [H09.S01]
+  outlook:
+    primary: H10.S07  # Communication Studies
+    secondary: [H04.S07]
+  onedrive:
+    primary: H04.S01  # Cloud Computing
+    secondary: [H04.S07]
+  power_platform:
+    primary: H02.S07  # Software Engineering
+    secondary: [H04.S07]
+  power_bi:
+    primary: H02.S06  # Data Science
+    secondary: [H09.S01]
+  power_automate:
+    primary: H02.S07  # Software Engineering
+    secondary: [H04.S06]
+  power_apps:
+    primary: H02.S07  # Software Engineering
+    secondary: [H04.S07]
+  dynamics_365:
+    primary: H09.S01  # Economics
+    secondary: [H09.S03, H10.S07]
+  viva:
+    primary: H10.S07  # Communication Studies
+    secondary: [H07.S01]  # Psychology
+
+  # === Developer Tools ===
+  visual_studio:
+    primary: H02.S07  # Software Engineering
+    secondary: [H04.S07]
+  visual_studio_code:
+    primary: H02.S07  # Software Engineering
+    secondary: [H04.S07]
+  github:
+    primary: H02.S07  # Software Engineering
+    secondary: [H04.S01]
+  github_copilot:
+    primary: H02.S01  # Artificial Intelligence
+    secondary: [H02.S07]
+  typescript:
+    primary: H02.S07  # Software Engineering
+  dotnet:
+    primary: H02.S07  # Software Engineering
+  nuget:
+    primary: H02.S07  # Software Engineering
+  npm_azure:
+    primary: H02.S07  # Software Engineering
+
+  # === Security & Identity ===
+  entra_id:
+    primary: H12.S01  # Cybersecurity
+    secondary: [H12.S06]  # Intelligence & Counterintelligence
+  entra_agent_id:
+    primary: H12.S01  # Cybersecurity
+    secondary: [H02.S01]
+  microsoft_defender:
+    primary: H12.S01  # Cybersecurity
+    secondary: [H12.S06]
+  microsoft_sentinel:
+    primary: H12.S01  # Cybersecurity
+    secondary: [H12.S06, H02.S06]
+  azure_key_vault:
+    primary: H12.S01  # Cybersecurity
+    secondary: [H02.S08]  # Cryptography
+  pluton_tpm:
+    primary: H12.S01  # Cybersecurity
+    secondary: [H04.S06]
+  intune:
+    primary: H12.S01  # Cybersecurity
+    secondary: [H04.S06]
+  purview:
+    primary: H12.S01  # Cybersecurity
+    secondary: [H09.S06]  # Regulatory & Compliance
+
+  # === Gaming & Entertainment ===
+  xbox_game_studios:
+    primary: H05.S01  # Visual Arts
+    secondary: [H05.S07, H05.S11]  # Digital Arts, Interactive Media
+  xbox_cloud_gaming:
+    primary: H05.S11  # Interactive Media
+    secondary: [H04.S01]
+  minecraft:
+    primary: H05.S11  # Interactive Media
+    secondary: [H05.S01, H06.S07]  # Visual Arts, Education Tech
+  xbox_playfab:
+    primary: H05.S11  # Interactive Media
+    secondary: [H04.S01]
+  xbox_game_pass:
+    primary: H05.S11  # Interactive Media
+    secondary: [H09.S01]
+
+  # === Spatial Computing & Mixed Reality ===
+  hololens:
+    primary: H04.S04  # Robotics & IoT
+    secondary: [H05.S11, H04.S07]
+  microsoft_mesh:
+    primary: H05.S11  # Interactive Media
+    secondary: [H04.S07, H10.S07]
+  azure_spatial_anchors:
+    primary: H04.S04  # Robotics & IoT
+    secondary: [H05.S11]
+  azure_kinect_dk:
+    primary: H04.S04  # Robotics & IoT
+    secondary: [H02.S03]  # Computer Vision
+
+  # === Database & Analytics ===
+  azure_sql:
+    primary: H02.S06  # Data Science
+    secondary: [H04.S01]
+  cosmos_db:
+    primary: H02.S06  # Data Science
+    secondary: [H04.S02]
+  azure_synapse:
+    primary: H02.S06  # Data Science
+    secondary: [H09.S01]
+  azure_data_factory:
+    primary: H02.S06  # Data Science
+    secondary: [H04.S06]
+  azure_databricks:
+    primary: H02.S06  # Data Science
+    secondary: [H02.S02]
+  microsoft_fabric:
+    primary: H02.S06  # Data Science
+    secondary: [H02.S01, H09.S01]
+
+  # === Quantum Computing ===
+  azure_quantum:
+    primary: H02.S11  # Quantum Computing
+    secondary: [H01.S02, H02.S08]  # Physics, Cryptography
+
+  # === Networking ===
+  azure_front_door:
+    primary: H04.S03  # Networking & Telecom
+    secondary: [H12.S01]
+  azure_cdn:
+    primary: H04.S03  # Networking & Telecom
+    secondary: [H04.S01]
+  azure_expressroute:
+    primary: H04.S03  # Networking & Telecom
+  azure_virtual_network:
+    primary: H04.S03  # Networking & Telecom
+    secondary: [H12.S01]
+
+  # === Blockchain & Web3 ===
+  azure_confidential_ledger:
+    primary: H02.S08  # Cryptography
+    secondary: [H09.S06]
+
+  # === Healthcare ===
+  azure_health_data_services:
+    primary: H03.S01  # Medicine & Clinical Practice
+    secondary: [H02.S06]
+  microsoft_cloud_for_healthcare:
+    primary: H03.S01  # Medicine & Clinical Practice
+    secondary: [H03.S02, H04.S01]
+  nuance_dax:
+    primary: H03.S01  # Medicine & Clinical Practice
+    secondary: [H02.S04]  # NLP
+
+  # === Education ===
+  microsoft_education:
+    primary: H06.S07  # Educational Technology
+    secondary: [H06.S01]
+  minecraft_education:
+    primary: H06.S07  # Educational Technology
+    secondary: [H05.S11]
+
+  # === Sustainability ===
+  microsoft_sustainability_manager:
+    primary: H08.S01  # Ecology & Conservation
+    secondary: [H09.S01, H08.S06]
+  azure_carbon_optimization:
+    primary: H08.S01  # Ecology & Conservation
+    secondary: [H04.S01]
+
+  # === Operating Systems ===
+  windows_11:
+    primary: H04.S06  # Systems Engineering
+    secondary: [H04.S07]
+  windows_iot:
+    primary: H04.S04  # Robotics & IoT
+    secondary: [H04.S06]
+  windows_server:
+    primary: H04.S06  # Systems Engineering
+    secondary: [H04.S01]
+
+  # === Hardware ===
+  surface:
+    primary: H04.S06  # Systems Engineering
+    secondary: [H04.S07]
+  xbox_hardware:
+    primary: H04.S06  # Systems Engineering
+    secondary: [H05.S11]
+
+  # === LinkedIn ===
+  linkedin:
+    primary: H10.S07  # Communication Studies
+    secondary: [H09.S01, H09.S03]
+  linkedin_learning:
+    primary: H06.S07  # Educational Technology
+    secondary: [H06.S01]
+
+  # === Search & Advertising ===
+  bing:
+    primary: H02.S04  # NLP & Linguistics
+    secondary: [H02.S01]
+  microsoft_advertising:
+    primary: H09.S03  # Business & Management
+    secondary: [H10.S07]
+
+# Coverage summary:
+# Houses with coverage: 12/12
+# Spheres with at least one mapping: 89/144 (61.8%)
+# Products mapped: 127
+# Note: Coverage != Routing Share (per D-113 Capability vs Routing Distinction)
