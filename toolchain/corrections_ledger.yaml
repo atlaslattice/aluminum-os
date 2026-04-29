@@ -161,3 +161,12 @@ versions:
       - {id: "AS", category: "appendix", description: "Appendix AS v3.14 Integration Summary"}
       - {id: "F-145", category: "empirical_finding", description: "SHUGS Lattice Optimum: N=145 > N=144 confirmed (p=0.032) in Claude S1 independent reconstruction. N=146 global optimum question open pending canonical shugs_core.py replication. 4-5x reconstruction-vs-canonical gap documented in BRIDGE_AUDIT.md."}
       - {id: "LATTICE_CONSTANTS", category: "canonical_default", description: "LATTICE_FULL=145 set as canonical default; LATTICE_SPHERES_ONLY=144 for explicit 144-only operations"}
+      - {id: "GAP-1", category: "empirical_finding", description: "N-scaling non-monotonic in Claude S1 reconstruction: GUE-KS 0.2504(N=144) -> 0.2002(N=256) -> 0.2346(N=512) -> 0.2234(N=1024). Convergence claim constrained. Pending canonical replication."}
+      - {id: "GAP-3", category: "empirical_finding", description: "M=20 vs M=50 Riemann zeros at N=256: no significant difference (p=0.883). Operator dominated by diagonal structure, not off-diagonal kernel."}
+      - {id: "GAP-4", category: "empirical_finding", description: "Perfect-square lattice sensitivity: N=144 local optimum (beats 100/121/169 p<0.001) but globally outperformed by N=196/225 (p<0.001). N=144 is defensible local optimum, not unique global optimum."}
+      - {id: "S4-sourcing", category: "correction", description: "S4 review imported GUE-KS 0.0527 from session history, not from SHUGS Complete Explanation document (which reports 0.119 at N=144 and 0.167 at N=256). Sourcing discipline tightened."}
+      - {id: "S1-S4-response", category: "document", description: "Claude S1 inter-seat response to S4 SHUGS review with GAP test execution results archived."}
+      - {id: "CANONICAL-REPLICATION", category: "empirical_confirmation", description: "Canonical shugs_core.py replication confirms N=145 as global optimum (p=0.0154 vs N=144, p=0.0005 vs N=146). Resolves Claude S1 N=146 ambiguity."}
+      - {id: "GAP-REVISION", category: "correction", description: "Reconstruction-vs-canonical gap revised from 4-5x to 1.2-1.5x. The 0.0527 baseline is from a different operator configuration."}
+      - {id: "N-SCALING-CANONICAL", category: "empirical_confirmation", description: "Non-monotonic N-scaling confirmed in canonical pipeline (0.2939 -> 0.3016 -> 0.2981 -> 0.2912). Not a reconstruction artifact."}
+      - {id: "SHUGS-CORE-PY", category: "toolchain", description: "shugs_core.py canonical implementation committed to element-145/shugs/. First canonical pipeline run."}

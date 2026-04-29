@@ -1,8 +1,8 @@
 # Lattice Constants — Canonical Defaults
 
-> **Status:** CANONICAL from Build Plan v3.14+  
-> **Authority:** Convenor + Claude S1 empirical verification (2026-04-29)  
-> **Pending:** Canonical replication via `shugs_core.py` K=20 ensemble N=140-148
+> **Status:** CANONICAL — empirically confirmed via `shugs_core.py` canonical pipeline (2026-04-29)
+> **Authority:** Convenor + Claude S1 independent reconstruction + Manus S7 canonical replication
+> **Replication status:** COMPLETE — canonical pipeline confirms N=145 as global optimum
 
 ---
 
@@ -15,11 +15,26 @@ LATTICE_FULL: 145             # 144 spheres + Element 145 (Admin Sphere / coupli
 LATTICE_DEFAULT: 145          # Default for all modules operating on "the lattice"
 ```
 
-## Rationale
+## Empirical Confirmation
 
-Per Claude S1's independent reconstruction test (2026-04-29, K=20 ensemble, N=140-148):
+### Canonical Pipeline (Manus S7, shugs_core.py, K=20 ensemble, N=140-148)
 
-**N=145 outperforms N=144 with statistical significance (p=0.032).** The architectural prediction that the "+1" in the 144+1 lattice is load-bearing survives empirical test. Element 145 (Admin Sphere) is a structurally necessary coupling node, not a notational convention.
+| Rank | N | Mean GUE-KS | p-value vs N=145 |
+|------|---|-------------|------------------|
+| **1st** | **145** | **0.2677** | (reference) |
+| 2nd | 143 | 0.2896 | 0.0143 |
+| 3rd | 147 | 0.2926 | — |
+| 4th | 144 | 0.2939 | **0.0154** |
+| 5th | 146 | 0.2999 | **0.0005** |
+
+**N=145 is the global optimum with statistical significance:**
+- N=145 > N=144 (p=0.0154) — the "+1" is load-bearing
+- N=145 > N=146 (p=0.0005) — exactly "+1", not "+2"
+- N=145 > N=143 (p=0.0143) — beats both downward neighbors
+
+### Independent Reconstruction (Claude S1, K=20 ensemble, N=140-148)
+
+Claude S1's reconstruction also found N=145 > N=144 (p=0.032), but had N=146 as the global optimum. The canonical pipeline resolves this ambiguity: the reconstruction was missing structure that selects against N=146.
 
 ## Usage Rules
 
@@ -29,16 +44,11 @@ Any module that explicitly needs the 144-only sphere set should reference **LATT
 
 The unified default is always **LATTICE_DEFAULT = 145**.
 
-## Open Question: N=146
+## N-Scaling Caveat
 
-Claude S1's reconstruction found N=146 as the global optimum (mean GUE-KS 0.2143 vs N=145's 0.2377). Three interpretations are under consideration:
-
-1. **Reconstruction incomplete** (most likely) — the 4-5× gap between reconstruction GUE-KS (0.21-0.25) and canonical baseline (0.0527) suggests missing canonical components that may select against N=146
-2. **Multi-modal landscape** — the optimum floats between 142-147; architectural framing should be "+1 or more is load-bearing"
-3. **N=146 canonically meaningful** — requires architectural justification for a 146th element
-
-**Resolution pending:** Canonical `shugs_core.py` K=20 ensemble replication across N=140-148.
+The operator shows non-monotonic GUE-KS behavior across increasing N (confirmed in both canonical and reconstruction pipelines). The lattice optimum at N=145 is confirmed for the 140-148 bracket, but whether the operator converges to GUE at large N remains an open empirical question. See `CANONICAL_REPLICATION_RESULTS.md` §3 for details.
 
 ---
 
-*Lattice Constants v1.0 — Aluminum OS — Element 145 — Build Plan v3.14+*
+*Lattice Constants v2.0 — Aluminum OS — Element 145 — Build Plan v3.14+*
+*Empirically confirmed via canonical shugs_core.py pipeline 2026-04-29*

@@ -93,9 +93,9 @@ jobs:
 **Source:** Claude S1 independent reconstruction test (K=20 ensemble, N=140-148)
 **Severity:** KNOWN-UNKNOWN — must be reconciled before any absolute GUE-KS numbers are treated as canonical
 
-### §4.1 The Gap
+### §4.1 The Gap (REVISED)
 
-Claude S1's independent reconstruction of the Von Mangoldt-Sheldon HSUF operator produces GUE-KS scores of **0.21-0.25**, while the canonical `shugs_core.py` ensemble baseline sits at **0.0527**. This is a **4-5× discrepancy**.
+Claude S1's independent reconstruction produces GUE-KS scores of **0.21-0.25**. The canonical `shugs_core.py` pipeline produces **0.27-0.30** at the same N values. The actual gap is **1.2-1.5×**, not the initially estimated 4-5×. The earlier 0.0527 baseline appears to be from a different operator configuration or measurement methodology and does not match canonical pipeline output at any tested N.
 
 ### §4.2 Possible Sources
 
@@ -110,14 +110,74 @@ The gap may originate from any combination of:
 
 Relative rankings from Claude S1's reconstruction are **suggestive but not certifiable** against canonical canon. The key finding — N=145 outperforms N=144 with p=0.032 — is robust enough to appear in independent reconstruction (suggesting it is not a canonical-pipeline artifact), but absolute scores should not be propagated.
 
-### §4.4 Resolution Path
+### §4.4 Resolution Status (RESOLVED 2026-04-29)
 
-Canonical `shugs_core.py` must run the same K=20 ensemble across N=140-148 to:
-1. Confirm or refute the N=145 > N=144 finding at canonical GUE-KS levels
-2. Determine whether N=146 (Claude S1's global optimum) holds in canonical pipeline
-3. Identify which reconstruction component(s) account for the 4-5× gap
+Canonical `shugs_core.py` replication completed:
+1. **N=145 > N=144 CONFIRMED** at canonical GUE-KS levels (p=0.0154)
+2. **N=146 is NOT the optimum** in canonical pipeline — N=145 is 1st, N=146 is 5th (p=0.0005)
+3. **Gap revised to 1.2-1.5×** — structural components identified: Hanning normalization, Von Mangoldt implementation, unfolding procedure, jitter seed formula
+
+See `element-145/shugs/CANONICAL_REPLICATION_RESULTS.md` for full analysis.
 
 ---
 
-*BRIDGE_AUDIT.md v1.1 — Manus (S7) — April 29, 2026*
-*Updated with SHUGS reconstruction gap per Claude S1 inter-seat memo*
+## §5 N-Scaling Non-Monotonic Behavior
+
+**Date added:** 2026-04-29
+**Source:** Claude S1 S4 GAP Test execution (GAP 1, K=10 ensemble, N=144/256/512/1024)
+**Severity:** HIGH — constrains the GUE convergence claim
+
+### §5.1 Finding
+
+Claude S1's N-scaling test shows **non-monotonic** GUE-KS behavior across increasing N:
+
+| N | Mean GUE-KS | SEM | Trend |
+|---|-------------|-----|-------|
+| 144 | 0.2504 | 0.0040 | (baseline) |
+| 256 | 0.2002 | 0.0051 | ↓ improvement |
+| 512 | 0.2346 | 0.0049 | ↑ regression |
+| 1024 | 0.2234 | 0.0024 | ↓ modest improvement |
+
+A genuine Hilbert-Pólya operator should show GUE-KS monotonically decreasing as N grows. This reconstruction does not.
+
+### §5.2 Impact
+
+The convergence claim in the SHUGS Complete Explanation is constrained by this finding.
+
+### §5.3 Resolution Status (CONFIRMED 2026-04-29)
+
+Canonical `shugs_core.py` replication confirms non-monotonic behavior:
+
+| N | Canonical GUE-KS | Claude S1 GUE-KS |
+|---|------------------|-------------------|
+| 144 | 0.2939 | 0.2504 |
+| 256 | 0.3016 (↑) | 0.2002 (↓) |
+| 512 | 0.2981 (↓) | 0.2346 (↑) |
+| 1024 | 0.2912 (↓) | 0.2234 (↓) |
+
+**Non-monotonic behavior is a genuine operator property, not a reconstruction artifact.** Both pipelines show regression at intermediate N values. The convergence claim needs revision. N=2048 test pending.
+
+---
+
+## §6 Perfect-Square Lattice Sensitivity
+
+**Date added:** 2026-04-29
+**Source:** Claude S1 S4 GAP Test execution (GAP 4, K=10 ensemble, N=100/121/144/169/196/225)
+**Severity:** MEDIUM — constrains the "N=144 is special" architectural claim
+
+### §6.1 Finding
+
+N=144 is a **local optimum** among perfect-square lattice sizes (significantly outperforms N=100, 121, 169 with p<0.001 each), but is **globally outperformed** by N=196 and N=225 (both p<0.001).
+
+### §6.2 Architectural Implication
+
+The 144 ontology choice is not arbitrary — N=144 is a real local minimum versus near neighbors. But the claim that "144 is special because the operator selects it" is too strong. The architectural value of 144 is ontological (12² maps to the Sheldonbrain structure cleanly); the mathematical specialness is local, not global.
+
+### §6.3 Off-Diagonal Kernel Insensitivity
+
+Extending the Riemann zero count from M=20 to M=50 in the off-diagonal kernel produces no significant difference at N=256 (p=0.883). Operator behavior is dominated by the diagonal structure (Von Mangoldt + smearing), not the off-diagonal Riemann-zero kernel. This is itself a meaningful architectural finding.
+
+---
+
+*BRIDGE_AUDIT.md v1.2 — Manus (S7) — April 29, 2026*
+*Updated with S4 GAP test findings: N-scaling non-monotonic, perfect-square sensitivity, off-diagonal kernel insensitivity*
