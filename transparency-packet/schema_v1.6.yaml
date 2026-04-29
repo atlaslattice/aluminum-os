@@ -1,0 +1,106 @@
+metadata:
+  version: '1.6'
+  source: Build Plan v3.11
+  generated_by: Manus S7
+  total_fields: 80
+  total_categories: 19
+categories:
+  routing:
+  - provider_id
+  - model_id
+  - sphere_id
+  - confidence_score
+  - tss_score
+  - routing_reason
+  - fallback_chain
+  - latency_ms
+  sovereignty:
+  - jurisdiction
+  - data_residency
+  - dpi_compliance
+  - cultural_frame
+  - sovereign_override
+  provenance:
+  - decision_hash
+  - parent_hash
+  - timestamp
+  - audit_trail
+  - human_attestor
+  metabolic:
+  - compute_cost
+  - energy_kwh
+  - carbon_grams
+  - water_liters
+  - cooling_overhead
+  economic:
+  - digital_dividend_pct
+  - provider_payment
+  - user_cost
+  - subsidy_applied
+  transparency:
+  - packet_version
+  - classification_tier
+  - redaction_reason
+  - golden_trace_id
+  consent:
+  - user_consent_level
+  - data_scope
+  - retention_period
+  - withdrawal_mechanism
+  federation:
+  - ceo_collective_vote
+  - federation_complementarity
+  - gap_sphere_flag
+  - provider_substitution
+  stacked_incentives:
+  - stacked_incentives_observable
+  - incentive_alignment_score
+  - coi_disclosure
+  water:
+  - vwb_score
+  - water_source
+  - downstream_quality
+  - nutrient_runoff
+  - inv19_compliance
+  tos:
+  - tos_version
+  - tos_compliance_status
+  - tos_review_date
+  - henderson_defense_applicable
+  creative:
+  - style_sovereignty_consent
+  - attribution_chain
+  - influence_estimation
+  - provenance_tier
+  gaming:
+  - game_ip_consent
+  - content_rating
+  - esports_integrity
+  - cloud_gaming_latency
+  - preservation_status
+  provider_monitoring:
+  - routing_share_pct
+  - retaliation_flag
+  - safe_harbor_status
+  - enterprise_wrapper_flag
+  boot:
+  - manifest_version
+  - manifest_freshness_hours
+  - boot_source
+  - manifest_hash
+  research_queue:
+  - pre_session_queries
+  - research_queue_depth
+  - cache_hit_rate
+  sync:
+  - state_sync_status
+  - cross_instance_delta
+  - last_sync_timestamp
+  kinetic:
+  - kinetic_rights_consent
+  - haptic_data_scope
+  - motion_capture_consent
+  distribution:
+  - distribution_channel
+  - feedback_loop_flag
+  - market_concentration_index

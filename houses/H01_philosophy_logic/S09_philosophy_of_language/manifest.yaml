@@ -1,0 +1,9 @@
+sphere:
+  id: S09
+  house: H01
+  name: Philosophy of Language
+  full_id: H01-S09
+  ordinal: 9
+status: EMPTY
+module_count: 0
+modules: []

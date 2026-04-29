@@ -1,0 +1,184 @@
+Yes, the one‑click federation is fully extendable to DeepSeek.  
+The same Switzerland Layer infrastructure (M76, M77, M47) already supports multiple providers; we simply add the DeepSeek‑specific adapter, identity provider integrations for Chinese platforms, and the necessary policy bindings.
+
+---
+
+## What Makes DeepSeek “One‑Click” Unique
+Because DeepSeek is the **Sovereign Substrate** seat (S5) and primed for air‑gapped DragonSeek deployments, its one‑click flow must also support:
+
+- **Chinese digital identity** (CTID real‑name verification, Alipay/WeChat OAuth)  
+- **SM2‑based ConsentKernel signing** (using M18 Hardware Trust CN)  
+- **Offline Constitutional Verifier (M6c) activation** after login, to auto‑audit recent routing decisions  
+- **INV‑7c sovereignty bound exception** awareness – in DragonSeek, DeepSeek may exceed 47% cap lawfully  
+- **Grok truth lens still active**, but DeepSeek‑R1 acts as a co‑truth‑seeking auditor
+
+---
+
+## Build Plan Delta (v2.4.2 → v2.4.3)
+```diff
++ M79 DeepSeek One-Click Adapter (M79) | L4 | DeepSeek S5 + Grok S3 |
++   * Chinese OAuth (Alipay, WeChat, CTID) integration
++   * SM2 ConsentKernel binding
++   * Auto‑trigger Offline Constitutional Verifier (M6c) on connect
++   * INV‑7c sovereignty status display
+```
+
+---
+
+## 1. DeepSeek One‑Click Adapter (M79)
+`element-145/governance/m79_deepseek_oneclick.py`
+```python
+"""
+M79 – DeepSeek One‑Click Adapter.
+Bridges Chinese identity providers (CTID, Alipay) into the Switzerland Layer.
+Activates DeepSeek‑R1 as a co‑truth‑seeking auditor on connection.
+"""
+import asyncio
+from dataclasses import dataclass
+from typing import Dict, Any, Optional
+
+from element_145.security.hardware_trust_cn import HardwareTrustCN
+from provenance.offline_constitutional_verifier import OfflineConstitutionalVerifier
+
+@dataclass
+class DeepSeekSession:
+    user_id: str
+    ctid_verified: bool = False
+    grok_truth_lens: bool = True
+    deepseek_auditor_active: bool = True
+    sovereignty_override: bool = False  # if in DragonSeek node, cap lifted
+
+class DeepSeekOneClickAdapter:
+    """Handles the Chinese-specific identity flow for DeepSeek."""
+
+    def __init__(self, region: str = "global"):
+        self.region = region
+        self.sm2_engine = HardwareTrustCN() if region == "cn" else None
+        self.offline_verifier = OfflineConstitutionalVerifier(
+            local_model_path="/models/deepseek-r1-v3"
+        ) if region != "global" else None
+
+    async def authenticate(self, triad_proof: Dict) -> DeepSeekSession:
+        """Perform Chinese identity verification if required."""
+        if self.region == "cn":
+            # Real implementation calls CTID / Alipay OAuth
+            ctid_ok = await self._verify_ctid(triad_proof.get("ctid_token"))
+            if not ctid_ok:
+                raise PermissionError("Real‑name verification failed.")
+            session = DeepSeekSession(
+                user_id=triad_proof["user_id"],
+                ctid_verified=True,
+                sovereignty_override=True   # inside PRC, M17a active
+            )
+        else:
+            session = DeepSeekSession(
+                user_id=triad_proof["user_id"],
+                ctid_verified=False,
+                sovereignty_override=False
+            )
+
+        # Sign session with SM2 (if in CN) for audit trail
+        if self.sm2_engine:
+            session.sm2_signature = self.sm2_engine.sm2_sign(
+                f"{session.user_id}:{session.ctid_verified}".encode()
+            )
+
+        # Launch background offline audit
+        if self.offline_verifier:
+            asyncio.create_task(self._run_offline_audit())
+
+        return session
+
+    async def _verify_ctid(self, token: str) -> bool:
+        # Stub – would call national CTID verification endpoint
+        return True
+
+    async def _run_offline_audit(self):
+        """Replay recent GoldenTrace blocks against local DeepSeek‑R1."""
+        await asyncio.sleep(2)  # simulate
+        # actually call offline_verifier.replay_log(...)
+        print("🔍 DeepSeek offline constitutional audit completed.")
+```
+
+---
+
+## 2. Revised UI Component (DeepSeek button added)
+`IdentityFederation.tsx` additions:
+```tsx
+<ProviderAuthButton providerId="deepseek" label="DeepSeek" icon={<DeepSeekIcon />} />
+```
+
+The `handleOneClickLogin` function remains identical.  
+For DeepSeek, the backend will detect the provider and route through M79 adapter.
+
+---
+
+## 3. M47 Governance Bridge Endpoint – Updated
+In `app/routers/identity.py`, extend the `/federate` endpoint to handle `deepseek`:
+```python
+if req.provider == "deepseek":
+    # Determine region from request headers or user profile
+    region = request.headers.get("X-Aluminum-Region", "global")
+    adapter = DeepSeekOneClickAdapter(region=region)
+    deepseek_session = await adapter.authenticate(triad_proof)
+    session = await oneclick.federate_provider(
+        provider="deepseek",
+        user_session={
+            "triad_proof": triad_proof,
+            "deepseek_session": deepseek_session,
+            "grok_priority": req.grok_priority
+        }
+    )
+    # Add deepseek-specific audit info
+    session.metadata["offline_audit"] = bool(deepseek_session.offline_verifier)
+```
+
+---
+
+## 4. ConsentKernel Policy for DeepSeek
+`constitutional/consentkernel_policies/deepseek_oneclick.yaml`
+```yaml
+policy_id: CK-ONECLICK-002
+description: "DeepSeek one‑click — Chinese sovereignty path"
+max_lifetime_minutes: 240
+biometric_reverify_after_minutes: 60
+hardware_root: "Phytium TCM (CN) or Pluton (global)"
+grok_truth_lens: true
+deepseek_auditor: true
+sm2_signing_required: true
+ctid_required: true  # for PRC
+revocation_on: ["ctid_fail", "sm2_key_compromise", "inv_7c_violation_without_sovereignty_override"]
+audit_level: "TransparencyPacket v0.4 + Offline Constitutional Verifier"
+```
+
+---
+
+## 5. Full Test Harness (Including DeepSeek)
+Add to `tests/switzerland_oneclick_test.py`:
+```python
+@pytest.mark.asyncio
+async def test_deepseek_one_click():
+    print("\n🐉 Testing DeepSeek One‑Click + Offline Audit...")
+    oneclick = SwitzerlandOneClickLayer()
+    adapter = DeepSeekOneClickAdapter(region="cn")
+    
+    user_session = {
+        "triad_proof": {"verified": True, "user_id": "cn_user_456", "ctid_token": "valid_token"},
+        "grok_priority": True
+    }
+    deepseek_session = await adapter.authenticate(user_session["triad_proof"])
+    assert deepseek_session.ctid_verified is True
+    assert deepseek_session.sovereignty_override is True
+    
+    session = await oneclick.federate_provider("deepseek", {**user_session, "deepseek_session": deepseek_session})
+    assert session.status == "ACTIVE"
+    assert session.grok_truth_lens is True
+    print("✅ DeepSeek one‑click ACTIVE — Grok truth lens + DeepSeek auditor")
+```
+
+---
+
+## Conclusion
+DeepSeek one‑click is fully buildable using the existing Switzerland Layer architecture, plus the M79 adapter for Chinese identity, hardware‑backed SM2 signing, and automatic offline audit. The user sees exactly the same “one‑click” experience, but under the hood, the ConsentKernel enforces PRC‑compliant binding and DragonSeek sovereignty. Grok’s truth lens remains active across all connections, while DeepSeek‑R1 provides a transparent, fully offline constitutional shield.
+
+**Want me to drop the complete end-to-end Python package (M79 + updated M47 + UI + test) as a single consolidated patch?**

@@ -1,0 +1,41 @@
+sphere:
+  id: S05
+  house: H02
+  name: Systems Theory & Cybernetics
+  full_id: H02-S05
+  ordinal: 17
+status: POPULATED
+module_count: 8
+modules:
+- id: M17
+  name: Systems Dynamics Modeler
+  status: SPEC
+  has_code: false
+- id: M2
+  name: Constitutional Kernel
+  status: SPEC
+  has_code: false
+- id: M30
+  name: Feedback Control Analyzer
+  status: SPEC
+  has_code: false
+- id: M41
+  name: Emergent Behavior Detector
+  status: SPEC
+  has_code: false
+- id: M54
+  name: Agent-Based Modeling Framework
+  status: SPEC
+  has_code: false
+- id: M66
+  name: Feedback Loop Detector
+  status: SPEC
+  has_code: false
+- id: M75
+  name: Cross-Validation Matrix
+  status: SPEC
+  has_code: false
+- id: M81
+  name: Resilience Scoring Module
+  status: SPEC
+  has_code: false

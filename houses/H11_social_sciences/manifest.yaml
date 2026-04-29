@@ -1,0 +1,81 @@
+house:
+  id: H11
+  name: Social Sciences
+  sphere_count: 12
+  populated_spheres: 3
+  coverage_pct: 25.0
+total_modules: 3
+modules:
+- id: M139
+  name: Economic Modeling Engine
+  sphere: S01
+- id: M140
+  name: Policy Impact Analyzer
+  sphere: S02
+- id: M141
+  name: Behavioral Pattern Detector
+  sphere: S04
+spheres:
+  S01:
+    name: Economics & Finance
+    module_count: 1
+    status: POPULATED
+    modules:
+    - M139
+  S02:
+    name: Political Science & Government
+    module_count: 1
+    status: POPULATED
+    modules:
+    - M140
+  S03:
+    name: Sociology & Social Theory
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S04:
+    name: Psychology & Behavioral Science
+    module_count: 1
+    status: POPULATED
+    modules:
+    - M141
+  S05:
+    name: Geography & Spatial Analysis
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S06:
+    name: Demography & Population Studies
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S07:
+    name: Criminology & Justice Studies
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S08:
+    name: International Relations & Diplomacy
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S09:
+    name: Development Studies & Aid
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S10:
+    name: Urban Studies & Housing
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S11:
+    name: Labor Studies & Industrial Relations
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S12:
+    name: Public Administration & Policy
+    module_count: 0
+    status: EMPTY
+    modules: []

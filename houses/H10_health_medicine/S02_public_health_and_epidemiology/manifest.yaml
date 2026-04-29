@@ -1,0 +1,9 @@
+sphere:
+  id: S02
+  house: H10
+  name: Public Health & Epidemiology
+  full_id: H10-S02
+  ordinal: 110
+status: EMPTY
+module_count: 0
+modules: []

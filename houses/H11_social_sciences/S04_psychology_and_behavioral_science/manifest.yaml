@@ -1,0 +1,13 @@
+sphere:
+  id: S04
+  house: H11
+  name: Psychology & Behavioral Science
+  full_id: H11-S04
+  ordinal: 124
+status: POPULATED
+module_count: 1
+modules:
+- id: M141
+  name: Behavioral Pattern Detector
+  status: SPEC
+  has_code: false

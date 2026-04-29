@@ -1,0 +1,41 @@
+sphere:
+  id: S06
+  house: H02
+  name: Decision Theory & Game Theory
+  full_id: H02-S06
+  ordinal: 18
+status: POPULATED
+module_count: 8
+modules:
+- id: M21
+  name: Strategic Reasoning Engine
+  status: SPEC
+  has_code: false
+- id: M31
+  name: Mechanism Design Module
+  status: SPEC
+  has_code: false
+- id: M43
+  name: Auction Theory Engine
+  status: SPEC
+  has_code: false
+- id: M55
+  name: Voting Theory Module
+  status: SPEC
+  has_code: false
+- id: M67
+  name: Nash Equilibrium Finder
+  status: SPEC
+  has_code: false
+- id: M78
+  name: Cooperative Game Solver
+  status: SPEC
+  has_code: false
+- id: M9
+  name: Game Theory Optimizer
+  status: SPEC
+  has_code: false
+- id: M91
+  name: Social Choice Function
+  status: SPEC
+  has_code: false

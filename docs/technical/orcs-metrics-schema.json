@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/atlaslattice/open-regenerative-compute-standard/technical/orcs-metrics-schema.json",
+  "title": "ORCS Tier 1 Facility Report",
+  "description": "Machine-readable schema for Open Regenerative Compute Standard Tier 1 facility metrics reports. Evidence Class: Proposed artifact.",
+  "type": "object",
+  "required": ["facility", "report_period", "boundary_statement", "metrics", "evidence_register"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1.0-draft",
+      "description": "ORCS metrics schema version"
+    },
+    "facility": {
+      "type": "object",
+      "required": ["name", "operator", "location"],
+      "properties": {
+        "name": { "type": "string", "description": "Facility name" },
+        "operator": { "type": "string", "description": "Operating entity" },
+        "location": {
+          "type": "object",
+          "required": ["city", "country"],
+          "properties": {
+            "city": { "type": "string" },
+            "state_province": { "type": "string" },
+            "country": { "type": "string" },
+            "latitude": { "type": "number" },
+            "longitude": { "type": "number" }
+          }
+        },
+        "boundary_type": {
+          "type": "string",
+          "enum": ["campus", "building", "region"],
+          "description": "Scope of measurement boundary"
+        }
+      }
+    },
+    "report_period": {
+      "type": "object",
+      "required": ["start_date", "end_date", "frequency"],
+      "properties": {
+        "start_date": { "type": "string", "format": "date" },
+        "end_date": { "type": "string", "format": "date" },
+        "frequency": {
+          "type": "string",
+          "enum": ["monthly", "quarterly", "annual"]
+        }
+      }
+    },
+    "boundary_statement": {
+      "type": "object",
+      "properties": {
+        "energy_includes": { "type": "string", "description": "What is counted as facility energy" },
+        "energy_excludes": { "type": "string", "description": "What is excluded from facility energy" },
+        "water_withdrawn_definition": { "type": "string" },
+        "water_consumed_definition": { "type": "string" },
+        "water_returned_definition": { "type": "string" }
+      }
+    },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "tier", "evidence_class", "value", "unit"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Metric name (e.g., PUE, WUE, CUE)"
+          },
+          "tier": {
+            "type": "integer",
+            "enum": [1, 2, 3],
+            "description": "1=Established, 2=Research proxy, 3=Proposed ORCS"
+          },
+          "evidence_class": {
+            "type": "string",
+            "enum": ["verified", "derived", "proposed"],
+            "description": "Evidence classification per ORCS taxonomy"
+          },
+          "value": {
+            "type": "number",
+            "description": "Metric value"
+          },
+          "unit": {
+            "type": "string",
+            "description": "Unit of measurement"
+          },
+          "methodology_reference": {
+            "type": "string",
+            "description": "Standard or method used (e.g., ISO/IEC 30134-2)"
+          },
+          "audited": {
+            "type": "boolean",
+            "description": "Whether this value has been independently audited"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Additional context, caveats, or normalization notes"
+          }
+        }
+      }
+    },
+    "evidence_register": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim", "evidence_class", "verification_method"],
+        "properties": {
+          "claim": { "type": "string" },
+          "evidence_class": {
+            "type": "string",
+            "enum": ["verified", "derived", "proposed"]
+          },
+          "verification_method": { "type": "string" },
+          "audited": { "type": "boolean" }
+        }
+      }
+    },
+    "pilot_data": {
+      "type": "object",
+      "description": "Optional: included only if reporting Tier 3 / pilot metrics",
+      "properties": {
+        "pilot_name": { "type": "string" },
+        "status": {
+          "type": "string",
+          "enum": ["planned", "active", "completed", "abandoned"]
+        },
+        "success_criteria": { "type": "string" },
+        "results_summary": { "type": "string" },
+        "artifacts_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Link to published pilot artifact package"
+        }
+      }
+    },
+    "attestation": {
+      "type": "object",
+      "properties": {
+        "prepared_by": { "type": "string" },
+        "date": { "type": "string", "format": "date" },
+        "reviewed_by": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+sphere:
+  id: S08
+  house: H10
+  name: Rehabilitation & Physical Therapy
+  full_id: H10-S08
+  ordinal: 116
+status: POPULATED
+module_count: 1
+modules:
+- id: M138
+  name: Health Informatics Engine
+  status: SPEC
+  has_code: false

@@ -1,0 +1,73 @@
+house:
+  id: H10
+  name: Health & Medicine
+  sphere_count: 12
+  populated_spheres: 1
+  coverage_pct: 8.3
+total_modules: 1
+modules:
+- id: M138
+  name: Health Informatics Engine
+  sphere: S08
+spheres:
+  S01:
+    name: Clinical Medicine & Surgery
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S02:
+    name: Public Health & Epidemiology
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S03:
+    name: Mental Health & Psychiatry
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S04:
+    name: Nursing & Allied Health
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S05:
+    name: Dentistry & Oral Health
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S06:
+    name: Veterinary Medicine
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S07:
+    name: Traditional & Complementary Medicine
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S08:
+    name: Rehabilitation & Physical Therapy
+    module_count: 1
+    status: POPULATED
+    modules:
+    - M138
+  S09:
+    name: Nutrition & Dietetics
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S10:
+    name: Health Informatics & Telemedicine
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S11:
+    name: Global Health & Tropical Medicine
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S12:
+    name: Bioethics & Medical Ethics
+    module_count: 0
+    status: EMPTY
+    modules: []

@@ -1,0 +1,9 @@
+sphere:
+  id: S10
+  house: H11
+  name: Urban Studies & Housing
+  full_id: H11-S10
+  ordinal: 130
+status: EMPTY
+module_count: 0
+modules: []

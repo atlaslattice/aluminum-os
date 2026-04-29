@@ -1,0 +1,9 @@
+sphere:
+  id: S07
+  house: H06
+  name: Area Studies & Regional Knowledge
+  full_id: H06-S07
+  ordinal: 67
+status: EMPTY
+module_count: 0
+modules: []

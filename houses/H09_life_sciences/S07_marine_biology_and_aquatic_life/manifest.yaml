@@ -1,0 +1,9 @@
+sphere:
+  id: S07
+  house: H09
+  name: Marine Biology & Aquatic Life
+  full_id: H09-S07
+  ordinal: 103
+status: EMPTY
+module_count: 0
+modules: []

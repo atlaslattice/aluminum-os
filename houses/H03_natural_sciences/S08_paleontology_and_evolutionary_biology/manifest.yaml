@@ -1,0 +1,9 @@
+sphere:
+  id: S08
+  house: H03
+  name: Paleontology & Evolutionary Biology
+  full_id: H03-S08
+  ordinal: 32
+status: EMPTY
+module_count: 0
+modules: []

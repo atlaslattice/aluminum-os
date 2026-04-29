@@ -1,0 +1,13 @@
+sphere:
+  id: S05
+  house: H05
+  name: Theater & Performance Arts
+  full_id: H05-S05
+  ordinal: 53
+status: POPULATED
+module_count: 1
+modules:
+- id: M162a
+  name: Immersive Theater Engine
+  status: SPEC
+  has_code: false

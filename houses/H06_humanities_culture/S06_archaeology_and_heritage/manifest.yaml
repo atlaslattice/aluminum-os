@@ -1,0 +1,9 @@
+sphere:
+  id: S06
+  house: H06
+  name: Archaeology & Heritage
+  full_id: H06-S06
+  ordinal: 66
+status: EMPTY
+module_count: 0
+modules: []

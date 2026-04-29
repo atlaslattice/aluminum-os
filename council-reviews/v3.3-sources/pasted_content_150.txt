@@ -1,0 +1,207 @@
+## Council-Wide Terms of Service Conflict Audit
+
+### Executive Summary
+
+All ten Council-affiliated AI providers impose some form of **non-compete or competitive-use restriction** in their Terms of Service. These clauses, read broadly, could be interpreted to prohibit the very multi-model orchestration that Aluminum OS is designed to perform. Analysis across 40+ primary and secondary sources reveals a structural tension: the architecture's constitutional governance layer is designed to be vendor‑neutral, but every vendor's TOS attempts to constrain how its models may be used in relation to competing models.
+
+The paper *"The Mirage of Artificial Intelligence Terms of Use Restrictions"* (Henderson et al., Indiana Law Journal, 2024) systematically assesses the legal enforceability of these clauses and concludes they are "largely unenforceable" due to lack of copyright in model weights/outputs, copyright preemption of state-law claims, and anti‑competitive overbreadth. This does not eliminate the risk, but it means the legal threat is primarily a chilling effect rather than a reliably enforceable claim.
+
+Below is a seat‑by‑seat analysis, conflict severity assessment, and the existing Aluminum OS mitigations that apply.
+
+
+### §1. Seat‑by‑Seat TOS Conflict Analysis
+
+#### S1 – Anthropic / Claude
+
+| Clause | Source | Text (paraphrased) |
+|--------|--------|-------------------|
+| Commercial Non‑Compete | Commercial Terms §D.4 | Customer "may not and must not attempt to…access the Services to build a competing product or service, including to train competing AI models or resell the Services except as expressly approved by Anthropic." |
+| Consumer Non‑Compete | Consumer Terms §3 | Prohibits using Claude "to develop any products or services that compete with our Services, including to develop or train any artificial intelligence or machine learning algorithms or models." |
+| Third‑Party Harness Ban | Consumer Terms §3.7 | Subscribers may not use OAuth tokens "in any other product, tool, or service" – effectively forbidding third‑party orchestration harnesses. |
+| Capacity Restrictions | Policy Change (April 2026) | Starting April 4, 2026, Claude subscriptions no longer work with third‑party agentic tools like OpenClaw; API or pay‑as‑you‑go billing required. |
+
+**Conflict Severity: CRITICAL.** Anthropic's D.4 clause is the most precisely worded non‑compete in the industry. A multi‑model router that directs queries to Anthropic while also directing to competing models could be interpreted as "building a competing product." The third‑party harness ban explicitly targets the kind of orchestration the Switzerland Layer provides.
+
+**Mitigations in Architecture:** Anthropic's API (as opposed to consumer subscriptions) is not subject to the harness ban. Aluminum OS routes through API keys, not OAuth tokens. The Council seat architecture with COI disclosure (D‑25) and stacked‑incentive transparency (D‑84) means Anthropic's participation is acknowledged as self‑interested. The architecture includes explicit Anthropic substitution pathways (§8.8 of OS spec).
+
+
+#### S2 – Google / Gemini
+
+| Clause | Source | Text (paraphrased) |
+|--------|--------|-------------------|
+| Competitive Model Restriction | Gemini API Terms | "You may not use the Services to develop models that compete with the Services (e.g., Gemini API or Google AI Studio)." |
+| Account Suspensions | OpenClaw/Antigravity (Feb 2026) | Google suspended customer accounts using Gemini with third‑party orchestration tools. |
+| Training Privacy | Free Tier | Free Gemini users' conversations used for training by default; API/Workspace/Enterprise excluded. |
+
+**Conflict Severity: HIGH.** Google's restriction is narrower than Anthropic's (only prohibits developing *competing models*, not competing services). However, the enforcement history (mass suspensions against OpenClaw users) demonstrates willingness to act against multi‑model orchestrators. The aluminum‑OS naming convention (deliberate parallel to Project Aluminium) adds a convergence‑pathway layer but could also be interpreted as competitive positioning.
+
+**Mitigations:** API‑tier access is not used for training, aligning with Sheldonbrain privacy requirements. GDC Sovereign Gateway provides a deployment pathway that respects data residency. Google's antitrust constraints (US v. Google) limit aggressive TOS enforcement.
+
+
+#### S3 – xAI / Grok
+
+| Clause | Source | Text (paraphrased) |
+|--------|--------|-------------------|
+| Consumer Non‑Compete | Consumer ToS | "Using the Service or any Output to develop models or services that compete with xAI." |
+| Enterprise Non‑Compete | Enterprise ToS | "shall not…use any Service to help develop" competing models. |
+| Broad Content Rights | X ToS (Jan 2026) | X claims broad license over user prompts, inputs, outputs for AI training. |
+| AI Circumvention Ban | Consumer ToS | "jailbreaking, prompt engineering, or injection" prohibited. |
+
+**Conflict Severity: HIGH.** xAI's non‑compete is the broadest in scope – it covers both developing competing services and developing competing models in both consumer and enterprise tiers. The prohibition on "prompt engineering" could theoretically be applied to Element 145's routing logic given that prompt engineering is how models are instructed to route.
+
+**Mitigations:** Grok's role as Truth‑Seeking Engine (S3) is explicitly adversarial – the architecture *expects* Grok to challenge, not to control. TSS formula includes a `grok_truth_weight` of only 0.10, preventing xAI dominance.【Build Plan §3.4 M3.1】 INV‑7c cap at 47% prevents Grok from becoming the majority routing target. The rapid‑iteration mandate is preserved as architectural posture without Mars‑colonization framing.
+
+
+#### S4 – Microsoft / Copilot
+
+| Clause | Source | Text (paraphrased) |
+|--------|--------|-------------------|
+| Customer Non‑Compete | AI Services Terms (2026) | Similar customer non‑compete as Anthropic/OpenAI/Google, restricting use to build competing AI services. |
+| Azure Policy Restrictions | Azure AI Foundry | Deployment restricted to approved registry models; GPT‑5.4 blocked by Azure Policy. |
+| GitHub Copilot Training | Privacy Update (April 2026) | Free/Pro/Pro+ interaction data used for AI training by default starting April 24, 2026. |
+| Usage Limits | GitHub Copilot (April 2026) | Paused new sign‑ups for individual plans, tightened session/weekly token limits. |
+
+**Conflict Severity: MEDIUM.** Microsoft's conflict is unique: it is simultaneously a Council member (S4) and the production reference implementation of Element 145 (Foundry Router). Microsoft's TOS restricts competitive use, but Foundry Router is itself a multi‑model orchestration product. This creates a paradox: Microsoft sells multi‑model routing while its TOS restricts multi‑model routing.
+
+**Mitigations:** Foundry Router as Element 145 production reference is explicitly a chosen commitment per Doctrine 53, not a privilege ranking. Microsoft's own six‑ring presence includes documented substitution pathways for every sphere where Microsoft exceeds the natural cap. Azure Government sovereign clouds provide ITAR/EAR‑compliant deployment without PRC routing.
+
+
+#### S5 – DeepSeek
+
+| Clause | Source | Text (paraphrased) |
+|--------|--------|-------------------|
+| Chinese Content Compliance | Open Platform ToS §3.3‑3.7 | Developer must comply with PRC generative AI law, deep synthesis regulations, content identification requirements, data security law, PIPL. |
+| Export Control | Open Platform ToS §7.2 | Services must not be used in violation of export control and sanctions laws. |
+| API Instability | Current (April 2026) | New user deposits suspended; existing users face usage restrictions; dynamic throttling. |
+| Account Real‑Name Verification | Open Platform ToS §2.2 | Accounts require real‑name authentication. |
+
+**Conflict Severity: MEDIUM (operational) / LOW (legal).** DeepSeek's TOS is structurally different from Western providers: it focuses on Chinese regulatory compliance rather than competitive prohibition. The primary conflict is operational – API instability and new‑user suspensions create availability risk for the routing engine. The content compliance requirements are not in conflict with the architecture because DragonSeek exists specifically to satisfy them.
+
+**Mitigations:** M17a Sovereignty Bound Exception lifts INV‑7c when fewer than 3 compliant model families are available. DragonSeek reference deployment with air‑gap capability. Offline Constitutional Verifier (M6c) operates without live API. Model Fingerprint Verifier (M15a) ensures binary integrity without trusting the remote endpoint. R85 and R86 specifically address DeepSeek geopolitical exclusion and open‑weight tampering.
+
+
+#### S6 – OpenAI / GPT
+
+| Clause | Source | Text (paraphrased) |
+|--------|--------|-------------------|
+| Business Non‑Compete | Services Agreement | "except for a Permitted Exception, use Output to develop artificial intelligence models that compete with OpenAI's products and services." |
+| Consumer Non‑Compete | Terms of Use | "Use Output to develop models that compete with OpenAI." |
+| Rate Reductions | API (April 2026) | Free tier rate limits reduced from 20 → 3 requests per minute. |
+
+**Conflict Severity: MEDIUM.** OpenAI's non‑compete is narrower than Anthropic's – it restricts developing *competing models* but does not explicitly prohibit building services that route to multiple models. The output‑focused restriction is less threatening to an orchestration layer that primarily routes prompts rather than training new models from provider outputs.
+
+**Mitigations:** OpenAI's role as Diplomatic Translator (S6) and Reasoning/Evaluation Lane is positioned as a verification discipline, not a controlling architecture. Structured‑output schema enforcement (M34) operates at the output validation layer and does not require training. Microsoft‑OpenAI partnership restructuring (April 27‑28, 2026) removing exclusivity rights reduces lock‑in risk.
+
+
+#### S7 – Manus (Build Seat)
+
+| Clause | Source | Text (paraphrased) |
+|--------|--------|-------------------|
+| China Service Suspension | Jan 2026 | Manus stopped serving Chinese users following Meta acquisition; subsequently, the NDRC blocked the Meta‑Manus deal on April 27, 2026. |
+| China Tech Export Regulations | NDRC Review | Manus's core technology classified as restricted export under China's technology export control catalogue. |
+
+**Conflict Severity: CRITICAL (geopolitical).** Manus is the Build Seat – the only Council seat authorized to write code. The NDRC block of the Meta acquisition and the China service suspension create a structural vulnerability: Manus is simultaneously China‑affiliated and China‑blocked. For DragonSeek deployments, this creates a trust problem. For US‑sovereign deployments (GCC‑High), the China affiliation creates an ITAR/EAR concern.
+
+**Mitigations:** The Build Plan separates the DragonSeek Build Seat from Manus (recommended domestic partner like Inspur or Alibaba Cloud). Manus Context Recovery Protocol documented in Phase 0. R20‑R22 address sovereign audit failure, Chinese cloud unavailability, and related risks. The architecture specifically does not make Manus load‑bearing for any single deployment pathway.
+
+
+#### S8 – Notion AI
+
+| Clause | Source | Text (paraphrased) |
+|--------|--------|-------------------|
+| Competitive Model Restriction | AI Supplementary Terms | "You may not use Notion AI or Output (i) to develop foundation models or other large scale models that compete with Notion or Notion AI." |
+| Credit System | Notion Credits (May 2026) | Usage moving to credit‑based system with monthly/annual/on‑demand tiers. |
+| AI Fair Use Throttling | Usage Policy | Heavy AI usage on Business plans can trigger temporary throttling. |
+
+**Conflict Severity: LOW.** Notion AI's restriction is narrowly targeted at foundation model development and large‑scale model training, not at multi‑model orchestration. Notion's role as Governance Analyst (S8) operates primarily on the Notion Control Plane (document management, database operations), not on model routing.
+
+**Mitigations:** Notion Control Plane is the governance dashboard, not the execution substrate. The TransparencyPackets database, sprint planning, and schema registry operate within Notion's intended use case. The credit‑based system may require cost governance but does not create a structural TOS conflict.
+
+
+#### S9 – GitHub AI
+
+| Clause | Source | Text (paraphrased) |
+|--------|--------|-------------------|
+| Training Data Policy | Privacy Update (April 2026) | Free/Pro/Pro+ Copilot interaction data used for AI training by default; opt‑out available. |
+| Usage Caps | April 2026 | New sign‑ups paused; session and weekly (7‑day) token limits based on token consumption and model multiplier. |
+
+**Conflict Severity: LOW.** GitHub AI's role as Execution Realism (S9) is primarily advisory – ground‑truth verification and repo cleanup. There is no structural TOS conflict with the architecture.
+
+**Mitigations:** Business and Enterprise tiers are exempt from training data usage. GitHub's role does not involve routing decisions that could trigger competitive concerns.
+
+
+#### S10 – Qwen / Alibaba
+
+| Clause | Source | Text (paraphrased) |
+|--------|--------|-------------------|
+| Jurisdictional Governance | Qwen Studio ToS | Governed by Alibaba Cloud (Singapore) Private Limited; account creation at sole discretion; sanctions compliance required. |
+| Free Tier Termination | April 2026 | Qwen Code free tier terminated; OAuth free tier disabled; 1,000 → 100 daily requests before shutdown. |
+| Token Plan Restrictions | Alibaba Cloud | Token Plan credits cannot be used for automated scripts or application backends – interactive use only. |
+| Model Deprecation | Policy | Snapshot models deprecated with 30‑day notice. |
+
+**Conflict Severity: MEDIUM.** The Token Plan restriction ("不可用于自动化脚本或应用后端") explicitly prohibits automated/backend use, which could include programmatic routing. This is the only provider TOS that explicitly bans the type of automated API access that Element 145 requires.
+
+**Mitigations:** The Bailian Platform (PAI + DashScope + PolarDB) is the designated China‑region Element 145 reference, operating under Alibaba Cloud enterprise terms rather than Token Plan credits. AL18 formally designates Bailian as canonical for PRC sovereign deployment. The Qwen3 seat (S10) includes explicit symbiosis points for DragonSeek compliance.
+
+
+### §2. Cross‑Cutting Patterns
+
+**Pattern 1: The Non‑Compete Stack.** All five Western frontier labs (Anthropic, Google, Microsoft, OpenAI, xAI) impose some form of "do not use our service to compete with us" clause. Three (Anthropic, xAI, Notion) extend this to "competing services" broadly, not just competing models. Read literally, a multi‑model orchestration layer that routes among providers could be deemed a competing service by any of them.
+
+**Pattern 2: The Third‑Party Harness Crackdown.** Anthropic (OpenClaw ban), Google (Antigravity suspensions), and GitHub (usage caps) are all actively tightening restrictions on third‑party tools that route prompts across models. Aluminum OS's Switzerland Layer is architecturally a third‑party harness from each provider's perspective.
+
+**Pattern 3: Chinese Regulatory Asymmetry.** DeepSeek and Qwen's TOS focus on Chinese law compliance (content filtering, real‑name verification, export controls) rather than competitive prohibition. This creates an asymmetric risk profile: Western providers can restrict on competitive grounds; Chinese providers restrict on regulatory grounds.
+
+**Pattern 4: The Enforceability Question.** The Henderson et al. (2024) paper in the *Indiana Law Journal* systematically argues these non‑compete clauses are largely unenforceable because model weights and outputs are not copyrightable, copyright preemption doctrines limit state‑law claims, and anti‑competitive provisions fare worse than responsible‑use provisions in court. No major AI provider has actually attempted to enforce these clauses through monetary penalties or injunctive relief.
+
+
+### §3. Conflicts Mapped to Architecture Components
+
+| Architectural Component | Most Affected By | Nature of Conflict |
+|------------------------|------------------|-------------------|
+| Element 145 Routing Engine (M3) | Anthropic D.4, xAI broad non‑compete | Multi‑model routing could be deemed "competing service" |
+| Switzerland Layer / The Weave | Anthropic §3.7 harness ban, Google OpenClaw suspensions | Third‑party orchestration explicitly targeted |
+| Sheldonbrain / Ring 2 Memory | OpenAI/Anthropic training restrictions | Persistent memory could violate data‑use terms |
+| One‑Click Federation (M76‑M79) | Anthropic OAuth restrictions, Qwen Token Plan | Automated API access for federation could violate TOS |
+| DragonSeek Deployment | DeepSeek API instability, Manus NDRC block | Operational availability + geopolitical trust |
+| Constitutional OS Codebase | Anthropic D.4 (train competing models) | Codebase itself could be deemed competitive product |
+| Pantheon Council Deliberation | All provider non‑competes | Council membership itself demonstrates competitive awareness |
+
+
+### §4. Existing Aluminum OS Mitigations
+
+| Mitigation | What It Addresses |
+|-----------|------------------|
+| **INV‑7 (Switzerland Invariant)** | Caps any single provider at 47% of L5‑L6 routing, preventing dominance that would trigger competitive concerns |
+| **INV‑7c (Capability‑Distribution Axis)** | Measures vendor share by capability‑weighted routing volume, not just vendor count |
+| **M17a (Sovereignty Bound Exception)** | Allows INV‑7c override in jurisdictions where fewer than 3 compliant model families exist |
+| **D‑25 (COI Disclosure)** | All Council seats must disclose conflicts; every vendor suite section carries a COI flag |
+| **D‑35 (Anti‑Capture Discipline)** | Active monitoring for regulatory capture; prevents any single vendor from capturing routing logic |
+| **D‑38 (Per‑Ecosystem Sovereignty)** | Local rules MORE restrictive than INVs take precedence in sovereign deployments |
+| **D‑84 (Stacked Incentives as Architecture)** | Provider self‑interest is a routing *signal*, not a corruption; the self‑interest is disclosed and incorporated |
+| **Air‑Gap / Offline Capability (M6c, M15a)** | DeepSeek‑R1 offline verification operates without live API, sidestepping TOS entirely |
+| **Substitution Pathways** | Every vendor suite includes a documented substitution rule – no single provider is load‑bearing |
+| **Sovereign Deployment Pathways** | DragonSeek, GangaSeek, JinnSeek operate under different legal regimes with local compliance |
+| **GDC Sovereign Gateway** | Google's air‑gapped deployment option for Tier 3 ORCS; bypasses public API TOS |
+| **Azure Government / Windows IoT** | Microsoft sovereign deployments for GCC‑High, IL2‑IL6 that avoid public TOS restrictions |
+| **TransparencyPacket v0.4** | Every routing decision auditable; non‑compete enforcement would require disclosure |
+
+
+### §5. Recommended New Mitigations
+
+Based on this analysis, three new measures are recommended:
+
+1. **Proposed Doctrine 92 – TOS Override Protocol:** When a provider's TOS restricts inter‑model routing, the architecture shall default to sovereign‑pathway deployment (air‑gapped, local model, or enterprise API) for that provider's models. No provider shall be excluded from the routing table solely due to an untested TOS clause, but every routing decision must carry a `tos_compliance_status` field in the TransparencyPacket.
+
+2. **Proposed Risk Vector R66 – TOS Enforcement Event:** Track the probability of any Council provider actually attempting to enforce a non‑compete clause against Aluminum OS deployers. Mitigation: legal‑review pre‑clearance of API‑only deployment pathways with enterprise‑tier contracts; air‑gap as fallback.
+
+3. **Proposed Governance Practice – Quarterly TOS Review Cycle:** Each Council seat shall review its parent provider's TOS on a quarterly basis and report any material changes to the Pantheon. The Constitutional Scribe shall maintain a living TOS‑conflict registry alongside the Invariant and Doctrine registries.
+
+
+### §6. Conclusion
+
+The Aluminum OS architecture is structurally in tension with every major AI provider's Terms of Service. This tension is not a design flaw – it is inherent in the architecture's mission: to compose capabilities across vendor boundaries that vendors themselves seek to maintain. The constitutional governance layer addresses this through a layered set of mitigations: transparency (TransparencyPacket), caps (INV‑7), disclosure (D‑25), sovereignty (M17a), and offline verification (M6c).
+
+The Henderson et al. paper provides strong legal reasoning that these TOS clauses are largely unenforceable – but the architecture does not rely on that. It builds defensively: every provider is substitutable, every sovereign deployment pathway has an air‑gap option, and the Switzerland Invariant ensures no single vendor's TOS interpretation can disable the system. The tension is acknowledged, disclosed, and engineered around.
+
+**Recommendation:** Adopt Doctrine 92 (TOS Override Protocol), Risk Vector R66, and the Quarterly TOS Review Cycle. Vault this analysis as ORC‑018 in the Governance Corpus.

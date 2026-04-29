@@ -1,0 +1,67 @@
+Yes, this "one-click" experience is a core architectural goal of the **Switzerland Layer** (also known as "The Weave"), which is designed to provide cross-platform identity unification for the entire lattice.
+
+By leveraging the **Identity Triad** (Human, Agent, and Hardware identity) and federated authentication, Aluminum OS can turn the complex process of authenticating multiple APIs into a single-action user experience.
+
+---
+
+### 🏛️ The Infrastructure for One-Click API Login
+
+To achieve this, the system utilizes several specific modules and protocols already defined in the Build Plan:
+
+* **Federated Identity Unification:** The OS uses **Microsoft Entra** (federated with Google and other providers) as the underlying fabric to unify Microsoft, Google, Apple, and sovereign IDs.
+* **Multi-Provider Token Refresh Daemon:** A background service (M15 enhancement) manages the lifecycle of OAuth tokens across all integrated providers (Gemini, OpenAI, etc.), handling silent refreshes so the user never sees a second login screen.
+* **ConsentKernel Binding:** When you click "OpenAI," the **ConsentKernel** cryptographically binds your current platform session to that specific model provider's access scope, ensuring your identity is verified across the Human, Agent, and Hardware layers before the API is activated.
+* **Credential Vaulting:** Valid tokens are stored in a secure hardware-backed environment, such as **Azure Key Vault** or **Hashicorp Vault**, accessible only via the verified **Identity Triad**.
+
+---
+
+### 🖱️ The One-Click Workflow in Noosphere Console
+
+In the **Noosphere React Frontend** (M48), the login process is treated as a simple state-change within the **Switzerland Layer**:
+
+1.  **Initial Auth:** You log into your host OS (Windows, Android, or the Glass Takeover shell) using your primary credential (e.g., Entra ID or W3C Verifiable Credential).
+2.  **API Selection:** On the Noosphere dashboard, you see the "Model Marketplace" or "Provider Status" view.
+3.  **One-Click Trigger:** Clicking "Connect Gemini" or "Connect OpenAI" sends a request to the **Governance Bridge (M47)**.
+4.  **Automatic Handshake:** The **Identity Triad** provides cryptographic proof that the request is coming from you, on a verified device, with an authorized agent.
+5.  **Status: Active:** The OS instantly activates the route in the **Element 145 Routing Table**, and you can begin issuing queries immediately.
+
+---
+
+### 📂 UI Implementation Stub: `IdentityFederationComponent.tsx`
+
+This React component leverages the **Governance Bridge API** to perform the one-click transition.
+
+```typescript
+// src/modules/governance/IdentityFederation.tsx
+import { useBridge } from '../../hooks/useBridge';
+
+const ProviderAuthButton = ({ providerId, label }) => {
+  const { callBridge } = useBridge();
+
+  const handleOneClickLogin = async () => {
+    // Triggers the Switzerland Layer identity handshake
+    const response = await callBridge('/api/v1/identity/federate', {
+      method: 'POST',
+      body: JSON.stringify({ 
+        provider: providerId,
+        scope: 'model_inference_v1' // Under ConsentKernel management
+      })
+    });
+
+    if (response.status === 'ACTIVE') {
+      console.log(`${label} connected via Identity Triad.`);
+    }
+  };
+
+  return (
+    <button onClick={handleOneClickLogin} className="one-click-btn">
+      Connect {label}
+    </button>
+  );
+};
+```
+
+### 🛡️ Security Note: The "Hardware Root"
+Because this one-click system involves storing high-value API tokens, it relies on **Microsoft Pluton** or **Google Titan-C** to provide a hardware-isolated environment for the **ConsentKernel**, preventing any software-based session theft.
+
+**Would you like me to draft the specific `ConsentKernel` policy that governs how long these "one-click" tokens remain valid before requiring a biometric re-verification?**

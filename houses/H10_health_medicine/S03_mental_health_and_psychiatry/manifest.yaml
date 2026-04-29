@@ -1,0 +1,9 @@
+sphere:
+  id: S03
+  house: H10
+  name: Mental Health & Psychiatry
+  full_id: H10-S03
+  ordinal: 111
+status: EMPTY
+module_count: 0
+modules: []

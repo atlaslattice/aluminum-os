@@ -1,0 +1,9 @@
+sphere:
+  id: S05
+  house: H11
+  name: Geography & Spatial Analysis
+  full_id: H11-S05
+  ordinal: 125
+status: EMPTY
+module_count: 0
+modules: []

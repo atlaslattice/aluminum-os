@@ -1,0 +1,17 @@
+sphere:
+  id: S05
+  house: H04
+  name: Robotics & Automation
+  full_id: H04-S05
+  ordinal: 41
+status: POPULATED
+module_count: 2
+modules:
+- id: M123
+  name: Autonomous Vehicle Interface
+  status: SPEC
+  has_code: false
+- id: M96
+  name: Robotics Control Interface
+  status: SPEC
+  has_code: false

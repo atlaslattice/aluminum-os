@@ -1,0 +1,9 @@
+sphere:
+  id: S09
+  house: H10
+  name: Nutrition & Dietetics
+  full_id: H10-S09
+  ordinal: 117
+status: EMPTY
+module_count: 0
+modules: []

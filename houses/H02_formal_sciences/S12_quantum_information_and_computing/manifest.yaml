@@ -1,0 +1,45 @@
+sphere:
+  id: S12
+  house: H02
+  name: Quantum Information & Computing
+  full_id: H02-S12
+  ordinal: 24
+status: POPULATED
+module_count: 9
+modules:
+- id: M12
+  name: Quantum Computing Interface
+  status: SPEC
+  has_code: false
+- id: M25
+  name: Quantum Algorithm Library
+  status: SPEC
+  has_code: false
+- id: M25a
+  name: Quantum Algorithm Extension A
+  status: SPEC
+  has_code: false
+- id: M25b
+  name: Quantum Algorithm Extension B
+  status: SPEC
+  has_code: false
+- id: M25c
+  name: Quantum Algorithm Extension C
+  status: SPEC
+  has_code: false
+- id: M48
+  name: Quantum Error Correction
+  status: SPEC
+  has_code: false
+- id: M59
+  name: Quantum Simulation Engine
+  status: SPEC
+  has_code: false
+- id: M71
+  name: Quantum Key Distribution
+  status: SPEC
+  has_code: false
+- id: M87
+  name: Quantum Entanglement Tracker
+  status: SPEC
+  has_code: false

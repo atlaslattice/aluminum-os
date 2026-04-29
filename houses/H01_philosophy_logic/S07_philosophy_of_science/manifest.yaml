@@ -1,0 +1,9 @@
+sphere:
+  id: S07
+  house: H01
+  name: Philosophy of Science
+  full_id: H01-S07
+  ordinal: 7
+status: EMPTY
+module_count: 0
+modules: []

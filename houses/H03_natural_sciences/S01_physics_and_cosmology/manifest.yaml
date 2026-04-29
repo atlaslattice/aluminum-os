@@ -1,0 +1,9 @@
+sphere:
+  id: S01
+  house: H03
+  name: Physics & Cosmology
+  full_id: H03-S01
+  ordinal: 25
+status: EMPTY
+module_count: 0
+modules: []

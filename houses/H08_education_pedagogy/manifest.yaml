@@ -1,0 +1,69 @@
+house:
+  id: H08
+  name: Education & Pedagogy
+  sphere_count: 12
+  populated_spheres: 0
+  coverage_pct: 0.0
+total_modules: 0
+modules: []
+spheres:
+  S01:
+    name: Curriculum Design & Instruction
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S02:
+    name: Educational Psychology
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S03:
+    name: E-Learning & EdTech
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S04:
+    name: Special Education & Inclusion
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S05:
+    name: Higher Education & Research Methods
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S06:
+    name: Early Childhood Education
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S07:
+    name: Vocational & Technical Training
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S08:
+    name: Assessment & Evaluation
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S09:
+    name: Educational Leadership & Policy
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S10:
+    name: Lifelong Learning & Adult Education
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S11:
+    name: Comparative & International Education
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S12:
+    name: Philosophy of Education
+    module_count: 0
+    status: EMPTY
+    modules: []

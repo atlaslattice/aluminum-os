@@ -1,0 +1,9 @@
+sphere:
+  id: S05
+  house: H01
+  name: Aesthetics & Philosophy of Art
+  full_id: H01-S05
+  ordinal: 5
+status: EMPTY
+module_count: 0
+modules: []

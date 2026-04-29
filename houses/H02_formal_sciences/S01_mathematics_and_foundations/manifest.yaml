@@ -1,0 +1,37 @@
+sphere:
+  id: S01
+  house: H02
+  name: Mathematics & Foundations
+  full_id: H02-S01
+  ordinal: 13
+status: POPULATED
+module_count: 7
+modules:
+- id: M10
+  name: Mathematical Proof Engine
+  status: SPEC
+  has_code: false
+- id: M22
+  name: Theorem Prover
+  status: SPEC
+  has_code: false
+- id: M28
+  name: Number Theory Utilities
+  status: SPEC
+  has_code: false
+- id: M44
+  name: Constructive Mathematics Module
+  status: SPEC
+  has_code: false
+- id: M56
+  name: Proof Assistant Interface
+  status: SPEC
+  has_code: false
+- id: M68
+  name: Gödel Incompleteness Tracker
+  status: SPEC
+  has_code: false
+- id: M84
+  name: Axiom Consistency Checker
+  status: SPEC
+  has_code: false

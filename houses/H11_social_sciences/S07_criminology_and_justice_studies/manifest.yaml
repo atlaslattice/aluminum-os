@@ -1,0 +1,9 @@
+sphere:
+  id: S07
+  house: H11
+  name: Criminology & Justice Studies
+  full_id: H11-S07
+  ordinal: 127
+status: EMPTY
+module_count: 0
+modules: []

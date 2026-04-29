@@ -1,0 +1,9 @@
+sphere:
+  id: S10
+  house: H09
+  name: Bioinformatics & Computational Biology
+  full_id: H09-S10
+  ordinal: 106
+status: EMPTY
+module_count: 0
+modules: []

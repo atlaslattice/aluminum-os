@@ -1,0 +1,17 @@
+sphere:
+  id: S02
+  house: H01
+  name: Epistemology & Knowledge Theory
+  full_id: H01-S02
+  ordinal: 2
+status: POPULATED
+module_count: 2
+modules:
+- id: M8
+  name: Epistemic Integrity Validator
+  status: SPEC
+  has_code: false
+- id: M8a
+  name: Epistemic Integrity CN Adapter
+  status: SPEC
+  has_code: false

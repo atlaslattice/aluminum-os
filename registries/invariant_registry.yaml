@@ -1,0 +1,314 @@
+metadata:
+  version: '3.14'
+  generated_from: COMPLETE_BUILD_PLAN_v3.14.md
+  total_invariants: 51
+  counting_rule: Sub-specs (INV-7c, INV-11.8, INV-19.2, INV-44a/b/c) do NOT increment
+    count per §0.1
+  canonical_count: 45
+invariants:
+- id: INV-0
+  name: Human Consent Supremacy
+  house: H01
+  sphere: S03
+  type: HARD
+  scope: Universal
+- id: INV-3
+  name: Transparency Obligation
+  house: H01
+  sphere: S03
+  type: HARD
+  scope: Universal
+- id: INV-11
+  name: Ethical Boundaries
+  house: H01
+  sphere: S03
+  type: HARD
+  scope: Universal
+- id: INV-11.8
+  name: Ethical Boundaries (Biological)
+  house: H01
+  sphere: S03
+  type: HARD
+  scope: H09/H10
+- id: INV-7
+  name: Quality Floor
+  house: H02
+  sphere: S02
+  type: SOFT
+  scope: Routing
+- id: INV-7c
+  name: Provider Cap (47%/60%)
+  house: H02
+  sphere: S02
+  type: HARD
+  scope: Routing
+- id: INV-5
+  name: Multi-Provider Mandate
+  house: H02
+  sphere: S03
+  type: HARD
+  scope: Routing
+- id: INV-37
+  name: Algorithm Transparency
+  house: H02
+  sphere: S03
+  type: HARD
+  scope: System
+- id: INV-2
+  name: Data Sovereignty
+  house: H02
+  sphere: S04
+  type: HARD
+  scope: Universal
+- id: INV-22
+  name: Cryptographic Integrity
+  house: H02
+  sphere: S04
+  type: HARD
+  scope: System
+- id: INV-4
+  name: Feedback Integrity
+  house: H02
+  sphere: S05
+  type: HARD
+  scope: System
+- id: INV-12
+  name: Auditability
+  house: H02
+  sphere: S05
+  type: HARD
+  scope: System
+- id: INV-40
+  name: Continuous Improvement
+  house: H02
+  sphere: S05
+  type: SOFT
+  scope: System
+- id: INV-9
+  name: Performance Baseline
+  house: H02
+  sphere: S09
+  type: SOFT
+  scope: System
+- id: INV-32
+  name: Climate Accountability
+  house: H03
+  sphere: S05
+  type: SOFT
+  scope: System
+- id: INV-15
+  name: Environmental Responsibility
+  house: H03
+  sphere: S07
+  type: SOFT
+  scope: System
+- id: INV-8
+  name: Availability SLA
+  house: H04
+  sphere: S01
+  type: SOFT
+  scope: System
+- id: INV-21
+  name: Graceful Degradation
+  house: H04
+  sphere: S01
+  type: SOFT
+  scope: System
+- id: INV-42
+  name: Stakeholder Notification
+  house: H04
+  sphere: S03
+  type: SOFT
+  scope: Federation
+- id: INV-29
+  name: Autonomous Systems Safety
+  house: H04
+  sphere: S05
+  type: HARD
+  scope: H04
+- id: INV-39
+  name: Energy Efficiency
+  house: H04
+  sphere: S06
+  type: SOFT
+  scope: System
+- id: INV-6
+  name: Security Baseline
+  house: H04
+  sphere: S11
+  type: HARD
+  scope: System
+- id: INV-19
+  name: Privacy Protection
+  house: H04
+  sphere: S11
+  type: HARD
+  scope: Universal
+- id: INV-19.2
+  name: Privacy Protection (Biometric)
+  house: H04
+  sphere: S11
+  type: HARD
+  scope: H09/H10
+- id: INV-35
+  name: Child Safety
+  house: H04
+  sphere: S12
+  type: HARD
+  scope: Universal
+- id: INV-25
+  name: Creative Attribution
+  house: H05
+  sphere: S01
+  type: HARD
+  scope: Content
+- id: INV-26
+  name: Historical Accuracy
+  house: H06
+  sphere: S01
+  type: SOFT
+  scope: Content
+- id: INV-14
+  name: Cultural Sensitivity
+  house: H06
+  sphere: S05
+  type: SOFT
+  scope: Content
+- id: INV-28
+  name: Food Safety
+  house: H07
+  sphere: S01
+  type: HARD
+  scope: H07
+- id: INV-43
+  name: Boot Manifest Freshness
+  house: H07
+  sphere: S04
+  type: HARD
+  scope: System
+- id: INV-41
+  name: Knowledge Preservation
+  house: H07
+  sphere: S08
+  type: SOFT
+  scope: System
+- id: INV-16
+  name: Educational Integrity
+  house: H08
+  sphere: S01
+  type: SOFT
+  scope: Content
+- id: INV-31
+  name: Accessibility
+  house: H08
+  sphere: S04
+  type: HARD
+  scope: Universal
+- id: INV-24
+  name: Biodiversity Protection
+  house: H09
+  sphere: S12
+  type: SOFT
+  scope: H09
+- id: INV-17
+  name: Health Safety
+  house: H10
+  sphere: S12
+  type: HARD
+  scope: Content
+- id: INV-13
+  name: Economic Fairness
+  house: H11
+  sphere: S01
+  type: SOFT
+  scope: Federation
+- id: INV-38
+  name: Democratic Process Protection
+  house: H11
+  sphere: S02
+  type: HARD
+  scope: Content
+- id: INV-23
+  name: Geopolitical Neutrality
+  house: H11
+  sphere: S05
+  type: SOFT
+  scope: Routing
+- id: INV-34
+  name: Anti-Discrimination
+  house: H11
+  sphere: S08
+  type: HARD
+  scope: Universal
+- id: INV-27
+  name: Conflict Sensitivity
+  house: H11
+  sphere: S12
+  type: SOFT
+  scope: Content
+- id: INV-1
+  name: Constitutional Primacy
+  house: H12
+  sphere: S01
+  type: HARD
+  scope: Universal
+- id: INV-18
+  name: Legal Compliance
+  house: H12
+  sphere: S01
+  type: HARD
+  scope: Universal
+- id: INV-36
+  name: Sanctions Compliance
+  house: H12
+  sphere: S02
+  type: HARD
+  scope: Routing
+- id: INV-10
+  name: IP Protection
+  house: H12
+  sphere: S04
+  type: HARD
+  scope: Content
+- id: INV-30
+  name: Labor Rights
+  house: H12
+  sphere: S08
+  type: HARD
+  scope: Federation
+- id: INV-44
+  name: TOS Compliance
+  house: H12
+  sphere: S09
+  type: HARD
+  scope: Routing
+- id: INV-44a
+  name: Safe Harbor Verification
+  house: H12
+  sphere: S09
+  type: HARD
+  scope: Routing
+- id: INV-44b
+  name: Quarterly Re-verification
+  house: H12
+  sphere: S09
+  type: HARD
+  scope: Routing
+- id: INV-44c
+  name: Mid-Quarter Change Detection
+  house: H12
+  sphere: S09
+  type: HARD
+  scope: Routing
+- id: INV-33
+  name: Indigenous Rights
+  house: H12
+  sphere: S10
+  type: HARD
+  scope: Content
+- id: INV-20
+  name: Dispute Resolution
+  house: H12
+  sphere: S11
+  type: SOFT
+  scope: Federation

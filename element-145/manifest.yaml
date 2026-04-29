@@ -1,0 +1,15 @@
+element:
+  id: 145
+  name: Element 145 — Unified Sovereign Kernel
+  description: The meta-element that unifies all 144 spheres. The AI-native kernel
+    that orchestrates routing, governance, and constitutional enforcement across all
+    houses and spheres. Contains the Aluminum OS core, Boot Manifest Runtime, Pantheon
+    Council governance, SHUGS framework, and SNRS bridge.
+  status: CANONICAL
+  components:
+  - aluminum-os-core
+  - boot-manifest
+  - pantheon-council
+  - shugs
+  - snrs-bridge
+  - constitutional-os

@@ -1,0 +1,37 @@
+sphere:
+  id: S11
+  house: H02
+  name: Logic Programming & Verification
+  full_id: H02-S11
+  ordinal: 23
+status: POPULATED
+module_count: 7
+modules:
+- id: M19
+  name: Model Checker
+  status: SPEC
+  has_code: false
+- id: M33
+  name: Temporal Logic Verifier
+  status: SPEC
+  has_code: false
+- id: M4
+  name: Formal Verification Module
+  status: SPEC
+  has_code: false
+- id: M50
+  name: SAT/SMT Solver
+  status: SPEC
+  has_code: false
+- id: M61
+  name: Bisimulation Checker
+  status: SPEC
+  has_code: false
+- id: M64
+  name: Constitutional Compiler
+  status: SPEC
+  has_code: false
+- id: M83
+  name: Invariant Monitor
+  status: SPEC
+  has_code: false

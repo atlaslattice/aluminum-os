@@ -1,0 +1,9 @@
+sphere:
+  id: S03
+  house: H06
+  name: Anthropology & Ethnography
+  full_id: H06-S03
+  ordinal: 63
+status: EMPTY
+module_count: 0
+modules: []

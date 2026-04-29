@@ -1,0 +1,595 @@
+metadata:
+  version: '3.14'
+  total_spheres: 144
+  element_145: true
+  populated_spheres: 74
+  coverage_percentage: 51.4
+coverage:
+  H01:
+    S01:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S02:
+      modules: 2
+      invariants: 0
+      status: POPULATED
+    S03:
+      modules: 1
+      invariants: 4
+      status: POPULATED
+    S04:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S05:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S06:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S07:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S08:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S09:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S10:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S11:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S12:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+  H02:
+    S01:
+      modules: 7
+      invariants: 0
+      status: POPULATED
+    S02:
+      modules: 8
+      invariants: 2
+      status: POPULATED
+    S03:
+      modules: 9
+      invariants: 2
+      status: POPULATED
+    S04:
+      modules: 13
+      invariants: 2
+      status: POPULATED
+    S05:
+      modules: 8
+      invariants: 3
+      status: POPULATED
+    S06:
+      modules: 8
+      invariants: 0
+      status: POPULATED
+    S07:
+      modules: 6
+      invariants: 0
+      status: POPULATED
+    S08:
+      modules: 7
+      invariants: 0
+      status: POPULATED
+    S09:
+      modules: 7
+      invariants: 1
+      status: POPULATED
+    S10:
+      modules: 7
+      invariants: 0
+      status: POPULATED
+    S11:
+      modules: 7
+      invariants: 0
+      status: POPULATED
+    S12:
+      modules: 9
+      invariants: 0
+      status: POPULATED
+  H03:
+    S01:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S02:
+      modules: 1
+      invariants: 0
+      status: POPULATED
+    S03:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S04:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S05:
+      modules: 0
+      invariants: 1
+      status: POPULATED
+    S06:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S07:
+      modules: 1
+      invariants: 1
+      status: POPULATED
+    S08:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S09:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S10:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S11:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S12:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+  H04:
+    S01:
+      modules: 3
+      invariants: 2
+      status: POPULATED
+    S02:
+      modules: 2
+      invariants: 0
+      status: POPULATED
+    S03:
+      modules: 3
+      invariants: 1
+      status: POPULATED
+    S04:
+      modules: 4
+      invariants: 0
+      status: POPULATED
+    S05:
+      modules: 2
+      invariants: 1
+      status: POPULATED
+    S06:
+      modules: 2
+      invariants: 1
+      status: POPULATED
+    S07:
+      modules: 1
+      invariants: 0
+      status: POPULATED
+    S08:
+      modules: 1
+      invariants: 0
+      status: POPULATED
+    S09:
+      modules: 1
+      invariants: 0
+      status: POPULATED
+    S10:
+      modules: 2
+      invariants: 0
+      status: POPULATED
+    S11:
+      modules: 3
+      invariants: 3
+      status: POPULATED
+    S12:
+      modules: 1
+      invariants: 1
+      status: POPULATED
+  H05:
+    S01:
+      modules: 2
+      invariants: 1
+      status: POPULATED
+    S02:
+      modules: 2
+      invariants: 0
+      status: POPULATED
+    S03:
+      modules: 2
+      invariants: 0
+      status: POPULATED
+    S04:
+      modules: 2
+      invariants: 0
+      status: POPULATED
+    S05:
+      modules: 1
+      invariants: 0
+      status: POPULATED
+    S06:
+      modules: 1
+      invariants: 0
+      status: POPULATED
+    S07:
+      modules: 1
+      invariants: 0
+      status: POPULATED
+    S08:
+      modules: 6
+      invariants: 0
+      status: POPULATED
+    S09:
+      modules: 1
+      invariants: 0
+      status: POPULATED
+    S10:
+      modules: 1
+      invariants: 0
+      status: POPULATED
+    S11:
+      modules: 2
+      invariants: 0
+      status: POPULATED
+    S12:
+      modules: 1
+      invariants: 0
+      status: POPULATED
+  H06:
+    S01:
+      modules: 0
+      invariants: 1
+      status: POPULATED
+    S02:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S03:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S04:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S05:
+      modules: 0
+      invariants: 1
+      status: POPULATED
+    S06:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S07:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S08:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S09:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S10:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S11:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S12:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+  H07:
+    S01:
+      modules: 1
+      invariants: 1
+      status: POPULATED
+    S02:
+      modules: 1
+      invariants: 0
+      status: POPULATED
+    S03:
+      modules: 1
+      invariants: 0
+      status: POPULATED
+    S04:
+      modules: 3
+      invariants: 1
+      status: POPULATED
+    S05:
+      modules: 1
+      invariants: 0
+      status: POPULATED
+    S06:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S07:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S08:
+      modules: 1
+      invariants: 1
+      status: POPULATED
+    S09:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S10:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S11:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S12:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+  H08:
+    S01:
+      modules: 0
+      invariants: 1
+      status: POPULATED
+    S02:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S03:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S04:
+      modules: 0
+      invariants: 1
+      status: POPULATED
+    S05:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S06:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S07:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S08:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S09:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S10:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S11:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S12:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+  H09:
+    S01:
+      modules: 1
+      invariants: 0
+      status: POPULATED
+    S02:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S03:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S04:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S05:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S06:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S07:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S08:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S09:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S10:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S11:
+      modules: 1
+      invariants: 0
+      status: POPULATED
+    S12:
+      modules: 0
+      invariants: 1
+      status: POPULATED
+  H10:
+    S01:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S02:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S03:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S04:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S05:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S06:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S07:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S08:
+      modules: 1
+      invariants: 0
+      status: POPULATED
+    S09:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S10:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S11:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S12:
+      modules: 0
+      invariants: 1
+      status: POPULATED
+  H11:
+    S01:
+      modules: 1
+      invariants: 1
+      status: POPULATED
+    S02:
+      modules: 1
+      invariants: 1
+      status: POPULATED
+    S03:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S04:
+      modules: 1
+      invariants: 0
+      status: POPULATED
+    S05:
+      modules: 0
+      invariants: 1
+      status: POPULATED
+    S06:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S07:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S08:
+      modules: 0
+      invariants: 1
+      status: POPULATED
+    S09:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S10:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S11:
+      modules: 0
+      invariants: 0
+      status: EMPTY
+    S12:
+      modules: 0
+      invariants: 1
+      status: POPULATED
+  H12:
+    S01:
+      modules: 2
+      invariants: 2
+      status: POPULATED
+    S02:
+      modules: 2
+      invariants: 1
+      status: POPULATED
+    S03:
+      modules: 2
+      invariants: 0
+      status: POPULATED
+    S04:
+      modules: 2
+      invariants: 1
+      status: POPULATED
+    S05:
+      modules: 2
+      invariants: 0
+      status: POPULATED
+    S06:
+      modules: 2
+      invariants: 0
+      status: POPULATED
+    S07:
+      modules: 2
+      invariants: 0
+      status: POPULATED
+    S08:
+      modules: 1
+      invariants: 1
+      status: POPULATED
+    S09:
+      modules: 2
+      invariants: 4
+      status: POPULATED
+    S10:
+      modules: 1
+      invariants: 1
+      status: POPULATED
+    S11:
+      modules: 1
+      invariants: 1
+      status: POPULATED
+    S12:
+      modules: 1
+      invariants: 0
+      status: POPULATED

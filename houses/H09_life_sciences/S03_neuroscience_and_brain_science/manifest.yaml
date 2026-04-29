@@ -1,0 +1,9 @@
+sphere:
+  id: S03
+  house: H09
+  name: Neuroscience & Brain Science
+  full_id: H09-S03
+  ordinal: 99
+status: EMPTY
+module_count: 0
+modules: []

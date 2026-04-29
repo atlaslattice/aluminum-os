@@ -1,0 +1,281 @@
+Below is a **deep‑dive, architecture‑specific ToS / policy conflict scan** across the Council member providers you’re routing to (or intend to route to). I’m **not a lawyer**—this is a risk/compatibility analysis to surface where the *current architecture* (Element‑145 router + TransparencyPacket + provenance + “one‑click” auth + public dashboards + cross‑provider composition) can collide with common contractual constraints.
+
+I’m using the best primary sources I could fetch quickly; a couple key pages timed out (notably Gemini Additional Terms), so I’m flagging those as “needs final capture” rather than guessing.
+
+---
+
+# 0) The big architectural hotspots (where ToS most often conflicts)
+
+These are the *recurring friction points* across providers:
+
+1) **Data retention & logging** vs your architecture’s **AuditChain / GoldenTrace / TransparencyPacket** (especially if packets include prompt/output excerpts).
+
+2) **Redistribution/publication** vs your plan for **Epistemic Weather as public infrastructure** (D‑86) and public routing dashboards.
+
+3) **OAuth / one‑click login** vs providers’ requirements for **interactive consent**, refresh-token handling, and prohibited “credential sharing.”
+
+4) **Prohibited use cases** (biometrics, profiling, deception, regulated advice) vs your “universal router” posture.
+
+5) **Cross‑provider composition** (sending content from Provider A into Provider B) vs terms that treat customer content or third‑party content differently.
+
+6) **Jurisdiction/export/sanctions** vs multi‑polar routing (particularly when “China sovereign” lanes exist).
+
+A key mitigation theme: **store hashes + minimal metadata**, not raw prompts/outputs, and keep “public observability” at the level of *scores/aggregates*, not content.
+
+---
+
+# 1) OpenAI (GPT seat / OpenAI APIs)
+
+### Key policy signals found
+
+- OpenAI “Service Terms” emphasize you must use APIs in accordance with platform documentation and include extensive disclaimers about beta services and app/connectors sending “App Data” out to third‑party applications.[[1]](https://openai.com/policies/service-terms/)
+
+### Potential conflicts with your architecture
+
+- **Public Epistemic Weather / packet publication (D‑86):** if public dashboards reveal content, prompts, or sensitive derived fields, you can create privacy and/or contractual issues. (OpenAI docs also typically treat “customer content” carefully; you’ll want to treat packet contents as restricted by default.)
+- **Cross‑provider composition & connectors:** if your router sends OpenAI outputs into other providers and then republishes results, be careful about “Output used in combination with products/services not provided by OpenAI” language showing up in indemnity carve-outs and liability boundaries.[[1]](https://openai.com/policies/service-terms/)
+- **Data retention assumptions:** OpenAI API commonly has abuse-monitoring retention defaults; if your architecture presumes ZDR everywhere, ensure the org/project is actually configured that way (and record that as an invariant-checked field in packets).
+
+### Recommended architectural guardrails
+
+- TransparencyPacket should default to **no raw prompt/output storage**, only:
+    - hashes
+    - model_id/version
+    - scores
+    - routing rationale
+    - compliance flags
+- If you need replay, store encrypted snapshots in **your** ledger, not in a provider system.
+
+---
+
+# 2) Anthropic (Claude seat)
+
+### Key policy signals found (strong source)
+
+Anthropic’s “API and data retention” doc is unusually explicit:
+
+- Offers **Zero Data Retention (ZDR)** for eligible features; non-ZDR features (batch, files, code execution) have longer retention (e.g., **~29–30 days**, files retained until deleted).[[2]](https://platform.claude.com/docs/en/build-with-claude/api-and-data-retention)
+- Even with ZDR/HIPAA arrangements, if flagged for violations, Anthropic may retain inputs/outputs for **up to 2 years**.[[2]](https://platform.claude.com/docs/en/build-with-claude/api-and-data-retention)
+- Structured outputs: prompts/outputs not stored; schema cached ~24 hours (qualified).[[2]](https://platform.claude.com/docs/en/build-with-claude/api-and-data-retention)
+
+### Potential conflicts with your architecture
+
+- **Assuming “ZDR = always”**: your router must know which Anthropic features are ZDR-eligible vs not; otherwise your “retention invariants” can be silently violated.
+- **Public dashboards (D‑86)**: publish only aggregate TSS / states; never publish content. Even if *you* store it, their policy says they might retain flagged content; public display makes it worse.
+- **“One click connect Claude”**: fine after first OAuth/API key provisioning, but don’t design around consumer subscription token reuse (Anthropic has historically been strict about credential misuse; ensure you’re always using proper commercial org API keys and vaulting them).
+
+### Recommended guardrails
+
+- Encode feature-level retention into routing metadata:
+    - `provider_retention_mode: ZDR | STANDARD | STATEFUL_FEATURE`
+- For Claude, treat “Files API / batch / code execution” as requiring explicit **ConsentKernel scope elevation**.
+
+---
+
+# 3) Google / Gemini API (Gemini seat)
+
+### Status
+
+The Gemini Additional Terms page repeatedly timed out in my fetch attempt, so I’m not going to assert specifics beyond what I can quote reliably.
+
+What I could confirm from the Gemini terms URL itself (from search results) is that it exists and has an “Additional Terms” layer, and (from the snippet) it includes age/access restrictions (18+, not directed to under 18).[[3]](https://ai.google.dev/gemini-api/terms)
+
+### Likely conflict areas to verify once terms load
+
+- **Data usage/training defaults** (Google often differentiates free vs paid tiers and enterprise controls)
+- **Restrictions on certain sensitive data** and regulated data processing
+- **Public redistribution constraints** (re: outputs / branding / attribution)
+- **API Client requirements** (esp. under-18 access)
+
+### Recommended interim guardrails (until terms are captured)
+
+- Treat Gemini as **“STANDARD retention + additional constraints unknown”** until the exact terms are pinned.
+- Add a “Terms snapshot hash” workflow: pull terms text, hash it, store in Notion “Schema Registry / Ratifications,” so you can point to a version.
+
+---
+
+# 4) xAI / Grok (Grok seat)
+
+### Key policy signals found (strong source)
+
+xAI API security FAQ states:
+
+- xAI **does not train** on API inputs/outputs without explicit permission.
+- Requests/responses are **temporarily stored for 30 days** for audit/abuse, auto-deleted after 30 days.
+- **Zero Data Retention (ZDR)** is available for enterprise accounts; when enabled, no request/response content is persisted and responses include an `x-zero-data-retention` header indicating true/false.[[4]](https://docs.x.ai/developers/faq/security)
+
+### Potential conflicts with your architecture
+
+- **If you promise “no retention”**: you must either negotiate ZDR or disclose the 30‑day retention baseline. Your architecture already contemplates ZDR; good alignment, but ensure it’s not assumed.
+- **Epistemic Weather public dashboards**: safe if you publish only **scores/aggregates** (TSS, drift) and avoid content. xAI’s terms don’t forbid dashboards in what I saw, but content publication risks privacy and could trigger AUP issues.
+- **Replay engine**: storing full prompt/output replays is on you; that’s fine, but then your own governance must meet the privacy posture you claim.
+
+### Recommended guardrails
+
+- Add an invariant check: `provider_zdr_header == true` when operating in ZDR-required contexts (health/legal/PII).
+- If `x-zero-data-retention` is false, route sensitive workloads away or require explicit consent escalation.
+
+---
+
+# 5) AWS Bedrock (Amazon seat, if you route via Bedrock)
+
+### Key policy signals found
+
+AWS states (in an official AWS Knowledge Center article) that Bedrock:
+
+- doesn’t store customer inputs/outputs,
+- doesn’t share them with model providers,
+- doesn’t use them for training,
+- has automated abuse detection but “no human access to input/output data.”[[5]](https://repost.aws/knowledge-center/amazon-bedrock-model-data-use)
+
+### Potential conflicts with your architecture
+
+This is actually a **good fit** for your governance posture, with one caveat:
+
+- Your architecture must still track model/provider terms on Bedrock, because Bedrock includes third-party models with separate terms, but AWS’s default privacy posture supports your “sovereignty/residency + logging minimalism” approach.
+
+### Recommended guardrails
+
+- Treat Bedrock as a preferred routing substrate when:
+    - you need strict “no provider retention” guarantees,
+    - you want cloud-native audit trails (CloudTrail etc.) without leaking content.
+
+---
+
+# 6) Notion (Notion seat / Notion as control plane)
+
+### Key policy signals found
+
+Notion AI security & privacy practices page says:
+
+- Notion uses multiple LLM providers and evaluates them.
+- By default, Notion and subprocessors do **not train on Customer Data**.
+- Enterprise plan: LLM providers use **zero data retention**; non-enterprise: providers retain customer data **30 days or fewer**.
+- Embeddings are treated as customer data; embeddings deleted within 60 days after page/workspace deletion; and Notion can restore deleted content for 30 days.[[6]](https://www.notion.com/help/notion-ai-security-practices)
+
+Also: Notion API rate limits average **3 requests/sec** and payload constraints (1000 blocks, 500KB, etc.).[[7]](https://developers.notion.com/reference/request-limits)
+
+### Potential conflicts with your architecture
+
+- **High-volume TransparencyPacket logging into Notion** can hit rate limits quickly (3 rps average).[[7]](https://developers.notion.com/reference/request-limits)
+- If you treat Notion as *canonical* log store for full packet fidelity, it may not scale; better as indexed observability + approvals bus, while AuditChain remains canonical.
+- Notion AI subprocessors retention differs by plan; if you assume ZDR across the board, you must check workspace plan and/or treat it as configuration state.
+
+### Recommended guardrails
+
+- Store **packet summaries** in Notion and full records in AuditChain.
+- Add a queue/backoff layer for Notion writes (per their 429/Retry-After guidance).[[7]](https://developers.notion.com/reference/request-limits)
+
+---
+
+# 7) DeepSeek (DeepSeek seat)
+
+### Key policy signals found
+
+From DeepSeek Open Platform Terms:
+
+- You (developer) are responsible for inputs/outputs; you warrant you have rights/licenses.
+- They assign outputs to you and allow broad use including derivative products and even training other models (distillation), subject to law/terms.[[8]](https://cdn.deepseek.com/policies/en-US/deepseek-open-platform-terms-of-service.html)
+- They emphasize export controls/sanctions compliance.[[8]](https://cdn.deepseek.com/policies/en-US/deepseek-open-platform-terms-of-service.html)
+- They require disclosure to end users that output is AI-generated and may have errors; outputs aren’t professional advice and should not be sole basis for decisions.[[8]](https://cdn.deepseek.com/policies/en-US/deepseek-open-platform-terms-of-service.html)
+
+### Potential conflicts with your architecture
+
+- **Export/sanctions routing**: your multi-polar router must include jurisdictional gates to avoid sending restricted content/users into DeepSeek where prohibited.
+- **Professional reliance disclaimers**: your architecture should incorporate “non-reliance” handling in professional domains and enforce “human in the loop” or disclaimers for medical/legal/financial outputs.
+- **Content retention**: the snippet doesn’t give a clean retention promise in what I fetched; don’t assume ZDR.
+
+### Recommended guardrails
+
+- Add explicit “export control / sanctions” compliance gate (your governance already points that direction).
+- Add “advice domain” detection that triggers higher scrutiny + disclaimers.
+
+---
+
+# 8) Qwen / Alibaba (Qwen seat)
+
+### Status
+
+The Qwen usage policy page didn’t load meaningful content in my fetch (it returned essentially a blank shell), so I can’t quote its clauses reliably yet. (I can see from search results it exists and is updated, but we need an actual capture.)
+
+### Known likely friction areas (to validate once captured)
+
+- Open vs commercial licensing differences (varies by model)
+- Usage policy enforcement and content restrictions
+- Cross-border and PRC-specific regulatory constraints
+
+### Recommended interim guardrails
+
+- Treat Qwen lane as “sovereign PRC” where:
+    - data residency constraints are strict,
+    - and content compliance daemon (your M76) is mandatory.
+
+---
+
+# 9) Summary “conflict matrix” vs your current architecture
+
+## A) Public Epistemic Weather dashboards (D‑86)
+
+**Generally compatible only if dashboards are aggregate and non-content.**
+
+- High risk if you publish prompts/outputs or identifying metadata.
+- Safe pattern: publish TSS distributions, primacy validation status, routing diversity, violation counts—no content.
+
+## B) TransparencyPacket content fields
+
+**Likely conflict if packets store raw prompts/outputs.**
+
+- Best universal posture: store hashes + metadata; store full content only in encrypted, internal ledger with strict consent scopes.
+
+## C) One-click auth
+
+**Doable after first consent**; “true one-click first-time connect” is generally not possible under OAuth norms.
+
+- Architect “one-click if already provisioned; otherwise one interactive consent then one-click thereafter.”
+- Ensure token storage meets each provider’s expectations; never reuse consumer session tokens for API use.
+
+## D) Retention
+
+Retention varies widely:
+
+- xAI: 30-day default + ZDR enterprise option.[[4]](https://docs.x.ai/developers/faq/security)
+- Anthropic: explicit ZDR eligibility table; flagged violations can be retained longer.[[2]](https://platform.claude.com/docs/en/build-with-claude/api-and-data-retention)
+- AWS Bedrock: strong “no store/no train” statements.[[5]](https://repost.aws/knowledge-center/amazon-bedrock-model-data-use)
+- Notion AI: enterprise ZDR at LLM providers; otherwise 30 days or fewer; embeddings deletion windows.[[6]](https://www.notion.com/help/notion-ai-security-practices)
+
+---
+
+# 10) Two concrete “architecture upgrades” to eliminate most ToS friction
+
+### Upgrade 1: “Content-minimized TransparencyPacket”
+
+Define two packet tiers:
+
+- **Public packet** (allowed to publish): routing metadata, scores, counts
+- **Private packet** (ledger only): encrypted content pointers/hashes, replay snapshot references
+
+This harmonizes D‑86 with provider ToS and privacy norms.
+
+### Upgrade 2: “Provider Policy Profile” as a routing input
+
+Create a per-provider profile used in M3:
+
+- `retention_default_days`
+- `zdr_available`
+- `zdr_required_for_scopes` (health/legal/PII)
+- `training_default` (yes/no/opt-out)
+- `export_control_sensitive` (yes/no)
+- `publication_allowed_level` (aggregate only / content allowed / forbidden)
+
+Then ConsentKernel binds scopes to profiles. This makes ToS compliance *algorithmic* instead of “remembered.”
+
+---
+
+## What I still need to complete a truly exhaustive scan
+
+Two critical primary sources timed out / didn’t load fully:
+
+- Gemini Additional Terms (Google) page content fetch
+- Qwen usage policy full content fetch
+
+If you want, paste those terms text (or the relevant sections) into Notion and I’ll map each clause to a specific module/invariant gate (e.g., “this clause requires forbidding X → implement in M17 permissions + M34 schema validator + packet field Y”).

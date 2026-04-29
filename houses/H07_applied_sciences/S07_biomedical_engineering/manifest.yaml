@@ -1,0 +1,9 @@
+sphere:
+  id: S07
+  house: H07
+  name: Biomedical Engineering
+  full_id: H07-S07
+  ordinal: 79
+status: EMPTY
+module_count: 0
+modules: []

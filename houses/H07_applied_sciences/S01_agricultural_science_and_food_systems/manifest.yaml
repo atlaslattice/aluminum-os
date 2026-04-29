@@ -1,0 +1,13 @@
+sphere:
+  id: S01
+  house: H07
+  name: Agricultural Science & Food Systems
+  full_id: H07-S01
+  ordinal: 73
+status: POPULATED
+module_count: 1
+modules:
+- id: M129
+  name: Agricultural Data Pipeline
+  status: SPEC
+  has_code: false

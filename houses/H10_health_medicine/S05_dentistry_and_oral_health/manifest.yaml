@@ -1,0 +1,9 @@
+sphere:
+  id: S05
+  house: H10
+  name: Dentistry & Oral Health
+  full_id: H10-S05
+  ordinal: 113
+status: EMPTY
+module_count: 0
+modules: []

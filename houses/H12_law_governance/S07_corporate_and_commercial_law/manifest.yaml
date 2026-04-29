@@ -1,0 +1,17 @@
+sphere:
+  id: S07
+  house: H12
+  name: Corporate & Commercial Law
+  full_id: H12-S07
+  ordinal: 139
+status: POPULATED
+module_count: 2
+modules:
+- id: M149
+  name: Regulatory Change Monitor
+  status: SPEC
+  has_code: false
+- id: M161
+  name: Regulatory Sandbox Interface
+  status: SPEC
+  has_code: false

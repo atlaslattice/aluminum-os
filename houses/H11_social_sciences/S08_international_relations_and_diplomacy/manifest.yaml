@@ -1,0 +1,9 @@
+sphere:
+  id: S08
+  house: H11
+  name: International Relations & Diplomacy
+  full_id: H11-S08
+  ordinal: 128
+status: EMPTY
+module_count: 0
+modules: []

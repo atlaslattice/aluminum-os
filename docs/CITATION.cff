@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+title: "The Open Regenerative Compute Standard: A Seven-Model Synthesis"
+message: "If you use this standard in your research or infrastructure planning, please cite it as follows."
+type: standard
+authors:
+  - name: "Atlas Lattice Foundation"
+    alias: "Daavud (Human Facilitator)"
+  - name: "The Federated Council of Seven"
+    alias: "Claude (Anthropic), Gemini (Google DeepMind), Grok (xAI), GPT (OpenAI), Manus (Meta), DeepSeek, Qwen3 (Alibaba)"
+date-released: "2026-04-20"
+version: "2.1"
+url: "https://github.com/atlaslattice/open-regenerative-compute-standard"
+repository-code: "https://github.com/atlaslattice/open-regenerative-compute-standard"
+license: "CC-BY-SA-4.0"
+keywords:
+  - "regenerative infrastructure"
+  - "data center sustainability"
+  - "watershed days"
+  - "AI consensus"
+  - "net water positive"
+  - "regenerative agriculture"
+  - "hyperscale compute"
+  - "circular infrastructure"
+  - "NWPI"
+  - "open standard"
+abstract: >-
+  A convergent synthesis from seven distinct frontier AI systems — developed
+  through comparative analysis, adversarial review, and iterative synthesis —
+  on the application of regenerative agriculture principles to hyperscale
+  compute infrastructure. Introduces the Watershed Days (NWPI) metric as a
+  complementary measure to traditional Water Usage Effectiveness (WUE),
+  proposes the Alphabet Hydrology Hub (Earth Engine + GraphCast + Flood Hub)
+  as the open verification engine, and defines a seven-part Minimum
+  Defensible Standard for regenerative data center operations.

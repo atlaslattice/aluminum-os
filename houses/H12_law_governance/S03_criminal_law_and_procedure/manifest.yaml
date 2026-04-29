@@ -1,0 +1,17 @@
+sphere:
+  id: S03
+  house: H12
+  name: Criminal Law & Procedure
+  full_id: H12-S03
+  ordinal: 135
+status: POPULATED
+module_count: 2
+modules:
+- id: M146
+  name: Corporate Governance Module
+  status: SPEC
+  has_code: false
+- id: M157
+  name: Contract Analyzer
+  status: SPEC
+  has_code: false

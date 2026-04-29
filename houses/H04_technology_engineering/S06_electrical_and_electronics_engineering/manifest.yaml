@@ -1,0 +1,17 @@
+sphere:
+  id: S06
+  house: H04
+  name: Electrical & Electronics Engineering
+  full_id: H04-S06
+  ordinal: 42
+status: POPULATED
+module_count: 2
+modules:
+- id: M124
+  name: Renewable Energy Tracker
+  status: SPEC
+  has_code: false
+- id: M97
+  name: Energy Grid Optimizer
+  status: SPEC
+  has_code: false

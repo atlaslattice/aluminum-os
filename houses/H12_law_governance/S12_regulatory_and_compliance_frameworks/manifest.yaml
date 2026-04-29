@@ -1,0 +1,13 @@
+sphere:
+  id: S12
+  house: H12
+  name: Regulatory & Compliance Frameworks
+  full_id: H12-S12
+  ordinal: 144
+status: POPULATED
+module_count: 1
+modules:
+- id: M154
+  name: Comparative Law Engine
+  status: SPEC
+  has_code: false

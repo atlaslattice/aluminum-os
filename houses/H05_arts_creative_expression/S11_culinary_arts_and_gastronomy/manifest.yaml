@@ -1,0 +1,17 @@
+sphere:
+  id: S11
+  house: H05
+  name: Culinary Arts & Gastronomy
+  full_id: H05-S11
+  ordinal: 59
+status: POPULATED
+module_count: 2
+modules:
+- id: M162b
+  name: Spatial Computing Interface
+  status: SPEC
+  has_code: false
+- id: M175
+  name: Interactive-Kinetic Rights Harmonizer
+  status: SPEC
+  has_code: false

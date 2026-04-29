@@ -1,0 +1,9 @@
+sphere:
+  id: S08
+  house: H06
+  name: Gender & Sexuality Studies
+  full_id: H06-S08
+  ordinal: 68
+status: EMPTY
+module_count: 0
+modules: []

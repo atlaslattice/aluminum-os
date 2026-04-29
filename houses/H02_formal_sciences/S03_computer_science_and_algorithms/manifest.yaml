@@ -1,0 +1,45 @@
+sphere:
+  id: S03
+  house: H02
+  name: Computer Science & Algorithms
+  full_id: H02-S03
+  ordinal: 15
+status: POPULATED
+module_count: 9
+modules:
+- id: M1
+  name: Sovereign Router Core
+  status: SPEC
+  has_code: false
+- id: M15
+  name: Algorithm Optimizer
+  status: SPEC
+  has_code: false
+- id: M15a
+  name: Algorithm Optimizer CN Adapter
+  status: SPEC
+  has_code: false
+- id: M18
+  name: Distributed Consensus Protocol
+  status: SPEC
+  has_code: false
+- id: M40
+  name: Parallel Algorithm Scheduler
+  status: SPEC
+  has_code: false
+- id: M52
+  name: Distributed Hash Table
+  status: SPEC
+  has_code: false
+- id: M63
+  name: Parser Symmetry Gate
+  status: SPEC
+  has_code: false
+- id: M76
+  name: Consensus Finality Checker
+  status: SPEC
+  has_code: false
+- id: M82
+  name: Load Balancer
+  status: SPEC
+  has_code: false

@@ -1,0 +1,95 @@
+Yes. And I’m going to be direct: **the current architecture is viable only if it is treated as a user-owned orchestration layer, not a model-training, resale, benchmarking, or credential-brokering layer.** Several council-provider TOS regimes are friendly to normal API orchestration, but hostile to using outputs/traces to build competing models, automated scraping, unauthorized account access, or opaque downstream monetization.
+
+Not legal advice, but this is the practical risk map.
+
+## Highest-risk conflicts
+
+| Architecture feature                                    |     Risk level | Why                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------------------------- | -------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Developer Trace Marketplace**                         |        🔴 High | Several providers restrict using services/outputs to build competing products, train models, reverse engineer, or distill. Anthropic access was reportedly revoked from OpenAI over competitive use concerns, and xAI’s prior terms also contained competing-service restrictions. ([WIRED][1])                          |
+| **Cross-model benchmarking / adversarial comparison**   |        🔴 High | Benchmarking for safety/evals may be allowed in some contexts, but using one provider to improve another model or competitive product is a known tripwire. Anthropic reportedly allows safety benchmarking but objected to competitive product development. ([WIRED][1])                                                 |
+| **“Call all council members” by default**               | 🟠 Medium-high | Cost/rate-limit issue, but also TOS/AUP issue if it causes scaled abuse, circumvention, or unnecessary propagation of sensitive data across processors. Anthropic’s agent policy specifically prohibits unauthorized data collection and scaled abuse. ([Claude Help Center][2])                                         |
+| **One-click root credential fabric**                    | 🟠 Medium-high | Works only as local activation of user-authorized credentials. “Root-level shared credentials for all operations” would be dangerous and likely violate provider account/security expectations. Your v2.9 D-93/D-94 framing is the right fix: local-first credential sovereignty and uniform auth UX.                    |
+| **Autonomous physical/economic actions**                | 🟠 Medium-high | Microsoft’s AI Services Code of Conduct bars decisions/actions without appropriate human oversight when consequential legal, financial, life-opportunity, or harm risks exist. Your HITL gates must be mandatory for WEC payouts, grid actions, PFAS remediation, health/legal/financial outputs. ([Microsoft Learn][3]) |
+| **Synthetic media / adult / likeness use via Grok/xAI** | 🟠 Medium-high | xAI explicitly prohibits privacy/publicity violations, pornographic depiction of likenesses, child exploitation, weapons/WMD, and misleading AI outputs. ([xAI][4])                                                                                                                                                      |
+| **Notion as runtime surface**                           |      🟡 Medium | Notion AI can use workspace + connected-app context and agents can create/edit workspace content; workspace owners can control data sharing, web search, connectors, and consent controls. That supports governance logs, but sensitive secrets/keys should not live in Notion pages. ([Notion][5])                      |
+
+## Provider-by-provider conflict notes
+
+**OpenAI:** Generally compatible with API orchestration if you own/are allowed to use inputs and comply with policies. OpenAI’s service terms discuss API output indemnity, but exceptions include lacking rights to inputs/fine-tuning files, disabling safety/citation/filtering features, or combining outputs in ways that create infringement risk. The architecture should preserve safety features, citations, provenance, and input-rights metadata. ([OpenAI][6])
+
+**Anthropic:** Biggest conflict is competitive use. Anthropic commercial/API contexts do not use customer data to train generative models, and customers retain control in commercial settings, but agentic use cannot do surveillance, unauthorized data collection, scaled abuse, malicious cyber, or unauthorized account actions. Keep Claude as Scribe/verification, not as raw training-data supplier for rival model improvement. ([Claude Help Center][7])
+
+**Google/Gemini:** Gemini API is for developers/professional/business use and requires use only in available regions. Google’s policy also flags attempts to circumvent safety protections. Your cross-region sovereign routing must enforce availability-region constraints and not turn Gemini into a consumer-facing under-18 surface without proper controls. ([Google AI for Developers][8])
+
+**Microsoft/Azure/Copilot:** Strongly compatible with enterprise governance, but human oversight is mandatory for consequential decisions. Your architecture’s human override, HITL, audit, and consent layers are not optional; they are what makes Microsoft compatibility plausible. ([Microsoft Learn][3])
+
+**xAI/Grok:** Compatible for normal use, but watch synthetic media, likeness rights, illegal/harmful activity, unauthorized actions, and attempts to circumvent guardrails. Do not make Grok a mandatory “truth lens” on 100% of executions; that can become functional vendor dominance even if routing share appears under cap. ([xAI][4])
+
+**DeepSeek:** DeepSeek assigns output rights to users subject to law/terms and explicitly allows broad uses including derivative product development and training other models, as long as legal and compliant. That makes DeepSeek unusually compatible with the trace-market / open-weight audit lane, but you still need safety, labeling, and jurisdiction controls. ([DeepSeek][9])
+
+**Qwen/Alibaba:** Qwen’s current terms govern qwen.ai services; Alibaba Model Studio supports OpenAI-compatible APIs, structured outputs, tool calling, and region-specific endpoints. Main risks are region, model lifecycle/deprecation, and Additional Agreements for Alibaba Cloud services. Use provider-specific adapters and don’t assume qwen.ai consumer terms equal Model Studio enterprise terms. ([Qwen Studio][10])
+
+**Notion:** Good fit for governance surface, ratification logs, skills, and human workflow. Bad fit for raw credential storage or hidden background agent work involving connected apps without explicit admin/user settings. Notion says customer data is not used to train models unless opted in, and AI subprocessors are contractually barred from training on customer data. ([Notion][11])
+
+## Required architecture edits
+
+Add a **TOS Compliance Gate** before any council call:
+
+```text
+M121 — Provider Terms Compliance Gate
+- Checks provider-specific restrictions before routing
+- Blocks competitive training / distillation uses unless provider permits it
+- Blocks unsupported regions
+- Blocks autonomous high-impact decisions without HITL
+- Blocks credential sharing outside local vault
+- Emits TOSCompliancePacket into AuditChain
+```
+
+Add a **Trace Marketplace Firewall**:
+
+```text
+M122 — Trace Marketplace Firewall
+- Trace cannot include provider raw outputs by default
+- Store derived metadata, user-authored deltas, consent records, and value metrics
+- Mark provider-output-derived traces as NON-TRAINING unless provider terms explicitly permit
+- Require per-provider license flags: train_ok, resell_ok, benchmark_ok, retain_ok
+```
+
+Revise “council execution” policy:
+
+```text
+Default: route to 1 primary + 1 verifier.
+Escalate to 3–4 seats only for high uncertainty, high impact, or disputed outputs.
+Never call all providers by default.
+```
+
+Revise “one-click credentials”:
+
+```text
+One-click = activate locally vaulted, user-authorized credentials.
+Never = root-shared universal login, pooled keys, or cross-user credential broker.
+```
+
+## Bottom line
+
+The architecture survives TOS scrutiny if you make one conceptual change:
+
+```text
+Atlas Lattice is not a model-improvement engine over third-party outputs.
+It is a user-owned orchestration, audit, and consent layer.
+```
+
+The trace marketplace can still work, but it must monetize **user-created value, provenance metadata, benchmark results you are allowed to run, and opt-in traces**, not raw provider outputs or hidden distillation data.
+
+[1]: https://www.wired.com/story/anthropic-revokes-openais-access-to-claude?utm_source=chatgpt.com "Anthropic Revokes OpenAI's Access to Claude"
+[2]: https://support.anthropic.com/en/articles/12005017-using-agents-according-to-our-usage-policy?utm_source=chatgpt.com "Using Agents According to Our Usage Policy | Anthropic Help Center"
+[3]: https://learn.microsoft.com/en-us/legal/ai-code-of-conduct?utm_source=chatgpt.com "Code of Conduct for Microsoft AI Services | Microsoft Learn"
+[4]: https://x.ai/legal/acceptable-use-policy?utm_source=chatgpt.com "Acceptable Use Policy | xAI"
+[5]: https://www.notion.com/help/notion-ai-faqs?utm_source=chatgpt.com "What is Notion AI? – Notion Help Center"
+[6]: https://openai.com/policies/service-terms//?utm_source=chatgpt.com "Service terms | OpenAI"
+[7]: https://support.anthropic.com/en/articles/9267385-does-anthropic-act-as-a-data-processor-or-controller?utm_source=chatgpt.com "Does Anthropic act as a Data Processor or Controller? | Anthropic Help Center"
+[8]: https://ai.google.dev/gemini-api/terms?utm_source=chatgpt.com "Gemini API Additional Terms of Service  |  Google AI for Developers"
+[9]: https://cdn.deepseek.com/policies/en-US/deepseek-terms-of-use.html?utm_source=chatgpt.com "DeepSeek Terms of Use"
+[10]: https://qwen.ai/termsservice?utm_source=chatgpt.com "Qwen"
+[11]: https://www.notion.com/en-us/product/ai?utm_source=chatgpt.com "Meet your AI team | Notion"

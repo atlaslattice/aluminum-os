@@ -1,0 +1,61 @@
+sphere:
+  id: S04
+  house: H02
+  name: Information Theory & Cryptography
+  full_id: H02-S04
+  ordinal: 16
+status: POPULATED
+module_count: 13
+modules:
+- id: M23
+  name: Information Security Module
+  status: SPEC
+  has_code: false
+- id: M23a
+  name: Information Security CN Adapter
+  status: SPEC
+  has_code: false
+- id: M3
+  name: Consent & Provenance Engine
+  status: SPEC
+  has_code: false
+- id: M3a
+  name: Consent Engine Extension
+  status: SPEC
+  has_code: false
+- id: M42
+  name: Zero-Knowledge Proof Module
+  status: SPEC
+  has_code: false
+- id: M53
+  name: Homomorphic Encryption Engine
+  status: SPEC
+  has_code: false
+- id: M6
+  name: Cryptographic Primitives
+  status: SPEC
+  has_code: false
+- id: M65
+  name: Metadata Enrichment Pipeline
+  status: SPEC
+  has_code: false
+- id: M6a
+  name: Cryptographic Primitives Extension A
+  status: SPEC
+  has_code: false
+- id: M6b
+  name: Cryptographic Primitives Extension B
+  status: SPEC
+  has_code: false
+- id: M6c
+  name: BSN Anchoring Adapter
+  status: SPEC
+  has_code: false
+- id: M77
+  name: Secure Multi-Party Computation
+  status: SPEC
+  has_code: false
+- id: M90
+  name: Post-Quantum Cryptography
+  status: SPEC
+  has_code: false

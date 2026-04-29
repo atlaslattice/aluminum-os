@@ -1,0 +1,9 @@
+sphere:
+  id: S11
+  house: H01
+  name: Eastern Philosophy & Comparative
+  full_id: H01-S11
+  ordinal: 11
+status: EMPTY
+module_count: 0
+modules: []

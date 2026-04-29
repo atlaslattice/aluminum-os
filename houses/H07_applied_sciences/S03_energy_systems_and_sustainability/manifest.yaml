@@ -1,0 +1,13 @@
+sphere:
+  id: S03
+  house: H07
+  name: Energy Systems & Sustainability
+  full_id: H07-S03
+  ordinal: 75
+status: POPULATED
+module_count: 1
+modules:
+- id: M133
+  name: Urban Planning Simulator
+  status: SPEC
+  has_code: false

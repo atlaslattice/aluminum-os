@@ -1,0 +1,9 @@
+sphere:
+  id: S01
+  house: H06
+  name: History & Historiography
+  full_id: H06-S01
+  ordinal: 61
+status: EMPTY
+module_count: 0
+modules: []

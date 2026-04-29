@@ -1,0 +1,9 @@
+sphere:
+  id: S06
+  house: H11
+  name: Demography & Population Studies
+  full_id: H11-S06
+  ordinal: 126
+status: EMPTY
+module_count: 0
+modules: []

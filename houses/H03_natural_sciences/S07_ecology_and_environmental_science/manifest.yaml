@@ -1,0 +1,13 @@
+sphere:
+  id: S07
+  house: H03
+  name: Ecology & Environmental Science
+  full_id: H03-S07
+  ordinal: 31
+status: POPULATED
+module_count: 1
+modules:
+- id: M131
+  name: Environmental Impact Assessor
+  status: SPEC
+  has_code: false

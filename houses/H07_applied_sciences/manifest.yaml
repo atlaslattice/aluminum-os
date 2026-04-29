@@ -1,0 +1,101 @@
+house:
+  id: H07
+  name: Applied Sciences
+  sphere_count: 12
+  populated_spheres: 6
+  coverage_pct: 50.0
+total_modules: 8
+modules:
+- id: M129
+  name: Agricultural Data Pipeline
+  sphere: S01
+- id: M132
+  name: Water Quality Monitor
+  sphere: S02
+- id: M133
+  name: Urban Planning Simulator
+  sphere: S03
+- id: M134
+  name: Data Warehouse Manager
+  sphere: S04
+- id: M176
+  name: Boot Manifest Runtime
+  sphere: S04
+- id: M178
+  name: Cross-Instance State Synchronizer
+  sphere: S04
+- id: M135
+  name: Supply Chain Optimizer
+  sphere: S05
+- id: M177
+  name: Pre-Session Research Queue
+  sphere: S08
+spheres:
+  S01:
+    name: Agricultural Science & Food Systems
+    module_count: 1
+    status: POPULATED
+    modules:
+    - M129
+  S02:
+    name: Environmental Engineering
+    module_count: 1
+    status: POPULATED
+    modules:
+    - M132
+  S03:
+    name: Energy Systems & Sustainability
+    module_count: 1
+    status: POPULATED
+    modules:
+    - M133
+  S04:
+    name: Transportation & Logistics
+    module_count: 3
+    status: POPULATED
+    modules:
+    - M134
+    - M176
+    - M178
+  S05:
+    name: Urban Planning & Smart Cities
+    module_count: 1
+    status: POPULATED
+    modules:
+    - M135
+  S06:
+    name: Materials Science & Nanotechnology
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S07:
+    name: Biomedical Engineering
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S08:
+    name: Industrial Engineering & Manufacturing
+    module_count: 1
+    status: POPULATED
+    modules:
+    - M177
+  S09:
+    name: Aerospace & Space Technology
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S10:
+    name: Marine & Ocean Engineering
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S11:
+    name: Nuclear Science & Technology
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S12:
+    name: Geotechnical & Mining Engineering
+    module_count: 0
+    status: EMPTY
+    modules: []

@@ -1,0 +1,13 @@
+sphere:
+  id: S08
+  house: H04
+  name: Telecommunications & Signal Processing
+  full_id: H04-S08
+  ordinal: 44
+status: POPULATED
+module_count: 1
+modules:
+- id: M125
+  name: Medical Device Interface
+  status: SPEC
+  has_code: false

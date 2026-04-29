@@ -1,0 +1,13 @@
+sphere:
+  id: S01
+  house: H11
+  name: Economics & Finance
+  full_id: H11-S01
+  ordinal: 121
+status: POPULATED
+module_count: 1
+modules:
+- id: M139
+  name: Economic Modeling Engine
+  status: SPEC
+  has_code: false

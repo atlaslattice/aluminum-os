@@ -1,0 +1,9 @@
+sphere:
+  id: S06
+  house: H08
+  name: Early Childhood Education
+  full_id: H08-S06
+  ordinal: 90
+status: EMPTY
+module_count: 0
+modules: []

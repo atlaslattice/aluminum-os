@@ -1,0 +1,9 @@
+sphere:
+  id: S10
+  house: H06
+  name: Indigenous Knowledge Systems
+  full_id: H06-S10
+  ordinal: 70
+status: EMPTY
+module_count: 0
+modules: []

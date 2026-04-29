@@ -1,0 +1,9 @@
+sphere:
+  id: S01
+  house: H01
+  name: Metaphysics & Ontology
+  full_id: H01-S01
+  ordinal: 1
+status: EMPTY
+module_count: 0
+modules: []

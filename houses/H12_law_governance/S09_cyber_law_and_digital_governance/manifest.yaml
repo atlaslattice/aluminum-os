@@ -1,0 +1,17 @@
+sphere:
+  id: S09
+  house: H12
+  name: Cyber Law & Digital Governance
+  full_id: H12-S09
+  ordinal: 141
+status: POPULATED
+module_count: 2
+modules:
+- id: M142
+  name: TOS Compliance Engine
+  status: SPEC
+  has_code: false
+- id: M151
+  name: Cyber Law Compliance
+  status: SPEC
+  has_code: false

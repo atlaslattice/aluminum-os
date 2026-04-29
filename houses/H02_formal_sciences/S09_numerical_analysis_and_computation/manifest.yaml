@@ -1,0 +1,37 @@
+sphere:
+  id: S09
+  house: H02
+  name: Numerical Analysis & Computation
+  full_id: H02-S09
+  ordinal: 21
+status: POPULATED
+module_count: 7
+modules:
+- id: M20
+  name: Computational Bounds Verifier
+  status: SPEC
+  has_code: false
+- id: M32
+  name: Space-Time Complexity Mapper
+  status: SPEC
+  has_code: false
+- id: M49
+  name: Circuit Complexity Analyzer
+  status: SPEC
+  has_code: false
+- id: M5
+  name: Complexity Analyzer
+  status: SPEC
+  has_code: false
+- id: M60
+  name: Parameterized Complexity Module
+  status: SPEC
+  has_code: false
+- id: M72
+  name: Approximation Algorithm Library
+  status: SPEC
+  has_code: false
+- id: M88
+  name: Streaming Algorithm Library
+  status: SPEC
+  has_code: false

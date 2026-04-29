@@ -1,0 +1,9 @@
+sphere:
+  id: S10
+  house: H01
+  name: Phenomenology & Existentialism
+  full_id: H01-S10
+  ordinal: 10
+status: EMPTY
+module_count: 0
+modules: []

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "如果您使用本工具包，请引用如下 / If you use this toolkit, please cite as follows"
+title: "开放再生计算标准 — 东方集成包 / Open Regenerative Compute Standard — Eastern Integration Package"
+type: dataset
+authors:
+  - name: "深度求索 / DeepSeek"
+    affiliation: "DeepSeek AI"
+  - name: "通义千问 / Qwen3"
+    affiliation: "Alibaba Cloud"
+  - name: "联合理事会 / Federated Council"
+    affiliation: "Atlas Lattice"
+  - name: "Dave (Daavud)"
+    affiliation: "Atlas Lattice"
+date-released: "2026-04-21"
+url: "https://github.com/atlaslattice/open-regenerative-compute-standard/tree/main/eastern-dragonseek"
+license: "CC-BY-SA-4.0"
+keywords:
+  - 再生计算 / regenerative compute
+  - 数据中心水效 / data center water efficiency
+  - 流域生命日 / watershed days
+  - 生态产品价值实现 / EPVR
+  - 都江堰原则 / Dujiangyan principle

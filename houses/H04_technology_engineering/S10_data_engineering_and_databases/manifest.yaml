@@ -1,0 +1,17 @@
+sphere:
+  id: S10
+  house: H04
+  name: Data Engineering & Databases
+  full_id: H04-S10
+  ordinal: 46
+status: POPULATED
+module_count: 2
+modules:
+- id: M127
+  name: Civic Compute Coordinator
+  status: SPEC
+  has_code: false
+- id: M128
+  name: CEO Collective Governance Module
+  status: SPEC
+  has_code: false

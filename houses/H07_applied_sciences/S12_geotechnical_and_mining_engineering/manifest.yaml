@@ -1,0 +1,9 @@
+sphere:
+  id: S12
+  house: H07
+  name: Geotechnical & Mining Engineering
+  full_id: H07-S12
+  ordinal: 84
+status: EMPTY
+module_count: 0
+modules: []

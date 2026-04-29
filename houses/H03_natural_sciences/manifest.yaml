@@ -1,0 +1,77 @@
+house:
+  id: H03
+  name: Natural Sciences
+  sphere_count: 12
+  populated_spheres: 2
+  coverage_pct: 16.7
+total_modules: 2
+modules:
+- id: M130
+  name: Wet Lab Verification Gate
+  sphere: S02
+- id: M131
+  name: Environmental Impact Assessor
+  sphere: S07
+spheres:
+  S01:
+    name: Physics & Cosmology
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S02:
+    name: Chemistry & Materials Science
+    module_count: 1
+    status: POPULATED
+    modules:
+    - M130
+  S03:
+    name: Earth Sciences & Geology
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S04:
+    name: Astronomy & Astrophysics
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S05:
+    name: Atmospheric & Climate Science
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S06:
+    name: Oceanography & Marine Science
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S07:
+    name: Ecology & Environmental Science
+    module_count: 1
+    status: POPULATED
+    modules:
+    - M131
+  S08:
+    name: Paleontology & Evolutionary Biology
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S09:
+    name: Quantum Mechanics & Particle Physics
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S10:
+    name: Thermodynamics & Statistical Mechanics
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S11:
+    name: Optics & Photonics
+    module_count: 0
+    status: EMPTY
+    modules: []
+  S12:
+    name: Acoustics & Wave Physics
+    module_count: 0
+    status: EMPTY
+    modules: []

@@ -1,0 +1,13 @@
+sphere:
+  id: S12
+  house: H05
+  name: Craft & Material Arts
+  full_id: H05-S12
+  ordinal: 60
+status: POPULATED
+module_count: 1
+modules:
+- id: M166
+  name: Animation Pipeline
+  status: SPEC
+  has_code: false

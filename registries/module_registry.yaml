@@ -1,0 +1,916 @@
+metadata:
+  version: '3.14'
+  generated_from: COMPLETE_BUILD_PLAN_v3.14.md
+  total_modules: 182
+  total_houses_with_modules: 10
+modules:
+- id: M8
+  name: Epistemic Integrity Validator
+  house: H01
+  sphere: S02
+  status: SPEC
+- id: M8a
+  name: Epistemic Integrity CN Adapter
+  house: H01
+  sphere: S02
+  status: SPEC
+- id: M7
+  name: Ethics Engine
+  house: H01
+  sphere: S03
+  status: SPEC
+- id: M10
+  name: Mathematical Proof Engine
+  house: H02
+  sphere: S01
+  status: SPEC
+- id: M22
+  name: Theorem Prover
+  house: H02
+  sphere: S01
+  status: SPEC
+- id: M28
+  name: Number Theory Utilities
+  house: H02
+  sphere: S01
+  status: SPEC
+- id: M44
+  name: Constructive Mathematics Module
+  house: H02
+  sphere: S01
+  status: SPEC
+- id: M56
+  name: Proof Assistant Interface
+  house: H02
+  sphere: S01
+  status: SPEC
+- id: M68
+  name: Gödel Incompleteness Tracker
+  house: H02
+  sphere: S01
+  status: SPEC
+- id: M84
+  name: Axiom Consistency Checker
+  house: H02
+  sphere: S01
+  status: SPEC
+- id: M16
+  name: Statistical Inference Engine
+  house: H02
+  sphere: S02
+  status: SPEC
+- id: M173
+  name: Real-Time Routing Share Meter
+  house: H02
+  sphere: S02
+  status: SPEC
+- id: M29
+  name: Bayesian Network Engine
+  house: H02
+  sphere: S02
+  status: SPEC
+- id: M3.1
+  name: Trust Scoring System (TSS)
+  house: H02
+  sphere: S02
+  status: SPEC
+- id: M46
+  name: Monte Carlo Simulator
+  house: H02
+  sphere: S02
+  status: SPEC
+- id: M74
+  name: Hypothesis Testing Framework
+  house: H02
+  sphere: S02
+  status: SPEC
+- id: M79
+  name: Primacy Bonus Calculator
+  house: H02
+  sphere: S02
+  status: SPEC
+- id: M80
+  name: Epistemic Weather Engine
+  house: H02
+  sphere: S02
+  status: SPEC
+- id: M1
+  name: Sovereign Router Core
+  house: H02
+  sphere: S03
+  status: SPEC
+- id: M15
+  name: Algorithm Optimizer
+  house: H02
+  sphere: S03
+  status: SPEC
+- id: M15a
+  name: Algorithm Optimizer CN Adapter
+  house: H02
+  sphere: S03
+  status: SPEC
+- id: M18
+  name: Distributed Consensus Protocol
+  house: H02
+  sphere: S03
+  status: SPEC
+- id: M40
+  name: Parallel Algorithm Scheduler
+  house: H02
+  sphere: S03
+  status: SPEC
+- id: M52
+  name: Distributed Hash Table
+  house: H02
+  sphere: S03
+  status: SPEC
+- id: M63
+  name: Parser Symmetry Gate
+  house: H02
+  sphere: S03
+  status: SPEC
+- id: M76
+  name: Consensus Finality Checker
+  house: H02
+  sphere: S03
+  status: SPEC
+- id: M82
+  name: Load Balancer
+  house: H02
+  sphere: S03
+  status: SPEC
+- id: M23
+  name: Information Security Module
+  house: H02
+  sphere: S04
+  status: SPEC
+- id: M23a
+  name: Information Security CN Adapter
+  house: H02
+  sphere: S04
+  status: SPEC
+- id: M3
+  name: Consent & Provenance Engine
+  house: H02
+  sphere: S04
+  status: SPEC
+- id: M3a
+  name: Consent Engine Extension
+  house: H02
+  sphere: S04
+  status: SPEC
+- id: M42
+  name: Zero-Knowledge Proof Module
+  house: H02
+  sphere: S04
+  status: SPEC
+- id: M53
+  name: Homomorphic Encryption Engine
+  house: H02
+  sphere: S04
+  status: SPEC
+- id: M6
+  name: Cryptographic Primitives
+  house: H02
+  sphere: S04
+  status: SPEC
+- id: M65
+  name: Metadata Enrichment Pipeline
+  house: H02
+  sphere: S04
+  status: SPEC
+- id: M6a
+  name: Cryptographic Primitives Extension A
+  house: H02
+  sphere: S04
+  status: SPEC
+- id: M6b
+  name: Cryptographic Primitives Extension B
+  house: H02
+  sphere: S04
+  status: SPEC
+- id: M6c
+  name: BSN Anchoring Adapter
+  house: H02
+  sphere: S04
+  status: SPEC
+- id: M77
+  name: Secure Multi-Party Computation
+  house: H02
+  sphere: S04
+  status: SPEC
+- id: M90
+  name: Post-Quantum Cryptography
+  house: H02
+  sphere: S04
+  status: SPEC
+- id: M17
+  name: Systems Dynamics Modeler
+  house: H02
+  sphere: S05
+  status: SPEC
+- id: M2
+  name: Constitutional Kernel
+  house: H02
+  sphere: S05
+  status: SPEC
+- id: M30
+  name: Feedback Control Analyzer
+  house: H02
+  sphere: S05
+  status: SPEC
+- id: M41
+  name: Emergent Behavior Detector
+  house: H02
+  sphere: S05
+  status: SPEC
+- id: M54
+  name: Agent-Based Modeling Framework
+  house: H02
+  sphere: S05
+  status: SPEC
+- id: M66
+  name: Feedback Loop Detector
+  house: H02
+  sphere: S05
+  status: SPEC
+- id: M75
+  name: Cross-Validation Matrix
+  house: H02
+  sphere: S05
+  status: SPEC
+- id: M81
+  name: Resilience Scoring Module
+  house: H02
+  sphere: S05
+  status: SPEC
+- id: M21
+  name: Strategic Reasoning Engine
+  house: H02
+  sphere: S06
+  status: SPEC
+- id: M31
+  name: Mechanism Design Module
+  house: H02
+  sphere: S06
+  status: SPEC
+- id: M43
+  name: Auction Theory Engine
+  house: H02
+  sphere: S06
+  status: SPEC
+- id: M55
+  name: Voting Theory Module
+  house: H02
+  sphere: S06
+  status: SPEC
+- id: M67
+  name: Nash Equilibrium Finder
+  house: H02
+  sphere: S06
+  status: SPEC
+- id: M78
+  name: Cooperative Game Solver
+  house: H02
+  sphere: S06
+  status: SPEC
+- id: M9
+  name: Game Theory Optimizer
+  house: H02
+  sphere: S06
+  status: SPEC
+- id: M91
+  name: Social Choice Function
+  house: H02
+  sphere: S06
+  status: SPEC
+- id: M13
+  name: Formal Language Processor
+  house: H02
+  sphere: S07
+  status: SPEC
+- id: M26
+  name: Grammar Induction Engine
+  house: H02
+  sphere: S07
+  status: SPEC
+- id: M45
+  name: Type Theory Checker
+  house: H02
+  sphere: S07
+  status: SPEC
+- id: M57
+  name: Context-Free Grammar Parser
+  house: H02
+  sphere: S07
+  status: SPEC
+- id: M69
+  name: Regular Expression Optimizer
+  house: H02
+  sphere: S07
+  status: SPEC
+- id: M85
+  name: Pushdown Automaton Simulator
+  house: H02
+  sphere: S07
+  status: SPEC
+- id: M11
+  name: Category Theory Framework
+  house: H02
+  sphere: S08
+  status: SPEC
+- id: M24
+  name: Algebraic Structure Validator
+  house: H02
+  sphere: S08
+  status: SPEC
+- id: M34
+  name: Homological Algebra Engine
+  house: H02
+  sphere: S08
+  status: SPEC
+- id: M47
+  name: Representation Theory Module
+  house: H02
+  sphere: S08
+  status: SPEC
+- id: M58
+  name: Group Theory Computations
+  house: H02
+  sphere: S08
+  status: SPEC
+- id: M70
+  name: Ring Theory Module
+  house: H02
+  sphere: S08
+  status: SPEC
+- id: M86
+  name: Galois Theory Module
+  house: H02
+  sphere: S08
+  status: SPEC
+- id: M20
+  name: Computational Bounds Verifier
+  house: H02
+  sphere: S09
+  status: SPEC
+- id: M32
+  name: Space-Time Complexity Mapper
+  house: H02
+  sphere: S09
+  status: SPEC
+- id: M49
+  name: Circuit Complexity Analyzer
+  house: H02
+  sphere: S09
+  status: SPEC
+- id: M5
+  name: Complexity Analyzer
+  house: H02
+  sphere: S09
+  status: SPEC
+- id: M60
+  name: Parameterized Complexity Module
+  house: H02
+  sphere: S09
+  status: SPEC
+- id: M72
+  name: Approximation Algorithm Library
+  house: H02
+  sphere: S09
+  status: SPEC
+- id: M88
+  name: Streaming Algorithm Library
+  house: H02
+  sphere: S09
+  status: SPEC
+- id: M14
+  name: Topological Data Analyzer
+  house: H02
+  sphere: S10
+  status: SPEC
+- id: M27
+  name: Geometric Reasoning Module
+  house: H02
+  sphere: S10
+  status: SPEC
+- id: M35
+  name: Manifold Learning Module
+  house: H02
+  sphere: S10
+  status: SPEC
+- id: M51
+  name: Knot Theory Module
+  house: H02
+  sphere: S10
+  status: SPEC
+- id: M62
+  name: Persistent Homology Engine
+  house: H02
+  sphere: S10
+  status: SPEC
+- id: M73
+  name: Differential Geometry Engine
+  house: H02
+  sphere: S10
+  status: SPEC
+- id: M89
+  name: Algebraic Topology Module
+  house: H02
+  sphere: S10
+  status: SPEC
+- id: M19
+  name: Model Checker
+  house: H02
+  sphere: S11
+  status: SPEC
+- id: M33
+  name: Temporal Logic Verifier
+  house: H02
+  sphere: S11
+  status: SPEC
+- id: M4
+  name: Formal Verification Module
+  house: H02
+  sphere: S11
+  status: SPEC
+- id: M50
+  name: SAT/SMT Solver
+  house: H02
+  sphere: S11
+  status: SPEC
+- id: M61
+  name: Bisimulation Checker
+  house: H02
+  sphere: S11
+  status: SPEC
+- id: M64
+  name: Constitutional Compiler
+  house: H02
+  sphere: S11
+  status: SPEC
+- id: M83
+  name: Invariant Monitor
+  house: H02
+  sphere: S11
+  status: SPEC
+- id: M12
+  name: Quantum Computing Interface
+  house: H02
+  sphere: S12
+  status: SPEC
+- id: M25
+  name: Quantum Algorithm Library
+  house: H02
+  sphere: S12
+  status: SPEC
+- id: M25a
+  name: Quantum Algorithm Extension A
+  house: H02
+  sphere: S12
+  status: SPEC
+- id: M25b
+  name: Quantum Algorithm Extension B
+  house: H02
+  sphere: S12
+  status: SPEC
+- id: M25c
+  name: Quantum Algorithm Extension C
+  house: H02
+  sphere: S12
+  status: SPEC
+- id: M48
+  name: Quantum Error Correction
+  house: H02
+  sphere: S12
+  status: SPEC
+- id: M59
+  name: Quantum Simulation Engine
+  house: H02
+  sphere: S12
+  status: SPEC
+- id: M71
+  name: Quantum Key Distribution
+  house: H02
+  sphere: S12
+  status: SPEC
+- id: M87
+  name: Quantum Entanglement Tracker
+  house: H02
+  sphere: S12
+  status: SPEC
+- id: M130
+  name: Wet Lab Verification Gate
+  house: H03
+  sphere: S02
+  status: SPEC
+- id: M131
+  name: Environmental Impact Assessor
+  house: H03
+  sphere: S07
+  status: SPEC
+- id: M100
+  name: Code Quality Analyzer
+  house: H04
+  sphere: S01
+  status: SPEC
+- id: M120
+  name: CI/CD Pipeline Manager
+  house: H04
+  sphere: S01
+  status: SPEC
+- id: M92
+  name: Software Architecture Validator
+  house: H04
+  sphere: S01
+  status: SPEC
+- id: M122
+  name: FPGA Configuration Manager
+  house: H04
+  sphere: S02
+  status: SPEC
+- id: M95
+  name: Hardware Abstraction Layer
+  house: H04
+  sphere: S02
+  status: SPEC
+- id: M102
+  name: API Gateway
+  house: H04
+  sphere: S03
+  status: SPEC
+- id: M118
+  name: Switzerland Layer (Neutral Routing)
+  house: H04
+  sphere: S03
+  status: SPEC
+- id: M94
+  name: Network Protocol Analyzer
+  house: H04
+  sphere: S03
+  status: SPEC
+- id: M101
+  name: Model Training Monitor
+  house: H04
+  sphere: S04
+  status: SPEC
+- id: M104
+  name: Franchise Consent Manager
+  house: H04
+  sphere: S04
+  status: SPEC
+- id: M121
+  name: Federated Learning Coordinator
+  house: H04
+  sphere: S04
+  status: SPEC
+- id: M93
+  name: ML Pipeline Orchestrator
+  house: H04
+  sphere: S04
+  status: SPEC
+- id: M123
+  name: Autonomous Vehicle Interface
+  house: H04
+  sphere: S05
+  status: SPEC
+- id: M96
+  name: Robotics Control Interface
+  house: H04
+  sphere: S05
+  status: SPEC
+- id: M124
+  name: Renewable Energy Tracker
+  house: H04
+  sphere: S06
+  status: SPEC
+- id: M97
+  name: Energy Grid Optimizer
+  house: H04
+  sphere: S06
+  status: SPEC
+- id: M103
+  name: Aerospace Simulation Engine
+  house: H04
+  sphere: S07
+  status: SPEC
+- id: M125
+  name: Medical Device Interface
+  house: H04
+  sphere: S08
+  status: SPEC
+- id: M126
+  name: Structural Analysis Engine
+  house: H04
+  sphere: S09
+  status: SPEC
+- id: M127
+  name: Civic Compute Coordinator
+  house: H04
+  sphere: S10
+  status: SPEC
+- id: M128
+  name: CEO Collective Governance Module
+  house: H04
+  sphere: S10
+  status: SPEC
+- id: M119
+  name: Threat Intelligence Feed
+  house: H04
+  sphere: S11
+  status: SPEC
+- id: M174
+  name: Provider Retaliation Monitor
+  house: H04
+  sphere: S11
+  status: SPEC
+- id: M98
+  name: Security Audit Engine
+  house: H04
+  sphere: S11
+  status: SPEC
+- id: M99
+  name: UX Accessibility Validator
+  house: H04
+  sphere: S12
+  status: SPEC
+- id: M105
+  name: Visual Style Transfer Engine
+  house: H05
+  sphere: S01
+  status: SPEC
+- id: M110
+  name: Attribution Tracker
+  house: H05
+  sphere: S01
+  status: SPEC
+- id: M106
+  name: Music Generation Pipeline
+  house: H05
+  sphere: S02
+  status: SPEC
+- id: M111
+  name: Style Fingerprint Detector
+  house: H05
+  sphere: S02
+  status: SPEC
+- id: M107
+  name: Creative Writing Assistant
+  house: H05
+  sphere: S03
+  status: SPEC
+- id: M112
+  name: Derivative Work Analyzer
+  house: H05
+  sphere: S03
+  status: SPEC
+- id: M108
+  name: Video Production Pipeline
+  house: H05
+  sphere: S04
+  status: SPEC
+- id: M113
+  name: Fair Use Evaluator
+  house: H05
+  sphere: S04
+  status: SPEC
+- id: M162a
+  name: Immersive Theater Engine
+  house: H05
+  sphere: S05
+  status: SPEC
+- id: M163
+  name: Architectural Visualization
+  house: H05
+  sphere: S06
+  status: SPEC
+- id: M109
+  name: Digital Art Generator
+  house: H05
+  sphere: S07
+  status: SPEC
+- id: M167
+  name: Game IP Sovereignty Registry
+  house: H05
+  sphere: S08
+  status: SPEC
+- id: M168
+  name: Content Rating Constitutional Gate
+  house: H05
+  sphere: S08
+  status: SPEC
+- id: M169
+  name: Esports & Competitive Integrity Engine
+  house: H05
+  sphere: S08
+  status: SPEC
+- id: M170
+  name: Cloud Gaming Sovereignty Router
+  house: H05
+  sphere: S08
+  status: SPEC
+- id: M171
+  name: Game Preservation & Cultural Heritage Engine
+  house: H05
+  sphere: S08
+  status: SPEC
+- id: M172
+  name: Civic Compute Reuse Engine
+  house: H05
+  sphere: S08
+  status: SPEC
+- id: M164
+  name: Computational Photography
+  house: H05
+  sphere: S09
+  status: SPEC
+- id: M165
+  name: Generative Craft Engine
+  house: H05
+  sphere: S10
+  status: SPEC
+- id: M162b
+  name: Spatial Computing Interface
+  house: H05
+  sphere: S11
+  status: SPEC
+- id: M175
+  name: Interactive-Kinetic Rights Harmonizer
+  house: H05
+  sphere: S11
+  status: SPEC
+- id: M166
+  name: Animation Pipeline
+  house: H05
+  sphere: S12
+  status: SPEC
+- id: M129
+  name: Agricultural Data Pipeline
+  house: H07
+  sphere: S01
+  status: SPEC
+- id: M132
+  name: Water Quality Monitor
+  house: H07
+  sphere: S02
+  status: SPEC
+- id: M133
+  name: Urban Planning Simulator
+  house: H07
+  sphere: S03
+  status: SPEC
+- id: M134
+  name: Data Warehouse Manager
+  house: H07
+  sphere: S04
+  status: SPEC
+- id: M176
+  name: Boot Manifest Runtime
+  house: H07
+  sphere: S04
+  status: SPEC
+- id: M178
+  name: Cross-Instance State Synchronizer
+  house: H07
+  sphere: S04
+  status: SPEC
+- id: M135
+  name: Supply Chain Optimizer
+  house: H07
+  sphere: S05
+  status: SPEC
+- id: M177
+  name: Pre-Session Research Queue
+  house: H07
+  sphere: S08
+  status: SPEC
+- id: M136
+  name: Genomic Analysis Pipeline
+  house: H09
+  sphere: S01
+  status: SPEC
+- id: M137
+  name: Synthetic Biology Designer
+  house: H09
+  sphere: S11
+  status: SPEC
+- id: M138
+  name: Health Informatics Engine
+  house: H10
+  sphere: S08
+  status: SPEC
+- id: M139
+  name: Economic Modeling Engine
+  house: H11
+  sphere: S01
+  status: SPEC
+- id: M140
+  name: Policy Impact Analyzer
+  house: H11
+  sphere: S02
+  status: SPEC
+- id: M141
+  name: Behavioral Pattern Detector
+  house: H11
+  sphere: S04
+  status: SPEC
+- id: M143
+  name: Constitutional Rights Validator
+  house: H12
+  sphere: S01
+  status: SPEC
+- id: M155
+  name: Consent Audit Trail
+  house: H12
+  sphere: S01
+  status: SPEC
+- id: M145
+  name: Treaty Compliance Checker
+  house: H12
+  sphere: S02
+  status: SPEC
+- id: M156
+  name: Sanctions Compliance Module
+  house: H12
+  sphere: S02
+  status: SPEC
+- id: M146
+  name: Corporate Governance Module
+  house: H12
+  sphere: S03
+  status: SPEC
+- id: M157
+  name: Contract Analyzer
+  house: H12
+  sphere: S03
+  status: SPEC
+- id: M144
+  name: IP Rights Manager
+  house: H12
+  sphere: S04
+  status: SPEC
+- id: M158
+  name: Patent Prior Art Searcher
+  house: H12
+  sphere: S04
+  status: SPEC
+- id: M147
+  name: Environmental Compliance Tracker
+  house: H12
+  sphere: S05
+  status: SPEC
+- id: M159
+  name: Carbon Credit Validator
+  house: H12
+  sphere: S05
+  status: SPEC
+- id: M148
+  name: Criminal Law Database
+  house: H12
+  sphere: S06
+  status: SPEC
+- id: M160
+  name: Evidence Chain Manager
+  house: H12
+  sphere: S06
+  status: SPEC
+- id: M149
+  name: Regulatory Change Monitor
+  house: H12
+  sphere: S07
+  status: SPEC
+- id: M161
+  name: Regulatory Sandbox Interface
+  house: H12
+  sphere: S07
+  status: SPEC
+- id: M150
+  name: Labor Rights Validator
+  house: H12
+  sphere: S08
+  status: SPEC
+- id: M142
+  name: TOS Compliance Engine
+  house: H12
+  sphere: S09
+  status: SPEC
+- id: M151
+  name: Cyber Law Compliance
+  house: H12
+  sphere: S09
+  status: SPEC
+- id: M152
+  name: Indigenous Rights Protector
+  house: H12
+  sphere: S10
+  status: SPEC
+- id: M153
+  name: Arbitration Protocol
+  house: H12
+  sphere: S11
+  status: SPEC
+- id: M154
+  name: Comparative Law Engine
+  house: H12
+  sphere: S12
+  status: SPEC
