@@ -116,11 +116,11 @@ Everything in this phase is already done:
 - S4 translation table (127 Microsoft products → 89 spheres)
 - Corrections ledger with all known findings
 
-### Phase 1: Ontology Migration (CRITICAL PATH)
+### Phase 1: Ontology Migration (CRITICAL PATH) ✅ COMPLETE
 
 **Goal:** Every component that classifies, routes, or stores data uses the canonical 12×12+1 ontology.
 
-**Sprint 1.1 — Sheldonbrain RAG API Migration** (Priority: HIGHEST)
+**Sprint 1.1 — Sheldonbrain RAG API Migration** ✅ COMPLETE (PR #2 merged 2026-04-29)
 
 This is the only production-deployed system. It currently uses grokbrain_v4's 12 academic categories. The migration:
 
@@ -136,7 +136,7 @@ This is the only production-deployed system. It currently uses grokbrain_v4's 12
 
 **Estimated effort:** 2-3 sessions. The v2 classifier and ontology modules are already built — this is wiring, not invention.
 
-**Sprint 1.2 — Manus-Artifacts Codebase Consolidation**
+**Sprint 1.2 — Manus-Artifacts Codebase Consolidation** ✅ COMPLETE (commit bb7d701)
 
 The `manus-artifacts/codebases/` directory contains 14 subdirectories with ~28,000 lines of Python. Much of this is duplicated (remaining_innovations.py appears twice, ingestion_pipeline.py appears twice). The consolidation:
 
@@ -153,7 +153,7 @@ The `manus-artifacts/codebases/` directory contains 14 subdirectories with ~28,0
 | snrs/ | 958 | **MIGRATE** — snrs_v1_3_2 → H07.S04 module; 144_sphere_ingestion → lattice_ontology_v2 |
 | aluminum-os/ | 414 | **ARCHIVE** — superseded by aluminum-os monorepo |
 
-**Sprint 1.3 — Legacy aluminum-os-v3 Assessment**
+**Sprint 1.3 — Legacy aluminum-os-v3 Assessment** ✅ COMPLETE (commit 91e60c0 — preserved as Rust, not ported)
 
 The Rust crates (2,504 lines) represent the 5-ring architecture that has been superseded. Decision required:
 
@@ -241,11 +241,11 @@ Constitutional OS code maps here:
 
 These Houses have no registered modules. Decision: register placeholder modules based on the sphere definitions in lattice_ontology.yaml, or leave empty until domain experts contribute.
 
-### Phase 3: Frontend Integration
+### Phase 3: Frontend Integration (ABSORBED — endpoint migration pending)
 
 **Goal:** Connect the Sheldon Gemini frontend to the real backend through the LCP pipeline.
 
-**Sprint 3.1 — Replace Simulated Services**
+**Sprint 3.1 — Replace Simulated Services** (ABSORBED to monorepo; MIGRATION.md written)
 
 The sheldongemini-GPI frontend has 6 simulated services that need to be replaced:
 
@@ -296,8 +296,8 @@ Keep domain repos as independent modules that register with the lattice via mani
 
 | Priority | Phase | Sprint | Effort | Impact | Dependency |
 |----------|-------|--------|--------|--------|------------|
-| **P0** | 1.1 | Sheldonbrain ontology migration | 2-3 sessions | Unblocks all RAG queries | None |
-| **P0** | 1.2 | Manus-artifacts consolidation | 2 sessions | Eliminates duplication | None |
+| **P0** | 1.1 | Sheldonbrain ontology migration | 2-3 sessions | Unblocks all RAG queries | None | ✅ DONE |
+| **P0** | 1.2 | Manus-artifacts consolidation | 2 sessions | Eliminates duplication | None | ✅ DONE |
 | **P1** | 2.1 | H02 module population | 3-4 sessions | 96 modules SPEC→ACTIVE | Phase 1 |
 | **P1** | 3.1 | Frontend service replacement | 2 sessions | Real integrations | Phase 1.1 |
 | **P2** | 2.2 | H07 SNRS migration | 1 session | SNRS in lattice | Phase 1 |
@@ -306,7 +306,7 @@ Keep domain repos as independent modules that register with the lattice via mani
 | **P3** | 2.4-2.7 | Remaining Houses | 3-4 sessions | Full lattice coverage | Phase 2.1 |
 | **P3** | 4 | Domain repo consolidation | 2 sessions | Clean GitHub | None |
 | **P4** | 5 | Deployment pipeline | 2-3 sessions | Production readiness | Phase 3 |
-| **P4** | 1.3 | Rust crate assessment | 1 session | Preserve/archive decision | None |
+| **P4** | 1.3 | Rust crate assessment | 1 session | Preserve/archive decision | None | ✅ DONE |
 
 ---
 
