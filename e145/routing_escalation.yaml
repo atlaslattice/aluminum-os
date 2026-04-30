@@ -1,0 +1,210 @@
+# Cross-Domain Routing Escalation Paths
+# Version: v3.6.0
+# Purpose: Defines when and how queries escalate from tier-1 spheres
+#   to VIP elements for cross-domain synthesis.
+# Status: PROVISIONAL — Pending Council Ratification
+
+version: "v3.6.0"
+generated: "2026-04-29"
+
+# ============================================================
+# ESCALATION RULES
+# ============================================================
+# A query escalates to a VIP when it matches >= 2 Houses AND
+# the VIP's trigger keywords. Single-House queries stay in
+# tier-1 routing.
+
+escalation_policy:
+  minimum_house_span: 2
+  trigger_threshold: 0.6  # confidence score from keyword matching
+  safety_override: true   # security queries always escalate to E147
+  meta_override: true     # queries about the lattice itself always go to E145
+
+# ============================================================
+# VIP ROUTING TABLE
+# ============================================================
+
+routes:
+  E145:
+    name: "Aluminum OS Core"
+    triggers:
+      - pattern: "how does this system work"
+        priority: 1
+      - pattern: "lattice|ontology|routing|sphere|house"
+        priority: 1
+        condition: "meta-query about the system itself"
+      - pattern: "council|pantheon|federation|seat"
+        priority: 1
+    escalation_from:
+      - "Any query that references the lattice architecture itself"
+      - "Any query about inter-seat coordination"
+      - "Any query about doctrine or invariant enforcement"
+    delegates_to: null  # E145 is the terminal router
+
+  E146:
+    name: "Entertainment & Interactive Media"
+    triggers:
+      - pattern: "game|gaming|esports|interactive"
+        priority: 2
+        houses_spanned: [H02, H05, H06]
+      - pattern: "film|movie|animation|vfx|visual effects"
+        priority: 2
+        houses_spanned: [H05, H06, H07]
+      - pattern: "music production|sound design|audio engineering"
+        priority: 2
+        houses_spanned: [H05, H06]
+      - pattern: "streaming|content platform|creator economy"
+        priority: 2
+        houses_spanned: [H07, H10]
+      - pattern: "virtual reality|augmented reality|XR|immersive"
+        priority: 2
+        houses_spanned: [H05, H06, H07]
+    escalation_from:
+      - "S054 Film — when query involves production pipeline (not just film theory)"
+      - "S051 Music — when query involves production technology"
+      - "S057 Design — when query involves game design or interactive design"
+      - "S081 Digital Media — when query involves streaming platforms or XR"
+    delegates_to:
+      primary: "S054, S051, S057, S081"
+      secondary: "S016.07 (Computer Graphics), S069 (Software Engineering)"
+
+  E147:
+    name: "Cybersecurity & Adversarial Systems"
+    triggers:
+      - pattern: "security|cybersecurity|hack|breach|vulnerability"
+        priority: 1  # ELEVATED — safety-critical
+        houses_spanned: [H02, H06, H12]
+      - pattern: "malware|ransomware|phishing|exploit"
+        priority: 1
+        safety_flag: true
+      - pattern: "penetration test|red team|blue team|SOC"
+        priority: 2
+        houses_spanned: [H02, H06]
+      - pattern: "encryption|PKI|zero trust|identity"
+        priority: 2
+        houses_spanned: [H02, H06]
+      - pattern: "incident response|forensics|threat intelligence"
+        priority: 1
+        houses_spanned: [H02, H06, H12]
+    escalation_from:
+      - "S020 Cryptography — when query involves active defense/offense"
+      - "S016.12 Computer Security — when query spans multiple domains"
+      - "S136 Criminal Law — when query involves cybercrime"
+      - "S069 Software Engineering — when query involves secure development"
+    delegates_to:
+      primary: "S020, S016.12, S016.19"
+      secondary: "S069.16 (AI Safety Eng), S136 (Criminal Law)"
+    safety_escalation:
+      block:
+        - "Requests for active exploitation code against specific targets"
+        - "Requests for malware creation or distribution"
+      warn:
+        - "Requests about vulnerability research methodology"
+        - "Requests about offensive security techniques"
+      allow:
+        - "Educational security content"
+        - "Defensive security architecture"
+        - "Cryptographic implementation"
+
+  E148:
+    name: "AI Systems & Autonomous Intelligence"
+    triggers:
+      - pattern: "AI|artificial intelligence|machine learning|deep learning"
+        priority: 2
+        houses_spanned: [H02, H06]
+      - pattern: "alignment|interpretability|AI safety"
+        priority: 1
+        houses_spanned: [H02, H04, H12]
+      - pattern: "LLM|GPT|transformer|foundation model"
+        priority: 2
+        houses_spanned: [H02, H06]
+      - pattern: "autonomous|self-driving|agent|multi-agent"
+        priority: 2
+        houses_spanned: [H02, H06]
+      - pattern: "AI governance|AI regulation|AI ethics"
+        priority: 2
+        houses_spanned: [H04, H12]
+    escalation_from:
+      - "S016.06 AI — when query involves system-level concerns"
+      - "S016.13 ML — when query involves deployment/operations"
+      - "S040 Ethics — when query involves AI-specific ethics"
+      - "S144 International Relations — when query involves AI treaties"
+    delegates_to:
+      primary: "S016.06, S016.13, S016.21, S016.22"
+      secondary: "S069.16-18 (Safety/Infra/MLOps), S040 (Ethics)"
+    self_reference:
+      note: >
+        E148 is uniquely self-referential. Queries about "how does AI work
+        in this system" route to E145 first (meta-query), then E148 for
+        technical detail. This prevents infinite recursion.
+      recursion_guard: "E145 takes precedence for meta-queries"
+
+  E149:
+    name: "Climate Metabolism & Earth Systems"
+    triggers:
+      - pattern: "climate|sustainability|carbon|emissions"
+        priority: 2
+        houses_spanned: [H01, H06, H11]
+      - pattern: "renewable|decarbonization|net zero|energy transition"
+        priority: 2
+        houses_spanned: [H06, H11]
+      - pattern: "circular economy|regenerative|planetary boundaries"
+        priority: 2
+        houses_spanned: [H01, H06, H10]
+      - pattern: "ESG|green finance|carbon market|climate policy"
+        priority: 2
+        houses_spanned: [H10, H12]
+      - pattern: "disaster|resilience|adaptation|sea level"
+        priority: 2
+        houses_spanned: [H01, H06, H11]
+    escalation_from:
+      - "S005 Ecology — when query involves human systems"
+      - "S006 Meteorology — when query involves policy or engineering"
+      - "S067 Environmental Engineering — when query involves economics"
+      - "S122 Energy Systems — when query involves climate impact"
+    delegates_to:
+      primary: "S005, S006, S067, S122"
+      secondary: "S111 (Finance), S144 (Int'l Relations), S121 (Civil Eng)"
+
+# ============================================================
+# ROUTING PRIORITY ORDER
+# ============================================================
+# When multiple VIPs match, use this priority:
+
+priority_order:
+  1: E145  # Meta-queries always win
+  2: E147  # Security always second (safety-critical)
+  3: E148  # AI systems third (self-reference guard)
+  4: E149  # Climate fourth
+  5: E146  # Entertainment fifth
+
+# ============================================================
+# CROSS-VIP INTERACTIONS
+# ============================================================
+# Some queries span multiple VIPs. These are the known intersections:
+
+cross_vip_routes:
+  "AI + Security":
+    vips: [E147, E148]
+    example: "How to defend against adversarial ML attacks"
+    resolution: "E147 leads (security priority), E148 provides technical context"
+
+  "AI + Climate":
+    vips: [E148, E149]
+    example: "Using AI for climate modeling"
+    resolution: "E149 leads (domain context), E148 provides technical methods"
+
+  "AI + Entertainment":
+    vips: [E146, E148]
+    example: "AI-generated game content"
+    resolution: "E146 leads (domain context), E148 provides AI methods"
+
+  "Security + Climate":
+    vips: [E147, E149]
+    example: "Critical infrastructure protection for energy grid"
+    resolution: "E147 leads (security priority), E149 provides domain context"
+
+  "Entertainment + Climate":
+    vips: [E146, E149]
+    example: "Climate change documentary production"
+    resolution: "E146 leads (production), E149 provides scientific content"

@@ -1,9 +1,9 @@
-version: v3.5.0
+version: v3.6.0
 generated: '2026-04-29'
-phase: '1.5'
+phase: '1.6'
 total_spheres: 144
-total_sub_spheres_populated: 1700
-total_blanks: 45
+total_sub_spheres_populated: 1784
+total_blanks: 31
 wiggle_room_policy:
   minimum: 6
   standard: 12
@@ -134,7 +134,25 @@ spheres:
     - id: S003.12
       name: Synthetic Biology
       status: populated
-    populated_count: 12
+    - id: S003.13
+      name: Proteomics
+      status: populated
+    - id: S003.14
+      name: CRISPR & Gene Editing
+      status: populated
+    - id: S003.15
+      name: Metabolic Engineering
+      status: populated
+    - id: S003.16
+      name: Biomanufacturing
+      status: populated
+    - id: S003.17
+      name: Computational Genomics
+      status: populated
+    - id: S003.18
+      name: Drug Discovery Pipelines
+      status: populated
+    populated_count: 18
     blank_count: 0
     population_priority: complete
   S004:
@@ -218,7 +236,19 @@ spheres:
     - id: S005.12
       name: Planetary Geology
       status: populated
-    populated_count: 12
+    - id: S005.13
+      name: Carbon Accounting
+      status: populated
+    - id: S005.14
+      name: Circular Economy
+      status: populated
+    - id: S005.15
+      name: Planetary Boundaries
+      status: populated
+    - id: S005.16
+      name: Resilience Engineering
+      status: populated
+    populated_count: 16
     blank_count: 0
     population_priority: complete
   S006:
@@ -260,7 +290,16 @@ spheres:
     - id: S006.12
       name: Theoretical Ecology
       status: populated
-    populated_count: 12
+    - id: S006.13
+      name: Climate Modeling
+      status: populated
+    - id: S006.14
+      name: Climate Adaptation
+      status: populated
+    - id: S006.15
+      name: Disaster Response
+      status: populated
+    populated_count: 15
     blank_count: 0
     population_priority: complete
   S007:
@@ -698,7 +737,25 @@ spheres:
     - id: S016.18
       name: Quantum Computing
       status: populated
-    populated_count: 18
+    - id: S016.19
+      name: Cybersecurity Engineering
+      status: populated
+    - id: S016.20
+      name: Adversarial Machine Learning
+      status: populated
+    - id: S016.21
+      name: AI Alignment & Safety
+      status: populated
+    - id: S016.22
+      name: Interpretability & Explainability
+      status: populated
+    - id: S016.23
+      name: Reinforcement Learning
+      status: populated
+    - id: S016.24
+      name: Multi-Agent Systems
+      status: populated
+    populated_count: 24
     blank_count: 0
     population_priority: complete
   S017:
@@ -866,7 +923,25 @@ spheres:
     - id: S020.12
       name: Sociotechnical Systems
       status: populated
-    populated_count: 12
+    - id: S020.13
+      name: Penetration Testing
+      status: populated
+    - id: S020.14
+      name: Malware Analysis
+      status: populated
+    - id: S020.15
+      name: Threat Intelligence
+      status: populated
+    - id: S020.16
+      name: Identity & Access Management
+      status: populated
+    - id: S020.17
+      name: Security Operations (SOC)
+      status: populated
+    - id: S020.18
+      name: Incident Response
+      status: populated
+    populated_count: 18
     blank_count: 0
     population_priority: complete
   S021:
@@ -1034,7 +1109,13 @@ spheres:
     - id: S024.12
       name: Data Governance
       status: populated
-    populated_count: 12
+    - id: S024.13
+      name: Synthetic Data Generation
+      status: populated
+    - id: S024.14
+      name: Data Governance
+      status: populated
+    populated_count: 14
     blank_count: 0
     population_priority: complete
   S025:
@@ -1076,7 +1157,13 @@ spheres:
     - id: S025.12
       name: Social Movements
       status: populated
-    populated_count: 12
+    - id: S025.13
+      name: Digital Sociology
+      status: populated
+    - id: S025.14
+      name: Computational Social Science
+      status: populated
+    populated_count: 14
     blank_count: 0
     population_priority: complete
   S026:
@@ -1158,11 +1245,11 @@ spheres:
       name: Forensic Anthropology
       status: populated
     - id: S027.12
-      name: null
-      status: BLANK
-    populated_count: 11
-    blank_count: 1
-    population_priority: medium
+      name: Digital Anthropology
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
   S028:
     name: Economics
     sub_spheres:
@@ -1244,7 +1331,13 @@ spheres:
     - id: S029.12
       name: Computational Politics
       status: populated
-    populated_count: 12
+    - id: S029.13
+      name: Computational Politics
+      status: populated
+    - id: S029.14
+      name: Digital Governance
+      status: populated
+    populated_count: 14
     blank_count: 0
     population_priority: complete
   S030:
@@ -1328,7 +1421,13 @@ spheres:
     - id: S031.12
       name: Neurolinguistics
       status: populated
-    populated_count: 12
+    - id: S031.13
+      name: Cybercrime
+      status: populated
+    - id: S031.14
+      name: Digital Forensics
+      status: populated
+    populated_count: 14
     blank_count: 0
     population_priority: complete
   S032:
@@ -1494,11 +1593,11 @@ spheres:
       name: Gender and Work
       status: populated
     - id: S035.12
-      name: null
-      status: BLANK
-    populated_count: 11
-    blank_count: 1
-    population_priority: medium
+      name: Digital Gender Studies
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
   S036:
     name: Urban Studies
     sub_spheres:
@@ -1538,7 +1637,13 @@ spheres:
     - id: S036.12
       name: Metropolitan Studies
       status: populated
-    populated_count: 12
+    - id: S036.13
+      name: Smart Cities
+      status: populated
+    - id: S036.14
+      name: Urban Informatics
+      status: populated
+    populated_count: 14
     blank_count: 0
     population_priority: complete
   S037:
@@ -1956,11 +2061,11 @@ spheres:
       name: Material Folklore
       status: populated
     - id: S046.12
-      name: null
-      status: BLANK
-    populated_count: 11
-    blank_count: 1
-    population_priority: medium
+      name: Digital Folklore
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
   S047:
     name: Philology
     sub_spheres:
@@ -1998,11 +2103,11 @@ spheres:
       name: Corpus Linguistics
       status: populated
     - id: S047.12
-      name: null
-      status: BLANK
-    populated_count: 11
-    blank_count: 1
-    population_priority: medium
+      name: Computational Philology
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
   S048:
     name: Museology
     sub_spheres:
@@ -2040,11 +2145,11 @@ spheres:
       name: Visitor Studies
       status: populated
     - id: S048.12
-      name: null
-      status: BLANK
-    populated_count: 11
-    blank_count: 1
-    population_priority: medium
+      name: Digital Museology
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
   S049:
     name: Visual Arts
     sub_spheres:
@@ -2444,7 +2549,13 @@ spheres:
     - id: S057.13
       name: Accessibility Design
       status: populated
-    populated_count: 13
+    - id: S057.14
+      name: Embodied Interaction Design
+      status: populated
+    - id: S057.15
+      name: Social Computing
+      status: populated
+    populated_count: 15
     blank_count: 0
     population_priority: complete
   S058:
@@ -2862,11 +2973,17 @@ spheres:
       name: Green Building
       status: populated
     - id: S067.12
-      name: null
-      status: BLANK
-    populated_count: 11
-    blank_count: 1
-    population_priority: medium
+      name: Resource Metabolism
+      status: populated
+    - id: S067.13
+      name: Green Infrastructure
+      status: populated
+    - id: S067.14
+      name: Decarbonization Engineering
+      status: populated
+    populated_count: 14
+    blank_count: 0
+    population_priority: complete
   S068:
     name: Industrial Engineering
     sub_spheres:
@@ -2957,7 +3074,16 @@ spheres:
     - id: S069.15
       name: Site Reliability Engineering
       status: populated
-    populated_count: 15
+    - id: S069.16
+      name: AI Safety Engineering
+      status: populated
+    - id: S069.17
+      name: Distributed Training Infrastructure
+      status: populated
+    - id: S069.18
+      name: MLOps & Model Deployment
+      status: populated
+    populated_count: 18
     blank_count: 0
     population_priority: complete
   S070:
@@ -3083,7 +3209,13 @@ spheres:
     - id: S072.12
       name: Space Robotics
       status: populated
-    populated_count: 12
+    - id: S072.13
+      name: Autonomous Systems
+      status: populated
+    - id: S072.14
+      name: Swarm Intelligence
+      status: populated
+    populated_count: 14
     blank_count: 0
     population_priority: complete
   S073:
@@ -3461,7 +3593,13 @@ spheres:
     - id: S081.12
       name: Platform Economics
       status: populated
-    populated_count: 12
+    - id: S081.13
+      name: Interface Architecture
+      status: populated
+    - id: S081.14
+      name: Conversational UI
+      status: populated
+    populated_count: 14
     blank_count: 0
     population_priority: complete
   S082:
@@ -4131,11 +4269,11 @@ spheres:
       name: Digital Anatomy
       status: populated
     - id: S097.12
-      name: null
-      status: BLANK
-    populated_count: 11
-    blank_count: 1
-    population_priority: medium
+      name: Regenerative Medicine
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
   S098:
     name: Pharmacology
     sub_spheres:
@@ -4175,7 +4313,13 @@ spheres:
     - id: S098.12
       name: Natural Products
       status: populated
-    populated_count: 12
+    - id: S098.13
+      name: Computational Pharmacology
+      status: populated
+    - id: S098.14
+      name: Drug Repurposing
+      status: populated
+    populated_count: 14
     blank_count: 0
     population_priority: complete
   S099:
@@ -4217,7 +4361,10 @@ spheres:
     - id: S099.12
       name: Telepsychiatry
       status: populated
-    populated_count: 12
+    - id: S099.13
+      name: Digital Therapeutics
+      status: populated
+    populated_count: 13
     blank_count: 0
     population_priority: complete
   S100:
@@ -4259,7 +4406,13 @@ spheres:
     - id: S100.12
       name: Surgical Oncology
       status: populated
-    populated_count: 12
+    - id: S100.13
+      name: Pandemic Modeling
+      status: populated
+    - id: S100.14
+      name: Genomic Epidemiology
+      status: populated
+    populated_count: 14
     blank_count: 0
     population_priority: complete
   S101:
@@ -4301,7 +4454,13 @@ spheres:
     - id: S101.12
       name: Global Health Epidemiology
       status: populated
-    populated_count: 12
+    - id: S101.13
+      name: Digital Public Health
+      status: populated
+    - id: S101.14
+      name: Health Informatics
+      status: populated
+    populated_count: 14
     blank_count: 0
     population_priority: complete
   S102:
@@ -4343,7 +4502,10 @@ spheres:
     - id: S102.12
       name: Health Communication
       status: populated
-    populated_count: 12
+    - id: S102.13
+      name: Telehealth Nursing
+      status: populated
+    populated_count: 13
     blank_count: 0
     population_priority: complete
   S103:
@@ -4385,7 +4547,13 @@ spheres:
     - id: S103.12
       name: Palliative Nursing
       status: populated
-    populated_count: 12
+    - id: S103.13
+      name: Robotic Surgery
+      status: populated
+    - id: S103.14
+      name: AI-Assisted Diagnostics
+      status: populated
+    populated_count: 14
     blank_count: 0
     population_priority: complete
   S104:
@@ -4425,11 +4593,11 @@ spheres:
       name: Digital Dentistry
       status: populated
     - id: S104.12
-      name: null
-      status: BLANK
-    populated_count: 11
-    blank_count: 1
-    population_priority: medium
+      name: Digital Dentistry
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
   S105:
     name: Veterinary Medicine
     sub_spheres:
@@ -4467,11 +4635,11 @@ spheres:
       name: Exotic Animal Medicine
       status: populated
     - id: S105.12
-      name: null
-      status: BLANK
-    populated_count: 11
-    blank_count: 1
-    population_priority: medium
+      name: Veterinary Telemedicine
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
   S106:
     name: Nutrition
     sub_spheres:
@@ -4511,7 +4679,10 @@ spheres:
     - id: S106.12
       name: Functional Foods
       status: populated
-    populated_count: 12
+    - id: S106.13
+      name: VR Rehabilitation
+      status: populated
+    populated_count: 13
     blank_count: 0
     population_priority: complete
   S107:
@@ -4593,11 +4764,11 @@ spheres:
       name: Surgical Pathology
       status: populated
     - id: S108.12
-      name: null
-      status: BLANK
-    populated_count: 11
-    blank_count: 1
-    population_priority: medium
+      name: Digital Pathology
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
   S109:
     name: Management
     sub_spheres:
@@ -4721,7 +4892,25 @@ spheres:
     - id: S111.12
       name: Quantitative Finance
       status: populated
-    populated_count: 12
+    - id: S111.13
+      name: Blockchain Engineering
+      status: populated
+    - id: S111.14
+      name: Smart Contracts
+      status: populated
+    - id: S111.15
+      name: Token Economics
+      status: populated
+    - id: S111.16
+      name: Digital Asset Markets
+      status: populated
+    - id: S111.17
+      name: Fraud Detection
+      status: populated
+    - id: S111.18
+      name: Compliance Technology (RegTech)
+      status: populated
+    populated_count: 18
     blank_count: 0
     population_priority: complete
   S112:
@@ -4761,11 +4950,11 @@ spheres:
       name: Accounting Ethics
       status: populated
     - id: S112.12
-      name: null
-      status: BLANK
-    populated_count: 11
-    blank_count: 1
-    population_priority: medium
+      name: Crypto Accounting
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
   S113:
     name: Entrepreneurship
     sub_spheres:
@@ -5183,7 +5372,16 @@ spheres:
     - id: S122.12
       name: Carbon Capture
       status: populated
-    populated_count: 12
+    - id: S122.13
+      name: Carbon Capture & Storage
+      status: populated
+    - id: S122.14
+      name: Hydrogen Economy
+      status: populated
+    - id: S122.15
+      name: Grid Modernization
+      status: populated
+    populated_count: 15
     blank_count: 0
     population_priority: complete
   S123:
@@ -5643,11 +5841,11 @@ spheres:
       name: Digital Constitutionalism
       status: populated
     - id: S133.12
-      name: null
-      status: BLANK
-    populated_count: 11
-    blank_count: 1
-    population_priority: medium
+      name: Digital Constitutional Rights
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
   S134:
     name: Criminal Law
     sub_spheres:
@@ -5813,7 +6011,13 @@ spheres:
     - id: S137.12
       name: Shareholder Rights
       status: populated
-    populated_count: 12
+    - id: S137.13
+      name: AI-Generated IP
+      status: populated
+    - id: S137.14
+      name: Open Source Licensing
+      status: populated
+    populated_count: 14
     blank_count: 0
     population_priority: complete
   S138:
@@ -5937,11 +6141,11 @@ spheres:
       name: Tax Litigation
       status: populated
     - id: S140.12
-      name: null
-      status: BLANK
-    populated_count: 11
-    blank_count: 1
-    population_priority: medium
+      name: Digital Tax Policy
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
   S141:
     name: Public Policy
     sub_spheres:
@@ -6063,11 +6267,11 @@ spheres:
       name: Science Diplomacy
       status: populated
     - id: S143.12
-      name: null
-      status: BLANK
-    populated_count: 11
-    blank_count: 1
-    population_priority: medium
+      name: Digital Diplomacy
+      status: populated
+    populated_count: 12
+    blank_count: 0
+    population_priority: complete
   S144:
     name: International Relations
     sub_spheres:
@@ -6107,6 +6311,12 @@ spheres:
     - id: S144.12
       name: Development Cooperation
       status: populated
-    populated_count: 12
+    - id: S144.13
+      name: Cyber Governance
+      status: populated
+    - id: S144.14
+      name: AI Treaty Frameworks
+      status: populated
+    populated_count: 14
     blank_count: 0
     population_priority: complete

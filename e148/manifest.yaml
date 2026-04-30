@@ -1,0 +1,130 @@
+# Element 148 — AI Systems & Autonomous Intelligence VIP
+# Status: PROVISIONAL — Pending Council Ratification
+# Created: 2026-04-29
+# Rationale: AI-native disciplines span Computer Science (H02),
+#   Engineering (H06), Philosophy (H04), Law (H12), and Business (H10).
+#   The AI ecosystem has grown beyond a single sub-sphere of CS.
+#   E148 provides routing for AI-as-a-system queries that require
+#   cross-domain synthesis (alignment + engineering + governance).
+
+element_id: E148
+name: "AI Systems & Autonomous Intelligence"
+type: "Domain VIP"
+status: provisional
+version: "v3.6.0"
+severity: critical  # Claude's assessment: critical gap
+
+relationship:
+  type: "cross-house routing layer"
+  primary_houses: [H02, H06]
+  secondary_houses: [H04, H10, H12]
+  note: >
+    E148 aggregates AI-native disciplines that span ML (S016.13),
+    AI (S016.06), Alignment (S016.21), Safety Engineering (S069.16),
+    Ethics (S040), and AI Governance (S144.14). This VIP is uniquely
+    self-referential — it routes queries about the systems that
+    power the routing itself.
+
+nodes:
+  E148.N01:
+    name: "AI Alignment & Value Learning"
+    maps_to: [S016.21, S040.01, S040.02]
+    description: "RLHF, constitutional AI, value alignment, corrigibility"
+
+  E148.N02:
+    name: "Interpretability & Explainability"
+    maps_to: [S016.22, S016.13]
+    description: "Mechanistic interpretability, attention visualization, feature attribution"
+
+  E148.N03:
+    name: "Large Language Models"
+    maps_to: [S016.14, S016.13, S016.06]
+    description: "Transformer architecture, pretraining, fine-tuning, prompting, RAG"
+
+  E148.N04:
+    name: "Reinforcement Learning"
+    maps_to: [S016.23, S018.01]
+    description: "Policy optimization, reward modeling, multi-agent RL, sim-to-real"
+
+  E148.N05:
+    name: "Multi-Agent Systems"
+    maps_to: [S016.24, S072.14]
+    description: "Agent orchestration, tool use, planning, memory, collaboration"
+
+  E148.N06:
+    name: "Autonomous Systems"
+    maps_to: [S072.13, S072.01]
+    description: "Self-driving, drone navigation, autonomous decision-making"
+
+  E148.N07:
+    name: "AI Safety Engineering"
+    maps_to: [S069.16, S016.21]
+    description: "Red teaming, guardrails, monitoring, failure modes, containment"
+
+  E148.N08:
+    name: "Distributed Training & Infrastructure"
+    maps_to: [S069.17, S016.17, S016.09]
+    description: "GPU clusters, model parallelism, federated learning, inference optimization"
+
+  E148.N09:
+    name: "MLOps & Model Lifecycle"
+    maps_to: [S069.18, S024.14]
+    description: "Model versioning, A/B testing, monitoring, deployment pipelines"
+
+  E148.N10:
+    name: "Synthetic Data & Data Engineering"
+    maps_to: [S024.13, S024.01]
+    description: "Data augmentation, synthetic generation, data quality, curation"
+
+  E148.N11:
+    name: "AI Governance & Policy"
+    maps_to: [S144.14, S133.12, S137.13]
+    description: "AI regulation, liability, IP for AI-generated content, EU AI Act"
+
+  E148.N12:
+    name: "Foundation Model Ecosystem"
+    maps_to: [S016.06, S016.13, S016.14]
+    description: "Model marketplaces, fine-tuning services, API economics, open-source AI"
+
+routing:
+  trigger_keywords:
+    - "AI"
+    - "artificial intelligence"
+    - "machine learning"
+    - "deep learning"
+    - "neural network"
+    - "LLM"
+    - "GPT"
+    - "transformer"
+    - "alignment"
+    - "interpretability"
+    - "autonomous"
+    - "agent"
+    - "multi-agent"
+    - "reinforcement learning"
+    - "MLOps"
+    - "foundation model"
+  behavior: >
+    AI queries are classified by intent: (1) Technical implementation
+    routes to specific sub-spheres (S016.13, S016.14, etc.),
+    (2) System-level queries (alignment, safety, governance) route
+    through E148 for cross-domain synthesis, (3) AI-about-AI queries
+    (meta-reasoning about the lattice itself) route to E145.
+  self_reference_policy: >
+    E148 is uniquely self-referential. Queries about "how does this
+    system work" or "how are AI agents organized" route to E145 first,
+    then E148 for technical detail.
+  fallback: "Route to S016.06 AI or S016.13 ML"
+
+capability_scores:
+  note: "Provisional — pending per-seat self-assessment"
+  S1_Anthropic: 0.9    # Constitutional AI, alignment research, Claude
+  S2_Alphabet: 0.95    # DeepMind, Gemini, TPU, TensorFlow
+  S3_Muskverse: 0.7    # xAI/Grok, Tesla FSD, Optimus
+  S4_Microsoft: 0.85   # Azure AI, Copilot, OpenAI partnership
+  Amazon: 0.6           # Bedrock, SageMaker, Alexa
+  S5_DeepSeek: 0.8     # Strong open-source LLMs, MoE
+  S6_OpenAI: 0.95      # GPT-4/5, DALL-E, Sora, o-series
+  S7_Manus: 0.6        # Agent orchestration, tool use
+  S8_Notion: 0.2       # Notion AI (consumer)
+  S10_Qwen3: 0.75      # Qwen series, open-source

@@ -1,0 +1,127 @@
+# Element 147 — Cybersecurity & Adversarial Systems VIP
+# Status: PROVISIONAL — Pending Council Ratification
+# Created: 2026-04-29
+# Rationale: Cybersecurity spans Computer Science (H02), Engineering (H06),
+#   Law (H12), and Business (H10). No single House can contain the full
+#   attack-defense lifecycle. E147 provides cross-House routing for
+#   security-critical queries with safety escalation paths.
+
+element_id: E147
+name: "Cybersecurity & Adversarial Systems"
+type: "Domain VIP"
+status: provisional
+version: "v3.6.0"
+severity: critical  # Claude's assessment: single largest gap
+
+relationship:
+  type: "cross-house routing layer"
+  primary_houses: [H02, H06]
+  secondary_houses: [H10, H12]
+  note: >
+    E147 aggregates security domains that span Cryptography (S020),
+    Computer Science (S016), Software Engineering (S069), Criminal Law (S136),
+    and Risk Management (S111.06). Critical for routing safety.
+
+nodes:
+  E147.N01:
+    name: "Network Security"
+    maps_to: [S016.05, S016.12, S016.19]
+    description: "Firewalls, IDS/IPS, network monitoring, zero-trust architecture"
+
+  E147.N02:
+    name: "Application Security"
+    maps_to: [S069.16, S016.19, S016.01]
+    description: "OWASP, secure coding, SAST/DAST, supply chain security"
+
+  E147.N03:
+    name: "Adversarial Machine Learning"
+    maps_to: [S016.20, S016.06, S016.13]
+    description: "Adversarial examples, model poisoning, evasion attacks, robustness"
+
+  E147.N04:
+    name: "Cryptographic Systems"
+    maps_to: [S020.01, S020.02, S020.03]
+    description: "PKI, post-quantum crypto, homomorphic encryption, ZK proofs"
+
+  E147.N05:
+    name: "Threat Intelligence & Hunting"
+    maps_to: [S020.15, S020.17, S020.18]
+    description: "MITRE ATT&CK, IOCs, threat modeling, APT tracking"
+
+  E147.N06:
+    name: "Penetration Testing & Red Team"
+    maps_to: [S020.13, S016.19]
+    description: "Offensive security, vulnerability assessment, red/blue/purple teams"
+
+  E147.N07:
+    name: "Malware Analysis & Reverse Engineering"
+    maps_to: [S020.14, S016.02]
+    description: "Static/dynamic analysis, sandboxing, binary analysis"
+
+  E147.N08:
+    name: "Identity & Access Management"
+    maps_to: [S020.16, S016.09]
+    description: "OAuth, SSO, MFA, biometrics, identity governance"
+
+  E147.N09:
+    name: "Security Operations (SOC)"
+    maps_to: [S020.17, S020.18]
+    description: "SIEM, SOAR, incident response, forensics, chain of custody"
+
+  E147.N10:
+    name: "Privacy Engineering"
+    maps_to: [S016.12, S137.13, S133.12]
+    description: "GDPR, differential privacy, data anonymization, consent management"
+
+  E147.N11:
+    name: "Critical Infrastructure Protection"
+    maps_to: [S121.01, S126.01, S122.01]
+    description: "SCADA/ICS security, grid security, water system security"
+
+  E147.N12:
+    name: "Cyber Governance & Compliance"
+    maps_to: [S144.13, S136.01, S139.01]
+    description: "NIST, ISO 27001, SOC2, cyber insurance, regulatory compliance"
+
+routing:
+  trigger_keywords:
+    - "security"
+    - "cybersecurity"
+    - "hack"
+    - "vulnerability"
+    - "exploit"
+    - "malware"
+    - "ransomware"
+    - "phishing"
+    - "encryption"
+    - "firewall"
+    - "penetration test"
+    - "red team"
+    - "SOC"
+    - "incident response"
+    - "threat"
+    - "adversarial"
+  behavior: >
+    Security queries have ELEVATED routing priority. When a query matches
+    E147 trigger keywords AND involves potential harm (data breach, attack
+    methodology, vulnerability exploitation), the router MUST apply safety
+    escalation before delegating to sub-spheres. Informational security
+    queries (e.g., "explain AES encryption") route normally.
+  safety_escalation:
+    - "Queries about active exploitation techniques require safety disclaimer"
+    - "Queries about specific vulnerabilities in production systems are flagged"
+    - "Queries about malware creation are blocked with explanation"
+  fallback: "Route to S020 Cryptography or S016.12 Computer Security"
+
+capability_scores:
+  note: "Provisional — pending per-seat self-assessment"
+  S1_Anthropic: 0.7    # Strong safety focus, constitutional AI
+  S2_Alphabet: 0.8     # Project Zero, Mandiant, VirusTotal
+  S3_Muskverse: 0.4    # SpaceX security, limited public tooling
+  S4_Microsoft: 0.9    # Defender, Sentinel, MSRC, GitHub Security
+  Amazon: 0.7           # AWS Security Hub, GuardDuty, Inspector
+  S5_DeepSeek: 0.2     # Limited
+  S6_OpenAI: 0.5       # Safety team, red teaming
+  S7_Manus: 0.3        # Sandbox security
+  S8_Notion: 0.1       # Minimal
+  S10_Qwen3: 0.3       # Limited

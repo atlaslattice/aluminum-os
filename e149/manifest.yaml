@@ -1,0 +1,125 @@
+# Element 149 — Climate Metabolism & Earth Systems VIP
+# Status: PROVISIONAL — Pending Council Ratification
+# Created: 2026-04-29
+# Rationale: Climate/sustainability spans Natural Sciences (H01),
+#   Engineering (H06), Business (H10), Infrastructure (H11), and
+#   Law/Governance (H12). This is Daavud's specialty domain and
+#   the ontology's most underrepresented cross-domain cluster.
+
+element_id: E149
+name: "Climate Metabolism & Earth Systems"
+type: "Domain VIP"
+status: provisional
+version: "v3.6.0"
+severity: high  # Claude's assessment: high, Daavud's specialty
+
+relationship:
+  type: "cross-house routing layer"
+  primary_houses: [H01, H06, H11]
+  secondary_houses: [H10, H12]
+  note: >
+    E149 aggregates climate and sustainability domains that span
+    Ecology (S005), Meteorology (S006), Environmental Engineering (S067),
+    Energy Systems (S122), and related policy/governance spheres.
+    Named "Climate Metabolism" to reflect the systems-thinking approach
+    to planetary resource flows.
+
+nodes:
+  E149.N01:
+    name: "Carbon Accounting & Reporting"
+    maps_to: [S005.13, S112.08, S067.14]
+    description: "GHG Protocol, Scope 1/2/3, carbon credits, verification"
+
+  E149.N02:
+    name: "Circular Economy"
+    maps_to: [S005.14, S124.01, S067.12]
+    description: "Cradle-to-cradle, industrial symbiosis, waste-to-resource, material passports"
+
+  E149.N03:
+    name: "Climate Modeling & Prediction"
+    maps_to: [S006.13, S006.01, S001.10]
+    description: "GCMs, downscaling, tipping points, scenario analysis, IPCC pathways"
+
+  E149.N04:
+    name: "Resilience Engineering"
+    maps_to: [S005.16, S067.13, S121.01]
+    description: "Infrastructure resilience, adaptive capacity, cascading failure prevention"
+
+  E149.N05:
+    name: "Decarbonization Engineering"
+    maps_to: [S067.14, S122.13, S122.14]
+    description: "Electrification, green hydrogen, CCS, industrial decarbonization"
+
+  E149.N06:
+    name: "Planetary Boundaries"
+    maps_to: [S005.15, S005.01, S009.01]
+    description: "9 boundaries framework, Earth system science, safe operating space"
+
+  E149.N07:
+    name: "Climate Adaptation"
+    maps_to: [S006.14, S036.13, S121.01]
+    description: "Sea level rise, heat islands, managed retreat, nature-based solutions"
+
+  E149.N08:
+    name: "Disaster Response & Recovery"
+    maps_to: [S006.15, S101.01, S121.01]
+    description: "Early warning systems, emergency management, post-disaster reconstruction"
+
+  E149.N09:
+    name: "Energy Transition"
+    maps_to: [S122.13, S122.14, S122.15]
+    description: "Grid modernization, storage, renewables integration, energy justice"
+
+  E149.N10:
+    name: "Resource Metabolism"
+    maps_to: [S067.12, S131.01, S123.01]
+    description: "Material flow analysis, urban metabolism, resource efficiency, water-energy nexus"
+
+  E149.N11:
+    name: "Climate Finance & Policy"
+    maps_to: [S111.09, S144.01, S133.01]
+    description: "Green bonds, carbon markets, Paris Agreement, NDCs, climate litigation"
+
+  E149.N12:
+    name: "Regenerative Systems"
+    maps_to: [S005.01, S003.01, S067.13]
+    description: "Regenerative agriculture, ecosystem restoration, biomimicry, living systems design"
+
+routing:
+  trigger_keywords:
+    - "climate"
+    - "sustainability"
+    - "carbon"
+    - "emissions"
+    - "renewable"
+    - "decarbonization"
+    - "circular economy"
+    - "resilience"
+    - "planetary boundaries"
+    - "green"
+    - "net zero"
+    - "adaptation"
+    - "energy transition"
+    - "regenerative"
+    - "ESG"
+    - "biodiversity"
+  behavior: >
+    Climate queries are routed based on scope: (1) Scientific queries
+    (climate modeling, ecology) route to H01 spheres, (2) Engineering
+    queries (decarbonization, CCS) route to H06/H11, (3) Policy/finance
+    queries route to H10/H12, (4) Cross-domain queries (e.g., "design
+    a net-zero city") route through E149 for synthesis.
+  fallback: "Route to S005 Ecology or S067 Environmental Engineering"
+
+capability_scores:
+  note: "Provisional — pending per-seat self-assessment"
+  S1_Anthropic: 0.4    # General knowledge, no dedicated climate tools
+  S2_Alphabet: 0.7     # Google Earth Engine, Flood Hub, DeepMind energy
+  S3_Muskverse: 0.8    # Tesla (energy), SpaceX (Earth observation), Boring Co
+  S4_Microsoft: 0.6    # Planetary Computer, Azure sustainability
+  Amazon: 0.5           # AWS sustainability, climate pledge
+  S5_DeepSeek: 0.1     # Minimal
+  S6_OpenAI: 0.3       # General knowledge
+  S7_Manus: 0.2        # Limited
+  S8_Notion: 0.0       # None
+  S10_Qwen3: 0.2       # Limited
