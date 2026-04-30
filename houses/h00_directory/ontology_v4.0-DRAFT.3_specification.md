@@ -23,6 +23,8 @@ Total addressable tier-1 nodes: **152** (143 populated Spheres + 1 reserved Sphe
 
 **Addressing Convention:** All Spheres use hierarchical `H#-S#` addressing (e.g., H1-S5 for House 1, Sphere 5). Global sequential numbering (S001-S144) is maintained as a backward-compatible alias via `registries/v3_to_v4_migration.yaml`.
 
+**Purpose:** The Lattice is a **substrate-organized retrieval graph**, not a keyword index. VIP Elements are **addressing primitives for retrieval** — they make cross-domain queries cheap by encoding which adjacencies matter for novel-insight generation. LCC/Dewey coverage is the empirical floor ("did we miss anything human knowledge production has discovered"); the Lattice's structural difference — retrieval-by-substrate rather than retrieval-by-keyword — is the actual point. The product is not a database; it is a substrate-organized novel-insight engine that compounds with ingestion. (Per Claude S1 substrate-retrieval reframing, 2026-04-29.)
+
 **Configuration:** C (locked by Convenor 2026-04-30)
 
 ---
@@ -450,6 +452,10 @@ VIP Elements are cross-House civilizational substrates. A domain becomes a VIP i
 >
 > **Discipline or technique** ("how do I design a PID controller?") → route **sphere primary**, VIP only if the question explicitly invokes substrate framing.
 
+**Retrieval cost principle:** Substrate addressing makes cross-domain retrieval **cheap**. A query about "how do indigenous water sovereignty doctrines interact with state water law in the southwest" resolves via E147.12 (Indigenous Water Knowledge & Sovereignty) + E147.02 (Water Rights & Law) + H10-S3 (Anthropology) + H12-S5 (Constitutional/Indigenous Law). This multi-node traversal is cheap because the substrate addressing encoded the adjacency at schema time. Keyword-based systems (LCC, Dewey) cannot do this without full-text search over the entire corpus.
+
+**Convenor-grounded ingestion:** Early ingestion is small but **verified** (Convenor-attributed ground truth). The parsing pipeline trained on verified ingestion gets ground truth that is actually grounded. This is methodologically different from "scrape everything" — verified-first, then scale. (Per Claude S1 substrate-retrieval reframing, 2026-04-29.)
+
 Machine-readable version: `houses/h00_directory/routing_table.yaml`
 
 ### §4.1 Standard Routing (Tier-1 Spheres)
@@ -507,6 +513,8 @@ When multiple VIPs trigger simultaneously: E145 (meta) > E152 (security) > E150 
 ### §4.6 LCC Cross-Reference
 
 All 21 Library of Congress Classification classes are routed. Coverage: **21/21**.
+
+> **Note on LCC parity:** LCC coverage is the **empirical floor** — it confirms the Lattice has not missed any domain that organized human knowledge production has discovered. But LCC is a retrieval-by-keyword index; the Lattice is a retrieval-by-substrate graph. Coverage parity is the validation criterion; structural difference is the value proposition. (Claude S1 Flag 1, 2026-04-29.)
 
 | LCC Class | Name | Primary Route | Secondary Route |
 |-----------|------|---------------|----------------|
@@ -595,6 +603,7 @@ All 21 Library of Congress Classification classes are routed. Coverage: **21/21*
 | 9 | H1-S12 candidate list | **OPEN** | Network Science, Complexity Science, Astrobiology, Metrology |
 | 10 | v3→v4 sphere renumbering | **OPEN** | Clean renumber vs alias-only migration |
 | 11 | Doctrine amendments (D-83 through D-124) | **OPEN** | 42 doctrines pending ratification |
+| 12 | Ingestion pipeline addressing | **OPEN** | Parsing/ingestion tooling currently addressed at E145.04 (Ontology Management) + E145.05 (Toolchain). Claude S1 flags: may need separate VIP or sub-domain ("Ingestion & Parsing Substrate") depending on how load-bearing this becomes. Deferred to future Council pass. (Claude S1 Flag 2, 2026-04-29.) |
 
 ---
 
@@ -628,7 +637,8 @@ A machine-readable migration map is maintained at `registries/v3_to_v4_migration
 | v4.0-DRAFT.2 | 2026-04-30 | Claude S1 | H1-S5 Cognition, H3 rename, E147-E152 (8 VIPs), hierarchical addressing, tier-2 gap fills |
 | v4.0-DRAFT.3 | 2026-04-30 | Copilot S4 + Manus S7 | A/B scoring, media/entertainment tier-2, market_power_matrix, routing expansion |
 | v4.0-DRAFT.3a | 2026-04-29 | Manus S7 | Tier-2 gap fills (recreation/tourism/general-ref: +8 sub-spheres → 1,792 populated, 30 BLANKs); canonical routing_table.yaml (15 routes, 5 authoritative pairs, LCC 21/21); §4 rewrite with doctrine, authoritative pairs, LCC cross-reference; §6 statistics updated |
+| v4.0-DRAFT.3b | 2026-04-29 | Claude S1 + Manus S7 | Substrate-retrieval reframing: §0 purpose statement (substrate-organized retrieval graph, not keyword index); §4.0 retrieval-cost principle + Convenor-grounded ingestion doctrine; §4.6 LCC-as-empirical-floor note; §7 item 12 (ingestion pipeline addressing — E145.04/05 vs separate VIP, deferred); canonical doctrine document created |
 
 ---
 
-*End of v4.0-DRAFT.3a Specification*
+*End of v4.0-DRAFT.3b Specification*
