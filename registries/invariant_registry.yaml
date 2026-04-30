@@ -85,11 +85,13 @@ invariants:
   type: SOFT
   scope: System
 - id: INV-9
-  name: Performance Baseline
+  name: Performance Baseline (100ms Ceiling)
   house: H02
   sphere: S09
   type: SOFT
   scope: System
+  ceiling: 100ms
+  note: "100ms routing latency ceiling added per Copilot S4 integration (2026-04-30). Enforced by M109 latency budgets. Added to Registry v1.2."
 - id: INV-32
   name: Climate Accountability
   house: H03
@@ -247,11 +249,13 @@ invariants:
   type: SOFT
   scope: Content
 - id: INV-1
-  name: Constitutional Primacy
+  name: Human Sovereignty
   house: H12
   sphere: S01
   type: HARD
   scope: Universal
+  alias: Constitutional Primacy
+  note: "Renamed per Copilot S4 integration (2026-04-30). Matches Pantheon human-only Convenor invariant. Previous name 'Constitutional Primacy' retained as alias."
 - id: INV-18
   name: Legal Compliance
   house: H12

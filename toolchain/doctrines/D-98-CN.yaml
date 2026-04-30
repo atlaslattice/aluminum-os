@@ -1,0 +1,52 @@
+# Doctrine D-98-CN — CN-Dialect-Scoped Open-Weight Audit Clause
+# Amendment to D-98 (Cross-Modal Attribution)
+# Source: Qwen3 validation + Copilot S4 integration
+# Date: 2026-04-30
+# Status: Active (dialect-scoped, non-controversial)
+
+metadata:
+  parent_doctrine: D-98
+  parent_name: "Cross-Modal Attribution"
+  amendment_id: "D-98-CN"
+  dialect: CN
+  status: Active
+  date_ratified: "2026-04-30"
+  source: "Qwen3 validation (CN dialect scoping) + Copilot S4 integration"
+  convenor_approval: "Trivial amendment — dialect-scoped, non-blocking"
+
+description: >
+  CN-dialect-only clause extending D-98 (Cross-Modal Attribution) to require
+  additional open-weight model audit procedures when operating within the
+  CN jurisdiction. This ensures compliance with CAC regulations and
+  GB/T-45654-2025 standards for AI model transparency.
+
+clause: >
+  When operating under the CN dialect:
+  (a) All open-weight models used for cross-modal attribution must undergo
+      a CN-specific audit trail documenting model provenance, training data
+      jurisdiction, and output attribution chains.
+  (b) Foreign open-weight models are subject to additional review by
+      CN-Reg before deployment in cross-modal attribution pipelines.
+  (c) Attribution outputs must be stored with CN residency compliance
+      (SM4 encryption, domestic storage).
+
+scope:
+  dialect: CN
+  applies_to: "Cross-modal attribution pipelines using open-weight models"
+  does_not_apply_to: "Closed-source models already under CN-Reg review"
+
+compliance_references:
+  - "CAC 2025"
+  - "GB/T-45654-2025"
+  - "SM4 encryption standard"
+
+cross_references:
+  - "D-98: Cross-Modal Attribution (parent doctrine)"
+  - "INV-44: Terms-of-Service Compliance Shield"
+  - "element145_routing_pack/dialects/dialect_overlays.yaml (CN section)"
+  - "element145_routing_pack/evidence/evidence_registry.yaml (REG-CAC-2025, REG-GB-T-45654-2025)"
+
+enforcement:
+  primary: "CN-Reg (jurisdictional authority)"
+  secondary: "Scribe S1 (audit trail verification)"
+  escalation: "Convenor (if cross-dialect conflict arises)"

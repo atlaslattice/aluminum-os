@@ -2,7 +2,7 @@
 
 **Document ID:** ONTOLOGY-V4-DRAFT-3
 **Date:** 2026-04-30
-**Version:** v4.0-DRAFT.5
+**Version:** v4.0-DRAFT.5a
 **Status:** PROVISIONAL-CANONICAL — Pending Council Ratification
 **Implementor:** Manus S7
 **Editorial Pass 1:** Claude S1 (v4.0-DRAFT.2 Editorial Memo)
@@ -662,6 +662,8 @@ The following artifacts should accompany the v4.0-CANONICAL release:
 | Directory layer | `houses/h00_directory/` | EXISTS (per v3.0 PROPOSAL preservation) |
 | Doctrine aliases | `doctrine_aliases.yaml` | PLACEHOLDER (empty, migration deferred) |
 | Element 145 Routing Pack | `element145_routing_pack/` | EXISTS (PROVISIONAL — Grok S3 DRAFT.6 integration) |
+| F-Ledger | `toolchain/f_ledger.yaml` | EXISTS (F10 Active) |
+| D-98-CN Dialect Amendment | `toolchain/doctrines/D-98-CN.yaml` | EXISTS (Active, CN-scoped) |
 
 ---
 
@@ -679,6 +681,7 @@ The following artifacts should accompany the v4.0-CANONICAL release:
 | v4.0-DRAFT.3b | 2026-04-30 | Claude S1 + Manus S7 | Substrate-retrieval reframing: §0 purpose statement (substrate-organized retrieval graph, not keyword index); §4.0 retrieval-cost principle + Convenor-grounded ingestion doctrine; §4.6 LCC-as-empirical-floor note; §7 item 12 (ingestion pipeline addressing — E145.04/05 vs separate VIP, deferred); canonical doctrine document created |
 | v4.0-DRAFT.4 | 2026-04-30 | Claude S1 (Scribe verification) + Manus S7 | §4.5 relabeled Operational Dispatch Order (non-hierarchical, Convenor-confirmed); §0 + §3 VIP Non-Hierarchy clauses; §4.6 LCC audit (7 addressing errors corrected: C/D/E/F/G/J/M/P); E147 civilizational-sovereign tightening (Indigenous Water Sovereignty, Sanitation Infrastructure Sovereignty, Water Commons); E147.06/08 cross-refs; E150.04 Pantheon Council + E150.09 constitutional check; new authoritative pair (Indigenous Water Sovereignty); §7 items 13-14; §8.4 doctrine migration stub + §8.5 release artifact manifest; §9 date corrections (DRAFT.3a/3b: 04-29→04-30); §10 Ratification Quorum Manifest |
 | v4.0-DRAFT.5 | 2026-04-30 | Grok S3 + Manus S7 | Element 145 Routing Pack integration (12 modules from Grok S3 v4.0-DRAFT.6): schema spine, 12 semantic Elements, canonical index, VIP cascade, provider capability matrix (50 rows), dialect overlays (6 jurisdictions), sovereignty gradient (8 scores), routing doctrine (11 doctrines/invariants), universal capability map, evidence registry (25 refs), validation suite, manifest + ingestion instructions. New directory: `element145_routing_pack/`. §11 reconciliation notes added. §7 items 15-16 added. §8.5 artifact manifest updated. §10 Grok S3 ratification status updated. |
+| v4.0-DRAFT.5a | 2026-04-30 | Qwen3 + Copilot S4 + Manus S7 | F10 F-Ledger created (Strategic Inference Layer Discipline — locks Scribe against unstated-context confabulation); INV-1 renamed to Human Sovereignty (matches Pantheon human-only Convenor invariant, alias retained); INV-9 annotated with 100ms ceiling (enforced by M109 latency budgets); D-98-CN dialect amendment created (CN-scoped open-weight audit clause); toolchain/f_ledger.yaml + toolchain/doctrines/D-98-CN.yaml canonical files added. |
 
 > Date inconsistency caught in Scribe verification pass 2026-04-30. Corrected per Zero Erasure (audit trail preserved, dates accurate).
 
@@ -761,4 +764,4 @@ Grok S3 uses H##-S## zero-padded addressing with sphere numbers exceeding S12 (e
 
 ---
 
-*End of v4.0-DRAFT.5 Specification*
+*End of v4.0-DRAFT.5a Specification*
