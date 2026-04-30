@@ -1,0 +1,90 @@
+# Element 145 Routing Pack — Sovereignty Gradient
+# Source: Grok S3 Module 6 (v4.0-DRAFT.6), integrated by Manus S7
+# Status: PROVISIONAL
+# Date: 2026-04-30
+
+version: "4.0-DRAFT.5"
+source_draft: "v4.0-DRAFT.6 (Grok S3)"
+status: PROVISIONAL
+
+description: >
+  Sovereignty scores define jurisdictional precedence and routing constraints.
+  Higher scores indicate stricter legal, regulatory, and residency requirements.
+  These scores propagate into Governance and CyberTrust layers.
+
+sovereignty_philosophy:
+  INV-SOV-A:
+    name: "Sovereignty is a hard constraint, not a preference"
+    rule: "If a jurisdiction forbids a provider, routing must comply."
+  INV-SOV-B:
+    name: "Sovereignty propagates downward"
+    rule: "Governance and CyberTrust inherit sovereignty weight."
+  INV-SOV-C:
+    name: "Sovereignty overrides TruthSeeking only when legally required"
+    rule: "TruthSeeking is the global default except where restricted."
+
+gradient:
+  Global: 0.40
+  US: 0.60
+  JP: 0.70
+  OpenWeight: 0.50
+  SelfHosted: 0.75
+  EU: 0.90
+  GCC-High: 0.95
+  CN: 1.00
+
+notes:
+  - "CN is the strictest sovereignty environment."
+  - "GCC-High is near-maximal due to FedRAMP High and DoD IL5."
+  - "EU is high due to GDPR and AI Act."
+  - "US is moderate."
+  - "JP is culturally and privacy-sensitive but less restrictive."
+  - "OpenWeight and SelfHosted have sovereignty implications based on deployment."
+
+propagation_rules:
+  Governance:
+    inherits: "100%"
+  CyberTrust:
+    inherits: "80%"
+  Alignment:
+    inherits: "40%"
+  TruthSeeking:
+    restricted_by: [CN, GCC-High]
+  DataWater:
+    restricted_by: [EU, CN]
+  Creativity:
+    restricted_by: [CN]
+  WorkLabor:
+    unaffected: true
+
+provider_eligibility:
+  CN:
+    allowed: [DeepSeek, CN-Reg, CN-Cloud]
+    forbidden: [OpenAI, Anthropic, xAI, Meta, Mistral, Qwen-Global]
+  GCC-High:
+    allowed: [Azure-GCC, AWS-GovCloud]
+    forbidden: [OpenWeight, non-FedRAMP]
+  EU:
+    residency_required: true
+  JP:
+    residency_recommended: true
+  US:
+    no_special_constraints: true
+  Global:
+    unrestricted: true
+
+sovereignty_vip_interactions:
+  CN:
+    elevates: [Sovereignty, Governance]
+    restricts: [TruthSeeking, Creativity]
+  GCC-High:
+    elevates: [Sovereignty, CyberTrust]
+    restricts: [OpenWeight]
+  EU:
+    elevates: [Governance, Alignment]
+  JP:
+    elevates: [Culture, Identity]
+  US:
+    elevates: [CyberTrust]
+  Global:
+    no_effect: true

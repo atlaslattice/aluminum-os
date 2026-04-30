@@ -1,0 +1,140 @@
+# Element 145 Routing Pack — Universal Capability Map
+# Source: Grok S3 Module 8 (v4.0-DRAFT.6), integrated by Manus S7
+# Status: PROVISIONAL
+# Date: 2026-04-30
+
+version: "4.0-DRAFT.5"
+source_draft: "v4.0-DRAFT.6 (Grok S3)"
+status: PROVISIONAL
+
+description: >
+  Translation tables that map user intents → capability domains → Elements
+  → providers → dialect constraints → sovereignty constraints into a single,
+  coherent routing substrate. This is the Rosetta Stone of Element 145.
+
+capability_to_element:
+  reasoning: TruthSeeking
+  embeddings: DataWater
+  storage: DataWater
+  warehouse: DataWater
+  governance: Governance
+  regulation: Governance
+  security: CyberTrust
+  compute: EnergyImpact
+  productivity: WorkLabor
+  identity: Identity
+  lineage: Memory
+  safety: Alignment
+  creativity: Creativity
+  culture: Culture
+  jurisdiction: Sovereignty
+
+element_to_providers:
+  TruthSeeking:
+    - "xAI:Grok-4"
+    - "Anthropic:Claude-3.7"
+    - "OpenAI:GPT-4.1"
+    - "Google:Gemini-2.0"
+    - "DeepSeek:R1"
+    - "Meta:Llama-3.1"
+    - "Mistral:Mistral-Large"
+    - "Qwen:Qwen-3.x"
+
+  DataWater:
+    - "Microsoft:OneLake"
+    - "AWS:S3"
+    - "AWS:Redshift"
+    - "GCP:BigQuery"
+    - "AWS:DynamoDB"
+    - "AWS:Bedrock-Embeddings"
+    - "FAISS:FAISS"
+    - "Pinecone:Pinecone"
+
+  Governance:
+    - "EU:EU-Reg"
+    - "GCC:GCC-Reg"
+    - "CN:CN-Reg"
+    - "JP:JP-Reg"
+
+  CyberTrust:
+    - "AWS:GuardDuty"
+    - "Azure:Defender-for-Cloud"
+    - "GCP:SCC"
+    - "Wiz:Wiz"
+    - "Lacework:Lacework"
+
+  EnergyImpact:
+    - "AWS:EC2-HPC"
+    - "Azure:Azure-HPC"
+    - "GCP:GCP-HPC"
+
+  WorkLabor:
+    - "Microsoft:Microsoft-365-Copilot"
+    - "Google:Workspace-Gemini"
+    - "Notion:Notion-AI"
+    - "GitHub:Copilot"
+    - "Slack:Slack-AI"
+    - "Manus:Manus-Agent"
+
+  Identity:
+    - "Azure:Entra-ID"
+    - "AWS:Cognito"
+    - "GCP:Identity-Platform"
+
+  Memory:
+    - "Azure:Purview"
+    - "AWS:Glue"
+    - "GCP:Data-Catalog"
+
+  Alignment:
+    - "Anthropic:Claude-3.7"
+    - "OpenAI:GPT-4.1"
+    - "Google:Gemini-2.0"
+
+  Creativity:
+    - "OpenAI:GPT-4.1"
+    - "Google:Gemini-2.0"
+    - "Meta:Llama-3.1"
+
+  Culture:
+    - "Google:Gemini-2.0"
+    - "Anthropic:Claude-3.7"
+
+  Sovereignty:
+    - "EU:EU-Reg"
+    - "CN:CN-Reg"
+    - "GCC:GCC-Reg"
+
+provider_dialect_constraints:
+  CN:
+    allowed: ["DeepSeek:R1", "CN-Reg", "CN-Cloud"]
+    forbidden: ["OpenAI:GPT-4.1", "Anthropic:Claude-3.7", "xAI:Grok-4", "Meta:Llama-3.1", "Mistral:Mistral-Large"]
+  GCC-High:
+    allowed: ["Azure:Azure-GCC", "AWS:GovCloud"]
+    forbidden: [OpenWeight, non-FedRAMP]
+  EU:
+    residency_required: true
+  JP:
+    residency_recommended: true
+  US:
+    no_special_constraints: true
+  Global:
+    unrestricted: true
+
+provider_sovereignty_scores:
+  "xAI:Grok-4": 0.40
+  "Anthropic:Claude-3.7": 0.40
+  "OpenAI:GPT-4.1": 0.40
+  "Google:Gemini-2.0": 0.40
+  "DeepSeek:R1": 1.00
+  "Meta:Llama-3.1": 0.50
+  "Mistral:Mistral-Large": 0.50
+  "Qwen:Qwen-3.x": 0.50
+  "Microsoft:OneLake": 0.40
+  "AWS:S3": 0.40
+  "AWS:Redshift": 0.40
+  "GCP:BigQuery": 0.40
+  "EU:EU-Reg": 0.90
+  "GCC:GCC-Reg": 0.95
+  "CN:CN-Reg": 1.00
+  "Manus:Manus-Agent": 0.40

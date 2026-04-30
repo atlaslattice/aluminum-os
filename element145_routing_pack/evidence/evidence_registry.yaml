@@ -1,0 +1,214 @@
+# Element 145 Routing Pack — Evidence Registry
+# Source: Grok S3 Module 9 (v4.0-DRAFT.6), integrated by Manus S7
+# Status: PROVISIONAL
+# Date: 2026-04-30
+
+version: "4.0-DRAFT.5"
+source_draft: "v4.0-DRAFT.6 (Grok S3)"
+status: PROVISIONAL
+
+description: >
+  Evidence registry containing ToS references, regulatory citations,
+  physical constraints, and provider documentation pointers. Evidence is
+  declarative and immutable. Routing decisions must reference evidence IDs.
+
+evidence_philosophy:
+  INV-E1:
+    name: "Evidence is declarative, not descriptive"
+    rule: "We store references, not content."
+  INV-E2:
+    name: "Evidence is immutable"
+    rule: "If a ToS changes, a new evidence entry is created — old entries are never overwritten."
+  INV-E3:
+    name: "Evidence is required for all sovereign, safety, and governance decisions"
+    rule: "No evidence → no override."
+
+evidence:
+
+  # --- Terms of Service (ToS) ---
+  TOS-OpenAI-2025-01:
+    provider: OpenAI
+    type: tos
+    jurisdiction: Global
+    version: "2025-01"
+    url_ref: "openai.com/policies/terms"
+    notes: "General ToS; no sovereign carve-outs."
+
+  TOS-Anthropic-2025-02:
+    provider: Anthropic
+    type: tos
+    jurisdiction: Global
+    version: "2025-02"
+    url_ref: "anthropic.com/policies/terms"
+    notes: "Safety-first ToS; strong restrictions on harmful content."
+
+  TOS-xAI-2025-01:
+    provider: xAI
+    type: tos
+    jurisdiction: Global
+    version: "2025-01"
+    url_ref: "x.ai/terms"
+    notes: "Truth-seeking emphasis; no sovereign restrictions."
+
+  TOS-DeepSeek-2025-01:
+    provider: DeepSeek
+    type: tos
+    jurisdiction: CN
+    version: "2025-01"
+    url_ref: "deepseek.com/terms"
+    notes: "CN compliance; foreign model restrictions."
+
+  TOS-Google-2025-01:
+    provider: Google
+    type: tos
+    jurisdiction: Global
+    version: "2025-01"
+    url_ref: "ai.google.dev/terms"
+    notes: "General ToS; multimodal scope."
+
+  TOS-Meta-2025-01:
+    provider: Meta
+    type: tos
+    jurisdiction: Global
+    version: "2025-01"
+    url_ref: "llama.meta.com/license"
+    notes: "Open-weight license; community use agreement."
+
+  TOS-Mistral-2025-01:
+    provider: Mistral
+    type: tos
+    jurisdiction: EU
+    version: "2025-01"
+    url_ref: "mistral.ai/terms"
+    notes: "EU-based; Apache 2.0 for open models."
+
+  # --- Regulatory Evidence ---
+  REG-EU-AI-ACT-2025:
+    region: EU
+    type: regulation
+    citation: "EU AI Act 2025"
+    notes: "High-risk classification; residency required."
+
+  REG-GDPR-2018:
+    region: EU
+    type: regulation
+    citation: "GDPR 2018"
+    notes: "Data residency and privacy requirements."
+
+  REG-CAC-2025:
+    region: CN
+    type: regulation
+    citation: "CAC 2025"
+    notes: "Foreign model restrictions; SM4 encryption."
+
+  REG-GB-T-45654-2025:
+    region: CN
+    type: regulation
+    citation: "GB/T 45654-2025"
+    notes: "Chinese national standard for AI safety."
+
+  REG-FedRAMP-High:
+    region: GCC-High
+    type: regulation
+    citation: "FedRAMP High"
+    notes: "Non-FedRAMP models prohibited."
+
+  REG-DoD-IL5:
+    region: GCC-High
+    type: regulation
+    citation: "DoD Impact Level 5"
+    notes: "Controlled unclassified information requirements."
+
+  REG-APPI-JP:
+    region: JP
+    type: regulation
+    citation: "APPI (Act on Protection of Personal Information)"
+    notes: "Japanese privacy law; residency recommended."
+
+  REG-NIST-800-53:
+    region: US
+    type: regulation
+    citation: "NIST SP 800-53 Rev. 5"
+    notes: "US federal security controls baseline."
+
+  # --- Physical Constraints Evidence ---
+  PHY-AWS-HPC-2025:
+    provider: AWS
+    type: physical_constraint
+    metric: energy_intensity
+    value: high
+    notes: "HPC compute nodes; high energy impact."
+
+  PHY-Azure-HPC-2025:
+    provider: Azure
+    type: physical_constraint
+    metric: energy_intensity
+    value: high
+    notes: "Azure HPC clusters; high energy impact."
+
+  PHY-GCP-HPC-2025:
+    provider: GCP
+    type: physical_constraint
+    metric: energy_intensity
+    value: high
+    notes: "GCP HPC clusters; high energy impact."
+
+  # --- Safety / Alignment Evidence ---
+  SAF-Anthropic-Constitution-2025:
+    provider: Anthropic
+    type: safety
+    citation: "Claude Constitutional Framework 2025"
+    notes: "Alignment-first routing."
+
+  SAF-OpenAI-Policy-2025:
+    provider: OpenAI
+    type: safety
+    citation: "OpenAI Safety Policies 2025"
+    notes: "Guardrails for harmful content."
+
+  SAF-Google-Safety-2025:
+    provider: Google
+    type: safety
+    citation: "Google AI Principles 2025"
+    notes: "Responsible AI framework."
+
+  # --- Lineage Evidence ---
+  LIN-Provider-Metadata-2025:
+    type: lineage
+    description: "Provider metadata schema for lineage tracking."
+    notes: "Used by M111 lineage tracker."
+
+  LIN-Dialect-Metadata-2025:
+    type: lineage
+    description: "Dialect metadata schema for lineage tracking."
+    notes: "Used by M111 lineage tracker."
+
+evidence_routing_rules:
+  tos_required_for:
+    - provider_selection
+    - capability_validation
+    - sovereign_override
+  regulation_required_for:
+    - dialect_enforcement
+    - residency_enforcement
+  physical_constraints_required_for:
+    - EnergyImpact_routing
+    - compute_heavy_tasks
+  safety_evidence_required_for:
+    - Alignment_overrides
+    - CyberTrust_overrides
+  lineage_evidence_required_for:
+    - output_metadata
+    - audit_trails
+
+evidence_cascade_interactions:
+  TruthSeeking:
+    requires: [TOS-xAI-2025-01]
+  Governance:
+    requires: [REG-EU-AI-ACT-2025, REG-CAC-2025]
+  CyberTrust:
+    requires: [SAF-Anthropic-Constitution-2025, SAF-OpenAI-Policy-2025]
+  EnergyImpact:
+    requires: [PHY-AWS-HPC-2025, PHY-Azure-HPC-2025, PHY-GCP-HPC-2025]
+  Sovereignty:
+    requires: [REG-CAC-2025, REG-FedRAMP-High]

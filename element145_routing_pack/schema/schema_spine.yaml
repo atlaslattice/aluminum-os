@@ -1,0 +1,154 @@
+# Element 145 Routing Pack — Schema Spine
+# Source: Grok S3 Module 0 (v4.0-DRAFT.6), integrated by Manus S7
+# Status: PROVISIONAL
+# Date: 2026-04-30
+
+version: "4.0-DRAFT.5"
+source_draft: "v4.0-DRAFT.6 (Grok S3)"
+status: PROVISIONAL
+
+schema_header:
+  fields:
+    - mapping_id
+    - vip_id
+    - vip_numeric_id
+    - vip_name
+    - capability_domain
+    - canonical_sphere_refs
+    - canonical_sphere_scope
+    - provider_family
+    - provider
+    - provider_category
+    - capability_type
+    - deployment_path
+    - layer
+    - status
+    - region_or_jurisdiction
+    - policy_dialect
+    - evidence_ref
+    - work_context
+    - automation_risk
+    - hitl_required
+    - labor_disclosure_required
+    - union_constraints
+    - truth_seeking_weight
+    - sovereignty_score
+    - provider_primacy_override
+    - provider_primacy_target
+    - notes
+
+field_definitions:
+  mapping_id:
+    description: "Unique row ID (R000-R999)"
+    required: true
+  vip_id:
+    description: "Semantic label for the Element (e.g., TruthSeeking, DataWater)"
+    required: true
+  vip_numeric_id:
+    description: "Optional numeric mapping (E145-E162)"
+    required: false
+    note: "Pending VIP canonization — provisional only"
+  vip_name:
+    description: "Human-readable name of the Element"
+    required: true
+  capability_domain:
+    description: "High-level grouping (Foundations, Data-Water, Governance, etc.)"
+    required: true
+  canonical_sphere_refs:
+    description: "Earth-layer references (H#-S# or H#)"
+    required: true
+    format_note: >
+      DRAFT.6 uses H##-S## (zero-padded). DRAFT.4 uses H#-S# (no padding).
+      This pack preserves DRAFT.6 format; translation table in reconciliation notes.
+  canonical_sphere_scope:
+    description: "house | sphere | mixed"
+    required: true
+    allowed_values: [house, sphere, mixed]
+  provider_family:
+    description: "Cloud | Model | Sovereign | OpenWeight | Application | Security"
+    required: true
+    allowed_values: [Cloud, Model, Sovereign, OpenWeight, Application, Security]
+  provider:
+    description: "Specific provider or runtime endpoint"
+    required: true
+  provider_category:
+    description: "Product surface (Azure Core, Claude Platform, etc.)"
+    required: true
+  capability_type:
+    description: "Capability classification"
+    required: true
+    allowed_values: [storage, warehouse, vector_db, embeddings_api, library, governance, regulation, compute, productivity_app, model_api]
+  deployment_path:
+    description: "Deployment method"
+    required: true
+    allowed_values: [direct, azure, gcp, aws, self_hosted, wrapper, sovereign]
+  layer:
+    description: "Routing layer classification"
+    required: true
+    allowed_values: [model, cloud, data, compute, labor, security, sovereign, vip]
+  status:
+    description: "Lifecycle status"
+    required: true
+    allowed_values: [existing, proposed, hypothetical, deprecated, needs_verification]
+  region_or_jurisdiction:
+    description: "Jurisdiction scope"
+    required: true
+    allowed_values: [Global, US, EU, CN, JP, GCC-High]
+  policy_dialect:
+    description: "Compliance dialect"
+    required: true
+    allowed_values: [Global, US, EU, CN, JP, GCC-High]
+  evidence_ref:
+    description: "Pointer to ToS/regulatory/physical evidence"
+    required: false
+    note: "Pending Gate 1 evidence population"
+  work_context:
+    description: "Work domain context"
+    required: false
+    allowed_values: [email, docs, code, hr, legal, clinical, ops, "null"]
+  automation_risk:
+    description: "Automation displacement risk"
+    required: false
+    allowed_values: [low, medium, high, "null"]
+  hitl_required:
+    description: "Human-in-the-loop requirement"
+    required: false
+    allowed_values: [true, false, "null"]
+  labor_disclosure_required:
+    description: "Labor disclosure obligation"
+    required: false
+    allowed_values: [true, false, "null"]
+  union_constraints:
+    description: "Freeform pointer to contract/union rules"
+    required: false
+  truth_seeking_weight:
+    description: "Float in [0.0, 2.0] — baseline = 1.0"
+    required: true
+    range: [0.0, 2.0]
+  sovereignty_score:
+    description: "Float in [0.0, 1.0]"
+    required: true
+    range: [0.0, 1.0]
+  provider_primacy_override:
+    description: "Whether provider primacy applies"
+    required: true
+    allowed_values: [true, false]
+  provider_primacy_target:
+    description: "Provider name (xAI, DeepSeek, etc.)"
+    required: false
+    note: "Only required if provider_primacy_override = true"
+  notes:
+    description: "Freeform annotation"
+    required: false
+
+validation_rules:
+  - "Required fields must not be null"
+  - "canonical_sphere_refs must match regex: ^H[0-9]{2}(-S[0-9]{2})?(;H[0-9]{2}(-S[0-9]{2})?)*$"
+  - "truth_seeking_weight in [0.0, 2.0]"
+  - "sovereignty_score in [0.0, 1.0]"
+  - "provider_primacy_override = true requires provider_primacy_target"
+  - "vip_id must match one of the 12 Elements"
+  - "capability_type must match allowed set"
+  - "deployment_path must match allowed set"
+  - "policy_dialect must match allowed set"
+  - "status must match allowed set"

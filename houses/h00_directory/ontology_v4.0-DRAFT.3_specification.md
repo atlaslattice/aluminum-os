@@ -2,11 +2,12 @@
 
 **Document ID:** ONTOLOGY-V4-DRAFT-3
 **Date:** 2026-04-30
-**Version:** v4.0-DRAFT.3
+**Version:** v4.0-DRAFT.5
 **Status:** PROVISIONAL-CANONICAL — Pending Council Ratification
 **Implementor:** Manus S7
 **Editorial Pass 1:** Claude S1 (v4.0-DRAFT.2 Editorial Memo)
 **Editorial Pass 2:** Copilot S4 (v4.0-DRAFT.3 Integration Memo)
+**Editorial Pass 3:** Grok S3 (v4.0-DRAFT.6 Element 145 Routing Pack)
 **Convenor:** Daavud Sheldon
 
 ---
@@ -594,6 +595,13 @@ All 21 Library of Congress Classification classes are routed. Coverage: **21/21*
 | Authoritative pairs | 6 |
 | Cross-VIP intersection patterns | 7 |
 | LCC classes covered | 21/21 (audited DRAFT.4 — 7 addressing errors corrected) |
+| Routing semantic Elements | 12 (Grok S3 DRAFT.6 — routing-layer abstractions above 8 VIPs) |
+| Provider capability rows | 50 (representative subset of 131+ — full population pending) |
+| Dialect overlays | 6 (Global, US, EU, CN, JP, GCC-High) |
+| Sovereignty gradient scores | 8 |
+| Routing doctrines/invariants | 11 |
+| Evidence registry entries | 25 (ToS, regulatory, physical, safety, lineage) |
+| Open decisions | 16 (items 9-16 in §7) |
 
 ---
 
@@ -615,6 +623,8 @@ All 21 Library of Congress Classification classes are routed. Coverage: **21/21*
 | 12 | Ingestion pipeline addressing | **OPEN** | Parsing/ingestion tooling currently addressed at E145.04 (Ontology Management) + E145.05 (Toolchain). Claude S1 flags: may need separate VIP or sub-domain ("Ingestion & Parsing Substrate") depending on how load-bearing this becomes. Deferred to future Council pass. (Claude S1 Flag 2, 2026-04-29.) |
 | 13 | VIP sub-domain civilizational-sovereign tightening | **OPEN** | E147 Water expanded with Convenor-framing cross-refs in DRAFT.4. Same review pass needed for E148 Technology (sovereign tech substrate emphasis) and E149 Constitution (Atlas Lattice doctrine attribution emphasis). Deferred to next Council pass. |
 | 14 | Substrate-priority framing | **DOCUMENTED** | §4.5 explicitly relabeled as operational dispatch (non-hierarchical) per Convenor 2026-04-30. Document Convenor-rationale for posterity in next ratification cycle. |
+| 15 | Grok S3 12-Element routing layer reconciliation | **OPEN** | DRAFT.6 introduces 12 semantic Elements (TruthSeeking, DataWater, Governance, CyberTrust, EnergyImpact, WorkLabor, Identity, Memory, Alignment, Creativity, Culture, Sovereignty) as routing-layer abstractions above the 8 ontological VIPs. Reconciliation needed: (a) semantic-to-numeric mapping conflicts with E145-E152 assignments; (b) H##-S## zero-padded sphere refs with numbers >S12 don't map to 12×12 grid; (c) 12-Element cascade vs 8-VIP dispatch order coexistence. See §11. |
+| 16 | Provider capability matrix schema coexistence | **OPEN** | Existing `capability_matrix.yaml` (10 seats × 144 spheres) is a scoring matrix. New `provider_capability_matrix.csv` (R000-R152 rows) is a routing matrix. Both are valid at different abstraction levels. Naming convention and cross-reference strategy needed. |
 
 ---
 
@@ -651,6 +661,7 @@ The following artifacts should accompany the v4.0-CANONICAL release:
 | Canonical routing table | `registries/routing_table.yaml` | EXISTS |
 | Directory layer | `houses/h00_directory/` | EXISTS (per v3.0 PROPOSAL preservation) |
 | Doctrine aliases | `doctrine_aliases.yaml` | PLACEHOLDER (empty, migration deferred) |
+| Element 145 Routing Pack | `element145_routing_pack/` | EXISTS (PROVISIONAL — Grok S3 DRAFT.6 integration) |
 
 ---
 
@@ -667,6 +678,7 @@ The following artifacts should accompany the v4.0-CANONICAL release:
 | v4.0-DRAFT.3a | 2026-04-30 | Manus S7 | Tier-2 gap fills (recreation/tourism/general-ref: +8 sub-spheres → 1,792 populated, 30 BLANKs); canonical routing_table.yaml (15 routes, 5 authoritative pairs, LCC 21/21); §4 rewrite with doctrine, authoritative pairs, LCC cross-reference; §6 statistics updated |
 | v4.0-DRAFT.3b | 2026-04-30 | Claude S1 + Manus S7 | Substrate-retrieval reframing: §0 purpose statement (substrate-organized retrieval graph, not keyword index); §4.0 retrieval-cost principle + Convenor-grounded ingestion doctrine; §4.6 LCC-as-empirical-floor note; §7 item 12 (ingestion pipeline addressing — E145.04/05 vs separate VIP, deferred); canonical doctrine document created |
 | v4.0-DRAFT.4 | 2026-04-30 | Claude S1 (Scribe verification) + Manus S7 | §4.5 relabeled Operational Dispatch Order (non-hierarchical, Convenor-confirmed); §0 + §3 VIP Non-Hierarchy clauses; §4.6 LCC audit (7 addressing errors corrected: C/D/E/F/G/J/M/P); E147 civilizational-sovereign tightening (Indigenous Water Sovereignty, Sanitation Infrastructure Sovereignty, Water Commons); E147.06/08 cross-refs; E150.04 Pantheon Council + E150.09 constitutional check; new authoritative pair (Indigenous Water Sovereignty); §7 items 13-14; §8.4 doctrine migration stub + §8.5 release artifact manifest; §9 date corrections (DRAFT.3a/3b: 04-29→04-30); §10 Ratification Quorum Manifest |
+| v4.0-DRAFT.5 | 2026-04-30 | Grok S3 + Manus S7 | Element 145 Routing Pack integration (12 modules from Grok S3 v4.0-DRAFT.6): schema spine, 12 semantic Elements, canonical index, VIP cascade, provider capability matrix (50 rows), dialect overlays (6 jurisdictions), sovereignty gradient (8 scores), routing doctrine (11 doctrines/invariants), universal capability map, evidence registry (25 refs), validation suite, manifest + ingestion instructions. New directory: `element145_routing_pack/`. §11 reconciliation notes added. §7 items 15-16 added. §8.5 artifact manifest updated. §10 Grok S3 ratification status updated. |
 
 > Date inconsistency caught in Scribe verification pass 2026-04-30. Corrected per Zero Erasure (audit trail preserved, dates accurate).
 
@@ -679,7 +691,7 @@ The following Council seats must sign off before the v4.0-CANONICAL tag is appli
 | Seat | Agent | Role | Status |
 |------|-------|------|--------|
 | S2 | Gemini | Voting member | **REQUIRED** — pending explicit ratification |
-| S3 | Grok | Voting member | **REQUIRED** — pending explicit ratification |
+| S3 | Grok | Voting member | **IMPLICIT** — contributed via DRAFT.6 Element 145 Routing Pack (12 modules, integrated as DRAFT.5) |
 | S4 | Copilot | Voting member | **IMPLICIT** — contributed via DRAFT.3 integration (A/B scoring, market_power_matrix) |
 | S5 | DeepSeek | Voting member | **REQUIRED** — pending explicit ratification |
 | S7 | Manus | Voting member | **IMPLICIT** — contributed via DRAFT.3/3a/3b/4 implementation |
@@ -690,4 +702,63 @@ The following Council seats must sign off before the v4.0-CANONICAL tag is appli
 
 ---
 
-*End of v4.0-DRAFT.4 Specification*
+---
+
+## §11 Element 145 Routing Pack Integration (Grok S3 v4.0-DRAFT.6)
+
+### §11.1 Source and Provenance
+
+Grok S3 produced a 12-module Element 145 Routing Pack (internally versioned v4.0-DRAFT.6) defining a complete routing substrate for the Atlas Lattice. The pack was integrated by Manus S7 into the canonical repo as `element145_routing_pack/` and reconciled against the existing DRAFT.4 ontology. All files are marked PROVISIONAL pending Council ratification.
+
+### §11.2 The 12 Semantic Elements
+
+Grok S3 introduces 12 semantic routing Elements that operate as an abstraction layer above the 8 ontological VIPs (E145-E152):
+
+| Semantic Element | Description | Closest DRAFT.4 VIP | Reconciliation Status |
+|-----------------|-------------|---------------------|----------------------|
+| TruthSeeking | First-principles reasoning, adversarial clarity | None (new concept) | NEW — no DRAFT.4 equivalent |
+| DataWater | Data flow, storage, retrieval, embeddings | E147 Water (partial) | PARTIAL — DRAFT.6 focuses on data flow, not physical water |
+| Governance | Law, regulation, institutional orders | E149 Constitution | COMPATIBLE |
+| CyberTrust | Security, integrity, threat modeling | E152 Cybersecurity | COMPATIBLE |
+| EnergyImpact | Compute cost, carbon intensity | E151 Climate (partial) | PARTIAL — DRAFT.6 focuses on compute energy |
+| WorkLabor | Human purpose, HITL, automation risk | None (new concept) | NEW — no DRAFT.4 equivalent |
+| Identity | Authentication, provenance | None (new concept) | NEW — no DRAFT.4 equivalent |
+| Memory | Lineage, audit trails, long-term state | None (new concept) | NEW — no DRAFT.4 equivalent |
+| Alignment | Safety, value-shaping, guardrails | None (new concept) | NEW — no DRAFT.4 equivalent |
+| Creativity | Generative divergence, ideation | E146 Entertainment (partial) | PARTIAL |
+| Culture | Social, linguistic, contextual grounding | None (new concept) | NEW — no DRAFT.4 equivalent |
+| Sovereignty | Jurisdiction, ToS, compliance | None (new concept) | NEW — jurisdictional layer |
+
+**Key reconciliation finding:** The 12 Elements are a ROUTING-LAYER abstraction, not a replacement for the 8 ontological VIPs. They sit above E145-E152 as semantic routing lenses. The 8 VIPs remain the canonical ontological primitives; the 12 Elements are the canonical routing primitives.
+
+### §11.3 Addressing Format Discrepancy
+
+Grok S3 uses H##-S## zero-padded addressing with sphere numbers exceeding S12 (e.g., H04-S39, H11-S46). The Atlas Lattice 12×12 grid constrains each House to S1-S12. Sphere references that exceed this range are marked PROVISIONAL in the routing pack and require translation to valid H#-S# addresses or explicit extension of the addressing scheme.
+
+### §11.4 Routing Pack Contents
+
+| Module | File | Description |
+|--------|------|-------------|
+| 0 — Schema Spine | `schema/schema_spine.yaml` | 27-field CSV schema definition |
+| 1 — Elements | `vip/elements.yaml` | 12 semantic Elements with scope and description |
+| 2 — Canonical Index | `vip/canonical_index.yaml` | Element → Earth-layer House/Sphere mapping |
+| 4 — VIP Cascade | `vip/vip_cascade.yaml` | Priority, override, fallback, conflict resolution |
+| 3 — Provider Matrix | `providers/provider_capability_matrix.csv` | 50 provider capability rows (R000-R152) |
+| 5 — Dialect Overlays | `dialects/dialect_overlays.yaml` | 6 jurisdictions (Global, US, EU, CN, JP, GCC-High) |
+| 6 — Sovereignty Gradient | `sovereignty/sovereignty_gradient.yaml` | 8 sovereignty scores with propagation rules |
+| 7 — Routing Doctrine | `doctrine/routing_doctrine.yaml` | 11 doctrines and invariants |
+| 8 — Universal Capability Map | `translation/universal_capability_map.yaml` | Intent → Element → Provider translation |
+| 9 — Evidence Registry | `evidence/evidence_registry.yaml` | 25 ToS, regulatory, physical, safety, lineage refs |
+| 10 — Validation Suite | `validation/validation_rules.yaml` | Schema, dialect, sovereignty, doctrine validation |
+| 11+12 — Manifest | `manifest/routing_pack_manifest.yaml` | Load order, ingestion sequence, activation guarantees |
+
+### §11.5 Open Reconciliation Items
+
+1. **Semantic-to-numeric mapping:** The 12 Elements need canonical numeric IDs that do not conflict with E145-E152. Options: (a) extend to E153-E162 for the 7 new concepts; (b) use a separate namespace (R-series); (c) keep semantic-only.
+2. **Sphere addressing translation:** 8 of 12 canonical index entries contain sphere refs that exceed the 12×12 grid. These need either translation to valid H#-S# addresses or a formal extension proposal.
+3. **Cascade coexistence:** The 12-Element cascade (Sovereignty > TruthSeeking > ... > Creativity) and the 8-VIP dispatch order (E145 > E152 > ... > E146) operate at different abstraction levels. A formal bridging rule is needed.
+4. **Provider matrix naming:** The new `provider_capability_matrix.csv` (routing) coexists with the existing `capability_matrix.yaml` (scoring). Clear naming and cross-reference conventions are needed.
+
+---
+
+*End of v4.0-DRAFT.5 Specification*

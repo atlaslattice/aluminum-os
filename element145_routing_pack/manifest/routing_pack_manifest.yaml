@@ -1,0 +1,150 @@
+# Element 145 Routing Pack — Manifest
+# Source: Grok S3 Modules 11-12 (v4.0-DRAFT.6), integrated by Manus S7
+# Status: PROVISIONAL
+# Date: 2026-04-30
+
+version: "4.0-DRAFT.5"
+source_draft: "v4.0-DRAFT.6 (Grok S3)"
+status: PROVISIONAL
+description: "Element 145 Routing Pack — unified routing substrate"
+
+modules:
+  - schema/schema_spine.yaml
+  - vip/elements.yaml
+  - vip/canonical_index.yaml
+  - vip/vip_cascade.yaml
+  - providers/provider_capability_matrix.csv
+  - dialects/dialect_overlays.yaml
+  - sovereignty/sovereignty_gradient.yaml
+  - doctrine/routing_doctrine.yaml
+  - translation/universal_capability_map.yaml
+  - evidence/evidence_registry.yaml
+  - validation/validation_rules.yaml
+
+load_order:
+  - schema
+  - doctrine
+  - dialects
+  - sovereignty
+  - vip
+  - providers
+  - translation
+  - evidence
+  - validation
+
+# --- Ingestion Instructions (Module 12) ---
+ingestion:
+  description: >
+    Defines the ingestion sequence for the Element 145 Routing Pack. Manus must
+    load modules in strict order, validate each module, and activate routing
+    only after all modules pass validation.
+
+  philosophy:
+    INV-ING-1:
+      name: "Deterministic Load Order"
+      rule: "Manus must load modules in the exact order defined in the manifest."
+    INV-ING-2:
+      name: "Validate Before Activate"
+      rule: "No module becomes active until it passes validation."
+    INV-ING-3:
+      name: "No Partial Loads"
+      rule: "If any module fails validation, the entire routing pack is rejected."
+
+  steps:
+    - step: load_schema
+      file: schema/schema_spine.yaml
+      description: "Load schema spine; verify field definitions and formats."
+
+    - step: load_doctrine
+      file: doctrine/routing_doctrine.yaml
+      description: "Load routing doctrine; enforce constitutional invariants."
+
+    - step: load_dialects
+      file: dialects/dialect_overlays.yaml
+      description: "Load dialect overlays; bind compliance and residency rules."
+
+    - step: load_sovereignty
+      file: sovereignty/sovereignty_gradient.yaml
+      description: "Load sovereignty gradient; bind jurisdictional precedence."
+
+    - step: load_vip_layer
+      files:
+        - vip/elements.yaml
+        - vip/canonical_index.yaml
+        - vip/vip_cascade.yaml
+      description: "Load Elements, canonical index, and VIP cascade."
+
+    - step: load_provider_matrix
+      file: providers/provider_capability_matrix.csv
+      description: "Load provider capability matrix; validate providers."
+
+    - step: load_translation_layer
+      file: translation/universal_capability_map.yaml
+      description: "Load universal capability map; bind capability → element → provider."
+
+    - step: load_evidence
+      file: evidence/evidence_registry.yaml
+      description: "Load evidence registry; bind ToS, regulatory, safety, and lineage anchors."
+
+    - step: run_validation_suite
+      file: validation/validation_rules.yaml
+      description: "Execute full validation suite; reject on any failure."
+
+    - step: activate_routing
+      description: "Enable routing engine with full cascade, dialect, sovereignty, and doctrine."
+
+  activation_guarantees:
+    schema_is_locked: true
+    doctrine_is_enforced: true
+    dialects_are_active: true
+    sovereignty_is_active: true
+    vip_cascade_is_active: true
+    provider_matrix_is_loaded: true
+    capability_map_is_loaded: true
+    evidence_registry_is_bound: true
+    validation_suite_is_passed: true
+    routing_engine_is_active: true
+
+  failure_modes:
+    reject_entire_pack: true
+    no_partial_activation: true
+    no_fallback_to_previous_versions: true
+    error_format:
+      - error_code
+      - error_message
+      - module
+      - offending_field
+      - offending_value
+      - violated_rule
+
+# --- Cross-Module Integrity Checks ---
+integrity_checks:
+  - "Schema spine matches all CSV fields"
+  - "VIP IDs match across all modules"
+  - "Canonical index uses correct H##-S## format"
+  - "Provider matrix references only valid providers"
+  - "Dialect overlays match sovereignty gradient"
+  - "Doctrine overrides match cascade rules"
+  - "Evidence IDs referenced in provider matrix exist"
+  - "Validation suite references all modules"
+  - "No circular dependencies"
+  - "No missing anchors"
+  - "No duplicate mapping IDs"
+  - "No drift between modules"
+
+# --- Assembly Summary ---
+assembly_summary:
+  schema_spines: 1
+  elements: 12
+  canonical_index_mappings: 12
+  provider_capability_rows: 50
+  dialect_overlays: 6
+  sovereignty_scores: 8
+  doctrines_and_invariants: 11
+  universal_capability_maps: 1
+  evidence_references: 25
+  validation_suites: 1
+  manifests: 1
+  note: >
+    Provider capability rows are a representative subset (50 of 131+).
+    Full population pending Gate 1 evidence coverage pass.

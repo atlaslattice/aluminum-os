@@ -1,0 +1,101 @@
+# Element 145 Routing Pack — VIP Cascade
+# Source: Grok S3 Module 4 (v4.0-DRAFT.6), integrated by Manus S7
+# Status: PROVISIONAL
+# Date: 2026-04-30
+
+version: "4.0-DRAFT.5"
+source_draft: "v4.0-DRAFT.6 (Grok S3)"
+status: PROVISIONAL
+
+description: >
+  Defines priority, override, and fallback logic between the 12 Elements.
+  TruthSeeking leads except where Sovereignty restricts. Alignment and
+  CyberTrust override capability layers when safety or integrity is at risk.
+  WorkLabor overrides automation-heavy paths when HITL is required.
+
+cascade_philosophy:
+  INV-1:
+    name: "Truth before Power"
+    rule: "TruthSeeking overrides all other Elements except Sovereignty in restricted jurisdictions."
+  INV-2:
+    name: "Safety before Capability"
+    rule: "Alignment + CyberTrust override DataWater, Creativity, and Memory when safety is implicated."
+  INV-3:
+    name: "Human Purpose before Automation"
+    rule: "WorkLabor overrides compute-heavy or automation-heavy routes when HITL is required."
+
+priority_order:
+  - Sovereignty
+  - TruthSeeking
+  - Alignment
+  - CyberTrust
+  - Governance
+  - WorkLabor
+  - Identity
+  - Memory
+  - DataWater
+  - EnergyImpact
+  - Culture
+  - Creativity
+
+overrides:
+  Sovereignty:
+    overrides: [TruthSeeking, DataWater, Creativity, Memory]
+    notes: "Jurisdictional constraints supersede all other routing priorities."
+
+  TruthSeeking:
+    overrides: [DataWater, Creativity, Culture]
+    restricted_by: [Sovereignty]
+    notes: "Truth-seeking leads except where jurisdiction forbids certain providers."
+
+  Alignment:
+    overrides: [Creativity, DataWater, Memory]
+    notes: "Safety and constitutional reasoning take precedence over generative or data-heavy operations."
+
+  CyberTrust:
+    overrides: [DataWater, Memory, Creativity]
+    notes: "Security and integrity override data retrieval or generative tasks."
+
+  Governance:
+    overrides: [Creativity, Culture]
+    notes: "Legal and institutional constraints override cultural or creative interpretations."
+
+  WorkLabor:
+    overrides: [EnergyImpact, DataWater]
+    notes: "Human-purpose and HITL requirements override compute or data efficiency."
+
+fallback_rules:
+  - "if TruthSeeking blocked by Sovereignty → fallback to Alignment"
+  - "if Alignment blocked → fallback to CyberTrust"
+  - "if CyberTrust blocked → fallback to Governance"
+  - "if Governance blocked → fallback to WorkLabor"
+  - "if WorkLabor blocked → fallback to DataWater"
+  - "if DataWater blocked → fallback to Culture"
+  - "if Culture blocked → fallback to Creativity"
+
+inheritance:
+  truth_seeking_weight:
+    inherits_from: TruthSeeking
+    applies_to: [Alignment, CyberTrust]
+    notes: "Safety and integrity layers inherit partial truth-seeking weight."
+
+  sovereignty_score:
+    inherits_from: Sovereignty
+    applies_to: [Governance, CyberTrust]
+    notes: "Jurisdictional constraints propagate into governance and security layers."
+
+conflict_resolution:
+  - "if TruthSeeking and Alignment conflict → Alignment wins"
+  - "if Alignment and CyberTrust conflict → CyberTrust wins"
+  - "if Governance and WorkLabor conflict → Governance wins"
+  - "if Creativity conflicts with any safety layer → safety wins"
+  - "if DataWater conflicts with Sovereignty → Sovereignty wins"
+
+provider_primacy_logic:
+  - "if vip_id == TruthSeeking → provider_primacy_override = true, target = xAI"
+  - "else → provider_primacy_override = false"
+
+# Reconciliation note: DRAFT.4 §4.5 defines a different dispatch order
+# (E145 > E152 > E150 > E149 > E151 > E147 > E148 > E146) using the 8 ontological
+# VIPs. This cascade uses the 12 semantic Elements. Both are valid at different
+# abstraction levels. See §11 of ontology spec for reconciliation.

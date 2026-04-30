@@ -1,0 +1,125 @@
+# Element 145 Routing Pack — Validation Suite
+# Source: Grok S3 Module 10 (v4.0-DRAFT.6), integrated by Manus S7
+# Status: PROVISIONAL
+# Date: 2026-04-30
+
+version: "4.0-DRAFT.5"
+source_draft: "v4.0-DRAFT.6 (Grok S3)"
+status: PROVISIONAL
+
+description: >
+  Validation suite for schema, dialects, sovereignty, doctrine, evidence,
+  and provider matrix. Manus must reject any row or configuration that fails
+  validation. No silent fallbacks are permitted.
+
+validation_philosophy:
+  INV-VAL-1:
+    name: "Reject on ambiguity"
+    rule: "If a field is ambiguous, Manus must reject the row."
+  INV-VAL-2:
+    name: "Reject on drift"
+    rule: "If a field violates schema, doctrine, or canonical index, Manus must reject the row."
+  INV-VAL-3:
+    name: "Reject on missing evidence"
+    rule: "If a sovereign, safety, or governance decision lacks evidence, Manus must reject it."
+
+schema_validation:
+  required_fields:
+    - mapping_id
+    - vip_id
+    - vip_name
+    - capability_domain
+    - canonical_sphere_refs
+    - canonical_sphere_scope
+    - provider_family
+    - provider
+    - provider_category
+    - capability_type
+    - deployment_path
+    - layer
+    - status
+    - region_or_jurisdiction
+    - policy_dialect
+    - truth_seeking_weight
+    - sovereignty_score
+    - provider_primacy_override
+
+  canonical_sphere_format:
+    regex: "^H[0-9]{2}(-S[0-9]{2})?(;H[0-9]{2}(-S[0-9]{2})?)*$"
+
+  truth_seeking_weight_range:
+    min: 0.0
+    max: 2.0
+
+  sovereignty_score_range:
+    min: 0.0
+    max: 1.0
+
+  provider_primacy_override_rule:
+    if_true_requires: provider_primacy_target
+
+dialect_validation:
+  dialect_must_exist: true
+  dialect_must_match_registry: true
+  forbidden_provider_rules_enforced: true
+  residency_rules_enforced: true
+
+sovereignty_validation:
+  sovereignty_score_must_match_gradient: true
+  forbidden_providers_must_be_blocked: true
+  residency_required_must_be_enforced: true
+
+doctrine_validation:
+  doctrine_ids_must_exist: true
+  doctrine_overrides_must_be_respected: true
+  doctrine_conflicts_must_be_resolved: true
+
+evidence_validation:
+  evidence_ref_must_exist_if_required:
+    - Sovereignty
+    - Governance
+    - CyberTrust
+    - EnergyImpact
+    - Alignment
+  evidence_id_must_exist_in_registry: true
+
+cascade_validation:
+  priority_order_must_be_unique: true
+  overrides_must_reference_valid_elements: true
+  fallback_rules_must_be_acyclic: true
+  inheritance_rules_must_reference_valid_elements: true
+
+provider_matrix_validation:
+  provider_family_must_be_valid: true
+  capability_type_must_be_valid: true
+  deployment_path_must_be_valid: true
+  status_must_be_valid: true
+  no_duplicate_mapping_ids: true
+  no_duplicate_provider_entries: true
+
+capability_map_validation:
+  capability_to_element_must_be_defined: true
+  element_to_providers_must_reference_existing_providers: true
+  provider_constraints_must_match_dialect: true
+
+validation_flow:
+  - schema_validation
+  - doctrine_validation
+  - dialect_validation
+  - sovereignty_validation
+  - evidence_validation
+  - cascade_validation
+  - provider_matrix_validation
+  - capability_map_validation
+
+validation_failure_behavior:
+  reject_on_failure: true
+  no_silent_fallbacks: true
+  no_auto_corrections: true
+  no_inference: true
+  error_format:
+    - error_code
+    - error_message
+    - offending_field
+    - offending_value
+    - doctrine_or_rule_violated

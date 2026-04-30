@@ -1,0 +1,113 @@
+# Element 145 Routing Pack — Dialect Overlays
+# Source: Grok S3 Module 5 (v4.0-DRAFT.6), integrated by Manus S7
+# Status: PROVISIONAL
+# Date: 2026-04-30
+
+version: "4.0-DRAFT.5"
+source_draft: "v4.0-DRAFT.6 (Grok S3)"
+status: PROVISIONAL
+
+description: >
+  Dialect overlays define jurisdiction-specific constraints, compliance
+  requirements, encryption standards, and routing modifiers. These overlays
+  apply after the VIP cascade and before final routing. All dialects are
+  explicit; no inference is permitted.
+
+dialect_philosophy:
+  INV-SOV-1:
+    name: "Jurisdiction is a first-class substrate"
+    rule: "Routing must respect local law before capability."
+  INV-SOV-2:
+    name: "Dialects are overlays, not replacements"
+    rule: "They modify routing but do not redefine the 12 Elements."
+  INV-SOV-3:
+    name: "Dialects must be explicit, not inferred"
+    rule: "No guessing. No heuristics. No silent fallbacks."
+
+dialects:
+  Global:
+    compliance: []
+    encryption: AES-256
+    residency: none
+    model_restrictions: []
+    notes: "Default global dialect. No special constraints."
+
+  US:
+    compliance: [NIST-800-53, SOC2]
+    encryption: AES-256
+    residency: optional
+    model_restrictions: []
+    notes: "US baseline compliance. No model prohibitions."
+
+  EU:
+    compliance: [EU-AI-Act, GDPR, ISO-42001]
+    encryption: AES-256
+    residency: required
+    model_restrictions: []
+    notes: "EU requires strict data residency and AI Act compliance."
+
+  CN:
+    compliance: [CAC, "GB/T-45654-2025"]
+    encryption: SM4
+    residency: required
+    model_restrictions: [foreign-foundation-models]
+    notes: >
+      CN dialect requires SM4 encryption, full residency, and restricts
+      foreign foundation models unless routed through CN-regulated endpoints.
+
+  JP:
+    compliance: [APPI]
+    encryption: AES-256
+    residency: recommended
+    model_restrictions: []
+    notes: "Japan requires APPI compliance; residency is recommended but not mandatory."
+
+  GCC-High:
+    compliance: [FedRAMP-High, DoD-IL5]
+    encryption: AES-256
+    residency: required
+    model_restrictions: [non-FedRAMP-models]
+    notes: "GCC-High requires FedRAMP High compliance and prohibits non-FedRAMP model endpoints."
+
+sovereignty_inheritance:
+  Global: 0.40
+  US: 0.60
+  EU: 0.90
+  JP: 0.70
+  GCC-High: 0.95
+  CN: 1.00
+
+dialect_vip_interactions:
+  CN:
+    restricts: [TruthSeeking, Creativity]
+    elevates: [Sovereignty, Governance]
+    notes: "CN dialect elevates Sovereignty and Governance above TruthSeeking."
+  EU:
+    elevates: [Governance, Alignment]
+    notes: "EU dialect strengthens Governance and Alignment due to AI Act."
+  GCC-High:
+    elevates: [Sovereignty, CyberTrust]
+    restricts: [OpenWeight]
+    notes: "GCC-High prohibits non-FedRAMP models and elevates CyberTrust."
+  JP:
+    elevates: [Culture, Identity]
+    notes: "JP dialect emphasizes cultural and identity-sensitive routing."
+  US:
+    elevates: [CyberTrust]
+    notes: "US dialect emphasizes security and integrity."
+  Global:
+    notes: "No special VIP interactions."
+
+dialect_provider_constraints:
+  CN:
+    forbidden_providers: [OpenAI, Anthropic, xAI, Meta, Mistral]
+    allowed_providers: [DeepSeek, CN-Reg, CN-Cloud]
+  GCC-High:
+    forbidden_providers: [OpenWeight, non-FedRAMP]
+    allowed_providers: [Azure-GCC, AWS-GovCloud]
+  EU:
+    residency_required: true
+  JP:
+    residency_recommended: true
+  US:
+    no_special_constraints: true

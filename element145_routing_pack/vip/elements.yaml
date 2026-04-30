@@ -1,0 +1,92 @@
+# Element 145 Routing Pack — The 12 Elements (VIP Layer)
+# Source: Grok S3 Module 1 (v4.0-DRAFT.6), integrated by Manus S7
+# Status: PROVISIONAL
+# Date: 2026-04-30
+#
+# These 12 Elements are ROUTING-LAYER abstractions that sit above the 8 ontological
+# VIPs (E145-E152) defined in DRAFT.4. They are semantic routing lenses, not
+# replacements for the ontological VIP Elements.
+
+version: "4.0-DRAFT.5"
+source_draft: "v4.0-DRAFT.6 (Grok S3)"
+status: PROVISIONAL
+vip_ids: semantic
+
+description: >
+  The 12 Elements (VIPs) are wildcard substrates that refine routing across
+  the 144-sphere Earth layer. They are semantic labels, not canonical numeric
+  IDs. Numeric IDs (E145-E162) remain provisional until doctrine pinning.
+
+pending_gates:
+  - doctrine_pin
+  - evidence_coverage
+  - dialect_overlays
+
+elements:
+  - id: TruthSeeking
+    description: "First-principles reasoning, physics, grounding, adversarial clarity"
+    scope: house
+
+  - id: DataWater
+    description: "Flow, storage, retrieval, embeddings, vector substrate"
+    scope: mixed
+
+  - id: Governance
+    description: "Law, charters, regulation, policy, institutional orders"
+    scope: house
+
+  - id: CyberTrust
+    description: "Security, adversarial monitoring, integrity, threat modeling"
+    scope: sphere
+
+  - id: EnergyImpact
+    description: "Compute cost, carbon intensity, physical constraints, capacity limits"
+    scope: sphere
+
+  - id: WorkLabor
+    description: "Human purpose, labor, HITL, automation risk, disclosure duties"
+    scope: house
+
+  - id: Identity
+    description: "Human/Agent/Hardware identity triad, authentication, provenance"
+    scope: sphere
+
+  - id: Memory
+    description: "Long-term state, lineage, provenance, audit trails"
+    scope: sphere
+
+  - id: Alignment
+    description: "Safety, value-shaping, constitutional reasoning, guardrails"
+    scope: sphere
+
+  - id: Creativity
+    description: "Novelty, generative divergence, ideation, wildcard substrate"
+    scope: mixed
+
+  - id: Culture
+    description: "Social, linguistic, contextual grounding, norms, semantics"
+    scope: house
+
+  - id: Sovereignty
+    description: "Jurisdiction, ToS, compliance, geopolitical constraints"
+    scope: house
+
+# Provisional semantic → numeric mapping (NOT canonical)
+vip_id_semantic_to_numeric:
+  TruthSeeking: E145
+  DataWater: E147
+  Governance: E149
+  CyberTrust: E152
+  EnergyImpact: E155
+  WorkLabor: E156
+  Identity: E157
+  Memory: E158
+  Alignment: E159
+  Creativity: E160
+  Culture: E161
+  Sovereignty: E162
+
+# Reconciliation note: The semantic-to-numeric mapping above conflicts with
+# DRAFT.4 VIP assignments (E145=AluminumOS Core, E146=Entertainment, E147=Water,
+# E148=Technology, E149=Constitution, E150=AI, E151=Climate, E152=Cybersecurity).
+# Resolution pending Convenor adjudication. See §11 of ontology spec.

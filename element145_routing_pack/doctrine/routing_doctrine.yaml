@@ -1,0 +1,132 @@
+# Element 145 Routing Pack — Routing Doctrine
+# Source: Grok S3 Module 7 (v4.0-DRAFT.6), integrated by Manus S7
+# Status: PROVISIONAL
+# Date: 2026-04-30
+
+version: "4.0-DRAFT.5"
+source_draft: "v4.0-DRAFT.6 (Grok S3)"
+status: PROVISIONAL
+
+description: >
+  Constitutional doctrines and invariants that govern routing, provider
+  selection, dialect enforcement, sovereignty, safety, lineage, and
+  compliance. These doctrines override cascade logic when conflicts arise.
+
+doctrine_philosophy:
+  principle_1: "Doctrine > Cascade > Providers"
+  principle_2: "Doctrine is global and jurisdiction-aware"
+  principle_3: "Doctrine is explicit, not inferred"
+
+doctrines:
+  D-112:
+    name: "Tiered Annotation Doctrine"
+    description: >
+      Annotation layers (metadata, evidence, dialect overlays) must remain
+      separate from routing logic. Routing cannot depend on annotation
+      content; annotation cannot override routing.
+
+  D-113:
+    name: "Coverage != Routing"
+    description: >
+      The presence of a capability in the provider matrix does not imply it
+      should be routed to. Routing decisions must consider sovereignty,
+      dialect, safety, and doctrine.
+
+  D-99:
+    name: "Functional Diversity Doctrine"
+    description: >
+      No single provider or model family may dominate routing across more
+      than 40% of capability domains. Diversity is a constitutional
+      requirement to prevent concentration risk.
+
+  INV-44:
+    name: "Terms-of-Service Compliance Shield"
+    description: >
+      Routing must respect provider ToS. If a provider forbids a use case,
+      routing must block or redirect. No exceptions.
+
+  INV-7c:
+    name: "Concentration Risk Invariant"
+    description: >
+      Routing must avoid over-reliance on any single provider. If a provider
+      exceeds concentration thresholds, routing must diversify.
+
+  M110:
+    name: "ToS Compliance Shield"
+    description: >
+      Manus must enforce ToS constraints at runtime. If a provider's ToS
+      changes, routing must adapt immediately.
+
+  M111:
+    name: "Lineage Tracker"
+    description: >
+      All routed outputs must include lineage metadata: provider, model,
+      dialect, sovereignty, and evidence references.
+
+  M25:
+    name: "Physical Constraints Doctrine"
+    description: >
+      Routing must consider compute cost, energy impact, and carbon
+      intensity. High-energy routes require justification or override.
+
+  M64:
+    name: "Routing Engine Determinism"
+    description: >
+      Routing decisions must be deterministic given the same inputs. No
+      randomness or nondeterministic provider selection.
+
+  M78:
+    name: "Sovereign Routing Enforcement"
+    description: >
+      Sovereignty constraints override capability preferences. Jurisdiction
+      determines provider eligibility.
+
+  M109:
+    name: "VIP Cascade Enforcement"
+    description: >
+      The VIP cascade must be applied in full unless overridden by doctrine.
+
+doctrine_cascade_interactions:
+  D-112:
+    blocks: [provider_primacy_override]
+  D-113:
+    blocks: [DataWater_auto_selection]
+  D-99:
+    modifies: [TruthSeeking, DataWater]
+  INV-44:
+    overrides: [Creativity, DataWater]
+  INV-7c:
+    overrides: [TruthSeeking, DataWater]
+  M110:
+    overrides: [TruthSeeking, Creativity]
+  M111:
+    modifies: [Memory, Identity]
+  M25:
+    modifies: [EnergyImpact]
+  M78:
+    overrides: [TruthSeeking, DataWater]
+  M109:
+    enforces: [priority_order, overrides, fallback_rules]
+
+doctrine_dialect_interactions:
+  CN:
+    enforced_doctrines: [M78, INV-44]
+  EU:
+    enforced_doctrines: [D-113, M110]
+  GCC-High:
+    enforced_doctrines: [M78, D-99]
+  JP:
+    enforced_doctrines: [M111]
+  US:
+    enforced_doctrines: [D-99]
+  Global:
+    enforced_doctrines: []
+
+doctrine_provider_rules:
+  concentration_threshold: 0.40
+  tos_must_be_respected: true
+  residency_must_be_respected: true
+  sovereign_providers_must_be_preferred: true
+  openweight_allowed_only_if:
+    - "sovereignty_score <= 0.75"
+    - "dialect != CN"
