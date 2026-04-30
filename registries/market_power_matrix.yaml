@@ -1,0 +1,115 @@
+# Market Power / Ecosystem Matrix v0.1.0
+# ==========================================
+# IMPORTANT: This matrix is NEVER used for routing quality decisions.
+# It is used ONLY for: regulatory analysis, COI detection, and
+# "who benefits if we send this traffic here?" questions.
+#
+# Per v4.0-DRAFT.3 §5 (A/B Scoring Framework):
+#   Matrix A = capability_matrix.yaml (routing signal)
+#   Matrix B = THIS FILE (market power / ecosystem leverage)
+#
+# Three axes per sphere per entity:
+#   platform_control: distribution, app stores, OS, search, social graph (0.0-1.0)
+#   data_advantage: logged-in users, watch history, play history (0.0-1.0)
+#   monetization_rails: ads, IAP, subscriptions, cloud (0.0-1.0)
+#
+# Generated: 2026-04-30
+# Status: STUB — requires per-sphere population by Council
+
+version: "0.1.0"
+generated: "2026-04-30"
+status: STUB
+note: >
+  This is a schema stub with exemplar entries. Full population requires
+  per-entity self-reporting + independent audit. Routing code in
+  lattice_ontology.py must NEVER use this matrix for "who is best to answer".
+
+# === Exemplar Entries (Media & Entertainment) ===
+
+H8-S4_Film_and_Moving_Image:
+  Alphabet:
+    platform_control: 0.9   # YouTube, Google TV
+    data_advantage: 0.9     # 2B+ logged-in users, watch history
+    monetization_rails: 0.9 # Ads (largest video ad platform), YouTube Premium
+  Amazon:
+    platform_control: 0.6   # Prime Video, Fire TV, MGM Studios
+    data_advantage: 0.7     # Prime membership data, purchase history
+    monetization_rails: 0.7 # Prime subscriptions, TVOD, Freevee ads
+  Microsoft:
+    platform_control: 0.4   # Xbox media apps, LinkedIn video
+    data_advantage: 0.5     # Xbox engagement, LinkedIn
+    monetization_rails: 0.6 # Xbox marketplace, LinkedIn ads
+  Muskverse:
+    platform_control: 0.3   # X video, xAI media
+    data_advantage: 0.4     # X social graph
+    monetization_rails: 0.3 # X ads (limited)
+  Anthropic:
+    platform_control: 0.0
+    data_advantage: 0.0
+    monetization_rails: 0.0
+  DeepSeek:
+    platform_control: 0.0
+    data_advantage: 0.0
+    monetization_rails: 0.0
+
+H8-S12_Game_Design_and_Interactive_Media:
+  Microsoft:
+    platform_control: 0.9   # Xbox, Game Pass, Activision Blizzard, Bethesda
+    data_advantage: 0.8     # Xbox Live, Game Pass telemetry
+    monetization_rails: 0.9 # Game Pass subs, Xbox Store, IAP
+  Alphabet:
+    platform_control: 0.7   # Google Play, Android gaming, YouTube Gaming
+    data_advantage: 0.8     # Play Store data, YouTube gaming content
+    monetization_rails: 0.8 # Play Store 30%, AdMob, YouTube ads
+  Amazon:
+    platform_control: 0.4   # Luna, Twitch, Amazon Games
+    data_advantage: 0.6     # Twitch engagement, Prime Gaming
+    monetization_rails: 0.5 # Twitch subs/bits, Luna
+  Muskverse:
+    platform_control: 0.2   # X gaming content
+    data_advantage: 0.2
+    monetization_rails: 0.1
+
+H9-S7_Media_and_Journalism:
+  Alphabet:
+    platform_control: 0.9   # Google News, Search, YouTube news
+    data_advantage: 0.9     # Search queries, news consumption patterns
+    monetization_rails: 0.9 # News ads, AMP, publisher tools
+  Microsoft:
+    platform_control: 0.5   # MSN, Bing News, LinkedIn news
+    data_advantage: 0.5     # LinkedIn professional graph
+    monetization_rails: 0.5 # MSN ads, LinkedIn
+  Amazon:
+    platform_control: 0.2   # Alexa news, Washington Post
+    data_advantage: 0.3
+    monetization_rails: 0.2
+
+H11-S4_Marketing_and_Consumer_Behavior:
+  Alphabet:
+    platform_control: 0.95  # Google Ads, DV360, Search, YouTube
+    data_advantage: 0.95    # Search intent, YouTube watch, Maps visits
+    monetization_rails: 0.95 # Largest ad platform globally
+  Amazon:
+    platform_control: 0.7   # Amazon Ads, DSP, Sponsored Products
+    data_advantage: 0.8     # Purchase intent, basket data
+    monetization_rails: 0.8 # Retail media, Amazon DSP
+  Microsoft:
+    platform_control: 0.4   # Bing Ads, LinkedIn Ads, Xandr
+    data_advantage: 0.5     # LinkedIn professional, Bing search
+    monetization_rails: 0.5 # LinkedIn ads, Bing ads
+  Muskverse:
+    platform_control: 0.3   # X Ads
+    data_advantage: 0.4     # X social graph, trending
+    monetization_rails: 0.3 # X ads (rebuilding)
+
+# === Placeholder for remaining spheres ===
+# Full population requires:
+# 1. Per-entity self-reporting (as part of capability matrix review)
+# 2. Independent audit by neutral seats
+# 3. Council ratification
+# Priority spheres for next population pass:
+#   - H2-S7 Networks (cloud market power)
+#   - H11-S7 Energy (infrastructure control)
+#   - H11-S10 Telecom (connectivity control)
+#   - H9-S11 Broadcasting (media distribution)
+#   - H2-S3 AI/ML (foundation model market power)

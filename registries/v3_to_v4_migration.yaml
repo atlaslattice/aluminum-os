@@ -1,0 +1,212 @@
+# v3.14 → v4.0 Sphere Migration Map
+# ====================================
+# Maps every v3.14 S### address to its v4.0 H#-S# address.
+# Used by E145.01 Lattice Router for backward compatibility.
+# Old S### aliases remain queryable via this map.
+#
+# Generated: 2026-04-30
+# Status: PROVISIONAL — pending Convenor adjudication on renumbering (§7 item 10)
+
+version: "1.0.0"
+generated: "2026-04-30"
+status: PROVISIONAL
+
+# === House Rename Map ===
+house_renames:
+  H01_Natural_Sciences: H01_Science
+  H02_Formal_Sciences: H02_Computing
+  H03_Social_Sciences: H10_Social_Sciences
+  H04_Humanities: DISSOLVED  # → H07 Philosophy + H10 Social Sciences
+  H05_Arts: H08_Arts
+  H06_Engineering_and_Technology: H03_Engineering
+  H07_Information_and_Communication: H09_Knowledge_Systems
+  H08_Education: H09_Knowledge_Systems  # merged
+  H09_Health_and_Medicine: H04_Health_and_Medicine
+  H10_Business_and_Economics: H11_Business_Economics_Infrastructure
+  H11_Infrastructure: H11_Business_Economics_Infrastructure  # merged
+  H12_Law_and_Governance: H12_Law_and_Governance
+  NEW_Agriculture: H05_Agriculture
+  NEW_Security: H06_Security
+  NEW_Philosophy: H07_Philosophy_Ethics_Religion
+
+# === Sphere Migration Map ===
+# Format: old_address: new_address
+sphere_map:
+  # H01 Natural Sciences → H01 Science
+  S001_Physics: H1-S1
+  S002_Chemistry: H1-S2
+  S003_Biology: H1-S3
+  S004_Astronomy: H1-S4  # now Planetary & Space Science
+  S005_Geology: H1-S4    # merged into Planetary & Space Science
+  S006_Ecology: H1-S3    # merged into Biology & Life Sciences
+  S007_Genetics: H1-S3   # merged into Biology & Life Sciences
+  S008_Meteorology: H1-S4  # merged into Planetary & Space Science
+  S009_Oceanography: H1-S4 # merged into Planetary & Space Science
+  S010_Paleontology: H1-S3 # merged into Biology & Life Sciences
+  S011_Zoology: H1-S3      # merged into Biology & Life Sciences
+  S012_Botany: H1-S3       # merged into Biology & Life Sciences
+
+  # H02 Formal Sciences → split H01 Science + H02 Computing
+  S013_Mathematics: H1-S7
+  S014_Statistics: H1-S8
+  S015_Logic: H1-S9
+  S016_Computer_Science: H2-S1
+  S017_Information_Theory: H1-S10
+  S018_Decision_Theory: H1-S11  # Systems Theory
+  S019_Game_Theory: H1-S11      # Systems Theory
+  S020_Cryptography: H2-S6      # Cybersecurity & Cryptography
+  S021_Data_Science: H2-S5      # Data Engineering & Science
+  S022_Algorithmics: H2-S2      # Algorithms & Complexity
+  S023_Complexity_Theory: H2-S2  # Algorithms & Complexity
+  S024_Formal_Verification: H2-S1 # CS Theory & Foundations
+
+  # H03 Social Sciences → H10 Social Sciences
+  S025_Sociology: H10-S1
+  S026_Anthropology: H10-S3
+  S027_Psychology: H10-S2
+  S028_Economics: H11-S1  # → Business & Economics
+  S029_Political_Science: H10-S6
+  S030_Geography: H10-S8
+  S031_Linguistics: H10-S4
+  S032_Demography: H10-S1  # merged into Sociology
+  S033_Archaeology: H10-S3 # merged into Anthropology
+  S034_Communication_Studies: H9-S7  # → Media & Journalism
+  S035_International_Relations: H12-S10  # → Diplomacy
+  S036_Cultural_Studies: H10-S5
+
+  # H04 Humanities → DISSOLVED (H07 + H10)
+  S037_History: H10-S7
+  S038_Philosophy: H7-S1
+  S039_Literature: H8-S3   # → Literary Arts
+  S040_Ethics: H7-S4
+  S041_Religious_Studies: H7-S7
+  S042_Art_History: H8-S1  # → Visual Arts & Art History
+  S043_Classics: H10-S7    # merged into History
+  S044_Musicology: H8-S6   # → Music & Sound Arts
+  S045_Film_Studies: H8-S4  # → Film & Moving Image
+  S046_Gender_Studies: H10-S9
+  S047_Disability_Studies: H10-S9  # merged into Critical Studies
+  S048_Postcolonial_Studies: H10-S9 # merged into Critical Studies
+
+  # H05 Arts → H08 Arts
+  S049_Visual_Arts: H8-S1
+  S050_Performing_Arts: H8-S2
+  S051_Music: H8-S6
+  S052_Dance: H8-S2    # merged into Performing Arts
+  S053_Theater: H8-S2  # merged into Performing Arts
+  S054_Film: H8-S4
+  S055_Creative_Writing: H8-S3
+  S056_Sculpture: H8-S1  # merged into Visual Arts
+  S057_Design: H8-S5
+  S058_Photography: H8-S1  # merged into Visual Arts
+  S059_Architecture: H8-S7
+  S060_Painting: H8-S1    # merged into Visual Arts
+
+  # H06 Engineering → H03 Engineering
+  S061_Mechanical_Engineering: H3-S1
+  S062_Electrical_Engineering: H3-S2
+  S063_Civil_Engineering: H3-S3
+  S064_Chemical_Engineering: H3-S4
+  S065_Aerospace_Engineering: H3-S5
+  S066_Biomedical_Engineering: H3-S6
+  S067_Environmental_Engineering: H3-S7
+  S068_Nuclear_Engineering: H3-S8
+  S069_Software_Engineering: H2-S4  # moved to Computing
+  S070_Industrial_Engineering: H3-S9
+  S071_Materials_Engineering: H1-S6  # moved to Science (Materials Science)
+  S072_Systems_Engineering: H3-S9    # merged into Industrial
+
+  # H07 Information & Communication → H09 Knowledge Systems
+  S073_Library_Science: H9-S1
+  S074_Archival_Science: H9-S2
+  S075_Information_Systems: H2-S12  # moved to Computing
+  S076_Journalism: H9-S7
+  S077_Publishing: H9-S8
+  S078_Broadcasting: H9-S11
+  S079_Advertising: H11-S4  # moved to Marketing
+  S080_Public_Relations: H11-S4  # merged into Marketing
+  S081_Telecommunications: H3-S11  # moved to Engineering
+  S082_Digital_Media: H9-S7  # merged into Media
+  S083_Film_Studies: H8-S4   # duplicate → Film
+  S084_Media_Studies: H9-S7  # merged into Media
+
+  # H08 Education → H09 Knowledge Systems
+  S085_Pedagogy: H9-S3
+  S086_Curriculum_Design: H9-S4
+  S087_Educational_Technology: H9-S5
+  S088_Assessment: H9-S6
+  S089_Higher_Education: H9-S3  # merged into Pedagogy
+  S090_Special_Education: H9-S3 # merged into Pedagogy
+  S091_Adult_Education: H9-S3   # merged into Pedagogy
+  S092_Distance_Learning: H9-S5 # merged into EdTech
+  S093_Literacy: H9-S4          # merged into Curriculum
+  S094_STEM_Education: H9-S4    # merged into Curriculum
+  S095_Arts_Education: H9-S4    # merged into Curriculum
+  S096_Physical_Education: H9-S3 # merged into Pedagogy
+
+  # H09 Health → H04 Health & Medicine
+  S097_Anatomy: H4-S1
+  S098_Pharmacology: H4-S2
+  S099_Clinical_Medicine: H4-S3
+  S100_Psychiatry: H4-S4
+  S101_Public_Health: H4-S5
+  S102_Nursing: H4-S6
+  S103_Dentistry: H4-S7
+  S104_Veterinary: H4-S8
+  S105_Genetics_Medical: H4-S9
+  S106_Immunology: H4-S10
+  S107_Rehabilitation: H4-S11
+  S108_Traditional_Medicine: H4-S12
+
+  # H10 Business → H11 Business, Economics & Infrastructure
+  S109_Management: H11-S2
+  S110_Accounting: H11-S3
+  S111_Finance: H11-S5
+  S112_Marketing: H11-S4
+  S113_Supply_Chain: H11-S6
+  S114_Entrepreneurship: H11-S8
+  S115_Human_Resources: H11-S2  # merged into Management
+  S116_Operations: H11-S2       # merged into Management
+  S117_Real_Estate: H11-S9      # Infrastructure
+  S118_Insurance: H11-S5        # merged into Finance
+  S119_Banking: H11-S5          # merged into Finance
+  S120_International_Business: H11-S8  # merged into Entrepreneurship
+
+  # H11 Infrastructure → H11 (merged with Business)
+  S121_Transportation: H11-S9
+  S122_Energy_Systems: H11-S7
+  S123_Water_Systems: E147       # promoted to VIP
+  S124_Waste_Management: H3-S7   # → Environmental Engineering
+  S125_Telecommunications_Infra: H11-S10
+  S126_Urban_Planning: H11-S11
+  S127_Logistics: H11-S6         # merged into Supply Chain
+  S128_Construction: H3-S3       # → Civil Engineering
+  S129_Mining: H3-S10
+  S130_Agriculture_Infra: H5-S7  # → Agricultural Engineering
+  S131_Space_Infrastructure: H3-S5  # → Aerospace
+  S132_Computing_Infrastructure: H2-S8  # → Computer Architecture
+
+  # H12 Law & Governance → H12 (kept)
+  S133_Constitutional_Law: H12-S1
+  S134_Criminal_Law: H12-S2
+  S135_Civil_Law: H12-S3
+  S136_International_Law: H12-S4
+  S137_Human_Rights: H12-S5
+  S138_Environmental_Law: H12-S6
+  S139_Corporate_Law: H12-S7
+  S140_Public_Policy: H12-S8
+  S141_Diplomacy: H12-S10
+  S142_Regulatory_Law: H12-S9
+  S143_Technology_Law: H12-S11
+  S144_Intellectual_Property: H12-S12
+
+# === VIP Migration Map ===
+vip_map:
+  E145_v3: E145  # unchanged
+  E146_v3: E146  # unchanged
+  E147_v3_Cybersecurity: E152  # renumbered — was Cybersecurity, now E152
+  E148_v3_AI_Systems: E150    # renumbered — was AI Systems, now E150
+  E149_v3_Climate: E151       # renumbered — was Climate, now E151
+  NEW_E147: E147_Water        # new in v4.0
+  NEW_E148: E148_Technology   # new in v4.0
+  NEW_E149: E149_Constitution # new in v4.0

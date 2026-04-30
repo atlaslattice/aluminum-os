@@ -1,0 +1,97 @@
+# Doctrine Aliases Registry
+# ==========================
+# Maps doctrine identifiers to their canonical names and sphere addresses.
+# Used by E145.04 Constitutional Enforcer for doctrine lookup.
+#
+# Generated: 2026-04-30
+# Status: PLACEHOLDER — pending D-83 through D-124 ratification
+
+version: "0.1.0"
+generated: "2026-04-30"
+status: PLACEHOLDER
+
+# === Ratified Doctrines (from v3.14) ===
+doctrines:
+  D-01:
+    name: "Ontological Primacy"
+    description: "The 12×12 lattice structure is the canonical organizing principle"
+    enforced_by: E145.02
+    sphere_scope: ALL
+
+  D-82:
+    name: "Zero Erasure"
+    alias: INV-2
+    description: "No sphere, module, or VIP element may be deleted — only deprecated or merged"
+    enforced_by: E145.04
+    sphere_scope: ALL
+
+  D-83:
+    name: "Single Source of Truth"
+    alias: D-88
+    description: "registries/ is the only valid location for module/doctrine/invariant definitions"
+    enforced_by: ".github/workflows/registry-source-of-truth.yml"
+    sphere_scope: ALL
+    status: RATIFIED
+
+  D-84:
+    name: "Ontology Lock Gate"
+    alias: D-89
+    description: "Changes to houses/, registries/, or e145/ require SHA-256 lock file update"
+    enforced_by: ".github/workflows/ontology-lock-gate.yml"
+    sphere_scope: ALL
+    status: RATIFIED
+
+# === Pending Doctrines (D-85 through D-124) ===
+# These are placeholders for doctrines that will be ratified as part of
+# the v4.0 constitutional amendment process.
+
+  D-85:
+    name: "VIP Escalation Protocol"
+    description: "Cross-House queries must be routed through VIP elements when 3+ Houses are involved"
+    enforced_by: E145.01
+    sphere_scope: ALL
+    status: PENDING
+
+  D-86:
+    name: "A/B Matrix Separation"
+    description: "Capability matrix (A) and market power matrix (B) must never be conflated in routing"
+    enforced_by: E145.01
+    sphere_scope: ALL
+    status: PENDING
+
+  D-87:
+    name: "Tier-2 Wiggle Room"
+    description: "Sub-spheres per sphere may range from 6-24; not religious about exactly 12"
+    enforced_by: E145.02
+    sphere_scope: ALL
+    status: PENDING
+
+  D-88:
+    name: "Hierarchical Addressing"
+    description: "All sphere references must use H#-S# format; legacy S### aliases resolved via migration map"
+    enforced_by: E145.01
+    sphere_scope: ALL
+    status: PENDING
+
+  D-89:
+    name: "BLANK as First-Class Data"
+    description: "BLANK_GAP entries are tracked, not hidden; they represent known unknowns"
+    enforced_by: E145.02
+    sphere_scope: ALL
+    status: PENDING
+
+  D-90:
+    name: "Civilizational Substrate Threshold"
+    description: "A domain becomes a VIP if it cuts across 3+ Houses with no single House as natural home"
+    enforced_by: E145.04
+    sphere_scope: ALL
+    status: PENDING
+
+# === Doctrine Range D-91 through D-124 ===
+# Reserved for future ratification. Topics include:
+# - Per-seat self-reporting requirements
+# - Market power disclosure obligations
+# - Cross-VIP routing priority amendments
+# - Tier-3 sub-sub-sphere governance
+# - Federation membership criteria
+# - Audit and transparency requirements
