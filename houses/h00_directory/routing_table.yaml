@@ -89,18 +89,18 @@ routes:
 loc_coverage:
   A_general_works: {primary: H9-S6, secondary: E145, status: COVERED}
   B_philosophy_psychology_religion: {primary: H7, secondary: H10-S2, status: COVERED}
-  C_auxiliary_sciences_of_history: {primary: H10-S6, secondary: H10-S8, status: COVERED}
-  D_world_history: {primary: H10-S6, secondary: null, status: COVERED}
-  E_history_of_americas: {primary: H10-S6, secondary: null, status: COVERED}
-  F_history_of_americas_local: {primary: H10-S6, secondary: null, status: COVERED}
-  G_geography_anthropology_recreation: {primary: [H10-S5, H10-S4], secondary: [H10-S1, H8], status: COVERED}
+  C_auxiliary_sciences_of_history: {primary: H10-S4, secondary: [H10-S3, H10-S8], status: COVERED}
+  D_world_history: {primary: H10-S4, secondary: null, status: COVERED}
+  E_history_of_americas: {primary: H10-S4, secondary: null, status: COVERED}
+  F_history_of_americas_local: {primary: H10-S4, secondary: null, status: COVERED}
+  G_geography_anthropology_recreation: {primary: [H10-S5, H10-S3], secondary: [H10-S1, H8], status: COVERED}
   H_social_sciences: {primary: H10, secondary: H11, status: COVERED}
-  J_political_science: {primary: H10-S7, secondary: H12, status: COVERED}
+  J_political_science: {primary: H10-S6, secondary: H12, status: COVERED}
   K_law: {primary: H12, secondary: null, status: COVERED}
   L_education: {primary: H9, secondary: null, status: COVERED}
-  M_music: {primary: H8-S3, secondary: E146, status: COVERED}
+  M_music: {primary: H8-S2, secondary: E146, status: COVERED}
   N_fine_arts: {primary: H8, secondary: null, status: COVERED}
-  P_language_and_literature: {primary: [H10-S3, H10-S9], secondary: null, status: COVERED}
+  P_language_and_literature: {primary: [H9-S10, H8-S7], secondary: H10-S9, status: COVERED}
   Q_science: {primary: H1, secondary: H2, status: COVERED}
   R_medicine: {primary: H4, secondary: null, status: COVERED}
   S_agriculture: {primary: H5, secondary: null, status: COVERED}
@@ -132,3 +132,7 @@ authoritative_pairs:
     house_home: H5-S10
     vip_substrate: E147
     note: "H5-S10 = irrigation/water management; E147 = water as civilizational substrate"
+  indigenous_water_sovereignty:
+    house_home: H12-S5
+    vip_substrate: "E147.05 + E149.10"
+    note: "Water governance + indigenous governance systems + human rights law"

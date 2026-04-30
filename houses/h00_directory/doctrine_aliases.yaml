@@ -1,0 +1,14 @@
+# Atlas Lattice — Doctrine Aliases (Placeholder)
+# ================================================
+# Status: EMPTY — Migration of D-1 through D-127 deferred to doctrine-cleanup sprint
+# Created: 2026-04-30 (v4.0-DRAFT.4)
+# See §8.4 of ontology spec for rationale
+#
+# Format (when populated):
+#   D-###:
+#     old_address: "S###"
+#     new_address: "H#-S#"
+#     title: "Doctrine title"
+#     status: migrated | pending | deprecated
+
+aliases: {}

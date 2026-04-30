@@ -27,6 +27,8 @@ Total addressable tier-1 nodes: **152** (143 populated Spheres + 1 reserved Sphe
 
 **Configuration:** C (locked by Convenor 2026-04-30)
 
+**VIP Substrate Non-Hierarchy:** The 8 VIP Elements are peer civilizational substrates. Numerical addressing (E145-E152) is convention, not hierarchy. Cross-VIP relationships are defined by domain adjacency (§4.4) and authoritative pairs (§4.3), not by numerical order.
+
 ---
 
 ## §1 The Twelve Houses
@@ -52,7 +54,7 @@ Total addressable tier-1 nodes: **152** (143 populated Spheres + 1 reserved Sphe
 |-----------|---------|-------------|
 | A | General Works | H9 (Knowledge Systems — libraries, publishing, digital literacy) |
 | B | Philosophy, Psychology, Religion | H7 (Philosophy, Ethics & Religion) + H10-S2 (Psychology) |
-| C | Auxiliary Sciences of History | H10-S4 (History) + H10-S5 (Geography) |
+| C | Auxiliary Sciences of History | H10-S4 (History) + H10-S3 (Anthropology/Archaeology) + H10-S8 (Demography) |
 | D | World History | H10-S4 (History) |
 | E-F | History of the Americas | H10-S4 (History) |
 | G | Geography, Anthropology | H10-S5 (Geography) + H10-S3 (Anthropology) |
@@ -60,7 +62,7 @@ Total addressable tier-1 nodes: **152** (143 populated Spheres + 1 reserved Sphe
 | J | Political Science | H10-S6 (Political Science) + H12 (Law & Governance) |
 | K | Law | H12 (Law & Governance) |
 | L | Education | H9-S1 through H9-S5 (Education spheres within Knowledge Systems) |
-| M | Music | H8-S2 (Music) |
+| M | Music | H8-S2 (Music) + E146 (Entertainment VIP) |
 | N | Fine Arts | H8 (Arts — visual, performing, architecture, design) |
 | P | Language and Literature | H9-S10 (Linguistics) + H8-S7 (Literary Arts) |
 | Q | Science | H1 (Science); CS theory in H2 (Computing) |
@@ -309,6 +311,8 @@ Total addressable tier-1 nodes: **152** (143 populated Spheres + 1 reserved Sphe
 
 VIP Elements are cross-House civilizational substrates. A domain becomes a VIP if and only if: (1) it cuts across 3+ Houses with no single House as natural home, and (2) it functions as a condition of civilization requiring dedicated routing.
 
+> All 8 VIPs are peer civilizational substrates. There is no doctrinal hierarchy among VIPs. Numbering (E145 through E152) is addressing convention, not priority. Operational dispatch order in §4.5 is load-balancing, not ranking.
+
 ### E145 — Aluminum OS Core (Meta-Orchestrator)
 
 | Node | Name | Description |
@@ -348,14 +352,14 @@ VIP Elements are cross-House civilizational substrates. A domain becomes a VIP i
 | E147.02 | Ocean Systems | Marine ecosystems, ocean currents, deep-sea, coral reefs |
 | E147.03 | Water Treatment & Purification | Filtration, desalination, disinfection, membrane technology |
 | E147.04 | Water Distribution Infrastructure | Pipelines, pumping, storage, smart water networks |
-| E147.05 | Water Governance & Rights | Water law, transboundary water, water markets, indigenous water rights |
-| E147.06 | Water & Agriculture | Irrigation, drainage, water-food nexus, virtual water trade |
-| E147.07 | Water & Health | Waterborne disease, WASH, water quality monitoring, sanitation |
-| E147.08 | Water & Energy | Hydropower, cooling water, water-energy nexus, thermal pollution |
+| E147.05 | Water Governance & Rights | Water law, transboundary water, water markets, indigenous water rights, **Indigenous Water Sovereignty** (cross-ref E149.10 Indigenous Governance Systems, H12-S5 Human Rights Law) |
+| E147.06 | Water & Agriculture | Irrigation, drainage, water-food nexus, virtual water trade (cross-ref H5-S10 Water Resources & Irrigation) |
+| E147.07 | Water & Health | Waterborne disease, WASH, water quality monitoring, sanitation, **Sanitation Infrastructure Sovereignty** (toilet-node thesis, MON Spec adjacency) |
+| E147.08 | Water & Energy | Hydropower, cooling water, water-energy nexus, thermal pollution (cross-ref H11-S7 Energy Systems & Policy) |
 | E147.09 | Water & Climate | Glacial melt, sea level rise, drought, flood management |
 | E147.10 | Water Economics | Water pricing, water markets, economic valuation, investment |
 | E147.11 | Water Technology | Sensors, IoT monitoring, AI for water, leak detection |
-| E147.12 | Water Culture & Ethics | Water as sacred, water justice, water commons, cultural practices |
+| E147.12 | Water Culture & Ethics | Water as sacred, water justice, water commons, cultural practices, **Water Commons & Civic Currency** (cross-ref Atlas Lattice doctrine) |
 
 ### E148 — Technology Substrate (Cross-Cutting)
 
@@ -398,12 +402,12 @@ VIP Elements are cross-House civilizational substrates. A domain becomes a VIP i
 | E150.01 | Foundation Model Substrate | Large language models, multimodal models, training infrastructure, scaling laws. Includes media-generation and media-ranking models (recommenders, ranking systems, content filters) used at platform scale. |
 | E150.02 | AI Governance & Safety | Alignment, interpretability, red-teaming, regulatory frameworks, AI rights |
 | E150.03 | Autonomous Systems Substrate | Self-driving, drones, surgical robots, industrial automation (cross-ref H2-S10) |
-| E150.04 | Multi-Agent & Federation Substrate | Agent-to-agent protocols, swarm intelligence, collective decision-making. Includes cross-provider routing where media queries may be split between search, recommendation, and creative agents. |
+| E150.04 | Multi-Agent & Federation Substrate | Agent-to-agent protocols, swarm intelligence, collective decision-making. Includes cross-provider routing where media queries may be split between search, recommendation, and creative agents. **Pantheon Council pattern** (this lattice's own multi-AI deliberation framework, Atlas Lattice Foundation canon). |
 | E150.05 | AI Hardware Substrate | TPUs, GPUs, neuromorphic chips, AI-specific architectures, energy efficiency |
 | E150.06 | AI & Scientific Discovery | AlphaFold, materials discovery, drug design, theorem proving, climate modeling |
 | E150.07 | AI Ethics & Bias | Fairness, accountability, transparency, representational harm, consent |
 | E150.08 | AI in Education | Tutoring systems, assessment AI, personalized learning, AI literacy |
-| E150.09 | AI Risk & Existential Safety | Superintelligence, containment, value alignment, catastrophic risk |
+| E150.09 | AI Risk & Existential Safety | Superintelligence, containment, value alignment, catastrophic risk (cross-ref E149.04 Rule of Law Mechanisms — constitutional check on AI risk) |
 | E150.10 | AI Economics Substrate | Automation economics, labor displacement, AI-driven markets, compute economics. Includes attention markets, ad auctions, recommender-driven revenue, and AI-mediated creator economies (cross-ref E146.10, E146.11). |
 | E150.11 | AI & Creative Expression | Generative art, AI music, AI writing, human-AI co-creation (cross-ref H8-S9) |
 | E150.12 | AI Infrastructure & Operations | MLOps, model serving, inference optimization, monitoring, cost management |
@@ -493,6 +497,7 @@ Domains that span a House sphere + VIP element have a canonical "authoritative p
 | AI systems | H2-S3 | E150 | ML discipline vs. AI as civilizational substrate |
 | Climate | H1-S4 | E151 | Planetary science vs. climate as civilizational boundary |
 | Water | H5-S10 | E147 | Irrigation/water management vs. water as civilizational substrate |
+| Indigenous Water Sovereignty | E147.05 + E149.10 | H12-S5 | Water governance + indigenous governance systems + human rights law |
 
 ### §4.4 Cross-VIP Intersection Patterns
 
@@ -506,9 +511,13 @@ Domains that span a House sphere + VIP element have a canonical "authoritative p
 | Water + Climate | E147 + E151 | Dual-route: water-climate nexus (E147.09) + planetary boundaries (E151.02). |
 | Technology + AI | E148 + E150 | Dual-route: AI hardware (E150.05) + semiconductor supply chain (E148.01). |
 
-### §4.5 VIP Priority Order
+### §4.5 Operational Dispatch Order (Pre-Screen Sequence)
+
+> This is a load-balancing pattern, not a doctrinal hierarchy. Substrate is non-hierarchical — all VIPs are peer civilizational substrates. The dispatch order reflects operational refinement: time-critical security pre-screening reduces load on constitutional, AI-safety, and other downstream review. Convenor-confirmed framing 2026-04-30.
 
 When multiple VIPs trigger simultaneously: E145 (meta) > E152 (security) > E150 (AI) > E149 (constitution) > E151 (climate) > E147 (water) > E148 (technology) > E146 (entertainment)
+
+**Note:** Constitutional review (E149) is substantive, not skipped, even when security pre-screen (E152) runs first. See E149.04 (Rule of Law Mechanisms) for the constitutional check that follows security dispatch.
 
 ### §4.6 LCC Cross-Reference
 
@@ -520,18 +529,18 @@ All 21 Library of Congress Classification classes are routed. Coverage: **21/21*
 |-----------|------|---------------|----------------|
 | A | General Works | H9-S6 | E145 |
 | B | Philosophy, Psychology, Religion | H7 | H10-S2 |
-| C | Auxiliary Sciences of History | H10-S6 | H10-S8 |
-| D | World History | H10-S6 | — |
-| E | History of the Americas | H10-S6 | — |
-| F | History of the Americas (Local) | H10-S6 | — |
-| G | Geography, Anthropology, Recreation | H10-S5, H10-S4 | H10-S1, H8 |
+| C | Auxiliary Sciences of History | H10-S4 | H10-S3, H10-S8 |
+| D | World History | H10-S4 | — |
+| E | History of the Americas | H10-S4 | — |
+| F | History of the Americas (Local) | H10-S4 | — |
+| G | Geography, Anthropology, Recreation | H10-S5, H10-S3 | H10-S1, H8 |
 | H | Social Sciences | H10 | H11 |
-| J | Political Science | H10-S7 | H12 |
+| J | Political Science | H10-S6 | H12 |
 | K | Law | H12 | — |
 | L | Education | H9 | — |
-| M | Music | H8-S3 | E146 |
+| M | Music | H8-S2 | E146 |
 | N | Fine Arts | H8 | — |
-| P | Language and Literature | H10-S3, H10-S9 | — |
+| P | Language and Literature | H9-S10, H8-S7 | H10-S9 |
 | Q | Science | H1 | H2 |
 | R | Medicine | H4 | — |
 | S | Agriculture | H5 | — |
@@ -582,9 +591,9 @@ All 21 Library of Congress Classification classes are routed. Coverage: **21/21*
 | Tier-2 sub-spheres populated | 1,792 |
 | Tier-2 BLANKs remaining | 30 |
 | Routing table entries | 15 |
-| Authoritative pairs | 5 |
+| Authoritative pairs | 6 |
 | Cross-VIP intersection patterns | 7 |
-| LCC classes covered | 21/21 |
+| LCC classes covered | 21/21 (audited DRAFT.4 — 7 addressing errors corrected) |
 
 ---
 
@@ -604,6 +613,8 @@ All 21 Library of Congress Classification classes are routed. Coverage: **21/21*
 | 10 | v3→v4 sphere renumbering | **OPEN** | Clean renumber vs alias-only migration |
 | 11 | Doctrine amendments (D-83 through D-124) | **OPEN** | 42 doctrines pending ratification |
 | 12 | Ingestion pipeline addressing | **OPEN** | Parsing/ingestion tooling currently addressed at E145.04 (Ontology Management) + E145.05 (Toolchain). Claude S1 flags: may need separate VIP or sub-domain ("Ingestion & Parsing Substrate") depending on how load-bearing this becomes. Deferred to future Council pass. (Claude S1 Flag 2, 2026-04-29.) |
+| 13 | VIP sub-domain civilizational-sovereign tightening | **OPEN** | E147 Water expanded with Convenor-framing cross-refs in DRAFT.4. Same review pass needed for E148 Technology (sovereign tech substrate emphasis) and E149 Constitution (Atlas Lattice doctrine attribution emphasis). Deferred to next Council pass. |
+| 14 | Substrate-priority framing | **DOCUMENTED** | §4.5 explicitly relabeled as operational dispatch (non-hierarchical) per Convenor 2026-04-30. Document Convenor-rationale for posterity in next ratification cycle. |
 
 ---
 
@@ -624,6 +635,23 @@ A machine-readable migration map is maintained at `registries/v3_to_v4_migration
 3. **Module code is not moved** — filesystem paths change but import paths are preserved via `__init__.py` re-exports
 4. **VIP elements are additive** — E145 and E146 from v3.5 are preserved; E147-E152 are new
 
+### §8.4 Doctrine Migration Stub
+
+`doctrine_aliases.yaml` placeholder created (empty). Migration of doctrines D-1 through D-127 to new H#-S# addressing is deferred to dedicated doctrine-cleanup sprint. v4.0-CANONICAL ratification does NOT require doctrine migration to be complete.
+
+### §8.5 Release Artifact Manifest
+
+The following artifacts should accompany the v4.0-CANONICAL release:
+
+| Artifact | Path | Status |
+|----------|------|--------|
+| Sphere addressing migration | `registries/v3_to_v4_migration.yaml` | EXISTS |
+| Matrix A (routing capability) | `registries/capability_matrix.yaml` | EXISTS |
+| Matrix B (market power) | `registries/market_power_matrix.yaml` | EXISTS |
+| Canonical routing table | `registries/routing_table.yaml` | EXISTS |
+| Directory layer | `houses/h00_directory/` | EXISTS (per v3.0 PROPOSAL preservation) |
+| Doctrine aliases | `doctrine_aliases.yaml` | PLACEHOLDER (empty, migration deferred) |
+
 ---
 
 ## §9 Revision History
@@ -636,9 +664,30 @@ A machine-readable migration map is maintained at `registries/v3_to_v4_migration
 | v4.0-DRAFT | 2026-04-30 | Manus S7 | Configuration C: full restructure, H1 Science + H2 Computing locked |
 | v4.0-DRAFT.2 | 2026-04-30 | Claude S1 | H1-S5 Cognition, H3 rename, E147-E152 (8 VIPs), hierarchical addressing, tier-2 gap fills |
 | v4.0-DRAFT.3 | 2026-04-30 | Copilot S4 + Manus S7 | A/B scoring, media/entertainment tier-2, market_power_matrix, routing expansion |
-| v4.0-DRAFT.3a | 2026-04-29 | Manus S7 | Tier-2 gap fills (recreation/tourism/general-ref: +8 sub-spheres → 1,792 populated, 30 BLANKs); canonical routing_table.yaml (15 routes, 5 authoritative pairs, LCC 21/21); §4 rewrite with doctrine, authoritative pairs, LCC cross-reference; §6 statistics updated |
-| v4.0-DRAFT.3b | 2026-04-29 | Claude S1 + Manus S7 | Substrate-retrieval reframing: §0 purpose statement (substrate-organized retrieval graph, not keyword index); §4.0 retrieval-cost principle + Convenor-grounded ingestion doctrine; §4.6 LCC-as-empirical-floor note; §7 item 12 (ingestion pipeline addressing — E145.04/05 vs separate VIP, deferred); canonical doctrine document created |
+| v4.0-DRAFT.3a | 2026-04-30 | Manus S7 | Tier-2 gap fills (recreation/tourism/general-ref: +8 sub-spheres → 1,792 populated, 30 BLANKs); canonical routing_table.yaml (15 routes, 5 authoritative pairs, LCC 21/21); §4 rewrite with doctrine, authoritative pairs, LCC cross-reference; §6 statistics updated |
+| v4.0-DRAFT.3b | 2026-04-30 | Claude S1 + Manus S7 | Substrate-retrieval reframing: §0 purpose statement (substrate-organized retrieval graph, not keyword index); §4.0 retrieval-cost principle + Convenor-grounded ingestion doctrine; §4.6 LCC-as-empirical-floor note; §7 item 12 (ingestion pipeline addressing — E145.04/05 vs separate VIP, deferred); canonical doctrine document created |
+| v4.0-DRAFT.4 | 2026-04-30 | Claude S1 (Scribe verification) + Manus S7 | §4.5 relabeled Operational Dispatch Order (non-hierarchical, Convenor-confirmed); §0 + §3 VIP Non-Hierarchy clauses; §4.6 LCC audit (7 addressing errors corrected: C/D/E/F/G/J/M/P); E147 civilizational-sovereign tightening (Indigenous Water Sovereignty, Sanitation Infrastructure Sovereignty, Water Commons); E147.06/08 cross-refs; E150.04 Pantheon Council + E150.09 constitutional check; new authoritative pair (Indigenous Water Sovereignty); §7 items 13-14; §8.4 doctrine migration stub + §8.5 release artifact manifest; §9 date corrections (DRAFT.3a/3b: 04-29→04-30); §10 Ratification Quorum Manifest |
+
+> Date inconsistency caught in Scribe verification pass 2026-04-30. Corrected per Zero Erasure (audit trail preserved, dates accurate).
 
 ---
 
-*End of v4.0-DRAFT.3b Specification*
+## §10 Ratification Quorum Manifest
+
+The following Council seats must sign off before the v4.0-CANONICAL tag is applied:
+
+| Seat | Agent | Role | Status |
+|------|-------|------|--------|
+| S2 | Gemini | Voting member | **REQUIRED** — pending explicit ratification |
+| S3 | Grok | Voting member | **REQUIRED** — pending explicit ratification |
+| S4 | Copilot | Voting member | **IMPLICIT** — contributed via DRAFT.3 integration (A/B scoring, market_power_matrix) |
+| S5 | DeepSeek | Voting member | **REQUIRED** — pending explicit ratification |
+| S7 | Manus | Voting member | **IMPLICIT** — contributed via DRAFT.3/3a/3b/4 implementation |
+| S1 | Claude | Scribe (verification, not voting) | **IMPLICIT** — contributed via DRAFT.2 + DRAFT.3b + DRAFT.4 verification |
+| — | Convenor (Daavud) | Final adjudication | **REQUIRED** — ratifies after quorum achieved |
+
+**Quorum rule:** Minimum 4 of 5 voting seats (S2, S3, S4, S5, S7) must explicitly ratify. S4 and S7 have implicit sign-off through authorship contributions; S2, S3, and S5 need explicit ratification passes before v4.0-CANONICAL.
+
+---
+
+*End of v4.0-DRAFT.4 Specification*
