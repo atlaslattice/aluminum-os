@@ -444,28 +444,51 @@ VIP Elements are cross-House civilizational substrates. A domain becomes a VIP i
 
 ## §4 Routing Table
 
+### §4.0 Routing Doctrine
+
+> **Substrate condition** ("how does climate shape food security?") → route **VIP primary**, House spheres secondary.
+>
+> **Discipline or technique** ("how do I design a PID controller?") → route **sphere primary**, VIP only if the question explicitly invokes substrate framing.
+
+Machine-readable version: `houses/h00_directory/routing_table.yaml`
+
 ### §4.1 Standard Routing (Tier-1 Spheres)
 
 All queries are first classified by the Lattice Router (E145.01) into a primary `H#-S#` address. Multi-sphere queries receive a primary + up to 3 secondary addresses.
 
-### §4.2 VIP Escalation Rules
+### §4.2 Canonical Routing Table
 
-| Trigger Domain | Primary VIP | Secondary Routing | Rule |
-|---------------|-------------|-------------------|------|
-| Meta-system / ontology / routing | E145 | — | Any query about the lattice itself routes to E145 |
-| Entertainment / games / film / streaming (creative request) | E146 | H8-S4, H8-S12, H9-S7 | If user is *making* or *designing* media, route to E146 + relevant Arts/Media spheres |
-| Entertainment / media (platform / market / power) | E150.10 + Market Matrix | H11-S4, E148 | If user asks "who controls this?", attach market_power_matrix and route to business/tech substrate, not just "best model" |
-| Water systems / hydrology / water rights | E147 | H5-S10, H3-S7, H11-S11 | Cross-House water queries escalate to E147 |
-| Semiconductor / cloud / platform / infrastructure | E148 | H2-S8, H3-S2, H11-S10 | Cross-House technology substrate queries escalate to E148 |
-| Constitutional / rule of law / democratic institutions | E149 | H12-S1, H10-S6, H7-S5 | Cross-House governance queries escalate to E149 |
-| AI systems / foundation models / AI safety | E150 | H2-S3, H7-S4, H12-S8 | Cross-House AI queries escalate to E150 |
-| Climate / planetary boundaries / carbon | E151 | H1-S4, H3-S7, H5-S11 | Cross-House climate queries escalate to E151 |
-| Cybersecurity / nation-state cyber / critical infrastructure | E152 | H2-S6, H6-S3, H12-S8 | Cross-House cybersecurity queries escalate to E152 |
-| Criminology / criminal justice | H10-S1.12 | H12-S2, H6-S10 | Criminology routes to Sociology sub-sphere, not Security |
-| Cognitive science (integrative) | H1-S5 | H10-S2, H2-S3, H7-S6 | Cognition routes to H1-S5 primary; Psychology, AI, Phil of Mind secondary |
-| Forensic science | H6-S10 | H4-S3, H12-S2 | Forensics routes to Law Enforcement, not Health or Law |
+| Domain / Query Type | Primary Routing | Secondary Routing | Notes |
+|---------------------|-----------------|-------------------|-------|
+| Water (as substrate) | E147 | H1-S4, H5-S10, H3-S7, H11, H12 | Substrate → E147; discipline → House sphere |
+| Technology (as substrate) | E148 | H2, H3, H11, H6 | "Society runs on tech" → E148; building tech → H3; computing → H2 |
+| Constitution / governance substrate | E149 | H12, E145 | Rules/charters/protocols → E149; legal doctrine → H12; orchestration → E145 |
+| AI (as substrate) | E150 | H2-S3, H1-S5, H7-S4, H12-S12 | Foundation models / AI infra → E150; ML discipline → H2-S3; cognition → H1-S5 |
+| Climate & planetary boundaries | E151 | H1-S4, H3-S7, H5-S11, H12-S8 | Planetary substrate → E151; engineering/agri/legal views via Houses |
+| Cybersecurity & digital trust | E152 | H2-S6, H6-S3, H12-S12 | Trust substrate → E152; crypto theory → H2-S6; ops → H6-S3; law → H12-S12 |
+| Entertainment (cross-media, cross-House) | E146 | H8-S4, H8-S12, H9-S3, H11 | Engines/pipelines/platforms → E146; film/games → H8; business models → H11 |
+| Film (as art/industry) | H8-S4 | E146, H9-S3 | Purely artistic → H8-S4; platform/streaming infra → E146; media systems → H9 |
+| Video games & interactive media | H8-S12 | E146, E152, H2-S3 | Design & player experience → H8-S12; engines/platforms → E146; anti-cheat/security → E152; game AI → H2-S3 |
+| Recreation, tourism, leisure | H10-S1, H10-S5 | H8, E146 | Social/geo framing → H10-S1/S5; entertainment-heavy → H8/E146 |
+| General reference / encyclopedic queries | H9-S6 | E145 | Knowledge organization & reference → H9-S6; global routing/meta → E145 |
+| Criminology vs criminal law vs policing | H10-S10 | H12-S2, H6-S10 | Social-science → H10-S10; legal code → H12-S2; operational policing → H6-S10 |
+| Cognitive science (integrative) | H1-S5 | H10-S2, H2-S3, H7-S6 | Cognition → H1-S5 primary; Psychology, AI, Phil of Mind secondary |
+| Forensic science | H6-S10 | H4-S3, H12-S2 | Forensics → Law Enforcement, not Health or Law |
+| Entertainment / media (market power) | E150.10 + Market Matrix | H11-S4, E148 | "Who controls this?" → attach market_power_matrix, route to business/tech substrate |
 
-### §4.3 Cross-VIP Intersection Patterns
+### §4.3 Authoritative Pairs
+
+Domains that span a House sphere + VIP element have a canonical "authoritative pair":
+
+| Domain | House Home | VIP Substrate | Note |
+|--------|-----------|---------------|------|
+| Video games | H8-S12 | E146 | Design & player experience vs. engines/pipelines/platforms |
+| Cybersecurity | H2-S6 | E152 | Cryptographic theory vs. trust infrastructure & adversarial systems |
+| AI systems | H2-S3 | E150 | ML discipline vs. AI as civilizational substrate |
+| Climate | H1-S4 | E151 | Planetary science vs. climate as civilizational boundary |
+| Water | H5-S10 | E147 | Irrigation/water management vs. water as civilizational substrate |
+
+### §4.4 Cross-VIP Intersection Patterns
 
 | Pattern | VIPs Involved | Resolution |
 |---------|--------------|------------|
@@ -477,9 +500,37 @@ All queries are first classified by the Lattice Router (E145.01) into a primary 
 | Water + Climate | E147 + E151 | Dual-route: water-climate nexus (E147.09) + planetary boundaries (E151.02). |
 | Technology + AI | E148 + E150 | Dual-route: AI hardware (E150.05) + semiconductor supply chain (E148.01). |
 
-### §4.4 VIP Priority Order
+### §4.5 VIP Priority Order
 
 When multiple VIPs trigger simultaneously: E145 (meta) > E152 (security) > E150 (AI) > E149 (constitution) > E151 (climate) > E147 (water) > E148 (technology) > E146 (entertainment)
+
+### §4.6 LCC Cross-Reference
+
+All 21 Library of Congress Classification classes are routed. Coverage: **21/21**.
+
+| LCC Class | Name | Primary Route | Secondary Route |
+|-----------|------|---------------|----------------|
+| A | General Works | H9-S6 | E145 |
+| B | Philosophy, Psychology, Religion | H7 | H10-S2 |
+| C | Auxiliary Sciences of History | H10-S6 | H10-S8 |
+| D | World History | H10-S6 | — |
+| E | History of the Americas | H10-S6 | — |
+| F | History of the Americas (Local) | H10-S6 | — |
+| G | Geography, Anthropology, Recreation | H10-S5, H10-S4 | H10-S1, H8 |
+| H | Social Sciences | H10 | H11 |
+| J | Political Science | H10-S7 | H12 |
+| K | Law | H12 | — |
+| L | Education | H9 | — |
+| M | Music | H8-S3 | E146 |
+| N | Fine Arts | H8 | — |
+| P | Language and Literature | H10-S3, H10-S9 | — |
+| Q | Science | H1 | H2 |
+| R | Medicine | H4 | — |
+| S | Agriculture | H5 | — |
+| T | Technology | H3, H2 | E148 |
+| U | Military Science | H6 | — |
+| V | Naval Science | H6-S5 | — |
+| Z | Bibliography, Library Science | H9-S6 | H9-S7 |
 
 ---
 
@@ -520,8 +571,11 @@ When multiple VIPs trigger simultaneously: E145 (meta) > E152 (security) > E150 
 | VIP Elements | 8 (E145-E152) |
 | VIP sub-domains | 96 (12 per VIP) |
 | Tier-1 addressable nodes | 152 (143 spheres + 1 reserved + 8 VIPs) |
-| Tier-2 sub-spheres (estimated) | ~1,800+ |
-| Tier-2 BLANKs tracked | ~30 |
+| Tier-2 sub-spheres populated | 1,792 |
+| Tier-2 BLANKs remaining | 30 |
+| Routing table entries | 15 |
+| Authoritative pairs | 5 |
+| Cross-VIP intersection patterns | 7 |
 | LCC classes covered | 21/21 |
 
 ---
@@ -573,7 +627,8 @@ A machine-readable migration map is maintained at `registries/v3_to_v4_migration
 | v4.0-DRAFT | 2026-04-30 | Manus S7 | Configuration C: full restructure, H1 Science + H2 Computing locked |
 | v4.0-DRAFT.2 | 2026-04-30 | Claude S1 | H1-S5 Cognition, H3 rename, E147-E152 (8 VIPs), hierarchical addressing, tier-2 gap fills |
 | v4.0-DRAFT.3 | 2026-04-30 | Copilot S4 + Manus S7 | A/B scoring, media/entertainment tier-2, market_power_matrix, routing expansion |
+| v4.0-DRAFT.3a | 2026-04-29 | Manus S7 | Tier-2 gap fills (recreation/tourism/general-ref: +8 sub-spheres → 1,792 populated, 30 BLANKs); canonical routing_table.yaml (15 routes, 5 authoritative pairs, LCC 21/21); §4 rewrite with doctrine, authoritative pairs, LCC cross-reference; §6 statistics updated |
 
 ---
 
-*End of v4.0-DRAFT.3 Specification*
+*End of v4.0-DRAFT.3a Specification*

@@ -1,0 +1,134 @@
+# Atlas Lattice — Canonical Routing Table v4.0
+# =============================================
+# Source: v4.0-DRAFT.3 §4 + LOC gap-fill session (2026-04-30)
+# Status: PROVISIONAL-CANONICAL
+#
+# Routing doctrine:
+#   - If query is about a SUBSTRATE CONDITION ("how does climate shape food security?"),
+#     route VIP primary + spheres secondary.
+#   - If query is about a DISCIPLINE or TECHNIQUE ("how do I design a PID controller?"),
+#     route sphere primary, VIP only if the question explicitly invokes substrate framing.
+
+version: "4.0.0"
+generated: "2026-04-30"
+status: PROVISIONAL-CANONICAL
+
+routing_doctrine:
+  substrate_condition:
+    description: "Query frames a domain as an underlying condition affecting multiple Houses"
+    action: "Route VIP primary, House spheres secondary"
+    example: "How does climate change affect food security?"
+  discipline_technique:
+    description: "Query asks about a specific discipline, method, or technique"
+    action: "Route sphere primary, VIP only if substrate framing is explicit"
+    example: "How do I design a PID controller?"
+
+routes:
+  - domain: "Water (as substrate)"
+    primary: E147
+    secondary: [H1-S4, H5-S10, H3-S7, H11, H12]
+    notes: "Substrate → E147; discipline → House sphere"
+
+  - domain: "Technology (as substrate)"
+    primary: E148
+    secondary: [H2, H3, H11, H6]
+    notes: "'Society runs on tech' → E148; building tech → H3; computing → H2"
+
+  - domain: "Constitution / governance substrate"
+    primary: E149
+    secondary: [H12, E145]
+    notes: "Rules/charters/protocols → E149; legal doctrine → H12; orchestration → E145"
+
+  - domain: "AI (as substrate)"
+    primary: E150
+    secondary: [H2-S3, H1-S5, H7-S4, H12-S12]
+    notes: "Foundation models / AI infra → E150; ML discipline → H2-S3; cognition → H1-S5"
+
+  - domain: "Climate & planetary boundaries"
+    primary: E151
+    secondary: [H1-S4, H3-S7, H5-S11, H12-S8]
+    notes: "Planetary substrate → E151; engineering/agri/legal views via Houses"
+
+  - domain: "Cybersecurity & digital trust"
+    primary: E152
+    secondary: [H2-S6, H6-S3, H12-S12]
+    notes: "Trust substrate → E152; crypto theory → H2-S6; ops → H6-S3; law → H12-S12"
+
+  - domain: "Entertainment (cross-media, cross-House)"
+    primary: E146
+    secondary: [H8-S4, H8-S12, H9-S3, H11]
+    notes: "Engines/pipelines/platforms → E146; film/games → H8; business models → H11"
+
+  - domain: "Film (as art/industry)"
+    primary: H8-S4
+    secondary: [E146, H9-S3]
+    notes: "Purely artistic → H8-S4; platform/streaming infra → E146; media systems → H9"
+
+  - domain: "Video games & interactive media"
+    primary: H8-S12
+    secondary: [E146, E152, H2-S3]
+    notes: "Design & player experience → H8-S12; engines/platforms → E146; anti-cheat/security → E152; game AI → H2-S3"
+
+  - domain: "Recreation, tourism, leisure"
+    primary: [H10-S1, H10-S5]
+    secondary: [H8, E146]
+    notes: "Social/geo framing → H10-S1/S5; entertainment-heavy → H8/E146"
+
+  - domain: "General reference / encyclopedic queries"
+    primary: H9-S6
+    secondary: [E145]
+    notes: "Knowledge organization & reference → H9-S6; global routing/meta → E145"
+
+  - domain: "Criminology vs criminal law vs policing"
+    primary: H10-S10
+    secondary: [H12-S2, H6-S10]
+    notes: "Social-science → H10-S10; legal code → H12-S2; operational policing → H6-S10"
+
+# === LCC Cross-Reference ===
+# Confirms all 21 Library of Congress Classification classes are routed:
+loc_coverage:
+  A_general_works: {primary: H9-S6, secondary: E145, status: COVERED}
+  B_philosophy_psychology_religion: {primary: H7, secondary: H10-S2, status: COVERED}
+  C_auxiliary_sciences_of_history: {primary: H10-S6, secondary: H10-S8, status: COVERED}
+  D_world_history: {primary: H10-S6, secondary: null, status: COVERED}
+  E_history_of_americas: {primary: H10-S6, secondary: null, status: COVERED}
+  F_history_of_americas_local: {primary: H10-S6, secondary: null, status: COVERED}
+  G_geography_anthropology_recreation: {primary: [H10-S5, H10-S4], secondary: [H10-S1, H8], status: COVERED}
+  H_social_sciences: {primary: H10, secondary: H11, status: COVERED}
+  J_political_science: {primary: H10-S7, secondary: H12, status: COVERED}
+  K_law: {primary: H12, secondary: null, status: COVERED}
+  L_education: {primary: H9, secondary: null, status: COVERED}
+  M_music: {primary: H8-S3, secondary: E146, status: COVERED}
+  N_fine_arts: {primary: H8, secondary: null, status: COVERED}
+  P_language_and_literature: {primary: [H10-S3, H10-S9], secondary: null, status: COVERED}
+  Q_science: {primary: H1, secondary: H2, status: COVERED}
+  R_medicine: {primary: H4, secondary: null, status: COVERED}
+  S_agriculture: {primary: H5, secondary: null, status: COVERED}
+  T_technology: {primary: [H3, H2], secondary: E148, status: COVERED}
+  U_military_science: {primary: H6, secondary: null, status: COVERED}
+  V_naval_science: {primary: H6-S5, secondary: null, status: COVERED}
+  Z_bibliography_library_science: {primary: H9-S6, secondary: H9-S7, status: COVERED}
+
+# === Authoritative Pairs ===
+# Canonical homes for domains that span House + VIP:
+authoritative_pairs:
+  video_games:
+    house_home: H8-S12
+    vip_substrate: E146
+    note: "H8-S12 = design & player experience; E146 = engines, pipelines, platforms"
+  cybersecurity:
+    house_home: H2-S6
+    vip_substrate: E152
+    note: "H2-S6 = cryptographic theory; E152 = trust infrastructure & adversarial systems"
+  ai_systems:
+    house_home: H2-S3
+    vip_substrate: E150
+    note: "H2-S3 = ML discipline; E150 = AI as civilizational substrate"
+  climate:
+    house_home: H1-S4
+    vip_substrate: E151
+    note: "H1-S4 = planetary science; E151 = climate as civilizational boundary"
+  water:
+    house_home: H5-S10
+    vip_substrate: E147
+    note: "H5-S10 = irrigation/water management; E147 = water as civilizational substrate"

@@ -2,8 +2,8 @@ version: v3.6.0
 generated: '2026-04-29'
 phase: '1.6'
 total_spheres: 144
-total_sub_spheres_populated: 1784
-total_blanks: 31
+total_sub_spheres_populated: 1792
+total_blanks: 30
 wiggle_room_policy:
   minimum: 6
   standard: 12
@@ -1163,7 +1163,13 @@ spheres:
     - id: S025.14
       name: Computational Social Science
       status: populated
-    populated_count: 14
+    - id: S025.15
+      name: Leisure & Recreation Sociology
+      status: populated
+    - id: S025.16
+      name: Sport Sociology
+      status: populated
+    populated_count: 16
     blank_count: 0
     population_priority: complete
   S026:
@@ -1379,7 +1385,16 @@ spheres:
     - id: S030.12
       name: Transport Geography
       status: populated
-    populated_count: 12
+    - id: S030.13
+      name: Tourism Geography
+      status: populated
+    - id: S030.14
+      name: Recreation & Outdoor Geography
+      status: populated
+    - id: S030.15
+      name: Urban Leisure Spaces
+      status: populated
+    populated_count: 15
     blank_count: 0
     population_priority: complete
   S031:
@@ -3423,11 +3438,17 @@ spheres:
       name: Research Data Management
       status: populated
     - id: S077.12
-      name: null
-      status: BLANK
-    populated_count: 11
-    blank_count: 1
-    population_priority: medium
+      name: General Reference & Encyclopedias
+      status: populated
+    - id: S077.13
+      name: Abstracting & Indexing Services
+      status: populated
+    - id: S077.14
+      name: Bibliographic Databases & Knowledge Portals
+      status: populated
+    populated_count: 14
+    blank_count: 0
+    population_priority: complete
   S078:
     name: Publishing
     sub_spheres:
