@@ -1,0 +1,72 @@
+# Module 14 — Shadow Mode (v4.0-DRAFT.6)
+# Source: Grok S3 session, integrated 2026-04-30
+# Status: PROVISIONAL
+
+shadow_mode:
+  version: v4.0-DRAFT.6
+  status: provisional
+  description: >
+    Shadow Mode executes the full routing pipeline without taking action.
+    Produces full traces for every request. Used for validation, drift
+    detection, and council review.
+
+  invariants:
+    INV-SHD-1: "Shadow Mode must mirror real routing exactly"
+    INV-SHD-2: "Shadow Mode must be silent (no user/provider/state impact)"
+    INV-SHD-3: "Shadow Mode must be fully observable (every decision traced)"
+
+  enabled: true
+
+  execution_pipeline:
+    - parse_request
+    - classify_capability
+    - map_to_element
+    - apply_vip_cascade
+    - apply_dialect_overlays
+    - apply_sovereignty_constraints
+    - apply_doctrine_overrides
+    - filter_providers
+    - apply_provider_primacy
+    - compute_routing_weights
+    - select_provider
+    - generate_lineage_packet
+    - generate_shadow_trace
+    - discard_action
+
+  shadow_trace:
+    timestamp: "<UTC>"
+    request_id: "<uuid>"
+    user_request: "<raw text>"
+    dialect: "<detected dialect>"
+    sovereignty_score: "<numeric>"
+    element_selected: "<VIP>"
+    cascade_path: "<list>"
+    doctrine_overrides: "<list>"
+    provider_candidates: "<list>"
+    provider_selected: "<provider>"
+    evidence_refs: "<list>"
+    lineage_packet: "<object>"
+    action_taken: "none (shadow mode)"
+
+  drift_detection:
+    enabled: true
+    detect:
+      - cascade_drift
+      - dialect_drift
+      - sovereignty_drift
+      - doctrine_drift
+      - provider_selection_drift
+      - evidence_binding_drift
+    threshold: 0.00
+    action_on_drift: "log_only"
+
+  success_criteria:
+    deterministic: true
+    no_drift_detected: true
+    cascade_correct: true
+    dialect_correct: true
+    sovereignty_correct: true
+    doctrine_correct: true
+    provider_selection_correct: true
+    evidence_bound: true
+    lineage_generated: true

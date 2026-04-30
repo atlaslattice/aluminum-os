@@ -1,0 +1,92 @@
+# Module 20 — Last Starfighter Provenance Layer (v4.0-DRAFT.6)
+# Source: Grok S3 session, integrated 2026-04-30
+# Status: PROVISIONAL
+
+last_starfighter_provenance:
+  version: v4.0-DRAFT.6
+  status: provisional
+  description: >
+    Multi-dimensional provenance layer capturing model, provider, evidence,
+    sovereign, dialect, physical, and economic contributions. Enables
+    compensation flows and full lineage reconstruction.
+
+  invariants:
+    INV-LSF-1: "Provenance must be complete (all contributing factors)"
+    INV-LSF-2: "Provenance must be composable (survives multi-provider routing)"
+    INV-LSF-3: "Provenance must be compensation-ready"
+
+  provenance_fields:
+    model_contribution:
+      description: "Relative contribution of each model to the final output"
+      format: "provider:model:weight"
+    provider_contribution:
+      description: "Relative contribution of each provider family"
+      format: "provider_family:weight"
+    evidence_contribution:
+      description: "Evidence IDs that influenced routing"
+      format: "evidence_id:list"
+    sovereign_influence:
+      description: "Sovereignty score and dialect influence"
+      fields: [sovereignty_score, dialect, sovereign_zone]
+    physical_influence:
+      description: "Physical compute zone and hardware vendor"
+      fields: [physical_zone, hardware_vendor, energy_profile, carbon_intensity]
+    economic_influence:
+      description: "Cost and incentive signals from FCK"
+      fields: [compute_cost, energy_cost, sovereign_premium, dialect_premium, total_cost]
+    cascade_path:
+      description: "Full VIP cascade path taken"
+      format: "list"
+    doctrine_overrides:
+      description: "Doctrines that modified routing"
+      format: "list"
+    invariants_enforced:
+      description: "Constitutional invariants applied"
+      format: "list"
+
+  weighting_model:
+    model:
+      - token_contribution
+      - reasoning_depth
+      - evidence_usage
+      - cascade_position
+    provider:
+      - compute_share
+      - capability_domain
+      - sovereign_compliance
+    evidence:
+      - number_of_references
+      - override_strength
+    physical:
+      - energy_cost
+      - carbon_intensity
+      - hardware_vendor
+    economic:
+      - marginal_cost
+      - incentive_alignment
+
+  routing_integration:
+    order:
+      - routing_decision
+      - lineage_generation
+      - provenance_assembly
+      - output_delivery
+
+  compensation_integration:
+    enabled: true
+    compensation_model:
+      provider_share: "provider_contribution * total_cost"
+      model_share: "model_contribution * total_cost"
+      evidence_share: "evidence_contribution_weight * 0.01"
+      sovereign_adjustment: "sovereign_premium"
+      dialect_adjustment: "dialect_premium"
+    note: "Does not perform payments — produces metadata needed for them."
+
+  governance:
+    immutable: true
+    required_for:
+      - audits
+      - drift_detection
+      - compensation
+      - lineage_reconstruction
+      - regulatory_compliance

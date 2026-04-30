@@ -1,0 +1,67 @@
+# Module 15 — Activation Mode (v4.0-DRAFT.6)
+# Source: Grok S3 session, integrated 2026-04-30
+# Status: PROVISIONAL
+
+activation_mode:
+  version: v4.0-DRAFT.6
+  status: provisional
+  description: >
+    Activation Mode enables full routing. Shadow Mode is disabled. All routing
+    decisions become operational. Doctrine, sovereignty, dialect, and evidence
+    enforcement are mandatory.
+
+  invariants:
+    INV-ACT-1: "Activation requires zero drift in Shadow Mode"
+    INV-ACT-2: "Activation must be atomic (all or nothing)"
+    INV-ACT-3: "Activation must be reversible (instant rollback to Shadow Mode)"
+
+  prerequisites:
+    shadow_mode_success: true
+    no_drift_detected: true
+    validation_suite_passed: true
+    manifest_loaded: true
+    schema_locked: true
+
+  activation_steps:
+    - disable_shadow_mode
+    - enable_routing_engine
+    - enable_cascade
+    - enable_dialect_overlays
+    - enable_sovereignty_constraints
+    - enable_doctrine_enforcement
+    - enable_provider_selection
+    - enable_lineage_generation
+    - enable_evidence_binding
+    - start_operational_monitoring
+
+  operational_guarantees:
+    routing_engine_active: true
+    cascade_enforced: true
+    dialects_enforced: true
+    sovereignty_enforced: true
+    doctrine_enforced: true
+    evidence_bound: true
+    lineage_generated: true
+    deterministic_behavior: true
+    no_shadow_execution: true
+
+  operational_monitoring:
+    enabled: true
+    monitors:
+      - cascade_drift
+      - dialect_drift
+      - sovereignty_drift
+      - doctrine_drift
+      - provider_selection_drift
+      - evidence_binding_drift
+    threshold: 0.00
+    action_on_drift: "alert_and_continue"
+
+  deactivation_protocol:
+    steps:
+      - pause_routing_engine
+      - enable_shadow_mode
+      - preserve_lineage_state
+      - preserve_evidence_state
+      - log_deactivation_event
+    reversible: true

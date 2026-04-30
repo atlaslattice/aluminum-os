@@ -1,0 +1,108 @@
+# Module 19 — Symbiotic Compute Campus Integration (v4.0-DRAFT.6)
+# Source: Grok S3 session, integrated 2026-04-30
+# Status: PROVISIONAL
+
+symbiotic_compute_campus:
+  version: v4.0-DRAFT.6
+  status: provisional
+  description: >
+    Defines the physical topology, sovereign zones, hardware diversity,
+    energy-aware routing, and carbon-aware routing for the Symbiotic Compute
+    Campus. Integrates with the routing substrate via the EnergyImpact,
+    Sovereignty, and FinancialContextKernel modules.
+
+  invariants:
+    INV-SCC-1: "Physical sovereignty must match digital sovereignty"
+    INV-SCC-2: "Hardware diversity is mandatory (no vendor >40%)"
+    INV-SCC-3: "Energy and carbon signals must influence routing"
+
+  zones:
+    global_zone:
+      description: "Unrestricted compute; general workloads"
+      sovereignty: 0.40
+      hardware_mix: [NVIDIA, AMD, Intel, ARM]
+      energy_profile: "mixed"
+      carbon_intensity: "variable"
+
+    us_zone:
+      description: "US-compliant compute"
+      sovereignty: 0.60
+      hardware_mix: [NVIDIA, AMD]
+      energy_profile: "medium"
+      carbon_intensity: "medium"
+
+    eu_zone:
+      description: "EU AI Act + GDPR compliant compute"
+      sovereignty: 0.90
+      residency_required: true
+      hardware_mix: [NVIDIA, AMD, ARM]
+      energy_profile: "low"
+      carbon_intensity: "low"
+
+    gcc_high_zone:
+      description: "FedRAMP High + DoD IL5 enclave"
+      sovereignty: 0.95
+      residency_required: true
+      hardware_mix: [Intel, AMD]
+      energy_profile: "medium"
+      carbon_intensity: "medium"
+
+    cn_zone:
+      description: "CN-regulated compute; SM4 encryption; foreign models restricted"
+      sovereignty: 1.00
+      residency_required: true
+      hardware_mix: [Huawei_Ascend, Biren]
+      energy_profile: "medium"
+      carbon_intensity: "high"
+
+    air_gapped_zone:
+      description: "Fully isolated enclave for sensitive workloads"
+      sovereignty: 1.00
+      residency_required: true
+      hardware_mix: [Intel, AMD]
+      energy_profile: "low"
+      carbon_intensity: "low"
+      network_access: "none"
+
+  routing_integration:
+    order:
+      - sovereignty_constraints
+      - dialect_overlays
+      - doctrine_overrides
+      - evidence_binding
+      - fck_cost_evaluation
+      - scc_zone_selection
+      - provider_selection
+    zone_selection_rules:
+      - match_sovereignty_score
+      - enforce_residency
+      - enforce_hardware_diversity
+      - minimize_energy_cost
+      - minimize_carbon_intensity
+
+  energy_integration:
+    energy_signals:
+      - kwh_per_token
+      - cooling_load
+      - pue_power_usage_effectiveness
+      - region_energy_mix
+      - carbon_intensity
+    routing_effect:
+      - penalize_high_energy_zones
+      - reward_low_carbon_zones
+      - penalize_high_pue_clusters
+
+  sovereignty_rules:
+    cn_zone: "requires dialect == CN"
+    eu_zone: "requires dialect == EU"
+    gcc_high_zone: "requires dialect == GCC-High"
+    us_zone: "requires dialect == US"
+    air_gapped_zone: "requires secure_enclave"
+
+  lineage_fields:
+    - physical_zone
+    - hardware_vendor
+    - energy_profile
+    - carbon_intensity
+    - residency_enforced
+    - sovereign_zone_match

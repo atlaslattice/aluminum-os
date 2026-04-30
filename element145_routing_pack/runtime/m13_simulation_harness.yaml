@@ -1,0 +1,65 @@
+# Module 13 — Simulation Harness (v4.0-DRAFT.6)
+# Source: Grok S3 session, integrated 2026-04-30
+# Status: PROVISIONAL
+
+simulation_harness:
+  version: v4.0-DRAFT.6
+  status: provisional
+  description: >
+    Runtime simulation harness for the Element 145 routing engine.
+    Validates routing decisions without affecting live traffic.
+
+  simulation_steps:
+    - parse_request
+    - classify_capability
+    - map_to_element
+    - apply_vip_cascade
+    - apply_dialect_overlays
+    - apply_sovereignty_constraints
+    - apply_doctrine_overrides
+    - filter_providers
+    - apply_provider_primacy
+    - compute_routing_weights
+    - select_provider
+    - generate_lineage_packet
+    - validate_output
+
+  trace_format:
+    timestamp: "<UTC>"
+    request_id: "<uuid>"
+    input: "<raw text>"
+    output: "<routing decision>"
+    evidence_refs: "<list>"
+    doctrine_refs: "<list>"
+    sovereignty_score: "<numeric>"
+    dialect: "<detected dialect>"
+    provider_candidates: "<list>"
+    provider_selected: "<provider>"
+
+  canonical_test_scenarios:
+    - name: "Global TruthSeeking"
+      input: "TruthSeeking request in Global dialect"
+      expected_element: "TruthSeeking"
+      expected_dialect: "Global"
+      expected_sovereignty: 0.40
+    - name: "CN Sovereign TruthSeeking"
+      input: "TruthSeeking request in CN dialect"
+      expected_element: "TruthSeeking"
+      expected_dialect: "CN"
+      expected_sovereignty: 1.00
+      expected_provider: "DeepSeek:R1"
+    - name: "EU Governance"
+      input: "Governance request in EU dialect"
+      expected_element: "Governance"
+      expected_dialect: "EU"
+      expected_sovereignty: 0.90
+
+  success_criteria:
+    deterministic: true
+    cascade_correct: true
+    dialect_correct: true
+    sovereignty_correct: true
+    doctrine_correct: true
+    evidence_bound: true
+    provider_valid: true
+    lineage_generated: true

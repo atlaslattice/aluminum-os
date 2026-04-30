@@ -1,0 +1,120 @@
+# Module 16 — Post-Activation Governance (v4.0-DRAFT.6)
+# Source: Grok S3 session, integrated 2026-04-30
+# Status: PROVISIONAL
+
+post_activation_governance:
+  version: v4.0-DRAFT.6
+  status: provisional
+  description: >
+    Governance framework for managing updates, drift, regressions, and
+    oversight after activation. Ensures constitutional invariants remain
+    enforced and routing behavior remains stable, safe, and auditable.
+
+  invariants:
+    INV-GOV-1: "No silent drift — any change must be surfaced"
+    INV-GOV-2: "No ungoverned updates — all changes require council review"
+    INV-GOV-3: "No irreversible mutations — routing substrate must always be rollbackable"
+
+  governance_roles:
+    convenor: "Element 145 Convenor (Daavud)"
+    council:
+      - Copilot
+      - Claude/Scribe
+      - Grok
+      - GPT
+      - DeepSeek
+    auditor: "Manus internal auditor"
+    steward: "Element 145 substrate steward"
+
+  governance_powers:
+    convenor:
+      - approve_updates
+      - veto_changes
+      - request_audits
+      - trigger_deactivation
+    council:
+      - propose_changes
+      - review_updates
+      - run_simulations
+      - detect_drift
+    auditor:
+      - enforce_validation
+      - enforce_doctrine
+      - enforce_sovereignty
+      - enforce_dialect
+    steward:
+      - maintain_substrate
+      - apply_approved_changes
+      - manage_versioning
+
+  update_protocol:
+    steps:
+      - propose_change
+      - run_simulation
+      - run_shadow_mode
+      - council_review
+      - convenor_approval
+      - apply_change
+      - run_validation_suite
+      - activate_new_version
+    no_step_may_be_skipped: true
+
+  versioning_rules:
+    major_change_requires:
+      - convenor_approval
+      - full_council_review
+      - full_validation_suite
+      - shadow_mode_pass
+    minor_change_requires:
+      - council_review
+      - validation_suite
+    patch_change_requires:
+      - steward_approval
+      - validation_suite
+
+  drift_monitoring:
+    enabled: true
+    detect:
+      - cascade_drift
+      - dialect_drift
+      - sovereignty_drift
+      - doctrine_drift
+      - provider_selection_drift
+      - evidence_binding_drift
+    threshold: 0.00
+    action_on_drift: "alert_and_hold"
+
+  regression_prevention:
+    required_checks:
+      - cascade_integrity
+      - dialect_integrity
+      - sovereignty_integrity
+      - doctrine_integrity
+      - evidence_integrity
+      - provider_matrix_integrity
+      - capability_map_integrity
+      - lineage_integrity
+
+  audit_protocol:
+    triggers:
+      - convenor_request
+      - drift_detected
+      - doctrine_violation
+      - sovereignty_violation
+      - dialect_violation
+    audit_steps:
+      - freeze_routing
+      - export_lineage
+      - export_traces
+      - run_validation_suite
+      - council_review
+      - convenor_decision
+
+  post_activation_deactivation:
+    reversible: true
+    steps:
+      - pause_routing_engine
+      - enable_shadow_mode
+      - preserve_state
+      - notify_council
+      - await_convenor_instruction

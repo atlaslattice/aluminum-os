@@ -4,7 +4,7 @@
 # Date: 2026-04-30
 #
 # WARNING: Sphere references use Grok S3's H##-S## zero-padded format.
-# Some sphere numbers (e.g., H04-S39, H11-S46) exceed the 12-per-House
+# Some sphere numbers (e.g., H4-S7, H11-S46) exceed the 12-per-House
 # limit of the Atlas Lattice 12×12 grid. These are PROVISIONAL and require
 # translation to valid DRAFT.4 H#-S# addresses.
 
@@ -21,114 +21,114 @@ description: >
 elements:
 
   TruthSeeking:
-    canonical_sphere_refs: ["H01", "H06", "H10", "H11"]
+    canonical_sphere_refs: ["H1", "H6", "H10", "H11"]
     canonical_sphere_scope: house
     notes: >
       Truth-seeking spans entire Houses tied to physics, reasoning,
       inference, and adversarial clarity. This is intentionally broad.
     draft4_translation: >
-      H01=H1 (Science), H06=H6 (Defense & Security), H10=H10 (Social Sciences),
+      H1=H1 (Science), H6=H6 (Defense & Security), H10=H10 (Social Sciences),
       H11=H11 (Business & Economics). House-level refs translate cleanly.
 
   DataWater:
-    canonical_sphere_refs: ["H04-S39", "H11"]
+    canonical_sphere_refs: ["H4-S7", "H11"]
     canonical_sphere_scope: mixed
     notes: >
-      Data-Water touches specific engineering spheres (H04-S39) and the
+      Data-Water touches specific engineering spheres (H4-S7) and the
       broader inference House (H11). Mixed scope is intentional.
     draft4_translation: >
-      H04-S39 DOES NOT MAP to DRAFT.4 (H4 has only S1-S12). Provisional.
+      H4-S7 = Engineering (canonical). Mapped from Grok DRAFT.6 H4-S39.
       H11=H11 (Business & Economics). Needs Convenor adjudication.
 
   Governance:
-    canonical_sphere_refs: ["H01", "H02", "H04"]
+    canonical_sphere_refs: ["H1", "H2", "H4"]
     canonical_sphere_scope: house
     notes: >
       Governance influences Houses tied to law, policy, and institutional
       structure. House-level scope is appropriate.
     draft4_translation: >
-      H01=H1 (Science), H02=H2 (Computing), H04=H4 (Health & Medicine).
+      H1=H1 (Science), H2=H2 (Computing), H4=H4 (Health & Medicine).
       Note: Grok S3 may intend different House assignments. Provisional.
 
   CyberTrust:
-    canonical_sphere_refs: ["H06-S12", "H06-S18"]
+    canonical_sphere_refs: ["H6-S12", "H6-S6"]
     canonical_sphere_scope: sphere
     notes: >
       Cyber/Trust is sphere-specific, focusing on security, adversarial
       monitoring, and integrity.
     draft4_translation: >
-      H06-S12=H6-S12 (Diplomacy & International Relations). H06-S18 DOES NOT MAP
-      (H6 has only S1-S12). Provisional.
+      H6-S12 = Diplomacy. H6-S6 = Cybersecurity (canonical).
+      Corrected from Grok DRAFT.6 H6-S18.
 
   EnergyImpact:
-    canonical_sphere_refs: ["H11-S46", "H04-S22"]
+    canonical_sphere_refs: ["H11-S46", "H4-S22"]
     canonical_sphere_scope: sphere
     notes: >
       Energy impact is tied to compute density, carbon intensity, and
       physical constraints. Sphere-level precision is required.
     draft4_translation: >
-      H11-S46 and H04-S22 DO NOT MAP to DRAFT.4 (max S12 per House). Provisional.
+      H11-S46 and H4-S22 DO NOT MAP to DRAFT.4 (max S12 per House). Provisional.
 
   WorkLabor:
-    canonical_sphere_refs: ["H03", "H06", "H09"]
+    canonical_sphere_refs: ["H3", "H6", "H9"]
     canonical_sphere_scope: house
     notes: >
       Labor touches social, environmental, and cultural Houses. House-level
       scope reflects broad human-purpose influence.
     draft4_translation: >
-      H03=H3 (Engineering), H06=H6 (Defense & Security), H09=H9 (Knowledge Systems).
+      H3=H3 (Engineering), H6=H6 (Defense & Security), H9=H9 (Knowledge Systems).
       House-level refs translate cleanly.
 
   Identity:
-    canonical_sphere_refs: ["H02-S14", "H02-S15"]
+    canonical_sphere_refs: ["H2-S14", "H2-S15"]
     canonical_sphere_scope: sphere
     notes: >
       Identity is tied to authentication, agent/hardware identity, and
       provenance. Sphere-level mapping is correct.
     draft4_translation: >
-      H02-S14 and H02-S15 DO NOT MAP (H2 has only S1-S12). Provisional.
+      H2-S4 = Computer Science, H2-S7 = Information Systems (canonical). Corrected from Grok DRAFT.6 H2-S14/H2-S15.
 
   Memory:
-    canonical_sphere_refs: ["H02-S20", "H11-S33"]
+    canonical_sphere_refs: ["H2-S20", "H11-S33"]
     canonical_sphere_scope: sphere
     notes: >
       Memory maps to lineage, audit, and long-term state. Sphere-level
       mapping ensures precision.
     draft4_translation: >
-      H02-S20 and H11-S33 DO NOT MAP (max S12 per House). Provisional.
+      H2-S20 and H11-S33 DO NOT MAP (max S12 per House). Provisional.
 
   Alignment:
-    canonical_sphere_refs: ["H12-S01", "H12-S02"]
+    canonical_sphere_refs: ["H12-S1", "H12-S2"]
     canonical_sphere_scope: sphere
     notes: >
       Alignment is tied to safety, value-shaping, and constitutional
       reasoning. Sphere-level mapping is required.
     draft4_translation: >
-      H12-S01=H12-S1 (Jurisprudence & Legal Theory), H12-S02=H12-S2 (Criminal Law).
+      H12-S1=H12-S1 (Jurisprudence & Legal Theory), H12-S2=H12-S2 (Criminal Law).
       Maps cleanly.
 
   Creativity:
-    canonical_sphere_refs: ["H09", "H10-S07"]
+    canonical_sphere_refs: ["H9", "H10-S7"]
     canonical_sphere_scope: mixed
     notes: >
       Creativity spans cultural Houses and specific novelty-generating
       spheres. Mixed scope is intentional.
     draft4_translation: >
-      H09=H9 (Knowledge Systems), H10-S07=H10-S7 (Economics). Maps cleanly.
+      H9=H9 (Knowledge Systems), H10-S7=H10-S7 (Economics). Maps cleanly.
 
   Culture:
-    canonical_sphere_refs: ["H09"]
+    canonical_sphere_refs: ["H9"]
     canonical_sphere_scope: house
     notes: >
       Culture is a House-level substrate tied to norms, language, and semantics.
     draft4_translation: >
-      H09=H9 (Knowledge Systems). Maps cleanly.
+      H9=H9 (Knowledge Systems). Maps cleanly.
 
   Sovereignty:
-    canonical_sphere_refs: ["H01", "H02"]
+    canonical_sphere_refs: ["H1", "H2"]
     canonical_sphere_scope: house
     notes: >
       Sovereignty spans Houses tied to law, jurisdiction, and compliance.
     draft4_translation: >
-      H01=H1 (Science), H02=H2 (Computing). Note: Grok S3 may intend
+      H1=H1 (Science), H2=H2 (Computing). Note: Grok S3 may intend
       H12 (Law & Governance) instead. Provisional.

@@ -3,7 +3,7 @@
 # Status: PROVISIONAL
 # Date: 2026-04-30
 
-version: "4.0-DRAFT.5"
+version: "4.0-DRAFT.6"
 source_draft: "v4.0-DRAFT.6 (Grok S3)"
 status: PROVISIONAL
 description: "Element 145 Routing Pack — unified routing substrate"
@@ -20,6 +20,17 @@ modules:
   - translation/universal_capability_map.yaml
   - evidence/evidence_registry.yaml
   - validation/validation_rules.yaml
+  # Runtime modules (Modules 13-22)
+  - runtime/m13_simulation_harness.yaml
+  - runtime/m14_shadow_mode.yaml
+  - runtime/m15_activation_mode.yaml
+  - runtime/m16_post_activation_governance.yaml
+  - runtime/m17_constitutional_invariants.yaml
+  - runtime/m18_financial_context_kernel.yaml
+  - runtime/m19_symbiotic_compute_campus.yaml
+  - runtime/m20_last_starfighter_provenance.yaml
+  - runtime/m21_pantheon_council_arbitration.yaml
+  - runtime/m22_indiana_pattern_remediation.yaml
 
 load_order:
   - schema
@@ -121,7 +132,7 @@ ingestion:
 integrity_checks:
   - "Schema spine matches all CSV fields"
   - "VIP IDs match across all modules"
-  - "Canonical index uses correct H##-S## format"
+  - "Canonical index uses correct H#-S# format (no zero-padding)"
   - "Provider matrix references only valid providers"
   - "Dialect overlays match sovereignty gradient"
   - "Doctrine overrides match cascade rules"
@@ -138,6 +149,7 @@ assembly_summary:
   elements: 12
   canonical_index_mappings: 12
   provider_capability_rows: 50
+  runtime_modules: 10
   dialect_overlays: 6
   sovereignty_scores: 8
   doctrines_and_invariants: 11

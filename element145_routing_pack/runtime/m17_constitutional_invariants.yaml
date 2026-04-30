@@ -1,0 +1,105 @@
+# Module 17 — Constitutional Invariants INV-7 → INV-17 (v4.0-DRAFT.6)
+# Source: Grok S3 session, integrated 2026-04-30
+# Status: PROVISIONAL
+
+constitutional_invariants:
+  version: v4.0-DRAFT.6
+  status: provisional
+  description: >
+    Constitutional invariants INV-7 through INV-17 define the unbreakable
+    constraints governing routing, sovereignty, safety, evidence, lineage,
+    compute ethics, and human-purpose alignment. These invariants override
+    all cascade, dialect, sovereignty, and doctrine rules.
+
+  invariants:
+    INV-7:
+      name: "Sovereign Supremacy Invariant"
+      description: >
+        Jurisdictional law overrides all routing preferences, cascade rules,
+        and provider capabilities. No routing decision may violate sovereign
+        constraints.
+      applies_to: [dialect_enforcement, sovereignty_constraints]
+
+    INV-8:
+      name: "Annotation Separation Invariant"
+      description: >
+        Annotation layers (metadata, evidence, dialect overlays) must remain
+        strictly separate from routing logic. Routing cannot depend on
+        annotation content.
+      applies_to: [annotation_layer]
+
+    INV-9:
+      name: "Evidence Binding Invariant"
+      description: >
+        All sovereign, governance, safety, and compute-impact decisions must
+        reference explicit evidence IDs. No evidence = no override.
+      applies_to: [evidence_binding]
+
+    INV-10:
+      name: "Lineage Integrity Invariant"
+      description: >
+        Every routed output must include a complete lineage packet: provider,
+        model, dialect, sovereignty, evidence, and cascade path.
+      applies_to: [lineage_generation]
+
+    INV-11:
+      name: "Concentration Risk Invariant"
+      description: >
+        No provider may exceed 40% of routing volume across capability domains.
+        Manus must diversify routing when thresholds are approached.
+      applies_to: [provider_selection]
+
+    INV-12:
+      name: "Compute Ethics Invariant"
+      description: >
+        High-energy or high-carbon compute routes require justification or
+        override. EnergyImpact must be considered in routing decisions.
+      applies_to: [EnergyImpact]
+
+    INV-13:
+      name: "Human Purpose Invariant"
+      description: >
+        WorkLabor and HITL requirements override compute efficiency,
+        automation, or model preference. Human-purpose alignment is mandatory.
+      applies_to: [WorkLabor]
+
+    INV-14:
+      name: "Determinism Invariant"
+      description: >
+        Routing must be deterministic. Same inputs produce same outputs. No
+        randomness, no nondeterministic provider selection.
+      applies_to: [routing_engine]
+
+    INV-15:
+      name: "Reversibility Invariant"
+      description: >
+        All routing decisions, updates, and activations must be reversible.
+        Manus must support instant rollback to Shadow Mode.
+      applies_to: [activation_mode, deactivation_protocol]
+
+    INV-16:
+      name: "No Silent Drift Invariant"
+      description: >
+        Any deviation from expected routing behavior must be surfaced. No
+        silent drift is permitted.
+      applies_to: [drift_monitoring]
+
+    INV-17:
+      name: "Constitutional Priority Invariant"
+      description: >
+        Constitutional invariants override doctrine, cascade, dialect,
+        sovereignty, and provider logic. Nothing may supersede them.
+      applies_to: [all_modules]
+
+  governance_integration:
+    cannot_be_overridden_by:
+      - council
+      - convenor
+      - doctrine
+      - dialect
+      - sovereignty
+      - provider_matrix
+    required_for_updates:
+      - regression_checks
+      - validation_suite
+      - shadow_mode_pass

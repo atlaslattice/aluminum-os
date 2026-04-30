@@ -736,7 +736,7 @@ Grok S3 introduces 12 semantic routing Elements that operate as an abstraction l
 
 ### §11.3 Addressing Format Discrepancy
 
-Grok S3 uses H##-S## zero-padded addressing with sphere numbers exceeding S12 (e.g., H04-S39, H11-S46). The Atlas Lattice 12×12 grid constrains each House to S1-S12. Sphere references that exceed this range are marked PROVISIONAL in the routing pack and require translation to valid H#-S# addresses or explicit extension of the addressing scheme.
+Grok S3 uses H##-S## zero-padded addressing with sphere numbers exceeding S12 (e.g., H4-S39, H11-S46). The Atlas Lattice 12×12 grid constrains each House to S1-S12. Sphere references that exceed this range are marked PROVISIONAL in the routing pack and require translation to valid H#-S# addresses or explicit extension of the addressing scheme.
 
 ### §11.4 Routing Pack Contents
 

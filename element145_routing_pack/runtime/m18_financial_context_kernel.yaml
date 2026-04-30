@@ -1,0 +1,117 @@
+# Module 18 — FinancialContextKernel (FCK) Integration (v4.0-DRAFT.6)
+# Source: Grok S3 session, integrated 2026-04-30
+# Status: PROVISIONAL
+
+financial_context_kernel:
+  version: v4.0-DRAFT.6
+  status: provisional
+  description: >
+    FinancialContextKernel integrates cost, compute economics, energy impact,
+    incentive alignment, and economic sovereignty into routing decisions.
+    Economics informs routing but cannot override constitutional invariants.
+
+  invariants:
+    INV-FCK-1: "Economics must never override constitutional invariants"
+    INV-FCK-2: "Economics must be explicit, not inferred"
+    INV-FCK-3: "Economics must be provenance-linked"
+
+  cost_model:
+    components:
+      - compute_cost
+      - storage_cost
+      - bandwidth_cost
+      - energy_cost
+      - provider_premium
+      - sovereign_premium
+      - dialect_premium
+      - risk_adjustment
+    currency: "USD"
+    update_frequency: "daily"
+
+  compute_cost:
+    model:
+      - provider_rate
+      - model_size
+      - tokens_processed
+      - energy_intensity
+    evidence_required: ["PHY-AWS-HPC-2025", "PHY-Azure-HPC-2025"]
+
+  energy_cost:
+    model:
+      - kwh_per_token
+      - region_energy_mix
+      - carbon_intensity
+    evidence_required: ["PHY-AWS-HPC-2025", "PHY-Azure-HPC-2025"]
+
+  sovereign_premium:
+    CN: 1.25
+    GCC-High: 1.20
+    EU: 1.10
+    JP: 1.05
+    US: 1.00
+    Global: 1.00
+
+  dialect_premium:
+    CN: 1.30
+    EU: 1.10
+    GCC-High: 1.15
+    JP: 1.05
+    US: 1.00
+    Global: 1.00
+
+  incentive_alignment:
+    description: >
+      Incentive alignment ensures routing decisions consider long-term
+      sustainability, provider diversity, and concentration risk.
+    rules:
+      - penalize_overuse_of_single_provider
+      - reward_diversity
+      - reward_low_energy_routes
+      - penalize_high_carbon_routes
+      - reward_sovereign_compliance
+
+  provenance_compensation:
+    description: >
+      Economic attribution for Last Starfighter Provenance Layer. Tracks
+      contribution of each provider to final output.
+    enabled: true
+    compensation_model:
+      - token_contribution
+      - model_contribution
+      - evidence_contribution
+      - sovereign_adjustment
+
+  routing_integration:
+    order:
+      - cascade
+      - dialect
+      - sovereignty
+      - doctrine
+      - evidence
+      - fck_cost_evaluation
+      - provider_selection
+    cannot_override:
+      - constitutional_invariants
+      - doctrine
+      - sovereignty
+      - dialect
+
+  lineage_fields:
+    - compute_cost
+    - energy_cost
+    - sovereign_premium
+    - dialect_premium
+    - provider_rate
+    - total_cost
+    - provenance_contribution
+
+  governance_rules:
+    major_change_requires:
+      - convenor_approval
+      - council_review
+      - validation_suite
+    minor_change_requires:
+      - steward_approval
+      - validation_suite
+    patch_change_requires:
+      - steward_approval

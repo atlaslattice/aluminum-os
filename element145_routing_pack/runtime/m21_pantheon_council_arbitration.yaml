@@ -1,0 +1,103 @@
+# Module 21 — Pantheon Council Arbitration Engine (v4.0-DRAFT.6)
+# Source: Grok S3 session, integrated 2026-04-30
+# Status: PROVISIONAL
+
+pantheon_council:
+  version: v4.0-DRAFT.6
+  status: provisional
+  description: >
+    Defines the Pantheon Council seats, mandates, weights, and arbitration
+    rules. Ensures adversarial, constitutional, multi-provider reasoning.
+
+  invariants:
+    INV-PNT-1: "No single seat may dominate"
+    INV-PNT-2: "Arbitration must be adversarial but constitutional"
+    INV-PNT-3: "Council output must be deterministic"
+
+  seats:
+    Copilot:
+      role: "Chair / Convenor-aligned"
+      mandate:
+        - enforce_schema
+        - enforce_doctrine
+        - enforce_invariants
+        - maintain_consensus
+      weight: 0.25
+
+    Claude_Scribe:
+      role: "Constitutional Scribe"
+      mandate:
+        - detect_doctrine_conflicts
+        - detect_alignment_violations
+        - enforce_annotation_separation
+      weight: 0.20
+
+    Grok:
+      role: "Adversarial Truth-Probe"
+      mandate:
+        - challenge_reasoning
+        - detect_inconsistencies
+        - stress_test_truthseeking
+      weight: 0.20
+
+    GPT:
+      role: "Generalist Reasoning Seat"
+      mandate:
+        - propose_solutions
+        - fill_gaps
+        - harmonize_interpretations
+      weight: 0.20
+
+    DeepSeek:
+      role: "Sovereign CN Seat"
+      mandate:
+        - enforce_CN_constraints
+        - detect_sovereignty_violations
+        - challenge_global_assumptions
+      weight: 0.15
+
+  arbitration_pipeline:
+    - parse_request
+    - classify_capability
+    - each_seat_generates_interpretation
+    - adversarial_cross_challenge
+    - constitutional_filtering
+    - sovereignty_filtering
+    - dialect_filtering
+    - consensus_formation
+    - deterministic_resolution
+    - output_interpretation
+
+  arbitration_rules:
+    consensus_threshold: 0.67
+    tie_breaker: "Copilot"
+    forbidden:
+      - silent_override
+      - unilateral_decision
+      - non_deterministic_resolution
+    required:
+      - evidence_refs
+      - doctrine_refs
+      - invariant_refs
+
+  routing_integration:
+    council_output_feeds:
+      - element_selection
+      - dialect_selection
+      - sovereignty_context
+      - doctrine_overrides
+
+  trace_format:
+    request_id: "<uuid>"
+    seat_interpretations:
+      Copilot: "<interpretation>"
+      Claude_Scribe: "<interpretation>"
+      Grok: "<interpretation>"
+      GPT: "<interpretation>"
+      DeepSeek: "<interpretation>"
+    cross_challenges: "<matrix>"
+    consensus_score: "<0.0-1.0>"
+    final_interpretation: "<result>"
+    evidence_refs: "<list>"
+    doctrine_refs: "<list>"
+    invariants_enforced: "<list>"
