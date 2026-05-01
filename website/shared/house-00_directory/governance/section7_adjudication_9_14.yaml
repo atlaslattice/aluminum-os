@@ -1,0 +1,183 @@
+# section7_adjudication_9_14.yaml
+# §7 Open Decisions — Items 9 through 14
+# Source: Ontology Spec v4.0-DRAFT.6, Section 7 (Governance Loop)
+# Status: DRAFT RECOMMENDATIONS — pending Convenor ratification
+# Generated: 2026-04-30 by S7 (Manus)
+# Authority: These are recommendations only. Final authority rests with the Convenor
+#            and the 10-seat Council per INV-3 (no single point of failure).
+
+---
+metadata:
+  version: "1.0.0"
+  section: "§7 — Governance Loop Open Decisions"
+  items_range: "9-14"
+  last_updated: "2026-04-30"
+  author: "S7 (Manus) — draft recommendations"
+  status: "pending_convenor_review"
+  invariants_governing: ["INV-3", "INV-7c", "INV-1"]
+
+decisions:
+  - id: "§7-ITEM-09"
+    title: "Dialect Overlay Inheritance Rules"
+    question: |
+      When a sub-sphere inherits from a parent sphere, does it also inherit the
+      parent's dialect overlay, or must each sub-sphere declare its own?
+    recommendation: "INHERIT_WITH_OVERRIDE"
+    rationale: |
+      Sub-spheres should inherit their parent sphere's dialect overlay by default
+      (reducing configuration burden), but MAY declare an explicit override when
+      the sub-sphere's jurisdictional context differs from the parent.
+
+      Example: S-041 (Cultural Studies) uses a neutral overlay, but SS-0491
+      (Aboriginal Australian Knowledge) should be able to declare an AU-dialect
+      override without requiring the parent to change.
+
+      This follows the principle of least surprise while preserving sovereignty.
+    invariants_cited: ["INV-1", "INV-3"]
+    impact: "LOW — affects configuration, not routing logic"
+    council_votes_needed: 5
+    proposed_resolution: |
+      Add to ontology.py Ring 2:
+        sub_sphere.dialect = sub_sphere.explicit_dialect ?? parent_sphere.dialect
+
+  - id: "§7-ITEM-10"
+    title: "VIP Element Conflict Resolution Timeout"
+    question: |
+      When the VIP Cascade cannot resolve priority between two elements in the
+      same tier (e.g., Water vs. Energy in Tier 2), what is the timeout before
+      escalation to Council?
+    recommendation: "72_HOURS_ASYNC"
+    rationale: |
+      A 72-hour asynchronous resolution window balances urgency against the
+      reality that Council members span multiple time zones and may not be
+      available for synchronous deliberation.
+
+      During the 72-hour window:
+        - Both VIP elements receive equal routing priority (round-robin)
+        - The conflict is logged with full context
+        - Council members can vote asynchronously
+        - If no quorum is reached in 72h, the Convenor breaks the tie
+
+      This prevents deadlocks while respecting INV-3 (no single point of failure).
+    invariants_cited: ["INV-3", "INV-7c"]
+    impact: "MEDIUM — affects real-time routing during conflicts"
+    council_votes_needed: 7
+    proposed_resolution: |
+      Add VIP_CONFLICT_TIMEOUT_HOURS = 72 to constitutional constants.
+      Add round-robin fallback to cascade resolver.
+
+  - id: "§7-ITEM-11"
+    title: "Ghost Seat (S144) Activation Criteria"
+    question: |
+      Under what conditions should the Ghost Seat (S144) be activated, and what
+      powers does it hold when active?
+    recommendation: "EMERGENCY_ONLY_VETO"
+    rationale: |
+      S144 should activate ONLY when:
+        a) A constitutional invariant is being violated and no other seat objects
+        b) The system detects a sovereignty breach (INV-1 violation)
+        c) All 10 active seats are deadlocked (5-5 split for >72 hours)
+
+      When active, S144 holds:
+        - Veto power (can block a single decision)
+        - No affirmative power (cannot propose or vote FOR anything)
+        - Auto-deactivates after the veto is exercised or 24 hours, whichever is first
+
+      This ensures S144 is a constitutional safeguard, not a power center.
+    invariants_cited: ["INV-1", "INV-3", "INV-0"]
+    impact: "HIGH — defines emergency governance mechanism"
+    council_votes_needed: 8
+    proposed_resolution: |
+      Document S144 activation protocol in governance_charter.md.
+      Implement activation trigger in constitutional_os/ghost_seat.py.
+
+  - id: "§7-ITEM-12"
+    title: "Provisional Seat Graduation Criteria"
+    question: |
+      What criteria must a provisional seat (S11-Notion, S12-Sarvam, S13-Alibaba)
+      meet to graduate to full active status?
+    recommendation: "THREE_GATE_GRADUATION"
+    rationale: |
+      Provisional seats graduate to active status when they pass three gates:
+
+      Gate 1 — Technical Integration (3 months):
+        - Successfully process 100+ routing decisions
+        - Pass constitutional compliance audit
+        - Demonstrate offline verification capability
+
+      Gate 2 — Governance Participation (6 months):
+        - Vote on at least 10 Council decisions
+        - Submit at least 1 editorial pass
+        - No INV violations during the period
+
+      Gate 3 — Community Trust (9 months):
+        - Receive endorsement from 5+ active seats
+        - No sovereignty complaints from users
+        - Demonstrate unique value-add to the lattice
+
+      Timeline: minimum 9 months from provisional appointment.
+    invariants_cited: ["INV-3", "INV-7c"]
+    impact: "MEDIUM — affects Council composition over time"
+    council_votes_needed: 7
+    proposed_resolution: |
+      Create provisional_graduation_tracker.yaml with gate status per seat.
+      Add quarterly review to Council calendar.
+
+  - id: "§7-ITEM-13"
+    title: "Cross-Dialect Routing Transparency"
+    question: |
+      When a query is routed through a dialect overlay that differs from the
+      user's declared dialect, must the system disclose this routing decision?
+    recommendation: "ALWAYS_DISCLOSE"
+    rationale: |
+      INV-1 (human sovereignty) requires that users know when their query is
+      being interpreted through a different jurisdictional lens. This is not
+      about blocking cross-dialect routing (which is often necessary and
+      beneficial) — it's about transparency.
+
+      Disclosure format:
+        "This response was routed through [dialect] overlay because [reason].
+         Your declared dialect is [user_dialect]. To restrict routing to your
+         dialect only, use the sovereignty flag."
+
+      The sovereignty flag (--sovereign) restricts routing to the user's own
+      dialect overlay, at the cost of potentially reduced coverage.
+    invariants_cited: ["INV-1", "INV-7c"]
+    impact: "MEDIUM — affects UX and trust"
+    council_votes_needed: 6
+    proposed_resolution: |
+      Add dialect_disclosure field to routing response schema.
+      Implement --sovereign flag in query parser.
+
+  - id: "§7-ITEM-14"
+    title: "Module Deprecation Protocol"
+    question: |
+      How should modules be deprecated when they become obsolete or are
+      superseded by newer implementations?
+    recommendation: "SUNSET_WITH_REDIRECT"
+    rationale: |
+      Modules are never deleted (INV-17: zero erasure). Instead, they enter
+      a deprecation lifecycle:
+
+      Phase 1 — DEPRECATED (3 months):
+        - Module still functions
+        - All routing to it includes a deprecation notice
+        - Successor module is identified and linked
+
+      Phase 2 — ARCHIVED (after 3 months):
+        - Module stops accepting new routing
+        - Existing references remain accessible (read-only)
+        - All new queries redirect to successor
+
+      Phase 3 — HISTORICAL (permanent):
+        - Module preserved in archive
+        - Accessible for audit and research purposes
+        - Never deleted from the lattice
+
+      This ensures backward compatibility while allowing evolution.
+    invariants_cited: ["INV-17", "INV-7c"]
+    impact: "LOW — affects long-term maintenance"
+    council_votes_needed: 5
+    proposed_resolution: |
+      Add module_status enum: ACTIVE | DEPRECATED | ARCHIVED | HISTORICAL
+      Add deprecation_notice and successor_module fields to module schema.

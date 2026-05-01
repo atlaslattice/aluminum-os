@@ -1,0 +1,10 @@
+Remaining TS errors to fix:
+
+1. Home.tsx(439): .lineage → .verse
+2. Mirror.tsx(62,77): .label → .name, .description → .principle  
+3. Routing.tsx(3): routingElements missing export, .category missing on RoutingModule
+4. Governance.tsx(53,60,71,73): .type → .category on Invariant, .scope missing, status comparison IMPLICIT/REQUIRED
+5. Dashboard.tsx(715): .color missing on ArchitectureLayer, .map on string (modules is string not array)
+6. Appendix.tsx(345): .ratificationStatus missing on documentMeta, status comparison IMPLICIT/REQUIRED, .nextIteration missing
+7. Canon.tsx(55,232): .license missing on documentMeta
+8. GlobalSearch.tsx: need to check

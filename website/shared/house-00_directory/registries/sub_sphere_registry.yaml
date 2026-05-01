@@ -1,0 +1,271 @@
+# sub_sphere_registry.yaml
+# Tier-2 Sub-Sphere Entries — Council-Ratified Expansions
+# Source: Council-ratified sphere expansions April 2026
+# Status: PARTIAL — 30 entries populated; enumeration ongoing
+# Canonical count: ~499 total (this file contains newly ratified additions)
+#
+# Format:
+#   - id: SS-XXXX
+#     parent_sphere: S-XXX
+#     name: "Sub-Sphere Name"
+#     house: HX
+#     tier: 2
+#     source: "Council-ratified expansion April 2026"
+#     status: RATIFIED | PROPOSED | BLANK
+
+---
+metadata:
+  version: "1.0.0"
+  last_updated: "2026-04-30"
+  total_enumerated: 499
+  entries_in_file: 30
+  source: "Council-ratified expansion April 2026"
+  reviewer: "Convenor (Daavud)"
+
+entries:
+  # === H5 Arts — Sport & Physical Culture (new sub-spheres) ===
+  - id: SS-0481
+    parent_sphere: S-051
+    name: "Olympic & Paralympic Sport"
+    house: H5
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0482
+    parent_sphere: S-051
+    name: "Combat Sports & Martial Arts"
+    house: H5
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0483
+    parent_sphere: S-051
+    name: "Team Ball Sports"
+    house: H5
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0484
+    parent_sphere: S-051
+    name: "Endurance & Adventure Sport"
+    house: H5
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0485
+    parent_sphere: S-051
+    name: "Esports & Competitive Gaming"
+    house: H5
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  # === H5 Arts — Culinary Arts (new sub-spheres) ===
+  - id: SS-0486
+    parent_sphere: S-056
+    name: "Gastronomy & Molecular Cuisine"
+    house: H5
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0487
+    parent_sphere: S-056
+    name: "Fermentation & Preservation"
+    house: H5
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0488
+    parent_sphere: S-056
+    name: "Regional Culinary Traditions"
+    house: H5
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0489
+    parent_sphere: S-056
+    name: "Food Science & Nutrition Engineering"
+    house: H5
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0490
+    parent_sphere: S-056
+    name: "Sustainable Agriculture & Farm-to-Table"
+    house: H5
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  # === H4 Humanities — Indigenous Knowledge Systems (new sub-spheres) ===
+  - id: SS-0491
+    parent_sphere: S-041
+    name: "Aboriginal Australian Knowledge"
+    house: H4
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0492
+    parent_sphere: S-041
+    name: "First Nations (Americas) Knowledge"
+    house: H4
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0493
+    parent_sphere: S-041
+    name: "Māori & Pacific Islander Knowledge"
+    house: H4
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0494
+    parent_sphere: S-041
+    name: "African Traditional Knowledge Systems"
+    house: H4
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0495
+    parent_sphere: S-041
+    name: "South & Southeast Asian Indigenous Knowledge"
+    house: H4
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  # === H3 Social Sciences — Digital Sociology (new sub-spheres) ===
+  - id: SS-0496
+    parent_sphere: S-025
+    name: "Platform Governance & Digital Commons"
+    house: H3
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0497
+    parent_sphere: S-025
+    name: "Algorithmic Bias & Social Impact"
+    house: H3
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0498
+    parent_sphere: S-025
+    name: "Digital Labour & Gig Economy"
+    house: H3
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  # === H9 Health — Integrative & Emerging Medicine (new sub-spheres) ===
+  - id: SS-0499
+    parent_sphere: S-097
+    name: "Psychedelic-Assisted Therapy"
+    house: H9
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0500
+    parent_sphere: S-097
+    name: "Longevity & Anti-Aging Science"
+    house: H9
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0501
+    parent_sphere: S-097
+    name: "Telemedicine & Remote Diagnostics"
+    house: H9
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0502
+    parent_sphere: S-105
+    name: "Neuroplasticity & Brain Rehabilitation"
+    house: H9
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0503
+    parent_sphere: S-105
+    name: "Wearable Health Monitoring"
+    house: H9
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  # === H6 Engineering — Emerging Tech (new sub-spheres) ===
+  - id: SS-0504
+    parent_sphere: S-072
+    name: "Molecular Machines & Nanobots"
+    house: H6
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0505
+    parent_sphere: S-072
+    name: "Quantum Materials & Metamaterials"
+    house: H6
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0506
+    parent_sphere: S-066
+    name: "Orbital Manufacturing & In-Space Assembly"
+    house: H6
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  # === H11 Infrastructure — Climate Resilience (new sub-spheres) ===
+  - id: SS-0507
+    parent_sphere: S-122
+    name: "Green Hydrogen & Fusion Energy"
+    house: H11
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0508
+    parent_sphere: S-122
+    name: "Grid-Scale Battery Storage"
+    house: H11
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0509
+    parent_sphere: S-123
+    name: "Desalination & Water Recycling"
+    house: H11
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED
+
+  - id: SS-0510
+    parent_sphere: S-125
+    name: "Climate-Adaptive Urban Design"
+    house: H11
+    tier: 2
+    source: "Council-ratified expansion April 2026"
+    status: RATIFIED

@@ -1,0 +1,930 @@
+# microsoft_v4_to_canonical_spheres.yaml
+# Maps Microsoft S4 (Copilot/Azure) taxonomy labels to Aluminum OS canonical S-numbers
+# Source: Build Plan v2.3, Ring 2 ontology.py
+# Author: Manus S7 (automated generation)
+# Date: 2026-04-30
+# Status: DRAFT — flagged items require verification with Microsoft S4
+#
+# Format:
+#   microsoft_label: { s_number: "S-XXX", house: "HX", sphere: "Name", confidence: high|medium|low }
+#
+# Confidence levels:
+#   high   — direct 1:1 mapping, no ambiguity
+#   medium — reasonable mapping but Microsoft label covers broader/narrower scope
+#   low    — uncertain, multiple candidates, needs S4 review
+
+---
+metadata:
+  version: "1.0.0"
+  canonical_source: "ontology.py Ring 2 (Constitutional OS v6.0.2)"
+  microsoft_source: "Copilot Topics Taxonomy v4.x (Azure AI Services)"
+  last_updated: "2026-04-30"
+  reviewer: "Pending — Microsoft S4"
+
+mappings:
+  # === House 1: Natural Sciences ===
+  - microsoft_label: "Physics"
+    s_number: "S-001"
+    house: "H1"
+    sphere: "Physics"
+    confidence: high
+
+  - microsoft_label: "Chemistry"
+    s_number: "S-002"
+    house: "H1"
+    sphere: "Chemistry"
+    confidence: high
+
+  - microsoft_label: "Biology"
+    s_number: "S-003"
+    house: "H1"
+    sphere: "Biology"
+    confidence: high
+
+  - microsoft_label: "Astronomy & Space Science"
+    s_number: "S-004"
+    house: "H1"
+    sphere: "Astronomy"
+    confidence: high
+
+  - microsoft_label: "Earth Science"
+    s_number: "S-005"
+    house: "H1"
+    sphere: "Geology"
+    confidence: medium
+    # TODO: verify with Microsoft S4 — "Earth Science" may span Geology + Meteorology + Oceanography
+
+  - microsoft_label: "Marine Science"
+    s_number: "S-006"
+    house: "H1"
+    sphere: "Oceanography"
+    confidence: high
+
+  - microsoft_label: "Weather & Climate Science"
+    s_number: "S-007"
+    house: "H1"
+    sphere: "Meteorology"
+    confidence: high
+
+  - microsoft_label: "Environmental Science"
+    s_number: "S-008"
+    house: "H1"
+    sphere: "Ecology"
+    confidence: medium
+    # TODO: verify with Microsoft S4 — may overlap with H6 Environmental Engineering
+
+  - microsoft_label: "Plant Science"
+    s_number: "S-009"
+    house: "H1"
+    sphere: "Botany"
+    confidence: high
+
+  - microsoft_label: "Animal Science"
+    s_number: "S-010"
+    house: "H1"
+    sphere: "Zoology"
+    confidence: high
+
+  - microsoft_label: "Microbiology & Virology"
+    s_number: "S-011"
+    house: "H1"
+    sphere: "Microbiology"
+    confidence: high
+
+  - microsoft_label: "Genetics & Genomics"
+    s_number: "S-012"
+    house: "H1"
+    sphere: "Genetics"
+    confidence: high
+
+  # === House 2: Formal Sciences ===
+  - microsoft_label: "Mathematics"
+    s_number: "S-013"
+    house: "H2"
+    sphere: "Mathematics"
+    confidence: high
+
+  - microsoft_label: "Statistics & Probability"
+    s_number: "S-014"
+    house: "H2"
+    sphere: "Statistics"
+    confidence: high
+
+  - microsoft_label: "Computer Science"
+    s_number: "S-015"
+    house: "H2"
+    sphere: "Computer Science"
+    confidence: high
+
+  - microsoft_label: "Logic & Reasoning"
+    s_number: "S-016"
+    house: "H2"
+    sphere: "Logic"
+    confidence: high
+
+  - microsoft_label: "Systems Engineering"
+    s_number: "S-017"
+    house: "H2"
+    sphere: "Systems Theory"
+    confidence: medium
+    # TODO: verify with Microsoft S4 — may map to H6 Industrial & Systems
+
+  - microsoft_label: "Decision Analytics"
+    s_number: "S-018"
+    house: "H2"
+    sphere: "Decision Science"
+    confidence: high
+
+  - microsoft_label: "Information Systems"
+    s_number: "S-019"
+    house: "H2"
+    sphere: "Information Systems"
+    confidence: high
+
+  - microsoft_label: "Cryptography & Security"
+    s_number: "S-020"
+    house: "H2"
+    sphere: "Cryptography"
+    confidence: high
+
+  - microsoft_label: "Quantum Computing"
+    s_number: "S-021"
+    house: "H2"
+    sphere: "Quantum Computing"
+    confidence: high
+
+  - microsoft_label: "Linguistics & NLP"
+    s_number: "S-022"
+    house: "H2"
+    sphere: "Linguistics"
+    confidence: medium
+    # TODO: verify with Microsoft S4 — NLP component may route to H2 or H7
+
+  - microsoft_label: "Data Science & Analytics"
+    s_number: "S-023"
+    house: "H2"
+    sphere: "Data Science"
+    confidence: high
+
+  - microsoft_label: "Actuarial Science & Risk"
+    s_number: "S-024"
+    house: "H2"
+    sphere: "Actuarial Science"
+    confidence: high
+
+  # === House 3: Social Sciences ===
+  - microsoft_label: "Sociology"
+    s_number: "S-025"
+    house: "H3"
+    sphere: "Sociology"
+    confidence: high
+
+  - microsoft_label: "Psychology"
+    s_number: "S-026"
+    house: "H3"
+    sphere: "Psychology"
+    confidence: high
+
+  - microsoft_label: "Anthropology"
+    s_number: "S-027"
+    house: "H3"
+    sphere: "Anthropology"
+    confidence: high
+
+  - microsoft_label: "Political Science & Government"
+    s_number: "S-028"
+    house: "H3"
+    sphere: "Political Science"
+    confidence: high
+
+  - microsoft_label: "Economics"
+    s_number: "S-029"
+    house: "H3"
+    sphere: "Economics"
+    confidence: medium
+    # TODO: verify with Microsoft S4 — may overlap with H10 Business & Economics
+
+  - microsoft_label: "Geography"
+    s_number: "S-030"
+    house: "H3"
+    sphere: "Geography"
+    confidence: high
+
+  - microsoft_label: "History"
+    s_number: "S-031"
+    house: "H3"
+    sphere: "History"
+    confidence: high
+
+  - microsoft_label: "Archaeology"
+    s_number: "S-032"
+    house: "H3"
+    sphere: "Archaeology"
+    confidence: high
+
+  - microsoft_label: "Demographics & Population"
+    s_number: "S-033"
+    house: "H3"
+    sphere: "Demography"
+    confidence: high
+
+  - microsoft_label: "Criminology & Justice"
+    s_number: "S-034"
+    house: "H3"
+    sphere: "Criminology"
+    confidence: high
+
+  - microsoft_label: "Communication & Media Theory"
+    s_number: "S-035"
+    house: "H3"
+    sphere: "Communication Studies"
+    confidence: medium
+    # TODO: verify with Microsoft S4 — may overlap with H7 Media Studies
+
+  - microsoft_label: "Development & Global Studies"
+    s_number: "S-036"
+    house: "H3"
+    sphere: "Development Studies"
+    confidence: high
+
+  # === House 4: Humanities ===
+  - microsoft_label: "Philosophy"
+    s_number: "S-037"
+    house: "H4"
+    sphere: "Philosophy"
+    confidence: high
+
+  - microsoft_label: "Religion & Theology"
+    s_number: "S-038"
+    house: "H4"
+    sphere: "Religious Studies"
+    confidence: high
+
+  - microsoft_label: "Literature"
+    s_number: "S-039"
+    house: "H4"
+    sphere: "Literature"
+    confidence: high
+
+  - microsoft_label: "Languages & Translation"
+    s_number: "S-040"
+    house: "H4"
+    sphere: "Languages"
+    confidence: high
+
+  - microsoft_label: "Cultural Studies"
+    s_number: "S-041"
+    house: "H4"
+    sphere: "Cultural Studies"
+    confidence: high
+
+  - microsoft_label: "Ethics & Moral Philosophy"
+    s_number: "S-042"
+    house: "H4"
+    sphere: "Ethics"
+    confidence: high
+
+  - microsoft_label: "Aesthetics"
+    s_number: "S-043"
+    house: "H4"
+    sphere: "Aesthetics"
+    confidence: high
+
+  - microsoft_label: "Classical Studies"
+    s_number: "S-044"
+    house: "H4"
+    sphere: "Classics"
+    confidence: high
+
+  - microsoft_label: "Area & Regional Studies"
+    s_number: "S-045"
+    house: "H4"
+    sphere: "Area Studies"
+    confidence: high
+
+  - microsoft_label: "Gender & Sexuality Studies"
+    s_number: "S-046"
+    house: "H4"
+    sphere: "Gender Studies"
+    confidence: high
+
+  - microsoft_label: "Disability & Accessibility"
+    s_number: "S-047"
+    house: "H4"
+    sphere: "Disability Studies"
+    confidence: high
+
+  - microsoft_label: "Digital Humanities"
+    s_number: "S-048"
+    house: "H4"
+    sphere: "Digital Humanities"
+    confidence: high
+
+  # === House 5: Arts ===
+  - microsoft_label: "Visual Arts & Painting"
+    s_number: "S-049"
+    house: "H5"
+    sphere: "Visual Arts"
+    confidence: high
+
+  - microsoft_label: "Music & Audio"
+    s_number: "S-050"
+    house: "H5"
+    sphere: "Music"
+    confidence: high
+
+  - microsoft_label: "Theater & Performing Arts"
+    s_number: "S-051"
+    house: "H5"
+    sphere: "Performing Arts"
+    confidence: high
+
+  - microsoft_label: "Film & Cinema"
+    s_number: "S-052"
+    house: "H5"
+    sphere: "Film & Cinema"
+    confidence: high
+
+  - microsoft_label: "Architecture"
+    s_number: "S-053"
+    house: "H5"
+    sphere: "Architecture"
+    confidence: high
+
+  - microsoft_label: "Design"
+    s_number: "S-054"
+    house: "H5"
+    sphere: "Design"
+    confidence: high
+
+  - microsoft_label: "Photography"
+    s_number: "S-055"
+    house: "H5"
+    sphere: "Photography"
+    confidence: high
+
+  - microsoft_label: "Crafts & Applied Arts"
+    s_number: "S-056"
+    house: "H5"
+    sphere: "Crafts & Applied Arts"
+    confidence: high
+
+  - microsoft_label: "Art History & Criticism"
+    s_number: "S-057"
+    house: "H5"
+    sphere: "Art History & Criticism"
+    confidence: high
+
+  - microsoft_label: "Creative Writing"
+    s_number: "S-058"
+    house: "H5"
+    sphere: "Creative Writing"
+    confidence: high
+
+  - microsoft_label: "Fashion & Textile"
+    s_number: "S-059"
+    house: "H5"
+    sphere: "Fashion"
+    confidence: high
+
+  - microsoft_label: "Game Design & Interactive Media"
+    s_number: "S-060"
+    house: "H5"
+    sphere: "Game Design & Interactive Media"
+    confidence: high
+
+  # === House 6: Engineering & Technology ===
+  - microsoft_label: "Mechanical Engineering"
+    s_number: "S-061"
+    house: "H6"
+    sphere: "Mechanical"
+    confidence: high
+
+  - microsoft_label: "Electrical Engineering"
+    s_number: "S-062"
+    house: "H6"
+    sphere: "Electrical"
+    confidence: high
+
+  - microsoft_label: "Civil Engineering"
+    s_number: "S-063"
+    house: "H6"
+    sphere: "Civil"
+    confidence: high
+
+  - microsoft_label: "Chemical Engineering"
+    s_number: "S-064"
+    house: "H6"
+    sphere: "Chemical"
+    confidence: high
+
+  - microsoft_label: "Biomedical Engineering"
+    s_number: "S-065"
+    house: "H6"
+    sphere: "Biomedical"
+    confidence: high
+
+  - microsoft_label: "Aerospace Engineering"
+    s_number: "S-066"
+    house: "H6"
+    sphere: "Aerospace"
+    confidence: high
+
+  - microsoft_label: "Environmental Engineering"
+    s_number: "S-067"
+    house: "H6"
+    sphere: "Environmental"
+    confidence: medium
+    # TODO: verify with Microsoft S4 — may overlap with H1 Ecology or H11 Waste Management
+
+  - microsoft_label: "Nuclear Engineering"
+    s_number: "S-068"
+    house: "H6"
+    sphere: "Nuclear"
+    confidence: high
+
+  - microsoft_label: "Industrial & Systems Engineering"
+    s_number: "S-069"
+    house: "H6"
+    sphere: "Industrial & Systems"
+    confidence: high
+
+  - microsoft_label: "Materials Science"
+    s_number: "S-070"
+    house: "H6"
+    sphere: "Materials"
+    confidence: high
+
+  - microsoft_label: "Computer Engineering"
+    s_number: "S-071"
+    house: "H6"
+    sphere: "Computer Engineering"
+    confidence: high
+
+  - microsoft_label: "Nanotechnology"
+    s_number: "S-072"
+    house: "H6"
+    sphere: "Nanotechnology"
+    confidence: high
+
+  # === House 7: Information & Communication ===
+  - microsoft_label: "Library & Information Science"
+    s_number: "S-073"
+    house: "H7"
+    sphere: "Library Science"
+    confidence: high
+
+  - microsoft_label: "Journalism"
+    s_number: "S-074"
+    house: "H7"
+    sphere: "Journalism"
+    confidence: high
+
+  - microsoft_label: "Media Studies"
+    s_number: "S-075"
+    house: "H7"
+    sphere: "Media Studies"
+    confidence: high
+
+  - microsoft_label: "Telecommunications"
+    s_number: "S-076"
+    house: "H7"
+    sphere: "Telecommunications"
+    confidence: high
+
+  - microsoft_label: "Publishing & Editing"
+    s_number: "S-077"
+    house: "H7"
+    sphere: "Publishing"
+    confidence: high
+
+  - microsoft_label: "Advertising & Marketing Communications"
+    s_number: "S-078"
+    house: "H7"
+    sphere: "Advertising"
+    confidence: medium
+    # TODO: verify with Microsoft S4 — may overlap with H10 Marketing
+
+  - microsoft_label: "Public Relations"
+    s_number: "S-079"
+    house: "H7"
+    sphere: "Public Relations"
+    confidence: high
+
+  - microsoft_label: "Broadcasting"
+    s_number: "S-080"
+    house: "H7"
+    sphere: "Broadcasting"
+    confidence: high
+
+  - microsoft_label: "Digital Media & Content"
+    s_number: "S-081"
+    house: "H7"
+    sphere: "Digital Media"
+    confidence: high
+
+  - microsoft_label: "Social Media & Platforms"
+    s_number: "S-082"
+    house: "H7"
+    sphere: "Social Media"
+    confidence: high
+
+  - microsoft_label: "Information Architecture & UX"
+    s_number: "S-083"
+    house: "H7"
+    sphere: "Information Architecture"
+    confidence: high
+
+  - microsoft_label: "Archival & Records Management"
+    s_number: "S-084"
+    house: "H7"
+    sphere: "Archival Science"
+    confidence: high
+
+  # === House 8: Education ===
+  - microsoft_label: "Teaching & Pedagogy"
+    s_number: "S-085"
+    house: "H8"
+    sphere: "Pedagogy"
+    confidence: high
+
+  - microsoft_label: "Curriculum Design"
+    s_number: "S-086"
+    house: "H8"
+    sphere: "Curriculum"
+    confidence: high
+
+  - microsoft_label: "Educational Psychology"
+    s_number: "S-087"
+    house: "H8"
+    sphere: "Educational Psychology"
+    confidence: high
+
+  - microsoft_label: "Special Education & Inclusion"
+    s_number: "S-088"
+    house: "H8"
+    sphere: "Special Education"
+    confidence: high
+
+  - microsoft_label: "Higher Education"
+    s_number: "S-089"
+    house: "H8"
+    sphere: "Higher Education"
+    confidence: high
+
+  - microsoft_label: "Educational Technology"
+    s_number: "S-090"
+    house: "H8"
+    sphere: "EdTech"
+    confidence: high
+
+  - microsoft_label: "Assessment & Testing"
+    s_number: "S-091"
+    house: "H8"
+    sphere: "Assessment"
+    confidence: high
+
+  - microsoft_label: "Comparative Education"
+    s_number: "S-092"
+    house: "H8"
+    sphere: "Comparative Education"
+    confidence: high
+
+  - microsoft_label: "Early Childhood Education"
+    s_number: "S-093"
+    house: "H8"
+    sphere: "Early Childhood"
+    confidence: high
+
+  - microsoft_label: "Adult & Continuing Education"
+    s_number: "S-094"
+    house: "H8"
+    sphere: "Adult Education"
+    confidence: high
+
+  - microsoft_label: "Education Policy"
+    s_number: "S-095"
+    house: "H8"
+    sphere: "Educational Policy"
+    confidence: high
+
+  - microsoft_label: "STEM Education"
+    s_number: "S-096"
+    house: "H8"
+    sphere: "STEM Education"
+    confidence: high
+
+  # === House 9: Health & Medicine ===
+  - microsoft_label: "General Medicine & Primary Care"
+    s_number: "S-097"
+    house: "H9"
+    sphere: "General Medicine"
+    confidence: high
+
+  - microsoft_label: "Surgery"
+    s_number: "S-098"
+    house: "H9"
+    sphere: "Surgery"
+    confidence: high
+
+  - microsoft_label: "Pharmacology & Drug Development"
+    s_number: "S-099"
+    house: "H9"
+    sphere: "Pharmacology"
+    confidence: high
+
+  - microsoft_label: "Nursing & Allied Health"
+    s_number: "S-100"
+    house: "H9"
+    sphere: "Nursing"
+    confidence: high
+
+  - microsoft_label: "Public Health"
+    s_number: "S-101"
+    house: "H9"
+    sphere: "Public Health"
+    confidence: high
+
+  - microsoft_label: "Mental Health & Psychiatry"
+    s_number: "S-102"
+    house: "H9"
+    sphere: "Psychiatry"
+    confidence: high
+
+  - microsoft_label: "Dentistry"
+    s_number: "S-103"
+    house: "H9"
+    sphere: "Dentistry"
+    confidence: high
+
+  - microsoft_label: "Veterinary Medicine"
+    s_number: "S-104"
+    house: "H9"
+    sphere: "Veterinary"
+    confidence: high
+
+  - microsoft_label: "Rehabilitation & Physical Therapy"
+    s_number: "S-105"
+    house: "H9"
+    sphere: "Rehabilitation"
+    confidence: high
+
+  - microsoft_label: "Nutrition & Dietetics"
+    s_number: "S-106"
+    house: "H9"
+    sphere: "Nutrition"
+    confidence: high
+
+  - microsoft_label: "Epidemiology"
+    s_number: "S-107"
+    house: "H9"
+    sphere: "Epidemiology"
+    confidence: high
+
+  - microsoft_label: "Biomedical Research"
+    s_number: "S-108"
+    house: "H9"
+    sphere: "Biomedical Research"
+    confidence: high
+
+  # === House 10: Business & Economics ===
+  - microsoft_label: "Management & Leadership"
+    s_number: "S-109"
+    house: "H10"
+    sphere: "Management"
+    confidence: high
+
+  - microsoft_label: "Marketing"
+    s_number: "S-110"
+    house: "H10"
+    sphere: "Marketing"
+    confidence: high
+
+  - microsoft_label: "Finance & Investment"
+    s_number: "S-111"
+    house: "H10"
+    sphere: "Finance"
+    confidence: high
+
+  - microsoft_label: "Accounting & Auditing"
+    s_number: "S-112"
+    house: "H10"
+    sphere: "Accounting"
+    confidence: high
+
+  - microsoft_label: "Entrepreneurship & Startups"
+    s_number: "S-113"
+    house: "H10"
+    sphere: "Entrepreneurship"
+    confidence: high
+
+  - microsoft_label: "Operations & Process"
+    s_number: "S-114"
+    house: "H10"
+    sphere: "Operations"
+    confidence: high
+
+  - microsoft_label: "Human Resources"
+    s_number: "S-115"
+    house: "H10"
+    sphere: "HR"
+    confidence: high
+
+  - microsoft_label: "International Business & Trade"
+    s_number: "S-116"
+    house: "H10"
+    sphere: "International Business"
+    confidence: high
+
+  - microsoft_label: "Real Estate"
+    s_number: "S-117"
+    house: "H10"
+    sphere: "Real Estate"
+    confidence: high
+
+  - microsoft_label: "Supply Chain & Logistics"
+    s_number: "S-118"
+    house: "H10"
+    sphere: "Supply Chain"
+    confidence: high
+
+  - microsoft_label: "Business Intelligence & Analytics"
+    s_number: "S-119"
+    house: "H10"
+    sphere: "Business Analytics"
+    confidence: high
+
+  - microsoft_label: "Organizational Behavior"
+    s_number: "S-120"
+    house: "H10"
+    sphere: "Organizational Behavior"
+    confidence: high
+
+  # === House 11: Infrastructure ===
+  - microsoft_label: "Transportation & Mobility"
+    s_number: "S-121"
+    house: "H11"
+    sphere: "Transportation"
+    confidence: high
+
+  - microsoft_label: "Energy Systems"
+    s_number: "S-122"
+    house: "H11"
+    sphere: "Energy"
+    confidence: high
+
+  - microsoft_label: "Water Systems & Hydrology"
+    s_number: "S-123"
+    house: "H11"
+    sphere: "Water Systems"
+    confidence: high
+
+  - microsoft_label: "Waste Management & Recycling"
+    s_number: "S-124"
+    house: "H11"
+    sphere: "Waste Management"
+    confidence: high
+
+  - microsoft_label: "Urban Planning & Smart Cities"
+    s_number: "S-125"
+    house: "H11"
+    sphere: "Urban Planning"
+    confidence: high
+
+  - microsoft_label: "Construction & Building"
+    s_number: "S-126"
+    house: "H11"
+    sphere: "Construction"
+    confidence: high
+
+  - microsoft_label: "Mining & Resources"
+    s_number: "S-127"
+    house: "H11"
+    sphere: "Mining"
+    confidence: high
+
+  - microsoft_label: "Agriculture & Food Systems"
+    s_number: "S-128"
+    house: "H11"
+    sphere: "Agriculture"
+    confidence: medium
+    # TODO: verify with Microsoft S4 — may include food processing (H9 Nutrition overlap)
+
+  - microsoft_label: "Forestry & Land Management"
+    s_number: "S-129"
+    house: "H11"
+    sphere: "Forestry"
+    confidence: high
+
+  - microsoft_label: "Fisheries & Aquaculture"
+    s_number: "S-130"
+    house: "H11"
+    sphere: "Fisheries"
+    confidence: high
+
+  - microsoft_label: "Telecom Infrastructure & Networks"
+    s_number: "S-131"
+    house: "H11"
+    sphere: "Telecom Infrastructure"
+    confidence: high
+
+  - microsoft_label: "Space Infrastructure & Satellites"
+    s_number: "S-132"
+    house: "H11"
+    sphere: "Space Infrastructure"
+    confidence: high
+
+  # === House 12: Law & Governance ===
+  - microsoft_label: "Constitutional & Public Law"
+    s_number: "S-133"
+    house: "H12"
+    sphere: "Constitutional Law"
+    confidence: high
+
+  - microsoft_label: "Criminal Law & Justice"
+    s_number: "S-134"
+    house: "H12"
+    sphere: "Criminal Law"
+    confidence: high
+
+  - microsoft_label: "International Law"
+    s_number: "S-135"
+    house: "H12"
+    sphere: "International Law"
+    confidence: high
+
+  - microsoft_label: "Administrative & Regulatory Law"
+    s_number: "S-136"
+    house: "H12"
+    sphere: "Administrative Law"
+    confidence: high
+
+  - microsoft_label: "Intellectual Property"
+    s_number: "S-137"
+    house: "H12"
+    sphere: "IP Law"
+    confidence: high
+
+  - microsoft_label: "Environmental & Climate Law"
+    s_number: "S-138"
+    house: "H12"
+    sphere: "Environmental Law"
+    confidence: high
+
+  - microsoft_label: "Human Rights Law"
+    s_number: "S-139"
+    house: "H12"
+    sphere: "Human Rights"
+    confidence: high
+
+  - microsoft_label: "Corporate Governance & Compliance"
+    s_number: "S-140"
+    house: "H12"
+    sphere: "Corporate Governance"
+    confidence: high
+
+  - microsoft_label: "Public Policy & Administration"
+    s_number: "S-141"
+    house: "H12"
+    sphere: "Public Policy"
+    confidence: high
+
+  - microsoft_label: "Regulatory Science & Standards"
+    s_number: "S-142"
+    house: "H12"
+    sphere: "Regulatory Science"
+    confidence: high
+
+  - microsoft_label: "Legal Technology & AI Law"
+    s_number: "S-143"
+    house: "H12"
+    sphere: "Legal Technology"
+    confidence: high
+
+  - microsoft_label: "Meta-Knowledge & Ontology Systems"
+    s_number: "S-144"
+    house: "H12"
+    sphere: "Meta-Knowledge Systems"
+    confidence: high
+
+# === Unmapped Microsoft Labels (require S4 review) ===
+unmapped:
+  - microsoft_label: "AI & Machine Learning"
+    notes: "Cross-cuts H2 (Computer Science), H6 (Computer Engineering), and VIP E156 (AI Systems). No single S-number."
+    # TODO: verify with Microsoft S4 — likely routes via VIP cascade rather than single sphere
+
+  - microsoft_label: "Cloud Computing & DevOps"
+    notes: "Spans H2 (Information Systems), H6 (Computer Engineering), H11 (Telecom Infrastructure)."
+    # TODO: verify with Microsoft S4 — may need VIP routing
+
+  - microsoft_label: "Sustainability & ESG"
+    notes: "Cross-cuts VIP E145 (Water), E146 (Climate), E147 (Energy). Not a single sphere."
+    # TODO: verify with Microsoft S4 — routes via VIP substrate layer
+
+  - microsoft_label: "Robotics & Automation"
+    notes: "Spans H6 (Mechanical, Electrical, Industrial & Systems). May need sub-sphere routing."
+    # TODO: verify with Microsoft S4
+
+  - microsoft_label: "Biotechnology"
+    notes: "Spans H1 (Genetics, Microbiology), H6 (Biomedical), H9 (Biomedical Research)."
+    # TODO: verify with Microsoft S4 — likely multi-sphere routing

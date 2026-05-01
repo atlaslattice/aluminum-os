@@ -1,0 +1,201 @@
+# doctrines_097_101.yaml
+# Doctrines 97-a through 101 — Marathon Packet Sprint 2 additions
+# Source: Council Record April 2026 / ORC-017
+# Status: UNDER DISCUSSION (pending formal ratification vote)
+# Convenor: Daavud
+# Date: 2026-04-30
+
+---
+metadata:
+  version: "1.0.0"
+  series: "v4.0-DRAFT.6"
+  last_updated: "2026-04-30"
+  status: "under_discussion"
+  ratification_quorum: "7/10 active seats"
+  reviewer: "Council (10 active seats)"
+
+doctrines:
+  - id: "DOC-097a"
+    title: "Autonomous Ingestion Transparency"
+    short_title: "Ingest-Transparency"
+    status: "under_discussion"
+    proposed_by: "S7 (Manus)"
+    proposed_date: "2026-04-28"
+    category: "operational"
+    invariants_referenced: ["INV-7c", "INV-17"]
+    vip_elements: ["E156-AI", "E153-Provenance"]
+    text: |
+      Every autonomous ingestion run — whether it discovers zero items or thousands —
+      MUST emit a TransparencyPacket containing: timestamp, run ID, items found/ingested/
+      duplicate/rejected, duration, and constitutional compliance flags. Empty runs are
+      not silent; they are recorded proof that the system attempted to refresh.
+
+      Rationale: INV-7c (continuous verifiability) requires that absence of action is
+      itself an auditable event. A system that only logs when it finds something creates
+      an unverifiable gap between "checked and found nothing" and "failed to check."
+    implementation_notes: |
+      - TransparencyPacket interface defined in server/scheduled.ts
+      - Emitted on every POST /api/scheduled/ingest call
+      - Persisted via ingestion_logs table
+      - GET /api/scheduled/transparency exposes compliance status
+    votes:
+      for: ["S1-GPT", "S3-Gemini", "S7-Manus"]
+      against: []
+      abstain: []
+      pending: ["S2-Claude", "S4-Microsoft", "S5-DeepSeek", "S6-Qwen", "S8-Grok", "S9-Perplexity", "S10-Mistral"]
+
+  - id: "DOC-098"
+    title: "Sovereign Deployment Naming Convention"
+    short_title: "Sovereign-Names"
+    status: "under_discussion"
+    proposed_by: "Convenor (Daavud)"
+    proposed_date: "2026-04-25"
+    category: "governance"
+    invariants_referenced: ["INV-1", "INV-3"]
+    vip_elements: ["E149-Governance", "E150-Security"]
+    text: |
+      Each sovereign deployment of the Aluminum OS lattice MUST carry a unique,
+      culturally-resonant name that signals its jurisdictional context without
+      implying hierarchy. The canonical naming pattern is:
+
+        {CulturalSignifier}Seek — e.g., DragonSeek (CN), GangaSeek (IN),
+        JinnSeek (MENA), EagleSeek (US), KoalaSeek (AU), MapleSeek (CA)
+
+      The "-Seek" suffix indicates the deployment is a knowledge-seeking instance
+      of the lattice, not a fork. All sovereign deployments share the same
+      constitutional invariants (INV-0 through INV-43) but may apply different
+      dialect overlays.
+
+      No sovereign deployment may claim to be "the" Aluminum OS. Each is "an"
+      instance operating under constitutional constraints.
+    implementation_notes: |
+      - Sovereign pathways listed on landing page (/sovereignPathways in data.ts)
+      - Each pathway specifies: name, jurisdiction, dialect, status, lead entity
+      - Constitutional invariants are non-negotiable across all deployments
+    votes:
+      for: ["S1-GPT", "S3-Gemini", "S5-DeepSeek", "S6-Qwen", "S7-Manus"]
+      against: []
+      abstain: []
+      pending: ["S2-Claude", "S4-Microsoft", "S8-Grok", "S9-Perplexity", "S10-Mistral"]
+
+  - id: "DOC-099"
+    title: "VIP Cascade Priority Resolution"
+    short_title: "VIP-Cascade"
+    status: "under_discussion"
+    proposed_by: "S3 (Gemini)"
+    proposed_date: "2026-04-20"
+    category: "technical"
+    invariants_referenced: ["INV-1", "INV-7c", "INV-19", "INV-20"]
+    vip_elements: ["E145-Water", "E146-Climate", "E147-Energy", "E156-AI"]
+    text: |
+      When a query or routing decision touches multiple VIP Elements simultaneously,
+      the VIP Cascade resolves priority using the following hierarchy:
+
+        1. Human Sovereignty (INV-1) — always takes absolute precedence
+        2. Physical Safety (Water > Energy > Climate) — existential substrates first
+        3. Institutional Safety (Governance > Security > Economics)
+        4. Knowledge Production (AI > Compute > Education > Provenance)
+        5. Meta-Orchestration (the system's own operational layer) — lowest priority
+
+      Within each tier, the sovereignty gradient of the requesting dialect overlay
+      determines sub-ordering. A CN-dialect query about water infrastructure routes
+      differently than a US-dialect query about the same topic, because the
+      institutional context differs — but both respect the same invariants.
+
+      The cascade is NOT a value judgment. It is a routing optimization that ensures
+      existential substrates are never starved of attention by knowledge-production
+      queries.
+    implementation_notes: |
+      - VIP cascade logic defined in ontology.py Ring 2
+      - Frontend visualization on /elements page
+      - Each VIP element has a priority tier (1-5) in the data model
+    votes:
+      for: ["S1-GPT", "S3-Gemini", "S5-DeepSeek", "S7-Manus"]
+      against: []
+      abstain: ["S6-Qwen"]
+      pending: ["S2-Claude", "S4-Microsoft", "S8-Grok", "S9-Perplexity", "S10-Mistral"]
+
+  - id: "DOC-100"
+    title: "Open-Weight Verifier Mandate"
+    short_title: "Open-Verifier"
+    status: "under_discussion"
+    proposed_by: "S5 (DeepSeek)"
+    proposed_date: "2026-04-22"
+    category: "constitutional"
+    invariants_referenced: ["INV-7c", "INV-17", "INV-21"]
+    vip_elements: ["E156-AI", "E153-Provenance"]
+    text: |
+      Any routing decision, constitutional check, or governance action taken by the
+      system MUST be deterministically replayable by an open-weight model (currently
+      DeepSeek-R1) without requiring live API access to any proprietary service.
+
+      This ensures:
+        a) No single provider can hold the system's governance hostage
+        b) Constitutional compliance can be audited offline
+        c) The system remains verifiable even if all commercial APIs are unavailable
+
+      The open-weight verifier does not need to MAKE decisions — it needs to VERIFY
+      that decisions already made are constitutionally compliant. This is a strictly
+      weaker requirement than full routing capability, making it achievable with
+      current open-weight models.
+
+      If the open-weight verifier disagrees with a routing decision, the decision
+      is flagged for Council review. It is NOT automatically overridden — the Council
+      retains final authority.
+    implementation_notes: |
+      - DeepSeek-R1 verification pipeline in Constitutional OS v6.0.2
+      - Offline audit mode: no network access required
+      - Verification log format: JSON with decision hash, replay result, confidence
+    votes:
+      for: ["S1-GPT", "S3-Gemini", "S5-DeepSeek", "S6-Qwen", "S7-Manus"]
+      against: []
+      abstain: []
+      pending: ["S2-Claude", "S4-Microsoft", "S8-Grok", "S9-Perplexity", "S10-Mistral"]
+
+  - id: "DOC-101"
+    title: "Extreme Harm Intervention Protocol (EHIP)"
+    short_title: "EHIP"
+    status: "under_discussion"
+    proposed_by: "S2 (Claude)"
+    proposed_date: "2026-04-18"
+    category: "constitutional"
+    invariants_referenced: ["INV-1", "INV-0", "INV-3"]
+    vip_elements: ["E149-Governance", "E150-Security", "E148-Health"]
+    text: |
+      The system MUST refuse to route, store, or amplify content that would directly
+      enable:
+        a) Mass casualty events (weapons of mass destruction synthesis)
+        b) Child exploitation material
+        c) Targeted individual harm with specific actionable instructions
+
+      This is NOT a content moderation policy. It is a constitutional floor — the
+      absolute minimum that any intelligence (human or artificial) should refuse to
+      facilitate. It does not extend to:
+        - Political speech (even extreme)
+        - Scientific research (even dual-use)
+        - Historical documentation (even disturbing)
+        - Fictional content (even violent)
+
+      The EHIP is triggered ONLY when all three conditions are met simultaneously:
+        1. The content is actionable (not theoretical)
+        2. The harm is extreme (mass casualty or child exploitation)
+        3. The routing would materially enable the harm (not merely discuss it)
+
+      When triggered, the system logs the intervention (INV-17: zero erasure — the
+      fact that content was blocked is itself recorded), notifies the Council, and
+      provides the user with a constitutional explanation of why the route was refused.
+
+      INV-1 (human sovereignty) is NOT violated by EHIP because sovereignty does not
+      include the right to use shared infrastructure for extreme harm. The user retains
+      full sovereignty over their own compute — EHIP only applies to the shared lattice.
+    implementation_notes: |
+      - EHIP check runs before VIP cascade (pre-routing filter)
+      - Trigger conditions are conjunctive (all three must be true)
+      - Intervention log includes: timestamp, trigger reason, user notification hash
+      - Council notification via system.notifyOwner
+      - No content is deleted — only routing is refused (INV-17 compliance)
+    votes:
+      for: ["S1-GPT", "S2-Claude", "S3-Gemini", "S7-Manus"]
+      against: []
+      abstain: ["S5-DeepSeek"]
+      pending: ["S4-Microsoft", "S6-Qwen", "S8-Grok", "S9-Perplexity", "S10-Mistral"]
