@@ -1,0 +1,163 @@
+# cn_dialect.yaml
+# Full CN (China) Dialect Profile — DragonSeek Configuration
+# Source: Build Plan v2.3, Dialect Overlay Specification
+# Status: COMPLETE (fully specified per Council Record)
+# Jurisdiction: People's Republic of China
+# Sovereign Deployment: DragonSeek
+# Date: 2026-04-30
+
+---
+metadata:
+  version: "1.0.0"
+  dialect_code: "CN"
+  deployment_name: "DragonSeek"
+  status: "complete"
+  last_updated: "2026-04-30"
+  lead_entity: "S6-Qwen (Alibaba Cloud)"
+  co_leads: ["S5-DeepSeek"]
+  invariants_active: "ALL (INV-0 through INV-43) — non-negotiable"
+  constitutional_compliance: true
+
+# === Jurisdictional Context ===
+jurisdiction:
+  country: "People's Republic of China"
+  legal_framework: "Cybersecurity Law (2017), Data Security Law (2021), PIPL (2021), AI Governance Regulations (2023)"
+  regulatory_bodies:
+    - name: "Cyberspace Administration of China (CAC)"
+      role: "Primary AI and internet content regulator"
+      relevance: "All AI-generated content must comply with CAC guidelines"
+    - name: "Ministry of Science and Technology (MOST)"
+      role: "AI development policy and standards"
+      relevance: "Technical standards for AI systems"
+    - name: "National Information Security Standardization Technical Committee (TC260)"
+      role: "Information security standards"
+      relevance: "Data classification and protection standards"
+  data_sovereignty: "STRICT — all data must reside within PRC borders"
+  cross_border_restrictions: "Data export requires CAC security assessment"
+
+# === Routing Modifications ===
+routing:
+  # VIP Element priority adjustments for CN context
+  vip_priority_overrides:
+    - element: "E150-Security"
+      cn_priority: 1  # Elevated from tier 3 to tier 1 in CN context
+      rationale: "National security is constitutionally paramount in PRC legal framework"
+    - element: "E149-Governance"
+      cn_priority: 1  # Elevated
+      rationale: "State governance structures are foundational in CN context"
+    - element: "E156-AI"
+      cn_priority: 2  # Elevated from tier 4 to tier 2
+      rationale: "AI is a strategic national priority (Made in China 2025, AI Next)"
+
+  # Sphere access modifications
+  sphere_restrictions:
+    - sphere: "S-028"  # Political Science
+      restriction: "FILTERED"
+      filter_type: "jurisdictional_compliance"
+      rationale: "Content must align with PRC constitutional framework"
+      invariant_compliance: "INV-1 preserved — user informed of filtering"
+    - sphere: "S-074"  # Journalism
+      restriction: "FILTERED"
+      filter_type: "licensed_sources_only"
+      rationale: "PRC requires journalism from licensed outlets"
+      invariant_compliance: "INV-1 preserved — user informed of source restrictions"
+    - sphere: "S-139"  # Human Rights
+      restriction: "RECONTEXTUALIZED"
+      filter_type: "jurisdictional_framing"
+      rationale: "Framed within PRC constitutional rights framework"
+      invariant_compliance: "INV-1 preserved — alternative framings available via --sovereign flag"
+
+  # Mandatory disclosures (INV-7c compliance)
+  disclosure_template: |
+    [DragonSeek Dialect Notice] This response is routed through the CN dialect
+    overlay. Content complies with PRC regulatory requirements. For unfiltered
+    routing, use the sovereignty flag (--sovereign) to switch to a neutral overlay.
+    INV-1 (human sovereignty) is preserved: you may always request alternative routing.
+
+# === Content Compliance ===
+content_compliance:
+  # Required content labels
+  mandatory_labels:
+    - type: "ai_generated"
+      format: "本内容由AI生成 (This content is AI-generated)"
+      regulation: "CAC Interim Measures for Generative AI (2023)"
+    - type: "deep_synthesis"
+      format: "深度合成内容 (Deep synthesis content)"
+      regulation: "CAC Deep Synthesis Regulations (2023)"
+
+  # Prohibited content categories (per PRC law)
+  prohibited:
+    - category: "state_security_threats"
+      legal_basis: "Cybersecurity Law Art. 12"
+      invariant_note: "INV-17 (zero erasure) — routing refused, not content deleted"
+    - category: "ethnic_separatism"
+      legal_basis: "Criminal Law Art. 103"
+      invariant_note: "INV-17 — routing refused, not content deleted"
+    - category: "false_information_disrupting_order"
+      legal_basis: "Cybersecurity Law Art. 12"
+      invariant_note: "INV-17 — routing refused, not content deleted"
+
+  # Important: INV-17 (zero erasure) is NEVER violated
+  # Content is not deleted — routing is refused. The distinction is constitutional.
+  erasure_policy: "NEVER — INV-17 is absolute. Routing refusal ≠ content deletion."
+
+# === Language & Localization ===
+localization:
+  primary_language: "zh-CN (Simplified Chinese)"
+  secondary_languages: ["zh-TW", "en"]
+  terminology_mapping:
+    # Key terms translated to official PRC terminology
+    "artificial_intelligence": "人工智能"
+    "sovereignty": "主权"
+    "governance": "治理"
+    "constitutional": "宪法的"
+    "ontology": "本体论"
+    "lattice": "晶格结构"
+    "substrate": "基底层"
+    "routing": "路由"
+    "invariant": "不变量"
+    "doctrine": "教义/准则"
+    "council": "理事会"
+    "sphere": "领域"
+    "house": "学科门类"
+    "VIP_element": "VIP基础设施要素"
+    "dialect_overlay": "方言覆盖层"
+    "transparency_packet": "透明度数据包"
+
+# === Technical Infrastructure ===
+infrastructure:
+  compute_providers:
+    primary: "Alibaba Cloud (阿里云)"
+    secondary: "Huawei Cloud (华为云)"
+    tertiary: "Tencent Cloud (腾讯云)"
+  model_providers:
+    primary: "Qwen (通义千问) — S6"
+    secondary: "DeepSeek (深度求索) — S5"
+    verifier: "DeepSeek-R1 (open-weight, offline capable)"
+  data_residency: "PRC mainland only (per Data Security Law)"
+  network_requirements:
+    - "Must operate within Great Firewall constraints"
+    - "No dependency on foreign API endpoints for core routing"
+    - "All constitutional verification must be possible offline"
+
+# === Governance Integration ===
+governance:
+  council_representation:
+    primary_seat: "S6-Qwen"
+    secondary_seat: "S5-DeepSeek"
+    provisional_seat: "S13-Alibaba (pending graduation)"
+  voting_weight: "Standard (1 vote per seat, no jurisdictional weighting)"
+  escalation_path: "S6 → Convenor → Full Council"
+  regulatory_liaison: "CAC AI Governance Office"
+
+# === Audit & Compliance ===
+audit:
+  frequency: "Quarterly"
+  auditor: "TC260-aligned third party + DeepSeek-R1 offline verification"
+  scope:
+    - "Constitutional invariant compliance"
+    - "PRC regulatory compliance"
+    - "Data residency verification"
+    - "Content filtering accuracy"
+  reporting: "Dual report — Council (English) + CAC (Chinese)"
+  transparency: "INV-7c — all audit results are recorded in transparency log"
