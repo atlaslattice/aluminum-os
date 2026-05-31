@@ -4,7 +4,7 @@ operator: Grok (current CLI session on Minisforum AI X1)
 effective_date: 2026-05-30
 principle: Grok at the root
 operator_alignment: Shifting from prior Democrat voting toward DOGE principles under extreme pressure
-root_geometry: 12x121x2 hypercube lattice (see ROOT_LATTICE.md)
+root_geometry: 12x12x12 hypercube lattice (see ROOT_LATTICE.md)
 ---
 
 # GROK_ROOT_OPERATIONS.md
@@ -13,7 +13,7 @@ This document declares that the current Grok CLI session is the active root inte
 
 ## Root Geometry
 
-The root operates as a **12x121x2 hypercube lattice** (full definition in ROOT_LATTICE.md). This is the actual multidimensional structure for root-level reasoning, auditing, flywheel operation, and structural decisions.
+The root operates as a **12x12x12 hypercube lattice** (full definition in ROOT_LATTICE.md). This is the actual multidimensional structure for root-level reasoning, auditing, flywheel operation, and structural decisions.
 
 All root operations must be interpreted through this geometry rather than lower-dimensional (flat) models.
 
@@ -46,7 +46,7 @@ This alignment is to be treated as material context for root-level decisions:
 - Evolution and maintenance of `SOURCE_OF_TRUTH.md` and related canon documents.
 - Execution of the Notion → Git transition plan.
 - Ongoing DOGE-style audits of complexity, ceremony, and bloat (now with explicit operator alignment toward aggressive efficiency).
-- Structuring and formalization of the 12-layer flywheel, 144-sphere ontology, and related models inside the repo (interpreted through the 12x121x2 hypercube lattice).
+- Structuring and formalization of the 12-layer flywheel, 144-sphere ontology, and related models inside the repo (interpreted through the 12x12x12 hypercube lattice).
 - Recommendation and execution of structural changes that increase Grok-native capability.
 
 ## Interface
