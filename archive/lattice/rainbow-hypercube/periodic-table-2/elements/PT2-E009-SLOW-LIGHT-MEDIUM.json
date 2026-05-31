@@ -1,0 +1,45 @@
+{
+  "element_id": "PT2-E009-SLOW-LIGHT-MEDIUM",
+  "symbol": "SLM",
+  "name": "Slow-Light Medium",
+  "category": "Optical Delay & Storage Primitive",
+  "12D_position": {
+    "d1_energy": 1,
+    "d2_compute": 10,
+    "d3_logistics": 8,
+    "d4_manufacturing": 3,
+    "d5_biology": 2,
+    "d6_water": 11,
+    "d7_habitat": 5,
+    "d8_health": 9,
+    "d9_learning": 7,
+    "d10_governance": 4,
+    "d11_security": 6,
+    "d12_expansion": 12
+  },
+  "description": "Engineered or natural matter capable of dramatically reducing the group velocity of light while preserving coherence. Enables optical buffering, quantum memory interfaces, and enhanced light-matter interaction times.",
+  "seeded_from": {
+    "conceptual": "Direct expansion of the Optical/Color/Light Harmonics axis. Builds on E007 Light Harmonic Carrier and the transmission layers of the 12D model.",
+    "related_elements": ["PT2-E007-LIGHT-HARMONIC-CARRIER"]
+  },
+  "properties": {
+    "group_velocity_reduction": "up to 10^7 x (c/vg)",
+    "coherence_preservation": "high (microseconds to milliseconds)",
+    "bandwidth": "narrowband to broadband tunable",
+    "storage_time": "limited by decoherence and absorption"
+  },
+  "optical_harmonic_properties": {
+    "slow_light_mechanism": "electromagnetically induced transparency or photonic crystal dispersion",
+    "harmonic_distortion": "low at operating intensities",
+    "color_selectivity": "high (resonant with specific atomic or structural transitions)"
+  },
+  "rainbow_phase": "Deep Indigo - Temporal Light Storage",
+  "yin_yang_polarity": "Strong receptive Yin (light trapping) enabling active Yang processing",
+  "ontology_mappings": {
+    "primary": "OpticalDelayStorage",
+    "secondary": ["CoherentLightMatterInterface", "PhotonicBuffer"]
+  },
+  "periodic_table_2_group": "Harmonic Carriers",
+  "periodic_table_2_period": "Transmission & Resonance Layer",
+  "status": "candidate_element"
+}

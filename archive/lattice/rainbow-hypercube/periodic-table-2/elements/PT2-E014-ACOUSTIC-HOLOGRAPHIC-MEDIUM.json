@@ -1,0 +1,45 @@
+{
+  "element_id": "PT2-E014-ACOUSTIC-HOLOGRAPHIC-MEDIUM",
+  "symbol": "AHM",
+  "name": "Acoustic Holographic Medium",
+  "category": "3D Sound Field Sculptor",
+  "12D_position": {
+    "d1_energy": 3,
+    "d2_compute": 8,
+    "d3_logistics": 10,
+    "d4_manufacturing": 7,
+    "d5_biology": 9,
+    "d6_water": 11,
+    "d7_habitat": 12,
+    "d8_health": 6,
+    "d9_learning": 5,
+    "d10_governance": 4,
+    "d11_security": 3,
+    "d12_expansion": 7
+  },
+  "description": "Media capable of recording, reconstructing, or dynamically shaping complex three-dimensional acoustic fields with high spatial and temporal fidelity. Enables acoustic holography, levitation, and volumetric sound synthesis.",
+  "seeded_from": {
+    "conceptual": "Advanced application of Acoustic Resonance axis combined with Logistics (D3) and Habitat (D7). Extends E008 and E012 with spatial control.",
+    "related_elements": ["PT2-E008-ACOUSTIC-RESONANCE-FORMER", "PT2-E012-CYMATIC-SELF-ORGANIZER"]
+  },
+  "properties": {
+    "spatial_resolution": "sub-wavelength possible with metamaterials",
+    "reconstruction_fidelity": "high (phase and amplitude control)",
+    "dynamic_control": "real-time with phased arrays or active media",
+    "levitation_force": "sufficient for macro objects in strong fields"
+  },
+  "acoustic_resonance_properties": {
+    "hologram_type": "transmission, reflection, or volume",
+    "frequency_range": "audible to ultrasonic",
+    "cymatic_integration": "strong (patterns can be holographically projected)"
+  },
+  "rainbow_phase": "Volumetric Sonic Violet - Spatial Sound Architecture",
+  "yin_yang_polarity": "Receptive recording (Yin) and projective reconstruction (Yang) in 3D space",
+  "ontology_mappings": {
+    "primary": "VolumetricAcousticFieldSculptor",
+    "secondary": ["AcousticHolography", "SoundLevitationMedium"]
+  },
+  "periodic_table_2_group": "Harmonic Formers",
+  "periodic_table_2_period": "Resonance & Vibration Layer",
+  "status": "candidate_element"
+}

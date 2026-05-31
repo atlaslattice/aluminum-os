@@ -1,0 +1,45 @@
+{
+  "element_id": "PT2-E011-HIGH-Q-PHONONIC-RESONATOR",
+  "symbol": "HQR",
+  "name": "High-Q Phononic Resonator",
+  "category": "Precision Acoustic Storage & Filtering",
+  "12D_position": {
+    "d1_energy": 3,
+    "d2_compute": 5,
+    "d3_logistics": 7,
+    "d4_manufacturing": 8,
+    "d5_biology": 6,
+    "d6_water": 9,
+    "d7_habitat": 4,
+    "d8_health": 12,
+    "d9_learning": 5,
+    "d10_governance": 3,
+    "d11_security": 10,
+    "d12_expansion": 7
+  },
+  "description": "Engineered structure supporting extremely long-lived acoustic or mechanical resonances. Critical for quantum acoustics, precision sensing, and coherent phonon manipulation.",
+  "seeded_from": {
+    "conceptual": "Direct expansion of the Acoustic Resonance axis. Builds on E008 Acoustic Resonance Former with emphasis on quality factor and coherence.",
+    "related_elements": ["PT2-E008-ACOUSTIC-RESONANCE-FORMER"]
+  },
+  "properties": {
+    "quality_factor_Q": "> 10^9 achievable in engineered systems",
+    "coherence_time": "microseconds to seconds at low temperature",
+    "frequency_range": "kHz to GHz (and higher in optomechanics)",
+    "loss_mechanisms": "surface dissipation, material intrinsic loss, radiation"
+  },
+  "acoustic_resonance_properties": {
+    "mode_volume": "small (localized energy density high)",
+    "coupling_to_light": "strong in optomechanical implementations",
+    "cymatic_utility": "high for precision standing wave control"
+  },
+  "rainbow_phase": "Deep Resonant Teal - Sustained Vibration",
+  "yin_yang_polarity": "Strong Yin storage with precise Yang readout and control",
+  "ontology_mappings": {
+    "primary": "HighCoherenceAcousticResonator",
+    "secondary": ["QuantumAcousticInterface", "PrecisionPhononMemory"]
+  },
+  "periodic_table_2_group": "Harmonic Formers",
+  "periodic_table_2_period": "Resonance & Vibration Layer",
+  "status": "candidate_element"
+}

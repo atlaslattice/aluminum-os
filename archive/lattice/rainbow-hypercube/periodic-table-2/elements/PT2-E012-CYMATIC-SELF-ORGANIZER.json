@@ -1,0 +1,45 @@
+{
+  "element_id": "PT2-E012-CYMATIC-SELF-ORGANIZER",
+  "symbol": "CSO",
+  "name": "Cymatic Self-Organizer",
+  "category": "Emergent Acoustic Pattern Formation",
+  "12D_position": {
+    "d1_energy": 5,
+    "d2_compute": 4,
+    "d3_logistics": 6,
+    "d4_manufacturing": 9,
+    "d5_biology": 11,
+    "d6_water": 12,
+    "d7_habitat": 10,
+    "d8_health": 8,
+    "d9_learning": 7,
+    "d10_governance": 5,
+    "d11_security": 3,
+    "d12_expansion": 6
+  },
+  "description": "Matter or media that spontaneously organizes into complex, stable, and often functional patterns under acoustic or vibrational driving. Bridges physics, biology, and information through standing wave dynamics.",
+  "seeded_from": {
+    "conceptual": "Strong emphasis on acoustic resonance and pattern emergence. Links E008 with biological regeneration (D5) and learning/evolution (D9) layers.",
+    "related_elements": ["PT2-E008-ACOUSTIC-RESONANCE-FORMER"]
+  },
+  "properties": {
+    "pattern_complexity": "high (geometric, fractal, and biological-like forms)",
+    "driving_frequency_sensitivity": "sharp resonance peaks",
+    "self-stabilization": "emergent in many systems",
+    "information_capacity": "high (patterns can encode data)"
+  },
+  "acoustic_resonance_properties": {
+    "visible_macro_patterns": "common at audible frequencies in fluids and granular media",
+    "biological_analogy": "strong (morphogenesis, tissue organization)",
+    "control_parameters": "amplitude, frequency, geometry, fluid properties"
+  },
+  "rainbow_phase": "Vibrant Emergent Green - Pattern Genesis",
+  "yin_yang_polarity": "Dynamic interplay of receptive wave storage (Yin) and active pattern formation (Yang)",
+  "ontology_mappings": {
+    "primary": "EmergentAcousticPatternFormer",
+    "secondary": ["MorphogeneticResonator", "VibrationalInformationProcessor"]
+  },
+  "periodic_table_2_group": "Emergent / Complex",
+  "periodic_table_2_period": "Resonance & Vibration Layer",
+  "status": "candidate_element"
+}

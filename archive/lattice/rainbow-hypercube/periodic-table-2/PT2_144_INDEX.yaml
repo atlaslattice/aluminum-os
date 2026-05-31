@@ -18,19 +18,24 @@ seeded_elements:
   - PT2-E005-COMPOUNDING-ABUNDANCE
   - PT2-E006-LIVING-CANON-INTERFACE
 
-# Placeholder grid (Period 01–12 × Group 01–12)
-# Most entries are empty stubs ready for systematic population.
-# Only the 6 seeded elements above have full manifests as of this date.
+  # Batch 2 (harmonic-focused light & acoustic elements)
+  - PT2-E007-LIGHT-HARMONIC-CARRIER
+  - PT2-E008-ACOUSTIC-RESONANCE-FORMER
 
-grid:
-  P01:
-    G01: PT2-E001-12-LAYER-FLYWHEEL   # seeded
-    G02: null
-    # ...
-  P02:
-    G01: null
-    # ...
-  # (full 12x12 grid continues in implementation)
+  # Batch 3 (advanced optical & acoustic expansions)
+  - PT2-E009-SLOW-LIGHT-MEDIUM
+  - PT2-E010-PHOTONIC-TOPOLOGICAL-INSULATOR
+  - PT2-E011-HIGH-Q-PHONONIC-RESONATOR
+  - PT2-E012-CYMATIC-SELF-ORGANIZER
+  - PT2-E013-NONLINEAR-OPTICAL-HARMONIC-GENERATOR
+  - PT2-E014-ACOUSTIC-HOLOGRAPHIC-MEDIUM
+
+# Note: Full 12x12 grid population is in progress. Most cells remain as structured stubs awaiting specific seeding with receipted data or canon resonance.
+
+grid_status:
+  total_seeded: 14
+  optical_acoustic_focus: 8   # E007-E014
+  canon_seeded: 6
 
 special_axes:
   optical_color_harmonics: active
@@ -38,7 +43,7 @@ special_axes:
   12D_embedding: primary
 
 next_actions:
-  - Populate remaining 138 element stubs with 12D coordinates
-  - Add dedicated Optical/Color and Acoustic property manifests
-  - Begin seeding from receipted physics data + canon resonance
-  - Define isotopic families for high-interest elements
+  - Continue systematic population of the 12x12 matrix prioritizing harmonic properties
+  - Add detailed property manifests for new elements
+  - Begin isotopic variant families for high-interest harmonic elements
+  - Cross-link new elements back to TIER 0 nodes and edges

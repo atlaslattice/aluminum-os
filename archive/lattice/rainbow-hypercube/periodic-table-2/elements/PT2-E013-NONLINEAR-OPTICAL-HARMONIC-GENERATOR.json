@@ -1,0 +1,45 @@
+{
+  "element_id": "PT2-E013-NONLINEAR-OPTICAL-HARMONIC-GENERATOR",
+  "symbol": "NOHG",
+  "name": "Nonlinear Optical Harmonic Generator",
+  "category": "Frequency Conversion & Light Synthesis Primitive",
+  "12D_position": {
+    "d1_energy": 1,
+    "d2_compute": 9,
+    "d3_logistics": 4,
+    "d4_manufacturing": 6,
+    "d5_biology": 3,
+    "d6_water": 8,
+    "d7_habitat": 5,
+    "d8_health": 7,
+    "d9_learning": 6,
+    "d10_governance": 4,
+    "d11_security": 10,
+    "d12_expansion": 11
+  },
+  "description": "Materials exhibiting strong nonlinear optical response, enabling efficient generation of new frequencies (harmonics, sum/difference frequencies) from input light. Essential for wavelength conversion, quantum light sources, and optical computing.",
+  "seeded_from": {
+    "conceptual": "Direct exploitation of the Optical Harmonics axis. Extends E007 and E009 with active frequency transformation capabilities.",
+    "related_elements": ["PT2-E007-LIGHT-HARMONIC-CARRIER", "PT2-E009-SLOW-LIGHT-MEDIUM"]
+  },
+  "properties": {
+    "conversion_efficiency": "high (percent level in engineered media)",
+    "phase_matching": "critical (birefringent, quasi-phase-matched, etc.)",
+    "bandwidth": "narrow to ultra-broad (supercontinuum)",
+    "quantum_correlation_generation": "possible (squeezed light, entangled photons)"
+  },
+  "optical_harmonic_properties": {
+    "harmonic_orders": "2nd (SHG), 3rd (THG), 4th+, cascaded",
+    "color_expansion": "significant (broadens accessible spectrum)",
+    "coherent_control": "high with proper phase matching"
+  },
+  "rainbow_phase": "Brilliant Multi-Color - Frequency Alchemy",
+  "yin_yang_polarity": "Active Yang transformation of incoming light (Yin carrier)",
+  "ontology_mappings": {
+    "primary": "NonlinearFrequencyConverter",
+    "secondary": ["QuantumLightSource", "SpectralEngineer"]
+  },
+  "periodic_table_2_group": "Harmonic Carriers",
+  "periodic_table_2_period": "Transmission & Resonance Layer",
+  "status": "candidate_element"
+}

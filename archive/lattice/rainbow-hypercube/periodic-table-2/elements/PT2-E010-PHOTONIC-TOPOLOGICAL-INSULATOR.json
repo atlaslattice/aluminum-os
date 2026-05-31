@@ -1,0 +1,45 @@
+{
+  "element_id": "PT2-E010-PHOTONIC-TOPOLOGICAL-INSULATOR",
+  "symbol": "PTI",
+  "name": "Photonic Topological Insulator",
+  "category": "Protected Light Transport Primitive",
+  "12D_position": {
+    "d1_energy": 2,
+    "d2_compute": 8,
+    "d3_logistics": 9,
+    "d4_manufacturing": 5,
+    "d5_biology": 1,
+    "d6_water": 7,
+    "d7_habitat": 4,
+    "d8_health": 6,
+    "d9_learning": 5,
+    "d10_governance": 10,
+    "d11_security": 12,
+    "d12_expansion": 11
+  },
+  "description": "Material whose photonic band structure supports topologically protected edge states for light. Enables robust, backscattering-immune light transport even in the presence of defects or disorder.",
+  "seeded_from": {
+    "conceptual": "Combines Optical Harmonics (D6/D11) with strong Boundary/Security (D11) and Governance/Law (D10) dimensions. Extends E007 and the security layers of the 12D model.",
+    "related_elements": ["PT2-E007-LIGHT-HARMONIC-CARRIER", "PT2-E004-CONSTITUTIONAL-INVARIANTS"]
+  },
+  "properties": {
+    "topological_protection": "robust against defects and disorder",
+    "edge_state_conductance": "quantized (for photons: unidirectional propagation)",
+    "bulk_band_gap": "photonic",
+    "defect_tolerance": "extremely high"
+  },
+  "optical_harmonic_properties": {
+    "protected_modes": "helical or chiral edge states",
+    "harmonic_generation_at_edges": "enhanced due to field confinement",
+    "color_selectivity": "tunable via band structure engineering"
+  },
+  "rainbow_phase": "Protected Ultraviolet - Topological Light Shield",
+  "yin_yang_polarity": "Strong Yin boundary protection enabling stable Yang propagation",
+  "ontology_mappings": {
+    "primary": "TopologicallyProtectedOpticalTransport",
+    "secondary": ["RobustLightChannel", "PhotonicAnalogueOfQuantumSpinHall"]
+  },
+  "periodic_table_2_group": "Boundary / Membrane",
+  "periodic_table_2_period": "Resonance & Vibration Layer",
+  "status": "candidate_element"
+}
