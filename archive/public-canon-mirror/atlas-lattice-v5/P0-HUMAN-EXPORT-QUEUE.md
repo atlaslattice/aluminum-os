@@ -21,8 +21,8 @@ Once exported content is received, these will be upgraded from stubs → full mi
 |---|------|--------------|-----------|---------------|-----------------------|----------------------------|
 | 1 | Executive Summary | https://atlaslatticev5bot.manus.space/executive-summary | executive-summary.md | Export received & integrated – 2026-05-31 | Populated with content + initial claims | Primary entry point for high-level decision-makers. Clarity and conciseness paramount. |
 | 2 | Sovereign Dividend — Math | https://atlaslatticev5bot.manus.space/sovereign-dividend/math | sovereign-dividend/math.md | Export received & integrated – 2026-05-31 | Populated with full derivation, $83,820.90 calculation, and $15,761 note | Core economic engine. Verifiability of the math is non-negotiable. |
-| 3 | Sovereign Dividend — Projection | https://atlaslatticev5bot.manus.space/sovereign-dividend/projection | sovereign-dividend/projection.md | **Export received & integrated – 2026-05-31** | Populated with 22-year hockey-stick model ($83k → $1.867M) | Demonstrates long-term impact and growth trajectory. |
-| 4 | White Paper | https://atlaslatticev5bot.manus.space/white-paper | white-paper.md | Pending human export | Skeleton ready | Comprehensive technical and economic foundation. |
+| 3 | Sovereign Dividend — Projection | https://atlaslatticev5bot.manus.space/sovereign-dividend/projection | sovereign-dividend/projection.md | Export received & integrated – 2026-05-31 | Populated with 22-year hockey-stick model ($83k → $1.867M) | Demonstrates long-term impact and growth trajectory. |
+| 4 | White Paper | https://atlaslatticev5bot.manus.space/white-paper | white-paper.md | **Export received & integrated – 2026-05-31** | Populated with full document + structured section claims | Comprehensive technical and economic foundation. Central narrative artifact. |
 | 5 | Invariants | https://atlaslatticev5bot.manus.space/invariants | governance/invariants.md | Pending human export | Skeleton ready | Architectural backbone for trust and integrity (61 Invariants). |
 | 6 | New Deal 2.0 — Layers | https://atlaslatticev5bot.manus.space/new-deal-2.0/layers | new-deal-2.0/layers.md | Pending human export | Skeleton ready | Explains the compounding / 12-Layer Flywheel mechanism. |
 
@@ -61,10 +61,10 @@ Once exported content is received, these will be upgraded from stubs → full mi
 - Stubs created for all 6 TIER 0 pages: **COMPLETE**
 - Enhanced export instructions + reception areas: **COMPLETE**
 - SourceArtifact skeletons created: **COMPLETE**
-- Human exports received: **3 / 6** (Executive Summary, Math, and Projection — all integrated 2026-05-31)
+- Human exports received: **4 / 6** (Executive Summary, Math, Projection, and White Paper — all integrated 2026-05-31)
 
-**Next action:** Awaiting SingleFile export for `/white-paper` (next in queue).
+**Next action:** Awaiting SingleFile export for `/invariants` (next in queue).
 
 ---
-*Queue updated 2026-05-31 after third TIER 0 integration (22-year trajectory now live).*
+*Queue updated 2026-05-31 after fourth TIER 0 integration (White Paper completes the core narrative foundation).*
 *All work follows established AGENTS.md protocols — no premature canon.*
