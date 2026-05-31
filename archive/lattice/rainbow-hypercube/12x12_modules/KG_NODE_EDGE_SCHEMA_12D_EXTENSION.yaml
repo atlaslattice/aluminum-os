@@ -1,0 +1,89 @@
+# 12D Extension for KG_NODE_EDGE_SCHEMA v0.1
+# Version: 1.0
+# Date: 2026-05-31
+# Status: Candidate Extension (non-breaking)
+
+# This document defines how to add native 12D coordinate support
+# to the existing KG_NODE_EDGE_SCHEMA without breaking compatibility.
+
+# ============================================
+# 1. New Top-Level Field
+# ============================================
+
+# Add this optional field to the root of any schema document
+# that wants to declare 12D awareness:
+
+12d_coordinate_system:
+  version: "1.0"
+  dimensionality: 12
+  coordinate_type: "12-tuple"
+  range: [0, 11]
+  reference: "archive/lattice/rainbow-hypercube/12x12_modules/12D_SCHEMA_v1.0.yaml"
+
+# ============================================
+# 2. New Property for All Node Types
+# ============================================
+
+# Add this property to every node type (SourceArtifact, Claim, CanonCandidate, etc.)
+
+12d_coordinate:
+  type: object
+  required:
+    - d1_energy
+    - d2_compute
+    - d3_logistics
+    - d4_manufacturing
+    - d5_biology
+    - d6_water
+    - d7_habitat
+    - d8_health
+    - d9_learning
+    - d10_governance
+    - d11_security
+    - d12_expansion
+  properties:
+    d1_energy: { type: integer, minimum: 0, maximum: 11 }
+    d2_compute: { type: integer, minimum: 0, maximum: 11 }
+    # ... (repeat for D3-D12)
+    projection_notes:
+      type: string
+      description: "Optional notes on which 3-axis projections this coordinate is optimized for"
+    rainbow_phase:
+      type: string
+    yin_yang_polarity:
+      type: string   # or object for vector form
+
+# ============================================
+# 3. New Property for Edges (Optional but Recommended)
+# ============================================
+
+# Edges can carry a "resonance vector" in 12D space
+
+12d_resonance:
+  type: object
+  description: "How this edge connects two nodes across 12D dimensions"
+  properties:
+    primary_dimensions: { type: array, items: { type: string } }
+    strength: { type: number, minimum: 0, maximum: 1 }
+    harmonic_character: { type: string }
+
+# ============================================
+# 4. Backward Compatibility
+# ============================================
+
+# All 12D fields are optional.
+# Existing nodes/edges without 12D data remain fully valid.
+# Tools can gradually adopt 12D as they are ready.
+
+# ============================================
+# 5. Recommended New Node Type (Optional)
+# ============================================
+
+TwelveDCoordinateReference:
+  description: "A lightweight node whose primary purpose is to carry a 12D address and link to other artifacts"
+  required_fields:
+    - node_id
+    - 12d_coordinate
+    - linked_artifact_id
+
+# This allows very clean separation when you want pure coordinate references.
