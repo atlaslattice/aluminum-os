@@ -1,0 +1,39 @@
+{
+  "node_id": "INVARIANTS-2026-05-31",
+  "type": "ConstitutionalBackbone",
+  "title": "Constitutional Invariants (61 Invariants)",
+  "12D_coordinates": {
+    "d1_energy": 2,
+    "d2_compute": 4,
+    "d3_logistics": 3,
+    "d4_manufacturing": 2,
+    "d5_biology": 1,
+    "d6_water": 1,
+    "d7_habitat": 6,
+    "d8_health": 5,
+    "d9_learning": 8,
+    "d10_governance": 12,
+    "d11_security": 11,
+    "d12_expansion": 7,
+    "projection_notes": "GrokBrain: E11 C01 D11. Extremely high D10 (Governance/Law) and D11 (Security/Boundary). This is the structural integrity layer of the entire system."
+  },
+  "rainbow_phase": "Deep Ultraviolet - Structural Integrity",
+  "yin_yang_polarity": "Very strong Yin (preservation, boundary, law) with necessary Yang anchors",
+  "ontology_mappings": {
+    "primary": "ArchitecturalInvariantSet",
+    "secondary": ["HumanSovereignty", "CalibrationFeeCap", "GovernanceAllocationRules"],
+    "unified_ontology_reference": "manus-artifacts/archive/architecture/ontology/ATLAS_LATTICE_UNIFIED_ONTOLOGY_CANDIDATE_v0_3_3_2026-05-21.md"
+  },
+  "periodic_table_2_element": "Constitutional Skeleton (proposed)",
+  "provenance": {
+    "source_mirror": "archive/public-canon-mirror/atlas-lattice-v5/governance/invariants.md"
+  },
+  "cross_references": [
+    "CANONICAL_WEBSITE-ATLAS-PRIME-2026-05-31",
+    "WHITE_PAPER",
+    "SOVEREIGN_DIVIDEND_MATH",
+    "NEW_DEAL_2_LAYERS"
+  ],
+  "krakoa_node_residence": "Krakoa Node Zero",
+  "status": "Highest structural integrity node - TIER 0"
+}

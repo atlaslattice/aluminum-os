@@ -1,0 +1,41 @@
+{
+  "node_id": "WHITE_PAPER-2026-05-31",
+  "type": "ComprehensiveFoundationDocument",
+  "title": "The Atlas Lattice: A Constitutional Infrastructure Operating System (White Paper)",
+  "12D_coordinates": {
+    "d1_energy": 6,
+    "d2_compute": 7,
+    "d3_logistics": 5,
+    "d4_manufacturing": 7,
+    "d5_biology": 5,
+    "d6_water": 4,
+    "d7_habitat": 8,
+    "d8_health": 6,
+    "d9_learning": 10,
+    "d10_governance": 12,
+    "d11_security": 9,
+    "d12_expansion": 11,
+    "projection_notes": "GrokBrain: E09 C05 D10. Very high D10 (Governance) and D12 (Expansion). Strong across synthesis layers (D9, D4, D7). This is the integrative narrative document."
+  },
+  "rainbow_phase": "Full Spectrum Synthesis - Core Narrative",
+  "yin_yang_polarity": "Highly balanced with slight Yang bias (public synthesis and call to action)",
+  "ontology_mappings": {
+    "primary": "MasterNarrativeSynthesis",
+    "secondary": ["ConstitutionalArchitecture", "EconomicEngineOverview", "GlobalDeploymentModel"],
+    "unified_ontology_reference": "manus-artifacts/archive/architecture/ontology/ATLAS_LATTICE_UNIFIED_ONTOLOGY_CANDIDATE_v0_3_3_2026-05-21.md"
+  },
+  "periodic_table_2_element": "Integrative Canon Narrative (proposed)",
+  "provenance": {
+    "source_mirror": "archive/public-canon-mirror/atlas-lattice-v5/white-paper.md"
+  },
+  "cross_references": [
+    "CANONICAL_WEBSITE-ATLAS-PRIME-2026-05-31",
+    "SOVEREIGN_DIVIDEND_MATH",
+    "SOVEREIGN_DIVIDEND_PROJECTION",
+    "INVARIANTS",
+    "NEW_DEAL_2_LAYERS",
+    "EXECUTIVE_SUMMARY"
+  ],
+  "krakoa_node_residence": "Krakoa Node Zero",
+  "status": "High-signal comprehensive foundation - TIER 0"
+}

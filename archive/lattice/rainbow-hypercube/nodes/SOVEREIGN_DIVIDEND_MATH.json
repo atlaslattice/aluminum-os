@@ -1,0 +1,40 @@
+{
+  "node_id": "SOVEREIGN_DIVIDEND_MATH-2026-05-31",
+  "type": "CoreEconomicClaim",
+  "title": "Sovereign Dividend - Derivation Math",
+  "12D_coordinates": {
+    "d1_energy": 4,
+    "d2_compute": 9,
+    "d3_logistics": 3,
+    "d4_manufacturing": 2,
+    "d5_biology": 1,
+    "d6_water": 2,
+    "d7_habitat": 5,
+    "d8_health": 4,
+    "d9_learning": 7,
+    "d10_governance": 12,
+    "d11_security": 8,
+    "d12_expansion": 11,
+    "projection_notes": "GrokBrain: E10 C03 D11 (core economic engine). High D10 (governance law of the fee) + D12 (scaling potential) + D2 (mathematical derivation)"
+  },
+  "rainbow_phase": "Deep Gold - Economic Sovereignty",
+  "yin_yang_polarity": "Strong Yang (generative value creation) with Yin foundation (constitutional cap)",
+  "ontology_mappings": {
+    "primary": "SovereignEconomicLaw",
+    "secondary": ["CalibrationFeeMechanism", "DividendDerivation", "ValueDistributionPrinciple"],
+    "unified_ontology_reference": "manus-artifacts/archive/architecture/ontology/ATLAS_LATTICE_UNIFIED_ONTOLOGY_CANDIDATE_v0_3_3_2026-05-21.md"
+  },
+  "periodic_table_2_element": "Economic Sovereignty Engine (proposed)",
+  "provenance": {
+    "source_mirror": "archive/public-canon-mirror/atlas-lattice-v5/sovereign-dividend/math.md"
+  },
+  "cross_references": [
+    "CANONICAL_WEBSITE-ATLAS-PRIME-2026-05-31",
+    "SOVEREIGN_DIVIDEND_PROJECTION",
+    "WHITE_PAPER",
+    "INVARIANTS",
+    "NEW_DEAL_2_LAYERS"
+  ],
+  "krakoa_node_residence": "Krakoa Node Zero",
+  "status": "High-signal quantitative core - TIER 0"
+}

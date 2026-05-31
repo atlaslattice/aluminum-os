@@ -1,0 +1,39 @@
+{
+  "node_id": "SOVEREIGN_DIVIDEND_PROJECTION-2026-05-31",
+  "type": "LongHorizonTrajectory",
+  "title": "Sovereign Dividend - 22-Year Projection",
+  "12D_coordinates": {
+    "d1_energy": 5,
+    "d2_compute": 8,
+    "d3_logistics": 4,
+    "d4_manufacturing": 6,
+    "d5_biology": 3,
+    "d6_water": 2,
+    "d7_habitat": 7,
+    "d8_health": 5,
+    "d9_learning": 9,
+    "d10_governance": 10,
+    "d11_security": 6,
+    "d12_expansion": 12,
+    "projection_notes": "GrokBrain: E10 C03 D12. Extremely high D12 (Expansion/Transcendence) - the hockey-stick future trajectory. Strong D10 and D9."
+  },
+  "rainbow_phase": "Ascending Spectrum - Future Abundance",
+  "yin_yang_polarity": "Strong Yang trajectory with balanced foundational Yin support",
+  "ontology_mappings": {
+    "primary": "AbundanceTrajectory",
+    "secondary": ["CompoundingValue", "FutureStateModeling", "NonInflationaryGrowth"],
+    "unified_ontology_reference": "manus-artifacts/archive/architecture/ontology/ATLAS_LATTICE_UNIFIED_ONTOLOGY_CANDIDATE_v0_3_3_2026-05-21.md"
+  },
+  "periodic_table_2_element": "Exponential Abundance Vector (proposed)",
+  "provenance": {
+    "source_mirror": "archive/public-canon-mirror/atlas-lattice-v5/sovereign-dividend/projection.md"
+  },
+  "cross_references": [
+    "CANONICAL_WEBSITE-ATLAS-PRIME-2026-05-31",
+    "SOVEREIGN_DIVIDEND_MATH",
+    "WHITE_PAPER",
+    "NEW_DEAL_2_LAYERS"
+  ],
+  "krakoa_node_residence": "Krakoa Node Zero",
+  "status": "High-signal long-horizon artifact - TIER 0"
+}

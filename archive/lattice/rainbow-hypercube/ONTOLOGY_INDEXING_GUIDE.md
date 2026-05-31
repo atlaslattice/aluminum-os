@@ -1,7 +1,7 @@
 ---
 title: "Ontology Indexing Guide - Rainbow Hypercube (12D)"
 status: ACTIVE_WORKING
-version: 0.1
+version: 0.2
 ---
 
 # Ontology Indexing Guide
@@ -17,36 +17,29 @@ This turns the canon into "functionally source code" — structured, addressable
 For every artifact:
 
 1. **Assign 12D Coordinates**
-   - Full 12-tuple in the 12D space (D1–D12 as defined in 12D_COORDINATE_SYSTEM.md)
-   - Also record the projection(s) used (e.g. GrokBrain E/C/D, Operational X/Y/Z)
+   - Full 12-tuple in the 12D space (D1–D12)
+   - Record projection(s) used
 
 2. **Map to Ontology**
-   - Reference the ATLAS_LATTICE_UNIFIED_ONTOLOGY_CANDIDATE (and future Periodic Table 2.0 elements)
-   - Assign primary + secondary ontology classes
+   - Reference ATLAS_LATTICE_UNIFIED_ONTOLOGY_CANDIDATE + future Periodic Table 2.0 elements
 
 3. **Apply Rainbow + Polarity**
-   - Rainbow phase / spectrum assignment
-   - Yin-Yang polarity (or vector)
 
-4. **Generate Machine-Readable Manifest**
-   - YAML/JSON node file (this is the "source code" version)
-   - Include all coordinates, ontology links, provenance, and cross-references
+4. **Generate Machine-Readable Manifest** (YAML/JSON)
 
 5. **Wire Edges**
-   - Explicit bidirectional links to related artifacts (especially other TIER 0 items and the Canonical Website)
 
-## Current Target: TIER 0 Canon
+## Status: First Batch Complete (2026-05-31)
 
-The six fully human-exported artifacts + the Canonical Website itself are the first batch to be indexed at high fidelity.
+**TIER 0 Canon fully indexed** (6 artifacts + Canonical Website as root hub).
 
-## References
+All manifests now live in `nodes/` with consistent 12D + ontology structure.
 
-- 12D_COORDINATE_SYSTEM.md (foundational 12D model)
-- INTEGRATION_BRIDGE.md
-- manus-artifacts: ATLAS_LATTICE_UNIFIED_ONTOLOGY_CANDIDATE_v0_3_3
-- manus-artifacts: OPERATIONAL_KNOWLEDGE_LATTICE_12x12x12
-- manus-artifacts: PERIODIC_TABLE_2_HYPERCUBE_...
+Next recommended steps:
+- Generate edge files between these nodes
+- Expand to next priority pages from the public canon mirror
+- Begin seeding Periodic Table 2.0 element definitions from this batch
 
 ---
 
-*Indexing is now active. All new work should follow this guide.*
+*First complete batch indexed. The canon now has a 12D ontology spine.*
