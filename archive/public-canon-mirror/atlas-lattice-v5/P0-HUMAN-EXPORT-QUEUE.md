@@ -19,8 +19,8 @@ Once exported content is received, these will be upgraded from stubs → full mi
 
 | # | Page | Original URL | Stub Path | Export Status | SourceArtifact Status | Notes / Priority Rationale |
 |---|------|--------------|-----------|---------------|-----------------------|----------------------------|
-| 1 | Executive Summary | https://atlaslatticev5bot.manus.space/executive-summary | executive-summary.md | **Export received & integrated – 2026-05-31** | Populated with content + initial claims | Primary entry point for high-level decision-makers. Clarity and conciseness paramount. |
-| 2 | Sovereign Dividend — Math | https://atlaslatticev5bot.manus.space/sovereign-dividend/math | sovereign-dividend/math.md | Pending human export | Skeleton ready | Core economic engine. Verifiability of the math is non-negotiable. |
+| 1 | Executive Summary | https://atlaslatticev5bot.manus.space/executive-summary | executive-summary.md | Export received & integrated – 2026-05-31 | Populated with content + initial claims | Primary entry point for high-level decision-makers. Clarity and conciseness paramount. |
+| 2 | Sovereign Dividend — Math | https://atlaslatticev5bot.manus.space/sovereign-dividend/math | sovereign-dividend/math.md | **Export received & integrated – 2026-05-31** | Populated with full derivation, $83,820.90 calculation, and $15,761 note | Core economic engine. Verifiability of the math is non-negotiable. |
 | 3 | Sovereign Dividend — Projection | https://atlaslatticev5bot.manus.space/sovereign-dividend/projection | sovereign-dividend/projection.md | Pending human export | Skeleton ready | Demonstrates long-term impact and growth trajectory. |
 | 4 | White Paper | https://atlaslatticev5bot.manus.space/white-paper | white-paper.md | Pending human export | Skeleton ready | Comprehensive technical and economic foundation. |
 | 5 | Invariants | https://atlaslatticev5bot.manus.space/invariants | governance/invariants.md | Pending human export | Skeleton ready | Architectural backbone for trust and integrity (61 Invariants). |
@@ -50,7 +50,7 @@ Once exported content is received, these will be upgraded from stubs → full mi
 **After integration:**
 1. Update `mirror_status` in frontmatter to `full-export-integrated-YYYY-MM-DD`.
 2. Populate the corresponding `SRC-*.md` SourceArtifact in `sources/`.
-3. Begin initial ParsedPacket / Claim extraction.
+3. Begin initial ParsedPacket / Claim extraction (especially quantitative claims).
 4. Update this queue with completion date.
 5. Propose lattice node population in GROKBRAIN_S3_DREAM_MEMORY_LATTICE.
 
@@ -61,10 +61,10 @@ Once exported content is received, these will be upgraded from stubs → full mi
 - Stubs created for all 6 TIER 0 pages: **COMPLETE**
 - Enhanced export instructions + reception areas: **COMPLETE**
 - SourceArtifact skeletons created: **COMPLETE**
-- Human exports received: **1 / 6** (Executive Summary — integrated 2026-05-31)
+- Human exports received: **2 / 6** (Executive Summary + Sovereign Dividend Math — both integrated 2026-05-31)
 
-**Next action:** Awaiting SingleFile export for `/sovereign-dividend/math` (next in queue).
+**Next action:** Awaiting SingleFile export for `/sovereign-dividend/projection` (next in queue).
 
 ---
-*Queue updated 2026-05-31 after first TIER 0 integration.*
+*Queue updated 2026-05-31 after second TIER 0 integration (Math engine now live).*
 *All work follows established AGENTS.md protocols — no premature canon.*
