@@ -1,0 +1,42 @@
+# 12D Coordinate Schema v1.0
+# Rainbow Hypercube / Periodic Table 2.0 Knowledge Graph
+
+schema_version: "1.0"
+date: "2026-05-31"
+status: candidate
+
+coordinate:
+  type: "12-tuple"
+  range: [0, 11]          # discrete integer positions (can be normalized to [0.0, 1.0])
+  dimensions:
+    D1:  { name: "Foundation / Energy Substrate",    description: "Physical base, mass-energy, vacuum, resource base" }
+    D2:  { name: "Information / Compute",              description: "Signal, state space, entropy, quantum information" }
+    D3:  { name: "Flow / Logistics",                    description: "Transport, conductivity, movement of matter/energy/information" }
+    D4:  { name: "Form / Embodiment",                   description: "Structure formation, crystallization, materialization" }
+    D5:  { name: "Regeneration / Life Systems",         description: "Self-organization, healing, replication, biological processes" }
+    D6:  { name: "Medium / Transmission",               description: "Carrier waves, propagation, refractive behavior" }
+    D7:  { name: "Habitat / Organized Space",           description: "Shelter, spatial organization, environmental structure" }
+    D8:  { name: "Coherence / Integrity",               description: "Stability, resonance quality, thermal and quantum coherence" }
+    D9:  { name: "Evolution / Learning",                description: "Adaptation, pattern recognition, cumulative improvement" }
+    D10: { name: "Governance / Law",                    description: "Rules, symmetries, conservation laws, authority structures" }
+    D11: { name: "Boundary / Security",                 description: "Membranes, protection, topological isolation" }
+    D12: { name: "Transcendence / Emergence",           description: "Higher-order behavior, phase shifts, long-term scaling" }
+
+metadata_fields:
+  - rainbow_phase
+  - yin_yang_polarity          # scalar or vector
+  - periodic_table_2_group
+  - periodic_table_2_period
+  - projection:                  # optional
+      type: string             # e.g. "GrokBrain-ECD", "Operational-XYZ", "PT2-12x12"
+      coordinates: array
+
+validation_rules:
+  - All 12 dimensions must be present for a valid 12D coordinate.
+  - Coordinates outside [0,11] are invalid in discrete mode.
+  - Resonance or proximity in any projection does NOT imply authority or canon status.
+  - The 12D coordinate is canonical; all lower-dimensional views are derived projections.
+
+notes:
+  - This schema is the single source of truth for 12D addressing in the Rainbow Hypercube knowledge graph.
+  - Future versions may introduce continuous coordinates or additional metadata.
