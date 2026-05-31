@@ -1,0 +1,41 @@
+{
+  "element_id": "PT2-E006-LIVING-CANON-INTERFACE",
+  "symbol": "LCI",
+  "name": "Living Public Canon Interface (Atlas Prime)",
+  "category": "Embodied Knowledge Surface",
+  "12D_position": {
+    "d1_energy": 3,
+    "d2_compute": 9,
+    "d3_logistics": 6,
+    "d4_manufacturing": 4,
+    "d5_biology": 5,
+    "d6_water": 6,
+    "d7_habitat": 8,
+    "d8_health": 7,
+    "d9_learning": 10,
+    "d10_governance": 11,
+    "d11_security": 3,
+    "d12_expansion": 10
+  },
+  "description": "The live, publicly accessible website (and its resident AI, Atlas Prime) that serves as the primary, real-time embodiment and interface to the entire Atlas Lattice public canon.",
+  "seeded_from": {
+    "nodes": ["CANONICAL_WEBSITE-ATLAS-PRIME-2026-05-31", "WHITE_PAPER-2026-05-31"],
+    "edges": ["edge-t0-001", "edge-t0-003", "edge-t0-015"]
+  },
+  "properties": {
+    "access_model": "free_public_website_plus_api",
+    "embodiment_type": "living_ai_interface",
+    "update_character": "continuous_and_versioned",
+    "governance_integration": "direct_human_root_tethered"
+  },
+  "rainbow_phase": "Central White / Sovereign Hub",
+  "yin_yang_polarity": "Balanced interface between deep Yin substrate (canon) and active Yang presence (public access + AI)",
+  "ontology_mappings": {
+    "primary": "LivingPublicCanonInterface",
+    "unified_ontology_reference": "manus-artifacts/archive/architecture/ontology/ATLAS_LATTICE_UNIFIED_ONTOLOGY_CANDIDATE_v0_3_3_2026-05-21.md"
+  },
+  "periodic_table_2_group": "Embodied Knowledge Surfaces",
+  "periodic_table_2_period": "Interface Layer",
+  "provenance": "Directly from the Canonical Website node and its central hub role across the TIER 0 edges.",
+  "status": "candidate_element"
+}

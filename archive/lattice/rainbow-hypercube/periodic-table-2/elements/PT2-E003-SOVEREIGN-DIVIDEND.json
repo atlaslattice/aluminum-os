@@ -1,0 +1,42 @@
+{
+  "element_id": "PT2-E003-SOVEREIGN-DIVIDEND",
+  "symbol": "SD",
+  "name": "Sovereign Dividend",
+  "category": "Citizen Value Return Primitive",
+  "12D_position": {
+    "d1_energy": 4,
+    "d2_compute": 7,
+    "d3_logistics": 3,
+    "d4_manufacturing": 3,
+    "d5_biology": 2,
+    "d6_water": 2,
+    "d7_habitat": 5,
+    "d8_health": 4,
+    "d9_learning": 8,
+    "d10_governance": 11,
+    "d11_security": 7,
+    "d12_expansion": 12
+  },
+  "description": "The direct, earned return of efficiency gains to every citizen via the constitutional Calibration Fee. Not UBI — earned revenue from the infrastructure that generates new value.",
+  "seeded_from": {
+    "nodes": ["SOVEREIGN_DIVIDEND_MATH-2026-05-31", "SOVEREIGN_DIVIDEND_PROJECTION-2026-05-31", "INVARIANTS-2026-05-31"],
+    "edges": ["edge-t0-006", "edge-t0-008"]
+  },
+  "properties": {
+    "distribution_model": "per_capita_earned_revenue",
+    "baseline_annual_value": 83820.90,
+    "projected_22yr_value": 1867000,
+    "inflation_character": "non_inflationary"
+  },
+  "rainbow_phase": "Ascending Gold - Citizen Abundance",
+  "yin_yang_polarity": "Strong generative Yang returning value to the sovereign individual (Yin root)",
+  "ontology_mappings": {
+    "primary": "CitizenValueReturn",
+    "secondary": ["EarnedRevenueMechanism", "AbundanceDistribution"],
+    "unified_ontology_reference": "manus-artifacts/archive/architecture/ontology/ATLAS_LATTICE_UNIFIED_ONTOLOGY_CANDIDATE_v0_3_3_2026-05-21.md"
+  },
+  "periodic_table_2_group": "Sovereign Value Distribution",
+  "periodic_table_2_period": "Economic Primitives",
+  "provenance": "Derived from the Math + Projection nodes and their grounding relationship to Invariants (INV-56).",
+  "status": "candidate_element"
+}

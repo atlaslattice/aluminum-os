@@ -1,0 +1,52 @@
+artifact_id: PT2-BATCH-1-INDEX-2026-05-31
+status: candidate
+canon_status: not_canon
+purpose: Index and summary of the first batch of Periodic Table 2.0 elements seeded directly from the TIER 0 12D subgraph (nodes + edges).
+
+elements:
+  - element_id: PT2-E001-12-LAYER-FLYWHEEL
+    symbol: F12
+    name: 12-Layer Flywheel
+    group: Generative Mechanisms
+    period: Core Infrastructure
+
+  - element_id: PT2-E002-CALIBRATION-FEE
+    symbol: CF5
+    name: 5% Calibration Fee (INV-56)
+    group: Economic Governance Primitives
+    period: Constitutional Mechanisms
+
+  - element_id: PT2-E003-SOVEREIGN-DIVIDEND
+    symbol: SD
+    name: Sovereign Dividend
+    group: Sovereign Value Distribution
+    period: Economic Primitives
+
+  - element_id: PT2-E004-CONSTITUTIONAL-INVARIANTS
+    symbol: I61
+    name: Constitutional Invariant Set (61 Invariants)
+    group: Governance Integrity Primitives
+    period: Constitutional Foundations
+
+  - element_id: PT2-E005-COMPOUNDING-ABUNDANCE
+    symbol: CA
+    name: Compounding Abundance Engine
+    group: Emergent Dynamics
+    period: Value Evolution
+
+  - element_id: PT2-E006-LIVING-CANON-INTERFACE
+    symbol: LCI
+    name: Living Public Canon Interface (Atlas Prime)
+    group: Embodied Knowledge Surfaces
+    period: Interface Layer
+
+batch_characteristics:
+  total_elements: 6
+  seeding_source: TIER0 nodes + edges (12D Rainbow Hypercube subgraph)
+  date_generated: 2026-05-31
+  next_recommended: Expand to additional public canon pages and begin cross-domain element families
+
+notes:
+  - These six elements represent the core generative, constitutional, value-distribution, and interface primitives of the Atlas Lattice.
+  - They form a tightly interconnected cluster in the 12D space.
+  - Future batches should derive higher-order elements and families from the relationships between these.

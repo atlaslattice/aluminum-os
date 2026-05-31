@@ -1,0 +1,42 @@
+{
+  "element_id": "PT2-E005-COMPOUNDING-ABUNDANCE",
+  "symbol": "CA",
+  "name": "Compounding Abundance Engine",
+  "category": "Emergent Value Dynamic",
+  "12D_position": {
+    "d1_energy": 7,
+    "d2_compute": 8,
+    "d3_logistics": 9,
+    "d4_manufacturing": 10,
+    "d5_biology": 6,
+    "d6_water": 5,
+    "d7_habitat": 6,
+    "d8_health": 5,
+    "d9_learning": 9,
+    "d10_governance": 8,
+    "d11_security": 4,
+    "d12_expansion": 12
+  },
+  "description": "The emergent property arising from the interaction of the 12-Layer Flywheel, the Calibration Fee mechanism, and the Sovereign Dividend. Creates non-inflationary, exponentially growing citizen value over time.",
+  "seeded_from": {
+    "nodes": ["SOVEREIGN_DIVIDEND_PROJECTION-2026-05-31", "NEW_DEAL_2_LAYERS-2026-05-31", "SOVEREIGN_DIVIDEND_MATH-2026-05-31"],
+    "edges": ["edge-t0-006", "edge-t0-010"]
+  },
+  "properties": {
+    "growth_character": "hockey_stick_exponential",
+    "baseline_22yr_projection": 1867000,
+    "inflation_impact": "deflationary_on_essentials",
+    "driver_layers": "all_12"
+  },
+  "rainbow_phase": "Ascending Full Spectrum - Emergent Abundance",
+  "yin_yang_polarity": "Dynamic synthesis of generative Yang (flywheel) and structural Yin (invariants + fee)",
+  "ontology_mappings": {
+    "primary": "EmergentAbundanceDynamic",
+    "secondary": ["NonInflationaryValueCreation", "LongHorizonCompounding"],
+    "unified_ontology_reference": "manus-artifacts/archive/architecture/ontology/ATLAS_LATTICE_UNIFIED_ONTOLOGY_CANDIDATE_v0_3_3_2026-05-21.md"
+  },
+  "periodic_table_2_group": "Emergent Dynamics",
+  "periodic_table_2_period": "Value Evolution",
+  "provenance": "Synthesized from the tight cluster of Math, Projection, and Layers nodes plus their interconnecting edges.",
+  "status": "candidate_element"
+}

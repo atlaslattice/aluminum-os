@@ -1,0 +1,42 @@
+{
+  "element_id": "PT2-E004-CONSTITUTIONAL-INVARIANTS",
+  "symbol": "I61",
+  "name": "Constitutional Invariant Set (61 Invariants)",
+  "category": "Architectural Integrity Layer",
+  "12D_position": {
+    "d1_energy": 2,
+    "d2_compute": 3,
+    "d3_logistics": 2,
+    "d4_manufacturing": 1,
+    "d5_biology": 1,
+    "d6_water": 1,
+    "d7_habitat": 5,
+    "d8_health": 4,
+    "d9_learning": 7,
+    "d10_governance": 12,
+    "d11_security": 12,
+    "d12_expansion": 6
+  },
+  "description": "The 61 structural invariants (30 ratified + 31 proposed) that make corruption, capture, and deviation architecturally impossible rather than merely illegal. The load-bearing skeleton of the entire system.",
+  "seeded_from": {
+    "nodes": ["INVARIANTS-2026-05-31"],
+    "edges": ["edge-t0-004", "edge-t0-008", "edge-t0-016", "edge-t0-017"]
+  },
+  "properties": {
+    "total_count": 61,
+    "ratified": 30,
+    "proposed": 31,
+    "enforcement_level": "architectural_hardware_protocol",
+    "key_examples": ["INV-1 Human Sovereignty", "INV-56 Calibration Fee Cap"]
+  },
+  "rainbow_phase": "Deep Ultraviolet - Structural Integrity",
+  "yin_yang_polarity": "Extremely strong Yin (preservation and boundary) with targeted Yang enforcement points",
+  "ontology_mappings": {
+    "primary": "ArchitecturalInvariantSet",
+    "unified_ontology_reference": "manus-artifacts/archive/architecture/ontology/ATLAS_LATTICE_UNIFIED_ONTOLOGY_CANDIDATE_v0_3_3_2026-05-21.md"
+  },
+  "periodic_table_2_group": "Governance Integrity Primitives",
+  "periodic_table_2_period": "Constitutional Foundations",
+  "provenance": "Directly from the INVARIANTS node and its many outgoing structural edges.",
+  "status": "candidate_element"
+}

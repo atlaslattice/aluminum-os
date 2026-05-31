@@ -1,0 +1,41 @@
+{
+  "element_id": "PT2-E001-12-LAYER-FLYWHEEL",
+  "symbol": "F12",
+  "name": "12-Layer Flywheel",
+  "category": "Compounding Mechanism",
+  "12D_position": {
+    "d1_energy": 9,
+    "d2_compute": 10,
+    "d3_logistics": 11,
+    "d4_manufacturing": 12,
+    "d5_biology": 8,
+    "d6_water": 7,
+    "d7_habitat": 6,
+    "d8_health": 5,
+    "d9_learning": 9,
+    "d10_governance": 7,
+    "d11_security": 4,
+    "d12_expansion": 12
+  },
+  "description": "The self-reinforcing, 12-layer compounding engine that turns efficiencies in one domain into cascading value across all others. The core generative mechanism of the Atlas Lattice.",
+  "seeded_from": {
+    "nodes": ["NEW_DEAL_2_LAYERS-2026-05-31"],
+    "edges": ["edge-t0-009", "edge-t0-010"]
+  },
+  "properties": {
+    "layer_count": 12,
+    "compounding_type": "cascading_efficiency",
+    "output": "exponential_value_creation",
+    "governance_integration": "invariant_enforced"
+  },
+  "rainbow_phase": "Full Dynamic Rainbow - The Engine",
+  "yin_yang_polarity": "Highly dynamic bidirectional flow between layers",
+  "ontology_mappings": {
+    "primary": "CompoundingEfficiencyEngine",
+    "unified_ontology_reference": "manus-artifacts/archive/architecture/ontology/ATLAS_LATTICE_UNIFIED_ONTOLOGY_CANDIDATE_v0_3_3_2026-05-21.md"
+  },
+  "periodic_table_2_group": "Generative Mechanisms",
+  "periodic_table_2_period": "Core Infrastructure",
+  "provenance": "Derived from TIER 0 node NEW_DEAL_2_LAYERS and its outgoing edges to economic nodes. Directly embodies the 12 ontological dimensions.",
+  "status": "candidate_element"
+}

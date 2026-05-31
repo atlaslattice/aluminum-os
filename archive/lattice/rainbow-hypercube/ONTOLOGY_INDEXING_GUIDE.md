@@ -1,7 +1,7 @@
 ---
 title: "Ontology Indexing Guide - Rainbow Hypercube (12D)"
 status: ACTIVE_WORKING
-version: 0.3
+version: 0.4
 ---
 
 # Ontology Indexing Guide
@@ -32,30 +32,36 @@ For every artifact:
    - YAML/JSON node file (this is the "source code" version)
    - Include all coordinates, ontology links, provenance, and cross-references
 
-5. **Wire Edges** (new step as of 2026-05-31)
+5. **Wire Edges**
    - Externalize implicit cross_references into first-class typed edges
    - See `edges/TIER0_EDGES.yaml` for the first batch
-   - Follow the format from KG_NODE_EDGE_SEED_*.yaml (edge_id, from, to, edge_type, status)
 
-## Current Status: First Batch Complete (2026-05-31)
+6. **Derive Periodic Table 2.0 Elements** (new as of this batch)
+   - Identify high-signal archetypal primitives that emerge from clusters of nodes + edges
+   - Create structured element manifests with 12D positioning and ontology tags
+   - See `periodic-table-2/` for the first seeded batch
 
-**TIER 0 Canon fully indexed** (6 artifacts + Canonical Website as root hub).
+## Current Status: First PT2 Batch Complete (2026-05-31)
 
-- All node manifests created in `nodes/`
-- Full edge layer created in `edges/TIER0_EDGES.yaml`
+**TIER 0 Canon nodes + edges + first Periodic Table 2.0 elements** are now live.
+
+- 6 node manifests in `nodes/`
+- Full edge layer in `edges/TIER0_EDGES.yaml`
+- First 6 Periodic Table 2.0 elements in `periodic-table-2/elements/`
 
 Next recommended steps:
-- Expand indexing to the next priority pages from the public canon mirror
-- Begin defining the first Periodic Table 2.0 elements seeded from these relationships
-- Add more Rainbow-specific edge types as needed
+- Expand to more public canon pages
+- Begin synthesizing higher-order PT2 element families from the relationships
+- Cross-link with other major archives using the same 12D + ontology framework
 
 ## References
 
 - 12D_COORDINATE_SYSTEM.md
 - INTEGRATION_BRIDGE.md
-- edges/TIER0_EDGES.yaml (the output of this step)
-- manus-artifacts KG_NODE_EDGE_SCHEMA_v0.1.yaml (for base edge_types)
+- edges/TIER0_EDGES.yaml
+- periodic-table-2/PT2_BATCH_1_INDEX.yaml
+- manus-artifacts KG_NODE_EDGE_SCHEMA_v0.1.yaml
 
 ---
 
-*First complete TIER 0 batch (nodes + edges) is now live in the 12D model.*
+*Full first cycle (nodes + edges + Periodic Table 2.0 elements) complete for TIER 0.*

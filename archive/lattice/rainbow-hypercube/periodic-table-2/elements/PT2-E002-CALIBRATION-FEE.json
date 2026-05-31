@@ -1,0 +1,46 @@
+{
+  "element_id": "PT2-E002-CALIBRATION-FEE",
+  "symbol": "CF5",
+  "name": "5% Calibration Fee (INV-56)",
+  "category": "Constitutional Economic Primitive",
+  "12D_position": {
+    "d1_energy": 3,
+    "d2_compute": 5,
+    "d3_logistics": 4,
+    "d4_manufacturing": 2,
+    "d5_biology": 1,
+    "d6_water": 2,
+    "d7_habitat": 4,
+    "d8_health": 3,
+    "d9_learning": 6,
+    "d10_governance": 12,
+    "d11_security": 11,
+    "d12_expansion": 8
+  },
+  "description": "The constitutionally capped 5% fee on Lattice-routed transactions (INV-56). The sole, self-funding revenue mechanism that enables the entire Sovereign Dividend system without taxpayer cost.",
+  "seeded_from": {
+    "nodes": ["SOVEREIGN_DIVIDEND_MATH-2026-05-31", "INVARIANTS-2026-05-31"],
+    "edges": ["edge-t0-008", "edge-t0-018"]
+  },
+  "properties": {
+    "cap_percentage": 5,
+    "split": {
+      "sovereign_dividend": "40%",
+      "node_operations": "25%",
+      "infrastructure_reserve": "20%",
+      "governance_research": "15%"
+    },
+    "constitutional_source": "INV-56",
+    "tax_status": "not_a_tax"
+  },
+  "rainbow_phase": "Deep Gold - Economic Sovereignty",
+  "yin_yang_polarity": "Strong structural Yin (hard cap + split) enabling Yang value generation",
+  "ontology_mappings": {
+    "primary": "SovereignEconomicLaw",
+    "unified_ontology_reference": "manus-artifacts/archive/architecture/ontology/ATLAS_LATTICE_UNIFIED_ONTOLOGY_CANDIDATE_v0_3_3_2026-05-21.md"
+  },
+  "periodic_table_2_group": "Economic Governance Primitives",
+  "periodic_table_2_period": "Constitutional Mechanisms",
+  "provenance": "Derived from the explicit relationship between the Math node and the Invariants node, particularly INV-56.",
+  "status": "candidate_element"
+}
