@@ -1,0 +1,168 @@
+artifact_id: TIER0-EDGES-RAINBOW-HYPERCUBE-2026-05-31
+status: candidate_edges
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: First machine-readable edge layer for the TIER 0 Rainbow Hypercube 12D ontology nodes. Externalizes implicit cross-references into typed, traversable graph edges.
+
+# TIER 0 Rainbow Hypercube Edges (12D)
+
+# Node IDs in this batch (for reference):
+# - CANONICAL_WEBSITE-ATLAS-PRIME-2026-05-31
+# - SOVEREIGN_DIVIDEND_MATH-2026-05-31
+# - SOVEREIGN_DIVIDEND_PROJECTION-2026-05-31
+# - WHITE_PAPER-2026-05-31
+# - INVARIANTS-2026-05-31
+# - NEW_DEAL_2_LAYERS-2026-05-31
+
+edges:
+  # === Canonical Website as Living Hub ===
+  - edge_id: edge-t0-001
+    from: CANONICAL_WEBSITE-ATLAS-PRIME-2026-05-31
+    to: SOVEREIGN_DIVIDEND_MATH-2026-05-31
+    edge_type: is_living_public_face_of
+    status: candidate_edge
+
+  - edge_id: edge-t0-002
+    from: CANONICAL_WEBSITE-ATLAS-PRIME-2026-05-31
+    to: SOVEREIGN_DIVIDEND_PROJECTION-2026-05-31
+    edge_type: is_living_public_face_of
+    status: candidate_edge
+
+  - edge_id: edge-t0-003
+    from: CANONICAL_WEBSITE-ATLAS-PRIME-2026-05-31
+    to: WHITE_PAPER-2026-05-31
+    edge_type: is_living_public_face_of
+    status: candidate_edge
+
+  - edge_id: edge-t0-004
+    from: CANONICAL_WEBSITE-ATLAS-PRIME-2026-05-31
+    to: INVARIANTS-2026-05-31
+    edge_type: is_living_public_face_of
+    status: candidate_edge
+
+  - edge_id: edge-t0-005
+    from: CANONICAL_WEBSITE-ATLAS-PRIME-2026-05-31
+    to: NEW_DEAL_2_LAYERS-2026-05-31
+    edge_type: is_living_public_face_of
+    status: candidate_edge
+
+  # === Core Economic & Growth Flows ===
+  - edge_id: edge-t0-006
+    from: SOVEREIGN_DIVIDEND_MATH-2026-05-31
+    to: SOVEREIGN_DIVIDEND_PROJECTION-2026-05-31
+    edge_type: grounds
+    status: candidate_edge
+
+  - edge_id: edge-t0-007
+    from: SOVEREIGN_DIVIDEND_PROJECTION-2026-05-31
+    to: SOVEREIGN_DIVIDEND_MATH-2026-05-31
+    edge_type: is_projected_from
+    status: candidate_edge
+
+  - edge_id: edge-t0-008
+    from: INVARIANTS-2026-05-31
+    to: SOVEREIGN_DIVIDEND_MATH-2026-05-31
+    edge_type: defines_constitutional_cap_for
+    status: candidate_edge
+    notes: "Primarily INV-56 (5% Calibration Fee cap and split)"
+
+  - edge_id: edge-t0-009
+    from: NEW_DEAL_2_LAYERS-2026-05-31
+    to: SOVEREIGN_DIVIDEND_MATH-2026-05-31
+    edge_type: powers_the_economic_engine_of
+    status: candidate_edge
+
+  - edge_id: edge-t0-010
+    from: NEW_DEAL_2_LAYERS-2026-05-31
+    to: SOVEREIGN_DIVIDEND_PROJECTION-2026-05-31
+    edge_type: drives_compounding_growth_of
+    status: candidate_edge
+
+  # === White Paper as Synthesizer ===
+  - edge_id: edge-t0-011
+    from: WHITE_PAPER-2026-05-31
+    to: SOVEREIGN_DIVIDEND_MATH-2026-05-31
+    edge_type: synthesizes_core_narrative_of
+    status: candidate_edge
+
+  - edge_id: edge-t0-012
+    from: WHITE_PAPER-2026-05-31
+    to: SOVEREIGN_DIVIDEND_PROJECTION-2026-05-31
+    edge_type: synthesizes_core_narrative_of
+    status: candidate_edge
+
+  - edge_id: edge-t0-013
+    from: WHITE_PAPER-2026-05-31
+    to: INVARIANTS-2026-05-31
+    edge_type: synthesizes_core_narrative_of
+    status: candidate_edge
+
+  - edge_id: edge-t0-014
+    from: WHITE_PAPER-2026-05-31
+    to: NEW_DEAL_2_LAYERS-2026-05-31
+    edge_type: synthesizes_core_narrative_of
+    status: candidate_edge
+
+  - edge_id: edge-t0-015
+    from: WHITE_PAPER-2026-05-31
+    to: CANONICAL_WEBSITE-ATLAS-PRIME-2026-05-31
+    edge_type: is_synthesized_and_hosted_at
+    status: candidate_edge
+
+  # === Structural Integrity (Invariants as Backbone) ===
+  - edge_id: edge-t0-016
+    from: INVARIANTS-2026-05-31
+    to: WHITE_PAPER-2026-05-31
+    edge_type: provides_structural_backbone_for
+    status: candidate_edge
+
+  - edge_id: edge-t0-017
+    from: INVARIANTS-2026-05-31
+    to: NEW_DEAL_2_LAYERS-2026-05-31
+    edge_type: provides_structural_backbone_for
+    status: candidate_edge
+
+  # === Additional Strong Semantic Links (from document content) ===
+  - edge_id: edge-t0-018
+    from: SOVEREIGN_DIVIDEND_MATH-2026-05-31
+    to: INVARIANTS-2026-05-31
+    edge_type: cites
+    status: candidate_edge
+    notes: "Explicitly references INV-56 for the 5% cap and 40/25/20/15 split"
+
+  - edge_id: edge-t0-019
+    from: NEW_DEAL_2_LAYERS-2026-05-31
+    to: SOVEREIGN_DIVIDEND_MATH-2026-05-31
+    edge_type: cites
+    status: candidate_edge
+
+  - edge_id: edge-t0-020
+    from: SOVEREIGN_DIVIDEND_PROJECTION-2026-05-31
+    to: NEW_DEAL_2_LAYERS-2026-05-31
+    edge_type: cites
+    status: candidate_edge
+
+hard_rules:
+  - These edges are candidate proposals only.
+  - An edge does not constitute canon promotion or authority.
+  - Graph density in this batch does not imply completeness of the full knowledge graph.
+  - All relationships remain subject to human-root review and ratification where required.
+
+# Graph Traversal Examples (for verification)
+
+From CANONICAL_WEBSITE-ATLAS-PRIME-2026-05-31 you can directly reach:
+- SOVEREIGN_DIVIDEND_MATH-2026-05-31 (is_living_public_face_of)
+- SOVEREIGN_DIVIDEND_PROJECTION-2026-05-31 (is_living_public_face_of)
+- WHITE_PAPER-2026-05-31 (is_living_public_face_of)
+- INVARIANTS-2026-05-31 (is_living_public_face_of)
+- NEW_DEAL_2_LAYERS-2026-05-31 (is_living_public_face_of)
+
+From SOVEREIGN_DIVIDEND_MATH-2026-05-31 you can reach:
+- SOVEREIGN_DIVIDEND_PROJECTION-2026-05-31 (grounds)
+- INVARIANTS-2026-05-31 (cites)
+- NEW_DEAL_2_LAYERS-2026-05-31 (is_powered_by / reverse of powers_the_economic_engine_of)
+
+From NEW_DEAL_2_LAYERS-2026-05-31 you can reach the core economic nodes (powers_the_economic_engine_of + drives_compounding_growth_of).
+
+This gives strong traversability across the entire TIER 0 batch from the living hub.

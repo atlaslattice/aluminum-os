@@ -8,22 +8,23 @@ related:
   - KRAKOA_NODE_ZERO
   - 12D_COORDINATE_SYSTEM.md
   - ONTOLOGY_INDEXING_GUIDE.md
+  - edges/TIER0_EDGES.yaml
 ---
 
 # Rainbow Hypercube Integration Bridge
 
-**Fundamental Principle:** The entire knowledge graph operates in **12-dimensional space**.
+**Fundamental Principle:** The entire knowledge graph operates in **12-dimensional space**. The Rainbow Hypercube / Periodic Table 2.0 model is 12D at its core.
 
 ## Status Update (2026-05-31)
 
-**Major Milestone:** TIER 0 Canon has been fully indexed as the first complete batch in the 12D Rainbow Hypercube model.
+**Major Milestone:** TIER 0 Canon nodes + edges are now complete as the first full batch in the 12D model.
 
-- 7 structured node manifests created (Canonical Website + 6 TIER 0 artifacts)
-- All carry full 12D coordinates, ontology mappings, Rainbow phase, and Yin-Yang polarity
-- Dense cross-references established, with the Canonical Website positioned as the central hub
+- 6 node manifests + Canonical Website hub
+- Dedicated `edges/TIER0_EDGES.yaml` with ~20 high-quality typed relationships
+- All work fully 12D-addressable with ontology mappings
 
-See `ONTOLOGY_INDEXING_GUIDE.md` for the process and `nodes/` for the manifests.
+This completes the wiring step for the foundational canon and unblocks derivation of the first Periodic Table 2.0 elements.
 
 ---
 
-*TIER 0 is now live as 12D ontology nodes. The real graph work has begun.*
+*TIER 0 is now a traversable 12D subgraph. The real synthesis work can begin.*
