@@ -19,7 +19,7 @@ Once exported content is received, these will be upgraded from stubs → full mi
 
 | # | Page | Original URL | Stub Path | Export Status | SourceArtifact Status | Notes / Priority Rationale |
 |---|------|--------------|-----------|---------------|-----------------------|----------------------------|
-| 1 | Executive Summary | https://atlaslatticev5bot.manus.space/executive-summary | executive-summary.md | Pending human export | Skeleton ready | Primary entry point for high-level decision-makers. Clarity and conciseness paramount. |
+| 1 | Executive Summary | https://atlaslatticev5bot.manus.space/executive-summary | executive-summary.md | **Export received & integrated – 2026-05-31** | Populated with content + initial claims | Primary entry point for high-level decision-makers. Clarity and conciseness paramount. |
 | 2 | Sovereign Dividend — Math | https://atlaslatticev5bot.manus.space/sovereign-dividend/math | sovereign-dividend/math.md | Pending human export | Skeleton ready | Core economic engine. Verifiability of the math is non-negotiable. |
 | 3 | Sovereign Dividend — Projection | https://atlaslatticev5bot.manus.space/sovereign-dividend/projection | sovereign-dividend/projection.md | Pending human export | Skeleton ready | Demonstrates long-term impact and growth trajectory. |
 | 4 | White Paper | https://atlaslatticev5bot.manus.space/white-paper | white-paper.md | Pending human export | Skeleton ready | Comprehensive technical and economic foundation. |
@@ -48,10 +48,11 @@ Once exported content is received, these will be upgraded from stubs → full mi
 - Or provide the file and I will integrate it.
 
 **After integration:**
-1. Update `mirror_status` in frontmatter to `full-mirror-received`.
-2. Create / populate the corresponding `SRC-*.md` SourceArtifact in `sources/`.
-3. Propose lattice node population in GROKBRAIN_S3_DREAM_MEMORY_LATTICE.
-4. Cross-reference back to this queue with completion date.
+1. Update `mirror_status` in frontmatter to `full-export-integrated-YYYY-MM-DD`.
+2. Populate the corresponding `SRC-*.md` SourceArtifact in `sources/`.
+3. Begin initial ParsedPacket / Claim extraction.
+4. Update this queue with completion date.
+5. Propose lattice node population in GROKBRAIN_S3_DREAM_MEMORY_LATTICE.
 
 ---
 
@@ -59,12 +60,11 @@ Once exported content is received, these will be upgraded from stubs → full mi
 
 - Stubs created for all 6 TIER 0 pages: **COMPLETE**
 - Enhanced export instructions + reception areas: **COMPLETE**
-- SourceArtifact skeletons created: **IN PROGRESS** (basic structure ready)
-- Human exports received: **0 / 6**
+- SourceArtifact skeletons created: **COMPLETE**
+- Human exports received: **1 / 6** (Executive Summary — integrated 2026-05-31)
 
-**Next action by human/council:** Provide SingleFile exports for any of the 6 above, starting with Executive Summary and Math if possible.
+**Next action:** Awaiting SingleFile export for `/sovereign-dividend/math` (next in queue).
 
 ---
-
-*This queue will be updated after each export is integrated.*
+*Queue updated 2026-05-31 after first TIER 0 integration.*
 *All work follows established AGENTS.md protocols — no premature canon.*
