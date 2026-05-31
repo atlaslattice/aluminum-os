@@ -1,0 +1,44 @@
+artifact_id: PT2-144-INDEX-2026-05-31
+status: candidate
+canon_status: not_canon
+purpose: Master index of the full 144-element Periodic Table 2.0 (12x12 matrix) with current seeding status, 12D positions, and key harmonic properties.
+
+matrix_structure:
+  periods: 12
+  groups: 12
+  total_elements: 144
+  dimensionality: 12D + optical_harmonics + acoustic_resonance
+
+seeded_elements:
+  # Batch 1 (from TIER 0 canon)
+  - PT2-E001-12-LAYER-FLYWHEEL
+  - PT2-E002-CALIBRATION-FEE
+  - PT2-E003-SOVEREIGN-DIVIDEND
+  - PT2-E004-CONSTITUTIONAL-INVARIANTS
+  - PT2-E005-COMPOUNDING-ABUNDANCE
+  - PT2-E006-LIVING-CANON-INTERFACE
+
+# Placeholder grid (Period 01–12 × Group 01–12)
+# Most entries are empty stubs ready for systematic population.
+# Only the 6 seeded elements above have full manifests as of this date.
+
+grid:
+  P01:
+    G01: PT2-E001-12-LAYER-FLYWHEEL   # seeded
+    G02: null
+    # ...
+  P02:
+    G01: null
+    # ...
+  # (full 12x12 grid continues in implementation)
+
+special_axes:
+  optical_color_harmonics: active
+  acoustic_resonance: active
+  12D_embedding: primary
+
+next_actions:
+  - Populate remaining 138 element stubs with 12D coordinates
+  - Add dedicated Optical/Color and Acoustic property manifests
+  - Begin seeding from receipted physics data + canon resonance
+  - Define isotopic families for high-interest elements

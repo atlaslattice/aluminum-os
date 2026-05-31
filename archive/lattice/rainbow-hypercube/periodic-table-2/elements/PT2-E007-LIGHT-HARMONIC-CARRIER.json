@@ -1,0 +1,39 @@
+{
+  "element_id": "PT2-E007-LIGHT-HARMONIC-CARRIER",
+  "symbol": "LHC",
+  "name": "Light Harmonic Carrier",
+  "category": "Optical Resonance Primitive",
+  "12D_position": {
+    "d1_energy": 2,
+    "d2_compute": 7,
+    "d3_logistics": 5,
+    "d4_manufacturing": 3,
+    "d5_biology": 4,
+    "d6_water": 9,
+    "d7_habitat": 6,
+    "d8_health": 8,
+    "d9_learning": 10,
+    "d10_governance": 5,
+    "d11_security": 11,
+    "d12_expansion": 12
+  },
+  "description": "Fundamental carrier of color, phase, and harmonic information in electromagnetic fields. Responsible for visible spectrum structure, slow-light phenomena, and coherent light-matter coupling.",
+  "seeded_from": {
+    "conceptual": "Derived from emphasis on color and light harmonics in the 144-element expansion request, cross-referenced with existing phonon/optical axes in PT2 hypercube work."
+  },
+  "properties": {
+    "spectrum_range": "UV to far-IR (primary visible band emphasis)",
+    "harmonic_generation": "strong (2nd, 3rd, higher orders)",
+    "coherence_length": "variable (macroscopic in superconductors/photonic crystals)",
+    "color_resonance_quality": "high (chromatic standing waves possible)"
+  },
+  "rainbow_phase": "Full Visible Spectrum - Chromatic Carrier",
+  "yin_yang_polarity": "Balanced carrier of both generative (Yang) light and receptive (Yin) absorption",
+  "ontology_mappings": {
+    "primary": "OpticalHarmonicCarrier",
+    "secondary": ["PhotonicResonance", "ColorInformationBearer"]
+  },
+  "periodic_table_2_group": "Harmonic Carriers",
+  "periodic_table_2_period": "Transmission & Resonance Layer",
+  "status": "candidate_element"
+}

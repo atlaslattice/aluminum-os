@@ -1,0 +1,57 @@
+# Periodic Table 2.0 — 144-Element Master Schema (v0.2)
+# 12D + Optical Harmonics + Acoustic Resonance
+
+matrix:
+  dimensions: 12
+  periods: 12
+  groups: 12
+  total_elements: 144
+  plus_isotopes: true
+
+coordinate_system:
+  primary: 12D (D1–D12 ontological dimensions)
+  secondary_projections:
+    - 12x12_matrix (Period, Group)
+    - Rainbow_Hypercube (existing 12x12x12 materials space)
+    - Optical_Harmonics (color/light axes)
+    - Acoustic_Resonance (phononic/cymatic axes)
+
+property_axes:
+  base_9:
+    - Physical
+    - Quantum
+    - Structural
+    - Thermal
+    - Electronic
+    - Magnetic
+    - Phonon
+    - Defect
+    - Synthesis
+  new_harmonic:
+    - Optical_Color_Light_Harmonics
+    - Acoustic_Resonance_Phononic
+
+element_record_schema:
+  required:
+    - element_id
+    - symbol
+    - name
+    - 12D_position (full 12-tuple)
+    - rainbow_phase
+    - yin_yang_polarity
+    - ontology_mappings
+    - periodic_table_2_group
+    - periodic_table_2_period
+    - status (candidate_element | seeded | validated)
+  optional:
+    - isotopes []
+    - optical_harmonic_properties
+    - acoustic_resonance_properties
+    - seeded_from (nodes + edges)
+
+current_seeded_count: 8   # 6 from TIER 0 canon + 2 new harmonic-focused elements
+
+notes:
+  - This schema unifies the previous PT2 hypercube work with the new 144-element 12D vision.
+  - All future elements must be registered against this schema.
+  - Isotopic families and harmonic (color/acoustic) data are first-class citizens.

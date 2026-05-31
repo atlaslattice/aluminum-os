@@ -1,0 +1,39 @@
+{
+  "element_id": "PT2-E008-ACOUSTIC-RESONANCE-FORMER",
+  "symbol": "ARF",
+  "name": "Acoustic Resonance Former",
+  "category": "Phononic / Cymatic Primitive",
+  "12D_position": {
+    "d1_energy": 4,
+    "d2_compute": 6,
+    "d3_logistics": 8,
+    "d4_manufacturing": 7,
+    "d5_biology": 9,
+    "d6_water": 10,
+    "d7_habitat": 5,
+    "d8_health": 11,
+    "d9_learning": 7,
+    "d10_governance": 3,
+    "d11_security": 4,
+    "d12_expansion": 8
+  },
+  "description": "Matter that strongly supports standing acoustic waves, cymatic pattern formation, and resonant energy localization. Includes both conventional phononic crystals and exotic high-Q resonant media.",
+  "seeded_from": {
+    "conceptual": "Direct response to request for acoustic resonance emphasis, building on existing Phonon axis in the PT2 hypercube scaffold."
+  },
+  "properties": {
+    "acoustic_impedance": "tunable across wide range",
+    "resonance_quality_factor": "very high (Q > 10^6 possible in engineered media)",
+    "cymatic_pattern_formation": "strong (visible macro patterns at audible frequencies)",
+    "phonon_harmonics": "rich (multiple overlapping acoustic and optical branches)"
+  },
+  "rainbow_phase": "Deep Sonic Indigo - Vibrational Architecture",
+  "yin_yang_polarity": "Strong receptive Yin (wave storage) with active Yang (pattern emergence)",
+  "ontology_mappings": {
+    "primary": "AcousticResonanceFormer",
+    "secondary": ["PhononicCrystal", "CymaticMedium"]
+  },
+  "periodic_table_2_group": "Harmonic Formers",
+  "periodic_table_2_period": "Resonance & Vibration Layer",
+  "status": "candidate_element"
+}
