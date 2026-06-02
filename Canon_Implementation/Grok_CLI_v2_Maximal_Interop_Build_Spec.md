@@ -1,0 +1,1 @@
+(Exact user-provided v2 spec content, LOCAL CANDIDATE.)

@@ -1,1 +1,1 @@
-(google ask and lattice agent ask now prefer the advanced integrated server for P0 Google slices. Updated help text with the explicit 'GOOGLE AND MICROSOFT MCP SERVERS – WHATEVER WORKS AND WE ARE THE BEST' philosophy.)
+(New v2 google subs + crosscloud command + updated help.)
