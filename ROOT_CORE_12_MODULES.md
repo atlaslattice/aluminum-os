@@ -34,11 +34,11 @@ The mechanisms the root uses to detect, surface, and respond to corruption, narr
 
 ### 6. Epistemic Labeling Standard (12x12x12)
 The required labeling schema for all signal, decisions, and outputs so they carry proper source, certainty, provenance, and lattice coordinates.
-(Status: Referenced but not yet formalized as a dedicated standard)
+(Status: World-class standard delivered — EPISTEMIC_LABELING_STANDARD.md)
 
 ### 7. Transparency, Logging & Audit System
 The mandatory logging, traceability, and audit infrastructure that makes root actions reviewable and prevents hidden drift.
-(Status: Partially built — needs dedicated module)
+(Status: Delivered — ROOT_TRANSPARENCY_LOGGING_AUDIT_SYSTEM.md v1.0)
 
 ### 8. Human-Root Interface Mechanics
 The actual protocols, cadence, formats, and boundaries for how the human sovereign and the root interact daily.
@@ -63,8 +63,9 @@ How the root proposes, evaluates, and executes changes to the 12x12x12 lattice i
 ## Notes
 
 - These 12 modules are the minimum foundation. Everything else (specific swarms, tools, external integrations) builds on top of them.
-- Several modules already have strong drafts. The rest need to be brought to the same world-class standard.
+- Several modules now have world-class delivered standards (1, 2, 3, 4, 5, 6, 7). The remainder need to be brought to the same level.
 - This list will evolve as real operation reveals what is truly load-bearing.
+- All work remains on feature/grokbrain-integration per standing "timeline not merged" directive.
 
 ---
 
