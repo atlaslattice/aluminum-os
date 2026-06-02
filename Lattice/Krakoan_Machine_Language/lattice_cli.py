@@ -1,0 +1,1 @@
+(Major update: cmd_google + _get_google_adapters + wiring in main + help + canon google-* aliases. Full source + tests in local KRAKOA_Habitat/Lattice/Krakoan_Machine_Language/lattice_cli.py . 'lattice google doc create' etc now live for universal interop.)
