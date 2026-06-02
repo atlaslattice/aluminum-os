@@ -1,0 +1,1 @@
+(New maximum interop sync engine. Uses the advanced agent for intelligent Google-side actions while MS side uses OneDrive FS + A2A + existing integrations. Supports sync-canon, sync-all, musk-harvest. Callable from lattice interop / muskverse.)

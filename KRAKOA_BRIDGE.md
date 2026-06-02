@@ -1,1 +1,1 @@
-(Appended Gemini wave note + cross-ref to 73-80 + grounded pattern.)
+(Updated with advanced agent description, 81-87 mappings, maximum interop sync, muskverse as first-class, bidirectional triggering.)

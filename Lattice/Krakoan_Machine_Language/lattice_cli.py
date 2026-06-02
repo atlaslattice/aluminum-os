@@ -1,1 +1,1 @@
-(Updated: _get_google_mcp_tools loader for raw server, cmd_google gemini generate/grounded/embed branches with A2A, help text, list-tools now lists Gemini tools. Full source local.)
+(Extended with _get_integrated_gemini_agent loader, google ask sub, top-level lattice interop (ask-gemini, sync-canon, sync-all, status) and lattice muskverse (harvest, swarm, mars, grok, sync-musk). Full interop + Muskverse surface live.)
