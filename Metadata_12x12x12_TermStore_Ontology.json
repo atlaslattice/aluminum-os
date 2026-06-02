@@ -1,9 +1,7 @@
-(Full content in local OneDrive: KRAKOA_Habitat/Metadata/TermStore/12x12x12_Ontology.json)
+(Full in local: KRAKOA_Habitat/Metadata/TermStore/12x12x12_Ontology.json)
 
-12x12x12 Riemann rainbow taxonomy for SharePoint Term Store (#37), Copilot grounding (#25), Cognitive Search (#26), etc.
+Extended to 85 terms including Graph-WS (#61), Container-Agents (#62), Fabric-Lakehouse (#63), Digital-Twins (#73), OpenAI-Functions (#79), Graph-Toolkit-UI (#85), etc.
 
-Extended with 41-60 terms: Cross-Tenant, Per-Module-Site, CI-CD-Wire, Entra-Policy, Viva-Search, Promotion-Work, Whiteboard-Stream, PowerApps-UI, Excel-Dash, Azure-Monitor-Defender, Intune-Device, Multi-Geo, Azure-OpenAI-Grounding, DSC-Env, Hybrid-Legacy.
+`lattice canon termstore` + search.
 
-Used by: lattice canon termstore, search, policy, promotion, etc.
-
-Grounded in ROOT_ONTOLOGY.md literal geometry.
+Grounded in ROOT_ONTOLOGY literal 12x12x12. Supports all 85 integrations.
