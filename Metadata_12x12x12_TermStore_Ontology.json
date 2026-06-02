@@ -2,6 +2,8 @@
 
 12x12x12 Riemann rainbow taxonomy for SharePoint Term Store (#37), Copilot grounding (#25), Cognitive Search (#26), etc.
 
-Used by: lattice canon termstore
+Extended with 41-60 terms: Cross-Tenant, Per-Module-Site, CI-CD-Wire, Entra-Policy, Viva-Search, Promotion-Work, Whiteboard-Stream, PowerApps-UI, Excel-Dash, Azure-Monitor-Defender, Intune-Device, Multi-Geo, Azure-OpenAI-Grounding, DSC-Env, Hybrid-Legacy.
+
+Used by: lattice canon termstore, search, policy, promotion, etc.
 
 Grounded in ROOT_ONTOLOGY.md literal geometry.
