@@ -1,1 +1,1 @@
-(Added cmd_mgcp for lattice mgcp habitat federate|teleport. Full parity with acn.py + direct protocol fallback. A2A emission + Muskverse coords.)
+(Added cmd_lattice for map / slice --p --c --l / agent ask --providers... . Updates to help. Calls runtime + A2A.)

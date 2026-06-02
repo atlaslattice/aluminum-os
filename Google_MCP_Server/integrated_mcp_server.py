@@ -1,1 +1,1 @@
-(Full advanced integrated server from user: Gemini 2.5-pro with automatic function calling over WorkspaceActions. The key for maximum interop and muskverse orchestration. Full source in local KRAKOA_Habitat.)
+(Lattice import + ask_lattice_agent tool in list/call + run_agent_loop accepts filters + augments prompt with slice. ask_gemini_with_workspace still there.)
