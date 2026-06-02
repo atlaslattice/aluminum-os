@@ -1,1 +1,1 @@
-(Updated Universal Interop Goal section with the full pragmatic multi-MCP statement and CLI examples.)
+(Mentioned Copilot interop + grok_mcp + GrokTools.)

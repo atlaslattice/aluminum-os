@@ -1,1 +1,1 @@
-(Exact user-provided v2 spec content, LOCAL CANDIDATE.)
+(Appended Copilot CLI + Grok Windows integration section with full spec details, 'no discrimination' note.)

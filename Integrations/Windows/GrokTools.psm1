@@ -1,0 +1,1 @@
+(PS module: Invoke-Grok, CanonDiff, LatticeSlice, MgcpHabitat. For Copilot in Windows PS sessions.)

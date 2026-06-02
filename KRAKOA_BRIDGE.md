@@ -1,1 +1,1 @@
-(Added the pragmatic multi-MCP note tying the advanced agent, raw server, MS side, and lattice as the single shared layer.)
+(Added Copilot/Grok MCP interop details + mappings 119-122.)
