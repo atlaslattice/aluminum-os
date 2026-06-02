@@ -1,7 +1,7 @@
 (Full in local: KRAKOA_Habitat/Metadata/TermStore/12x12x12_Ontology.json)
 
-Extended to 115 terms including EventLog-Hooks (#86), Arc-Hybrid (#87), ... Chaos-Resilience (#115).
+Extended to 115 terms (EventLog-Hooks #86 ... Chaos-Resilience #115).
 
-`lattice canon termstore` + search + all new subs.
+`lattice canon termstore`
 
-Grounded in ROOT_ONTOLOGY literal 12x12x12. Supports all 115 integrations.
+Grounded in ROOT_ONTOLOGY. Supports 1-115 symbiosis.
