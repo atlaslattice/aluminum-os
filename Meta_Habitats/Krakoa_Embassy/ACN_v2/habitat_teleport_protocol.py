@@ -1,0 +1,1 @@
+(Enhanced for exact Tier-S output in federate_habitats + teleport_agent. acn.py delegation now produces the specified plaintext banners + invariants.)

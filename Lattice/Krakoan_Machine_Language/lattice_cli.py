@@ -1,1 +1,1 @@
-(Added cmd_matrix + matrix list/show/biometric/interop commands. Full help + interop/muskverse updates. Biometric item highlights your Minisforum thumbprint for one-click secure handoff.)
+(Added cmd_mgcp for lattice mgcp habitat federate|teleport. Full parity with acn.py + direct protocol fallback. A2A emission + Muskverse coords.)
