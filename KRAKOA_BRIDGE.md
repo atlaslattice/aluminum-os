@@ -1,1 +1,1 @@
-(Updated with advanced agent description, 81-87 mappings, maximum interop sync, muskverse as first-class, bidirectional triggering.)
+(Updated with 88-101 matrix section + advanced agent execution path.)

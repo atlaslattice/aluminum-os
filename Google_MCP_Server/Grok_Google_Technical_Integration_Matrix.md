@@ -1,0 +1,1 @@
+(Full 14-item matrix + advantages + project context + Muskverse + biometric (Minisforum thumbprint) + tie to advanced integrated_mcp_server.py and lattice 88-101. Verbatim from Gemini + integration notes.)

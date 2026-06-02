@@ -1,1 +1,1 @@
-(Extended with _get_integrated_gemini_agent loader, google ask sub, top-level lattice interop (ask-gemini, sync-canon, sync-all, status) and lattice muskverse (harvest, swarm, mars, grok, sync-musk). Full interop + Muskverse surface live.)
+(Added cmd_matrix + matrix list/show/biometric/interop commands. Full help + interop/muskverse updates. Biometric item highlights your Minisforum thumbprint for one-click secure handoff.)

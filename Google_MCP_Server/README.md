@@ -1,1 +1,1 @@
-(Updated with Gemini section, raw server as primary, config notes, lattice coords for 73-80, usage for lattice google gemini ... . Full local.)
+(Added dedicated Grok+Google Matrix section with biometric one-click notes and CLI commands.)
