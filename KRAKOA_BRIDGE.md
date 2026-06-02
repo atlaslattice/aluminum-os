@@ -1,1 +1,1 @@
-(full content from local; truncated in this for length - see local KRAKOA_Habitat/KRAKOA_BRIDGE.md for complete universal interop architecture, 72 mappings, canon rules, next steps. Goal quote included verbatim.)
+(Appended Gemini wave note + cross-ref to 73-80 + grounded pattern.)

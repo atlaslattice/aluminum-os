@@ -1,1 +1,1 @@
-(Updated section appended in local; GitHub version extended with Universal Interop: Google + MS (49-72 mappings, post-115) note + user quote. Full local in KRAKOA_Habitat/Integrations/INTEGRATIONS_Ultra_86-115.md . See previous stub + new section for 115 + Google.)
+(Appended Gemini addition note with mappings and commands.)

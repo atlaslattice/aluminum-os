@@ -1,1 +1,1 @@
-(Major update: cmd_google + _get_google_adapters + wiring in main + help + canon google-* aliases. Full source + tests in local KRAKOA_Habitat/Lattice/Krakoan_Machine_Language/lattice_cli.py . 'lattice google doc create' etc now live for universal interop.)
+(Updated: _get_google_mcp_tools loader for raw server, cmd_google gemini generate/grounded/embed branches with A2A, help text, list-tools now lists Gemini tools. Full source local.)

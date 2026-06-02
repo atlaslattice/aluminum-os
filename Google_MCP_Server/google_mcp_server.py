@@ -1,0 +1,1 @@
+(Full source: the user-provided grounded raw stdio server + Gemini extensions integrated directly: gemini_generate_content, gemini_grounded_generate (calls search_drive for real context), gemini_embed_text. See local KRAKOA_Habitat/Google_MCP_Server/google_mcp_server.py and root copy. Also staged per provided note.)
