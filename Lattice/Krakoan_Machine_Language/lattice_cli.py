@@ -1,1 +1,1 @@
-(Added cmd_lattice for map / slice --p --c --l / agent ask --providers... . Updates to help. Calls runtime + A2A.)
+(google ask and lattice agent ask now prefer the advanced integrated server for P0 Google slices. Updated help text with the explicit 'GOOGLE AND MICROSOFT MCP SERVERS – WHATEVER WORKS AND WE ARE THE BEST' philosophy.)

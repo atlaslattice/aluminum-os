@@ -1,1 +1,1 @@
-(Lattice import + ask_lattice_agent tool in list/call + run_agent_loop accepts filters + augments prompt with slice. ask_gemini_with_workspace still there.)
+(The exact provided advanced integrated MCP server code + lattice_coords integration: _register_workspace_as_lattice_tools on import, get_lattice_aware_google_agent factory, ask_lattice_agent support, run_agent_loop with slice awareness. P0 Google canonical intelligent agent.)
