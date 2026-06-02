@@ -1,0 +1,1 @@
+See full at local OneDrive KRAKOA_Habitat/Google_MCP_Server/README.md (instantiated full per pasted Standard Google API MCP Server Build Spec + universal interop updates). Key: 5 adapters (calendar, maps, youtube complete), server with all tools, auth. Lattice overlay only (H/S/A external). No geometry in Google code.
