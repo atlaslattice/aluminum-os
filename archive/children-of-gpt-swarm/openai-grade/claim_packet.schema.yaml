@@ -1,0 +1,82 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: ClaimPacket
+status: CANDIDATE_SCHEMA
+canon_status: not_canon
+deployment_status: not_deployed
+doctrine_status: not_doctrine_until_website
+authority_effect: none
+description: >-
+  Candidate schema for claim packets. A claim packet separates what is asserted from
+  what is evidenced, reviewed, contradicted, public-safe, or gated.
+type: object
+required:
+  - claim_id
+  - artifact_id
+  - claim_text
+  - claim_type
+  - evidence_status
+  - source_refs
+  - review_route
+  - public_status
+  - authority_effect
+properties:
+  claim_id:
+    type: string
+  artifact_id:
+    type: string
+  claim_text:
+    type: string
+  claim_type:
+    type: string
+    enum:
+      - factual
+      - design_intent
+      - metaphor
+      - hypothesis
+      - doctrine_candidate
+      - valuation
+      - simulation_delta
+      - governance_rule
+      - implementation_claim
+      - website_surface_claim
+  evidence_status:
+    type: string
+    enum: [supported, partial, missing_receipt, contradicted, stale, unreviewed]
+  source_refs:
+    type: array
+    items:
+      type: string
+    minItems: 1
+  contradiction_refs:
+    type: array
+    items:
+      type: string
+  review_route:
+    type: array
+    items:
+      type: string
+  public_status:
+    type: string
+    enum: [public_candidate, private_review, hold_for_review, private_quarantine, published_receipt]
+  canon_status:
+    type: string
+    enum: [not_canon, canon_candidate, canon]
+  deployment_status:
+    type: string
+    enum: [not_deployed, deployment_candidate, deployed]
+  doctrine_status:
+    type: string
+    enum: [not_doctrine_until_website, doctrine_candidate, doctrine]
+  authority_effect:
+    type: string
+    enum: [none, advisory, human_root_only]
+  forbidden_public_wording:
+    type: array
+    items:
+      type: string
+  safe_public_rewrite:
+    type: string
+  next_safest_action:
+    type: string
+additionalProperties: true
+x_keeper: "Claim is not proof. Receipt is not approval. GitHub is not doctrine. NOTHING DIES."
