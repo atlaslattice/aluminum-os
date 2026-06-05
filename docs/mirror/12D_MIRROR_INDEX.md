@@ -3,8 +3,10 @@
 Status: `ACTIVE_CONTROL_DOCUMENT`
 Canon status: `CANDIDATE`
 Authority: `HUMAN_ROOT_REQUIRED_FOR_CANON_OR_DEPLOYMENT`
-Created: 2026-06-04
+Created: 2026-06-05
 Repository anchor: `atlaslattice/aluminum-os`
+Control issue: `#12`
+Initial anchor commit: `128376e1ef2d23913226deac435a769e4bbc1f4d`
 
 ## Purpose
 
@@ -119,7 +121,8 @@ From this session, GitHub is connected and writable. Notion, Google Drive, and O
 ```yaml
 mirror_status: anchored_not_complete
 repo_anchor: atlaslattice/aluminum-os
-github_receipt: pending_commit_sha
+control_issue: 12
+github_receipt: 128376e1ef2d23913226deac435a769e4bbc1f4d
 notion_access: missing
 drive_access: missing
 onedrive_access: missing
