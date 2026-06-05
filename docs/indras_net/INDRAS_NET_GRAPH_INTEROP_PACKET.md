@@ -1,4 +1,4 @@
-# Indra's Net Graph Interop Packet v0.1
+# Indra's Net Graph Interop Packet v0.2
 
 STATUS: CANDIDATE INTEROP PACKET
 CANON: NO
@@ -8,13 +8,25 @@ DATE: 2026-06-03
 
 ## Purpose
 
-Route current movement around Microsoft / Google / Spanner / knowledge-graph / graph-query interoperability into the Indra's Net layer of Krakoa / Continuity OS / Atlas Lattice.
+Route current public movement around Microsoft / Google / Spanner / knowledge-graph / graph-query interoperability into an internal Indra's Net thought-experiment lens for Krakoa / Continuity OS / Atlas Lattice.
 
-This packet does not claim deployment, endorsement, partnership, or canon. It creates an address and review lane for graph interoperability work.
+This packet does not claim deployment, endorsement, partnership, canon, or that Microsoft or Google are discussing Indra's Net. The external signal is real graph/data/AI interop movement. Indra's Net is our internal metaphor and review lens.
+
+## Public-safe correction
+
+Microsoft and Google are publicly moving around interoperability, graph/data/AI platforms, enterprise knowledge surfaces, and standards-adjacent graph/query work.
+
+Indra's Net is not a claim about their language, roadmap, partnership, or intent. It is a candidate Atlas interpretation:
+
+```text
+real external signal: graph/data/AI interop is escalating positively
+internal lens: Indra's Net as graph-of-graphs / no-single-center thought experiment
+public boundary: do not attribute Indra's Net to Microsoft or Google
+```
 
 ## Core thesis
 
-Indra's Net is the graph-of-graphs layer:
+Indra's Net is the internal graph-of-graphs lens:
 
 ```text
 many nodes
@@ -35,13 +47,13 @@ Graph interoperability is becoming less niche and more infrastructural:
 2. Property graphs are a natural fit for entities, edges, labels, and attributes.
 3. Google Spanner has moved toward graph query support while retaining global consistency / SQL-style operational posture.
 4. Microsoft has multiple graph-relevant surfaces: Microsoft Graph, Graph connectors, Azure SQL graph-style features, Cosmos DB / Gremlin-like graph history, semantic index / enterprise knowledge surfaces.
-5. The practical future is not one graph database. It is interop across relational, property graph, RDF/semantic, vector, document, and source-artifact layers.
+5. The practical future is not one graph database. It is interop across relational, property graph, RDF/semantic, vector, document, permission, and source-artifact layers.
 
 ## Indra's Net interpretation
 
-Indra's Net should not be a single database.
+Indra's Net should not be treated as a vendor product, standards term, or external claim.
 
-It should be a graph interop doctrine:
+It is an internal graph interop doctrine:
 
 ```text
 Atlas node
@@ -111,7 +123,7 @@ Candidate relevance:
 - graph query surface emerging around property graph standards
 - possible model for Continuity OS: do not abandon relational receipts; add graph traversal over them
 
-Indra's Net lesson:
+Indra's Net internal lesson:
 
 ```text
 strong receipts + graph traversal > graph-only mythology
@@ -121,11 +133,11 @@ strong receipts + graph traversal > graph-only mythology
 
 Candidate relevance:
 
-- Microsoft Graph already treats people, files, meetings, mail, org data, and permissions as connected enterprise objects
-- Graph connectors / semantic index style movement points toward enterprise knowledge fabric
+- Microsoft Graph treats people, files, meetings, mail, org data, and permissions as connected enterprise objects
+- Graph connectors / semantic-index-style movement points toward enterprise knowledge fabric
 - Copilot-style agents need graph-grounded organizational context
 
-Indra's Net lesson:
+Indra's Net internal lesson:
 
 ```text
 enterprise interop requires permissions, identity, provenance, and retrieval together
@@ -139,7 +151,7 @@ Candidate relevance:
 - SQL-PGQ bridges relational stores and graph query
 - helpful precedent for Atlas: graph projection over source receipts
 
-Indra's Net lesson:
+Indra's Net internal lesson:
 
 ```text
 standard graph languages let many jewels reflect without one vendor owning the net
@@ -152,13 +164,14 @@ standard graph languages let many jewels reflect without one vendor owning the n
 3. Provenance lane: GoldenTrace receipts.
 4. Ontology lane: Atlas 12×12 / H04 / public-canon mirror coordinates.
 5. Agent lane: GPTDream / GrokDream / GeminiDream / CopilotDream deltas.
-6. Public-safe lane: no vendor endorsement or deployment claims.
+6. Public-safe lane: no vendor endorsement, partnership, deployment, or attribution claims.
 
 ## Overclaim blockers
 
 Do not claim:
 
 - Microsoft or Google are building Indra's Net
+- Microsoft or Google are using Indra's Net language
 - partnership or endorsement
 - Spanner solves all graph problems
 - Microsoft Graph is equivalent to Atlas Lattice
@@ -183,5 +196,6 @@ Do not claim:
 
 ## Keeper
 
-Indra's Net is not one graph.
-It is the interoperable reflection layer across many graph substrates, many receipt surfaces, many model-dream lenses, and many human authorities — with no single jewel crowned as the net.
+The Microsoft / Google / standards interop signal is real.
+Indra's Net is our internal lens for understanding why that signal matters.
+Do not collapse those two claims.
