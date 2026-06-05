@@ -1,0 +1,90 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: SourcePassport
+status: CANDIDATE_SCHEMA
+canon_status: not_canon
+deployment_status: not_deployed
+doctrine_status: not_doctrine_until_website
+authority_effect: none
+description: >-
+  Candidate schema for provenance records. A source passport identifies where an artifact came from,
+  what export/fidelity state it is in, how it may be used, and which review gates remain before public
+  release, doctrine, canon, or deployment claims.
+type: object
+required:
+  - source_passport_id
+  - artifact_id
+  - title
+  - source_surface
+  - source_ref
+  - raw_export_status
+  - canon_status
+  - deployment_status
+  - authority_effect
+  - public_status
+  - evidence_status
+  - review_route
+properties:
+  source_passport_id:
+    type: string
+  artifact_id:
+    type: string
+  title:
+    type: string
+  source_surface:
+    type: string
+    enum: [drive, github, website, notion, chat, upload, external, local, unknown]
+  source_ref:
+    type: string
+  source_hash:
+    type: [string, "null"]
+  source_hash_status:
+    type: string
+    enum: [not_computed, computed, missing, not_applicable]
+  raw_export_status:
+    type: string
+    enum:
+      - full_raw_export_attached
+      - partial_export
+      - live_google_doc_not_frozen
+      - live_website_needs_human_export
+      - github_file_receipt
+      - snippet_recovered_full_export_needed
+      - duplicate_family_needs_dedupe
+      - missing_receipt
+      - not_exported
+      - unknown
+  canon_status:
+    type: string
+    enum: [not_canon, canon_candidate, canon]
+  deployment_status:
+    type: string
+    enum: [not_deployed, deployment_candidate, deployed]
+  doctrine_status:
+    type: string
+    enum: [not_doctrine_until_website, doctrine_candidate, doctrine]
+  authority_effect:
+    type: string
+    enum: [none, advisory, human_root_only]
+  public_status:
+    type: string
+    enum: [public_candidate, private_review, hold_for_review, private_quarantine, published_receipt]
+  evidence_status:
+    type: string
+    enum: [supported, partial, missing_receipt, contradicted, stale, unreviewed]
+  sensitivity_status:
+    type: string
+    enum: [public_safe, private_review, hold_for_review, private_quarantine, unknown]
+  review_route:
+    type: array
+    items:
+      type: string
+  related_paths:
+    type: array
+    items:
+      type: string
+  next_safest_action:
+    type: string
+  notes:
+    type: string
+additionalProperties: true
+x_keeper: "Receipt before authority. GitHub receipts. Website speaks doctrine. HumanRoot ratifies. NOTHING DIES."
