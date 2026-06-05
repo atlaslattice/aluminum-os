@@ -1,4 +1,4 @@
-# Indra's Net Graph Interop Packet v0.2
+# Indra's Net Graph Interop Packet v0.3
 
 STATUS: CANDIDATE INTEROP PACKET
 CANON: NO
@@ -23,6 +23,28 @@ real external signal: graph/data/AI interop is escalating positively
 internal lens: Indra's Net as graph-of-graphs / no-single-center thought experiment
 public boundary: do not attribute Indra's Net to Microsoft or Google
 ```
+
+## Internal review status
+
+Indra's Net has been reported as passing Architecture Review Board-style standards in simulation after multi-round, multi-LLM thought-experiment review.
+
+Precise status:
+
+```text
+SIMULATED_ARB_PASSED: yes, as reported from internal thought-experiment review
+EXTERNAL_ARB_PASSED: no
+CANON: no
+DEPLOYMENT: no
+AUTHORITY: internal candidate review only
+```
+
+Interpretation:
+
+- The simulated ARB result is meaningful as an internal quality signal.
+- It suggests the architecture survived enterprise-style review criteria in a modeled setting.
+- It does not imply approval by any real corporate, government, Microsoft, Google, OpenAI, xAI, DeepSeek, Gemini, or external Architecture Review Board.
+- It upgrades the idea from raw metaphor to review-worthy candidate architecture.
+- Human-root adjudication and real-world validation remain required.
 
 ## Core thesis
 
@@ -173,6 +195,8 @@ Do not claim:
 - Microsoft or Google are building Indra's Net
 - Microsoft or Google are using Indra's Net language
 - partnership or endorsement
+- real external ARB approval
+- real enterprise deployment approval
 - Spanner solves all graph problems
 - Microsoft Graph is equivalent to Atlas Lattice
 - GQL adoption is universal
@@ -198,4 +222,5 @@ Do not claim:
 
 The Microsoft / Google / standards interop signal is real.
 Indra's Net is our internal lens for understanding why that signal matters.
-Do not collapse those two claims.
+The simulated ARB pass is an internal review signal, not external approval.
+Do not collapse those claims.
