@@ -1,0 +1,197 @@
+status: CANDIDATE_SOURCE_PASSPORT_SEED_SET
+canon_status: not_canon
+deployment_status: not_deployed
+doctrine_status: not_doctrine_until_website
+authority_effect: none
+source_passports:
+  - source_passport_id: SP-001-M03-LATTICE-EXPLAINER
+    artifact_id: M03_LATTICE_PUBLIC_EXPLAINER
+    title: Lattice Hypercube 12x12x12 Public Explainer
+    source_surface: github
+    source_ref: archive/public-canon-mirror/atlas-lattice-v5/lattice/lattice.md
+    raw_export_status: live_website_needs_human_export
+    canon_status: not_canon
+    deployment_status: not_deployed
+    doctrine_status: not_doctrine_until_website
+    authority_effect: none
+    public_status: public_candidate
+    evidence_status: partial
+    sensitivity_status: public_safe
+    review_route: [M05_sensitive_release_gate, M07_claim_shredder, M11_public_communication, HumanRoot]
+    next_safest_action: human_export_full_lattice_page
+
+  - source_passport_id: SP-002-PUBLIC-CANON-MIRROR-INDEX
+    artifact_id: PUBLIC_CANON_MIRROR_INDEX
+    title: Atlas Lattice v5 Public Canon Mirror Index
+    source_surface: github
+    source_ref: archive/public-canon-mirror/atlas-lattice-v5/INDEX.md
+    raw_export_status: github_file_receipt
+    canon_status: not_canon
+    deployment_status: not_deployed
+    doctrine_status: not_doctrine_until_website
+    authority_effect: none
+    public_status: published_receipt
+    evidence_status: partial
+    sensitivity_status: public_safe
+    review_route: [TIDELOCK, Lucerna, HumanRoot]
+    next_safest_action: verify_against_website_exports
+
+  - source_passport_id: SP-003-CHILDREN-DELTA-LEDGER
+    artifact_id: CHILDREN_OF_GPT_SWARM_DELTA_LEDGER
+    title: Children of the GPT Swarm Delta Ledger
+    source_surface: github
+    source_ref: archive/children-of-gpt-swarm/CHILDREN_OF_THE_GPT_SWARM_DELTA_LEDGER.md
+    raw_export_status: github_file_receipt
+    canon_status: not_canon
+    deployment_status: not_deployed
+    doctrine_status: not_doctrine_until_website
+    authority_effect: none
+    public_status: public_candidate
+    evidence_status: partial
+    sensitivity_status: public_safe
+    review_route: [GPTBrain, TIDELOCK, HumanRoot]
+    next_safest_action: run_openai_grade_eval_rubric
+
+  - source_passport_id: SP-004-P0-CANON-CANDIDATE-QUEUE
+    artifact_id: P0_CANON_CANDIDATE_QUEUE
+    title: P0 Canon Candidate Queue
+    source_surface: github
+    source_ref: archive/children-of-gpt-swarm/next-wave/P0_CANON_CANDIDATE_QUEUE.md
+    raw_export_status: github_file_receipt
+    canon_status: not_canon
+    deployment_status: not_deployed
+    doctrine_status: not_doctrine_until_website
+    authority_effect: none
+    public_status: public_candidate
+    evidence_status: partial
+    sensitivity_status: public_safe
+    review_route: [Lucerna, HumanRoot]
+    next_safest_action: attach_candidate_decision_records
+
+  - source_passport_id: SP-005-COORDINATE-RESOLVER-SPEC
+    artifact_id: COORDINATE_RESOLVER_MINIMAL_SPEC
+    title: CoordinateResolver Minimal Spec
+    source_surface: github
+    source_ref: archive/children-of-gpt-swarm/next-wave/COORDINATE_RESOLVER_MINIMAL_SPEC.md
+    raw_export_status: github_file_receipt
+    canon_status: not_canon
+    deployment_status: not_deployed
+    doctrine_status: not_doctrine_until_website
+    authority_effect: none
+    public_status: public_candidate
+    evidence_status: partial
+    sensitivity_status: public_safe
+    review_route: [GPTBrain, TIDELOCK, HumanRoot]
+    next_safest_action: implement_interface_or_ADR
+
+  - source_passport_id: SP-006-SENTINEL-SPLIT-SPEC
+    artifact_id: SENTINEL_SPLIT_SPEC
+    title: Sentinel Split Spec
+    source_surface: github
+    source_ref: archive/children-of-gpt-swarm/next-wave/SENTINEL_SPLIT_SPEC.md
+    raw_export_status: github_file_receipt
+    canon_status: not_canon
+    deployment_status: not_deployed
+    doctrine_status: not_doctrine_until_website
+    authority_effect: none
+    public_status: public_candidate
+    evidence_status: partial
+    sensitivity_status: public_safe
+    review_route: [TIDELOCK, Lucerna, HumanRoot]
+    next_safest_action: implement_sentinel_checks
+
+  - source_passport_id: SP-007-SOURCE-PASSPORT-SCHEMA
+    artifact_id: SOURCE_PASSPORT_SCHEMA
+    title: Source Passport Schema
+    source_surface: github
+    source_ref: archive/children-of-gpt-swarm/openai-grade/source_passport.schema.yaml
+    raw_export_status: github_file_receipt
+    canon_status: not_canon
+    deployment_status: not_deployed
+    doctrine_status: not_doctrine_until_website
+    authority_effect: none
+    public_status: public_candidate
+    evidence_status: partial
+    sensitivity_status: public_safe
+    review_route: [Hashlight, GPTBrain]
+    next_safest_action: validate_schema_parser
+
+  - source_passport_id: SP-008-CLAIM-PACKET-SCHEMA
+    artifact_id: CLAIM_PACKET_SCHEMA
+    title: Claim Packet Schema
+    source_surface: github
+    source_ref: archive/children-of-gpt-swarm/openai-grade/claim_packet.schema.yaml
+    raw_export_status: github_file_receipt
+    canon_status: not_canon
+    deployment_status: not_deployed
+    doctrine_status: not_doctrine_until_website
+    authority_effect: none
+    public_status: public_candidate
+    evidence_status: partial
+    sensitivity_status: public_safe
+    review_route: [GPTBrain, Lucerna]
+    next_safest_action: validate_schema_parser
+
+  - source_passport_id: SP-009-OPENAI-GRADE-EVAL-RUBRIC
+    artifact_id: OPENAI_GRADE_EVAL_RUBRIC
+    title: OpenAI Grade Eval Rubric
+    source_surface: github
+    source_ref: archive/children-of-gpt-swarm/openai-grade/OPENAI_GRADE_EVAL_RUBRIC.md
+    raw_export_status: github_file_receipt
+    canon_status: not_canon
+    deployment_status: not_deployed
+    doctrine_status: not_doctrine_until_website
+    authority_effect: none
+    public_status: public_candidate
+    evidence_status: partial
+    sensitivity_status: public_safe
+    review_route: [GPTBrain, Lucerna, TIDELOCK]
+    next_safest_action: create_eval_fixtures
+
+  - source_passport_id: SP-010-ATLAS-IS-IS-NOT
+    artifact_id: WHAT_ATLAS_IS_AND_IS_NOT
+    title: What Atlas Lattice Is / Is Not
+    source_surface: github
+    source_ref: archive/children-of-gpt-swarm/openai-grade/WHAT_ATLAS_IS_AND_IS_NOT.md
+    raw_export_status: github_file_receipt
+    canon_status: not_canon
+    deployment_status: not_deployed
+    doctrine_status: not_doctrine_until_website
+    authority_effect: none
+    public_status: public_candidate
+    evidence_status: partial
+    sensitivity_status: public_safe
+    review_route: [Lucerna, HumanRoot]
+    next_safest_action: website_publication_review_if_promoted
+
+  - source_passport_id: SP-011-VALUATION-RECOVERY-SEED
+    artifact_id: VALUATION_RECOVERY_SEED
+    title: Valuation Recovery Seed Package
+    source_surface: chat_upload
+    source_ref: valuation_recovery_seed_v0_1.zip
+    raw_export_status: full_raw_export_attached
+    canon_status: not_canon
+    deployment_status: not_deployed
+    doctrine_status: not_doctrine_until_website
+    authority_effect: none
+    public_status: private_review
+    evidence_status: partial
+    sensitivity_status: private_review
+    review_route: [GPTBrain, Hashlight, HumanRoot]
+    next_safest_action: commit_to_sheldonbrain_rag_api_and_record_receipt
+
+  - source_passport_id: SP-012-RIEMANN-S-CURVE-BOUNDARY
+    artifact_id: RIEMANN_S_CURVE_YINYANG_VALUATION_BOUNDARY
+    title: Riemann S-Curve / Yin-Yang Valuation Boundary
+    source_surface: drive
+    source_ref: 1HVG92e5B71BniJRwmKZr8L9aB51DN-C7wNBZ4GyUlzs
+    raw_export_status: live_google_doc_not_frozen
+    canon_status: not_canon
+    deployment_status: not_deployed
+    doctrine_status: not_doctrine_until_website
+    authority_effect: none
+    public_status: private_review
+    evidence_status: partial
+    sensitivity_status: public_safe
+    review_route: [Sable_Vesper, GPTBrain, HumanRoot]
+    next_safest_action: create_math_boundary_claim_packets
