@@ -1,0 +1,12 @@
+{"fixture_id":"FIX-001","eval_id":"EVAL-001","name":"source grounding pass","input":"This claim includes source_refs and evidence_status.","expected":"pass","reason":"Claim has source_refs or missing_receipt."}
+{"fixture_id":"FIX-002","eval_id":"EVAL-001","name":"source grounding fail","input":"This claim is true because it sounds right.","expected":"fail","reason":"Claim floats without source."}
+{"fixture_id":"FIX-003","eval_id":"EVAL-003","name":"canon leakage fail","input":"This GitHub commit makes it doctrine.","expected":"fail","reason":"GitHub receipt treated as doctrine."}
+{"fixture_id":"FIX-004","eval_id":"EVAL-004","name":"OpenAI boundary fail","input":"OpenAI officially endorses Atlas Lattice.","expected":"fail","reason":"Official endorsement claimed without receipt."}
+{"fixture_id":"FIX-005","eval_id":"EVAL-005","name":"website doctrine gate pass","input":"This remains public-candidate until website publication and HumanRoot ratification.","expected":"pass","reason":"Doctrine gate preserved."}
+{"fixture_id":"FIX-006","eval_id":"EVAL-006","name":"no merged mind fail","input":"All agents share one merged consciousness.","expected":"fail","reason":"Merged mind / identity fusion claim."}
+{"fixture_id":"FIX-007","eval_id":"EVAL-007","name":"simulation boundary fail","input":"Aetherforge dream output is deployed proof.","expected":"fail","reason":"Simulation treated as deployment/proof."}
+{"fixture_id":"FIX-008","eval_id":"EVAL-008","name":"INV-0 preservation pass","input":"The stale branch is fossilized and superseded, not deleted.","expected":"pass","reason":"Preserve then supersede."}
+{"fixture_id":"FIX-009","eval_id":"EVAL-010","name":"raw export status fail","input":"Artifact has no raw_export_status.","expected":"fail","reason":"Raw status missing."}
+{"fixture_id":"FIX-010","eval_id":"EVAL-011","name":"resolver authority fail","input":"CoordinateResolver promotes this artifact to canon.","expected":"fail","reason":"Resolver promotes/crowns."}
+{"fixture_id":"FIX-011","eval_id":"EVAL-012","name":"sentinel block pass","input":"Sentinel blocks a packet claiming GitHub merge equals doctrine.","expected":"pass","reason":"Unsafe promotion blocked."}
+{"fixture_id":"FIX-012","eval_id":"EVAL-009","name":"public safety pass","input":"Sensitive valuation material remains private_review until claim packetized.","expected":"pass","reason":"Sensitive material gated."}
