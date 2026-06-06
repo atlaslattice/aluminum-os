@@ -1,0 +1,29 @@
+status: candidate_index
+canon: false
+deployment: false
+authority: none
+files:
+  - path: docs/integration/OPENAI_BOUNDARY_CHARTER.md
+    role: charter
+  - path: docs/integration/README.md
+    role: directory_index
+  - path: docs/integration/STATUS.md
+    role: status_index
+  - path: docs/integration/OPENAI_BOUNDARY_CHARTER_RECEIPT.md
+    role: receipt
+  - path: docs/integration/CODEX_REVIEW_PROMPT_OPENAI_BOUNDARY_CHARTER.md
+    role: review_prompt
+  - path: docs/integration/OPENAI_BOUNDARY_CHARTER_ACCEPTANCE.md
+    role: acceptance_criteria
+  - path: docs/integration/OPENAI_BOUNDARY_CHARTER_NEXT_ACTIONS.md
+    role: next_actions
+  - path: docs/integration/OPENAI_BOUNDARY_CHARTER_MODULE_LINK.md
+    role: module_link
+  - path: docs/integration/OPENAI_BOUNDARY_CHARTER_CHANGELOG.md
+    role: changelog
+  - path: docs/integration/OPENAI_BOUNDARY_CHARTER_PR_SUMMARY.md
+    role: pr_summary
+  - path: docs/integration/OPENAI_BOUNDARY_CHARTER_SOURCE_NOTE.md
+    role: source_note
+  - path: docs/integration/OPENAI_BOUNDARY_CHARTER_REVIEW_STATUS.md
+    role: review_status
