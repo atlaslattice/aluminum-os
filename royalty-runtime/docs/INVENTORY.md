@@ -1,11 +1,11 @@
 # Full Inventory: Aluminum OS Ecosystem
 
 > Cross-repo audit conducted 2026-03-23.
-> Covers `splitmerge420/uws` and `splitmerge420/aluminum-os`.
+> Covers `atlaslattice/uws` and `atlaslattice/aluminum-os`.
 
 ---
 
-## splitmerge420/uws
+## atlaslattice/uws
 
 **Description:** Universal Workspace CLI — Google, Microsoft 365, Apple, Android and Chrome in one tool. Built for humans and AI agents. The command surface of Aluminum OS.
 
@@ -97,7 +97,7 @@ Research and audit files:
 
 ---
 
-## splitmerge420/aluminum-os
+## atlaslattice/aluminum-os
 
 **Description:** The full Aluminum OS kernel and subsystem repository.
 

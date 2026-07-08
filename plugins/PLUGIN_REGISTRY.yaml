@@ -2,7 +2,7 @@
 # ALUMINUM OS — Claude Plugin Registry v1.0
 # ============================================================================
 # Maps all forked external Claude plugin ecosystems to Aluminum OS layers.
-# Each entry references a fork under splitmerge420/ and its integration point.
+# Each entry references a fork under atlaslattice/ and its integration point.
 #
 # Aluminum OS Layers:
 #   L1-Constitutional  — Invariants, governance, consent
@@ -16,7 +16,7 @@
 
 registry_version: "1.0.0"
 updated: "2026-03-20"
-maintainer: "splitmerge420"
+maintainer: "atlaslattice"
 constitutional_invariants:
   # Full invariant details: see plugins/INVARIANT_MAP.md
   # --- Constitutional Primacy ---
@@ -72,7 +72,7 @@ constitutional_invariants:
 # ============================================================================
 official:
   - name: claude-plugins-official
-    fork: splitmerge420/claude-plugins-official
+    fork: atlaslattice/claude-plugins-official
     upstream: anthropics/claude-plugins-official
     stars: 13560
     description: "Official Anthropic-managed directory of high quality Claude Code Plugins"
@@ -86,7 +86,7 @@ official:
     council_role: "Canonical plugin source — all official plugins validated by Anthropic"
 
   - name: claude-code
-    fork: splitmerge420/claude-code
+    fork: atlaslattice/claude-code
     upstream: anthropics/claude-code
     stars: 80542
     description: "Claude Code agentic CLI tool — reference implementation"
@@ -103,7 +103,7 @@ official:
     council_role: "Reference CLI — uws extends this with multi-ecosystem support"
 
   - name: mcp-servers
-    fork: splitmerge420/servers
+    fork: atlaslattice/servers
     upstream: modelcontextprotocol/servers
     stars: 81645
     description: "Model Context Protocol Servers — official + community"
@@ -136,7 +136,7 @@ official:
 # ============================================================================
 community:
   - name: awesome-claude-code
-    fork: splitmerge420/awesome-claude-code
+    fork: atlaslattice/awesome-claude-code
     upstream: hesreallyhim/awesome-claude-code
     stars: 29407
     description: "Curated list of skills, hooks, slash-commands, agent orchestrators, plugins"
@@ -156,7 +156,7 @@ community:
     council_role: "Discovery index — 29K-star community curation of the plugin ecosystem"
 
   - name: awesome-claude-plugins
-    fork: splitmerge420/awesome-claude-plugins
+    fork: atlaslattice/awesome-claude-plugins
     upstream: ComposioHQ/awesome-claude-plugins
     stars: 1204
     description: "Curated plugins: custom commands, agents, hooks, MCP servers"
@@ -169,7 +169,7 @@ community:
     council_role: "ComposioHQ curation — enterprise-grade plugin vetting"
 
   - name: claude-code-plugins-plus-skills
-    fork: splitmerge420/claude-code-plugins-plus-skills
+    fork: atlaslattice/claude-code-plugins-plus-skills
     upstream: jeremylongshore/claude-code-plugins-plus-skills
     stars: 1669
     description: "340 plugins + 1367 agent skills, CCPI package manager"
@@ -188,7 +188,7 @@ community:
     council_role: "Largest single plugin collection — CCPI package manager for bulk installs"
 
   - name: awesome-claude-plugins-metrics
-    fork: splitmerge420/awesome-claude-plugins2
+    fork: atlaslattice/awesome-claude-plugins2
     upstream: quemsah/awesome-claude-plugins
     stars: null
     description: "Automated plugin adoption metrics via n8n workflows"
@@ -201,7 +201,7 @@ community:
     council_role: "Adoption telemetry — tracks which plugins the ecosystem actually uses"
 
   - name: cc-marketplace
-    fork: splitmerge420/cc-marketplace
+    fork: atlaslattice/cc-marketplace
     upstream: ananddtyagi/cc-marketplace
     stars: null
     description: "Community-driven Claude Code plugin marketplace"
@@ -214,7 +214,7 @@ community:
     council_role: "Community marketplace — alternative discovery channel"
 
   - name: claude-code-mcp
-    fork: splitmerge420/claude-code-mcp
+    fork: atlaslattice/claude-code-mcp
     upstream: KunihiroS/claude-code-mcp
     stars: null
     description: "MCP Server that connects with Claude Code local command"
@@ -227,7 +227,7 @@ community:
     council_role: "MCP↔CLI bridge — enables MCP servers to invoke Claude Code locally"
 
   - name: awesome-claude-code-plugins
-    fork: splitmerge420/awesome-claude-code-plugins
+    fork: atlaslattice/awesome-claude-code-plugins
     upstream: ccplugins/awesome-claude-code-plugins
     stars: null
     description: "Curated slash commands, subagents, MCP servers, hooks"

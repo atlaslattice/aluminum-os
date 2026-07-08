@@ -78,4 +78,4 @@ These form the scientific and engineering foundation of Aluminum OS.
 
 ---
 *Migrated by Claude (Constitutional Scribe) — March 13, 2026*
-*Source: Notion vault → GitHub splitmerge420/aluminum-os/research/*
+*Source: Notion vault → GitHub atlaslattice/aluminum-os/research/*

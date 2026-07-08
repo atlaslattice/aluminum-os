@@ -68,19 +68,19 @@ Sources are resolved in this order (configurable via `uws plugin config`):
 
 | Priority | Source | Fork | Content |
 |----------|--------|------|---------|
-| 1 | Official | splitmerge420/claude-plugins-official | Anthropic-vetted plugins |
-| 2 | CCPI | splitmerge420/claude-code-plugins-plus-skills | 340 plugins + 1367 skills |
-| 3 | Awesome | splitmerge420/awesome-claude-code | 29K★ curated index |
-| 4 | Composio | splitmerge420/awesome-claude-plugins | Enterprise curation |
-| 5 | CCPlugins | splitmerge420/awesome-claude-code-plugins | Subagent focus |
-| 6 | CC-Market | splitmerge420/cc-marketplace | Community marketplace |
+| 1 | Official | atlaslattice/claude-plugins-official | Anthropic-vetted plugins |
+| 2 | CCPI | atlaslattice/claude-code-plugins-plus-skills | 340 plugins + 1367 skills |
+| 3 | Awesome | atlaslattice/awesome-claude-code | 29K★ curated index |
+| 4 | Composio | atlaslattice/awesome-claude-plugins | Enterprise curation |
+| 5 | CCPlugins | atlaslattice/awesome-claude-code-plugins | Subagent focus |
+| 6 | CC-Market | atlaslattice/cc-marketplace | Community marketplace |
 
 ## MCP Integration
 
 Two forked repos provide the MCP backbone:
 
-- **splitmerge420/servers** (81K★) — All official + community MCP servers
-- **splitmerge420/claude-code-mcp** — MCP ↔ Claude Code CLI bridge
+- **atlaslattice/servers** (81K★) — All official + community MCP servers
+- **atlaslattice/claude-code-mcp** — MCP ↔ Claude Code CLI bridge
 
 Custom constitutional MCP servers to build on top:
 
