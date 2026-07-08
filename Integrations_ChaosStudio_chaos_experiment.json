@@ -1,0 +1,9 @@
+(Full in local: KRAKOA_Habitat/Integrations/ChaosStudio/chaos_experiment.json)
+
+#115 Chaos Studio resilience experiment.
+
+`lattice canon chaos`
+
+Inject failures to test lattice flows.
+
+Ties to #63/21/32.

@@ -1,0 +1,1 @@
+(Priority 7 secure Workspace actions via existing advanced MCP.)

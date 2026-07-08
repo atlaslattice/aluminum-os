@@ -1,0 +1,1 @@
+(Updated comment to reference Gemini support via the raw google_mcp_server. Full local in KRAKOA_Habitat/Integrations/Google/bridge_sync.py)

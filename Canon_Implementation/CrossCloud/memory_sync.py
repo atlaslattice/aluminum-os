@@ -1,0 +1,1 @@
+(Phase 2 cross-cloud vector sync stub.)

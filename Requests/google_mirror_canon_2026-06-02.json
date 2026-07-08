@@ -1,0 +1,22 @@
+{
+  "request_id": "req-google-mirror-canon-20260602-001",
+  "created_by": "lattice-cli / bridge_sync",
+  "created_at": "2026-06-02T20:23:00Z",
+  "type": "google_mirror_canon",
+  "lattice_coords": "H02-S01-A09",
+  "epistemic_certainty": 0.81,
+  "inputs": {
+    "spec": "Moon_Party_Harvest_Build_Spec_v2.0.md",
+    "source": "Canon_Implementation",
+    "target": "Google Drive/Docs (parallel mirror)",
+    "bridge_script": "Integrations/Google/bridge_sync.py"
+  },
+  "status": "pending",
+  "metadata": {
+    "universal_interop": true,
+    "ms_substrate": "OneDrive primary + A2A file contract",
+    "google_surface": "MCP create_google_doc",
+    "zero_erasure": true,
+    "review_status": "local-candidate"
+  }
+}

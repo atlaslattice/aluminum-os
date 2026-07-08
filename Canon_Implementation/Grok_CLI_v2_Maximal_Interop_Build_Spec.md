@@ -1,0 +1,1 @@
+(Appended Copilot CLI + Grok Windows integration section with full spec details, 'no discrimination' note.)
