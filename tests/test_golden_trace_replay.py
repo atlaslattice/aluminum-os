@@ -110,4 +110,51 @@ class TestClaimReview(unittest.TestCase):
     def test_no_promotion(self):
         result=review_claim_packet(claim());self.assertFalse(result['deployment']);self.assertFalse(result['semantic_acceptance'])
 
+
+
+class TestFailClosedAmbiguities(unittest.TestCase):
+    def test_ambiguous_revocation_flags_held(self):
+        for flag in (0, 1, None, 'false', [], {}, 1.0):
+            with self.subTest(flag=repr(flag)):
+                result = review_claim_packet(claim(revoked=flag))
+                self.assertEqual(result['status'], 'HELD_REVIEW')
+                self.assertIn('source_revoked', result['reasons'])
+
+    def test_ambiguous_deployment_flags_held(self):
+        for flag in (0, 1, None, 'false', [], {}, 1.0):
+            with self.subTest(flag=repr(flag)):
+                result = review_claim_packet(claim(deployment=flag))
+                self.assertEqual(result['status'], 'HELD_REVIEW')
+                self.assertIn('promotion_requires_external_gate', result['reasons'])
+
+    def test_unknown_claim_status_held(self):
+        for status in (None, '', 'PUBLISHED', 'RELEASED', 'HOSTED', [], {}, 0):
+            with self.subTest(status=repr(status)):
+                self.assertEqual(review_claim_packet(claim(status=status))['status'], 'HELD_REVIEW')
+        for status in ('CANDIDATE', 'DRAFT', 'PREPARED', 'SOURCE_LINKED', 'HELD_REVIEW'):
+            with self.subTest(accepted_status=status):
+                self.assertEqual(review_claim_packet(claim(status=status))['status'], 'CANDIDATE_REVIEWABLE_NOT_APPROVED')
+
+    def test_cli_duplicate_keys_rejected_at_any_depth(self):
+        import contextlib
+        import io
+        sample = json.dumps([event()], sort_keys=True)
+        variants = (
+            sample.replace('"event_type": "invariant_check"', '"event_type": "SHADOW", "event_type": "invariant_check"'),
+            sample.replace('"event_type": "invariant_check"', '"event_\\u0074ype": "SHADOW", "event_type": "invariant_check"'),
+            sample.replace('"repo": "atlaslattice/aluminum-os"', '"repo": "SHADOW", "repo": "atlaslattice/aluminum-os"'),
+        )
+        with tempfile.TemporaryDirectory() as d:
+            p = pathlib.Path(d)/'synthetic.json'
+            p.write_text(sample, encoding='utf-8')
+            with contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(main([str(p)]), 0)
+            for raw in variants:
+                p.write_text(raw, encoding='utf-8')
+                out=io.StringIO()
+                with contextlib.redirect_stdout(out):
+                    self.assertEqual(main([str(p)]), 1)
+                self.assertEqual(json.loads(out.getvalue())['status'], 'HELD_INVALID')
+                self.assertNotIn(str(p), out.getvalue())
+
 if __name__=='__main__':unittest.main()
