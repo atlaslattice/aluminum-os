@@ -11,6 +11,12 @@
 
 ---
 
+## Enterprise specification — source navigation (non-authorizing)
+
+The [enterprise specification v1.0 navigation entry](enterprise-spec-v1.md) links to the **unchanged, historically authored** [Artifact #70 enterprise specification](../../enterprise/Aluminum_OS_Enterprise_Specification_v1.0.md). It is a **candidate historical design source**, not verified Microsoft acceptance, partnership, operational readiness, legal agreement, or canon promotion. GitHub source blob SHA: `47730d81ead5ec1c480b0dbc4d65197978d5126a`. The original remains the only full body; no second version is copied into this document tree. Current-source and release-rights review are required before any implementation claim.
+
+---
+
 ## Purpose
 
 This document is the single authoritative source of truth for the Aluminum OS Constitutional AI Operating System. It is intended to be read by any intelligence — human, artificial, or otherwise — as the canonical reference for the system's structure, governance, and constitutional constraints.

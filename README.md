@@ -40,7 +40,7 @@ The current executable command-surface work lives in [`atlaslattice/uws`](https:
 Start here:
 
 - [`docs/architecture/SOURCE_OF_TRUTH.md`](docs/architecture/SOURCE_OF_TRUTH.md) — current repo doctrine and source-of-truth map
-- [`enterprise/Aluminum_OS_Enterprise_Specification_v1.0.md`](enterprise/Aluminum_OS_Enterprise_Specification_v1.0.md) — enterprise architecture specification
+- [`docs/architecture/enterprise-spec-v1.md`](docs/architecture/enterprise-spec-v1.md) — source-pinned enterprise-specification navigation (historical candidate; not partner-approved)
 
 ---
 
