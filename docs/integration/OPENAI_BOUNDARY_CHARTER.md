@@ -5,11 +5,12 @@ STATUS: CANDIDATE — NOT CANON
 CANON: NO
 DEPLOYMENT: NO
 AUTHORITY: NONE
-MODULE: 01 of KRAKOA_OPENAI_INTEGRATION_20_MODULE_SEQUENCE
-SOURCE ROADMAP (PROPOSED; FILE NOT FOUND ON master 2026-11-22):
+MODULE: 01 — STANDALONE REVIEW CANDIDATE FROM ISSUE #9
+VERIFIED PUBLIC REQUIREMENTS: https://github.com/atlaslattice/aluminum-os/issues/9
+PROPOSED ROADMAP POINTER (NOT FOUND ON master 2026-11-22):
   docs/integration/KRAKOA_OPENAI_INTEGRATION_20_MODULE_SEQUENCE.md
-CURRENT REVIEW REQUIREMENTS: https://github.com/atlaslattice/aluminum-os/issues/9
-ROADMAP PROVENANCE: UNVERIFIED — HOLD BEFORE MERGE
+ROADMAP EXISTENCE / ORDER: UNVERIFIED; DO NOT INFER A 20-MODULE IMPLEMENTATION
+MERGE SCOPE: CANDIDATE DOCUMENT ONLY; NO ROADMAP, CANON OR HOST ACTIVATION
 REPOSITORY: atlaslattice/aluminum-os
 DATE: 2026-06-13
 RECEIPTS BEFORE AUTHORITY.
@@ -149,7 +150,7 @@ INV-4: NO BLENDING WITHOUT GATE.
 
 ## Downstream Module References
 
-This charter is Module 01 of the `KRAKOA_OPENAI_INTEGRATION_20_MODULE_SEQUENCE`.
+Issue #9 names this boundary document as Module 01 of a proposed 20-module sequence, but the roadmap file could not be recovered from the target `master` branch. Therefore this document is a **standalone candidate** and does not authenticate any module sequence or authorize downstream modules.
 Downstream modules may reference this charter using the following pointer:
 
 ```text
