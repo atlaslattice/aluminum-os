@@ -110,11 +110,11 @@ Based on council consensus (Claude, Copilot, March 14 2026), the health layer ex
 
 ### References
 
-- [Council Identity Protocol](https://github.com/splitmerge420/aluminum-os/blob/master/council/COUNCIL_IDENTITY.md)
-- [BAZINGA Neuromorphic Software Layer Spec](https://github.com/splitmerge420/aluminum-os/blob/master/research/neuromorphic/BAZINGA-neuromorphic-software-layer-spec-v0.1.md)
-- [Hickman Synthesis — The Great Work](https://github.com/splitmerge420/aluminum-os/blob/master/council/philosophy/hickman-synthesis-the-great-work.md)
-- [PhD-01: Reversible Agentic Mesh Networks](https://github.com/splitmerge420/aluminum-os/blob/master/research/reversible-compute/PhD-01-reversible-agentic-mesh-networks.md)
-- [PhD-02: Thermodynamic Governance — Landauer Limits](https://github.com/splitmerge420/aluminum-os/blob/master/research/reversible-compute/PhD-02-thermodynamic-governance-landauer-limits.md)
+- [Council Identity Protocol](https://github.com/atlaslattice/aluminum-os/blob/master/council/COUNCIL_IDENTITY.md)
+- [BAZINGA Neuromorphic Software Layer Spec](https://github.com/atlaslattice/aluminum-os/blob/master/research/neuromorphic/BAZINGA-neuromorphic-software-layer-spec-v0.1.md)
+- [Hickman Synthesis — The Great Work](https://github.com/atlaslattice/aluminum-os/blob/master/council/philosophy/hickman-synthesis-the-great-work.md)
+- [PhD-01: Reversible Agentic Mesh Networks](https://github.com/atlaslattice/aluminum-os/blob/master/research/reversible-compute/PhD-01-reversible-agentic-mesh-networks.md)
+- [PhD-02: Thermodynamic Governance — Landauer Limits](https://github.com/atlaslattice/aluminum-os/blob/master/research/reversible-compute/PhD-02-thermodynamic-governance-landauer-limits.md)
 - [Copilot Health Launch — Microsoft, March 12, 2026](https://microsoft.ai/news/introducing-copilot-health/)
 - [DOJ Record $6.8B FCA Recoveries, FY 2025](https://www.whitecase.com/insight-alert/dojs-record-breaking-2025-false-claims-act-recoveries-and-key-healthcare-fraud)
 - [Providence Hospital — CA AG Complaint, CV2401832](https://oag.ca.gov/system/files/attachments/press-docs/Providence%20Complaint%20.pdf)

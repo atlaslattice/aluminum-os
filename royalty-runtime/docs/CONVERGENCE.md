@@ -1,7 +1,7 @@
 # Convergence: Novel Architectural Concepts
 
 > Six ideas that emerge from existing Aluminum OS subsystems talking to each other.
-> Generated from a full cross-repo audit of `splitmerge420/uws` and `splitmerge420/aluminum-os` on 2026-03-23.
+> Generated from a full cross-repo audit of `atlaslattice/uws` and `atlaslattice/aluminum-os` on 2026-03-23.
 
 ---
 

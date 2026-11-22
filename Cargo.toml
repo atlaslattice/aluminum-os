@@ -4,7 +4,7 @@ version = "0.3.0"
 edition = "2021"
 description = "Aluminum OS — Constitutional AI Governance Kernel (Forge Core)"
 license = "MIT"
-repository = "https://github.com/splitmerge420/aluminum-os"
+repository = "https://github.com/atlaslattice/aluminum-os"
 authors = ["Atlas Lattice Foundation"]
 
 [features]

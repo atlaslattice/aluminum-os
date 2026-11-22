@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/splitmerge420/aluminum-os/kintsugi/spec/golden_trace_v1.json",
+  "$id": "https://github.com/atlaslattice/aluminum-os/kintsugi/spec/golden_trace_v1.json",
   "title": "GoldenTrace Event v1.0",
   "description": "Append-only audit event for the Kintsugi governance spine. Every action, failure, repair, and constitutional decision produces a GoldenTrace.",
   "type": "object",

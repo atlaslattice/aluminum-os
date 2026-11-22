@@ -7,7 +7,7 @@
 **Date:** March 13, 2026
 **Status:** Specification — Ready for Microsoft Review
 **License:** MIT
-**GitHub:** [github.com/splitmerge420/aluminum-os](https://github.com/splitmerge420/aluminum-os)
+**GitHub:** [github.com/atlaslattice/aluminum-os](https://github.com/atlaslattice/aluminum-os)
 
 ---
 
