@@ -28,6 +28,8 @@ TYPES = frozenset({
 REQUIRED = frozenset({"trace_id", "timestamp", "source", "event_type", "sphere_tag",
                       "aluminum_layer", "payload", "integrity"})
 ALLOW_EVIDENCE = frozenset({"SOURCE_LINKED", "REPRODUCED", "CALIBRATED", "VALIDATED"})
+# Reviewable is not ratified, published, hosted, or permission to act.
+ALLOW_CANDIDATE_STATUS = frozenset({"CANDIDATE", "DRAFT", "PREPARED", "SOURCE_LINKED", "HELD_REVIEW"})
 
 
 def _err(index: int, code: str) -> dict[str, Any]:
@@ -155,17 +157,35 @@ def review_claim_packet(packet: Any) -> dict[str, Any]:
         problems.append("evidence_status_unverified")
     if packet.get("authority") not in ("NONE", None):
         problems.append("authority_requested")
-    if packet.get("status") in ("RATIFIED", "CANON", "DEPLOYED", "HOSTED_VERIFIED") or packet.get("deployment") is True:
+    # Fail closed on ambiguous/falsy non-boolean flags (0, null, strings, etc.).
+    # A missing flag retains v1 candidate compatibility, never host acceptance.
+    status = packet.get("status")
+    if (type(status) is not str or status not in ALLOW_CANDIDATE_STATUS
+            or ("deployment" in packet and packet["deployment"] is not False)):
         problems.append("promotion_requires_external_gate")
     if packet.get("private_mode") not in (None, "NONE"):
         problems.append("private_scope_not_work")
-    if packet.get("revoked") is True:
+    if "revoked" in packet and packet["revoked"] is not False:
         problems.append("source_revoked")
     return {
         "status": "CANDIDATE_REVIEWABLE_NOT_APPROVED" if not problems else "HELD_REVIEW",
         "reasons": list(dict.fromkeys(problems)),
         "authority_effect": "NONE", "deployment": False, "semantic_acceptance": False,
     }
+
+
+def _unique_json_object(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
+    """Refuse ambiguous repeated keys, including Unicode-escaped equivalents."""
+    obj: dict[str, Any] = {}
+    for key, value in pairs:
+        if key in obj:
+            raise ValueError("duplicate JSON key")
+        obj[key] = value
+    return obj
+
+
+def _reject_nonfinite_json(_token: str) -> None:
+    raise ValueError("nonfinite JSON numeric token")
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -178,7 +198,9 @@ def main(argv: list[str] | None = None) -> int:
         path = Path(args[0])
         if not path.is_file() or path.stat().st_size > 4_000_000:
             raise ValueError("missing, unsupported, or oversized file")
-        events = json.loads(path.read_text(encoding="utf-8"))
+        events = json.loads(path.read_text(encoding="utf-8"),
+                            object_pairs_hook=_unique_json_object,
+                            parse_constant=_reject_nonfinite_json)
         report = verify_trace_chain(events)
     except (OSError, UnicodeError, ValueError, json.JSONDecodeError):
         report = {"status": "HELD_INVALID", "count": 0,
