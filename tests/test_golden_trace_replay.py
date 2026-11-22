@@ -111,7 +111,6 @@ class TestClaimReview(unittest.TestCase):
         result=review_claim_packet(claim());self.assertFalse(result['deployment']);self.assertFalse(result['semantic_acceptance'])
 
 
-
 class TestFailClosedAmbiguities(unittest.TestCase):
     def test_ambiguous_revocation_flags_held(self):
         for flag in (0, 1, None, 'false', [], {}, 1.0):
