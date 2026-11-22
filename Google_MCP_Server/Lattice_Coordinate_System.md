@@ -1,0 +1,1 @@
+(New dedicated doc with rings, ToolSpec example, ask_lattice_agent schema, CLI usage, ties to all prior work.)

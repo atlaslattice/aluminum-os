@@ -1,0 +1,1 @@
+(Priority 3/8 grounded generation, uses integrated MCP + direct, lattice P0/C2/L0 registration.)

@@ -1,0 +1,1 @@
+(Full examples: Terminal profile JSON, context menu reg, grok_nightly.ps1 + task XML, toast notifications. Copilot orchestration patterns.)

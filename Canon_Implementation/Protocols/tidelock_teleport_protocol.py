@@ -1,0 +1,1 @@
+(Full runnable Tidelock-Heart protocol matching the PhD spec: state capture, federation, pre-sweep, teleport with ClaimPacket isolation, DPOL, affirm. Produces exact CLI banners for --federate / --teleport. Integrates existing kernels.)

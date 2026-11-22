@@ -1,0 +1,1 @@
+(Added Copilot/Grok MCP interop details + mappings 119-122.)

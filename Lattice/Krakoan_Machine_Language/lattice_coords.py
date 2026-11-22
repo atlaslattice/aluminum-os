@@ -1,0 +1,1 @@
+(Full 12x12x12 rings + ToolSpec dataclass + ToolRuntime with register/select_by_lattice. Examples for drive.search across P0 Google / P1 MS / P6 FS. get_lattice_map for CLI. Grounded external coords only.)

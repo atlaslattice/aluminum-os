@@ -1,0 +1,1 @@
+(Help text updated for Copilot/MCP interop + 'KRAKOA home for all mutants'. Commands remain available for MCP subprocess calls.)

@@ -1,0 +1,1 @@
+(Full MCP server per spec: tools for run, canon_diff, lattice_slice, mgcp_habitat, crosscloud_route. Wraps lattice_cli/acn. Ready for Copilot CLI MCP client.)
