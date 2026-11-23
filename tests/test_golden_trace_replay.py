@@ -134,6 +134,45 @@ class TestFailClosedAmbiguities(unittest.TestCase):
             with self.subTest(accepted_status=status):
                 self.assertEqual(review_claim_packet(claim(status=status))['status'], 'CANDIDATE_REVIEWABLE_NOT_APPROVED')
 
+    def test_replay_api_invalid_budget_fails_closed(self):
+        # Public helper must not raise for caller-controlled malformed budgets.
+        for budget in (None, True, False, 0, -1, 1.0, '1', [], {}, 10001):
+            with self.subTest(budget=repr(budget)):
+                result = verify_trace_chain([event()], max_events=budget)
+                self.assertEqual(result['status'], 'HELD_INVALID')
+                self.assertIn('invalid_event_budget', [e['code'] for e in result['errors']])
+                self.assertEqual(result['authority_effect'], 'NONE')
+
+    def test_replay_api_valid_budget_is_enforced(self):
+        self.assertEqual(verify_trace_chain([event()], max_events=1)['status'],
+                         'LOCAL_HASH_CHAIN_VALID_NOT_AUTHORITY')
+        first = event()
+        second = event(first['integrity']['hash'],
+                       trace_id='d76a9bf5-dfe5-4e72-b15f-f68e12e68fbd')
+        result = verify_trace_chain([first, second], max_events=1)
+        self.assertEqual(result['status'], 'HELD_INVALID')
+        self.assertIn('event_budget_exceeded', [e['code'] for e in result['errors']])
+
+    def test_explicit_ambiguous_scope_fails_closed(self):
+        for scope in (None, False, 0, 1, [], {}, '', 'PLAY', 'SOCIAL'):
+            with self.subTest(scope=repr(scope)):
+                result = review_claim_packet(claim(private_mode=scope))
+                self.assertEqual(result['status'], 'HELD_REVIEW')
+                self.assertIn('private_scope_not_work', result['reasons'])
+        original = claim()
+        del original['private_mode']
+        self.assertEqual(review_claim_packet(original)['status'],
+                         'CANDIDATE_REVIEWABLE_NOT_APPROVED')
+
+    def test_explicit_null_authority_fails_closed(self):
+        result = review_claim_packet(claim(authority=None))
+        self.assertEqual(result['status'], 'HELD_REVIEW')
+        self.assertIn('authority_requested', result['reasons'])
+        original = claim()
+        del original['authority']
+        self.assertEqual(review_claim_packet(original)['status'],
+                         'CANDIDATE_REVIEWABLE_NOT_APPROVED')
+
     def test_cli_duplicate_keys_rejected_at_any_depth(self):
         import contextlib
         import io
