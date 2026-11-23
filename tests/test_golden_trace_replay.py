@@ -195,4 +195,31 @@ class TestFailClosedAmbiguities(unittest.TestCase):
                 self.assertEqual(json.loads(out.getvalue())['status'], 'HELD_INVALID')
                 self.assertNotIn(str(p), out.getvalue())
 
+class TestTraceUUIDIdentity(unittest.TestCase):
+    def test_equivalent_uuid_spellings_are_duplicates(self):
+        a = event()
+        identity = a["trace_id"]
+        for alias in (identity.upper(), identity.replace("-", ""),
+                      "{" + identity + "}", "urn:uuid:" + identity):
+            with self.subTest(alias=alias):
+                b = event(a["integrity"]["hash"], trace_id=alias)
+                chain = [a, b]
+                before = copy.deepcopy(chain)
+                result = verify_trace_chain(chain)
+                self.assertEqual(result["status"], "HELD_INVALID")
+                self.assertIn("duplicate_trace_id",
+                              [e["code"] for e in result["errors"]])
+                self.assertNotIn("hash_mismatch",
+                                 [e["code"] for e in result["errors"]])
+                self.assertEqual(chain, before)
+
+    def test_single_legacy_uuid_spelling_preserves_hash(self):
+        identity = event()["trace_id"]
+        for alias in (identity.upper(), identity.replace("-", ""),
+                      "{" + identity + "}", "urn:uuid:" + identity):
+            with self.subTest(alias=alias):
+                self.assertEqual(verify_trace_chain([event(trace_id=alias)])["status"],
+                                 "LOCAL_HASH_CHAIN_VALID_NOT_AUTHORITY")
+
+
 if __name__=='__main__':unittest.main()
