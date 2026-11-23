@@ -72,13 +72,15 @@ def verify_trace_chain(events: Any, *, max_events: int = 10000) -> dict[str, Any
         try:
             if type(trace_id) is not str:
                 raise ValueError("not a string")
-            UUID(trace_id)
+            identity = str(UUID(trace_id))
         except (ValueError, TypeError, AttributeError):
             failures.append(_err(index, "invalid_trace_id"))
-        if type(trace_id) is str:
-            if trace_id in seen:
+        else:
+            # UUID spellings can differ while denoting the same identity.
+            # Normalize only the seen-set key, never the hash-covered event.
+            if identity in seen:
                 failures.append(_err(index, "duplicate_trace_id"))
-            seen.add(trace_id)
+            seen.add(identity)
         timestamp = event.get("timestamp")
         try:
             if type(timestamp) is not str:
