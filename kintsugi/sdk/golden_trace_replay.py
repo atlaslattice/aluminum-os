@@ -44,6 +44,12 @@ def verify_trace_chain(events: Any, *, max_events: int = 10000) -> dict[str, Any
     consistent local digests. They do not prove source completeness, signatures,
     actor identity, receipt durability, authorization, or semantic correctness.
     """
+    # This is a public helper: a malformed caller-supplied budget must HOLD,
+    # never raise TypeError at len(events) > max_events or unlock an unbounded scan.
+    if type(max_events) is not int or not 1 <= max_events <= 10_000:
+        return {"status": "HELD_INVALID", "count": 0,
+                "errors": [_err(-1, "invalid_event_budget")],
+                "authority_effect": "NONE", "signed_identity": "UNVERIFIED"}
     failures: list[dict[str, Any]] = []
     if type(events) is not list:
         return {"status": "HELD_INVALID", "count": 0, "errors": [_err(-1, "events_not_list")],
@@ -155,7 +161,9 @@ def review_claim_packet(packet: Any) -> dict[str, Any]:
         problems.append("rights_not_verified")
     if type(packet.get("evidence_status")) is not str or packet.get("evidence_status") not in ALLOW_EVIDENCE:
         problems.append("evidence_status_unverified")
-    if packet.get("authority") not in ("NONE", None):
+    # A missing historical v1 field is tolerated as advisory only; an
+    # EXPLICIT null is ambiguous, not an affirmative declaration of NONE.
+    if "authority" in packet and packet["authority"] != "NONE":
         problems.append("authority_requested")
     # Fail closed on ambiguous/falsy non-boolean flags (0, null, strings, etc.).
     # A missing flag retains v1 candidate compatibility, never host acceptance.
@@ -163,7 +171,9 @@ def review_claim_packet(packet: Any) -> dict[str, Any]:
     if (type(status) is not str or status not in ALLOW_CANDIDATE_STATUS
             or ("deployment" in packet and packet["deployment"] is not False)):
         problems.append("promotion_requires_external_gate")
-    if packet.get("private_mode") not in (None, "NONE"):
+    # Do not equate an explicitly null/false scope with the legacy absent
+    # field; either ambiguous value is held before advisory review.
+    if "private_mode" in packet and packet["private_mode"] != "NONE":
         problems.append("private_scope_not_work")
     if "revoked" in packet and packet["revoked"] is not False:
         problems.append("source_revoked")
