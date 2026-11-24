@@ -1,0 +1,24 @@
+[
+  {
+    "trace_id": "223d5f6d-e830-4c02-8f89-16754c1a21d2",
+    "timestamp": "2026-11-22T17:57:00+00:00",
+    "source": {
+      "repo": "atlaslattice/aluminum-os",
+      "module": "synthetic.py",
+      "function": "fixture"
+    },
+    "event_type": "invariant_check",
+    "severity": "info",
+    "sphere_tag": "H1.S1",
+    "aluminum_layer": "L3-Engine",
+    "payload": {
+      "synthetic": true,
+      "result": "sample"
+    },
+    "integrity": {
+      "hash_algorithm": "sha3-256",
+      "hash": "d8b8774aed0fc067edf660be61535a4a5604b22070eece6e8e62105b63fd3b62",
+      "previous_trace_hash": "GENESIS"
+    }
+  }
+]
