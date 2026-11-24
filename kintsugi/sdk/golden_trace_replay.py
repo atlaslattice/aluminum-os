@@ -214,7 +214,7 @@ def main(argv: list[str] | None = None) -> int:
                             object_pairs_hook=_unique_json_object,
                             parse_constant=_reject_nonfinite_json)
         report = verify_trace_chain(events)
-    except (OSError, UnicodeError, ValueError, json.JSONDecodeError):
+    except (OSError, UnicodeError, ValueError, json.JSONDecodeError, RecursionError):
         report = {"status": "HELD_INVALID", "count": 0,
                   "errors": [_err(-1, "local_input_unreadable")], "authority_effect": "NONE"}
     print(json.dumps(report, sort_keys=True, separators=(",", ":")))
