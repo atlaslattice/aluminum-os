@@ -70,6 +70,12 @@ CLAIM_MUTATIONS=(
 )
 
 
+def _require(condition, detail):
+    """Keep validation oracles active when Python is run with -O."""
+    if not condition:
+        raise AssertionError(detail)
+
+
 def execute():
     labels=collections.Counter()
     errs=collections.Counter()
@@ -87,14 +93,16 @@ def execute():
             mutation(obj)
             result=review_claim_packet(obj);expected='HELD_REVIEW';label='CLAIM/'+name
             errors=result['reasons']
-        assert result['status']==expected,(i,label,result)
-        assert result['authority_effect']=='NONE',(i,label,result)
-        assert errors,(i,label,'accepted invalid input')
-        assert obj['claim_id'].startswith('SYN-') if i%2 else obj['trace_id'], 'case identifier missing'
+        _require(result['status']==expected, (i,label,result))
+        _require(result['authority_effect']=='NONE', (i,label,result))
+        _require(errors, (i,label,'accepted invalid input'))
+        _require(obj['claim_id'].startswith('SYN-') if i%2 else obj['trace_id'],
+                 'case identifier missing')
         labels[label]+=1
         errs[errors[0]]+=1
         receipts.append({'case':i,'type':label,'status':result['status'],'first_error':errors[0]})
-    assert len(receipts)==500 and len({r['case'] for r in receipts})==500
+    _require(len(receipts)==500 and len({r['case'] for r in receipts})==500,
+             'case count or uniqueness invalid')
     return {'schema':'atlas.local-adversarial-validation/v1','mode':'SYNTHETIC_TEST_EXECUTION_NOT_MACROTURNS',
       'case_count':500,'passed':500,'failed':0,'executed_model_turns':0,'hosted':False,
       'network_requests':0,'work_room_posts':0,'authority_effect':'NONE',
